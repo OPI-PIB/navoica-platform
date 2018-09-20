@@ -1,0 +1,23 @@
+---
+metadata:
+    display_name: Tryb pełnoekranowy obrazka
+data: |
+        <h3 class="hd hd-2">Tryb pełnoekranowy obrazka</h3>
+        <p>Tryb pełnoekranowy obrazka pozwala studentom na otwieranie i przeglądanie materiałów graficznych o wysokiej rozdzielczości.</p>
+        <p>Za jego pomocą studenci mogą zobaczyć szczegóły na obrazku.</p>
+        <p>Aby umożliwić przeglądanie plików graficznych w trybie pełnego ekranu, musisz wprowadzić odnośniki do obrazka w regularnej rozdzielczości oraz do jego odpowiednika o wyższej rozdzielczości.</p>
+        <p>Poniższy kod HTML przedstawia format trybu pełnoekranowego obrazka. W szablonie musisz zastąpić wartości <i>zaznaczone kursywą</i>.</p>
+        <pre>
+        &lt;a href="<i>odnośnik do obrazka o wysokiej rozdzielczości</i>" class="modal-content"&gt;
+          &lt;img alt="<i>tekst dla czytników ekranu</i>"
+          src="<i>odnośnik do obrazka o regularnej rozdzielczości</i>"/&gt;
+        &lt;/a&gt;
+        </pre>
+        <p>Dla własnego użytku możesz zmodyfikować poniższy przykładowy obrazek.</p>
+        <ol>
+        <li>Zastąp wartość atrybutu <strong>href</strong> odnośnikiem do obrazka o dużej rozdzielczości. Nie zmieniaj wartości klasy atrybutu.</li>
+        <li>Zastąp wartość atrybutu <strong>src</strong> odnośnikiem do obrazka, który wyświetli się na ekranie kursu zanim student otworzy go w trybie pełnego ekranu.</li>
+        <li>Zastąp wartość atrybutu <strong>alt</strong> tekstem, który stanowi opis obrazka oraz czynności, którą wywoła jego kliknięcie. <strong>Musisz</strong> wypełnić to pole, aby dostosować się do polityki dostępności.</li>
+        </ol>
+        <p><strong>Uwaga</strong>: Testuj wyświetlanie obrazka w pełnej rozdzielczości bezpośrednio na platformie; tryb pełnoekranowy nie działa w Studio.</p>
+        <a href="http://static.class.stanford.edu/stanford-hills-big.jpg" class="modal-content"><img alt="Zdjęcie przedstawiające Stanford Hills. Kliknij na zdjęcie, aby otworzyć je w trybie pełnoekranowym." src="http://static.class.stanford.edu/stanford-hills-small.jpg" /></a>

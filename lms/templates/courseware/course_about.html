@@ -1,0 +1,460 @@
+<%namespace name='static' file='../static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.utils.translation import pgettext
+from django.core.urlresolvers import reverse
+from courseware.courses import get_course_about_section, get_course_overview_with_access
+from django.conf import settings
+from six import text_type
+from edxmako.shortcuts import marketing_link
+from openedx.core.djangolib.markup import HTML
+from openedx.core.lib.courses import course_image_url
+from six import string_types
+%>
+
+<%inherit file="../main.html" />
+<%block name="headextra">
+  ## OG (Open Graph) title and description added below to give social media info to display
+  ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
+  <meta property="og:title" content="${course.display_name_with_default_escaped}" />
+  <meta property="og:description" content="${get_course_about_section(request, course, 'short_description')}" />
+</%block>
+
+<%block name="js_extra">
+  <script type="text/javascript">
+  (function() {
+    $(".register").click(function(event) {
+      $("#class_enroll_form").submit();
+      event.preventDefault();
+    });
+
+    % if can_add_course_to_cart:
+      add_course_complete_handler = function(jqXHR, textStatus) {
+        if (jqXHR.status == 200) {
+          location.href = "${cart_link}";
+        }
+        if (jqXHR.status == 400) {
+          $("#register_error")
+            .html(jqXHR.responseText ? jqXHR.responseText : "${_("An error occurred. Please try again later.")}")
+            .css("display", "block");
+        }
+        else if (jqXHR.status == 403) {
+            location.href = "${reg_then_add_to_cart_link}";
+        }
+      };
+
+      $("#add_to_cart_post").click(function(event){
+        $.ajax({
+          url: "${reverse('add_course_to_cart', args=[text_type(course.id)])}",
+          type: "POST",
+          /* Rant: HAD TO USE COMPLETE B/C PROMISE.DONE FOR SOME REASON DOES NOT WORK ON THIS PAGE. */
+          complete: add_course_complete_handler
+        })
+        event.preventDefault();
+      });
+    % endif
+
+    ## making the conditional around this entire JS block for sanity
+    %if settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+      <%
+        perms_error = _('The currently logged-in user account does not have permission to enroll in this course. '
+                        'You may need to {start_logout_tag}log out{end_tag} then try the enroll button again. '
+                        'Please visit the {start_help_tag}help page{end_tag} for a possible solution.').format(
+                          start_help_tag="<a href='{url}'>".format(url=marketing_link('FAQ')), end_tag='</a>',
+                          start_logout_tag="<a href='{url}'>".format(url=reverse('logout'))
+                          )
+      %>
+    $('#class_enroll_form').on('ajax:complete', function(event, xhr) {
+      if(xhr.status == 200) {
+        location.href = "${reverse('dashboard')}";
+      } else if (xhr.status == 403) {
+        location.href = "${reverse('course-specific-register', args=[text_type(course.id)])}?course_id=${course.id | u}&enrollment_action=enroll";
+      } else if (xhr.status == 400) { //This means the user did not have permission
+        $('#register_error').html("${perms_error}").css("display", "block");
+      } else {
+        $('#register_error').html(
+            (xhr.responseText ? xhr.responseText : "${_("An error occurred. Please try again later.")}")
+        ).css("display", "block");
+      }
+    });
+
+    %else:
+
+    $('#class_enroll_form').on('ajax:complete', function(event, xhr) {
+      if(xhr.status == 200) {
+        if (xhr.responseText == "") {
+          location.href = "${reverse('dashboard')}";
+        }
+        else {
+          location.href = xhr.responseText;
+        }
+      } else if (xhr.status == 403) {
+          location.href = "${reverse('register_user')}?course_id=${course.id | u}&enrollment_action=enroll";
+      } else {
+        $('#register_error').html(
+            (xhr.responseText ? xhr.responseText : "${_("An error occurred. Please try again later.")}")
+        ).css("display", "block");
+      }
+    });
+
+    %endif
+
+  })(this)
+  </script>
+
+  <script src="${static.url('js/course_info.js')}"></script>
+</%block>
+
+<%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
+<main>
+  <div class="container">
+  <%block name="course_about_header">
+
+      <%
+            if ecommerce_checkout:
+              reg_href = ecommerce_checkout_link
+            else:
+              reg_href="#"
+            if professional_mode:
+              href_class = "add-to-cart"
+            else:
+              href_class = "register"
+          %>
+
+      <header class="course-header">
+        <div class="row align-items-top">
+          <div class="col-md-6 col-lg-3">
+              % if get_course_about_section(request, course, "video"):
+				<div class="embed-responsive embed-responsive-16by9">
+					  ${get_course_about_section(request, course, "video")}
+				</div>
+		  %else:
+					<img style="max-width: 100%;" src="${course_image_urls['large']}" class="d-block mx-auto">
+		  % endif
+
+          </div>
+
+          <div class="col-lg-5 pt-4 pt-lg-0">
+            <h1>${course.display_name_with_default_escaped}</h1>
+            <p class="mt-0">${get_course_about_section(request, course, "short_description")}</p>
+            <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+            <img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
+          </div>
+          <div class="col-lg-4 text-lg-center pt-4 pt-lg-0">
+              %if user.is_authenticated() and registered:
+			<span class="register disabled">${_("You are enrolled in this course")}</span><br/>
+			<a href="${course_target}" class="btn btn-lg btn-primary btn-icon ${href_class}"><i class="icon-book"></i> ${_("View Course")}</a>
+		  %else:
+			<a href="${reg_href}" class="btn btn-lg btn-primary btn-icon ${href_class}"><i class="icon-book"></i> Weź udział w kursie</a>
+		  % endif
+          </div>
+        </div>
+      </header>
+
+%if user.is_authenticated() and registered:
+
+%elif in_cart:
+  <span class="add-to-cart">
+	${_('This course is in your <a href="{cart_link}">cart</a>.').format(cart_link=cart_link)}
+  </span>
+% elif is_course_full:
+  <span class="register disabled">
+	${_("Course is full")}
+  </span>
+% elif invitation_only and not can_enroll:
+  <span class="register disabled">${_("Enrollment in this course is by invitation only")}</span>
+## Shib courses need the enrollment button to be displayed even when can_enroll is False,
+## because AnonymousUsers cause can_enroll for shib courses to be False, but we need them to be able to click
+## so that they can register and become a real user that can enroll.
+% elif not is_shib_course and not can_enroll:
+  <span class="register disabled">${_("Enrollment is Closed")}</span>
+%elif can_add_course_to_cart:
+  <%
+  if user.is_authenticated():
+	reg_href = "#"
+	reg_element_id = "add_to_cart_post"
+  else:
+	reg_href = reg_then_add_to_cart_link
+	reg_element_id = "reg_then_add_to_cart"
+  %>
+  <% if ecommerce_checkout:
+	  reg_href = ecommerce_checkout_link
+	  reg_element_id = ""
+  %>
+  <a href="${reg_href}" class="add-to-cart" id="${reg_element_id}">
+	${_("Add {course_name} to Cart <span>({price} USD)</span>")\
+	  .format(course_name=course.display_number_with_default, price=course_price)}
+  </a>
+  <div id="register_error"></div>
+%else:
+  <%
+	if ecommerce_checkout:
+	  reg_href = ecommerce_checkout_link
+	else:
+	  reg_href="#"
+	if professional_mode:
+	  href_class = "add-to-cart"
+	else:
+	  href_class = "register"
+  %>
+  <!--<a href="${reg_href}" class="${href_class}">
+	${_("Enroll in {course_name}").format(course_name=course.display_number_with_default) | h}
+  </a>-->
+  <div id="register_error"></div>
+%endif
+
+  </%block>
+  <%block name="course_about_details">
+	<section class="course-content">
+        <div class="row">
+		  <div class="col-lg-9">
+			${get_course_about_section(request, course, "overview")}
+			% if get_course_about_section(request, course, "course_staff_extended"):
+				<h2>Lista prowadzących</h2>
+				${get_course_about_section(request, course, "course_staff_extended")}
+			% endif
+		  </div>
+
+          <div class="col-lg-3">
+            <h2>Informacje podstawowe</h2>
+            <ul class="course-details">
+			  <li>
+                <div class="course-details-icon">
+                  <i class="icon-level"></i>
+                </div>
+                <div class="course-details-content">
+				  <% for a in settings.ALL_COURSE_DIFFICULTY:
+						if (a[0]==course.difficulty):
+							course_difficulty = a[1]
+				  %>
+                  <strong>Poziom trudności kursu:</strong> ${course_difficulty}
+                </div>
+              </li>
+
+
+              <li>
+                <div class="course-details-icon">
+                  <i class="icon-briefcase"></i>
+                </div>
+                <div class="course-details-content">
+				  <% for a in settings.ALL_COURSE_CATEGORY:
+						if (a[0]==course.course_category):
+							course_c = a[1]
+				  %>
+                  <strong>Kategoria tematyczna:</strong> ${course_c}
+                </div>
+              </li>
+
+              <li>
+                <div class="course-details-icon">
+                  <i class="icon-time"></i>
+                </div>
+                <div class="course-details-content">
+				  <% for a in settings.ALL_COURSE_TIMETABLE:
+						if (a[0]==course.timetable):
+							course_timetable = a[1]
+				  %>
+                  <strong>Czas trwania kursu (w tygodniach):</strong> ${course_timetable}
+                </div>
+              </li>
+
+              % if not course.start_date_is_still_default:
+              <%
+                  course_start_date = course.advertised_start or course.start
+              %>
+
+              <li>
+                <div class="course-details-icon">
+                  <i class="icon-calendar"></i>
+                </div>
+                <div class="course-details-content">
+                  <strong>${_("Classes Start")}:</strong>
+
+                   % if isinstance(course_start_date, string_types):
+                  ${course_start_date}
+              % else:
+                  <%
+                     course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
+                  %>
+                  <span class="important-dates-item-text start-date localized_datetime" data-language="pl" data-format-language="pl" data-format="shortDate" data-datetime="${course_date_string}"></span>
+              % endif
+
+                </div>
+              </li>
+
+          % endif
+
+          % if course.end:
+                <%
+                    course_end_date = course.end
+                %>
+
+              <li>
+                <div class="course-details-icon">
+                  <i class="icon-flag"></i>
+                </div>
+                <div class="course-details-content">
+                  <strong>${_("Classes End")}:</strong>
+                   % if isinstance(course_end_date, string_types):
+                      <span class="important-dates-item-text final-date">${course_end_date}</span>
+                  % else:
+                    <%
+                        course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
+                    %>
+                    <span class="important-dates-item-text final-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></span>
+                  % endif
+                </div>
+              </li>
+            % endif
+
+
+              % if course.enrollment_start:
+                <%
+                    course_end_date = course.enrollment_start
+                %>
+
+              <li>
+                <div class="course-details-icon">
+                  <i class="icon-calendar"></i>
+                </div>
+                <div class="course-details-content">
+                  <strong>${_("Enrollment start")}:</strong>
+                   % if isinstance(course_end_date, string_types):
+                      <span class="important-dates-item-text final-date">${course_end_date}</span>
+                  % else:
+                    <%
+                        course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
+                    %>
+                    <span class="important-dates-item-text final-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></span>
+                  % endif
+                </div>
+              </li>
+            % endif
+
+            % if course.enrollment_end:
+                <%
+                    course_end_date = course.enrollment_end
+                %>
+
+              <li>
+                <div class="course-details-icon">
+                  <i class="icon-flag"></i>
+                </div>
+                <div class="course-details-content">
+                  <strong>${_("Enrollment end")}:</strong>
+                   % if isinstance(course_end_date, string_types):
+                      <span class="important-dates-item-text final-date">${course_end_date}</span>
+                  % else:
+                    <%
+                        course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
+                    %>
+                    <span class="important-dates-item-text final-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></span>
+                  % endif
+                </div>
+              </li>
+            % endif
+
+            
+              <li>
+                <div class="course-details-icon">
+                  <i class="icon-time"></i>
+                </div>
+                <div class="course-details-content">
+                  <strong>Tygodniowy wysiłek godzinowy:</strong> ${get_course_about_section(request, course, "effort")} godzin
+                </div>
+              </li>
+              
+		     % if course.organizer:
+              <li>
+                <div class="course-details-icon">
+                  <i class="icon-briefcase"></i>
+                </div>
+                <div class="course-details-content">
+                  <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+                  <strong>Organizator:</strong> ${course_organize}
+                </div>
+              </li>
+             % endif
+            </ul>
+          %if user.is_authenticated() and registered:
+          <!--
+            <h2>Może Cię zainteresować</h2>
+            <a href="#" class="course-card course-card-simple card-color--new">
+              <figure class="course-card-image">
+                <img src="http://via.placeholder.com/350x250">
+
+                <span class="course-card-label">Nowy kurs</span>
+              </figure>
+              <div class="course-card-content">
+                <time class="course-card-start"><i class="icon-calendar"></i> Start 1 czerwca 2018</time>
+                <h3>Nazwa kursu</h3>
+                <p>Aenean ante nisl, mattis non hendrerit</p>
+              </div>
+              <footer class="course-card-footer">
+                <span class="course-card-more">Czytaj więcej</span>
+              </footer>
+            </a>
+            -->
+          % endif
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+    </%block>
+
+      <%block name="course_about_reviews_tool">
+      ## Course reviews tool
+      % if reviews_fragment_view:
+       ${HTML(reviews_fragment_view.body_html())}
+      % endif
+      </%block>
+
+      ## For now, ocw links are the only thing that goes in additional resources
+      % if get_course_about_section(request, course, "ocw_links"):
+      <div class="additional-resources">
+        <header>
+          <h1>${_("Additional Resources")}</h1>
+      </div>
+
+        <div>
+          ## "MITOpenCourseware" should *not* be translated
+          <h2 class="opencourseware">MITOpenCourseware</h2>
+             ${get_course_about_section(request, course, "ocw_links")}
+        </div>
+    </div>
+      %endif
+
+  </div>
+
+  </div>
+</div>
+
+## Need to put this hidden form on the page so that the registration button works.
+## Since it's no harm to display a hidden form, we display it with the most permissive conditional
+## which is when the student is not registered.
+%if active_reg_button or is_shib_course:
+  <div style="display: none;">
+    <form id="class_enroll_form" method="post" data-remote="true" action="${reverse('change_enrollment')}">
+      <fieldset class="enroll_fieldset">
+        <legend class="sr">${pgettext("self","Enroll")}</legend>
+        <input name="course_id" type="hidden" value="${course.id | h}">
+        <input name="enrollment_action" type="hidden" value="enroll">
+      </fieldset>
+      <div class="submit">
+        <input name="submit" type="submit" value="${pgettext('self','enroll')}">
+      </div>
+    </form>
+  </div>
+%endif
+
+<%include file="../video_modal.html" />
+
+<%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
+    DateUtilFactory.transform(iterationKey=".localized_datetime");
+</%static:require_module_async>
+</div>
+</main>

@@ -1,0 +1,34 @@
+﻿---
+metadata:
+    display_name: Zamknięte jednokrotnego wyboru z podpowiedzią i odp. zwrotną
+    markdown: |
+        Możesz użyć tego przykładowego ćwiczenia jako szablonu do stworzenia pytania zamkniętego jednokrotnego wyboru z podpowiedzią i odpowiedzią zwrotną. Wyedytuj to ćwiczenie i wprowadź własne pytanie i odpowiedzi.
+        >>W to miejsce wprowadź pytanie. Jest ono niezbędne.||W miejsce tego komunikatu możesz wprowadzić komentarz lub małą wskazówkę. <<
+        ( ) nieprawidłowa odpowiedź {{Możesz wprowadzić opcjonalną odpowiedź zwrotną, która wyświetli się po udzieleniu tej odpowiedzi przez studenta.}}
+        (x) prawidłowa odpowiedź
+        ( ) nieprawidłowa odpowiedź {{Możesz wprowadzić opcjonalną odpowiedź zwrotną dla każdej odpowiedzi, takiej jak np. ta.}}
+        ||Możesz także tworzyć opcjonalne podpowiedzi do pytań. Pytania mające podpowiedź zawierają przycisk podpowiedzi, a treść podpowiedzi z tego miejsca wyświetli się po pierwszym naciśnięciu przycisku podpowiedzi.||
+        ||Jeśli dodasz więcej niż jedną podpowiedź, za każdym razem kiedy student naciśnie przycisk wyświetli się inna podpowiedź.||
+hinted: true
+data:   |
+        <problem>
+            <multiplechoiceresponse>
+                <p>Możesz użyć tego przykładowego ćwiczenia jako szablonu do stworzenia pytania zamkniętego jednokrotnego wyboru z podpowiedzią i odpowiedzią zwrotną. Wyedytuj to ćwiczenie i wprowadź własne pytanie i odpowiedzi.</p>
+                <label>W to miejsce wprowadź pytanie. Jest ono niezbędne.</label>
+                <description>W miejsce tego komunikatu możesz wprowadzić komentarz lub małą wskazówkę.</description>
+                <choicegroup>
+                    <choice correct="false">nieprawidłowa odpowiedź
+                        <choicehint>Możesz wprowadzić opcjonalną odpowiedź zwrotną, która wyświetli się po udzieleniu tej odpowiedzi przez studenta.</choicehint>
+                    </choice>
+                    <choice correct="true">prawidłowa odpowiedź
+                    </choice>
+                    <choice correct="false">nieprawidłowa odpowiedź
+                        <choicehint>Możesz wprowadzić opcjonalną odpowiedź zwrotną dla każdej odpowiedzi, takiej jak np. ta.</choicehint>
+                    </choice>
+                </choicegroup>
+            </multiplechoiceresponse>
+            <demandhint>
+                <hint>Możesz także tworzyć opcjonalne podpowiedzi do pytań. Pytania mające podpowiedź zawierają przycisk podpowiedzi, a treść podpowiedzi z tego miejsca wyświetli się po pierwszym naciśnięciu przycisku podpowiedzi.</hint>
+                <hint>Jeśli dodasz więcej niż jedną podpowiedź, za każdym razem kiedy student naciśnie przycisk wyświetli się inna podpowiedź.</hint>
+            </demandhint>
+        </problem>

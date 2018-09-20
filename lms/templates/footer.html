@@ -1,0 +1,73 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
+from branding.api import get_footer
+from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+<footer class="footer bg-light">
+    <div class="container container-md">
+        <span>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <strong>Navoica</strong>
+                <p>Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat i dla każdego
+                    zarejestrowanego użytkownika.</p>
+            </div>
+
+            <div class="col-sm-6 col-md-3 offset-md-1">
+                <strong>Poznaj nas</strong>
+
+                <ul>
+                    % for item_num, link in enumerate(footer['navigation_links'], start=1):
+                    <li>
+                        <a href="${link['url']}">${link['title']}</a>
+                    </li>
+                    % endfor
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-3 offset-md-1">
+                <strong>Informacje prawne</strong>
+                <ul>
+                    <li><a href="#">Warunki Korzystania z Serwisu</a></li>
+                    <li><a href="#">Polityka Prywatności</a></li>
+                    <li><a href="#">Kodeks honorowy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-logos row align-items-center justify-content-center text-center">
+            <div class="col">
+                <img src="/static/images/patrons/logo_mnisw.jpg"
+                     alt="Ministerstwo Nauki i Szkolnictwa Wyższego">
+            </div>
+            <div class="col">
+                <img src="/static/images/patrons/logo_krasp.jpg" alt="KRASP">
+            </div>
+            <div class="col">
+                <img src="/static/images/patrons/logo_fmn.jpg" alt="Fundacja Młodej Nauki">
+            </div>
+            <div class="col">
+                <img src="/static/images/patrons/logo_opi_pib.png" alt="OPI - PIB">
+            </div>
+        </div>
+        <p class="footer-copyright"><span>&copy; Copyright 2018 Navoica</span> — Wszelkie prawa zastrzeżone.</p>
+        </span>
+    </div>
+</footer>
+
+% if include_dependencies:
+<%static:js group='base_vendor'/>
+<%static:css group='style-vendor'/>
+<%include file="widgets/segment-io.html" />
+<%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+% for url in footer_css_urls:
+<link rel="stylesheet" type="text/css" href="${url}"></link>
+% endfor
+% endif

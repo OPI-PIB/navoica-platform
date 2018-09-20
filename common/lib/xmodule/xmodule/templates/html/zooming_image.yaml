@@ -1,0 +1,56 @@
+---
+metadata:
+    display_name: Obrazek z lupą
+data: |
+      <h3 class="hd hd-2">Obrazek z lupą</h3>
+      <p>Udostępnij narzędzie obrazka z lupą, aby pozwolić studentom na powiększanie złożonych obrazków o wysokiej rozdzielczości i wyświetlanie zawartych na nich szczegółowych informacji.</p>
+      <p>Dzięki temu student może przesuwać kursor myszy nad obrazkiem i powiększać wybrany fragment grafiki, aby widzieć go szczegółowo.</p>
+      <p>Aby wykorzystać narzędzie obrazka z lupą musisz najpierw dodać <a href="http://files.edx.org/jquery.loupeAndLightbox.js" target="_blank">plik JavaScript jquery.loupeAndLightbox.js </a>.</p>
+      <p>Musisz także dodać odnośniki do regularnego i powiększonego obrazka.</p>
+      <p>Poniższy kod HTML ukazuje format narzędzia obrazka z lupą. Do celów skorzystania z tego szablonu musisz zmienić wartości <i>zaznaczone kursywą</i>.</p>
+        <pre>
+        &lt;div class="zooming-image-place" style="position: relative;"&gt;
+          &lt;a class="loupe" href="<i>odnośnik do obrazka o wysokiej rozdzielczości</i>"&gt;
+            &lt;img alt="<i>tekst dla czytników ekranu</i>"
+              src="<i>odnośnik do obrazka o regularnej rozdzielczości</i>" /&gt;
+          &lt;/a>
+          &lt;div class="script_placeholder"
+            data-src="<i>ścieżka do pliku JavaScript jquery.loupeAndLightbox.js </i>"/&gt;
+        &lt;/div&gt;
+        &lt;script type="text/javascript"&gt;// &gt;![CDATA[
+        JavascriptLoader.executeModuleScripts($('.zooming-image-place').eq(0), function() {
+          $('.loupe').loupeAndLightbox({
+            width: 350,
+            height: 350,
+            lightbox: false
+          });
+        });
+        // ]]&gt;&lt;/script&gt;
+        &lt;div id="ap_listener_added"&gt;&lt;/div&gt;
+        </pre>
+      <p>Dla własnego użytku możesz zmodyfikować poniższy przykładowy obrazek.</p>
+      <ol>
+        <li>Zastąp wartość atrybutu linku <strong>href</strong> odnośnikiem do obrazka o wysokiej rozdzielczości. Nie zmieniaj wartości klasy atrybutu.</li>
+        <li>Zastąp wartość atrybutu <strong>src</strong> odnośnikiem do regularnego obrazka, który wyświetli się na ekranie kursu.</li>
+        <li>Zastąp wartość atrybutu <strong>alt</strong> tekstem, który stanowi opis obrazka oraz czynności, którą wywoła jego kliknięcie. <strong>Musisz</strong> wypełnić to pole, aby dostosować się do polityki dostępności.</li>
+        <li>Zastąp wartość atrybutu <strong>data-src</strong> elementu div odnośnikiem do pliku JavaScript jquery.loupeAndLightbox.js .</li>
+      </ol>
+      <p>Poniższy obrazek ukazuje ciąg zachodzących w komórce reakcji chemicznych. </p>
+      <p>Możesz zobaczyć struktury chemiczne poszczególnych cząsteczek klikając na nie. Podgląd z lupą wyświetla również enzymy, które biorą udział w poszczególnym etapie.</p>
+      <p class="sr">Naciśnij spację, aby uruchomić lupę.</p>
+      <div class="zooming-image-place" style="position: relative;">
+        <a class="loupe" href="https://studio.edx.org/c4x/edX/DemoX/asset/pathways_detail_01.png">
+            <img alt="magnify" src="https://studio.edx.org/c4x/edX/DemoX/asset/pathways_overview_01.png" />
+          </a>
+        <div class="script_placeholder" data-src="https://studio.edx.org/c4x/edX/DemoX/asset/jquery.loupeAndLightbox.js" />
+      </div>
+      <script type="text/javascript">// <![CDATA[
+      JavascriptLoader.executeModuleScripts($('.zooming-image-place').eq(0), function() {
+        $('.loupe').loupeAndLightbox({
+          width: 350,
+          height: 350,
+          lightbox: false
+        });
+      });
+      // ]]></script>
+      <div id="ap_listener_added"></div>

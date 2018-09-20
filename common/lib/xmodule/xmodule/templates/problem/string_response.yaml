@@ -1,0 +1,18 @@
+---
+metadata:
+    display_name: Otwarte z odpowiedzią tekstową
+    markdown: |
+        Możesz użyć tego przykładowego ćwiczenia jako szablonu do stworzenia pytania otwartego z odpowiedzią tekstową. Wyedytuj to ćwiczenie i wprowadź własne pytanie.
+        >>W to miejsce wprowadź pytanie. Jest ono niezbędne.||W miejsce tego komunikatu możesz wprowadzić komentarz lub małą wskazówkę. <<
+        = prawidłowa odpowiedź
+        or= akceptowalny wariant prawidłowej odpowiedzi
+data:   |
+        <problem>
+            <stringresponse answer="the correct answer" type="ci">
+                <p>Możesz użyć tego przykładowego ćwiczenia jako szablonu do stworzenia pytania otwartego z odpowiedzią tekstową. Wyedytuj to ćwiczenie i wprowadź własne pytanie.</p>
+                <label>W to miejsce wprowadź pytanie. Jest ono niezbędne.</label>
+                <description>W miejsce tego komunikatu możesz wprowadzić komentarz lub małą wskazówkę.</description>
+                <additional_answer answer="akceptowalny wariant prawidłowej odpowiedzi"/>
+                <textline size="20"/>
+            </stringresponse>
+        </problem>

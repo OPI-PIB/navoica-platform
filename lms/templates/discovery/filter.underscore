@@ -1,0 +1,9 @@
+  <button data-value="<%- query %>" class="facet-option discovery-button" data-type="<%- type %>">
+    <span class="query"><%- name %></span>
+    <span aria-hidden="true" class="fa fa-times" aria-hidden="true"></span>
+  </button>
+<div class="list-group">
+	<a href="#" data-value="<%- query %>" data-type="<%- type %>" class="list-group-item d-flex justify-content-between align-items-center">
+	<%- name %> <span class="list-group-count">14</span></a>
+	<span aria-hidden="true" class="fa fa-times" aria-hidden="true"></span>
+</div>

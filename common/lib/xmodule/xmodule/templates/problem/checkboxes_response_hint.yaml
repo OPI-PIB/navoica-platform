@@ -1,0 +1,47 @@
+---
+metadata:
+    display_name: Zamknięte wielokrotnego wyboru z podpowiedzią i odp. zwrotną 
+    markdown: |
+      Możesz użyć tego przykładowego ćwiczenia jako szablonu do stworzenia pytania zamkniętego wielokrotnego wyboru z podpowiedzią i odpowiedzią zwrotną. Wyedytuj to ćwiczenie i wprowadź własne pytanie i odpowiedzi.
+      
+      >>W to miejsce wprowadź pytanie. Jest ono niezbędne.||W miejsce tego komunikatu możesz wprowadzić komentarz lub małą wskazówkę.<<
+      
+      [x] prawidłowa odpowiedź {{ selected: Możesz wprowadzić opcjonalną odpowiedź zwrotną, która wyświetli się po udzieleniu tej odpowiedzi przez studenta. }, { unselected: Możesz wprowadzić opcjonalną odpowiedź zwrotną, która wyświetli się w przypadku niezaznaczenia tej odpowiedzi przez studenta.}}
+      [ ] nieprawidłowa odpowiedź
+      [ ] nieprawidłowa odpowiedź {{ selected: Możesz wprowadzić opcjonalną odpowiedź zwrotną, która wyświetli się po udzieleniu tej nieprawidłowej odpowiedzi przez studenta. }, { unselected: Możesz wprowadzić opcjonalną odpowiedź zwrotną dla każdej odpowiedzi, takiej jak np. ta.}}
+      [x] prawidłowa odpowiedź
+      
+      {{ ((A B D)) Możesz określić opcjonalną odpowiedź zwrotną dla różnych kombinacji odpowiedzi, czyli wyświetlaną tylko w przypadku gdy student udzieli odpowiedzi we wskazanej kombinacji. }}
+      {{ ((A B C D)) Ową opcjonalną odpowiedź zwrotną można tworzyć dla jednej, kombinacji kilku, a nawet w przypadku zaznaczenia wszystkich odpowiedzi. }}
+      
+      ||Możesz także tworzyć opcjonalne podpowiedzi do pytań. Pytania mające podpowiedź zawierają przycisk podpowiedzi, a treść podpowiedzi z tego miejsca wyświetli się po pierwszym naciśnięciu przycisku podpowiedzi.||
+      ||Jeśli dodasz więcej niż jedną podpowiedź, za każdym razem kiedy student naciśnie przycisk wyświetli się inna podpowiedź.||
+hinted: true
+data:   |
+        <problem>
+            <choiceresponse>
+                <p>Możesz użyć tego przykładowego ćwiczenia jako szablonu do stworzenia pytania z polami wyboru z podpowiedzią i odpowiedzią zwrotną. Wyedytuj to ćwiczenie i wprowadź własne pytanie i odpowiedzi.</p>
+                <label>W to miejsce wprowadź pytanie. Jest ono niezbędne.</label>
+                <description>W miejsce tego komunikatu możesz wprowadzić komentarz lub małą wskazówkę.</description>
+                <checkboxgroup>
+                    <choice correct="true">prawidłowa odpowiedź
+                        <choicehint selected="true">Możesz wprowadzić opcjonalną odpowiedź zwrotną, która wyświetli się po udzieleniu tej odpowiedzi przez studenta.</choicehint>
+                        <choicehint selected="false">Możesz wprowadzić opcjonalną odpowiedź zwrotną, która wyświetli się w przypadku niezaznaczenia tej odpowiedzi przez studenta.</choicehint>
+                    </choice>
+                    <choice correct="false">nieprawidłowa odpowiedź
+                    </choice>
+                    <choice correct="false">nieprawidłowa odpowiedź
+                        <choicehint selected="true">Możesz wprowadzić opcjonalną odpowiedź zwrotną, która wyświetli się po udzieleniu tej nieprawidłowej odpowiedzi przez studenta.</choicehint>
+                        <choicehint selected="false">Możesz wprowadzić opcjonalną odpowiedź zwrotną dla każdej odpowiedzi, takiej jak np. ta.</choicehint>
+                    </choice>
+                    <choice correct="true">prawidłowa odpowiedź
+                    </choice>
+                    <compoundhint value="A B D">Możesz określić opcjonalną odpowiedź zwrotną dla różnych kombinacji odpowiedzi, czyli wyświetlaną tylko w przypadku gdy student udzieli odpowiedzi we wskazanej kombinacji.</compoundhint>
+                    <compoundhint value="A B C D">Ową opcjonalną odpowiedź zwrotną można tworzyć dla jednej, kombinacji kilku, a nawet w przypadku zaznaczenia wszystkich odpowiedzi.</compoundhint>
+                </checkboxgroup>
+            </choiceresponse>
+            <demandhint>
+                <hint>Możesz także tworzyć opcjonalne podpowiedzi do pytań. Pytania mające podpowiedź zawierają przycisk podpowiedzi, a treść podpowiedzi z tego miejsca wyświetli się po pierwszym naciśnięciu przycisku podpowiedzi.</hint>
+                <hint>Jeśli dodasz więcej niż jedną podpowiedź, za każdym razem kiedy student naciśnie przycisk wyświetli się inna podpowiedź.</hint>
+            </demandhint>
+        </problem>

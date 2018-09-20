@@ -1,0 +1,74 @@
+## mako
+
+<%page expression_filter="h" args="online_help_token"/>
+
+<%namespace name='static' file='../static_content.html'/>
+<%namespace file='../main.html' import="login_query"/>
+<%!
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+%>
+
+<%
+show_explore_courses = settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing
+show_sysadmin_dashboard = settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff
+self.real_user = getattr(user, 'real_user', user)
+%>
+
+
+% if show_dashboard_tabs:
+<li class="mobile-nav-item hidden-mobile nav-item">
+    <a class="btn btn-outline-primary" href="${reverse('dashboard')}">
+        ${_("Courses")}
+    </a>
+</li>
+<!--
+<li class="nav-item">
+    <a class="nav-link" href="${marketing_link('BLOG')}">${_("News")}</a>
+</li>
+-->
+% if show_program_listing:
+<li class="mobile-nav-item hidden-mobile nav-item">
+    <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
+        ${_("Programs")}
+    </a>
+</li>
+% endif
+<li class="mobile-nav-item hidden-mobile nav-item">
+    <a class="${'active ' if '/u/' in request.path  else ''}nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">
+        ${_("Profile")}
+    </a>
+</li>
+% endif
+
+<li class="nav-item">
+    <a class="btn btn-outline-primary" href="${marketing_link('ABOUT')}">${_("About")}</a>
+</li>
+
+<li class="nav-item">
+    <a class="btn btn-outline-primary" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
+</li>
+
+% if show_explore_courses:
+<li class="mobile-nav-item hidden-mobile nav-item">
+    <a class="nav-link" href="${marketing_link('COURSES')}">${_('Discover New')}</a>
+</li>
+% endif
+% if show_sysadmin_dashboard:
+<li class="mobile-nav-item hidden-mobile nav-item">
+    ## Translators: This is short for "System administration".
+    <a class="tab-nav-link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+</li>
+% endif
+
+% if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
+<div class="mobile-nav-item hidden-mobile nav-item">
+    <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
+        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
+    </a>
+</div>
+% endif
+
+<%include file="user_dropdown.html"/>
+

@@ -1,0 +1,25 @@
+---
+metadata:
+    display_name: Otwarte z odpowiedzią numeryczną, podpowiedzią i odp. zwrotną
+    markdown: |
+        Możesz użyć tego przykładowego ćwiczenia jako szablonu do stworzenia pytania otwartego z odpowiedzią numeryczną, podpowiedzią i odpowiedzią zwrotną. Wyedytuj to ćwiczenie i wprowadź własne pytanie.
+        >>W to miejsce wprowadź pytanie. Jest ono niezbędne.||W miejsce tego komunikatu możesz wprowadzić komentarz lub małą wskazówkę. <<
+        = 100 + 5 {{Możesz wprowadzić opcjonalną odpowiedź zwrotną, która wyświetli się po udzieleniu tej odpowiedzi przez studenta.}}
+        ||Możesz także tworzyć opcjonalne podpowiedzi do pytań. Pytania mające podpowiedź zawierają przycisk podpowiedzi, a treść podpowiedzi z tego miejsca wyświetli się po pierwszym naciśnięciu przycisku podpowiedzi.||
+        ||Jeśli dodasz więcej niż jedną podpowiedź, za każdym razem kiedy student naciśnie przycisk wyświetli się inna podpowiedź.||
+hinted: true
+data:   |
+        <problem>
+            <numericalresponse answer="105">
+                <p>Możesz użyć tego przykładowego ćwiczenia jako szablonu do stworzenia pytania otwartego z odpowiedzią numeryczną z podpowiedzią i odpowiedzią zwrotną. Wyedytuj to ćwiczenie i wprowadź własne pytanie.</p>
+                <label>W to miejsce wprowadź pytanie. Jest ono niezbędne.</label>
+                <description>W miejsce tego komunikatu możesz wprowadzić komentarz lub małą wskazówkę.</description>
+                <responseparam type="tolerance" default="5"/>
+                <formulaequationinput/>
+                <correcthint>Możesz wprowadzić opcjonalną odpowiedź zwrotną, która wyświetli się po udzieleniu tej odpowiedzi przez studenta.</correcthint>
+            </numericalresponse>
+            <demandhint>
+                <hint>Możesz także tworzyć opcjonalne podpowiedzi do pytań. Pytania mające podpowiedź zawierają przycisk podpowiedzi, a treść podpowiedzi z tego miejsca wyświetli się po pierwszym naciśnięciu przycisku podpowiedzi.</hint>
+                <hint>Jeśli dodasz więcej niż jedną podpowiedź, za każdym razem kiedy student naciśnie przycisk wyświetli się inna podpowiedź.</hint>
+            </demandhint>
+        </problem>

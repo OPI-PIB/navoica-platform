@@ -1,0 +1,32 @@
+---
+metadata:
+    display_name: Narzędzie IFrame
+data: |
+      <h3 class="hd hd-2">Narzędzie IFrame</h3>
+      <p>Skorzystaj z narzędzia IFrame, aby osadzić w treści kursu ćwiczenie lub dowolny element z wybranej strony internetowej. Dla przykładu, poniższy interaktywny element pozwala studentom na poeksperymentowanie z tym, w jaki sposób kształt trójkąta wpływa na prostą wyprowadzaną z trójkąta.</p>
+      <p>Ćwiczenia osadzone w IFrame nie podlegają ocenie. Aby osadzić punktowane ćwiczenie, skorzystaj z typu ćwiczenia Niestandardowy skrypt JavaScript.</p>
+      <p>Poniższy kod stanowi format HTML niezbędny do skorzystania z narzędzia IFrame. Dla IFrame w tym szablonie, musisz podmienić wartości, <i>które zaznaczono kursywą</i>.</p>
+        <pre>
+        &lt;iframe title="<i>Wymagana nazwa elementu</i>"
+          src="<i>Adres URL elementu, rozpoczynający się od https://</i>"&gt;
+           <i>Wiadomość wyświetlana jeśli przeglądarka nie wspiera IFrame.</i>
+        &lt;/iframe&gt;
+        </pre>
+      <p>Poniższa Iframe zawiera atrybuty szerokości, wysokości, szerokości marginesów, wysokości marginesów, granicy ramek oraz przewijania. Owe atrybuty są opcjonalne, dlatego możesz je usunąć lub podmienić ich wartości.</p>
+      <p>Zmodyfikuj ten szablon w razie potrzeby.</p>
+      <p>Aby zmodyfikować IFrame, musisz wyedytować kod źródłowy HTML. Edytując ten szablon, kliknij <strong>HTML</strong> w pasku narzędzi.</p>
+      <p>Następnie zmodyfikuj poniższy przykład według własnych potrzeb.
+      <ol>
+      <li>Zastąp wartość atrybutu <strong>src</strong> IFrame adresem URL elementu, który chcesz osadzić w kursie.
+      <p><strong>Zauważ</strong>: Adres URL musi zaczynać się od <strong>https</strong> zamiast http, aby zapewnić wyświetlenie elementu we wszystkich przeglądarkach wspierających IFrame.</p></li>
+      <li>Zmień wartość atrybutu <strong>title</strong> podając nazwę elementu. <strong>Musisz</strong> zawrzeć nazwę, aby dostosować się do polityki dostępności.</li>
+      <li>W razie potrzeby zmień pozostałe atrybuty IFrame. Sprawdź <a href="http://www.w3.org/wiki/HTML/Elements/iframe" target="_blank">specyfikację IFrame</a> (w języku angielskim), aby uzyskać więcej informacji.</li>
+      <li>Warto również zmienić komunikat pomiędzy tagami otwarcia i zamknięcia <strong>iframe</strong>.
+          <pre>Twoja przeglądarka nie wspiera IFrame.</pre>
+          <p>Student zobaczy ten komunikat, jeśli jego przeglądarka nie wspiera IFrames.</p>
+      </li>
+      </ol>
+      <p>Tak wygląda przykładowa IFrame. Możesz zmodyfikować jej atrybuty jak opisano powyżej.</p>
+      <iframe title="Euler Line Demo" src="https://studio.edx.org/c4x/edX/DemoX/asset/eulerLineDemo.html" width="402" height="402" marginwidth="0" marginheight="0" frameborder="0" scrolling="no">
+      Twoja przeglądarka nie wspiera IFrame.
+      </iframe>

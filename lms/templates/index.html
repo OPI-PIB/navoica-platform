@@ -1,0 +1,59 @@
+<%page expression_filter="h"/>
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+
+from openedx.core.djangolib.markup import HTML, Text
+%>
+<section class="jumbotron jumbotron-index bg-dark text-white">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-6">
+		  <h1>Otwarty i swobodny dostęp do wiedzy</h1>
+		  <p>Skorzystaj z kursów oferowanych przez najlepsze uczelnie w Polsce.</p>
+	      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+				<form method="get" action="/courses">
+					<div class="input-group">
+					  <input class="form-control form-control-lg" type="search" name="search_query" placeholder="${_("Search for a course")}">
+					  <div class="input-group-append">
+						<button class="btn btn-primary btn-lg" type="submit"><i class="icon-search"></i></button>
+					  </div>
+					</div>
+			  </form>
+		   % endif
+		</div>
+	  </div>
+	</div>
+</section>
+<%include file="index_promo_video.html" />
+
+<%include file="${courses_list}" />
+
+
+% if show_homepage_promo_video:
+  <section id="video-modal" class="modal home-page-video-modal video-modal">
+    <div class="inner-wrapper">
+      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+% endif
+
+<%block name="js_extra">
+   <script type="text/javascript">
+      $(window).load(function() {
+         if(getParameterByName('next')) {
+              $('#login').trigger("click");
+         }
+      })
+   </script>
+</%block>
+
+% if show_signup_immediately is not UNDEFINED:
+  ## NOTE: This won't work in production, because anonymous views are cached, so it will
+  ## show either with or without this extra js for 3 minutes at a time.
+<script type="text/javascript">
+  $(window).load(function() {$('#signup_action').trigger("click");});
+</script>
+% endif

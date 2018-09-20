@@ -1,0 +1,908 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext");
+
+/*!
+ * Bootstrap v4.1.1 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745 ;
+    --teal: #20c997 ;
+    --cyan: #17a2b8 ;
+    --white: #fff ;
+    --gray: #6c757d ;
+    --gray-dark: #343a40 ;
+    --primary: #B43F37 ;
+    --secondary: #6c757d ;
+    --success: #28a745 ;
+    --info: #17a2b8 ;
+    --warning: #ffc107 ;
+    --danger: #dc3545 ;
+    --light: #f8f9fa ;
+    --dark: #343a40 ;
+    --breakpoint-xs: 0 ;
+    --breakpoint-sm: 576px ;
+    --breakpoint-md: 768px ;
+    --breakpoint-lg: 992px ;
+    --breakpoint-xl: 1200px ;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+}
+
+
+.view-howitworks.not-signedin {
+  .wrapper-content-header {
+    background-color: #B43F37;
+    background-image: none;
+  }
+  .content-header {
+    h1 {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 0 0 20px 0;
+      padding: 0 0 20px 0;
+    }
+    .tagline {
+      color: rgba(255, 255, 255, 0.65);
+    }
+  }
+}
+
+.not-signedin .wrapper-header .nav-pitch .action-signup, .not-signedin .wrapper-header .nav-pitch .action-signup:focus, .view-howitworks.not-signedin .content-cta .list-actions .action.action-primary, .view-signup .content-primary form .form-actions .action-primary, .view-signin .content-primary form .form-actions .action-primary, .view-util .content-primary form .form-actions .action-primary {
+  background-color: #B43F37;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #B43F37;
+  text-transform: none;
+}
+
+.view-dashboard {
+  .create-course .new-course-save, .create-library .new-course-save {
+    background-color: #B43F37;
+    background-image: none;
+    box-shadow: none;
+    border: 1px solid #B43F37;
+    text-transform: none;
+  }
+}
+
+.action.action-primary, .form-create .actions .action-primary {
+  background-color: #B43F37;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #B43F37;
+  text-transform: none;
+}
+
+.not-signedin .wrapper-header .nav-pitch .action-signup:hover, .view-howitworks.not-signedin .content-cta .list-actions .action.action-primary:hover, .view-signup .content-primary form .form-actions .action-primary:hover, .view-signin .content-primary form .form-actions .action-primary:hover, .view-util .content-primary form .form-actions .action-primary:hover {
+  background-color: #872821 !important;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #872821;
+  color: #fff !important;
+}
+
+.view-dashboard {
+  .create-course .new-course-save:hover, .create-library .new-course-save:hover {
+    background-color: #872821;
+    background-image: none;
+    box-shadow: none;
+    border: 1px solid #872821;
+  }
+}
+
+.action.action-primary:hover, .form-create .actions .action-primary:hover {
+  background-color: #872821;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #872821;
+}
+
+.not-signedin .wrapper-header .nav-pitch .action-signin {
+  background-color: #fff;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #ECCFCD;
+  color: #B43F37;
+  text-transform: none;
+}
+
+.view-dashboard {
+  .create-course .new-course-cancel, .create-library .new-course-cancel {
+    background-color: #fff;
+    background-image: none;
+    box-shadow: none;
+    border: 1px solid #ECCFCD;
+    color: #B43F37;
+    text-transform: none;
+  }
+}
+
+.action.action-secondary, .form-create .actions .action-secondary {
+  background-color: #fff;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #ECCFCD;
+  color: #B43F37;
+  text-transform: none;
+}
+
+.not-signedin .wrapper-header .nav-pitch .action-signin:hover {
+  background-color: #fff;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #D99F9B;
+  color: #B43F37;
+}
+
+.view-dashboard {
+  .create-course .new-course-cancel:hover, .create-library .new-course-cancel:hover {
+    background-color: #fff;
+    background-image: none;
+    box-shadow: none;
+    border: 1px solid #D99F9B;
+    color: #B43F37;
+  }
+}
+
+.action.action-secondary:hover, .form-create .actions .action-secondary:hover {
+  background-color: #fff;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #D99F9B;
+  color: #B43F37;
+}
+
+.view-howitworks.not-signedin .content-features .feature {
+  margin: 0 0 50px 0;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 50px 0;
+}
+
+a, .wrapper-footer footer.primary a {
+  color: #B43F37;
+}
+
+a:hover {
+  color: #872821;
+}
+
+.wrapper-footer {
+  footer.primary {
+    a:hover {
+      color: #872821;
+    }
+    color: #999;
+  }
+  margin: 0;
+  padding: 40px 0 0 10px;
+}
+
+.view-howitworks.not-signedin .content-features .feature {
+  .copy .list-proofpoints .proofpoint {
+    padding: 20px;
+    &:hover .title {
+      color: #B43F37;
+    }
+  }
+  .img a {
+    border: 1px solid #f5f5f5;
+    box-shadow: none;
+    border-radius: 4px;
+    &:hover {
+      border: 1px solid #ECCFCD;
+    }
+    .action-zoom .icon {
+      background-color: #ECCFCD;
+      color: #B43F37;
+    }
+  }
+}
+
+.wrapper-header {
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: none;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.view-signup .content-primary form, .view-signin .content-primary form, .view-util .content-primary form {
+  box-shadow: none;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  padding: 30px;
+}
+
+input {
+  &[type="text"], &[type="email"], &[type="password"] {
+    border: 1px solid #e5e5e5;
+    box-shadow: none;
+    background: #fff;
+    padding: 12px 16px !important;
+  }
+}
+
+textarea.text {
+  border: 1px solid #e5e5e5;
+  box-shadow: none;
+  background: #fff;
+  padding: 12px 16px !important;
+}
+
+input {
+  &[type="text"]:focus, &[type="email"]:focus, &[type="password"]:focus {
+    background: #fff;
+    border-color: #872821;
+  }
+}
+
+textarea.text:focus {
+  background: #fff;
+  border-color: #872821;
+}
+
+.wrapper-sock .list-cta .cta-show-sock {
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  &:hover {
+    background-color: #B43F37;
+    border-color: #B43F37;
+  }
+}
+
+.view-dashboard {
+  #course-index-tabs li {
+    &.active {
+      border-bottom: 3px solid #B43F37;
+      font-weight: bold;
+    }
+    a {
+      color: #B43F37;
+      &:hover {
+        color: #872821;
+      }
+    }
+    &.active a {
+      color: #000;
+    }
+  }
+  .list-courses {
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    box-shadow: none;
+  }
+  .course-item {
+    border-bottom: 1px solid #e5e5e5;
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+.notice-instruction, .notice-incontext {}
+
+[class*="view-"] .xblock-visibility_view .is-not-configured, .view-outline .content-primary .no-content, .view-static-pages .content-primary .add-pages, .view-container .content-primary .no-container-content, .view-textbooks .content-primary .no-textbook-content, .view-group-configurations .content-primary .no-content, .view-certificates .content-primary .no-content, .ui-loading, .notice-incontext, .view-uploads .no-asset-content, .view-import .wrapper-file-name, .view-group-configurations .content-primary .notice-moduledisabled, .view-certificates .content-primary .notice-moduledisabled {
+  box-shadow: none;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+[class*="view-"] .xblock-visibility_view .is-not-configured .button, .view-outline .content-primary .no-content .button, .view-static-pages .content-primary .add-pages .button, .view-container .content-primary .no-container-content .button, .view-textbooks .content-primary .no-textbook-content .button, .view-group-configurations .content-primary .no-content .button, .view-certificates .content-primary .no-content .button, [class*="view-"] .xblock-visibility_view .is-not-configured .action, .view-outline .content-primary .no-content .action, .view-static-pages .content-primary .add-pages .action, .view-container .content-primary .no-container-content .action, .view-textbooks .content-primary .no-textbook-content .action, .view-group-configurations .content-primary .no-content .action, .view-certificates .content-primary .no-content .action, .add-xblock-component .new-component .new-component-type .add-xblock-component-button {
+  background-color: #B43F37;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #B43F37;
+  text-transform: none;
+}
+
+.wrapper-mast .mast.has-actions .nav-actions .button {
+  &.new-button, &.button-new {
+    background-color: #B43F37;
+    background-image: none;
+    box-shadow: none;
+    border: 1px solid #B43F37;
+    text-transform: none;
+  }
+}
+
+.notice-create.has-actions .list-actions .action-primary, .view-uploads .no-asset-content .new-button {
+  background-color: #B43F37;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #B43F37;
+  text-transform: none;
+}
+
+.view-dashboard .content .notice-incontext {
+  &.has-actions .list-actions {
+    .action-create-course, .action-create-library {
+      background-color: #B43F37;
+      background-image: none;
+      box-shadow: none;
+      border: 1px solid #B43F37;
+      text-transform: none;
+    }
+  }
+  &.list-notices .notice-item.has-actions .list-actions {
+    .action-create-course, .action-create-library {
+      background-color: #B43F37;
+      background-image: none;
+      box-shadow: none;
+      border: 1px solid #B43F37;
+      text-transform: none;
+    }
+  }
+}
+
+.view-import {
+  .action-choose-file, .wrapper-file-name .submit-button {
+    background-color: #B43F37;
+    background-image: none;
+    box-shadow: none;
+    border: 1px solid #B43F37;
+    text-transform: none;
+  }
+}
+
+.view-settings .group-settings {
+  &.assignment-types .actions .new-button, &.course-learning-info .actions .new-button, &.instructor-types .actions .new-button {
+    background-color: #B43F37;
+    background-image: none;
+    box-shadow: none;
+    border: 1px solid #B43F37;
+    text-transform: none;
+  }
+}
+
+.view-team .content .notice-create.has-actions .list-actions .action-primary {
+  background-color: #B43F37;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #B43F37;
+  text-transform: none;
+}
+
+.wrapper-xblock .xblock-message.no-container-content.xblock-message.no-container-content {
+  .button, .action {
+    background-color: #B43F37;
+    background-image: none;
+    box-shadow: none;
+    border: 1px solid #B43F37;
+    text-transform: none;
+  }
+}
+
+.outline-complex .outline-section, .form-create, body.uxdesign.alerts .content-primary, .course-handouts, .view-dashboard .courses-processing .wrapper-course, .view-export .export-controls {
+  box-shadow: none;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+}
+
+.view-import {
+  .export-controls, .import-form {
+    box-shadow: none;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+  }
+}
+
+.view-settings .content-primary, .edit-static-page .static-page-details, .view-team .user-list .user-item, .view-textbooks .content-primary .textbook, .view-export-git .export-git-controls, .view-group-configurations .content-primary .wrapper-collection {
+  box-shadow: none;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+}
+
+.view-certificates {
+  .wrapper-collection {
+    box-shadow: none;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+  }
+  .certificates {
+    .signatory-details, .signatory-edit {
+      box-shadow: none;
+      border-radius: 4px;
+      border: 1px solid #e5e5e5;
+    }
+  }
+}
+
+.form-create .actions {
+  box-shadow: none;
+  border-top: 1px solid #e2e2e2;
+}
+
+.view-dashboard {
+  .create-course .new-course-save {
+    &.disabled, &.is-disabled {
+      background-color: #D99F9B !important;
+      border-color: #D99F9B !important;
+    }
+  }
+  .create-library .new-course-save {
+    &.disabled, &.is-disabled {
+      background-color: #D99F9B !important;
+      border-color: #D99F9B !important;
+    }
+  }
+}
+
+.form-create .actions .action-primary {
+  &.disabled, &.is-disabled {
+    background-color: #D99F9B !important;
+    border-color: #D99F9B !important;
+  }
+}
+
+.outline-complex .outline-section:hover, .form-create:hover, body.uxdesign.alerts .content-primary:hover, .course-handouts:hover, .view-dashboard .courses-processing .wrapper-course:hover, .view-export .export-controls:hover {
+  box-shadow: none;
+}
+
+.view-import {
+  .export-controls:hover, .import-form:hover {
+    box-shadow: none;
+  }
+}
+
+.view-settings .content-primary:hover, .edit-static-page .static-page-details:hover, .view-team .user-list .user-item:hover, .view-textbooks .content-primary .textbook:hover, .view-export-git .export-git-controls:hover, .view-group-configurations .content-primary .wrapper-collection:hover {
+  box-shadow: none;
+}
+
+.view-certificates {
+  .wrapper-collection:hover {
+    box-shadow: none;
+  }
+  .certificates {
+    .signatory-details:hover, .signatory-edit:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.outline-complex .outline-section:active, .form-create:active, body.uxdesign.alerts .content-primary:active, .course-handouts:active, .view-dashboard .courses-processing .wrapper-course:active, .view-export .export-controls:active {
+  box-shadow: none;
+}
+
+.view-import {
+  .export-controls:active, .import-form:active {
+    box-shadow: none;
+  }
+}
+
+.view-settings .content-primary:active, .edit-static-page .static-page-details:active, .view-team .user-list .user-item:active, .view-textbooks .content-primary .textbook:active, .view-export-git .export-git-controls:active, .view-group-configurations .content-primary .wrapper-collection:active {
+  box-shadow: none;
+}
+
+.view-certificates {
+  .wrapper-collection:active {
+    box-shadow: none;
+  }
+  .certificates {
+    .signatory-details:active, .signatory-edit:active {
+      box-shadow: none;
+    }
+  }
+}
+
+.is-signedin .nav-account {
+  top: 3px;
+}
+
+.wrapper-header nav .nav-item a:hover {
+  color: #872821 !important;
+}
+
+.nav-item.is-current {
+  color: #B43F37;
+}
+
+body {
+  &.howitworks .nav-not-signedin-hiw, &.dashboard .nav-account-dashboard {
+    color: #B43F37;
+  }
+  &.course {
+    &.view-outline .nav-course-courseware .title, &.view-updates .nav-course-courseware .title, &.view-static-pages .nav-course-courseware .title, &.view-uploads .nav-course-courseware .title, &.view-textbooks .nav-course-courseware .title, &.view-video-uploads .nav-course-courseware .title, &.view-outline .nav-course-courseware-outline, &.view-updates .nav-course-courseware-updates, &.view-static-pages .nav-course-courseware-pages, &.view-uploads .nav-course-courseware-uploads, &.view-textbooks .nav-course-courseware-textbooks, &.view-video-uploads .nav-course-courseware-videos, &.schedule .nav-course-settings .title, &.grading .nav-course-settings .title, &.view-team .nav-course-settings .title, &.view-group-configurations .nav-course-settings .title, &.advanced .nav-course-settings .title, &.view-certificates .nav-course-settings .title, &.schedule .nav-course-settings-schedule, &.grading .nav-course-settings-grading, &.view-team .nav-course-settings-team, &.view-group-configurations .nav-course-settings-group-configurations, &.advanced .nav-course-settings-advanced, &.view-certificates .nav-course-settings-certificates, &.view-import .nav-course-tools .title, &.view-export .nav-course-tools .title, &.view-export-git .nav-course-tools .title, &.view-import .nav-course-tools-import, &.view-export .nav-course-tools-export, &.view-export-git .nav-course-tools-export-git {
+      color: #B43F37;
+    }
+    &.view-team {
+      .nav-library-settings .title, .nav-library-settings-team {
+        color: #B43F37;
+      }
+    }
+  }
+}
+
+.wrapper-header .nav-dd .title {
+  &:hover, &:active {
+    color: #B43F37;
+  }
+}
+
+.nav-item.is-current a {
+  color: #B43F37;
+}
+
+body {
+  &.howitworks .nav-not-signedin-hiw a, &.dashboard .nav-account-dashboard a {
+    color: #B43F37;
+  }
+  &.course {
+    &.view-outline .nav-course-courseware .title a, &.view-updates .nav-course-courseware .title a, &.view-static-pages .nav-course-courseware .title a, &.view-uploads .nav-course-courseware .title a, &.view-textbooks .nav-course-courseware .title a, &.view-video-uploads .nav-course-courseware .title a, &.view-outline .nav-course-courseware-outline a, &.view-updates .nav-course-courseware-updates a, &.view-static-pages .nav-course-courseware-pages a, &.view-uploads .nav-course-courseware-uploads a, &.view-textbooks .nav-course-courseware-textbooks a, &.view-video-uploads .nav-course-courseware-videos a, &.schedule .nav-course-settings .title a, &.grading .nav-course-settings .title a, &.view-team .nav-course-settings .title a, &.view-group-configurations .nav-course-settings .title a, &.advanced .nav-course-settings .title a, &.view-certificates .nav-course-settings .title a, &.schedule .nav-course-settings-schedule a, &.grading .nav-course-settings-grading a, &.view-team .nav-course-settings-team a, &.view-group-configurations .nav-course-settings-group-configurations a, &.advanced .nav-course-settings-advanced a, &.view-certificates .nav-course-settings-certificates a, &.view-import .nav-course-tools .title a, &.view-export .nav-course-tools .title a, &.view-export-git .nav-course-tools .title a, &.view-import .nav-course-tools-import a, &.view-export .nav-course-tools-export a, &.view-export-git .nav-course-tools-export-git a {
+      color: #B43F37;
+    }
+    &.view-team {
+      .nav-library-settings .title a, .nav-library-settings-team a {
+        color: #B43F37;
+      }
+    }
+  }
+}
+
+.wrapper-header .info-course .course-link:hover {
+  background-color: #fff !important;
+  color: #B43F37;
+}
+
+.wrapper-comp-settings {
+  .file-uploader .upload-setting {
+    border: 1px solid #B43F37;
+    color: #B43F37;
+  }
+  .list-input.settings-list {
+    .metadata-list-enum .create-setting, .metadata-dict .create-setting {
+      border: 1px solid #B43F37;
+      color: #B43F37;
+    }
+  }
+}
+
+.outline-content .add-item .button-new, .bit .external-help-button {
+  border: 1px solid #B43F37;
+  color: #B43F37;
+}
+
+.view-outline {
+  .new-subsection-item, .new-unit-item, .outline-complex .add-item .button-new {
+    border: 1px solid #B43F37;
+    color: #B43F37;
+  }
+}
+
+.view-settings .group-settings {
+  #field-course-image .wrapper-input .action-upload-image, #field-banner-image .wrapper-input .action-upload-image, #field-video-thumbnail-image .wrapper-input .action-upload-image, &.instructor-types .field-group .wrapper-input .action-upload-instructor-image {
+    border: 1px solid #B43F37;
+    color: #B43F37;
+  }
+}
+
+.view-textbooks .content-primary .textbook .edit-textbook {
+  .chapters-fields .field-group .field .action-upload, .textbook-fields .field-group .field .action-upload, .action-add-chapter {
+    border: 1px solid #B43F37;
+    color: #B43F37;
+  }
+}
+
+.view-group-configurations .content-primary {
+  .wrapper-collection .action-add-item, .action-add {
+    border: 1px solid #B43F37;
+    color: #B43F37;
+  }
+}
+
+.view-certificates {
+  .wrapper-collection {
+    .collection-edit .action-add-signatory, .action-add-item {
+      border: 1px solid #B43F37;
+      color: #B43F37;
+    }
+  }
+  .action-add, .certificates .signatory-edit .field .signature-upload-wrapper .action-upload-signature {
+    border: 1px solid #B43F37;
+    color: #B43F37;
+  }
+}
+
+.xmodule_VideoDescriptor .wrapper-comp-settings .list-input.settings-list .metadata-video-translations {
+  .create-setting, .upload-setting {
+    border: 1px solid #B43F37;
+    color: #B43F37;
+  }
+}
+
+.wrapper-comp-settings {
+  .file-uploader .upload-setting:hover {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+  .list-input.settings-list {
+    .metadata-list-enum .create-setting:hover, .metadata-dict .create-setting:hover {
+      border: 1px solid #B43F37;
+      background-color: #B43F37;
+    }
+  }
+}
+
+.outline-content .add-item .button-new:hover, .bit .external-help-button:hover {
+  border: 1px solid #B43F37;
+  background-color: #B43F37;
+}
+
+.view-outline {
+  .new-subsection-item:hover, .new-unit-item:hover, .outline-complex .add-item .button-new:hover {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.view-settings .group-settings {
+  #field-course-image .wrapper-input .action-upload-image:hover, #field-banner-image .wrapper-input .action-upload-image:hover, #field-video-thumbnail-image .wrapper-input .action-upload-image:hover, &.instructor-types .field-group .wrapper-input .action-upload-instructor-image:hover {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.view-textbooks .content-primary .textbook .edit-textbook {
+  .chapters-fields .field-group .field .action-upload:hover, .textbook-fields .field-group .field .action-upload:hover, .action-add-chapter:hover {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.view-group-configurations .content-primary {
+  .wrapper-collection .action-add-item:hover, .action-add:hover {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.view-certificates {
+  .wrapper-collection {
+    .collection-edit .action-add-signatory:hover, .action-add-item:hover {
+      border: 1px solid #B43F37;
+      background-color: #B43F37;
+    }
+  }
+  .action-add:hover, .certificates .signatory-edit .field .signature-upload-wrapper .action-upload-signature:hover {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.xmodule_VideoDescriptor .wrapper-comp-settings .list-input.settings-list .metadata-video-translations {
+  .create-setting:hover, .upload-setting:hover {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.wrapper-comp-settings {
+  .file-uploader .upload-setting:focus {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+  .list-input.settings-list {
+    .metadata-list-enum .create-setting:focus, .metadata-dict .create-setting:focus {
+      border: 1px solid #B43F37;
+      background-color: #B43F37;
+    }
+  }
+}
+
+.outline-content .add-item .button-new:focus, .bit .external-help-button:focus {
+  border: 1px solid #B43F37;
+  background-color: #B43F37;
+}
+
+.view-outline {
+  .new-subsection-item:focus, .new-unit-item:focus, .outline-complex .add-item .button-new:focus {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.view-settings .group-settings {
+  #field-course-image .wrapper-input .action-upload-image:focus, #field-banner-image .wrapper-input .action-upload-image:focus, #field-video-thumbnail-image .wrapper-input .action-upload-image:focus, &.instructor-types .field-group .wrapper-input .action-upload-instructor-image:focus {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.view-textbooks .content-primary .textbook .edit-textbook {
+  .chapters-fields .field-group .field .action-upload:focus, .textbook-fields .field-group .field .action-upload:focus, .action-add-chapter:focus {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.view-group-configurations .content-primary {
+  .wrapper-collection .action-add-item:focus, .action-add:focus {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.view-certificates {
+  .wrapper-collection {
+    .collection-edit .action-add-signatory:focus, .action-add-item:focus {
+      border: 1px solid #B43F37;
+      background-color: #B43F37;
+    }
+  }
+  .action-add:focus, .certificates .signatory-edit .field .signature-upload-wrapper .action-upload-signature:focus {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.xmodule_VideoDescriptor .wrapper-comp-settings .list-input.settings-list .metadata-video-translations {
+  .create-setting:focus, .upload-setting:focus {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+  }
+}
+
+.wrapper-mast .mast.has-actions .nav-actions .button {
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  color: #B43F37;
+}
+
+.wrapper-sock .sock {
+  .support .list-actions .action-primary, .feedback .list-actions .action-primary {
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #B43F37;
+  }
+}
+
+.notice-incontext.has-actions .list-actions .action-primary, .notice-instruction.has-actions .list-actions .action-primary {
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  color: #B43F37;
+}
+
+.view-dashboard .status-creationrights {
+  .list-actions .action-primary, .form-actions .action-primary {
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #B43F37;
+  }
+}
+
+.view-export {
+  .export-controls .action-export, .wrapper-status .list-progress .item-progresspoint.has-actions .list-actions .action-primary {
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #B43F37;
+  }
+}
+
+.view-import .wrapper-status .list-progress .item-progresspoint.has-actions .list-actions .action-primary, .view-outline .course-status .status-highlights-enabled-value.button, .view-settings .group-settings.basic .note-promotion-courseURL .list-actions .action-primary, .view-container .content-supplementary .bit-publishing .wrapper-pub-actions .action-publish, .view-export-git .export-git-controls .action-export-git, .view-group-configurations .content-primary .wrapper-collection .collection-edit .actions .action-primary, .view-video-uploads .course-video-settings-container .button, .view-certificates .wrapper-collection .collection-edit .actions .action-primary, .xmodule_VideoDescriptor .wrapper-comp-settings.basic_metadata_edit .transcripts-status .action {
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  color: #B43F37;
+}
+
+.wrapper-mast .mast.has-actions .nav-actions .button:hover {
+  border: 1px solid #B43F37;
+  background-color: #B43F37;
+  color: #fff;
+  box-shadow: none;
+}
+
+.wrapper-sock .sock {
+  .support .list-actions .action-primary:hover, .feedback .list-actions .action-primary:hover {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+    color: #fff;
+    box-shadow: none;
+  }
+}
+
+.notice-incontext.has-actions .list-actions .action-primary:hover, .notice-instruction.has-actions .list-actions .action-primary:hover {
+  border: 1px solid #B43F37;
+  background-color: #B43F37;
+  color: #fff;
+  box-shadow: none;
+}
+
+.view-dashboard .status-creationrights {
+  .list-actions .action-primary:hover, .form-actions .action-primary:hover {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+    color: #fff;
+    box-shadow: none;
+  }
+}
+
+.view-export {
+  .export-controls .action-export:hover, .wrapper-status .list-progress .item-progresspoint.has-actions .list-actions .action-primary:hover {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+    color: #fff;
+    box-shadow: none;
+  }
+}
+
+.view-import .wrapper-status .list-progress .item-progresspoint.has-actions .list-actions .action-primary:hover, .view-outline .course-status .status-highlights-enabled-value.button:hover, .view-settings .group-settings.basic .note-promotion-courseURL .list-actions .action-primary:hover, .view-container .content-supplementary .bit-publishing .wrapper-pub-actions .action-publish:hover, .view-export-git .export-git-controls .action-export-git:hover, .view-group-configurations .content-primary .wrapper-collection .collection-edit .actions .action-primary:hover, .view-video-uploads .course-video-settings-container .button:hover, .view-certificates .wrapper-collection .collection-edit .actions .action-primary:hover, .xmodule_VideoDescriptor .wrapper-comp-settings.basic_metadata_edit .transcripts-status .action:hover, .wrapper-mast .mast.has-actions .nav-actions .button:active {
+  border: 1px solid #B43F37;
+  background-color: #B43F37;
+  color: #fff;
+  box-shadow: none;
+}
+
+.wrapper-sock .sock {
+  .support .list-actions .action-primary:active, .feedback .list-actions .action-primary:active {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+    color: #fff;
+    box-shadow: none;
+  }
+}
+
+.notice-incontext.has-actions .list-actions .action-primary:active, .notice-instruction.has-actions .list-actions .action-primary:active {
+  border: 1px solid #B43F37;
+  background-color: #B43F37;
+  color: #fff;
+  box-shadow: none;
+}
+
+.view-dashboard .status-creationrights {
+  .list-actions .action-primary:active, .form-actions .action-primary:active {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+    color: #fff;
+    box-shadow: none;
+  }
+}
+
+.view-export {
+  .export-controls .action-export:active, .wrapper-status .list-progress .item-progresspoint.has-actions .list-actions .action-primary:active {
+    border: 1px solid #B43F37;
+    background-color: #B43F37;
+    color: #fff;
+    box-shadow: none;
+  }
+}
+
+.view-import .wrapper-status .list-progress .item-progresspoint.has-actions .list-actions .action-primary:active, .view-outline .course-status .status-highlights-enabled-value.button:active, .view-settings .group-settings.basic .note-promotion-courseURL .list-actions .action-primary:active, .view-container .content-supplementary .bit-publishing .wrapper-pub-actions .action-publish:active, .view-export-git .export-git-controls .action-export-git:active, .view-group-configurations .content-primary .wrapper-collection .collection-edit .actions .action-primary:active, .view-video-uploads .course-video-settings-container .button:active, .view-certificates .wrapper-collection .collection-edit .actions .action-primary:active, .xmodule_VideoDescriptor .wrapper-comp-settings.basic_metadata_edit .transcripts-status .action:active {
+  border: 1px solid #B43F37;
+  background-color: #B43F37;
+  color: #fff;
+  box-shadow: none;
+}
+
+.wrapper-xblock {
+  .wrapper-xblock .header-actions .actions-list .action-item .action-button:hover, .wrapper-xblock-message .xblock-message-actions .actions-list .action-item .action-button:hover {
+    background-color: #B43F37;
+  }
+}
+
+.wrapper-message .message-actions .actions-list .action-item .action-button:hover, [class*="view-"] .modal-window .modal-section-content .list-actions .action-item .action-button:hover, .view-uploads .actions-list .action-item .action-button:hover {
+  background-color: #B43F37;
+}
+
+.view-outline {
+  .course-status .status-actions .action-item .action-button:hover {
+    background-color: #B43F37;
+  }
+  .outline-complex {
+    .outline-section .section-header-actions .actions-list .action-item .action-button:hover, .outline-subsection .subsection-header-actions .actions-list .action-item .action-button:hover, .outline-unit .unit-header-actions .actions-list .action-item .action-button:hover {
+      background-color: #B43F37;
+    }
+  }
+}
+
+.view-video-uploads .assets-library .actions-list .action-item .action-button:hover {
+  background-color: #B43F37;
+}

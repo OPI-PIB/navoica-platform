@@ -1,0 +1,17 @@
+---
+metadata:
+    display_name: Otwarte z odpowiedzią numeryczną
+    markdown: |
+        Możesz użyć tego przykładowego ćwiczenia jako szablonu do stworzenia pytania otwartego z odpowiedzią numeryczną. Wyedytuj to ćwiczenie i wprowadź własne pytanie.
+        >>W to miejsce wprowadź pytanie. Jest ono niezbędne.||W miejsce tego komunikatu możesz wprowadzić komentarz lub małą wskazówkę. <<
+        = 100 + 5
+data:   |
+        <problem>
+            <numericalresponse answer="105">
+                <p>Możesz użyć tego przykładowego ćwiczenia jako szablonu do stworzenia pytania otwartego z odpowiedzią numeryczną. Wyedytuj to ćwiczenie i wprowadź własne pytanie.</p>
+                <label>W to miejsce wprowadź pytanie. Jest ono niezbędne.</label>
+                <description>W miejsce tego komunikatu możesz wprowadzić komentarz lub małą wskazówkę.</description>
+                <responseparam type="tolerance" default="5"/>
+                <formulaequationinput/>
+            </numericalresponse>
+        </problem>
