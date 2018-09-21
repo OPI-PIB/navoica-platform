@@ -245,7 +245,7 @@ FEATURES = {
     'ENTRANCE_EXAMS': False,
 
     # Toggle platform-wide course licensing
-    'LICENSING': False,
+    'LICENSING': True,
 
     # Enable the courseware search functionality
     'ENABLE_COURSEWARE_INDEX': True,
