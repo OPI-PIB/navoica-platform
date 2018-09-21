@@ -173,10 +173,12 @@ from pipeline_mako import render_require_js_path_overrides
 % if request.path == '/':
   ${self.body()}
 % else:
+<div class="container">
   <div class="content-wrapper main-container" id="content">
     ${self.body()}
     <%block name="bodyextra"/>
   </div>
+</div>
 % endif
     
 
