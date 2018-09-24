@@ -375,6 +375,16 @@ msgstr ""
 "Nazwa użytkownika może się składać wyłącznie z liter, cyfr (0-9), podkreśleń"
 " (_) i myślników (-)."
 
+#. Translators: This message is shown when the Unicode usernames are NOT
+#. allowed
+#: common/djangoapps/student/forms.py
+msgid ""
+"Usernames can only contain letters (A-Z, a-z), numerals (0-9), "
+"underscores (_), and hyphens (-)."
+msgstr ""
+"Nazwa użytkownika może się składać wyłącznie z liter, cyfr (0-9), "
+"podkreśleń (_) i myślników ."
+
 #. Translators: This message is shown only when the Unicode usernames are
 #. allowed
 #: common/djangoapps/student/forms.py
