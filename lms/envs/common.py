@@ -2629,14 +2629,7 @@ ALL_COURSE_CATEGORY = [
     [u"technical", u"Nauki techniczne"]
 ]
 
-ALL_COURSE_TIMETABLE = [
-    [u"1", u"1 tydzień"],
-    [u"2", u"2 tygodnie"],
-    [u"3", u"3 tygodnie"],
-    [u"4", u"4 tygodnie"],
-]
-
-ALL_COURSE_TIMETABLE += [[str(i), "%d tygodni" % i] for i in range(5, 50)]
+ALL_COURSE_TIMETABLE = [[str(week), _("%(week)d weeks" % {'week': week})] for week in range(1, 50)]
 
 ### Apps only installed in some instances
 # The order of INSTALLED_APPS matters, so this tuple is the app name and the item in INSTALLED_APPS
