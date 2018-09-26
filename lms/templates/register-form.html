@@ -104,6 +104,11 @@ from student.models import UserProfile
             <label for="password">${_('Password')}</label>
             <input class="form-control" id="password" type="password" name="password" value="" required aria-required="true"/>
         </li>
+        
+        <li class="field required password form-group form-group-required" id="field-password">
+            <label for="password">${_('Confirm Password')}</label>
+            <input class="form-control" id="confirm_password" type="password" value="" required aria-required="true"/>
+        </li>
 
         % endif
     </ol>
