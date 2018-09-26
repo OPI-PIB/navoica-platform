@@ -207,6 +207,15 @@ class AccountCreationForm(forms.Form):
             "max_length": _PASSWORD_INVALID_MSG,
         }
     )
+    confirm_password = forms.CharField(
+        min_length=password_min_length(),
+        max_length=password_max_length(),
+        error_messages={
+            "required": _PASSWORD_INVALID_MSG,
+            "min_length": _PASSWORD_INVALID_MSG,
+            "max_length": _PASSWORD_INVALID_MSG,
+        }
+    )
     name = forms.CharField(
         min_length=accounts_settings.NAME_MIN_LENGTH,
         error_messages={

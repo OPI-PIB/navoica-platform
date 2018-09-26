@@ -2497,6 +2497,7 @@ REGISTRATION_FIELD_ORDER = [
     "email",
     "confirm_email",
     "password",
+    "confirm_password",
     "city",
     "state",
     "country",
