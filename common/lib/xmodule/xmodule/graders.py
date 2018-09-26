@@ -341,10 +341,6 @@ class AssignmentFormatGrader(CourseGrader):
         self.min_count = min_count
         self.drop_count = drop_count
         self.category = category or self.type
-
-        if isinstance(section_type, str):
-            section_type = unicode(section_type, 'utf-8')
-
         self.section_type = section_type or self.type
         self.short_label = short_label or self.type
         self.show_only_average = show_only_average
