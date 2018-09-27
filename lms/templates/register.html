@@ -39,7 +39,10 @@ import calendar
         });
         
         $("#confirm_password").on("blur", function() {
-			console.log('test');
+			if ($("#password").val()!=$("#confirm_password").val()) {
+				$("#confirm_password").get(0).setCustomValidity("${_('Passwords Don\'t Match')}");
+				$("#confirm_password").get(0).reportValidity();
+			}
 		});
 
     });
