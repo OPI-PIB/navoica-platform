@@ -3,39 +3,39 @@
         
          <li class="field comp-setting-entry is-set">
             <div class="wrapper-comp-setting">
-                <label class="label setting-label" for="videojs_edit_display_name">Display Name</label>
+                <label class="label setting-label" for="videojs_edit_display_name">Nazwa wyświetlana</label>
                 <input class="input setting-input" id="videojs_edit_display_name" value="{{ display_name }}" type="text">
             </div>
-            <span class="tip setting-help">This name appears in the horizontal navigation at the top of the page.</span>
+            <span class="tip setting-help">Nazwa obecna jako nagłówek filmu</span>
         </li>
         
         <li class="field comp-setting-entry is-set">
             <div class="wrapper-comp-setting">
-                <label class="label setting-label" for="videojs_edit_url">Video URL</label>
+                <label class="label setting-label" for="videojs_edit_url">URL filmu</label>
                 <input class="input setting-input" id="videojs_edit_url" value="{{ url }}" type="text">
             </div>
-            <span class="tip setting-help">The URL for your video.</span>
+            <span class="tip setting-help">URL twojego filmu</span>
         </li>
         
         <li class="field comp-setting-entry is-set">
             <div class="wrapper-comp-setting">
-                <label class="label setting-label" for="videojs_edit_allow_download">Video Download Allowed</label>
+                <label class="label setting-label" for="videojs_edit_allow_download">Dozwolone pobieranie filmu</label>
                 <select class="input setting-input" id="videojs_edit_allow_download">
-                    <option value="True" {% if allow_download %}selected{% endif %}>True</option>
-                    <option value="False" {% if not allow_download %}selected{% endif %}>False</option>
+                    <option value="True" {% if allow_download %}selected{% endif %}>Tak</option>
+                    <option value="False" {% if not allow_download %}selected{% endif %}>Nie</option>
                 </select>
             </div>
-            <span class="tip setting-help">Allow students to download this video.</span>
+            <span class="tip setting-help">Pozwala określić czy umożliwić studentom pobieranie filmu</span>
         </li>
         
         <li class="field comp-setting-entry is-set">
             <div class="wrapper-comp-setting">
-                <label class="label setting-label" for="videojs_edit_subtitle_text">Subtitle polish</label>
-                <textarea class="input setting-input" id="videojs_edit_subtitle_text" placeholder="SRT Subtitle">{{ subtitle_text }}</textarea>
+                <label class="label setting-label" for="videojs_edit_subtitle_text">Polskie napisy</label>
+                <textarea style="display: inline-block;width: 384px;padding: 16px 12px;border: 1px solid #b2b2b2;" class="input setting-input" id="videojs_edit_subtitle_text" placeholder="Wklej treść pliku z napisami">{{ subtitle_text }}</textarea>
             </div>
             <div class="wrapper-comp-setting">
-                <label class="label setting-label" for="videojs_edit_subtitle_url">Subtitle URL polish</label>
-                <input class="input setting-input" readonly id="videojs_edit_subtitle_url" value="{{ subtitle_url }}" type="text" placeholder="URL to Subtitle">
+                <label class="label setting-label" for="videojs_edit_subtitle_url">Odnośnik do twoich napisów</label>
+                <input class="input setting-input" readonly id="videojs_edit_subtitle_url" value="{{ subtitle_url }}" type="text" placeholder="Odnośnik do napisów">
             </div>
             <div style="display: none" class="wrapper-comp-setting">
                 <label class="label setting-label" for="videojs_edit_source_text">Source document button text</label>
@@ -49,14 +49,14 @@
         
         <li class="field comp-setting-entry is-set">
             <div class="wrapper-comp-setting">
-                <label class="label setting-label" for="videojs_edit_start_time">Start time</label>
+                <label class="label setting-label" for="videojs_edit_start_time">Czas rozpoczęcia</label>
                 <input class="input setting-input" id="videojs_edit_start_time" value="{{ start_time }}" type="text">
             </div>
             <div class="wrapper-comp-setting">
-                <label class="label setting-label" for="videojs_edit_end_time">End time</label>
+                <label class="label setting-label" for="videojs_edit_end_time">Czas zakończenia</label>
                 <input class="input setting-input" id="videojs_edit_end_time" value="{{ end_time }}" type="text">
             </div>
-            <span class="tip setting-help">The start and end time of your video. Equivalent to 'video.mp4#t=startTime,endTime' in the url.</span>
+            <span class="tip setting-help">Czas rozpoczęcia i zakończenia filmu. Odpowiada 'video.mp4#t=startTime,endTime' w odnośniku.</span>
         </li>
         
     </ul>
@@ -64,10 +64,10 @@
     <div class="xblock-actions">
         <ul>
             <li class="action-item">
-                <a href="#" class="button action-primary action-save">Save</a>
+                <a href="#" class="button action-primary action-save">Zapisz</a>
             </li>
             <li class="action-item">
-                <a href="#" class="button action-cancel">Cancel</a>
+                <a href="#" class="button action-cancel">Anuluj</a>
             </li>
         </ul>
     </div>

@@ -375,6 +375,16 @@ msgstr ""
 "Nazwa użytkownika może się składać wyłącznie z liter, cyfr (0-9), podkreśleń"
 " (_) i myślników (-)."
 
+#. Translators: This message is shown when the Unicode usernames are NOT
+#. allowed
+#: common/djangoapps/student/forms.py
+msgid ""
+"Usernames can only contain letters (A-Z, a-z), numerals (0-9), "
+"underscores (_), and hyphens (-)."
+msgstr ""
+"Nazwa użytkownika może się składać wyłącznie z liter, cyfr (0-9), "
+"podkreśleń (_) i myślników ."
+
 #. Translators: This message is shown only when the Unicode usernames are
 #. allowed
 #: common/djangoapps/student/forms.py
@@ -15805,10 +15815,8 @@ msgid ""
 "engaging, high-quality {platform_name} courses. Note that you will not be "
 "able to log back into your account until you have activated it."
 msgstr ""
-"Już prawie koniec! Użyj poniższego odnośnika w celu aktywowania swojego "
-"konta i uzyskania dostępu do znakomitych kursów oferowanych na platformie "
-"{platform_name}. Miej na uwadze, że niemożliwe będzie zalogowanie się bez "
-"uprzedniego aktywowania konta."
+"Kliknij w poniższy odnośnik lub skopiuj go do paska adresu swojej przeglądarki w celu aktywowania swojego konta i uzyskania dostępu do znakomitych kursów oferowanych na platformie {platform_name}."
+"Miej na uwadze, że niemożliwe będzie zalogowanie się bez uprzedniego aktywowania konta."
 
 #: lms/templates/emails/activation_email.txt
 msgid "Enjoy learning with {platform_name}."
@@ -15833,7 +15841,7 @@ msgstr ""
 
 #: lms/templates/emails/activation_email_subject.txt
 msgid "Action Required: Activate your {platform_name} account"
-msgstr "Wymagana czynność: aktywuj swoje konto na platformie {platform_name}"
+msgstr "Aktywuj swoje konto na platformie {platform_name}"
 
 #: lms/templates/emails/add_beta_tester_email_message.txt
 #: lms/templates/emails/enroll_email_enrolledmessage.txt
@@ -24386,3 +24394,12 @@ msgstr "Partnerzy"
 
 msgid "Cooperation"
 msgstr "Współpraca"
+
+
+#, c-format
+msgid "{week} weeks"
+msgid_plural "{week} weeks"
+msgstr[0] "{week} tydzień"
+msgstr[1] "{week} tygodnie"
+msgstr[2] "{week} tygodni"
+msgstr[3] "{week} tygodni"

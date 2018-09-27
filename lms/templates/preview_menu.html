@@ -26,47 +26,48 @@ show_preview_menu = course and staff_access and supports_preview_menu
     specific_student_selected = selected(not staff_selected and masquerade.user_name)
     student_selected = selected(not staff_selected and not specific_student_selected and not masquerade_group_id)
     %>
-
-<div class="bg-light bg-brand py-3 px-3 px-md-5 rounded wrapper-preview-menu">
-    <div class="preview-menu">
-    <div class="preview-actions">
-    <p class="m-0 mr-2 d-inline pos-rel-top-2 ">Zobacz ten kurs jako</p>
-    <div class="form-inline d-inline action-preview">
-        <form action="#" class="action-preview-form" method="post">
-        <select id="action-preview-select" class="custom-select action-preview-select">
-            <option value="staff" ${staff_selected}>${_("Staff")}</option>
-            <option value="student" ${student_selected}>${_("Learner")}</option>
-            <option value="specific student" ${specific_student_selected}>${_("Specific learner")}</option>
-            % if course_partitions:
-            % for course_partition in course_partitions:
-            % for group in sorted(course_partition.groups, key=lambda group: group.name):
-            <option value="group.id" data-group-id="${group.id}" data-partition-id="${course_partition.id}" ${selected(masquerade_group_id== group.id)}>
-                ${_("Learner in {content_group}").format(content_group=group.name)}
-            </option>
-            % endfor
-            % endfor
-            % endif
-        </select>
-        <div class="action-preview-username-container">
-            <label for="action-preview-username" class="m-0 mr-2 d-inline pos-rel-top-2 ">${_("Username or email:")}</label>
-            <input type="text" class="form-control action-preview-username" id="action-preview-username">
-        </div>
-        <button type="submit" class="sr-only" name="submit" value="submit">${_("Set preview mode")}</button>
-        </form>
-    </div>
-    % if specific_student_selected:
-                <div class="preview-specific-student-notice">
-                    <p>
-                        ${Text(_("You are now viewing the course as {i_start}{user_name}{i_end}.")).format(
-                            user_name=masquerade_user_name,
-                            i_start=HTML(u'<i>'),
-                            i_end=HTML(u'</i>'),
-                        )}
-                    </p>
-                </div>
-            % endif
-    </div>
-    </div></div>
+<div class="container">
+	<div class="bg-light bg-brand py-3 px-3 px-md-5 rounded wrapper-preview-menu">
+		<div class="preview-menu">
+			<div class="preview-actions">
+			<p class="m-0 mr-2 d-inline pos-rel-top-2 ">Zobacz ten kurs jako</p>
+				<div class="form-inline d-inline action-preview">
+					<form action="#" class="action-preview-form" method="post">
+						<select id="action-preview-select" class="custom-select action-preview-select">
+							<option value="staff" ${staff_selected}>${_("Staff")}</option>
+							<option value="student" ${student_selected}>${_("Learner")}</option>
+							<option value="specific student" ${specific_student_selected}>${_("Specific learner")}</option>
+							% if course_partitions:
+							% for course_partition in course_partitions:
+							% for group in sorted(course_partition.groups, key=lambda group: group.name):
+							<option value="group.id" data-group-id="${group.id}" data-partition-id="${course_partition.id}" ${selected(masquerade_group_id== group.id)}>
+								${_("Learner in {content_group}").format(content_group=group.name)}
+							</option>
+							% endfor
+							% endfor
+							% endif
+						</select>
+						<div class="action-preview-username-container">
+							<label for="action-preview-username" class="m-0 mr-2 d-inline pos-rel-top-2 ">${_("Username or email:")}</label>
+							<input type="text" class="form-control action-preview-username" id="action-preview-username">
+						</div>
+						<button type="submit" class="sr-only" name="submit" value="submit">${_("Set preview mode")}</button>
+					</form>
+				</div>
+				% if specific_student_selected:
+					<div class="preview-specific-student-notice">
+						<p>
+							${Text(_("You are now viewing the course as {i_start}{user_name}{i_end}.")).format(
+								user_name=masquerade_user_name,
+								i_start=HTML(u'<i>'),
+								i_end=HTML(u'</i>'),
+							)}
+						</p>
+					</div>
+				% endif
+			</div>
+		</div>
+	</div>
 </div>
     <%
     preview_options = {

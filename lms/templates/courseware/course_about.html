@@ -143,7 +143,7 @@ from six import string_types
           <div class="col-lg-4 text-lg-center pt-4 pt-lg-0">
               %if user.is_authenticated() and registered:
 			<span class="register disabled">${_("You are enrolled in this course")}</span><br/>
-			<a href="${course_target}" class="btn btn-lg btn-primary btn-icon ${href_class}"><i class="icon-book"></i> ${_("View Course")}</a>
+			<a href="${course_target}" class="btn btn-lg btn-primary btn-icon"><i class="icon-book"></i> ${_("View Course")}</a>
 		  %else:
 			<a href="${reg_href}" class="btn btn-lg btn-primary btn-icon ${href_class}"><i class="icon-book"></i> Weź udział w kursie</a>
 		  % endif

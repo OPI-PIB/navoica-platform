@@ -37,6 +37,10 @@ import calendar
         }).blur(function () {
             $("label").parent().removeClass("is-focused");
         });
+        
+        $("#confirm_password").on("blur", function() {
+			console.log('test');
+		});
 
     });
 

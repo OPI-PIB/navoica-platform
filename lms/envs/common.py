@@ -48,6 +48,10 @@ from xmodule.modulestore.modulestore_settings import update_module_store_setting
 from xmodule.modulestore.edit_info import EditInfoMixin
 from lms.djangoapps.lms_xblock.mixin import LmsBlockMixin
 
+# sys.setdefaultencoding() does not exist, here!
+reload(sys)  # Reload does the trick!
+sys.setdefaultencoding('UTF8')
+
 ################################### FEATURES ###################################
 # The display name of the platform to be used in templates/emails/etc.
 PLATFORM_NAME = _('Your Platform Name Here')
@@ -2486,7 +2490,7 @@ REGISTRATION_EXTRA_FIELDS = {
     'honor_code': 'required',
     'terms_of_service': 'hidden',
     'city': 'hidden',
-    'country': 'hidden',
+    'country': 'optional',
 }
 
 REGISTRATION_FIELD_ORDER = [
@@ -2497,6 +2501,7 @@ REGISTRATION_FIELD_ORDER = [
     "email",
     "confirm_email",
     "password",
+    "confirm_password",
     "city",
     "state",
     "country",
@@ -2629,14 +2634,7 @@ ALL_COURSE_CATEGORY = [
     [u"technical", u"Nauki techniczne"]
 ]
 
-ALL_COURSE_TIMETABLE = [
-    [u"1", u"1 tydzień"],
-    [u"2", u"2 tygodnie"],
-    [u"3", u"3 tygodnie"],
-    [u"4", u"4 tygodnie"],
-]
-
-ALL_COURSE_TIMETABLE += [[str(i), "%d tygodni" % i] for i in range(5, 50)]
+ALL_COURSE_TIMETABLE = [[str(week), _("%(week)d weeks" % {'week': week})] for week in range(1, 50)]
 
 ### Apps only installed in some instances
 # The order of INSTALLED_APPS matters, so this tuple is the app name and the item in INSTALLED_APPS
