@@ -161,11 +161,13 @@ h1,h2,h3,h4,h5,h6 {
 li.field-group.field-education-level.form-group.form-group-optional {
     margin: 0 0 20px 0;
 }
-<<<<<<< HEAD
-=======
 
 .course-card .course-card-image img { max-height:160px }
 .jumbotron.jumbotron-index{ padding-top:10px; padding-bottom:10px }
 .jumbotron h1 { text-align:left }
 
->>>>>>> 8bd5cbd47c39add18ab5f1652188c4a97f07d321
+.choicegroup legend { font-size: 1rem; }
+.xmodule_display.xmodule_HtmlModule p { font-size:1.1em }
+.xblock .xblock h2.unit-title{ float:left }
+.course-content .bookmark-button-wrapper{ float:right }
+.course-wrapper .course-content .vert-mod, .course-wrapper .courseware-results-wrapper .vert-mod { clear:both }
