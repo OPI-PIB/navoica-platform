@@ -164,6 +164,10 @@ a:hover {
   text-decoration: underline
 }
 
+a:focus {
+  background-color: transparent !impostant;
+}
+
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none
@@ -6848,7 +6852,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .ml-auto, .mx-auto {
-  margin-left: auto !important
+  margin-left: unset !important
 }
 
 @media (min-width: 576px) {
