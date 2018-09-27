@@ -232,11 +232,6 @@ button {
   border-radius: 0
 }
 
-button:hover:not(:disabled) {
-  background-color:#97352e !important;
-  background-image:none !important;
-}
-
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color
