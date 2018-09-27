@@ -1197,6 +1197,7 @@
     "Password": "Has\u0142o", 
     "Password assistance": "Pomoc w odzyskaniu has\u0142a", 
     "Password reset email sent. Follow the link in the email to change your password.": "E-mail dotycz\u0105cy pro\u015bby o zresetowanie has\u0142a zosta\u0142 wys\u0142any. Prosz\u0119 klikn\u0105\u0107 w odno\u015bnik w wiadomo\u015bci e-mail, aby zmieni\u0107 swoje has\u0142o.", 
+    "Passwords Don't Match": "Has\u0142a nie pasuj\u0105", 
     "Paste": "Wklej", 
     "Paste as text": "Wklej jako tekst", 
     "Paste is now in plain text mode. Contents will now be pasted as plain text until you toggle this option off.": "Wklejanie odbywa si\u0119 teraz w trybie czystego tekstu. Zawarto\u015b\u0107 b\u0119dzie kopiowana jako prosty tekst, a\u017c nie wy\u0142\u0105czysz tej opcji.", 
