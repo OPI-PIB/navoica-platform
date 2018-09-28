@@ -13716,3 +13716,19 @@ textarea.form-control {
 body.view-in-course .container {
   max-width: 1240px !important
 }  
+
+input[type="submit"]:not(:disabled) {
+  box-shadow: 0 2px 1px 0 #B43F37;
+  color: #fff;
+  background-color: #B43F37 !important;
+  border-color: #B43F37 !important;
+  background-image: none !important;
+}
+
+input[type="submit"]:hover:not(:disabled) {
+  box-shadow: 0 2px 1px 0 #97352e;
+  color: #fff;
+  background-color: #97352e !important;
+  border-color: #97352e !important;
+  background-image: none !important;
+}
