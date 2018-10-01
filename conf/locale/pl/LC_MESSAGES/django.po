@@ -11058,6 +11058,7 @@ msgid "Vertical"
 msgstr "Pionowy"
 
 #: cms/djangoapps/contentstore/views/helpers.py
+#: common/lib/xmodule/xmodule/html_module.py
 msgid "Empty"
 msgstr "Pusty"
 
@@ -24415,3 +24416,21 @@ msgstr "Kurs zaczyna się za {time_remaining_string} w dniu {course_start_time}.
 
 msgid "Course starts in {time_remaining_string} on {course_start_date}."
 msgstr "Kurs zaczyna się za {time_remaining_string} w {course_start_date}."
+
+msgid "Pass"
+msgstr "Zaliczone"
+
+msgid "{section_type} {index} Unreleased - 0% (?/?)"
+msgstr "{section_type} {index} Nieupubliczniona - 0% (?/?)"
+
+msgid "{short_label} Avg"
+msgstr "Śr. z {short_label}"
+
+msgid "{section_type} Average = {percent:.0%}"
+msgstr "Średnia z {section_type} = {percent:.0%}"
+
+msgid "The lowest {drop_count} {section_type} scores are dropped."
+msgstr "{drop_count} najsłabiej punktowane {section_type} zostaną pominięte."
+
+msgid "{assignment_type} = {weighted_percent:.2%} of a possible {weight:.2%}"
+msgstr "{assignment_type} = {weighted_percent:.2%} z {weight:.2%}"
