@@ -254,7 +254,7 @@ from six import string_types
 						if (a[0]==course.timetable):
 							course_timetable = a[1]
 				  %>
-                  <strong>Czas trwania kursu (w tygodniach):</strong> ${course_timetable}
+                  <strong>Czas trwania kursu (w tygodniach):</strong> ${_("{course_tt}").format(course_tt=course_timetable)}
                 </div>
               </li>
 

@@ -4,6 +4,7 @@ Specific overrides to the base prod settings to make development easier.
 from os.path import abspath, dirname, join
 
 from .aws import *  # pylint: disable=wildcard-import, unused-wildcard-import
+from django.utils.translation import ugettext_lazy as _
 
 # Don't use S3 in devstack, fall back to filesystem
 #del DEFAULT_FILE_STORAGE
@@ -29,6 +30,7 @@ TIME_ZONE = 'Europe/Warsaw'
 import logging
 LOG_OVERRIDES = [
     ('track.contexts', logging.CRITICAL),
+    ('track.middleware', logging.CRITICAL),
     ('track.middleware', logging.CRITICAL),
     ('dd.dogapi', logging.CRITICAL),
     ('django_comment_client.utils', logging.CRITICAL),
@@ -168,16 +170,16 @@ FEATURES['CERTIFICATES_HTML_VIEW'] = True
 
 
 ########################## Course Discovery #######################
-LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': 'Language'}
+LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Jezyk"}
 COURSE_DISCOVERY_MEANINGS = {
     'org': {
-        'name': 'Organization',
+        'name': 'Organizacja',
     },
     'modes': {
-        'name': 'Course Type',
+        'name': 'Typ kursu',
         'terms': {
             'honor': 'Honor',
-            'verified': 'Verified',
+            'verified': 'Zweryfikowany',
         },
     },
     'language': LANGUAGE_MAP,

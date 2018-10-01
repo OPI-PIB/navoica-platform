@@ -30,6 +30,7 @@ import raven
 
 from path import Path as path
 from xmodule.modulestore.modulestore_settings import convert_module_store_setting_if_needed
+from django.utils.translation import ugettext_lazy as _
 
 # SERVICE_VARIANT specifies name of the variant used, which decides what JSON
 # configuration files are read during startup.
@@ -1109,4 +1110,18 @@ INSTALLED_APPS += (
 
 RAVEN_CONFIG = {
     'dsn': 'https://e3e1ce00e050403687828d5981c2fa72:8e8d9d55e69d4320a8f38808210a0e13@sentry.io/1283941',
+}
+LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Jezyk"}
+COURSE_DISCOVERY_MEANINGS = {
+    'org': {
+        'name': 'Organizacja',
+    },
+    'modes': {
+        'name': 'Typ kursu',
+        'terms': {
+            'honor': 'Honor',
+            'verified': 'Zweryfikowany',
+        },
+    },
+    'language': LANGUAGE_MAP,
 }
