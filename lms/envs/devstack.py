@@ -179,6 +179,7 @@ COURSE_DISCOVERY_MEANINGS = {
         'name': 'Typ kursu',
         'terms': {
             'honor': 'Honor',
+            'audit': 'Audyt',
             'verified': 'Zweryfikowany',
         },
     },
