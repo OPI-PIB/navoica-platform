@@ -360,7 +360,10 @@ from six import string_types
                   <i class="icon-time"></i>
                 </div>
                 <div class="course-details-content">
-                  <strong>Tygodniowy wysiłek godzinowy:</strong> ${get_course_about_section(request, course, "effort")} godzin
+				   <%
+                        course_effort = get_course_about_section(request, course, "effort")
+                   %>
+                  <strong>Tygodniowy wysiłek godzinowy:</strong> ${_("{effort} hours").format(effort=course_effort) | h}
                 </div>
               </li>
               
