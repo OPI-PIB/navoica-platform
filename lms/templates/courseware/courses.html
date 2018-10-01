@@ -34,13 +34,12 @@
    <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <div class="bg-light bg-brand p-4 rounded">
+          <div class="bg-light bg-brand p-4 rounded search-facets">
             <h1 class="sidebar-header">${_('List of Courses')}</h1>
             <div id="filter-bar" class="list-group filters hide-phone is-collapsed">
             </div>
             <section class="search-facets-lists">
             </section>
-            
           </div>
         </div>
         <div class="col-md-9">
@@ -62,10 +61,12 @@
             <hr class="my-4">
             
             <div class="courses" role="region" aria-label="${_('List of Courses')}">
-				<div class="row courses-row">
+				<div class="row courses-row courses-listing">
+                  <!--
 				  %for course in courses:
 					  <%include file="../course2.html" args="course=course" />
 				  %endfor
+				  -->
 				</div>
            </div>
           </div>

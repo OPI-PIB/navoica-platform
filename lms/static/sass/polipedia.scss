@@ -2053,7 +2053,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 
 .btn-primary:hover {
-  background-color: #97352e !important; 
+  background-color: #97352e !important;
   border-color: #97352e !important;
   background-image: none !important;
 }
@@ -13716,7 +13716,7 @@ textarea.form-control {
 
 body.view-in-course .container {
   max-width: 1240px !important
-}  
+}
 
 input[type="submit"]:not(:disabled) {
   box-shadow: 0 2px 1px 0 #B43F37;
@@ -13732,4 +13732,54 @@ input[type="submit"]:hover:not(:disabled) {
   background-color: #97352e !important;
   border-color: #97352e !important;
   background-image: none !important;
+}
+
+.search-facets-lists {
+  margin-top: 20px;
+}
+
+.search-facets-lists .collapse:not(.show) {
+  display: block !important;
+  background-color: transparent;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.search-facets-lists .facet-option {
+  background: none;
+  border: none;
+  text-shadow: none;
+  color: black;
+  text-align: left;
+  width: 100%;
+  box-shadow: none;
+}
+
+.facet-list .count {
+  float: right;
+}
+
+.header-facet {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.search-facets-lists .collapse button:hover:not(:disabled) {
+      background: none;
+    text-decoration: underline;
+    color: black;
+    box-shadow: none;
+    border: none;
+}
+
+.facet-list li {
+  border-bottom: 1px solid;
+}
+
+button.facet-option.discovery-button.selected {
+    background-color: #B43F37;
+    color: white;
 }
