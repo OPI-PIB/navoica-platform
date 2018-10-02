@@ -188,3 +188,22 @@ li.field-group.field-education-level.form-group.form-group-optional {
 .view-login .container, .view-register .container {
     width: auto;
 }
+
+.view-login nav .container, .view-register nav .container {
+    width: 100%;
+}
+
+.view-login nav .container > div{
+  width: 100%;
+}
+
+.navbar .navbar-toggler:hover:not(:disabled),.navbar .navbar-toggler{
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    float: right;
+}
+
+.navbar.navbar-light .navbar-brand{
+  display: inline-block;
+}
