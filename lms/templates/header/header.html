@@ -40,15 +40,10 @@ HeaderFactory();
     )}
     % endif
     <div class="container">
-        <div>
-		<a class="navbar-brand" href="/">Polski MOOC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+		<a style="width: 100%;" class="navbar-brand" href="/">Polski MOOC</a>
 
-            % if request.path != '/':
-            <form style="width: auto; float: right;" method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
+         % if request.path != '/':
+            <form style="width: 700px;" method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
                 <div class="input-group w-100">
                     <input class="form-control form-control" type="search" name="search_query" placeholder="Wpisz szukaną frazę">
                     <div class="input-group-append">
@@ -56,9 +51,16 @@ HeaderFactory();
                     </div>
                 </div>
             </form>
+          % else:
+			<div class="w-100"></div>
           % endif
 
-        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 

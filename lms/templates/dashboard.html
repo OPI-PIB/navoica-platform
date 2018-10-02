@@ -318,14 +318,15 @@ from student.models import CourseEnrollment
     </button>
 
     <header class="unenroll-header">
-      <h2 id="unenrollment-modal-title">
+      <h6 id="unenrollment-modal-title">
+        Czy na pewno chcesz się wypisać z tego kursu? Utracisz cały swój postęp i nie będziesz mieć dostępu do treści kursu.
         <span id='track-info'></span>
         <span id='refund-info'></span>
         <span class="sr">,
           ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
           ${_("window open")}
         </span>
-      </h2>
+      </h6>
       <hr/>
     </header>
     <div id="unenroll_error" class="modal-form-error"></div>
