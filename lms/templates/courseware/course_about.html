@@ -358,9 +358,9 @@ from six import string_types
                 </div>
                 <div class="course-details-content">
 				   <%
-                        course_effort = int(get_course_about_section(request, course, "effort"))
+                        course_effort = get_course_about_section(request, course, "effort")
                    %>
-                  <strong>Tygodniowy wysiłek godzinowy:</strong> ${ungettext("{effort} hour", "{effort} hours", course_effort).format(effort=course_effort) | h}
+                  <strong>Tygodniowy wysiłek godzinowy:</strong> ${_("{effort} hours").format(effort=course_effort) | h}
                 </div>
               </li>
               

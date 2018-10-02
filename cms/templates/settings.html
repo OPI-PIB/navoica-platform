@@ -336,7 +336,7 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
               <select id="course-timetable">
                 <option value="" selected> - </option>
                 % for week, label in timetable_options:
-                  <option value="${lang}">${ungettext("{week} week", "{week} weeks", int(week)).format(week=week) | h}</option>
+                  <option value="${week}">${ungettext("{week} week", "{week} weeks", int(week)).format(week=week) | h}</option>
                 % endfor
               </select>
             </li>
