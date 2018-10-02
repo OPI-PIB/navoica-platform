@@ -318,7 +318,7 @@ FEATURES = {
     'ENABLE_COURSE_DISCOVERY': True,
 
     # Setting for overriding default filtering facets for Course discovery
-    'COURSE_DISCOVERY_FILTERS': ["org", "language", "modes"],
+    # 'COURSE_DISCOVERY_FILTERS': ["org", "modes", "enrollment_start"],
 
     # Software secure fake page feature flag
     'ENABLE_SOFTWARE_SECURE_FAKE': False,
@@ -403,6 +403,8 @@ FEATURES = {
     # that they don't have an account associated with email addresses they believe they've registered with.
     'ENABLE_PASSWORD_RESET_FAILURE_EMAIL': False,
 }
+
+COURSE_DISCOVERY_FILTERS = ['org', 'modes', 'enrollment_start', 'course_category', 'organizer', 'difficulty']
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
 COURSE_REVIEWS_TOOL_PROVIDER_FRAGMENT_NAME = 'coursetalk-reviews-fragment.html'
@@ -3194,3 +3196,14 @@ INSTALLED_APPS.extend(plugin_apps.get_apps(plugin_constants.ProjectType.LMS))
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_constants.SettingsType.COMMON)
 
 # locale.setlocale(locale.LC_ALL, "pl_PL.UTF-8")
+
+ELASTIC_FIELD_MAPPINGS = {
+    "start_date": {
+        "type": "date"
+    },
+    'enrollment_start': {'type': 'date'},
+    'enrollment_end': {'type': 'date'},
+    'course_category': {'type': 'string'},
+    'organizer': {'type': 'string'},
+    'difficulty': {'type': 'string'}
+}

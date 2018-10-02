@@ -179,16 +179,20 @@ COURSE_DISCOVERY_MEANINGS = {
         'name': 'Typ kursu',
         'terms': {
             'honor': 'Honor',
-            'audit': 'Audyt',
             'verified': 'Zweryfikowany',
         },
+    },
+    'course_category': {
+        'name': 'Kategoria',
+    },
+    'enrollment_start': {
+        'name': 'Enrollment Start',
     },
     'language': LANGUAGE_MAP,
 }
 
 FEATURES['ENABLE_COURSE_DISCOVERY'] = True
 # Setting for overriding default filtering facets for Course discovery
-COURSE_DISCOVERY_FILTERS = ["org", "modes"]
 FEATURES['COURSES_ARE_BROWSEABLE'] = True
 HOMEPAGE_COURSE_MAX = 9
 

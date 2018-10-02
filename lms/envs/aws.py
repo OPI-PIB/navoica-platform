@@ -118,7 +118,6 @@ if STATIC_ROOT_BASE:
     STATIC_ROOT = path(STATIC_ROOT_BASE)
     WEBPACK_LOADER['DEFAULT']['STATS_FILE'] = STATIC_ROOT / "webpack-stats.json"
 
-
 # STATIC_URL_BASE specifies the base url to use for static files
 STATIC_URL_BASE = ENV_TOKENS.get('STATIC_URL_BASE', None)
 if STATIC_URL_BASE:
@@ -398,6 +397,7 @@ if FEATURES.get('AUTH_USE_CAS'):
     CAS_ATTRIBUTE_CALLBACK = ENV_TOKENS.get('CAS_ATTRIBUTE_CALLBACK', None)
     if CAS_ATTRIBUTE_CALLBACK:
         import importlib
+
         CAS_USER_DETAILS_RESOLVER = getattr(
             importlib.import_module(CAS_ATTRIBUTE_CALLBACK['module']),
             CAS_ATTRIBUTE_CALLBACK['function']
@@ -463,7 +463,6 @@ if FEATURES.get('ENABLE_CORS_HEADERS') or FEATURES.get('ENABLE_CROSS_DOMAIN_CSRF
     # needs to be on a domain that matches the cookie domain, otherwise
     # the client won't be able to read the cookie.
     CROSS_DOMAIN_CSRF_COOKIE_DOMAIN = ENV_TOKENS.get('CROSS_DOMAIN_CSRF_COOKIE_DOMAIN')
-
 
 # Field overrides. To use the IDDE feature, add
 # 'courseware.student_field_overrides.IndividualStudentOverrideProvider'.
@@ -768,7 +767,6 @@ DEFAULT_MOBILE_AVAILABLE = ENV_TOKENS.get(
     DEFAULT_MOBILE_AVAILABLE
 )
 
-
 # Enrollment API Cache Timeout
 ENROLLMENT_COURSE_DETAILS_CACHE_TIMEOUT = ENV_TOKENS.get('ENROLLMENT_COURSE_DETAILS_CACHE_TIMEOUT', 60)
 
@@ -787,9 +785,9 @@ PDF_RECEIPT_COBRAND_LOGO_HEIGHT_MM = ENV_TOKENS.get(
 )
 
 if FEATURES.get('ENABLE_COURSEWARE_SEARCH') or \
-   FEATURES.get('ENABLE_DASHBOARD_SEARCH') or \
-   FEATURES.get('ENABLE_COURSE_DISCOVERY') or \
-   FEATURES.get('ENABLE_TEAMS'):
+        FEATURES.get('ENABLE_DASHBOARD_SEARCH') or \
+        FEATURES.get('ENABLE_COURSE_DISCOVERY') or \
+        FEATURES.get('ENABLE_TEAMS'):
     # Use ElasticSearch as the search engine herein
     SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 
@@ -940,7 +938,6 @@ AFFILIATE_COOKIE_NAME = ENV_TOKENS.get('AFFILIATE_COOKIE_NAME', AFFILIATE_COOKIE
 ############## Settings for LMS Context Sensitive Help ##############
 
 HELP_TOKENS_BOOKS = ENV_TOKENS.get('HELP_TOKENS_BOOKS', HELP_TOKENS_BOOKS)
-
 
 ############## OPEN EDX ENTERPRISE SERVICE CONFIGURATION ######################
 # The Open edX Enterprise service is currently hosted via the LMS container/process.
@@ -1098,6 +1095,7 @@ RETIREMENT_SERVICE_WORKER_USERNAME = ENV_TOKENS.get(
 ############################### Plugin Settings ###############################
 
 from openedx.core.djangoapps.plugins import plugin_settings, constants as plugin_constants
+
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_constants.SettingsType.AWS)
 
 ########################## Derive Any Derived Settings  #######################
@@ -1122,6 +1120,12 @@ COURSE_DISCOVERY_MEANINGS = {
             'honor': 'Honor',
             'verified': 'Zweryfikowany',
         },
+    },
+    'course_category': {
+        'name': 'Kategoria',
+    },
+    'enrollment_start': {
+        'name': 'Enrollment Start',
     },
     'language': LANGUAGE_MAP,
 }
