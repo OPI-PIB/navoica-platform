@@ -186,7 +186,7 @@ COURSE_DISCOVERY_MEANINGS = {
         'name': 'Kategoria',
     },
     'enrollment_start': {
-        'name': 'Enrollment Start',
+        'name': 'Start kursu',
     },
     'language': LANGUAGE_MAP,
 }
