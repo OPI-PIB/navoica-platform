@@ -1,6 +1,7 @@
 <%namespace name='static' file='../static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
+from django.utils.translation import ungettext
 from django.utils.translation import pgettext
 from django.core.urlresolvers import reverse
 from courseware.courses import get_course_about_section, get_course_overview_with_access
@@ -250,11 +251,7 @@ from six import string_types
                   <i class="icon-time"></i>
                 </div>
                 <div class="course-details-content">
-				  <% for a in settings.ALL_COURSE_TIMETABLE:
-						if (a[0]==course.timetable):
-							course_timetable = a[1]
-				  %>
-                  <strong>Czas trwania kursu (w tygodniach):</strong> ${_("{course_tt}").format(course_tt=course_timetable)}
+                  <strong>Czas trwania kursu (w tygodniach):</strong> ${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}
                 </div>
               </li>
 

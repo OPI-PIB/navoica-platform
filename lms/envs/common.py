@@ -36,6 +36,7 @@ import os
 import django
 from path import Path as path
 from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ungettext_lazy
 
 from openedx.core.constants import COURSE_KEY_REGEX, COURSE_KEY_PATTERN, COURSE_ID_PATTERN
 from openedx.core.djangoapps.theming.helpers_dirs import (
@@ -317,7 +318,7 @@ FEATURES = {
     'ENABLE_COURSE_DISCOVERY': True,
 
     # Setting for overriding default filtering facets for Course discovery
-    # COURSE_DISCOVERY_FILTERS = ["org", "language", "modes"]
+    'COURSE_DISCOVERY_FILTERS': ["org", "language", "modes"],
 
     # Software secure fake page feature flag
     'ENABLE_SOFTWARE_SECURE_FAKE': False,
@@ -2634,7 +2635,8 @@ ALL_COURSE_CATEGORY = [
     [u"technical", u"Nauki techniczne"]
 ]
 
-ALL_COURSE_TIMETABLE = [[str(week), _("%(week)d weeks" % {'week': week})] for week in range(1, 50)]
+ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % week, week)]
+                        for week in range(1, 50)]
 
 ### Apps only installed in some instances
 # The order of INSTALLED_APPS matters, so this tuple is the app name and the item in INSTALLED_APPS
@@ -3191,4 +3193,4 @@ from openedx.core.djangoapps.plugins import plugin_apps, plugin_settings, consta
 INSTALLED_APPS.extend(plugin_apps.get_apps(plugin_constants.ProjectType.LMS))
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_constants.SettingsType.COMMON)
 
-#locale.setlocale(locale.LC_ALL, "pl_PL.UTF-8")
+# locale.setlocale(locale.LC_ALL, "pl_PL.UTF-8")

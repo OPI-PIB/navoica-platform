@@ -7,7 +7,7 @@
 <%namespace name='static' file='static_content.html'/>
 <%!
   import urllib
-  from django.utils.translation import ugettext as _
+  from django.utils.translation import ungettext, ugettext as _
   from contentstore import utils
   from openedx.core.djangoapps.certificates.api import can_show_certificate_available_date_field
   from openedx.core.djangolib.js_utils import (
@@ -335,8 +335,8 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
               <label for="course-timetable">${_("Course Timetable")}</label>
               <select id="course-timetable">
                 <option value="" selected> - </option>
-                % for lang, label in timetable_options:
-                  <option value="${lang}">${label}</option>
+                % for week, label in timetable_options:
+                  <option value="${lang}">${ungettext("{week} week", "{week} weeks", int(week)).format(week=week) | h}</option>
                 % endfor
               </select>
             </li>
