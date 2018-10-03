@@ -2752,7 +2752,7 @@ PDF_RECEIPT_COBRAND_LOGO_PATH = PROJECT_ROOT + '/static/images/logo.png'
 PDF_RECEIPT_COBRAND_LOGO_HEIGHT_MM = 12
 
 # Use None for the default search engine
-SEARCH_ENGINE = None
+SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 # Use LMS specific search initializer
 SEARCH_INITIALIZER = "lms.lib.courseware_search.lms_search_initializer.LmsSearchInitializer"
 # Use the LMS specific result processor
