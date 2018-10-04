@@ -11,6 +11,9 @@ from six import text_type
 
 
 <a href="${reverse('about_course', args=[text_type(course.id)])}" class="col-md-6 col-xl-3 course-card card-color--new">
+	 <%
+		  course_start_date = course.advertised_start or course.start
+	  %>
 	<figure class="course-card-image">
 	  <img src="${course.course_image_url}">
 	  
@@ -18,13 +21,14 @@ from six import text_type
 	</figure>
 	<div class="course-card-content">
 	  <h3>${course.display_name_with_default}</h3>
-	  <p>${course.display_org_with_default}</p>
-	  <p>${course.display_number_with_default}</p>
+	  % if course.organizer:
+		<p>${settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]}</p>
+	  % endif
 	</div>
 	<footer class="course-card-footer">
 	  <ul>
-		% if course.advertised_start is not None:
-			<li><time class="course-card-start"><i class="icon-calendar"></i> ${_("Starts")}: ${course.advertised_start}</time></li>
+		% if course_start_date is not None:
+			<li><time class="course-card-start"><i class="icon-calendar"></i> ${_("Starts")}: ${course_start_date.strftime('%Y-%m-%d')}</time></li>
 		% endif
 		<li><span class="course-card-more">${_("Read more")}</span></li>
 	  </ul>
