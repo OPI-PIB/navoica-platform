@@ -132,7 +132,7 @@
                 },
 
                 hideNewPost: function() {
-					self.newPostView.$el.addClass('is-hidden');
+					this.newPostView.$el.addClass('is-hidden');
                     return this.newPostView.$el.fadeOut({
                         duration: 200,
                         complete: function() {
