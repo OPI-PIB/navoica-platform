@@ -419,38 +419,7 @@
     font-family: $font-family-sans-serif;
   }
 
-  .btn {
-    @include button(simple, #eee);
 
-    font-size: 0.8em;
-    margin-right: ($baseline/4);
-    line-height: 1.2em;
-    text-transform: none !important;
-    letter-spacing: 0 !important;
-
-    &:hover, &:focus {
-      color: $body-color;
-      text-decoration: none;
-    }
-
-    &.btn-primary {
-      @include button(simple, $btn-default-color);
-
-      font-size: 0.8em;
-    }
-
-    &.btn-danger {
-      @include button(simple, $pink);
-
-      font-size: 0.8em;
-    }
-
-    &.btn-info {
-      @include button(simple, $gray-l3);
-
-      font-size: 0.8em;
-    }
-  }
 
   a.btn {
     padding: 7px 18px 8px !important;
