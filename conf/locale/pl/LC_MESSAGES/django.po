@@ -24444,3 +24444,8 @@ msgstr[1] "{effort} godziny"
 msgstr[2] "{effort} godziny"
 msgstr[3] "{effort} godziny"
 msgstr[4] "{effort} godzin"
+
+#: openedx/core/djangoapps/user_api/accounts/__init__.py
+#, python-brace-format
+msgid "Username must be between {min} and {max} characters long."
+msgstr "Nazwa użytkownika musi mieć od {min} do {max} znaków długości."
