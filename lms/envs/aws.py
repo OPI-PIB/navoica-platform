@@ -1119,13 +1119,11 @@ COURSE_DISCOVERY_MEANINGS = {
         'terms': {
             'honor': 'Honor',
             'verified': 'Zweryfikowany',
+            'audit': 'Audyt',
         },
     },
     'course_category': {
         'name': 'Kategoria',
-    },
-    'enrollment_start': {
-        'name': 'Start kursu',
     },
     'language': LANGUAGE_MAP,
 }
