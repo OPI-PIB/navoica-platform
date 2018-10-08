@@ -10305,11 +10305,15 @@ msgstr ""
 "Czy na pewno chcesz się wypisać z potwierdzonej ścieżki kursu "
 "%(cert_name_long)s track of %(course_name)s (%(course_number)s)?"
 
-#: lms/static/js/dashboard/legacy.js
 msgid ""
 "Are you sure you want to unenroll from %(courseName)s (%(courseNumber)s)?"
 msgstr ""
 "Czy na pewno chcesz się wypisać z kursu %(courseName)s (%(courseNumber)s)?"
+
+msgid ""
+"Are you sure you want to unenroll from {courseName} ({courseNumber})?"
+msgstr ""
+"Czy na pewno chcesz się wypisać z kursu {courseName} ({courseNumber})?"
 
 #: lms/templates/registration/password_reset_email.html:2
 #, python-format
