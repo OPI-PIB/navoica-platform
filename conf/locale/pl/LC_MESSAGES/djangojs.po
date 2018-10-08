@@ -10277,8 +10277,6 @@ msgstr "Nowy kurs"
 msgid "Read more"
 msgstr "Czytaj więcej"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html
-#, python-format
 msgid ""
 "Are you sure you want to unenroll from the purchased course %(course_name)s "
 "(%(course_number)s)?"
@@ -10289,24 +10287,20 @@ msgstr ""
 msgid "Are you sure you want to unenroll from "
 msgstr "Czy na pewno chcesz się wypisać z "
 
-
-#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You will be refunded the amount you paid."
 msgstr "Zapłacona kwota zostanie zwrócona."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You will not be refunded the amount you paid."
 msgstr "Zapłacona kwota nie zostanie zwrócona."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html
-#, python-format
 msgid ""
 "Are you sure you want to unenroll from %(course_name)s (%(course_number)s)?"
 msgstr ""
 "Czy na pewno chcesz się wypisać z kursu %(course_name)s (%(course_number)s)?"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html
-#, python-format
+msgid "Are you sure you want to unenroll from %(courseName)s (%(courseNumber)s)?"
+msgstr "Czy na pewno chcesz się wypisać z kursu %(course_name)s (%(course_number)s)?"
+
 msgid ""
 "Are you sure you want to unenroll from the verified %(cert_name_long)s track"
 " of %(course_name)s (%(course_number)s)?"
