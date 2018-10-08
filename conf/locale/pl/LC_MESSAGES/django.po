@@ -9447,7 +9447,7 @@ msgstr ""
 
 #: lms/templates/registration/password_reset_email.html
 msgid "Please go to the following page and choose a new password:"
-msgstr "Proszę przejść na następującą stronę i ustawić nowe hasło:"
+msgstr "Kliknij w poniższy odnośnik w celu ustalenia nowego hasła:"
 
 #: lms/templates/registration/password_reset_email.html
 msgid ""
@@ -24453,3 +24453,9 @@ msgstr[4] "{effort} godzin"
 #, python-brace-format
 msgid "Username must be between {min} and {max} characters long."
 msgstr "Nazwa użytkownika musi mieć od {min} do {max} znaków długości."
+
+msgid "Password reset on %(platform_name)s"
+msgstr "Resetowanie hasła na platformie %(platform_name)s"
+
+msgid "You're receiving this e-mail because you requested a password reset for your user account at {{ platform_name }}."
+msgstr "Otrzymujesz tę wiadomość w związku z żądaniem zresetowania hasła do Twojego konta na platformie {{ platform_name }}."
