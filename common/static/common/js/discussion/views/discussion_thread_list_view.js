@@ -348,7 +348,7 @@
                 var threadCommentCount = thread.get('comments_count'),
                     threadUnreadCommentCount = thread.get('unread_comments_count'),
                     neverRead = !thread.get('read') && threadUnreadCommentCount === threadCommentCount,
-                    threadPreview = this.containsMarkup(thread.get('body')) ? '' : thread.get('body'),
+                    threadPreview = this.containsMarkup(thread.get('body')) ? '' : thread.get('body').replace(/[^a-zA-Z0-9]+/g, ''),
                     context = _.extend(
                         {
                             neverRead: neverRead,
