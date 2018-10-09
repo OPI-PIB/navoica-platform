@@ -124,8 +124,10 @@
             aboutSectionsData = [
                 {
                     title: gettext('Basic Account Information'),
-                    subtitle: gettext('These settings include basic information about your account.'),
-
+                    subtitle: StringUtils.interpolate(
+                                    gettext('These settings include basic information about your account. {platform_name}'),  // eslint-disable-line max-len
+                                    {platform_name: platformName}
+                                ),
                     messageType: aboutSectionMessageType,
                     message: aboutSectionMessage,
 
