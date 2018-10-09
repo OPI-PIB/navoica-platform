@@ -226,3 +226,16 @@ li.field-group.field-education-level.form-group.form-group-optional {
 .wiki-wrapper section.wiki .nav-tabs li { display: block }
 .wiki-wrapper section.wiki .article-functions .nav { display:block }
 .modal { bottom:auto }
+
+
+.bookmark-button:focus:not(:disabled) {
+    color: #b43f37;
+}
+
+a:focus {
+    background-color: transparent !important;
+}
+
+.breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited{
+  color:#b43f37;
+}
