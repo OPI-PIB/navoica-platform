@@ -711,9 +711,9 @@ def create_account_with_params(request, params):
             running_pipeline = pipeline.get(request)
             third_party_provider = provider.Registry.get_from_pipeline(running_pipeline)
 
-        #new_user = authenticate_new_user(request, user.username, params['password'])
-        #django_login(request, new_user)
-        #request.session.set_expiry(0)
+        new_user = authenticate_new_user(request, user.username, params['password'])
+        django_login(request, new_user)
+        request.session.set_expiry(0)
         if settings.FEATURES.get('BYPASS_ACTIVATION_EMAIL'):
 			log.info('bypassing activation email')
 			new_user.is_active = True
