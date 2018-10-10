@@ -31,11 +31,17 @@
 
             render: function() {
                 var data = _.clone(this.model.attributes);
-                var userLanguage = '',
-                    userTimezone = '';
+
+                data['org_text'] = data['org'];
+                if (data['organizer']!==undefined){
+                    data['org_text'] = "organizer_"+data['organizer']
+                }
+
+                var userLanguage = 'pl',
+                    userTimezone = 'Europe/Warsaw';
                 if (this.model.userPreferences !== undefined) {
-                    userLanguage = this.model.userPreferences.userLanguage;
-                    userTimezone = this.model.userPreferences.userTimezone;
+                    userLanguage = this.model.userPreferences.userLanguage || 'pl';
+                    userTimezone = this.model.userPreferences.userTimezone || 'Europe/Warsaw';
                 }
                 if (data.advertised_start !== undefined) {
                     data.start = data.advertised_start;

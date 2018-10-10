@@ -404,7 +404,7 @@ FEATURES = {
     'ENABLE_PASSWORD_RESET_FAILURE_EMAIL': False,
 }
 
-COURSE_DISCOVERY_FILTERS = ['org', 'modes', 'enrollment_start', 'course_category', 'organizer', 'difficulty']
+COURSE_DISCOVERY_FILTERS = ['modes', 'course_category', 'organizer', 'difficulty']
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
 COURSE_REVIEWS_TOOL_PROVIDER_FRAGMENT_NAME = 'coursetalk-reviews-fragment.html'
@@ -2640,6 +2640,31 @@ ALL_COURSE_CATEGORY = [
 ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % week, week)]
                         for week in range(1, 50)]
 
+# propery name should be untralated phrase. Translation will be done on the fly using djangojs.po // KH
+LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Jezyk"}
+COURSE_DISCOVERY_MEANINGS = {
+    'modes': {
+        'name': 'Typ kursu',
+        'terms': {
+            'honor': 'Honor',
+            'verified': 'Zweryfikowany',
+            'audit': 'Audyt',
+        },
+    },
+    'course_category': {
+        'name': 'Kategoria',
+        'terms': {b[0]: b[1] for b in ALL_COURSE_CATEGORY},
+    },
+    'organizer': {
+        'name': 'Organizator',
+        'terms': {b[0]: b[1] for b in ALL_COURSE_ORGANIZER},
+    },
+    'difficulty': {
+        'name': 'Course Difficulty',
+        'terms': {b[0]: b[1] for b in ALL_COURSE_DIFFICULTY},
+    }
+}
+
 ### Apps only installed in some instances
 # The order of INSTALLED_APPS matters, so this tuple is the app name and the item in INSTALLED_APPS
 # that this app should be inserted *before*. A None here means it should be appended to the list.
@@ -3198,11 +3223,6 @@ plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_c
 # locale.setlocale(locale.LC_ALL, "pl_PL.UTF-8")
 
 ELASTIC_FIELD_MAPPINGS = {
-    "start_date": {
-        "type": "date"
-    },
-    'enrollment_start': {'type': 'date'},
-    'enrollment_end': {'type': 'date'},
     'course_category': {'type': 'string'},
     'organizer': {'type': 'string'},
     'difficulty': {'type': 'string'}

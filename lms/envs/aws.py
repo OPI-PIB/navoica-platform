@@ -1109,21 +1109,3 @@ INSTALLED_APPS += (
 RAVEN_CONFIG = {
     'dsn': 'https://e3e1ce00e050403687828d5981c2fa72:8e8d9d55e69d4320a8f38808210a0e13@sentry.io/1283941',
 }
-LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Jezyk"}
-COURSE_DISCOVERY_MEANINGS = {
-    'org': {
-        'name': 'Organizacja',
-    },
-    'modes': {
-        'name': 'Typ kursu',
-        'terms': {
-            'honor': 'Honor',
-            'verified': 'Zweryfikowany',
-            'audit': 'Audyt',
-        },
-    },
-    'course_category': {
-        'name': 'Kategoria',
-    },
-    'language': LANGUAGE_MAP,
-}
