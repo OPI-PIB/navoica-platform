@@ -119,6 +119,7 @@ li.field-group.field-education-level.form-group.form-group-optional, div#field-e
 .navbar .navbar-nav .nav-item a {
   font-size: 14px !important;
   text-transform: none !important;
+  white-space: nowrap;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, .btn:not(:disabled):not(.disabled) {
@@ -226,3 +227,18 @@ li.field-group.field-education-level.form-group.form-group-optional {
 .wiki-wrapper section.wiki .nav-tabs li { display: block }
 .wiki-wrapper section.wiki .article-functions .nav { display:block }
 .modal { bottom:auto }
+
+
+.bookmark-button:focus:not(:disabled) {
+    color: #b43f37;
+}
+
+a:focus {
+    background-color: transparent;
+}
+
+.breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited{
+  color:#b43f37;
+}
+
+.u-field-password .account-settings-sections .section .account-settings-section-body .u-field .u-field-message .u-field-message-notification { padding: 10px 0 0 100px; }

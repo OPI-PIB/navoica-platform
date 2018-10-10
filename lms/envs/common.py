@@ -78,6 +78,7 @@ MANUAL_ENROLLMENT_ROLE_CHOICES = ['Learner', 'Support', 'Partner']
 
 # Features
 FEATURES = {
+	'BYPASS_ACTIVATION_EMAIL': True,
     'DISPLAY_DEBUG_INFO_TO_STAFF': True,
     'DISPLAY_HISTOGRAMS_TO_STAFF': False,  # For large courses this slows down courseware access for staff.
 
@@ -2284,7 +2285,7 @@ MKTG_URL_LINK_MAP = {
     'COURSES': 'courses',
     'ROOT': 'root',
     'TOS': 'tos',
-    'HONOR': 'honor',  # If your site does not have an honor code, simply delete this line.
+    'kodeks-honorowy': 'honor',  # If your site does not have an honor code, simply delete this line.
     'PRIVACY': 'privacy',
     'PRESS': 'press',
     'BLOG': 'blog',
@@ -2299,10 +2300,10 @@ MKTG_URL_LINK_MAP = {
 
 STATIC_TEMPLATE_VIEW_DEFAULT_FILE_EXTENSION = 'html'
 
-SUPPORT_SITE_LINK = ''
-ID_VERIFICATION_SUPPORT_LINK = ''
-PASSWORD_RESET_SUPPORT_LINK = ''
-ACTIVATION_EMAIL_SUPPORT_LINK = ''
+SUPPORT_SITE_LINK = 'mailto:pomoc@polskimooc.pl'
+ID_VERIFICATION_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
+PASSWORD_RESET_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
+ACTIVATION_EMAIL_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
 
 # Days before the expired date that we warn the user
 ENTITLEMENT_EXPIRED_ALERT_PERIOD = 90
