@@ -39,10 +39,6 @@
 
                 var userLanguage = 'pl',
                     userTimezone = 'Europe/Warsaw';
-                if (this.model.userPreferences !== undefined) {
-                    userLanguage = this.model.userPreferences.userLanguage || 'pl';
-                    userTimezone = this.model.userPreferences.userTimezone || 'Europe/Warsaw';
-                }
                 if (data.advertised_start !== undefined) {
                     data.start = data.advertised_start;
                 } else {
