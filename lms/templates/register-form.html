@@ -246,7 +246,7 @@ from student.models import UserProfile
 <div class="group group-form group-form-accountacknowledgements">
     <h2 class="sr">${_("Account Acknowledgements")}</h2>
 
-
+ 
     % if has_extauth_info is UNDEFINED or ask_for_tos :
 
 
@@ -262,13 +262,13 @@ from student.models import UserProfile
 
     % if settings.REGISTRATION_EXTRA_FIELDS['honor_code'] != 'hidden':
     ## check if we have an Honor Code link in our marketing map
-    % if marketing_link('HONOR') and marketing_link('HONOR') != '#':
+    % if marketing_link('kodeks-honorowy') and marketing_link('kodeks-honorowy') != '#':
 
     <div class="form-group">
         <div class="custom-control custom-checkbox">
             <input name="honor_code" type="checkbox" class="custom-control-input" id="customCheck2" value="true">
             <%
-            honor_code_path = marketing_link('HONOR')
+            honor_code_path = marketing_link('kodeks-honorowy')
             %>
             <label class="custom-control-label" for="customCheck2">${_('I agree to the {link_start}Honor Code{link_end}').format(
                 link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=honor_code_path),

@@ -2293,6 +2293,7 @@ MKTG_URL_LINK_MAP = {
     'SITEMAP.XML': 'sitemap_xml',
     'PARTNERS': 'partners',
     'COOPERATION': 'cooperation',
+    'HONOR': 'kodeks-honorowy',
 
     # Verified Certificates
     'WHAT_IS_VERIFIED_CERT': 'verified-certificate',
