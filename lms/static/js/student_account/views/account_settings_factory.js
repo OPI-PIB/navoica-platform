@@ -158,7 +158,7 @@
                                 //helpMessage: gettext('Check your email account for instructions to reset your password.')  // eslint-disable-line max-len
                             })
                         },
-                        {
+                        /*{
                             view: new AccountSettingsFieldViews.LanguagePreferenceFieldView({
                                 model: userPreferencesModel,
                                 title: gettext('Language'),
@@ -172,7 +172,7 @@
                                 options: fieldsData.language.options,
                                 persistChanges: true
                             })
-                        },
+                        },*/
                         countryFieldView/*,
                         {
                             view: new AccountSettingsFieldViews.TimeZoneFieldView({
