@@ -380,7 +380,7 @@ class StaticTabFields(object):
         display_name=_("Display Name"),
         help=_("The display name for this component."),
         scope=Scope.settings,
-        default="Empty",
+        default="Pusta",
     )
     course_staff_only = Boolean(
         display_name=_("Hide Page From Learners"),
