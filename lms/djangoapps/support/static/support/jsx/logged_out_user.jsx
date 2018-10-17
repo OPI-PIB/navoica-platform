@@ -8,7 +8,7 @@ function LoggedOutUser({ platformName, loginQuery, supportEmail }) {
     <div>
       <div className="row">
         <div className="col-sm-12">
-          <p>{gettext(`Sign in to ${platformName} so we can help you better.`)}</p>
+          <p>{gettext(`Sign in to so we can help you better.`)}</p>
         </div>
       </div>
 
@@ -20,9 +20,9 @@ function LoggedOutUser({ platformName, loginQuery, supportEmail }) {
 
       <div className="row">
         <div className="col-sm-12">
-          <a className="create-account" href={`/register${loginQuery}`}>{gettext(`Create an ${platformName} account`)}</a>
+          <a className="create-account" href={`/register${loginQuery}`}>{gettext(`Create an account`)}</a>
           <p className="create-account-note">
-            {gettext(`If you are unable to access your account contact us via email using ${supportEmail}.`)}
+            {gettext(`If you are unable to access your account contact us via email using `)+supportEmail}
           </p>
         </div>
       </div>

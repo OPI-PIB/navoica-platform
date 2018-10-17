@@ -1,0 +1,39 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Honor Code")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>
+            <%block name="pageheader">${page_header or _("Honor Code")}</%block>
+        </h1>
+        <p>
+            <%block name="pagecontent">
+<p align="justify"><span lang="pl-PL">Zapisując się na kurs na platformie Polski MOOC dołączasz do międzynarodowej społeczności ludzi uczących się. Naszą aspiracją jest umożliwienie każdemu użytkownikowi na świecie, kt&oacute;ry posiada dostęp do Internetu, wzięcie udziału w kursach przygotowanych przez najlepsze uczelnie i instytucje edukacyjne z Polski, dostarczając jednocześnie usługi dydaktyczne najwyższej jakości. Logując się na platformę Polski MOOC stajesz się częścią tej społeczności. Nasz sukces zależy w dużym stopniu od Twojej motywacji żeby się uczyć i przystępować do wszystkich aktywności z pełną uczciwością i szczerością. Warunkiem koniecznym do spełnienia przed przystąpieniem do jakiegokolwiek kursu jest zaakceptowanie warunk&oacute;w Kodeksu Honorowego oraz wszelkich dodatkowych wymagań i reguł określonych dla konkretnego kursu lub programu kurs&oacute;w. Ten Kodeks Honorowy, jak i każde dodatkowe reguły, będą zawsze umieszczane na stronie kursu. </span></p>
+
+<p align="justify"><span lang="pl-PL"><strong>Zobowiązanie</strong></span></p>
+<p align="justify"><span lang="pl-PL">Zapisując się na kurs na platformie Polski MOOC zobowiązuję się:</span></p>
+<ul>
+	<li>Wykonać wszelkie aktywności sprawdzające wiedzę i umiejętności samodzielnie, bez udziału i pomocy os&oacute;b trzecich, za wyjątkiem sytuacji kiedy aktywność będzie zezwalała na pracę grupową.</li>
+	<li>Utrzymywać tylko jedno konto na platformie Polski MOOC i nie udostępniać nikomu mojego loginu i hasła.</li>
+	<li>Nie podejmować jakichkolwiek aktywności, kt&oacute;re w spos&oacute;b nieuczciwy mogłyby wpłynąć na osiągnięcia moje lub innych użytkownik&oacute;w.</li>
+	<li>Nie upubliczniać gdziekolwiek odpowiedzi na zadania, kt&oacute;rą są użyte w kursie do oceny uczestnik&oacute;w.</li>
+</ul>
+<p align="justify"><span lang="pl-PL"><strong>Konsekwencje naruszenia Kodeksu Honorowego</strong></span></p>
+<p align="justify"><span lang="pl-PL">Względem każdego użytkownika, kt&oacute;ry naruszy postanowienia Kodeksu Honorowego, mogą zostać podjęte następujące czynności:</span></p>
+<ul>
+	<li>Nieprzyznanie punkt&oacute;w za rozwiązanie zadania w kursie.</li>
+	<li>Wstrzymanie lub wycofanie certyfikatu otrzymanego po ukończeniu kursu lub programu kurs&oacute;w.</li>
+	<li>Usunięcie z kursu lub z programu kurs&oacute;w.</li>
+	<li>Usunięcie konta na platformie Polski MOOC.</li>
+	<li>Dodatkowe czynności mogą zostać podjęte przez operatora platformy Polski MOOC bądź przez instytucję prowadzącą kurs. </li>
+	<li>W przypadku wykrycia naruszenia postanowień Kodeksu Honorowego nie zostaną przyznane jakiekolwiek zwroty koszt&oacute;w poniesionych w związku z przystąpieniem do kursu. </li>
+	<li>Naruszenie postanowień Kodeksu Honorowego zostanie podane do prywatnej wiadomości instytucji prowadzącej kurs, którego takie naruszenie będzie dotyczyło. Jednocześnie zostanie Ci przekazana informacja, że zostało wykryte naruszenie przez Ciebie postanowień Kodeksu Honorowego wraz z informacją o czynnościach jakie zostały w związku z tym naruszeniem podjęte.</li>
+</ul>
+<p align="justify"><span lang="pl-PL"><strong>Zmiany w Kodeksie Honorowym</strong></span></p>
+<p align="justify"><a name="_GoBack"></a> <span lang="pl-PL">Jako operator platformy Polski MOOC, zastrzegamy sobie prawo do zmian postanowień Kodeksu Honorowego. Jakiekolwiek zmiany będą miały skutek natychmiastowy po umieszczeniu na portalu Polski MOOC wraz z datą ich wprowadzenia. Zgodzenie się na postanowienia Kodeksu Honorowego przed przystąpieniem do kursu ma charakter prospektywny. Prosimy o sprawdzanie aktualnej wersji Kodeksu Honorowego, szczeg&oacute;lnie w sytuacjach kiedy mogą zachodzić jakiekolwiek obawy co do podejmowanych w kursie aktywności. </span></p></%block>
+        </p>
+    </section>
+</main>

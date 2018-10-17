@@ -78,6 +78,7 @@ MANUAL_ENROLLMENT_ROLE_CHOICES = ['Learner', 'Support', 'Partner']
 
 # Features
 FEATURES = {
+	'BYPASS_ACTIVATION_EMAIL': True,
     'DISPLAY_DEBUG_INFO_TO_STAFF': True,
     'DISPLAY_HISTOGRAMS_TO_STAFF': False,  # For large courses this slows down courseware access for staff.
 
@@ -404,7 +405,7 @@ FEATURES = {
     'ENABLE_PASSWORD_RESET_FAILURE_EMAIL': False,
 }
 
-COURSE_DISCOVERY_FILTERS = ['org', 'modes', 'enrollment_start', 'course_category', 'organizer', 'difficulty']
+COURSE_DISCOVERY_FILTERS = ['modes', 'course_category', 'organizer', 'difficulty']
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
 COURSE_REVIEWS_TOOL_PROVIDER_FRAGMENT_NAME = 'coursetalk-reviews-fragment.html'
@@ -920,11 +921,11 @@ ROOT_URLCONF = 'lms.urls'
 # Platform Email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'registration@example.com'
-DEFAULT_FEEDBACK_EMAIL = 'feedback@example.com'
-SERVER_EMAIL = 'devops@example.com'
-TECH_SUPPORT_EMAIL = 'technical@example.com'
-CONTACT_EMAIL = 'info@example.com'
-BUGS_EMAIL = 'bugs@example.com'
+DEFAULT_FEEDBACK_EMAIL = 'kontakt@example.com'
+SERVER_EMAIL = 'kontakt@example.com'
+TECH_SUPPORT_EMAIL = 'kontakt@example.com'
+CONTACT_EMAIL = 'kontakt@example.com'
+BUGS_EMAIL = 'kontakt@example.com'
 UNIVERSITY_EMAIL = 'university@example.com'
 PRESS_EMAIL = 'press@example.com'
 FINANCE_EMAIL = ''
@@ -2284,7 +2285,7 @@ MKTG_URL_LINK_MAP = {
     'COURSES': 'courses',
     'ROOT': 'root',
     'TOS': 'tos',
-    'HONOR': 'honor',  # If your site does not have an honor code, simply delete this line.
+    'kodeks-honorowy': 'honor',  # If your site does not have an honor code, simply delete this line.
     'PRIVACY': 'privacy',
     'PRESS': 'press',
     'BLOG': 'blog',
@@ -2292,6 +2293,7 @@ MKTG_URL_LINK_MAP = {
     'SITEMAP.XML': 'sitemap_xml',
     'PARTNERS': 'partners',
     'COOPERATION': 'cooperation',
+    'HONOR': 'kodeks-honorowy',
 
     # Verified Certificates
     'WHAT_IS_VERIFIED_CERT': 'verified-certificate',
@@ -2299,10 +2301,10 @@ MKTG_URL_LINK_MAP = {
 
 STATIC_TEMPLATE_VIEW_DEFAULT_FILE_EXTENSION = 'html'
 
-SUPPORT_SITE_LINK = ''
-ID_VERIFICATION_SUPPORT_LINK = ''
-PASSWORD_RESET_SUPPORT_LINK = ''
-ACTIVATION_EMAIL_SUPPORT_LINK = ''
+SUPPORT_SITE_LINK = 'mailto:pomoc@polskimooc.pl'
+ID_VERIFICATION_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
+PASSWORD_RESET_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
+ACTIVATION_EMAIL_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
 
 # Days before the expired date that we warn the user
 ENTITLEMENT_EXPIRED_ALERT_PERIOD = 90
@@ -2639,6 +2641,31 @@ ALL_COURSE_CATEGORY = [
 
 ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % week, week)]
                         for week in range(1, 50)]
+
+# propery name should be untralated phrase. Translation will be done on the fly using djangojs.po // KH
+LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Jezyk"}
+COURSE_DISCOVERY_MEANINGS = {
+    'modes': {
+        'name': 'Typ kursu',
+        'terms': {
+            'honor': 'Honor',
+            'verified': 'Zweryfikowany',
+            'audit': 'Audyt',
+        },
+    },
+    'course_category': {
+        'name': 'Kategoria',
+        'terms': {b[0]: b[1] for b in ALL_COURSE_CATEGORY},
+    },
+    'organizer': {
+        'name': 'Organizator',
+        'terms': {b[0]: b[1] for b in ALL_COURSE_ORGANIZER},
+    },
+    'difficulty': {
+        'name': 'Course Difficulty',
+        'terms': {b[0]: b[1] for b in ALL_COURSE_DIFFICULTY},
+    }
+}
 
 ### Apps only installed in some instances
 # The order of INSTALLED_APPS matters, so this tuple is the app name and the item in INSTALLED_APPS
@@ -3198,11 +3225,6 @@ plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_c
 # locale.setlocale(locale.LC_ALL, "pl_PL.UTF-8")
 
 ELASTIC_FIELD_MAPPINGS = {
-    "start_date": {
-        "type": "date"
-    },
-    'enrollment_start': {'type': 'date'},
-    'enrollment_end': {'type': 'date'},
     'course_category': {'type': 'string'},
     'organizer': {'type': 'string'},
     'difficulty': {'type': 'string'}

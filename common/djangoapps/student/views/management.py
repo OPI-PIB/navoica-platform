@@ -711,9 +711,15 @@ def create_account_with_params(request, params):
             running_pipeline = pipeline.get(request)
             third_party_provider = provider.Registry.get_from_pipeline(running_pipeline)
 
-        #new_user = authenticate_new_user(request, user.username, params['password'])
-        #django_login(request, new_user)
-        #request.session.set_expiry(0)
+        new_user = authenticate_new_user(request, user.username, params['password'])
+        django_login(request, new_user)
+        request.session.set_expiry(0)
+        if settings.FEATURES.get('BYPASS_ACTIVATION_EMAIL'):
+			log.info('bypassing activation email')
+			new_user.is_active = True
+			new_user.save()
+			AUDIT_LOG.info(
+				u"Login activated on extauth account - {0} ({1})".format(new_user.username, new_user.email))
 
         if do_external_auth:
             eamap.user = new_user
@@ -728,12 +734,13 @@ def create_account_with_params(request, params):
                 new_user.save()
                 AUDIT_LOG.info(
                     u"Login activated on extauth account - {0} ({1})".format(new_user.username, new_user.email))
+                    
 
     # Check if system is configured to skip activation email for the current user.
     #skip_email = skip_activation_email(
     #    user, do_external_auth, running_pipeline, third_party_provider,
     #)
-    skip_email = False
+    skip_email = True
 
     if skip_email:
         registration.activate()

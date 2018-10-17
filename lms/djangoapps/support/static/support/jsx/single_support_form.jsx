@@ -161,7 +161,7 @@ class RenderForm extends React.Component {
             <a
               href={this.props.context.marketingUrl}
               className="btn btn-secondary help-button"
-            >{gettext(`Search the ${this.props.context.platformName} Help Center`)}</a>
+            >{gettext(`Search the Help Center`)}</a>
           </div>
         </div>
 
