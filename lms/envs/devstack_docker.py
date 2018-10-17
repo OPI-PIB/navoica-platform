@@ -9,8 +9,8 @@ LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
 
 LOGGING['loggers']['tracking']['handlers'] = ['console']
 HOMEPAGE_COURSE_MAX = 4
-LMS_BASE = 'edx-dev.opi.org.pl:18000'
-CMS_BASE = 'edx-dev.opi.org.pl:18010'
+LMS_BASE = os.environ.get('LMS_BASE', 'edx-dev.opi.org.pl')
+CMS_BASE = 'studio.'+LMS_BASE
 SITE_NAME = LMS_BASE
 LMS_ROOT_URL = 'http://{}'.format(LMS_BASE)
 LMS_INTERNAL_ROOT_URL = LMS_ROOT_URL
@@ -22,7 +22,7 @@ ECOMMERCE_API_URL = 'http://edx-dev.opi.org.pl:18130/api/v2'
 
 ENTERPRISE_API_URL = '{}/enterprise/api/v1/'.format(LMS_INTERNAL_ROOT_URL)
 
-CREDENTIALS_INTERNAL_SERVICE_URL = 'http://edx-dev.opi.org.pl:18150'
+CREDENTIALS_INTERNAL_SERVICE_URL = 'http://%s:18150' % LMS_BASE
 CREDENTIALS_PUBLIC_SERVICE_URL = 'http://localhost:18150'
 
 OAUTH_OIDC_ISSUER = '{}/oauth2'.format(LMS_ROOT_URL)
@@ -84,6 +84,6 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = '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'
 
-DEFAULT_FROM_EMAIL = 'registration@edx-dev.opi.org.pl'
-DEFAULT_FEEDBACK_EMAIL = 'feedback@edx-dev.opi.org.pl'
-SERVER_EMAIL = 'devops@edx-dev.opi.org.pl'
+DEFAULT_FROM_EMAIL = 'registration@'+LMS_BASE
+DEFAULT_FEEDBACK_EMAIL = 'feedback@'+LMS_BASE
+SERVER_EMAIL = 'devops@'+LMS_BASE
