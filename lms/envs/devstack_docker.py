@@ -16,7 +16,7 @@ LMS_ROOT_URL = 'http://{}'.format(LMS_BASE)
 LMS_INTERNAL_ROOT_URL = LMS_ROOT_URL
 
 ECOMMERCE_PUBLIC_URL_ROOT = 'http://localhost:18130'
-ECOMMERCE_API_URL = 'http://edx-dev.opi.org.pl:18130/api/v2'
+ECOMMERCE_API_URL = 'http://%s:18130/api/v2' % LMS_BASE
 
 #COMMENTS_SERVICE_URL = 'http://edx-dev.opi.org.pl:4567'
 
