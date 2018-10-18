@@ -244,3 +244,10 @@ a:focus {
 .u-field-password .account-settings-sections .section .account-settings-section-body .u-field .u-field-message .u-field-message-notification { padding: 10px 0 0 100px; }
 
 .text-right{ text-align:right }
+
+@media (max-width: 768px){
+	.course-card .course-card-image img { width:auto; display:inline-block }
+	.course-card .course-card-image { text-align:center }
+	.register .col-md-8 { margin-bottom:50px }
+	.navbar .navbar-nav .nav-item a { margin-bottom:5px }
+}
