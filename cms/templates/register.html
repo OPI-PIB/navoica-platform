@@ -52,6 +52,11 @@ from django.core.urlresolvers import reverse
               <input id="password" type="password" name="password" />
               <span id="password_error" class="tip tip-error hidden" role="alert"></span>
             </li>
+            
+            <li class="field text required password form-group form-group-required" id="field-password">
+				<label for="password">${_('Confirm Password')}</label>
+				<input class="form-control" id="confirm_password" type="password" value="" required name="confirm_password" />
+			</li>
 <!--
             <li class="field-group">
               <div class="field text" id="field-location">
