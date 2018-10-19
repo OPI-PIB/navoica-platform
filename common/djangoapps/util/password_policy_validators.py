@@ -47,7 +47,7 @@ def password_min_length():
     """
     min_length = getattr(settings, 'PASSWORD_MIN_LENGTH', None)
     if min_length is None:
-        return 2  # Note: This default is simply historical
+        return 8  # Note: This default is simply historical
     return min_length
 
 

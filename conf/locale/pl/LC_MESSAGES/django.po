@@ -24476,3 +24476,16 @@ msgstr "Jeszcze nie posiadasz żadnych certyfikatów i poświadczeń."
 
 msgid "File name"
 msgstr "Nazwa pliku"
+
+msgid "Enter a password with at least {requirements}."
+msgstr "Hasło musi się składać z co najmniej {requirements}."
+
+#: common/djangoapps/util/password_policy_validators.py:228
+#, python-brace-format
+msgid "{num} character"
+msgid_plural "{num} characters"
+msgstr[0] "{num} znak"
+msgstr[1] "{num} znaki"
+msgstr[2] "{num} znaki"
+msgstr[3] "{num} znaki"
+msgstr[4] "{num} znaków"
