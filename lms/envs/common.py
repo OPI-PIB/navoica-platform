@@ -62,7 +62,7 @@ PLATFORM_NAME = _('Your Platform Name Here')
 PLATFORM_DESCRIPTION = _('Your Platform Description Here')
 CC_MERCHANT_NAME = PLATFORM_NAME
 
-PLATFORM_VERSION = subprocess.call(["git -C %s tag" % EDX_ROOT],shell=True)
+PLATFORM_VERSION = subprocess.check_output(["git -C %s tag" % EDX_ROOT],shell=True)
 
 PLATFORM_FACEBOOK_ACCOUNT = "http://www.facebook.com/YourPlatformFacebookAccount"
 PLATFORM_TWITTER_ACCOUNT = "@YourPlatformTwitterAccount"
