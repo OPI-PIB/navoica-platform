@@ -5,6 +5,7 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from branding.api import get_footer
 from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+from django.conf import settings
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
@@ -55,7 +56,7 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
                 <img src="/static/images/patrons/logo_opi_pib.png" alt="OPI - PIB">
             </div>
         </div>
-        <p class="footer-copyright"><span>&copy; Copyright 2018 Polski MOOC</span> — Wszelkie prawa zastrzeżone.</p>
+        <p class="footer-copyright"><span>&copy; Copyright 2018 Polski MOOC</span> — Wszelkie prawa zastrzeżone. | ver.${ settings.PLATFORM_VERSION }</p>
         </span>
     </div>
 </footer>

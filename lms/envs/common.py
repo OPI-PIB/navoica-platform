@@ -32,6 +32,7 @@ Longer TODO:
 import imp
 import sys
 import os
+import subprocess
 
 import django
 from path import Path as path
@@ -53,11 +54,15 @@ from lms.djangoapps.lms_xblock.mixin import LmsBlockMixin
 reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('UTF8')
 
+EDX_ROOT = path(__file__).abspath().dirname().dirname().dirname()  # /edx-platform/
+
 ################################### FEATURES ###################################
 # The display name of the platform to be used in templates/emails/etc.
 PLATFORM_NAME = _('Your Platform Name Here')
 PLATFORM_DESCRIPTION = _('Your Platform Description Here')
 CC_MERCHANT_NAME = PLATFORM_NAME
+
+PLATFORM_VERSION = subprocess.call(["git -C %s tag" % EDX_ROOT],shell=True)
 
 PLATFORM_FACEBOOK_ACCOUNT = "http://www.facebook.com/YourPlatformFacebookAccount"
 PLATFORM_TWITTER_ACCOUNT = "@YourPlatformTwitterAccount"
