@@ -251,7 +251,7 @@ from six import string_types
                   <i class="icon-time"></i>
                 </div>
                 <div class="course-details-content">
-                  <strong>Czas trwania kursu (w tygodniach):</strong> ${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}
+                  <strong>Czas trwania kursu:</strong> ${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}
                 </div>
               </li>
 
@@ -450,7 +450,7 @@ from six import string_types
         <input name="submit" type="submit" value="${pgettext('self','enroll')}">
       </div>
     </form>
-  </div>
+  </di
 %endif
 
 <%include file="../video_modal.html" />
