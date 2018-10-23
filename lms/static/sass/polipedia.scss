@@ -4778,7 +4778,8 @@ button.close {
   z-index: 1050;
   display: none;
   overflow: hidden;
-  outline: 0
+  outline: 0;
+  max-width: 100%;
 }
 
 .modal-open .modal {
@@ -12832,7 +12833,8 @@ a:hover {
 }
 
 .navbar.navbar-light .navbar-brand {
-  background-image: url("../images/polskimooc_logo.svg")
+  background-image: url("../images/polskimooc_logo.svg");
+  font-size: 0;
 }
 
 .jumbotron {

@@ -65,7 +65,7 @@ input[type="submit"]:active:not(:disabled), input[type="submit"]:focus:not(:disa
 }
 
 .register.container.login {
-  width: initial;
+  width: auto;
 }
 
 div#field-country {
@@ -148,10 +148,6 @@ li.field-group.field-education-level.form-group.form-group-optional, div#field-e
 
 h1,h2,h3,h4,h5,h6 {
 	text-align:left;
-}
-
-.container {
-	padding:40px 0;
 }
 
 .view-register footer .container,.view-login footer .container {
@@ -246,11 +242,17 @@ a:focus {
 
 .text-right{ text-align:right }
 
-
-
 @media (max-width: 768px){
-	.course-card .course-card-image img { width:auto; display:inline-block }
+	.course-card .course-card-image img { display:inline-block }
 	.course-card .course-card-image { text-align:center }
 	.register .col-md-8 { margin-bottom:50px }
 	.navbar .navbar-nav .nav-item a { margin-bottom:5px }
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active{
+   background-color: #b43f37 !important;
+}
+
+a:not(.btn) {
+    color: #B43F37 !important;
 }

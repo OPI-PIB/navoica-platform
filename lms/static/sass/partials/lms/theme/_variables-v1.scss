@@ -149,7 +149,7 @@ $blue-t1: rgba($blue, 0.25) !default;
 $blue-t2: rgba($blue, 0.5) !default;
 $blue-t3: rgba($blue, 0.75) !default;
 
-$uxpl-blue-hover-active: rgb(6, 86, 131) !default; // wcag2a compliant
+$uxpl-blue-hover-active: #b43f37 !default; // wcag2a compliant
 
 $uxpl-green-base: rgb(0, 129, 0) !default; // wcag2a compliant
 $uxpl-green-hover-active: rgb(0, 155, 0) !default; // wcag2a compliant
@@ -214,8 +214,8 @@ $state-success-text: $black !default;
 $state-success-bg: #dff0d8 !default;
 $state-success-border: darken($state-success-bg, 5%) !default;
 
-$state-info-text: #31708f !default;
-$state-info-text-link: #245269 !default;
+$state-info-text: #b43f37 !default;
+$state-info-text-link: #b43f37 !default;
 $state-info-bg: #d9edf7 !default;
 $state-info-border: darken($state-info-bg, 7%) !default;
 
@@ -232,7 +232,7 @@ $state-danger-border: darken($state-danger-bg, 5%) !default;
 // ----------------------------
 
 // logo colors
-$micromasters-color: #005585 !default;
+$micromasters-color: #b43f37 !default;
 $xseries-color: #424242 !default;
 $zebra-stripe-color: rgb(249, 250, 252) !default;
 $divider-color: rgb(226, 231, 236) !default;
@@ -246,8 +246,8 @@ $light-gray2: rgb(171, 171, 171) !default;
 $light-gray3: rgb(249, 249, 249) !default;
 $light-gray4: rgb(252, 252, 252) !default;
 $dark-gray2: rgb(151, 151, 151) !default;
-$blue1: rgb(74, 144, 226) !default;
-$blue2: rgb(0, 161, 229) !default;
+$blue1: #b43f37 !default;
+$blue2: #b43f37 !default;
 $green1: rgb(97, 161, 46) !default;
 $red1: rgb(208, 2, 27) !default;
 
@@ -267,7 +267,7 @@ $m-gray-t1: rgba($m-gray, 0.25) !default;
 $m-gray-t2: rgba($m-gray, 0.5) !default;
 $m-gray-t3: rgba($m-gray, 0.75) !default;
 
-$m-blue: theme-color("primary");  // uxpl blue base
+$m-blue: #B43F37;  // uxpl blue base
 $m-blue-l1: rgb(43, 172, 230) !default;
 $m-blue-l2: rgb(66, 181, 233) !default;
 $m-blue-l3: rgb(89, 190, 236) !default;
