@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Each store has slightly different semantics wrt draft v published. XML doesn't officially recognize draft
 but does hold it in a subdir. Old mongo has a virtual but not physical draft for every unit in published state.
