@@ -90,6 +90,24 @@ HeaderFactory();
 <![endif]-->
 % endif
 
+<%
+unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_ALERT_VERSIONS')
+%>
+<script>
+    var $buoop = {
+        notify:${unsupported_browser_alert_versions | n, decode.utf8},
+        api:5,
+        reminder:0,
+        unsupported:true
+    };
+    function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+    catch(e){window.attachEvent("onload", $buo_f)}
+  </script>
 % if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False):
 <%include file="../widgets/cookie-consent.html" />
 % endif
