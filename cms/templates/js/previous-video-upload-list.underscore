@@ -11,7 +11,7 @@
                 <% if (videoImageUploadEnabled) { %>
                 <div class="video-head-col video-col thumbnail-col"><%- gettext("Thumbnail") %></div>
                 <% } %>
-                <div class="video-head-col video-col name-col"><%- gettext("File name") %></div>
+                <div class="video-head-col video-col name-col"><%- gettext("File Name") %></div>
                 <div class="video-head-col video-col date-col"><%- gettext("Date Added") %></div>
                 <div class="video-head-col video-col video-id-col"><%- gettext("Video ID") %></div>
                 <% if (isVideoTranscriptEnabled) { %>
