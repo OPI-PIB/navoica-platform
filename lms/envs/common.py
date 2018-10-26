@@ -2292,7 +2292,7 @@ MKTG_URL_LINK_MAP = {
     'COURSES': 'courses',
     'ROOT': 'root',
     'TOS': 'tos',
-    'kodeks-honorowy': 'honor',  # If your site does not have an honor code, simply delete this line.
+    #'kodeks-honorowy': 'honor',  # If your site does not have an honor code, simply delete this line.
     'PRIVACY': 'privacy',
     'PRESS': 'press',
     'BLOG': 'blog',
@@ -2300,7 +2300,7 @@ MKTG_URL_LINK_MAP = {
     'SITEMAP.XML': 'sitemap_xml',
     'PARTNERS': 'partners',
     'COOPERATION': 'cooperation',
-    'HONOR': 'kodeks-honorowy',
+    'HONOR': 'honor',
 
     # Verified Certificates
     'WHAT_IS_VERIFIED_CERT': 'verified-certificate',
