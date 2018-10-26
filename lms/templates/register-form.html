@@ -1,7 +1,7 @@
 <%!
 import third_party_auth
 from third_party_auth import pipeline, provider
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext as _, ungettext
 from django_countries import countries
 from student.models import UserProfile
 %>
@@ -103,6 +103,13 @@ from student.models import UserProfile
         <li class="field required password form-group form-group-required" id="field-password">
             <label for="password">${_('Password')}</label>
             <input class="form-control" id="password" type="password" name="password" value="" required aria-required="true"/>
+            <span class="tip tip-input" id="name-tip">
+				<%
+				min_length = settings.PASSWORD_MIN_LENGTH
+				requirements = ungettext("{num} character", "{num} characters", min_length).format(num=min_length)
+				%>
+				${_("Enter a password with at least {requirements}.").format(requirements=requirements)}
+			</span>
         </li>
         
         <li class="field required password form-group form-group-required" id="field-password">
@@ -262,13 +269,13 @@ from student.models import UserProfile
 
     % if settings.REGISTRATION_EXTRA_FIELDS['honor_code'] != 'hidden':
     ## check if we have an Honor Code link in our marketing map
-    % if marketing_link('kodeks-honorowy') and marketing_link('kodeks-honorowy') != '#':
+    % if marketing_link('honor') and marketing_link('honor') != '#':
 
     <div class="form-group">
         <div class="custom-control custom-checkbox">
             <input name="honor_code" type="checkbox" class="custom-control-input" id="customCheck2" value="true">
             <%
-            honor_code_path = marketing_link('kodeks-honorowy')
+            honor_code_path = marketing_link('honor')
             %>
             <label class="custom-control-label" for="customCheck2">${_('I agree to the {link_start}Honor Code{link_end}').format(
                 link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=honor_code_path),
