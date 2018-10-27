@@ -332,3 +332,16 @@ h1, .h1 {
     max-width: 212px;
   }
 }
+
+.forum-nav {
+  .forum-nav-filter-main, .forum-nav-sort {
+    font: inherit;
+    line-height: 1em;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+    select{
+      width: 100%;
+    }
+  }
+}
