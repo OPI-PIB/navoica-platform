@@ -2649,7 +2649,7 @@ ALL_COURSE_CATEGORY = [
 ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % week, week)]
                         for week in range(1, 50)]
 
-# propery name should be untralated phrase. Translation will be done on the fly using djangojs.po // KH
+# property name should be untranslated phrases. Translation will be done on the fly using djangojs.po // KH
 LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Jezyk"}
 COURSE_DISCOVERY_MEANINGS = {
     'modes': {
@@ -2657,7 +2657,7 @@ COURSE_DISCOVERY_MEANINGS = {
         'terms': {
             'honor': 'Honor',
             'verified': 'Zweryfikowany',
-            'audit': 'Audyt',
+            'audit': 'audit',
         },
     },
     'course_category': {
