@@ -368,3 +368,22 @@ h1, .h1 {
 }
 
 .courses-row.courses-listing li a { margin:0px !important; margin-bottom:15px !important; }
+
+.video-js .vjs-tech {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.videojs_block {
+    height: auto;
+    width: auto;
+}
+
+.video-js.vjs-qualityselector {
+    display: block;
+    height: auto;
+}
