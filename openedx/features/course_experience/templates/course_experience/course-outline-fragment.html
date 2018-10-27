@@ -16,6 +16,14 @@ from openedx.core.djangolib.markup import HTML, Text
 course_sections = blocks.get('children')
 %>
 
+<div>
+<button class="btn btn-sm btn-outline-primary"
+id="expand-collapse-outline-all-button"
+aria-expanded="false"
+aria-controls="course-outline-block-tree">
+<span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
+</button>
+</div>
 
 <div id="main" class="col-lg-12 p-sm-8 p-xl-9 d-flex align-items-start justify-content-between course-outline">
               <ul class="course-parts block-tree accordion"
@@ -152,16 +160,7 @@ course_sections = blocks.get('children')
         % endfor
 
               </ul>
-              <div>
 
-                  <button class="btn btn-sm btn-outline-primary"
-                id="expand-collapse-outline-all-button"
-                aria-expanded="false"
-                aria-controls="course-outline-block-tree"
-                >
-          <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
-        </button>
-                </div>
             </div>
 
 
