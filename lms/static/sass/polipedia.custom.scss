@@ -138,48 +138,81 @@ li.field-group.field-education-level.form-group.form-group-optional, div#field-e
   max-width: 100%;
 }
 
-.is-hidden{
+.is-hidden {
   display: none !important;
 }
 
 .index-courses-list {
-    padding: 0px;
+  padding: 0px;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	text-align:left;
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
 }
 
-.view-register footer .container,.view-login footer .container {
-    width: auto;
-    background-color: transparent;
+.view-register footer .container, .view-login footer .container {
+  width: auto;
+  background-color: transparent;
 }
 
 li.field-group.field-education-level.form-group.form-group-optional {
-    margin: 0 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
-.course-card .course-card-image img { height:160px }
-.jumbotron.jumbotron-index{ padding-top:10px; padding-bottom:10px }
-.jumbotron h1 { text-align:left }
+.course-card .course-card-image img {
+  height: 160px
+}
 
-.choicegroup legend { font-size: 1rem; }
-.xmodule_display.xmodule_HtmlModule p { font-size:1.1em }
-.xblock .xblock h2.unit-title{ float:left }
-.course-content .bookmark-button-wrapper{ float:right }
-.course-wrapper .course-content .vert-mod, .course-wrapper .courseware-results-wrapper .vert-mod { clear:both }
-.course-parts button:hover:not(:disabled) { background-color:transparent !important }
+.jumbotron.jumbotron-index {
+  padding-top: 10px;
+  padding-bottom: 10px
+}
 
-.course-details .course-details-icon.easy{color:green}
-.course-details .course-details-icon.medium{color:#fd7e14}
+.jumbotron h1 {
+  text-align: left
+}
+
+.choicegroup legend {
+  font-size: 1rem;
+}
+
+.xmodule_display.xmodule_HtmlModule p {
+  font-size: 1.1em
+}
+
+.xblock .xblock h2.unit-title {
+  float: left
+}
+
+.course-content .bookmark-button-wrapper {
+  float: right
+}
+
+.course-wrapper .course-content .vert-mod, .course-wrapper .courseware-results-wrapper .vert-mod {
+  clear: both
+}
+
+.course-parts button:hover:not(:disabled) {
+  background-color: transparent !important
+}
+
+.course-details .course-details-icon.easy {
+  color: green
+}
+
+.course-details .course-details-icon.medium {
+  color: #fd7e14
+}
 
 .courses-listing .course-card {
   max-width: 100% !important;
 }
+
 .courses-listing li {
   list-style: none !important;
-  font-size:12px;
+  font-size: 12px;
 }
+
 /*
 .navbar.navbar-light .navbar-brand { margin-right:10px; margin-bottom:-10px }
 
@@ -202,59 +235,100 @@ li.field-group.field-education-level.form-group.form-group-optional {
   width: 100%;
 }*/
 
-.navbar .navbar-toggler:hover:not(:disabled),.navbar .navbar-toggler{
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
+.navbar .navbar-toggler:hover:not(:disabled), .navbar .navbar-toggler {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   position: absolute;
-    right: 20px;
-    top: 20px;
+  right: 20px;
+  top: 20px;
 }
 
-.course-card .course-card-content h3 { min-height:45px }
+.course-card .course-card-content h3 {
+  min-height: 45px
+}
 
-.add_post_btn_container { margin-bottom:10px }
+.add_post_btn_container {
+  margin-bottom: 10px
+}
 
-.wiki-wrapper section.wiki .breadcrumbs-header { box-sizing: content-box; padding:12px 0 26px }
-.wiki-wrapper section.wiki .breadcrumbs-header h2.page-title { margin:0 0 0 40px }
-.wiki-wrapper section.wiki .global-functions { margin-top:-24px }
-.wiki-wrapper section.wiki .nav-tabs li { display: block }
-.wiki-wrapper section.wiki .article-functions .nav { display:block }
-.modal { bottom:auto }
+.wiki-wrapper section.wiki .breadcrumbs-header {
+  box-sizing: content-box;
+  padding: 12px 0 26px
+}
 
+.wiki-wrapper section.wiki .breadcrumbs-header h2.page-title {
+  margin: 0 0 0 40px
+}
+
+.wiki-wrapper section.wiki .global-functions {
+  margin-top: -24px
+}
+
+.wiki-wrapper section.wiki .nav-tabs li {
+  display: block
+}
+
+.wiki-wrapper section.wiki .article-functions .nav {
+  display: block
+}
+
+.modal {
+  bottom: auto
+}
 
 .bookmark-button:focus:not(:disabled) {
-    color: #b43f37;
+  color: #b43f37;
 }
 
 a:focus {
-    background-color: transparent;
+  background-color: transparent;
 }
 
-.breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited{
-  color:#b43f37;
+.breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited {
+  color: #b43f37;
 }
 
-.u-field-password .account-settings-sections .section .account-settings-section-body .u-field .u-field-message .u-field-message-notification { padding: 10px 0 0 100px; }
-
-.text-right{ text-align:right }
-
-@media (max-width: 768px){
-	.course-card .course-card-image img { display:inline-block }
-	.course-card .course-card-image { text-align:center }
-	.register .col-md-8 { margin-bottom:50px }
-	.navbar .navbar-nav .nav-item a { margin-bottom:5px }
+.u-field-password .account-settings-sections .section .account-settings-section-body .u-field .u-field-message .u-field-message-notification {
+  padding: 10px 0 0 100px;
 }
 
-.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active{
-   background-color: #b43f37 !important;
+.text-right {
+  text-align: right
+}
+
+@media (max-width: 768px) {
+  .course-card .course-card-image img {
+    display: inline-block
+  }
+  .course-card .course-card-image {
+    text-align: center
+  }
+  .register .col-md-8 {
+    margin-bottom: 50px
+  }
+  .navbar .navbar-nav .nav-item a {
+    margin-bottom: 5px
+  }
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+  background-color: #b43f37 !important;
 }
 
 a:not(.btn) {
-    color: #B43F37 !important;
+  color: #B43F37 !important;
 }
 
-h1, .h1 { font-size:2.2rem }
+h1, .h1 {
+  font-size: 2.2rem
+}
+
+@media (max-width: 400px) {
+  .footer .footer-logos img {
+    max-width: 212px;
+  }
+}
