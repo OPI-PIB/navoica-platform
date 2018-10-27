@@ -105,7 +105,8 @@ from student.models import UserProfile
             <input class="form-control" id="password" type="password" name="password" value="" required aria-required="true"/>
             <span class="tip tip-input" id="name-tip">
 				<%
-				min_length = settings.PASSWORD_MIN_LENGTH
+				//min_length = getattr(settings, 'PASSWORD_MIN_LENGTH', 8)
+				min_length = 8 // ToDO change this for setting attr
 				requirements = ungettext("{num} character", "{num} characters", min_length).format(num=min_length)
 				%>
 				${_("Enter a password with at least {requirements}.").format(requirements=requirements)}
