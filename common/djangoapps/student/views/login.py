@@ -528,9 +528,16 @@ def signin_user(request):
         message for message in messages.get_messages(request) if 'account-activation' in message.tags
     ]
     
+    banner_account_activation_message = [
+        message for message in messages.get_messages(request) if 'dashboard-banner' in message.tags
+    ]
+    if banner_account_activation_message:
+		banner_account_activation_message = banner_account_activation_message[0]
+    
     context = {
         'login_redirect_url': redirect_to,  # This gets added to the query string of the "Sign In" button in the header
         'account_activation_messages': account_activation_messages,
+        'banner_account_activation_message': banner_account_activation_message,
         # Bool injected into JS to submit form if we're inside a running third-
         # party auth pipeline; distinct from the actual instance of the running
         # pipeline, if any.
