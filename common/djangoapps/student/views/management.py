@@ -1046,7 +1046,7 @@ def activate_account(request, key):
                 extra_tags='account-activation aa-icon',
             )
 
-    return redirect('login')
+    return redirect('signin_user')
 
 
 @ensure_csrf_cookie
