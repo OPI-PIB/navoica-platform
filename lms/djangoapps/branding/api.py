@@ -205,8 +205,8 @@ def _footer_navigation_links():
         }
         for link_name, link_url, link_title in [
             ("about", marketing_link("ABOUT"), _("About")),
-            ("partners", marketing_link("PARTNERS"), _("Partners")),
-            ("cooperation", marketing_link("COOPERATION"), _("Cooperation")),
+            #("partners", marketing_link("PARTNERS"), _("Partners")),
+            #("cooperation", marketing_link("COOPERATION"), _("Cooperation")),
             #("enterprise", marketing_link("ENTERPRISE"),
             # _("{platform_name} for Business").format(platform_name=platform_name)),
             #("blog", marketing_link("BLOG"), _("Blog")),

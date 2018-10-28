@@ -2308,7 +2308,7 @@ MKTG_URL_LINK_MAP = {
 
 STATIC_TEMPLATE_VIEW_DEFAULT_FILE_EXTENSION = 'html'
 
-SUPPORT_SITE_LINK = 'mailto:pomoc@polskimooc.pl'
+SUPPORT_SITE_LINK = 'mailto:mooc_help@opi.org.pl'
 ID_VERIFICATION_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
 PASSWORD_RESET_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
 ACTIVATION_EMAIL_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
