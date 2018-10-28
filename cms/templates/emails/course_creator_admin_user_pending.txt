@@ -5,7 +5,7 @@ ${_("User '{user}' with e-mail {email} has requested {studio_name} course creato
 ${_("To grant or deny this request, use the course creator admin table.")}
 
 % if is_secure:
-  https://${ site }/admin/course_creators/coursecreator/
+  https://studio.polskimooc.pl/admin/course_creators/coursecreator/
 % else:
-  http://${ site }/admin/course_creators/coursecreator/
+  https://studio.polskimooc.pl/admin/course_creators/coursecreator/
 % endif
