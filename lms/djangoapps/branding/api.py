@@ -204,7 +204,7 @@ def _footer_navigation_links():
             "url": link_url,
         }
         for link_name, link_url, link_title in [
-            ("about", marketing_link("ABOUT"), _("About")),
+            ("about", "http://polskimooc.edu.pl", _("About")),
             #("partners", marketing_link("PARTNERS"), _("Partners")),
             #("cooperation", marketing_link("COOPERATION"), _("Cooperation")),
             #("enterprise", marketing_link("ENTERPRISE"),
