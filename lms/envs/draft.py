@@ -7,6 +7,7 @@ LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
     'class': 'logging.NullHandler',
 }
 
+PLATFORM_NAME = 'Polski MOOC Draft'
 LOGGING['loggers']['tracking']['handlers'] = ['console']
 HOMEPAGE_COURSE_MAX = 4
 LMS_BASE = os.environ.get('LMS_BASE', 'polskimooc-test.opi.org.pl')

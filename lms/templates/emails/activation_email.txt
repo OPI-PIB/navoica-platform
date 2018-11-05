@@ -3,11 +3,7 @@ ${_("You're almost there! Use the link to activate your account to access engagi
 "{platform_name} courses. Note that you will not be able to log back into your account until "
 "you have activated it.").format(platform_name=platform_name)}
 
-% if is_secure:
-https://polskimooc.pl/activate/${ key }
-% else:
-http://polskimooc.pl/activate/${ key }
-% endif
+${lms_url}/activate/${ key }
 
 ${_("Enjoy learning with {platform_name}.").format(platform_name=platform_name)}
 
