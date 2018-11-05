@@ -927,14 +927,14 @@ ROOT_URLCONF = 'lms.urls'
 
 # Platform Email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'registration@example.com'
-DEFAULT_FEEDBACK_EMAIL = 'kontakt@example.com'
-SERVER_EMAIL = 'kontakt@example.com'
-TECH_SUPPORT_EMAIL = 'kontakt@example.com'
-CONTACT_EMAIL = 'kontakt@example.com'
-BUGS_EMAIL = 'kontakt@example.com'
-UNIVERSITY_EMAIL = 'university@example.com'
-PRESS_EMAIL = 'press@example.com'
+DEFAULT_FROM_EMAIL = 'kontakt@polskimooc.pl'
+DEFAULT_FEEDBACK_EMAIL = 'kontakt@polskimooc.pl'
+SERVER_EMAIL = 'kontakt@polskimooc.pl'
+TECH_SUPPORT_EMAIL = 'kontakt@polskimooc.pl'
+CONTACT_EMAIL = 'kontakt@polskimooc.pl'
+BUGS_EMAIL = 'kontakt@polskimooc.pl'
+UNIVERSITY_EMAIL = 'kontakt@polskimooc.pl'
+PRESS_EMAIL = 'kontakt@polskimooc.pl'
 FINANCE_EMAIL = ''
 
 # Platform mailing address
@@ -2309,9 +2309,9 @@ MKTG_URL_LINK_MAP = {
 STATIC_TEMPLATE_VIEW_DEFAULT_FILE_EXTENSION = 'html'
 
 SUPPORT_SITE_LINK = 'mailto:mooc_help@opi.org.pl'
-ID_VERIFICATION_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
-PASSWORD_RESET_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
-ACTIVATION_EMAIL_SUPPORT_LINK = 'mailto:pomoc@polskimooc.pl'
+ID_VERIFICATION_SUPPORT_LINK = 'mailto:kontakt@polskimooc.pl'
+PASSWORD_RESET_SUPPORT_LINK = 'mailto:kontakt@polskimooc.pl'
+ACTIVATION_EMAIL_SUPPORT_LINK = 'mailto:kontakt@polskimooc.pl'
 
 # Days before the expired date that we warn the user
 ENTITLEMENT_EXPIRED_ALERT_PERIOD = 90
@@ -2569,7 +2569,7 @@ FINANCIAL_REPORTS = {
 #### PASSWORD POLICY SETTINGS #####
 PASSWORD_MIN_LENGTH = 8
 PASSWORD_MAX_LENGTH = None
-PASSWORD_COMPLEXITY = {"UPPER": 1, "LOWER": 1, "DIGITS": 1}
+PASSWORD_COMPLEXITY = {"UPPER": 1, "LOWER": 1, "DIGITS": 1, "NON ASCII": 1}
 PASSWORD_DICTIONARY_EDIT_DISTANCE_THRESHOLD = None
 PASSWORD_DICTIONARY = []
 
