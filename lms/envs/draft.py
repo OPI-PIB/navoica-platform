@@ -88,3 +88,10 @@ EMAIL_HOST_PASSWORD = 'SG.0M77nEwjQNCIzwn75JHJTQ.Uc-gkaplC8La9CW1EZaWohJS3X6TcmZ
 DEFAULT_FROM_EMAIL = 'registration@'+LMS_BASE
 DEFAULT_FEEDBACK_EMAIL = 'feedback@'+LMS_BASE
 SERVER_EMAIL = 'devops@'+LMS_BASE
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': 'lms.envs.draft.should_show_debug_toolbar',
+}
+
+def should_show_debug_toolbar(request):
+    return False
