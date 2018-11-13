@@ -64,6 +64,9 @@ HOMEPAGE_COURSE_MAX = 4
 # for other warnings.
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+
+LMS_BASE = os.environ.get('LMS_BASE', 'polskimooc.pl')
+
 ###################################### CELERY  ################################
 
 # Don't use a connection pool, since connections are dropped by ELB.
