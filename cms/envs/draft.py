@@ -42,3 +42,5 @@ EMAIL_HOST_PASSWORD = 'SG.0M77nEwjQNCIzwn75JHJTQ.Uc-gkaplC8La9CW1EZaWohJS3X6TcmZ
 DEFAULT_FROM_EMAIL = 'registration@polskimooc-test.opi.org.pl'
 DEFAULT_FEEDBACK_EMAIL = 'feedback@polskimooc-test.opi.org.pl'
 SERVER_EMAIL = 'devops@polskimooc-test.opi.org.pl'
+
+WEBPACK_CONFIG_PATH = 'webpack.prod.config.js'
