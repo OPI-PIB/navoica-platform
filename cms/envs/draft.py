@@ -44,3 +44,10 @@ DEFAULT_FEEDBACK_EMAIL = 'feedback@polskimooc-test.opi.org.pl'
 SERVER_EMAIL = 'devops@polskimooc-test.opi.org.pl'
 
 WEBPACK_CONFIG_PATH = 'webpack.prod.config.js'
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': 'lms.envs.draft.should_show_debug_toolbar',
+}
+
+def should_show_debug_toolbar(request):
+    return False
