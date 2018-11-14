@@ -93,5 +93,7 @@ DEBUG_TOOLBAR_CONFIG = {
     'SHOW_TOOLBAR_CALLBACK': 'lms.envs.draft.should_show_debug_toolbar',
 }
 
+WEBPACK_CONFIG_PATH = 'webpack.prod.config.js'
+
 def should_show_debug_toolbar(request):
     return False
