@@ -18,6 +18,7 @@ FEATURES.update({
     'ENABLE_COURSEWARE_INDEX': True,
     'ENABLE_LIBRARY_INDEX': True,
     'ENABLE_DISCUSSION_SERVICE': True,
+    "PREVIEW_LMS_BASE": "preview.polskimooc-test.opi.org.pl", 
 })
 
 CREDENTIALS_SERVICE_USERNAME = 'credentials_worker'
