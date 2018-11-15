@@ -11,7 +11,7 @@ LOGGING['loggers']['tracking']['handlers'] = ['console']
 
 PLATFORM_NAME = 'Studio Polski MOOC Draft'
 LMS_BASE = 'polskimooc-test.opi.org.pl'
-CMS_BASE = 'studio.polskimooc-test.opi.org.pl'
+CMS_BASE = 'studio-polskimooc-test.opi.org.pl'
 LMS_ROOT_URL = 'http://{}'.format(LMS_BASE)
 
 FEATURES.update({
