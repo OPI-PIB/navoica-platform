@@ -193,7 +193,7 @@ ALLOWED_HOSTS = [
     ENV_TOKENS.get('LMS_BASE'),
     FEATURES['PREVIEW_LMS_BASE'],
 ]
-
+FEATURES['ENABLE_INSTRUCTOR_EMAIL'] = True;
 # allow for environments to specify what cookie name our login subsystem should use
 # this is to fix a bug regarding simultaneous logins between edx.org and edge.edx.org which can
 # happen with some browsers (e.g. Firefox)

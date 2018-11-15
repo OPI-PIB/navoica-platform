@@ -598,3 +598,5 @@ derive_settings(__name__)
 
 
 CMS_BASE = ENV_TOKENS.get('CMS_BASE', 'studio.polskimooc.pl')
+
+FEATURES['ENABLE_INSTRUCTOR_EMAIL'] = True;
