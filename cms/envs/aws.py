@@ -25,6 +25,7 @@ from xmodule.modulestore.modulestore_settings import convert_module_store_settin
 # SERVICE_VARIANT specifies name of the variant used, which decides what JSON
 # configuration files are read during startup.
 SERVICE_VARIANT = os.environ.get('SERVICE_VARIANT', None)
+FEATURES['ENABLE_OAUTH2_PROVIDER'] = True
 
 # CONFIG_ROOT specifies the directory where the JSON configuration
 # files are expected to be found. If not specified, use the project
