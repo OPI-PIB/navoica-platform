@@ -165,7 +165,7 @@ from third_party_auth import provider, pipeline
       <h1><strong>${_("Please log in")}</strong><br>${_("to access your account and courses")}</h1>
       <div class="row">
         <div class="col-md-8">
-	      <form role="form" id="login-form" method="post" data-remote="true" action="/login_ajax" novalidate class="bg-light bg-brand px-5 pt-4 rounded" autocomplete="something-new">
+	      <form role="form" id="login-form" method="post" data-remote="true" action="/login_ajax" novalidate class="bg-light bg-brand px-5 pt-4 rounded" autocomplete="disabled">
 
 		  <!-- status messages -->
 		  <div role="alert" class="status message">
@@ -201,7 +201,7 @@ from third_party_auth import provider, pipeline
 			
 			<div class="form-group form-group-required field required text">
               <label for="email">E-mail</label>
-              <input class="form-control" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" required aria-required="true" aria-described-by="email-tip" autocomplete="something-new"/>
+              <input class="form-control" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" required aria-required="true" aria-described-by="email-tip" autocomplete="disabled"/>
               <small id="emailHelp" class="tip tip-input form-text text-muted">${_("This is the e-mail address you used to register with {platform}").format(platform=platform_name)}</small>
             </div>
             <div class="form-group form-group-required field required password">
