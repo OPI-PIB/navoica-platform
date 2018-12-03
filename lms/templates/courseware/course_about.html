@@ -138,8 +138,10 @@ from six import string_types
           <div class="col-lg-5 pt-4 pt-lg-0">
             <h1>${course.display_name_with_default_escaped}</h1>
             <p class="mt-0">${get_course_about_section(request, course, "short_description")}</p>
-            <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
-            <img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
+            % if course.organizer:
+				<% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+				<img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
+			% endif
           </div>
           <div class="col-lg-4 text-lg-center pt-4 pt-lg-0">
               %if user.is_authenticated() and registered:
@@ -206,6 +208,7 @@ from six import string_types
 
   </%block>
   <%block name="course_about_details">
+  % if !course.organizer or !get_course_about_section(request, course, "overview") or !course.difficulty or !course.course_category or !course.timetable or !get_course_about_section(request, course, "effort"):
 	<section class="course-content">
         <div class="row">
 		  <div class="col-lg-9">
@@ -219,6 +222,8 @@ from six import string_types
           <div class="col-lg-3">
             <h2>Informacje podstawowe</h2>
             <ul class="course-details">
+			
+			% if course.difficulty:
 			  <li>
                 <div class="course-details-icon ${course.difficulty}">
                   <i class="icon-level"></i>
@@ -231,8 +236,9 @@ from six import string_types
                   <strong>Poziom trudności kursu:</strong> ${course_difficulty}
                 </div>
               </li>
+            % endif
 
-
+			% if course.course_category:
               <li>
                 <div class="course-details-icon">
                   <i class="icon-briefcase"></i>
@@ -245,7 +251,10 @@ from six import string_types
                   <strong>Kategoria tematyczna:</strong> ${course_c}
                 </div>
               </li>
-
+            % endif
+            
+            
+			% if course.timetable:
               <li>
                 <div class="course-details-icon">
                   <i class="icon-time"></i>
@@ -254,6 +263,7 @@ from six import string_types
                   <strong>Czas trwania kursu:</strong> ${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}
                 </div>
               </li>
+            % endif
 
               % if not course.start_date_is_still_default:
               <%
@@ -351,7 +361,7 @@ from six import string_types
               </li>
             % endif
 
-            
+            if get_course_about_section(request, course, "effort"):
               <li>
                 <div class="course-details-icon">
                   <i class="icon-time"></i>
@@ -365,6 +375,7 @@ from six import string_types
                   <strong>Tygodniowy wysiłek godzinowy:</strong> ${ungettext("{effort} hour", "{effort} hours", txt).format(effort=course_effort) | h}
                 </div>
               </li>
+            % endif
               
 		     % if course.organizer:
               <li>
@@ -403,6 +414,7 @@ from six import string_types
 
         </div>
       </section>
+    % endif
 
 
 
