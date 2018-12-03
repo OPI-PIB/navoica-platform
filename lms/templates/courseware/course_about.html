@@ -208,7 +208,7 @@ from six import string_types
 
   </%block>
   <%block name="course_about_details">
-  % if !course.organizer or !get_course_about_section(request, course, "overview") or !course.difficulty or !course.course_category or !course.timetable or !get_course_about_section(request, course, "effort"):
+  % if course.organizer and get_course_about_section(request, course, "overview") and course.difficulty and course.course_category and course.timetable and get_course_about_section(request, course, "effort"):
 	<section class="course-content">
         <div class="row">
 		  <div class="col-lg-9">
@@ -414,6 +414,8 @@ from six import string_types
 
         </div>
       </section>
+    % else:
+		<strong style="color:red">Uzupełnij wszystkie pola w zakładce Szczegóły i harmonogram!</strong>
     % endif
 
 
