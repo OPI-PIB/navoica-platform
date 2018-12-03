@@ -208,7 +208,7 @@ from six import string_types
 
   </%block>
   <%block name="course_about_details">
-  % if course.organizer and get_course_about_section(request, course, "overview") and course.difficulty and course.course_category and course.timetable and get_course_about_section(request, course, "effort"):
+  % if (course.organizer and get_course_about_section(request, course, "overview") and course.difficulty and course.course_category and course.timetable and get_course_about_section(request, course, "effort")):
 	<section class="course-content">
         <div class="row">
 		  <div class="col-lg-9">
@@ -265,7 +265,7 @@ from six import string_types
               </li>
             % endif
 
-              % if not course.start_date_is_still_default:
+            % if not course.start_date_is_still_default:
               <%
                   course_start_date = course.advertised_start or course.start
               %>
@@ -291,7 +291,7 @@ from six import string_types
 
           % endif
 
-          % if course.end:
+            % if course.end:
                 <%
                     course_end_date = course.end
                 %>
@@ -315,7 +315,7 @@ from six import string_types
             % endif
 
 
-              % if course.enrollment_start:
+            % if course.enrollment_start:
                 <%
                     course_end_date = course.enrollment_start
                 %>
@@ -389,7 +389,7 @@ from six import string_types
               </li>
              % endif
             </ul>
-          %if user.is_authenticated() and registered:
+          % if user.is_authenticated() and registered:
           <!--
             <h2>Może Cię zainteresować</h2>
             <a href="#" class="course-card course-card-simple card-color--new">
