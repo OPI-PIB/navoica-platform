@@ -159,11 +159,7 @@ class CapaFields(object):
         help=_("Determines whether a 'Reset' button is shown so the user may reset their answer. "
                "A default value can be set in Advanced Settings."),
         scope=Scope.settings,
-        default=default_reset_button,
-        values=(
-            {"display_name": _("Yes"), "value": True},
-            {"display_name": _("No"), "value": False}
-        )
+        default=default_reset_button
     )
     rerandomize = Randomization(
         display_name=_("Randomization"),
