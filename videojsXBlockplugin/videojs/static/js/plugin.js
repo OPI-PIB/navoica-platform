@@ -136,7 +136,7 @@ var QualitySelector = (function () {
       buttonElement.onclick = function (event) {
         return _this2.onToggleDropdown(event);
       };
-      buttonElement.innerText = options.text || 'Rozmiar;';
+      buttonElement.innerText = options.text || 'Rozmiar';
 
       var ulElement = document.createElement('ul');
 
