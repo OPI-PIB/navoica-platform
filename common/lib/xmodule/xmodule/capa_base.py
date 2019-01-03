@@ -30,7 +30,7 @@ from xblock.scorable import ScorableXBlockMixin, Score
 from xmodule.capa_base_constants import RANDOMIZATION, SHOWANSWER
 from xmodule.exceptions import NotFoundError
 from xmodule.graders import ShowCorrectness
-from .fields import Date, Timedelta, ScoreField
+from .fields import Date, Timedelta, ScoreField, Boolean2
 from .progress import Progress
 
 from openedx.core.djangolib.markup import HTML, Text
@@ -154,12 +154,14 @@ class CapaFields(object):
     )
     reset_key = "DEFAULT_SHOW_RESET_BUTTON"
     default_reset_button = getattr(settings, reset_key) if hasattr(settings, reset_key) else False
-    show_reset_button = Boolean(
-        display_name=_("Show Reset Button"),
+    show_reset_button = Boolean2(
         help=_("Determines whether a 'Reset' button is shown so the user may reset their answer. "
                "A default value can be set in Advanced Settings."),
+        default=default_reset_button,
         scope=Scope.settings,
-        default=default_reset_button
+        display_name=_("Show Reset Button"),
+        values=({'display_name': "Tak", "value": True},
+                {'display_name': "Nie", "value": False})
     )
     rerandomize = Randomization(
         display_name=_("Randomization"),

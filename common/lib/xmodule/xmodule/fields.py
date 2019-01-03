@@ -6,7 +6,7 @@ import time
 import dateutil.parser
 from pytz import UTC
 from six import text_type
-from xblock.fields import JSONField
+from xblock.fields import JSONField, Scope
 from xblock.scorable import Score
 
 log = logging.getLogger(__name__)
@@ -299,3 +299,21 @@ class ScoreField(JSONField):
         return Score(raw_earned, raw_possible)
 
     enforce_type = from_json
+
+class Boolean2(JSONField):
+    MUTABLE = False
+
+    # We're OK redefining built-in `help`
+    def __init__(self, help=None, default=None, scope=Scope.content, display_name=None, values=None, **kwargs):  # pylint: disable=redefined-builtin
+        super(Boolean2, self).__init__(help, default, scope, display_name, values, **kwargs)
+
+    def from_json(self, value):
+        if isinstance(value, six.binary_type):
+            value = value.decode('ascii', errors='replace')
+        if isinstance(value, six.text_type):
+            return value.lower() == 'true'
+        else:
+            return bool(value)
+
+    enforce_type = from_json
+
