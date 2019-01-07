@@ -136,6 +136,7 @@
                     url: url,
                     success: function(data) {
                         if (data.tasks.length) {
+							$('.task-history-email-table').toggle();
                             return createTaskListTable(sendemail.$table_task_history_email, data.tasks);
                         } else {
                             sendemail.$history_request_response_error.text(
@@ -161,6 +162,7 @@
                     url: url,
                     success: function(data) {
                         if (data.emails.length) {
+							$('.content-history-email-table').toggle();
                             createEmailContentTable(sendemail.$table_email_content_history,
                                 sendemail.$email_content_table_inner, data.emails
                             );
