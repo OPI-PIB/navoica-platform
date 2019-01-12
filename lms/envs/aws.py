@@ -326,6 +326,10 @@ USE_I18N = ENV_TOKENS.get('USE_I18N', USE_I18N)
 for app in ENV_TOKENS.get('ADDL_INSTALLED_APPS', []):
     INSTALLED_APPS.append(app)
 
+INSTALLED_APPS.append(
+    "figures"
+)
+
 WIKI_ENABLED = ENV_TOKENS.get('WIKI_ENABLED', WIKI_ENABLED)
 
 local_loglevel = ENV_TOKENS.get('LOCAL_LOGLEVEL', 'INFO')
@@ -1114,3 +1118,10 @@ INSTALLED_APPS += (
 RAVEN_CONFIG = {
     'dsn': 'https://e3e1ce00e050403687828d5981c2fa72:8e8d9d55e69d4320a8f38808210a0e13@sentry.io/1283941',
 }
+
+if 'figures' in INSTALLED_APPS:
+    import figures
+    figures.update_settings(
+        WEBPACK_LOADER,
+        CELERYBEAT_SCHEDULE,
+        ENV_TOKENS.get('FIGURES', {}))
