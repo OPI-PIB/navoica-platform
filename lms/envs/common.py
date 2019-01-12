@@ -73,7 +73,7 @@ DISCUSSION_SETTINGS = {
     'MAX_COMMENT_DEPTH': 2,
 }
 
-LMS_ROOT_URL = "http://localhost:8000"
+LMS_ROOT_URL = "http://localhost:18000"
 LMS_INTERNAL_ROOT_URL = LMS_ROOT_URL
 LMS_ENROLLMENT_API_PATH = "/api/enrollment/v1/"
 
