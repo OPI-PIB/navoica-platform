@@ -1067,10 +1067,4 @@ if settings.BRANCH_IO_KEY:
         url(r'^text-me-the-app', student_views.text_me_the_app, name='text_me_the_app'),
     ]
 
-if 'figures' in settings.INSTALLED_APPS:
-        urlpatterns += (
-                url(r'^figures/',
-                    include('figures.urls', namespace='figures')),
-        )
-
 urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.LMS))
