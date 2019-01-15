@@ -13710,8 +13710,6 @@ textarea.form-control {
 
 .container > div {
   box-shadow: none !important;
-  border: none !important; 
-  display: block;
 }
 
 body.view-in-course .container {
@@ -13782,27 +13780,4 @@ input[type="submit"]:hover:not(:disabled) {
 button.facet-option.discovery-button.selected {
     background-color: #B43F37;
     color: white;
-}
-
-span.provider {
-    margin-right: 5px;
-}
-
-span.course-name {
-    font-weight: bolder;
-    font-size: large;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 100%;
-}
-
-.container > .course-header {
-    width:200px;
-}
-
-form.form-inline.mx-auto.d-none.d-xl-block {
-    width: 100%;
-    padding-left: 20px;
 }
