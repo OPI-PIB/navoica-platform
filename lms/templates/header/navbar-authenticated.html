@@ -47,12 +47,6 @@ self.real_user = getattr(user, 'real_user', user)
     <a class="btn btn-outline-primary" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
 </li>
 
-<li class="mobile-nav-item hidden-mobile nav-item">
-    <a class="nav-link" href="${reverse('courses')}">
-        Katalog
-    </a>
-</li>
-
 % if show_explore_courses:
 <li class="mobile-nav-item hidden-mobile nav-item">
     <a class="nav-link" href="${marketing_link('COURSES')}">${_('Discover New')}</a>
