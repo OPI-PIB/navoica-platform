@@ -59,7 +59,7 @@ The recommended alternative is as follows::
 
     .my-element {
       font-family: $font-family-sans-serif;
-      color: theme-color("primary");
+      color: $blue;
     }
 
 If you do find the need for a custom color or font that isn't provided by

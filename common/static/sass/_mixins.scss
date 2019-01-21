@@ -282,10 +282,10 @@
 
   text-align: center;
   border-radius: ($baseline/4);
-  border: 1px solid theme-color("primary");
+  border: 1px solid $blue;
   padding: 1px ($baseline/2) 2px ($baseline/2);
   background-color: theme-color("inverse");
-  color: theme-color("primary");
+  color: $blue;
 
   &:hover,
   &:focus {
@@ -331,7 +331,7 @@
 
   &:hover,
   &:focus {
-    background-color: theme-color("primary");
+    background-color: $blue;
     color: theme-color("inverse");
   }
 }

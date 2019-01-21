@@ -35,7 +35,7 @@
 
   .ui-state-default {
     border-color: $mediumGrey;
-    color: $blue;
+    color: #b43f37;
 
     @include transition(none);
 
@@ -47,8 +47,8 @@
   }
 
   .ui-state-highlight {
-    background: $blue;
-    border-color: $blue;
+    background: #b43f37;
+    border-color: #b43f37;
     color: $white;
   }
 
@@ -187,7 +187,7 @@
 
     a.ui-state-focus {
       border: none;
-      background-color: $blue;
+      background-color: #b43f37;
       color: $white;
     }
   }

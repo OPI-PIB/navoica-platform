@@ -29,8 +29,8 @@
       letter-spacing: 0;
       white-space: nowrap;
       background: theme-color("inverse");
-      border-color: theme-color("primary");
-      color: theme-color("primary");
+      border-color: $blue;
+      color: $blue;
       text-shadow: none;
       font-size: $font-size-base;
       padding: 0 $baseline/4;
@@ -39,8 +39,8 @@
       transition: all 0.4s ease-out;
 
       &:hover {
-        background: theme-color("primary");
-        border-color: theme-color("primary");
+        background: $blue;
+        border-color: $blue;
         color: theme-color("inverse");
       }
 
@@ -86,7 +86,7 @@
         font-size: $font-size-base;
 
         &:hover {
-          background: theme-color("primary");
+          background: $blue;
           color: theme-color("inverse");
         }
       }

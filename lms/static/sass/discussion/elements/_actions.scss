@@ -168,13 +168,13 @@
     // specific button styles
     &.action-follow {
       .action-label {
-        color: theme-color("primary");
+        color: $blue;
       }
 
       &.is-checked, &:hover, &:focus {
         .action-icon {
           background-color: $forum-color-following;
-          border: 1px solid theme-color("primary");
+          border: 1px solid $blue;
           color: $white;
         }
       }
@@ -209,18 +209,18 @@
     &.action-endorse {
       &.is-checked, &:hover, &:focus {
         .action-icon {
-          background-color: theme-color("primary");
-          border: 1px solid theme-color("primary");
+          background-color: $blue;
+          border: 1px solid $blue;
           color: $white;
         }
       }
 
       &:hover, &:focus {
-        border-color: theme-color("primary");
+        border-color: $blue;
         background-color: $forum-color-background;
 
         .action-label {
-          color: theme-color("primary");
+          color: $blue;
         }
       }
     }

@@ -296,7 +296,7 @@
       margin: 0 10px;
 
       &.active {
-        border-bottom: 4px solid theme-color("primary");
+        border-bottom: 4px solid $blue;
       }
 
       &.active,
@@ -307,7 +307,7 @@
       }
 
       a {
-        color: theme-color("primary");
+        color: $blue;
         cursor: pointer;
         display: inline-block;
       }

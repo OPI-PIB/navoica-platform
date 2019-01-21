@@ -145,8 +145,8 @@ $uxpl-gray-background: rgb(217, 217, 217) !default;
 $error-color: rgb(203, 7, 18) !default;
 $warning-color: rgb(255, 192, 31) !default;
 $warning-color-accent: rgb(255, 252, 221) !default;
-$general-color: theme-color("primary") !default;
-$general-color-accent: theme-color("primary") !default;
+$general-color: $blue !default;
+$general-color-accent: $blue !default;
 
 // CAPA correctness color to be consistent with Alert styles above
 $correct: theme-color("success") !default;
@@ -164,21 +164,21 @@ $btn-disabled-color:                        #6b6969 !default;
 // base button
 $btn-default-border-color:                transparent !default;
 $btn-default-background:                  transparent !default;
-$btn-default-color:                       theme-color("primary") !default;
-$btn-default-focus-border-color:          theme-color("primary") !default;
-$btn-default-focus-color:                 theme-color("primary") !default;
-$btn-default-active-border-color:         theme-color("primary") !default;
-$btn-default-active-color:                theme-color("primary") !default;
+$btn-default-color:                       $blue !default;
+$btn-default-focus-border-color:          $blue !default;
+$btn-default-focus-color:                 $blue !default;
+$btn-default-active-border-color:         $blue !default;
+$btn-default-active-color:                $blue !default;
 
 // brand button
-$btn-brand-border-color:                  theme-color("primary") !default;
-$btn-brand-background:                    theme-color("primary") !default;
+$btn-brand-border-color:                  $blue !default;
+$btn-brand-background:                    $blue !default;
 $btn-brand-color:                         #fcfcfc !default;
 $btn-brand-focus-color:                   $btn-brand-color !default;
 $btn-brand-focus-border-color:            $uxpl-blue-hover-active !default;
 $btn-brand-focus-background:              $uxpl-blue-hover-active !default;
-$btn-brand-active-border-color:           theme-color("primary") !default;
-$btn-brand-active-background:             theme-color("primary") !default;
+$btn-brand-active-border-color:           $blue !default;
+$btn-brand-active-background:             $blue !default;
 $btn-brand-disabled-background:           #f2f3f3 !default;
 $btn-brand-disabled-color:                #676666 !default;
 

@@ -1,6 +1,6 @@
 // Local overrides for bootstrap navigation bar theming
 .navigation-container {
-  border-bottom: 1px solid theme-color("primary");
+  border-bottom: 1px solid $blue;
   text-decoration: none;
   background-color: $body-bg;
 
@@ -45,7 +45,7 @@
       list-style: none;
 
       .nav-link {
-        color: theme-color("primary");
+        color: $blue;
       }
 
       .user-image-frame {
@@ -65,7 +65,7 @@
           margin: $baseline/4 $baseline/2;
 
           a {
-            color: theme-color("primary");
+            color: $blue;
             padding: 0;
             text-decoration: none;
 

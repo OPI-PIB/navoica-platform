@@ -102,7 +102,7 @@
         }
 
         &:hover {
-          background-color: $blue;
+          background-color: #b43f37;
           border-radius: 3px;
           color: $white;
         }
@@ -212,7 +212,7 @@
 
         .column-sort-link, .column-selected-link {
           cursor: pointer;
-          color: $blue;
+          color: #b43f37;
         }
 
         .current-sort {
@@ -310,7 +310,7 @@
             color: $gray-d1;
 
             &:hover {
-              color: $blue;
+              color: #b43f37;
             }
           }
 
@@ -432,7 +432,7 @@
         width: 30px;
 
         &:hover {
-          background-color: $blue;
+          background-color: #b43f37;
         }
       }
 
@@ -446,7 +446,7 @@
       }
 
       &.action-lock .lock-checkbox:hover ~ .action-button {
-        background-color: $blue;
+        background-color: #b43f37;
         color: $gray-l6;
       }
 
@@ -557,7 +557,7 @@
       &:hover {
         background: none;
         box-shadow: none;
-        color: $blue;
+        color: #b43f37;
       }
     }
 

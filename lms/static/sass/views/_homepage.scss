@@ -67,9 +67,9 @@ $learn-more-horizontal-position: calc(50% - 100px); // calculate the left positi
           padding: 0 $baseline;
           width: ($baseline*10);
           height: ($baseline*2.5);
-          border-color: theme-color("primary");
+          border-color: $blue;
           border-radius: 3px;
-          background: theme-color("primary");
+          background: $blue;
           color: $white;
           line-height: ($baseline*2.5);
           text-align: center;

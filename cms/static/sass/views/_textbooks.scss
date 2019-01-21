@@ -49,10 +49,10 @@
           @extend %ui-fake-link;
 
           &:hover {
-            color: theme-color("primary");
+            color: $blue;
 
             .ui-toggle-expansion {
-              color: theme-color("primary");
+              color: $blue;
             }
           }
         }
@@ -229,7 +229,7 @@
               margin: 0 0 ($baseline/4) 0;
 
               &.is-focused {
-                color: theme-color("primary");
+                color: $blue;
               }
             }
 
@@ -360,7 +360,7 @@
               color: $blue-l3;
 
               &:hover {
-                color: $blue;
+                color: #b43f37;
               }
             }
           }

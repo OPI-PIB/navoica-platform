@@ -82,7 +82,7 @@
       }
 
       &:hover {
-        background: theme-color("primary");
+        background: $blue;
         color: theme-color("inverse");
       }
     }
@@ -188,11 +188,11 @@
 
   // case: sock content is shown
   &.is-shown {
-    border-color: theme-color("primary");
+    border-color: $blue;
 
     .list-cta .cta-show-sock {
-      background: theme-color("primary");
-      border-color: theme-color("primary");
+      background: $blue;
+      border-color: $blue;
       color: $white;
     }
   }

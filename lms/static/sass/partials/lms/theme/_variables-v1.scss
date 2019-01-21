@@ -483,7 +483,7 @@ $courseware-footer-margin: 0 !default;
 $courseware-border-bottom-color: rgb(68, 162, 222) !default;
 $courseware-button-border-color: rgb(230, 230, 230) !default;
 $courseware-hover-color: rgb(51, 52, 53) !default;
-$courseware-navigation-color: theme-color("primary") !default;
+$courseware-navigation-color: $blue !default;
 
 // homepage, onboarding, and course discovery
 $homepage__header--gradient__color--alpha: lighten($gray, 15%) !default;
