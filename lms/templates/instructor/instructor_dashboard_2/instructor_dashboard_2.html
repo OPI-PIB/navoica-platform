@@ -99,9 +99,11 @@ from openedx.core.djangolib.markup import HTML
 <script language="JavaScript" type="text/javascript"></script>
 
 <script type="text/javascript">
-	$('.dropdown').click(function() {
-		$(this).toggleClass('show');
-		$('.dropdown-menu').toggleClass('show');
+	$(document).ready(function(){
+		$('.dropdown-toggle').on('click', function(e) {
+			$(this).parent().toggleClass('show');
+			$('.dropdown-menu').toggleClass('show');
+		});
 	});
 </script>
 

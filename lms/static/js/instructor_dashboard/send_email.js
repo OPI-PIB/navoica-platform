@@ -135,8 +135,8 @@
                     dataType: 'json',
                     url: url,
                     success: function(data) {
+						$('.task-history-email-table').toggle();
                         if (data.tasks.length) {
-							$('.task-history-email-table').toggle();
                             return createTaskListTable(sendemail.$table_task_history_email, data.tasks);
                         } else {
                             sendemail.$history_request_response_error.text(
@@ -161,8 +161,9 @@
                     dataType: 'json',
                     url: url,
                     success: function(data) {
+						$('.content-history-email-table').toggle();
+						$('.content-history-table-inner').toggle();
                         if (data.emails.length) {
-							$('.content-history-email-table').toggle();
                             createEmailContentTable(sendemail.$table_email_content_history,
                                 sendemail.$email_content_table_inner, data.emails
                             );
