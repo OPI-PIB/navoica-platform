@@ -176,14 +176,15 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                               </a>
                             % endif
                     % endif
+                     % if false:
                         % if show_email_settings:
                           % if not is_course_blocked:
-                            <a href="#email-settings-modal" class="dropdown-item" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
+                            <a href="#email-settings-modal" class="dropdown-item action-email-settings" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
                           % else:
-                            <a class="dropdown-item" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
+                            <a class="dropdown-item action-email-settings" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
                           % endif
                         % endif
-
+                      % endif
                   </div>
                 </li>
                 <li class="ml-3"><a class="btn btn-primary" href="${course_target}">Wyświetl kurs</a></li>
