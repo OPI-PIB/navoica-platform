@@ -42,15 +42,6 @@ HeaderFactory();
     <div class="container">
 		<a style="width: 100%;" class="navbar-brand" href="/">Polski MOOC</a>
 
-	 % if false:
-    	   <div class="course-header">
-     		<span class="provider">${course.display_org_with_default}:</span> 
-		<span class="course-number">${course.display_number_with_default}</span>
-     		<span class="course-name" title="${course.display_name_with_default}">${course.display_name_with_default}</span>
-		
-   	   </div>
-  	% endif
-
          % if request.path != '/':
             <form style="width: 900px;" method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
                 <div class="input-group w-100">
