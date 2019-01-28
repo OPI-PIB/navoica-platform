@@ -1223,7 +1223,7 @@ MIDDLEWARE_CLASSES = [
     'openedx.core.djangoapps.session_inactivity_timeout.middleware.SessionInactivityTimeout',
 
     # use Django built in clickjacking protection
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     # to redirected unenrolled students to the course info page
     'courseware.middleware.CacheCourseIdMiddleware',
