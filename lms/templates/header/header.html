@@ -40,7 +40,20 @@ HeaderFactory();
     )}
     % endif
     <div class="container">
-		<a style="width: 100%;" class="navbar-brand" href="/">Polski MOOC</a>
+		<a style="margin-right: 10px;margin-bottom: 10px;" href="/">
+            <img style="max-width: fit-content" height="40" src="/static/images/polskimooc_logo.svg">
+        </a>
+
+        % if course:
+
+         <span style="white-space: nowrap" class="w-100">
+     		<span class="provider">${course.display_org_with_default}:</span>
+            <span class="course-number">${course.display_number_with_default}</span>
+             <span class="course-name" title="${course.display_name_with_default}"><strong>${course.display_name_with_default}</strong></span>
+           </span>
+
+        % else:
+
 
          % if request.path != '/':
             <form style="width: 900px;" method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
@@ -54,6 +67,8 @@ HeaderFactory();
           % else:
 			<div class="w-100"></div>
           % endif
+
+        % endif
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
