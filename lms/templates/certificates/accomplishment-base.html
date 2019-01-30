@@ -23,7 +23,7 @@ course_mode_class = course_mode if course_mode else ''
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kristi" rel="stylesheet">
 
-    <style type="text/css">
+     <style type="text/css">
         html {
             margin: 0;
             padding: 0;
@@ -56,7 +56,7 @@ course_mode_class = course_mode if course_mode else ''
 
         #certificate #certificate-content,
         #certificate footer,
-        #certificate header {
+        {
             display: flex;
             flex-direction: column;
         }
@@ -80,7 +80,7 @@ course_mode_class = course_mode if course_mode else ''
             color: #fff;
             display: flex;
             flex: 0 0 11%;
-            flex: 0 0 93px;
+            flex: 0 0 90px;
         }
 
         #certificate #certificate-content {
@@ -101,7 +101,7 @@ course_mode_class = course_mode if course_mode else ''
             text-align: center;
         }
 
-        #certificate h2 {
+        #certificate h2, .fancy span {
             font-family: Lato, Arial, sans-serif;
             font-size: 40px;
             font-weight: 900;
@@ -110,6 +110,8 @@ course_mode_class = course_mode if course_mode else ''
             order: -1;
             text-align: center;
             text-transform: uppercase;
+
+
         }
 
         #certificate .label {
@@ -211,7 +213,9 @@ course_mode_class = course_mode if course_mode else ''
 
         #certificate footer #link {
             align-items: center;
-            background: #e51639;
+background: #e51639; /* Old browsers */
+background: linear-gradient(135deg, #ffffff 0%,#ffffff 15%,#e51639 15%,#e51639 15%,#e51639 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e51639',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
         }
 
         #certificate footer p {
@@ -228,11 +232,49 @@ course_mode_class = course_mode if course_mode else ''
             text-decoration: none;
         }
 
-        @media print{
-            #container,body{
-                margin: 0 !important;
-            }
+        header .left, header .right{
+            width: 50%;
+            float: left;
+            padding-top: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
+        header .left{
+            text-align: right;
+            background: linear-gradient(135deg, #e51639 0%,#e51639 60%,#ffffff 60%,#ffffff 60%,#ffffff 100%);
+        }
+
+        header .right{
+                background: linear-gradient(45deg, #ffffff 0%,#ffffff 40%,#e51639 40%,#e51639 40%,#e51639 100%);
+        }
+
+        .fancy {
+  line-height: 0.5;
+  text-align: center;
+      margin-top: 50px;
+    margin-bottom: 25px;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;
+}
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 0px;
+  border-bottom: 1px solid black;
+  top: 20px;
+  width: 80%;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
 
     </style>
 
