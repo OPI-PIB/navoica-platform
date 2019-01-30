@@ -47,7 +47,13 @@ HeaderFactory();
         % if course:
 
          <span style="white-space: nowrap" class="w-100">
-             <span class="provider"><strong>${course.display_org_with_default}</strong></span><br>
+              % if course.organizer:
+                          <span class="provider"><strong>${settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]}</strong></span><br>
+
+             % else:
+                          <span class="provider"><strong>${course.display_org_with_default}</strong></span><br>
+
+              % endif
              <span class="course-name" title="${course.display_name_with_default}">${course.display_name_with_default}</span>
            </span>
 
