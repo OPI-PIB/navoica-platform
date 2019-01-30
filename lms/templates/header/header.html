@@ -40,16 +40,15 @@ HeaderFactory();
     )}
     % endif
     <div class="container">
-		<a style="margin-right: 10px;margin-bottom: 10px;" href="/">
+		<a style="margin-right: 10px;margin-bottom: 10px;margin-top: 10px;" href="/">
             <img style="max-width: fit-content" height="40" src="/static/images/polskimooc_logo.svg">
         </a>
 
         % if course:
 
          <span style="white-space: nowrap" class="w-100">
-     		<span class="provider">${course.display_org_with_default}:</span>
-            <span class="course-number">${course.display_number_with_default}</span>
-             <span class="course-name" title="${course.display_name_with_default}"><strong>${course.display_name_with_default}</strong></span>
+             <span class="provider"><strong>${course.display_org_with_default}</strong></span><br>
+             <span class="course-name" title="${course.display_name_with_default}">${course.display_name_with_default}</span>
            </span>
 
         % else:
