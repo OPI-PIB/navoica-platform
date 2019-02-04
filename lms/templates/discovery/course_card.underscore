@@ -14,8 +14,7 @@
 	  <footer class="course-card-footer">
 		<ul>
 		  <li><time class="course-card-start"><i class="icon-calendar"></i> <%- interpolate(gettext("Starts: %(start_date)s"),{ start_date: start }, true) %></time></li>
-		  <li><span class="course-card-more">Czytaj więcej</span></li>
-		</ul>
+		 </ul>
 	  </footer>
 	</a>
   
