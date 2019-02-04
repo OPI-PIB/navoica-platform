@@ -40,11 +40,11 @@ HeaderFactory();
     )}
     % endif
     <div class="container">
-		<a style="margin-right: 10px;margin-bottom: 10px;margin-top: 10px;" href="/">
+		<a style="margin-right: 30px;margin-bottom: 10px;margin-top: 10px;" href="/">
             <img style="max-width: fit-content" height="40" src="/static/images/polskimooc_logo.svg">
         </a>
 
-        % if course:
+        % if course && user.is_authenticated():
 
          <span style="white-space: nowrap" class="w-100">
               % if course.organizer:
