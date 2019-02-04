@@ -44,7 +44,7 @@ HeaderFactory();
             <img style="max-width: fit-content" height="40" src="/static/images/polskimooc_logo.svg">
         </a>
 
-        % if course && user.is_authenticated():
+        % if course and user.is_authenticated():
 
          <span style="white-space: nowrap" class="w-100">
               % if course.organizer:
