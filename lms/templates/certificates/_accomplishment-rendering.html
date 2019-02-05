@@ -29,15 +29,15 @@ course_mode_class = course_mode if course_mode else ''
                         <p class="label">Prowadzący:</p>
                         <ul>
                         % for signatory in certificate_data.get('signatories', []):
+                            % if loop.index < 2:
                             <li>
                                 <div class="instructor">
-                                    <div class="instructor-signature">
-                                       ${signatory['name']}
-                                    </div>
+                                       <img style="max-width: 200px" class="signatory-signature" src="${signatory['signature_image_path']}">
                                     <p class="instructor-name">${signatory['name']}</p>
                                     <p class="instructor-position">${signatory['title']}</p>
                                 </div>
                             </li>
+                            % endif
                         % endfor
                         </ul>
                     </div>
@@ -47,7 +47,7 @@ course_mode_class = course_mode if course_mode else ''
             <footer>
                 <div id="note">
                     <p>
-                        Dokument poświadcza ukończenie kursu ${accomplishment_copy_course_name} na platformie Polski MOOC, którego organizatorem jest ${accomplishment_copy_course_org}
+                        Dokument poświadcza ukończenie kursu ${accomplishment_copy_course_name} na platformie Polski MOOC, którego organizatorem jest ${organizer}
                     </p>
                 </div>
                 <div id="link">

@@ -462,6 +462,10 @@ def _update_organization_context(context, course):
     context['organization_short_name'] = partner_short_name
     context['accomplishment_copy_course_org'] = partner_short_name
     context['organization_logo'] = organization_logo
+    if course.organizer:
+        context['organizer'] = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]
+    else:
+        context['organizer'] = partner_short_name
 
 
 def render_cert_by_uuid(request, certificate_uuid):
