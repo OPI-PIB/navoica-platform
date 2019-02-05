@@ -25,7 +25,7 @@
                   <span class="message-error"><%- error.title %></span>
                 <% } %>
             </div>
-            <div class="input-wrap field text add-signatory-organization <% if(error && error.organization) { print('error'); } %>">
+            <div style="display:none" class="input-wrap field text add-signatory-organization <% if(error && error.organization) { print('error'); } %>">
                 <label for="signatory-organization-<%- signatory_number %>"><%- gettext("Organization ") %></label>
                 <input id="signatory-organization-<%- signatory_number %>" class="collection-name-input input-text signatory-organization-input" name="signatory-organization" type="text" placeholder="<%- gettext("Organization of the signatory") %>" value="<%- organization %>"  aria-describedby="signatory-organization-<%- signatory_number %>-tip" />
                 <span id="signatory-organization-<%- signatory_number %>-tip" class="tip tip-stacked"><%- gettext("The organization that this signatory belongs to, as it should appear on certificates.") %></span>
