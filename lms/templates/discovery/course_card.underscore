@@ -1,7 +1,7 @@
 
 	<a href="/courses/<%- course %>/about" class="course-card card-color--new">
 	  <figure class="course-card-image">
-		<img src="<%- image_url %>" alt="<%- content.display_name %> <%- content.number %>" />
+		<img src="<%- image_url %>" alt="" />
 		
 		<span class="course-card-label">Nowy kurs</span>
 	  </figure>
