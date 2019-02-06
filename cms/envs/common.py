@@ -1356,7 +1356,8 @@ SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 ELASTIC_FIELD_MAPPINGS = {
     'course_category': {'type': 'string'},
     'organizer': {'type': 'string'},
-    'difficulty': {'type': 'string'}
+    'difficulty': {'type': 'string'},
+    'is_new': {'type': 'boolean'}
 }
 
 XBLOCK_SETTINGS = {

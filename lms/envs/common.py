@@ -3235,5 +3235,6 @@ plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_c
 ELASTIC_FIELD_MAPPINGS = {
     'course_category': {'type': 'string'},
     'organizer': {'type': 'string'},
-    'difficulty': {'type': 'string'}
+    'difficulty': {'type': 'string'},
+    'is_new': {'type': 'boolean'}
 }

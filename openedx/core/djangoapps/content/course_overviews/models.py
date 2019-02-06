@@ -109,6 +109,7 @@ class CourseOverview(TimeStampedModel):
     organizer = TextField(null=True)
     course_category = TextField(null=True)
     timetable = TextField(null=True)
+    is_new = BooleanField(default=True)
 
     @classmethod
     def _create_or_update(cls, course):
@@ -204,6 +205,9 @@ class CourseOverview(TimeStampedModel):
         course_overview.organizer = course.organizer
         course_overview.course_category = course.course_category
         course_overview.timetable = course.timetable
+        
+        
+        course_overview.is_new = course.is_newish
 
         if not CatalogIntegration.is_enabled():
             course_overview.language = course.language

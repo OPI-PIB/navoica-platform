@@ -3,7 +3,9 @@
 	  <figure class="course-card-image">
 		<img src="<%- image_url %>" alt="" />
 		
-		<span class="course-card-label">Nowy kurs</span>
+		<% if (is_new) { %>
+			<span class="course-card-label">Nowy kurs</span>
+		<% } %>
 	  </figure>
 	  <div class="course-card-content">
 		<h3><span class="course-title"><%- content.display_name %></span></h3>
