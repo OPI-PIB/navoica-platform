@@ -65,7 +65,7 @@ HOMEPAGE_COURSE_MAX = 4
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
-LMS_BASE = os.environ.get('LMS_BASE', 'polskimooc.pl')
+LMS_BASE = os.environ.get('LMS_BASE', 'navoica.pl')
 
 ###################################### CELERY  ################################
 
@@ -185,7 +185,7 @@ ENV_FEATURES = ENV_TOKENS.get('FEATURES', {})
 for feature, value in ENV_FEATURES.items():
     FEATURES[feature] = value
 
-CMS_BASE = ENV_TOKENS.get('CMS_BASE', 'studio.polskimooc.pl')
+CMS_BASE = ENV_TOKENS.get('CMS_BASE', 'studio.navoica.pl')
 
 ALLOWED_HOSTS = [
     # TODO: bbeggs remove this before prod, temp fix to get load testing running
