@@ -403,7 +403,8 @@ def export_extra_content(export_fs, modulestore, source_course_key, dest_course_
         for item in items:
             adapt_references(item, dest_course_key, export_fs)
             with item_dir.open(item.location.block_id + file_suffix, 'wb') as item_file:
-                item_file.write(item.data.encode('utf8'))
+				if item.data:
+					item_file.write(item.data.encode('utf8'))
 
-                # export content fields other then metadata and data in json format in current directory
-                _export_field_content(item, item_dir)
+					# export content fields other then metadata and data in json format in current directory
+					_export_field_content(item, item_dir)

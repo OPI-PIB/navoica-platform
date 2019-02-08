@@ -45,6 +45,7 @@ import imp
 import os
 import sys
 from datetime import timedelta
+import subprocess
 
 import django
 
@@ -52,7 +53,8 @@ import lms.envs.common
 # Although this module itself may not use these imported variables, other dependent modules may.
 from lms.envs.common import (
     USE_TZ, TECH_SUPPORT_EMAIL, PLATFORM_NAME, PLATFORM_DESCRIPTION, BUGS_EMAIL, DOC_STORE_CONFIG, DATA_DIR,
-    ALL_LANGUAGES, ALL_COURSE_CATEGORY, ALL_COURSE_DIFFICULTY, ALL_COURSE_TIMETABLE, ALL_COURSE_ORGANIZER, WIKI_ENABLED, update_module_store_settings, ASSET_IGNORE_REGEX,
+    ALL_LANGUAGES, ALL_COURSE_CATEGORY, ALL_COURSE_DIFFICULTY, ALL_COURSE_TIMETABLE, ALL_COURSE_ORGANIZER, WIKI_ENABLED,
+    update_module_store_settings, ASSET_IGNORE_REGEX,
     PARENTAL_CONSENT_AGE_LIMIT, REGISTRATION_EMAIL_PATTERNS_ALLOWED,
     # The following PROFILE_IMAGE_* settings are included as they are
     # indirectly accessed through the email opt-in API, which is
@@ -154,6 +156,8 @@ from openedx.core.release import doc_version
 
 ############################ FEATURE CONFIGURATION #############################
 
+EDX_ROOT = path(__file__).abspath().dirname().dirname().dirname()  # /edx-platform/
+PLATFORM_VERSION = subprocess.check_output(["git -C %s tag" % EDX_ROOT],shell=True)
 
 # Dummy secret key for dev/test
 SECRET_KEY = 'dev key'
@@ -196,7 +200,7 @@ FEATURES = {
     'ENABLE_CREATOR_GROUP': True,
 
     # whether to use password policy enforcement or not
-    'ENFORCE_PASSWORD_POLICY': False,
+    'ENFORCE_PASSWORD_POLICY': True,
 
     # Turn off account locking if failed login attempts exceeds a limit
     'ENABLE_MAX_FAILED_LOGIN_ATTEMPTS': False,
@@ -245,7 +249,7 @@ FEATURES = {
     'ENTRANCE_EXAMS': False,
 
     # Toggle platform-wide course licensing
-    'LICENSING': False,
+    'LICENSING': True,
 
     # Enable the courseware search functionality
     'ENABLE_COURSEWARE_INDEX': True,
@@ -303,6 +307,8 @@ FEATURES = {
     # Whether archived courses (courses with end dates in the past) should be
     # shown in Studio in a separate list.
     'ENABLE_SEPARATE_ARCHIVED_COURSES': True,
+    
+    'ALLOW_HIDING_DISCUSSION_TAB': True,
 }
 
 ENABLE_JASMINE = False
@@ -335,6 +341,7 @@ GEOIPV6_PATH = REPO_ROOT / "common/static/data/geoip/GeoIPv6.dat"
 ############################# TEMPLATE CONFIGURATION #############################
 # Mako templating
 import tempfile
+
 MAKO_MODULE_DIR = os.path.join(tempfile.gettempdir(), 'mako_cms')
 MAKO_TEMPLATE_DIRS_BASE = [
     PROJECT_ROOT / 'templates',
@@ -610,7 +617,6 @@ SESSION_COOKIE_SECURE = False
 SESSION_SAVE_EVERY_REQUEST = False
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
-
 # Site info
 SITE_NAME = "localhost:8001"
 HTTPS = 'on'
@@ -804,9 +810,9 @@ PIPELINE_JS = {
     },
     'module-js': {
         'source_filenames': (
-            rooted_glob(COMMON_ROOT / 'static/', 'xmodule/descriptors/js/*.js') +
-            rooted_glob(COMMON_ROOT / 'static/', 'xmodule/modules/js/*.js') +
-            rooted_glob(COMMON_ROOT / 'static/', 'common/js/discussion/*.js')
+                rooted_glob(COMMON_ROOT / 'static/', 'xmodule/descriptors/js/*.js') +
+                rooted_glob(COMMON_ROOT / 'static/', 'xmodule/modules/js/*.js') +
+                rooted_glob(COMMON_ROOT / 'static/', 'common/js/discussion/*.js')
         ),
         'output_filename': 'js/cms-modules.js',
         'test_order': 1
@@ -913,7 +919,6 @@ CELERY_QUEUES = {
     LOW_PRIORITY_QUEUE: {},
     DEFAULT_PRIORITY_QUEUE: {}
 }
-
 
 ############################## Video ##########################################
 
@@ -1046,7 +1051,7 @@ INSTALLED_APPS = [
     'course_action_state',
 
     # Additional problem types
-    'edx_jsme',    # Molecular Structure
+    'edx_jsme',  # Molecular Structure
 
     'openedx.core.djangoapps.content.course_overviews.apps.CourseOverviewsConfig',
     'openedx.core.djangoapps.content.course_structures.apps.CourseStructuresConfig',
@@ -1134,7 +1139,6 @@ INSTALLED_APPS = [
     'pipeline_mako',
 ]
 
-
 ################# EDX MARKETING SITE ##################################
 
 EDXMKTG_LOGGED_IN_COOKIE_NAME = 'edxloggedin'
@@ -1206,19 +1210,18 @@ EVENT_TRACKING_BACKENDS = {
     }
 }
 EVENT_TRACKING_PROCESSORS = []
-
+PLATFORM_NAME = "Navoica.pl"
 #### PASSWORD POLICY SETTINGS #####
 
-PASSWORD_MIN_LENGTH = None
+PASSWORD_MIN_LENGTH = 8
 PASSWORD_MAX_LENGTH = None
-PASSWORD_COMPLEXITY = {}
+PASSWORD_COMPLEXITY = {"UPPER": 1, "LOWER": 1, "DIGITS": 1, "NON ASCII": 1}
 PASSWORD_DICTIONARY_EDIT_DISTANCE_THRESHOLD = None
 PASSWORD_DICTIONARY = []
 
 ##### ACCOUNT LOCKOUT DEFAULT PARAMETERS #####
 MAX_FAILED_LOGIN_ATTEMPTS_ALLOWED = 5
 MAX_FAILED_LOGIN_ATTEMPTS_LOCKOUT_PERIOD_SECS = 15 * 60
-
 
 ### Apps only installed in some instances
 # The order of INSTALLED_APPS matters, so this tuple is the app name and the item in INSTALLED_APPS
@@ -1246,7 +1249,6 @@ OPTIONAL_APPS = (
     ('consent', None),
 )
 
-
 for app_name, insert_before in OPTIONAL_APPS:
     # First attempt to only find the module rather than actually importing it,
     # to avoid circular references - only try to import if it can't be found
@@ -1263,7 +1265,6 @@ for app_name, insert_before in OPTIONAL_APPS:
         INSTALLED_APPS.insert(INSTALLED_APPS.index(insert_before), app_name)
     except (IndexError, ValueError):
         INSTALLED_APPS.append(app_name)
-
 
 ### ADVANCED_SECURITY_CONFIG
 # Empty by default
@@ -1311,7 +1312,6 @@ ADVANCED_PROBLEM_TYPES = [
     }
 ]
 
-
 # Files and Uploads type filter values
 
 FILES_AND_UPLOAD_TYPE_FILTERS = {
@@ -1352,11 +1352,12 @@ FILES_AND_UPLOAD_TYPE_FILTERS = {
 }
 
 # Default to no Search Engine
-SEARCH_ENGINE = None
+SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 ELASTIC_FIELD_MAPPINGS = {
-    "start_date": {
-        "type": "date"
-    }
+    'course_category': {'type': 'string'},
+    'organizer': {'type': 'string'},
+    'difficulty': {'type': 'string'},
+    'is_new': {'type': 'boolean'}
 }
 
 XBLOCK_SETTINGS = {
@@ -1477,7 +1478,7 @@ COURSEGRAPH_JOB_QUEUE = LOW_PRIORITY_QUEUE
 VIDEO_IMAGE_DEFAULT_FILENAME = 'images/video-images/default_video_image.png'
 VIDEO_IMAGE_SUPPORTED_FILE_FORMATS = {
     '.bmp': 'image/bmp',
-    '.bmp2': 'image/x-ms-bmp',   # PIL gives x-ms-bmp format
+    '.bmp2': 'image/x-ms-bmp',  # PIL gives x-ms-bmp format
     '.gif': 'image/gif',
     '.jpg': 'image/jpeg',
     '.jpeg': 'image/jpeg',
@@ -1493,13 +1494,11 @@ VIDEO_IMAGE_ASPECT_RATIO = 16 / 9.0
 VIDEO_IMAGE_ASPECT_RATIO_TEXT = '16:9'
 VIDEO_IMAGE_ASPECT_RATIO_ERROR_MARGIN = 0.1
 
-
 ###################### ZENDESK ######################
 ZENDESK_URL = None
 ZENDESK_USER = None
 ZENDESK_API_KEY = None
 ZENDESK_CUSTOM_FIELDS = {}
-
 
 ############## Settings for Completion API #########################
 
@@ -1507,9 +1506,9 @@ ZENDESK_CUSTOM_FIELDS = {}
 # (0.0 = 0%, 1.0 = 100%)
 COMPLETION_VIDEO_COMPLETE_PERCENTAGE = 0.95
 
-
 ############## Installed Django Apps #########################
 
 from openedx.core.djangoapps.plugins import plugin_apps, plugin_settings, constants as plugin_constants
+
 INSTALLED_APPS.extend(plugin_apps.get_apps(plugin_constants.ProjectType.CMS))
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.CMS, plugin_constants.SettingsType.COMMON)

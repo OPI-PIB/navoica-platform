@@ -1,23 +1,22 @@
 
 	<a href="/courses/<%- course %>/about" class="course-card card-color--new">
 	  <figure class="course-card-image">
-		<img src="<%- image_url %>" alt="<%- content.display_name %> <%- content.number %>" />
+		<img src="<%- image_url %>" alt="" />
 		
-		<span class="course-card-label"><%- gettext("New course") %></span>
+		<% if (is_new) { %>
+			<span class="course-card-label">Nowy kurs</span>
+		<% } %>
 	  </figure>
 	  <div class="course-card-content">
 		<h3><span class="course-title"><%- content.display_name %></span></h3>
-		<p class="course-organization"><%- org %></p>
-		<p class="course-code"><%- content.number %></p>
+		<p class="course-organization">
+		<%- gettext(org_text) %>
+		</p>
 	  </div>
 	  <footer class="course-card-footer">
 		<ul>
-		  <li><time class="course-card-start"><i class="icon-calendar"></i> <%- interpolate(
-                      gettext("Starts: %(start_date)s"),
-                      { start_date: start }, true
-                    ) %></time></li>
-		  <li><span class="course-card-more"><%- gettext("Read more") %></span></li>
-		</ul>
+		  <li><time class="course-card-start"><i class="icon-calendar"></i> <%- interpolate(gettext("Starts: %(start_date)s"),{ start_date: start }, true) %></time></li>
+		 </ul>
 	  </footer>
 	</a>
   

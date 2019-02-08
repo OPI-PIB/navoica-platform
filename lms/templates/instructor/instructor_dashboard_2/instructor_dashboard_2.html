@@ -98,6 +98,15 @@ from openedx.core.djangolib.markup import HTML
 
 <script language="JavaScript" type="text/javascript"></script>
 
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.dropdown-toggle').on('click', function(e) {
+			$(this).parent().toggleClass('show');
+			$('.dropdown-menu').toggleClass('show');
+		});
+	});
+</script>
+
 <div class="container">
   <div class="instructor-dashboard-wrapper-2">
         <main id="main" aria-label="Content" tabindex="-1">

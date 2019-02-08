@@ -37,6 +37,13 @@ import calendar
         }).blur(function () {
             $("label").parent().removeClass("is-focused");
         });
+        
+        $("#confirm_password").on("blur", function() {
+			if ($("#password").val()!=$("#confirm_password").val()) {
+				$("#confirm_password").get(0).setCustomValidity("${_('Passwords Don\'t Match')}");
+				$("#confirm_password").get(0).reportValidity();
+			}
+		});
 
     });
 
@@ -82,7 +89,7 @@ import calendar
         var $submitButton = $('form .form-actions #submit');
 
         if (enable) {
-            $submitButton.removeClass('is-disabled').attr('aria-disabled', false).removeProp('disabled').html("${_('Create My {platform_name} Account').format(platform_name=platform_name)}");
+            $submitButton.removeClass('is-disabled').attr('aria-disabled', false).removeProp('disabled').removeAttr('disabled').html("<i class='icon-user'></i> ${_('Register')}");
         }
         else {
             $submitButton.addClass('is-disabled').prop('disabled', true).text("${_('Processing your account information')}");

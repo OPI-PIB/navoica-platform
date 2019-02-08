@@ -4,6 +4,7 @@ Views related to the video upload feature
 import csv
 import json
 import logging
+import os
 from contextlib import closing
 from datetime import datetime, timedelta
 from pytz import UTC
@@ -831,7 +832,10 @@ def send_video_status_update(updates):
                 'VIDEOS: Processing video [%s]',
                 update.get('edxVideoId')
             )
-            subprocess.Popen(["/edx/videoresize.sh", update.get('edxVideoId')])
+            dir = "/edx/videos/"
+            if not os.path.exists(dir):
+                os.makedirs(dir)
+            os.mknod(dir+"%s" % update.get('edxVideoId'))
 
     return JsonResponse()
 

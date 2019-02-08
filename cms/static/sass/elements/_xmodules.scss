@@ -202,7 +202,7 @@
       display: block;
       height: 30px;
       margin: ($baseline/2) 0;
-      border: 1px solid $blue;
+      border: 1px solid #b43f37;
       text-align: center;
 
       &.is-invisible {
@@ -221,7 +221,7 @@
         display: block;
         width: 0%;
         height: 30px;
-        background: $blue;
+        background: #b43f37;
         color: $white;
         line-height: 28px;
       }
@@ -320,10 +320,10 @@
           padding: ($baseline/2);
           width: 49%;
           text-align: center;
-          color: $blue;
+          color: #b43f37;
 
           &:hover {
-            background-color: $blue;
+            background-color: #b43f37;
           }
         }
 
@@ -337,7 +337,7 @@
           color: $blue-l3;
 
           &:hover {
-            color: $blue;
+            color: #b43f37;
           }
         }
       }

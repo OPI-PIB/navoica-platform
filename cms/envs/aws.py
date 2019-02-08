@@ -25,6 +25,7 @@ from xmodule.modulestore.modulestore_settings import convert_module_store_settin
 # SERVICE_VARIANT specifies name of the variant used, which decides what JSON
 # configuration files are read during startup.
 SERVICE_VARIANT = os.environ.get('SERVICE_VARIANT', None)
+FEATURES['ENABLE_OAUTH2_PROVIDER'] = True
 
 # CONFIG_ROOT specifies the directory where the JSON configuration
 # files are expected to be found. If not specified, use the project
@@ -595,3 +596,16 @@ plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.CMS, plugin_c
 ########################## Derive Any Derived Settings  #######################
 
 derive_settings(__name__)
+
+
+CMS_BASE = ENV_TOKENS.get('CMS_BASE', 'studio.navoica.pl')
+
+FEATURES['ENABLE_INSTRUCTOR_EMAIL'] = True;
+
+INSTALLED_APPS += (
+    'raven.contrib.django.raven_compat',
+)
+
+RAVEN_CONFIG = {
+    'dsn': 'https://a342ede52f964fff8909b06024477edc@sentry.io/1355968',
+}

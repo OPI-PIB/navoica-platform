@@ -32,10 +32,12 @@ Longer TODO:
 import imp
 import sys
 import os
+import subprocess
 
 import django
 from path import Path as path
 from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ungettext_lazy
 
 from openedx.core.constants import COURSE_KEY_REGEX, COURSE_KEY_PATTERN, COURSE_ID_PATTERN
 from openedx.core.djangoapps.theming.helpers_dirs import (
@@ -48,11 +50,19 @@ from xmodule.modulestore.modulestore_settings import update_module_store_setting
 from xmodule.modulestore.edit_info import EditInfoMixin
 from lms.djangoapps.lms_xblock.mixin import LmsBlockMixin
 
+# sys.setdefaultencoding() does not exist, here!
+reload(sys)  # Reload does the trick!
+sys.setdefaultencoding('UTF8')
+
+EDX_ROOT = path(__file__).abspath().dirname().dirname().dirname()  # /edx-platform/
+
 ################################### FEATURES ###################################
 # The display name of the platform to be used in templates/emails/etc.
 PLATFORM_NAME = _('Your Platform Name Here')
 PLATFORM_DESCRIPTION = _('Your Platform Description Here')
 CC_MERCHANT_NAME = PLATFORM_NAME
+
+PLATFORM_VERSION = subprocess.check_output(["git -C %s tag" % EDX_ROOT],shell=True)
 
 PLATFORM_FACEBOOK_ACCOUNT = "http://www.facebook.com/YourPlatformFacebookAccount"
 PLATFORM_TWITTER_ACCOUNT = "@YourPlatformTwitterAccount"
@@ -63,7 +73,7 @@ DISCUSSION_SETTINGS = {
     'MAX_COMMENT_DEPTH': 2,
 }
 
-LMS_ROOT_URL = "http://localhost:8000"
+LMS_ROOT_URL = "http://localhost:18000"
 LMS_INTERNAL_ROOT_URL = LMS_ROOT_URL
 LMS_ENROLLMENT_API_PATH = "/api/enrollment/v1/"
 
@@ -73,6 +83,7 @@ MANUAL_ENROLLMENT_ROLE_CHOICES = ['Learner', 'Support', 'Partner']
 
 # Features
 FEATURES = {
+	'BYPASS_ACTIVATION_EMAIL': False,
     'DISPLAY_DEBUG_INFO_TO_STAFF': True,
     'DISPLAY_HISTOGRAMS_TO_STAFF': False,  # For large courses this slows down courseware access for staff.
 
@@ -289,10 +300,10 @@ FEATURES = {
     'EXPOSE_CACHE_PROGRAMS_ENDPOINT': False,
 
     # Courseware search feature
-    'ENABLE_COURSEWARE_SEARCH': False,
+    'ENABLE_COURSEWARE_SEARCH': True,
 
     # Dashboard search feature
-    'ENABLE_DASHBOARD_SEARCH': False,
+    'ENABLE_DASHBOARD_SEARCH': True,
 
     # log all information from cybersource callbacks
     'LOG_POSTPAY_CALLBACKS': True,
@@ -313,7 +324,7 @@ FEATURES = {
     'ENABLE_COURSE_DISCOVERY': True,
 
     # Setting for overriding default filtering facets for Course discovery
-    # COURSE_DISCOVERY_FILTERS = ["org", "language", "modes"]
+    # 'COURSE_DISCOVERY_FILTERS': ["org", "modes", "enrollment_start"],
 
     # Software secure fake page feature flag
     'ENABLE_SOFTWARE_SECURE_FAKE': False,
@@ -397,7 +408,11 @@ FEATURES = {
     # Whether to send an email for failed password reset attempts or not. This is mainly useful for notifying users
     # that they don't have an account associated with email addresses they believe they've registered with.
     'ENABLE_PASSWORD_RESET_FAILURE_EMAIL': False,
+    
+    'UNSUPPORTED_BROWSER_ALERT_VERSIONS': "{e:0,f:-3,o:0,s:-3,c:-3,i:20}",
 }
+
+COURSE_DISCOVERY_FILTERS = ['modes', 'course_category', 'organizer', 'difficulty']
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
 COURSE_REVIEWS_TOOL_PROVIDER_FRAGMENT_NAME = 'coursetalk-reviews-fragment.html'
@@ -900,6 +915,7 @@ USE_TZ = True
 SESSION_COOKIE_SECURE = False
 SESSION_SAVE_EVERY_REQUEST = False
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+PLATFORM_NAME = "Navoica.pl"
 
 # CMS base
 CMS_BASE = 'localhost:8001'
@@ -912,14 +928,14 @@ ROOT_URLCONF = 'lms.urls'
 
 # Platform Email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'registration@example.com'
-DEFAULT_FEEDBACK_EMAIL = 'feedback@example.com'
-SERVER_EMAIL = 'devops@example.com'
-TECH_SUPPORT_EMAIL = 'technical@example.com'
-CONTACT_EMAIL = 'info@example.com'
-BUGS_EMAIL = 'bugs@example.com'
-UNIVERSITY_EMAIL = 'university@example.com'
-PRESS_EMAIL = 'press@example.com'
+DEFAULT_FROM_EMAIL = 'mooc_help@opi.org.pl'
+DEFAULT_FEEDBACK_EMAIL = 'mooc_help@opi.org.pl'
+SERVER_EMAIL = 'mooc_help@opi.org.pl'
+TECH_SUPPORT_EMAIL = 'mooc_help@opi.org.pl'
+CONTACT_EMAIL = 'mooc_help@opi.org.pl'
+BUGS_EMAIL = 'mooc_help@opi.org.pl'
+UNIVERSITY_EMAIL = 'mooc_help@opi.org.pl'
+PRESS_EMAIL = 'mooc_help@opi.org.pl'
 FINANCE_EMAIL = ''
 
 # Platform mailing address
@@ -941,7 +957,7 @@ STATICFILES_DIRS = [
     NODE_MODULES_ROOT / "@edx",
 ]
 
-FAVICON_PATH = 'images/favicon.ico'
+FAVICON_PATH = 'images/favicon.polskimooc.png'
 DEFAULT_COURSE_ABOUT_IMAGE_URL = 'images/pencils.jpg'
 
 # User-uploaded content
@@ -1208,7 +1224,7 @@ MIDDLEWARE_CLASSES = [
     'openedx.core.djangoapps.session_inactivity_timeout.middleware.SessionInactivityTimeout',
 
     # use Django built in clickjacking protection
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     # to redirected unenrolled students to the course info page
     'courseware.middleware.CacheCourseIdMiddleware',
@@ -2277,7 +2293,7 @@ MKTG_URL_LINK_MAP = {
     'COURSES': 'courses',
     'ROOT': 'root',
     'TOS': 'tos',
-    'HONOR': 'honor',  # If your site does not have an honor code, simply delete this line.
+    #'kodeks-honorowy': 'honor',  # If your site does not have an honor code, simply delete this line.
     'PRIVACY': 'privacy',
     'PRESS': 'press',
     'BLOG': 'blog',
@@ -2285,6 +2301,7 @@ MKTG_URL_LINK_MAP = {
     'SITEMAP.XML': 'sitemap_xml',
     'PARTNERS': 'partners',
     'COOPERATION': 'cooperation',
+    'HONOR': 'honor',
 
     # Verified Certificates
     'WHAT_IS_VERIFIED_CERT': 'verified-certificate',
@@ -2292,10 +2309,10 @@ MKTG_URL_LINK_MAP = {
 
 STATIC_TEMPLATE_VIEW_DEFAULT_FILE_EXTENSION = 'html'
 
-SUPPORT_SITE_LINK = ''
-ID_VERIFICATION_SUPPORT_LINK = ''
-PASSWORD_RESET_SUPPORT_LINK = ''
-ACTIVATION_EMAIL_SUPPORT_LINK = ''
+SUPPORT_SITE_LINK = 'mailto:mooc_help@opi.org.pl'
+ID_VERIFICATION_SUPPORT_LINK = 'mailto:mooc_help@opi.org.pl'
+PASSWORD_RESET_SUPPORT_LINK = 'mailto:mooc_help@opi.org.pl'
+ACTIVATION_EMAIL_SUPPORT_LINK = 'mailto:mooc_help@opi.org.pl'
 
 # Days before the expired date that we warn the user
 ENTITLEMENT_EXPIRED_ALERT_PERIOD = 90
@@ -2486,7 +2503,7 @@ REGISTRATION_EXTRA_FIELDS = {
     'honor_code': 'required',
     'terms_of_service': 'hidden',
     'city': 'hidden',
-    'country': 'hidden',
+    'country': 'optional',
 }
 
 REGISTRATION_FIELD_ORDER = [
@@ -2497,6 +2514,7 @@ REGISTRATION_FIELD_ORDER = [
     "email",
     "confirm_email",
     "password",
+    "confirm_password",
     "city",
     "state",
     "country",
@@ -2552,7 +2570,7 @@ FINANCIAL_REPORTS = {
 #### PASSWORD POLICY SETTINGS #####
 PASSWORD_MIN_LENGTH = 8
 PASSWORD_MAX_LENGTH = None
-PASSWORD_COMPLEXITY = {"UPPER": 1, "LOWER": 1, "DIGITS": 1}
+PASSWORD_COMPLEXITY = {"UPPER": 1, "LOWER": 1, "DIGITS": 1, "NON ASCII": 1}
 PASSWORD_DICTIONARY_EDIT_DISTANCE_THRESHOLD = None
 PASSWORD_DICTIONARY = []
 
@@ -2619,7 +2637,8 @@ ALL_COURSE_DIFFICULTY = [
 ALL_COURSE_ORGANIZER = [
     [u"1", u"Fundacja Młodej Nauki"],
     [u"2", u"Politechnika Warszawska"],
-    [u"3", u"Politechnika Łódzka"]
+    [u"3", u"Politechnika Łódzka"],
+    [u"4", u"Ośrodek Przetwarzania Informacji"]
 ]
 
 ALL_COURSE_CATEGORY = [
@@ -2629,14 +2648,33 @@ ALL_COURSE_CATEGORY = [
     [u"technical", u"Nauki techniczne"]
 ]
 
-ALL_COURSE_TIMETABLE = [
-    [u"1", u"1 tydzień"],
-    [u"2", u"2 tygodnie"],
-    [u"3", u"3 tygodnie"],
-    [u"4", u"4 tygodnie"],
-]
+ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % week, week)]
+                        for week in range(1, 50)]
 
-ALL_COURSE_TIMETABLE += [[str(i), "%d tygodni" % i] for i in range(5, 50)]
+# property name should be untranslated phrases. Translation will be done on the fly using djangojs.po // KH
+LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Jezyk"}
+COURSE_DISCOVERY_MEANINGS = {
+    'modes': {
+        'name': 'Typ kursu',
+        'terms': {
+            'honor': 'Honor',
+            'verified': 'Zweryfikowany',
+            'audit': 'audit',
+        },
+    },
+    'course_category': {
+        'name': 'Kategoria',
+        'terms': {b[0]: b[1] for b in ALL_COURSE_CATEGORY},
+    },
+    'organizer': {
+        'name': 'Organizator',
+        'terms': {b[0]: b[1] for b in ALL_COURSE_ORGANIZER},
+    },
+    'difficulty': {
+        'name': 'Course Difficulty',
+        'terms': {b[0]: b[1] for b in ALL_COURSE_DIFFICULTY},
+    }
+}
 
 ### Apps only installed in some instances
 # The order of INSTALLED_APPS matters, so this tuple is the app name and the item in INSTALLED_APPS
@@ -2750,7 +2788,7 @@ PDF_RECEIPT_COBRAND_LOGO_PATH = PROJECT_ROOT + '/static/images/logo.png'
 PDF_RECEIPT_COBRAND_LOGO_HEIGHT_MM = 12
 
 # Use None for the default search engine
-SEARCH_ENGINE = None
+SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 # Use LMS specific search initializer
 SEARCH_INITIALIZER = "lms.lib.courseware_search.lms_search_initializer.LmsSearchInitializer"
 # Use the LMS specific result processor
@@ -3193,4 +3231,11 @@ from openedx.core.djangoapps.plugins import plugin_apps, plugin_settings, consta
 INSTALLED_APPS.extend(plugin_apps.get_apps(plugin_constants.ProjectType.LMS))
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_constants.SettingsType.COMMON)
 
-#locale.setlocale(locale.LC_ALL, "pl_PL.UTF-8")
+# locale.setlocale(locale.LC_ALL, "pl_PL.UTF-8")
+
+ELASTIC_FIELD_MAPPINGS = {
+    'course_category': {'type': 'string'},
+    'organizer': {'type': 'string'},
+    'difficulty': {'type': 'string'},
+    'is_new': {'type': 'boolean'}
+}

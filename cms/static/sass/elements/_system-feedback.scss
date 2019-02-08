@@ -150,7 +150,7 @@
     button {
       @extend %btn-no-style;
 
-      color: $blue;
+      color: #b43f37;
 
       &:hover {
         color: $blue-s2;
@@ -214,7 +214,7 @@
     button {
       @extend %btn-no-style;
 
-      color: $blue;
+      color: #b43f37;
 
       &:hover {
         color: $blue-s2;
@@ -297,7 +297,7 @@
     @include text-align(left);
 
     .copy {
-      border-top: 4px solid $blue;
+      border-top: 4px solid #b43f37;
       padding: $baseline;
     }
 
@@ -370,7 +370,7 @@
 
   @include clearfix();
 
-  box-shadow: 0 -1px 3px $shadow, inset 0 3px 1px $blue;
+  box-shadow: 0 -1px 3px $shadow, inset 0 3px 1px #b43f37;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -604,7 +604,7 @@
 
   @include box-sizing(border-box);
 
-  box-shadow: 0 1px 1px $white, inset 0 2px 2px $shadow-d1, inset 0 -4px 1px $blue;
+  box-shadow: 0 1px 1px $white, inset 0 2px 2px $shadow-d1, inset 0 -4px 1px #b43f37;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -645,10 +645,10 @@
   }
 
   &.wrapper-alert-announcement {
-    box-shadow: 0 1px 1px $white, inset 0 2px 2px $shadow-d1, inset 0 -4px 1px $blue;
+    box-shadow: 0 1px 1px $white, inset 0 2px 2px $shadow-d1, inset 0 -4px 1px #b43f37;
 
     .feedback-symbol {
-      color: $blue;
+      color: #b43f37;
     }
   }
 

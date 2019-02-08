@@ -4,12 +4,12 @@ Specific overrides to the base prod settings to make development easier.
 from os.path import abspath, dirname, join
 
 from .aws import *  # pylint: disable=wildcard-import, unused-wildcard-import
+from django.utils.translation import ugettext_lazy as _
 
 # Don't use S3 in devstack, fall back to filesystem
-#del DEFAULT_FILE_STORAGE
+# del DEFAULT_FILE_STORAGE
 MEDIA_ROOT = "/edx/var/edxapp/uploads"
 ORA2_FILEUPLOAD_BACKEND = 'django'
-
 
 DEBUG = True
 USE_I18N = True
@@ -27,15 +27,16 @@ TIME_ZONE = 'Europe/Warsaw'
 
 # Silence noisy logs
 import logging
+
 LOG_OVERRIDES = [
     ('track.contexts', logging.CRITICAL),
+    ('track.middleware', logging.CRITICAL),
     ('track.middleware', logging.CRITICAL),
     ('dd.dogapi', logging.CRITICAL),
     ('django_comment_client.utils', logging.CRITICAL),
 ]
 for log_name, log_level in LOG_OVERRIDES:
     logging.getLogger(log_name).setLevel(log_level)
-
 
 ################################ EMAIL ########################################
 
@@ -87,6 +88,7 @@ def should_show_debug_toolbar(request):
         return False
     return True
 
+
 ########################### PIPELINE #################################
 
 PIPELINE_ENABLED = False
@@ -137,9 +139,8 @@ FEATURES['ENABLE_MAX_FAILED_LOGIN_ATTEMPTS'] = False
 FEATURES['SQUELCH_PII_IN_LOGS'] = False
 FEATURES['PREVENT_CONCURRENT_LOGINS'] = False
 FEATURES['ADVANCED_SECURITY'] = False
-PASSWORD_MIN_LENGTH = None
+PASSWORD_MIN_LENGTH = 8
 PASSWORD_COMPLEXITY = {}
-
 
 ########################### Milestones #################################
 FEATURES['MILESTONES_APP'] = True
@@ -153,39 +154,20 @@ FEATURES['ENTRANCE_EXAMS'] = True
 ################################ COURSE LICENSES ################################
 FEATURES['LICENSING'] = True
 
-
 ########################## Courseware Search #######################
 FEATURES['ENABLE_COURSEWARE_SEARCH'] = True
 SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 
-
 ########################## Dashboard Search #######################
 FEATURES['ENABLE_DASHBOARD_SEARCH'] = True
-
 
 ########################## Certificates Web/HTML View #######################
 FEATURES['CERTIFICATES_HTML_VIEW'] = True
 
-
 ########################## Course Discovery #######################
-LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': 'Language'}
-COURSE_DISCOVERY_MEANINGS = {
-    'org': {
-        'name': 'Organization',
-    },
-    'modes': {
-        'name': 'Course Type',
-        'terms': {
-            'honor': 'Honor',
-            'verified': 'Verified',
-        },
-    },
-    'language': LANGUAGE_MAP,
-}
 
 FEATURES['ENABLE_COURSE_DISCOVERY'] = True
 # Setting for overriding default filtering facets for Course discovery
-# COURSE_DISCOVERY_FILTERS = ["org", "language", "modes"]
 FEATURES['COURSES_ARE_BROWSEABLE'] = True
 HOMEPAGE_COURSE_MAX = 9
 
@@ -201,7 +183,6 @@ DISABLE_ACCOUNT_ACTIVATION_REQUIREMENT_SWITCH = "verify_student_disable_account_
 
 # Skip enrollment start date filtering
 SEARCH_SKIP_ENROLLMENT_START_DATE_FILTERING = True
-
 
 ########################## Shopping cart ##########################
 FEATURES['ENABLE_SHOPPING_CART'] = True
@@ -265,6 +246,7 @@ JWT_AUTH.update({
 
 #####################################################################
 from openedx.core.djangoapps.plugins import plugin_settings, constants as plugin_constants
+
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_constants.SettingsType.DEVSTACK)
 
 #####################################################################

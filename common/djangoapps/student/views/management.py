@@ -712,8 +712,14 @@ def create_account_with_params(request, params):
             third_party_provider = provider.Registry.get_from_pipeline(running_pipeline)
 
         new_user = authenticate_new_user(request, user.username, params['password'])
-        django_login(request, new_user)
-        request.session.set_expiry(0)
+        #django_login(request, new_user)
+        #request.session.set_expiry(0)
+        if settings.FEATURES.get('BYPASS_ACTIVATION_EMAIL'):
+			log.info('bypassing activation email')
+			new_user.is_active = True
+			new_user.save()
+			AUDIT_LOG.info(
+				u"Login activated on extauth account - {0} ({1})".format(new_user.username, new_user.email))
 
         if do_external_auth:
             eamap.user = new_user
@@ -728,11 +734,13 @@ def create_account_with_params(request, params):
                 new_user.save()
                 AUDIT_LOG.info(
                     u"Login activated on extauth account - {0} ({1})".format(new_user.username, new_user.email))
+                    
 
     # Check if system is configured to skip activation email for the current user.
-    skip_email = skip_activation_email(
-        user, do_external_auth, running_pipeline, third_party_provider,
-    )
+    #skip_email = skip_activation_email(
+    #    user, do_external_auth, running_pipeline, third_party_provider,
+    #)
+    skip_email = False
 
     if skip_email:
         registration.activate()
@@ -956,7 +964,21 @@ def create_account(request, post_override=None):
             status=400
         )
 
-    redirect_url = None  # The AJAX method calling should know the default destination upon success
+    redirect_url = 'login'  # The AJAX method calling should know the default destination upon success
+    
+    messages.success(
+                request,
+                HTML(_("There's just one more step: Before you enroll in a course, you need to "
+					  "activate your account. We've sent an email message to "
+					  "{email_start}{email}{email_end} with instructions for activating your "
+					  "account. If you don't receive this message, check your spam folder."
+				)).format(
+					email_start=HTML("<strong>"),
+					email_end=HTML("</strong>"),
+					email=user.email
+				),
+                extra_tags='dashboard-banner',
+            )
 
     # Resume the third-party-auth pipeline if necessary.
     if third_party_auth.is_enabled() and pipeline.running(request):
@@ -1038,7 +1060,7 @@ def activate_account(request, key):
                 extra_tags='account-activation aa-icon',
             )
 
-    return redirect('dashboard')
+    return redirect('signin_user')
 
 
 @ensure_csrf_cookie

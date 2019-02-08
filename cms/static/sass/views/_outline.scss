@@ -277,7 +277,7 @@
 
           // STATE: hover/active
           &:hover, &:active {
-            color: $blue;
+            color: #b43f37;
           }
         }
 
@@ -310,7 +310,7 @@
 
       // STATE: was dropped
       &.was-dropped {
-        border-color: $blue;
+        border-color: #b43f37;
       }
     }
 
@@ -662,7 +662,7 @@
   // outline: highlight settings
   .highlights-button {
     cursor: pointer;
-    color: theme-color("primary");
+    color: $blue;
 
     // remove button styling
     border: none;
@@ -672,7 +672,7 @@
   }
 
   .number-highlights {
-    background: theme-color("primary");
+    background: $blue;
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -728,7 +728,7 @@
           font-weight: 600;
 
           &.is-focused {
-            color: $blue;
+            color: #b43f37;
           }
         }
 

@@ -122,6 +122,7 @@
 
                 showNewPost: function() {
                     var self = this;
+                    self.newPostView.$el.removeClass('is-hidden');
                     return $('.forum-content').fadeOut({
                         duration: 200,
                         complete: function() {
@@ -131,6 +132,7 @@
                 },
 
                 hideNewPost: function() {
+					this.newPostView.$el.addClass('is-hidden');
                     return this.newPostView.$el.fadeOut({
                         duration: 200,
                         complete: function() {

@@ -380,7 +380,7 @@ class StaticTabFields(object):
         display_name=_("Display Name"),
         help=_("The display name for this component."),
         scope=Scope.settings,
-        default="Empty",
+        default="Pusta",
     )
     course_staff_only = Boolean(
         display_name=_("Hide Page From Learners"),
@@ -391,7 +391,7 @@ class StaticTabFields(object):
     )
     data = String(
         default=textwrap.dedent(u"""\
-            <p>Add the content you want students to see on this page.</p>
+            <p>Dodaj tre\u015b\u0107, kt\u00f3r\u0105 chcesz udost\u0119pni\u0107 studentom na tej stronie.</p>
         """),
         scope=Scope.content,
         help=_("HTML for the additional pages")

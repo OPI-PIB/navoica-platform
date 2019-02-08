@@ -36,7 +36,7 @@
     @include border-top-right-radius(3px);
     @include border-bottom-right-radius(3px);
 
-    background: theme-color("primary");
+    background: $blue;
     padding: 0 10px;
     height: 35px;
     color: $white;

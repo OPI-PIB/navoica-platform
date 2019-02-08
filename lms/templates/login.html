@@ -10,7 +10,7 @@ from third_party_auth import provider, pipeline
 
 <%block name="pagetitle">${_("Log into your {platform_name} Account").format(platform_name=platform_name)}</%block>
 
-<%block name="bodyclass">view-login</%block>
+<%block name="bodyclass">view-loginn</%block>
 
 <%block name="js_extra">
   <script type="text/javascript">
@@ -101,7 +101,8 @@ from third_party_auth import provider, pipeline
           removeClass('is-disabled').
           attr('aria-disabled', false).
           removeProp('disabled').
-          html("${_('Log into My {platform_name} Account').format(platform_name=platform_name)} <span class='orn-plus'>+</span> ${_('Access My Courses')}");
+          removeAttr('disabled').
+          html("<i class='icon-user'></i> ${_('Sign in')}");
       }
       else {
         $submitButton.
@@ -131,12 +132,41 @@ from third_party_auth import provider, pipeline
 
 <%include file="forgot_password_modal.html" />
 
+%if account_activation_messages:
+  <div class="activation-message-container">
+	% for account_activation_message in account_activation_messages:
+	  <div class="account-activation ${account_activation_message.tags}" role="alert" aria-label="Account Activation Message" tabindex="-1">
+		<div class="message-copy" >
+		  ${ account_activation_message | n, decode.utf8 }
+		</div>
+	  </div>
+	% endfor
+  </div>
+%endif
+
+%if banner_account_activation_message:
+	<div class="dashboard-banner">
+		<div class="wrapper-msg urgency-high">
+		  <div class="msg">
+			<div class="msg-content">
+			  <h2 class="title">${_("You're almost there!")}</h2>
+			  <div class="copy">
+				<p class='activation-message'>
+					${ banner_account_activation_message | n, decode.utf8 }
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+%endif
+
 <main class="login">
     <div class="container">
       <h1><strong>${_("Please log in")}</strong><br>${_("to access your account and courses")}</h1>
       <div class="row">
         <div class="col-md-8">
-	      <form role="form" id="login-form" method="post" data-remote="true" action="/login_ajax" novalidate class="bg-light bg-brand px-5 pt-4 rounded">
+	      <form role="form" id="login-form" method="post" data-remote="true" action="/login_ajax" novalidate class="bg-light bg-brand px-5 pt-4 rounded" autocomplete="disabled">
 
 		  <!-- status messages -->
 		  <div role="alert" class="status message">
@@ -172,7 +202,7 @@ from third_party_auth import provider, pipeline
 			
 			<div class="form-group form-group-required field required text">
               <label for="email">E-mail</label>
-              <input class="form-control" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" required aria-required="true" aria-described-by="email-tip" />
+              <input class="form-control" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" required aria-required="true" aria-described-by="email-tip" autocomplete="disabled"/>
               <small id="emailHelp" class="tip tip-input form-text text-muted">${_("This is the e-mail address you used to register with {platform}").format(platform=platform_name)}</small>
             </div>
             <div class="form-group form-group-required field required password">
@@ -192,7 +222,7 @@ from third_party_auth import provider, pipeline
               </div>
             </div>
           <div class="form-actions login-button">
-            <button type="submit" class="btn btn-primary action action-primary action-update" name="submit"><i class="icon-user"></i> ${_('Sign in')}</button>
+            <button type="submit" class="btn btn-primary action action-primary action-update" name="submit" id="submit"><i class="icon-user"></i> ${_('Sign in')}</button>
           </div>
 		</form>
 		% if third_party_auth.is_enabled():

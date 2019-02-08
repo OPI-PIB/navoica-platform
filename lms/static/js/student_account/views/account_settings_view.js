@@ -30,7 +30,7 @@
                     tabindex: -1,
                     selected: false,
                     expanded: false
-                },*/
+                },
                 {
                     name: 'ordersTabSections',
                     id: 'orders-tab',
@@ -38,7 +38,7 @@
                     tabindex: -1,
                     selected: false,
                     expanded: false
-                }
+                }*/
             ],
             events: {
                 'click .account-nav-link': 'switchTab',

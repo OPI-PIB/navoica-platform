@@ -1,7 +1,7 @@
 <%!
 import third_party_auth
 from third_party_auth import pipeline, provider
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext as _, ungettext
 from django_countries import countries
 from student.models import UserProfile
 %>
@@ -100,9 +100,21 @@ from student.models import UserProfile
 
         % else:
 
-        <li class="field required password form-group form-group-required" id="field-password">
+        <li class="field required form-group form-group-required" id="field-password">
             <label for="password">${_('Password')}</label>
             <input class="form-control" id="password" type="password" name="password" value="" required aria-required="true"/>
+            <span class="tip tip-input" id="password-tip">
+				<%
+				min_length = 8
+				requirements = ungettext("{num} character", "{num} characters", min_length).format(num=min_length)
+				%>
+				${_("Enter a password with at least {requirements}.").format(requirements=requirements)}
+			</span>
+        </li>
+        
+        <li class="field required password form-group form-group-required" id="field-password">
+            <label for="password">${_('Confirm Password')}</label>
+            <input class="form-control" id="confirm_password" type="password" value="" required name="confirm_password" />
         </li>
 
         % endif
@@ -129,7 +141,7 @@ from student.models import UserProfile
         <li class="field required text" id="field-username">
             <label for="username">${_('Public Display Name')}</label>
             <input id="username" type="text" name="username" value="${extauth_username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
-            <span class="tip tip-input" id="id=" username-tip>${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
+            <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </li>
 
         % if ask_for_fullname:
@@ -241,7 +253,7 @@ from student.models import UserProfile
 <div class="group group-form group-form-accountacknowledgements">
     <h2 class="sr">${_("Account Acknowledgements")}</h2>
 
-
+ 
     % if has_extauth_info is UNDEFINED or ask_for_tos :
 
 
@@ -278,6 +290,6 @@ from student.models import UserProfile
 </div>
 
 
-<div class="login-button">
-    <button type="submit" class="btn btn-primary"><i class="icon-user"></i> ${_('Register')}</button>
+<div class="login-button form-actions">
+    <button type="submit" class="btn btn-primary" id="submit"><i class="icon-user"></i> ${_('Register')}</button>
 </div>

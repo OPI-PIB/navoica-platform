@@ -59,7 +59,7 @@
           color: $gray-l3;
 
           &:hover {
-            background-color: $blue;
+            background-color: #b43f37;
             color: $gray-l6;
           }
         }
@@ -76,7 +76,7 @@
           width: 30px;
 
           &:hover {
-            background-color: $blue;
+            background-color: #b43f37;
           }
         }
 
@@ -91,7 +91,7 @@
 
         &.action-visible .toggle-checkbox:hover ~ .action-button,
         &.action-visible .toggle-checkbox:checked:hover ~ .action-button {
-          background-color: $blue;
+          background-color: #b43f37;
           color: $gray-l6;
         }
 
@@ -273,7 +273,7 @@
           text-transform: uppercase;
 
           &:hover {
-            background-color: $blue;
+            background-color: #b43f37;
             color: $gray-l6;
           }
 

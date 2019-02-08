@@ -33,6 +33,7 @@
             var accountSettingsModel = new AccountSettingsModel(
                 _.extend(
                     options.account_settings_data,
+                    {'language':'pl'},
                     {default_public_account_fields: options.default_public_account_fields}
                 ),
                 {parse: true}
@@ -121,7 +122,7 @@
                     screenReaderTitle: gettext('Joined Date'),
                     valueAttribute: 'date_joined',
                     helpMessage: '',
-                    userLanguage: accountSettingsModel.get('language'),
+                    userLanguage: accountSettingsModel.get('language') || 'pl',
                     userTimezone: accountPreferencesModel.get('time_zone'),
                     dateFormat: 'MMMM YYYY'  // not localized, but hopefully ok.
                 }),

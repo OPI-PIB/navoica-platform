@@ -46,7 +46,7 @@
 %bar-module-blue {
   @extend %bar-module;
 
-  border-top: 5px solid $blue;
+  border-top: 5px solid #b43f37;
 
   .bar-mod-title {
     background-color: $blue-t0;
@@ -200,7 +200,7 @@
 
       .support-documentation-link {
         // Override JQuery ui-widget-content link color (black) with our usual link color and hover action.
-        color: theme-color("primary");
+        color: $blue;
         text-decoration: none;
         padding-right: ($baseline/2);
 
@@ -452,7 +452,7 @@ $outline-indent-width: $baseline;
     color: $color-heading-base;
 
     &:hover {
-      color: $blue;
+      color: #b43f37;
     }
   }
 }

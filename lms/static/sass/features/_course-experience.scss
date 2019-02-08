@@ -141,7 +141,7 @@
           width: auto;
           flex-grow: 1;
           font-size: font-size(small);
-          color: theme-color("primary");
+          color: $blue;
           cursor: pointer;
 
           &:hover {
@@ -278,7 +278,7 @@
 
     .section-tools .course-tool {
       .course-tool-link:visited {
-        color: theme-color("primary");
+        color: $blue;
       }
 
       &:not(:first-child) {
@@ -428,8 +428,6 @@ button.accordion-trigger, button.prerequisite-button {
 
 #expand-collapse-outline-all-button {
   float: right;
-  background-color: $white;
-  color: $black;
   cursor: pointer;
 }
 
@@ -547,7 +545,7 @@ button.accordion-trigger, button.prerequisite-button {
       top: $baseline * (-1/2);
       right: $baseline / 2;
       cursor: pointer;
-      background-color: theme-color("primary");
+      background-color: $blue;
     }
   }
 

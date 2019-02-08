@@ -134,12 +134,12 @@
 
             &:hover {
               background-color: theme-color("inverse");
-              color: theme-color("primary");
+              color: $blue;
             }
 
             &.active {
-              border-bottom: 4px solid theme-color("primary");
-              color: theme-color("primary");
+              border-bottom: 4px solid $blue;
+              color: $blue;
             }
           }
         }
@@ -640,7 +640,7 @@
           margin-bottom: ($baseline/4);
 
           &.is-focused {
-            color: $blue;
+            color: #b43f37;
           }
         }
 

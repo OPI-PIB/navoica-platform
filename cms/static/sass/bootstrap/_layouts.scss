@@ -16,8 +16,8 @@
       &.active,
       &:hover {
         .nav-link {
-          border-bottom-color: theme-color("primary");
-          color: theme-color("primary");
+          border-bottom-color: $blue;
+          color: $blue;
         }
       }
 
@@ -176,7 +176,7 @@
       }
 
       .navigation-link:hover {
-        color: theme-color("primary");
+        color: #b43f37;
       }
 
       .navigation-item::before {
@@ -260,7 +260,7 @@
 
       margin: 0;
       padding: 0;
-      color: theme-color("primary");
+      color: $blue;
     }
   }
 }
@@ -304,7 +304,7 @@
       float: right;
       margin-top: ($baseline/2);
       text-align: right;
-      color: theme-color("primary");
+      color: $blue;
     }
   }
 }

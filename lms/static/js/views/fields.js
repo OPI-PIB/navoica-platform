@@ -322,7 +322,7 @@
                 var context;
                 context = {
                     datetime: new Date(this.modelValue()),
-                    language: this.options.userLanguage,
+                    language: this.options.userLanguage || 'pl',
                     timezone: this.options.userTimezone,
                     format: this.options.dateFormat
                 };

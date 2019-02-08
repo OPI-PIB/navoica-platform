@@ -41,8 +41,8 @@
 
       &:hover,
       &:focus {
-        color: theme-color("primary");
-        border-bottom-color: theme-color("primary");
+        color: $blue;
+        border-bottom-color: $blue;
       }
 
       &.active {
@@ -149,7 +149,7 @@
 
   margin: 0 auto;
   padding: ($baseline*0.75) ($baseline*2);
-  background-color: theme-color("primary");
+  background-color: $blue;
 
   @media print {
     display: none;

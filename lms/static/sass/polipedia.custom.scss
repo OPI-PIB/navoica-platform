@@ -53,7 +53,7 @@ a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.
 input[type="submit"]:active:not(:disabled), input[type="submit"]:focus:not(:disabled), input[type="button"]:active:not(:disabled), input[type="button"]:focus:not(:disabled), button:active:not(:disabled), button:focus:not(:disabled), .button:active:not(:disabled), .button:focus:not(:disabled), .header-global .nav-courseware li .btn:hover, .header-global .nav-courseware div .btn:hover, .login .form-actions button[type="submit"]:hover, .register .form-actions button[type="submit"]:hover, .passwordreset .form-actions button[type="submit"]:hover, #forgot-password-modal #password-reset .form-actions button[type="submit"]:hover, .view-survey .action-primary:hover, .header-global .nav-courseware li .btn:active, .header-global .nav-courseware div .btn:active, .login .form-actions button[type="submit"]:active, .register .form-actions button[type="submit"]:active, .passwordreset .form-actions button[type="submit"]:active, #forgot-password-modal #password-reset .form-actions button[type="submit"]:active, .view-survey .action-primary:active, .header-global .nav-courseware li .btn:focus, .header-global .nav-courseware div .btn:focus, .login .form-actions button[type="submit"]:focus, .register .form-actions button[type="submit"]:focus, .passwordreset .form-actions button[type="submit"]:focus, #forgot-password-modal #password-reset .form-actions button[type="submit"]:focus, .view-survey .action-primary:focus, .header-global .nav-courseware li .btn, .header-global .nav-courseware div .btn, .login .form-actions button[type="submit"], .register .form-actions button[type="submit"], .passwordreset .form-actions button[type="submit"], #forgot-password-modal #password-reset .form-actions button[type="submit"], .view-survey .action-primary {
 
   box-shadow: 0 2px 1px 0 #B43F37;
-  color: #fff;
+  color: white; /*ktos ustawil ten sam kolor co tlo :) */
   background-color: #B43F37;
   border-color: #B43F37;
 }
@@ -65,7 +65,7 @@ input[type="submit"]:active:not(:disabled), input[type="submit"]:focus:not(:disa
 }
 
 .register.container.login {
-  width: initial;
+  width: auto;
 }
 
 div#field-country {
@@ -119,6 +119,7 @@ li.field-group.field-education-level.form-group.form-group-optional, div#field-e
 .navbar .navbar-nav .nav-item a {
   font-size: 14px !important;
   text-transform: none !important;
+  white-space: nowrap;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, .btn:not(:disabled):not(.disabled) {
@@ -137,27 +138,271 @@ li.field-group.field-education-level.form-group.form-group-optional, div#field-e
   max-width: 100%;
 }
 
-.is-hidden{
+.is-hidden {
   display: none !important;
 }
 
 .index-courses-list {
-    padding: 0px;
+  padding: 0px;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	text-align:left;
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
 }
 
-.container {
-	padding:0 0;
-}
-
-.view-register footer .container,.view-login footer .container {
-    width: auto;
-    background-color: transparent;
+.view-register footer .container, .view-login footer .container {
+  width: auto;
+  background-color: transparent;
 }
 
 li.field-group.field-education-level.form-group.form-group-optional {
-    margin: 0 0 20px 0;
+  margin: 0 0 20px 0;
+}
+
+.course-card .course-card-image img {
+  height: 160px
+}
+
+.jumbotron.jumbotron-index {
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+
+.jumbotron h1 {
+  text-align: left
+}
+
+.choicegroup legend {
+  font-size: 1rem;
+}
+
+.xmodule_display.xmodule_HtmlModule p {
+  font-size: 1.1em
+}
+
+.xblock .xblock h2.unit-title {
+  float: left
+}
+
+.course-content .bookmark-button-wrapper {
+  float: right
+}
+
+.course-wrapper .course-content .vert-mod, .course-wrapper .courseware-results-wrapper .vert-mod {
+  clear: both
+}
+
+.course-parts button:hover:not(:disabled) {
+  background-color: transparent !important
+}
+
+.course-details .course-details-icon.easy {
+  color: green
+}
+
+.course-details .course-details-icon.medium {
+  color: #fd7e14
+}
+
+.courses-listing .course-card {
+  max-width: 100% !important;
+}
+
+.courses-row .courses-listing {
+  width: 100%;
+}
+
+.courses-listing li {
+  list-style: none !important;
+  font-size: 12px;
+}
+
+/*
+.navbar.navbar-light .navbar-brand { margin-right:10px; margin-bottom:-10px }
+
+
+.view-login .container, .view-register .container {
+    width: auto;
+}
+
+.view-login nav .container, .view-register nav .container {
+    width: 100%;
+}
+
+.view-login nav .container > div{
+  width: 100%;
+}
+
+
+
+.navbar.navbar-light .navbar-brand{
+  width: 100%;
+}*/
+
+.navbar .navbar-toggler:hover:not(:disabled), .navbar .navbar-toggler {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.course-card .course-card-content h3 {
+  min-height: 45px
+}
+
+.add_post_btn_container {
+  margin-bottom: 10px
+}
+
+.wiki-wrapper section.wiki .breadcrumbs-header {
+  box-sizing: content-box;
+  padding: 12px 0 26px
+}
+
+.wiki-wrapper section.wiki .breadcrumbs-header h2.page-title {
+  margin: 0 0 0 40px
+}
+
+.wiki-wrapper section.wiki .global-functions {
+  margin-top: -24px
+}
+
+.wiki-wrapper section.wiki .nav-tabs li {
+  display: block
+}
+
+.wiki-wrapper section.wiki .article-functions .nav {
+  display: block
+}
+
+.modal {
+  bottom: auto
+}
+
+.bookmark-button:focus:not(:disabled) {
+  color: #b43f37;
+}
+
+a:focus {
+  background-color: transparent;
+}
+
+.breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited {
+  color: #b43f37;
+}
+
+.u-field-password .account-settings-sections .section .account-settings-section-body .u-field .u-field-message .u-field-message-notification {
+  padding: 10px 0 0 100px;
+}
+
+.text-right {
+  text-align: right
+}
+
+@media (max-width: 768px) {
+  .course-card .course-card-image img {
+    display: inline-block
+  }
+  .course-card .course-card-image {
+    text-align: center
+  }
+  .register .col-md-8 {
+    margin-bottom: 50px
+  }
+  .navbar .navbar-nav .nav-item a {
+    margin-bottom: 5px
+  }
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.focused, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+  background-color: #fff !important;
+}
+
+a:not(.btn) {
+  color: #B43F37 !important;
+}
+
+h1, .h1 {
+  font-size: 2.2rem
+}
+
+@media (max-width: 400px) {
+  .footer .footer-logos img {
+    max-width: 212px;
+  }
+
+  #navbarSupportedContent{
+    margin-top: 15px;
+  }
+
+}
+
+.forum-nav {
+  .forum-nav-filter-main, .forum-nav-sort {
+    font: inherit;
+    line-height: 1em;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+    select{
+      width: 100%;
+    }
+  }
+}
+
+.vjs-mouse-display{
+  word-break: keep-all !important;
+}
+
+.xmodule_display.xmodule_HtmlModule img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-outline-primary{
+  background-color: white;
+}
+
+.forum-search .search-input{
+  width: 100%;
+}
+
+.courses-row.courses-listing li a { margin:0px !important; margin-bottom:15px !important; }
+
+.video-js .vjs-tech {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.videojs_block {
+    height: auto;
+    /*max-width: 500px;*/
+}
+
+.video-js.vjs-qualityselector {
+    display: block;
+    height: auto;
+}
+
+.wrap-instructor-info .instructor-info-action:hover { background-color:transparent !important }
+.slick-header-column.ui-state-default { height:auto !important }
+a:not(.btn):hover { text-decoration: underline !important }
+.instructor-nav button:focus:not(:disabled) { color: black !important }
+.course-content .popup-content p { color:white; font-size:14px }
+
+.setting-input{
+  color: #B43F37 !important;
+}
+
+a.course-card.card-color--new {
+    text-decoration: none !important;
 }

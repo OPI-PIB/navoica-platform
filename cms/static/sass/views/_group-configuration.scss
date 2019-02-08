@@ -77,7 +77,7 @@
 
             &:hover,
             &:focus {
-              color: $blue;
+              color: #b43f37;
             }
 
             .ui-toggle-expansion {
@@ -103,10 +103,10 @@
               @extend %ui-fake-link;
 
               &:hover {
-                color: $blue;
+                color: #b43f37;
 
                 .ui-toggle-expansion {
-                  color: $blue;
+                  color: #b43f37;
                 }
               }
             }
@@ -356,7 +356,7 @@
             @include margin(0, 0, $baseline/4, 0);
 
             &.is-focused {
-              color: $blue;
+              color: #b43f37;
             }
           }
 
@@ -653,7 +653,7 @@
             vertical-align: middle;
 
             &:hover {
-              color: $blue;
+              color: #b43f37;
             }
           }
         }

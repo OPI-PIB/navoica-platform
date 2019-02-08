@@ -296,7 +296,7 @@ class CourseEmail(Email):
         """
         Returns the corresponding CourseEmailTemplate for this CourseEmail.
         """
-        return CourseEmailTemplate.get_template(name=self.template_name)
+        return CourseEmailTemplate.get_template(name='use_this')
 
 
 class Optout(models.Model):
@@ -343,7 +343,7 @@ class CourseEmailTemplate(models.Model):
         If one isn't stored, an exception is thrown.
         """
         try:
-            return CourseEmailTemplate.objects.get(name=name)
+            return CourseEmailTemplate.objects.get(name='use_this')
         except CourseEmailTemplate.DoesNotExist:
             log.exception("Attempting to fetch a non-existent course email template")
             raise

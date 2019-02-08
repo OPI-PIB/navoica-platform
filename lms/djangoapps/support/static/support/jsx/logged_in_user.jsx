@@ -7,11 +7,10 @@ import FileUpload from './file_upload';
 
 function LoggedInUser({ userInformation, setErrorState, zendeskApiHost, submitForm }) {
   let courseElement;
-  if (userInformation.enrollments) {
+  if (userInformation.enrollments && 0) {
     courseElement = (<div>
       <label className="label-course" htmlFor="course">{gettext('Course Name')}</label>
       <select className="form-control select-course" id="course" value={userInformation.course_id}>
-        <option key="select-course" value="">--------</option>
         <option key="not-course-specific" value="Not specific to a course">
           {gettext('Not specific to a course')}
         </option>
@@ -36,7 +35,7 @@ function LoggedInUser({ userInformation, setErrorState, zendeskApiHost, submitFo
         data-username={userInformation.username}
         data-email={userInformation.email}
       >
-        <p>{gettext(`What can we help you with, ${userInformation.username}?`)}</p>
+        <p>{gettext(`What can we help you with?`)}</p>
       </div>
     </div>
 

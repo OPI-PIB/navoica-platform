@@ -142,6 +142,11 @@ class videojsXBlock(XBlock):
         html = self.render_template('static/html/videojs_edit.html', context)
         
         frag = Fragment(html)
+        frag.add_css(self.load_resource("static/css/video-js.min.css"))
+        frag.add_css(self.load_resource("static/css/videojs.css"))
+        frag.add_css(self.load_resource("static/css/plugin.css"))
+        frag.add_javascript(self.load_resource("static/js/video-js.js"))
+        frag.add_javascript(self.load_resource("static/js/plugin.js"))
         frag.add_javascript(self.load_resource("static/js/videojs_edit.js"))
         frag.initialize_js('videojsXBlockInitStudio')
         return frag

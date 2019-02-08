@@ -18,7 +18,7 @@ function(_, Course, CertificateModel, SignatoryModel, CertificatesCollection, Ce
          Notification, AjaxHelpers, TemplateHelpers, ViewHelpers, ValidationHelpers, CustomMatchers) {
     'use strict';
 
-    var MAX_SIGNATORIES_LIMIT = 10;
+    var MAX_SIGNATORIES_LIMIT = 2;
     var SELECTORS = {
         detailsView: '.certificate-details',
         editView: '.certificate-edit',

@@ -59,7 +59,7 @@ div.book-wrapper {
           @include clearfix();
 
           padding: 0;
-          color: theme-color("primary");
+          color: $blue;
 
           &:hover, &:focus {
             background-color: transparent;

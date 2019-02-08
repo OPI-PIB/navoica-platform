@@ -207,6 +207,15 @@ class AccountCreationForm(forms.Form):
             "max_length": _PASSWORD_INVALID_MSG,
         }
     )
+    confirm_password = forms.CharField(
+        min_length=password_min_length(),
+        max_length=password_max_length(),
+        error_messages={
+            "required": _PASSWORD_INVALID_MSG,
+            "min_length": _PASSWORD_INVALID_MSG,
+            "max_length": _PASSWORD_INVALID_MSG,
+        }
+    )
     name = forms.CharField(
         min_length=accounts_settings.NAME_MIN_LENGTH,
         error_messages={
@@ -279,6 +288,18 @@ class AccountCreationForm(forms.Form):
         if self.enforce_password_policy:
             validate_password(password, username=self.cleaned_data.get('username'))
         return password
+    
+    def clean_confirm_password(self):
+        """Enforce password policies (if applicable)"""
+        confirm_password = self.cleaned_data["confirm_password"]
+
+        if (
+                "password" in self.cleaned_data and
+                self.cleaned_data["password"] != confirm_password
+        ):
+            raise ValidationError(_("Passwords Don't Match"))
+
+        return confirm_password
 
     def clean_email(self):
         """ Enforce email restrictions (if applicable) """

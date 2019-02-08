@@ -124,8 +124,10 @@
             aboutSectionsData = [
                 {
                     title: gettext('Basic Account Information'),
-                    subtitle: gettext('These settings include basic information about your account.'),
-
+                    subtitle: StringUtils.interpolate(
+                                    gettext('These settings include basic information about your account. {platform_name}'),  // eslint-disable-line max-len
+                                    {platform_name: platformName}
+                                ),
                     messageType: aboutSectionMessageType,
                     message: aboutSectionMessage,
 
@@ -156,7 +158,7 @@
                                 //helpMessage: gettext('Check your email account for instructions to reset your password.')  // eslint-disable-line max-len
                             })
                         },
-                        {
+                        /*{
                             view: new AccountSettingsFieldViews.LanguagePreferenceFieldView({
                                 model: userPreferencesModel,
                                 title: gettext('Language'),
@@ -170,7 +172,7 @@
                                 options: fieldsData.language.options,
                                 persistChanges: true
                             })
-                        },
+                        },*/
                         countryFieldView/*,
                         {
                             view: new AccountSettingsFieldViews.TimeZoneFieldView({

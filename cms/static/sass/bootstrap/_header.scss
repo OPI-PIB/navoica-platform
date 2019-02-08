@@ -155,7 +155,7 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       opacity: 1;
-      color: theme-color("primary");
+      color: $blue;
     }
 
     .course-org {
@@ -176,7 +176,7 @@
     // entire link
     .course-link {
       display: block;
-      color: theme-color("primary");
+      color: $blue;
 
       &:hover {
         color: $link-hover-color;
@@ -448,7 +448,7 @@
 
         &:hover,
         &:active {
-          color: theme-color("primary");
+          color: $blue;
         }
       }
     }

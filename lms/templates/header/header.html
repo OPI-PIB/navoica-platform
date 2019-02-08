@@ -40,17 +40,28 @@ HeaderFactory();
     )}
     % endif
     <div class="container">
+		<a style="margin-right: 30px;margin-bottom: 10px;margin-top: 10px;" href="/">
+            <img style="max-width: fit-content" height="40" src="/static/images/logo-light-bg.svg">
+        </a>
 
-        <a class="navbar-brand" href="/">Navoica</a>
+        % if course and user.is_authenticated():
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+         <span style="white-space: nowrap" class="w-100">
+              % if course.organizer:
+                          <span class="provider"><strong>${settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]}</strong></span><br>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          % if request.path != '/':
-            <form method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
+             % else:
+                          <span class="provider"><strong>${course.display_org_with_default}</strong></span><br>
+
+              % endif
+             <span class="course-name" title="${course.display_name_with_default}">${course.display_name_with_default}</span>
+           </span>
+
+        % else:
+
+
+         % if request.path != '/':
+            <form style="width: 900px;" method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
                 <div class="input-group w-100">
                     <input class="form-control form-control" type="search" name="search_query" placeholder="Wpisz szukaną frazę">
                     <div class="input-group-append">
@@ -58,7 +69,20 @@ HeaderFactory();
                     </div>
                 </div>
             </form>
+          % else:
+			<div class="w-100"></div>
           % endif
+
+        % endif
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <ul class="navbar-nav ml-auto">
                 % if user.is_authenticated():
@@ -86,6 +110,24 @@ HeaderFactory();
 <![endif]-->
 % endif
 
+<%
+unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_ALERT_VERSIONS')
+%>
+<script>
+    var $buoop = {
+        notify:${unsupported_browser_alert_versions | n, decode.utf8},
+        api:5,
+        reminder:0,
+        unsupported:true
+    };
+    function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+    catch(e){window.attachEvent("onload", $buo_f)}
+  </script>
 % if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False):
 <%include file="../widgets/cookie-consent.html" />
 % endif

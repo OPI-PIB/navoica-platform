@@ -18,11 +18,6 @@ self.real_user = getattr(user, 'real_user', user)
 
 
 % if show_dashboard_tabs:
-<li class="mobile-nav-item hidden-mobile nav-item">
-    <a class="btn btn-outline-primary" href="${reverse('dashboard')}">
-        ${_("Courses")}
-    </a>
-</li>
 <!--
 <li class="nav-item">
     <a class="nav-link" href="${marketing_link('BLOG')}">${_("News")}</a>
@@ -35,15 +30,17 @@ self.real_user = getattr(user, 'real_user', user)
     </a>
 </li>
 % endif
+<!--
 <li class="mobile-nav-item hidden-mobile nav-item">
     <a class="${'active ' if '/u/' in request.path  else ''}nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">
         ${_("Profile")}
     </a>
 </li>
+-->
 % endif
 
 <li class="nav-item">
-    <a class="btn btn-outline-primary" href="${marketing_link('ABOUT')}">${_("About")}</a>
+    <a class="btn btn-outline-primary" href="http://polskimooc.edu.pl" target="_blank">${_("About")}</a>
 </li>
 
 <li class="nav-item">

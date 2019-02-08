@@ -1,6 +1,7 @@
 <%namespace name='static' file='../static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
+from django.utils.translation import ungettext
 from django.utils.translation import pgettext
 from django.core.urlresolvers import reverse
 from courseware.courses import get_course_about_section, get_course_overview_with_access
@@ -137,13 +138,15 @@ from six import string_types
           <div class="col-lg-5 pt-4 pt-lg-0">
             <h1>${course.display_name_with_default_escaped}</h1>
             <p class="mt-0">${get_course_about_section(request, course, "short_description")}</p>
-            <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
-            <img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
+            % if course.organizer:
+				<% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+				<img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
+			% endif
           </div>
           <div class="col-lg-4 text-lg-center pt-4 pt-lg-0">
               %if user.is_authenticated() and registered:
 			<span class="register disabled">${_("You are enrolled in this course")}</span><br/>
-			<a href="${course_target}" class="btn btn-lg btn-primary btn-icon ${href_class}"><i class="icon-book"></i> ${_("View Course")}</a>
+			<a href="${course_target}" class="btn btn-lg btn-primary btn-icon"><i class="icon-book"></i> ${_("View Course")}</a>
 		  %else:
 			<a href="${reg_href}" class="btn btn-lg btn-primary btn-icon ${href_class}"><i class="icon-book"></i> Weź udział w kursie</a>
 		  % endif
@@ -205,6 +208,7 @@ from six import string_types
 
   </%block>
   <%block name="course_about_details">
+    % if (course.organizer and get_course_about_section(request, course, "overview") and course.difficulty and course.course_category and course.timetable and get_course_about_section(request, course, "effort")):
 	<section class="course-content">
         <div class="row">
 		  <div class="col-lg-9">
@@ -218,8 +222,10 @@ from six import string_types
           <div class="col-lg-3">
             <h2>Informacje podstawowe</h2>
             <ul class="course-details">
+			
+			% if course.difficulty:
 			  <li>
-                <div class="course-details-icon">
+                <div class="course-details-icon ${course.difficulty}">
                   <i class="icon-level"></i>
                 </div>
                 <div class="course-details-content">
@@ -230,8 +236,9 @@ from six import string_types
                   <strong>Poziom trudności kursu:</strong> ${course_difficulty}
                 </div>
               </li>
+            % endif
 
-
+			% if course.course_category:
               <li>
                 <div class="course-details-icon">
                   <i class="icon-briefcase"></i>
@@ -244,21 +251,21 @@ from six import string_types
                   <strong>Kategoria tematyczna:</strong> ${course_c}
                 </div>
               </li>
-
+            % endif
+            
+            
+			% if course.timetable:
               <li>
                 <div class="course-details-icon">
                   <i class="icon-time"></i>
                 </div>
                 <div class="course-details-content">
-				  <% for a in settings.ALL_COURSE_TIMETABLE:
-						if (a[0]==course.timetable):
-							course_timetable = a[1]
-				  %>
-                  <strong>Czas trwania kursu (w tygodniach):</strong> ${course_timetable}
+                  <strong>Czas trwania kursu:</strong> ${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}
                 </div>
               </li>
+            % endif
 
-              % if not course.start_date_is_still_default:
+            % if not course.start_date_is_still_default:
               <%
                   course_start_date = course.advertised_start or course.start
               %>
@@ -284,7 +291,7 @@ from six import string_types
 
           % endif
 
-          % if course.end:
+            % if course.end:
                 <%
                     course_end_date = course.end
                 %>
@@ -308,7 +315,7 @@ from six import string_types
             % endif
 
 
-              % if course.enrollment_start:
+            % if course.enrollment_start:
                 <%
                     course_end_date = course.enrollment_start
                 %>
@@ -354,15 +361,21 @@ from six import string_types
               </li>
             % endif
 
-            
+            % if get_course_about_section(request, course, "effort"):
               <li>
                 <div class="course-details-icon">
                   <i class="icon-time"></i>
                 </div>
                 <div class="course-details-content">
-                  <strong>Tygodniowy wysiłek godzinowy:</strong> ${get_course_about_section(request, course, "effort")} godzin
+				   <%					
+						txt = get_course_about_section(request, course, "effort")
+						course_effort = txt
+						txt = float(txt.replace(':', '.'))
+                   %>	                 
+                  <strong>Tygodniowy wysiłek godzinowy:</strong> ${ungettext("{effort} hour", "{effort} hours", txt).format(effort=course_effort) | h}
                 </div>
               </li>
+            % endif
               
 		     % if course.organizer:
               <li>
@@ -376,7 +389,8 @@ from six import string_types
               </li>
              % endif
             </ul>
-          %if user.is_authenticated() and registered:
+            
+          % if user.is_authenticated() and registered:
           <!--
             <h2>Może Cię zainteresować</h2>
             <a href="#" class="course-card course-card-simple card-color--new">
@@ -401,6 +415,9 @@ from six import string_types
 
         </div>
       </section>
+    % else:
+		<strong style="color:red">Uzupełnij wszystkie pola w zakładce Szczegóły i harmonogram!</strong>
+    % endif
 
 
 
@@ -448,7 +465,7 @@ from six import string_types
         <input name="submit" type="submit" value="${pgettext('self','enroll')}">
       </div>
     </form>
-  </div>
+  </di
 %endif
 
 <%include file="../video_modal.html" />

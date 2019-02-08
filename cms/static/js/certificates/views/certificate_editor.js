@@ -16,7 +16,7 @@ function($, _, Backbone, gettext,
 
     // If signatories limit is required to specific value then we can change it.
     // However, Setting this limit to 100 that will allow PMs to add as many signatories as they want.
-    var MAX_SIGNATORIES_LIMIT = 100;
+    var MAX_SIGNATORIES_LIMIT = 2;
     var CertificateEditorView = ListItemEditorView.extend({
         tagName: 'div',
         events: {
