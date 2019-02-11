@@ -10,8 +10,9 @@ course_mode_class = course_mode if course_mode else ''
     <div id="certificate">
         <section>
             <header>
-               <span class="left"><img src="https://navoica.pl/static/images/logo-light-bg.svg" height="30"></span>
-                <span class="right"><img src="http://fmn.org.pl/wp-content/themes/fmn/build/images/logo.svg" height="30"></span>
+                <span class="left"><img src="https://navoica.pl/static/images/logo-light-bg.svg" height="30"></span>
+                <span class="right"><img src="http://fmn.org.pl/wp-content/themes/fmn/build/images/logo.svg"
+                                         height="30"></span>
             </header>
             <div id="certificate-content">
                 <p class="fancy"><span>Zaświadczenie</span></p>
@@ -28,17 +29,18 @@ course_mode_class = course_mode if course_mode else ''
                     <div id="course-instructors">
                         <p class="label">Prowadzący:</p>
                         <ul>
-                        % for signatory in certificate_data.get('signatories', []):
+                            % for signatory in certificate_data.get('signatories', []):
                             % if loop.index < 2:
                             <li>
                                 <div class="instructor">
-                                       <img style="max-width: 200px" class="signatory-signature" src="${signatory['signature_image_path']}">
+                                    <img style="max-width: 200px" class="signatory-signature"
+                                         src="${signatory['signature_image_path']}">
                                     <p class="instructor-name">${signatory['name']}</p>
                                     <p class="instructor-position">${signatory['title']}</p>
                                 </div>
                             </li>
                             % endif
-                        % endfor
+                            % endfor
                         </ul>
                     </div>
                     % endif
@@ -47,7 +49,8 @@ course_mode_class = course_mode if course_mode else ''
             <footer>
                 <div id="note">
                     <p>
-                        Dokument poświadcza ukończenie kursu ${accomplishment_copy_course_name} na platformie ${platform_name}, którego organizatorem jest ${organizer}
+                        Dokument poświadcza ukończenie kursu ${accomplishment_copy_course_name} na platformie
+                        ${platform_name}, którego organizatorem jest ${organizer}
                     </p>
                 </div>
                 <div id="link">
@@ -57,4 +60,11 @@ course_mode_class = course_mode if course_mode else ''
         </section>
 
     </div>
+</div>
+
+<div class="footer-logos">
+    <img src="/static/images/patrons/logo_mnisw.jpg" alt="Ministerstwo Nauki i Szkolnictwa Wyższego">
+    <img src="/static/images/patrons/logo_krasp.jpg" alt="KRASP">
+    <img src="/static/images/patrons/logo_fmn.jpg" alt="Fundacja Młodej Nauki">
+    <img src="/static/images/patrons/logo_opi_pib.png" alt="OPI - PIB">
 </div>

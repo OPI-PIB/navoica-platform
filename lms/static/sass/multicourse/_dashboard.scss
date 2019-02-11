@@ -943,18 +943,16 @@
 
       &.course-status-certavailable {
         .message-copy {
-          width: flex-grid(6, 12);
+          width: 100%;
           position: relative;
 
           @include float(left);
         }
 
         .actions-primary {
-          @include float(right);
 
           .action {
-                    @include margin(0, 0, ($baseline/2), ($baseline*0.75));
-
+            margin:0;
             float: none;
             text-align: center;
 
