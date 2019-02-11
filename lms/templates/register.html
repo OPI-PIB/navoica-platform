@@ -38,10 +38,11 @@ import calendar
             $("label").parent().removeClass("is-focused");
         });
         
-        $("#confirm_password").on("blur", function() {
+        $("#confirm_password").on("focusout", function() {
 			if ($("#password").val()!=$("#confirm_password").val()) {
 				$("#confirm_password").get(0).setCustomValidity("${_('Passwords Don\'t Match')}");
 				$("#confirm_password").get(0).reportValidity();
+				$("#confirm_password").blur();
 			}
 		});
 
