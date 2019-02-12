@@ -162,7 +162,7 @@ PLATFORM_VERSION = subprocess.check_output(["git -C %s tag" % EDX_ROOT],shell=Tr
 # Dummy secret key for dev/test
 SECRET_KEY = 'dev key'
 
-STUDIO_NAME = _("Your Platform Studio")
+STUDIO_NAME = _("Navoica.pl Studio")
 STUDIO_SHORT_NAME = _("Studio")
 FEATURES = {
     'GITHUB_PUSH': False,
@@ -1210,7 +1210,6 @@ EVENT_TRACKING_BACKENDS = {
     }
 }
 EVENT_TRACKING_PROCESSORS = []
-PLATFORM_NAME = "Navoica.pl"
 #### PASSWORD POLICY SETTINGS #####
 
 PASSWORD_MIN_LENGTH = 8

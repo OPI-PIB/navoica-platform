@@ -58,7 +58,7 @@ EDX_ROOT = path(__file__).abspath().dirname().dirname().dirname()  # /edx-platfo
 
 ################################### FEATURES ###################################
 # The display name of the platform to be used in templates/emails/etc.
-PLATFORM_NAME = _('Your Platform Name Here')
+PLATFORM_NAME = "Navoica.pl"
 PLATFORM_DESCRIPTION = _('Your Platform Description Here')
 CC_MERCHANT_NAME = PLATFORM_NAME
 
@@ -915,7 +915,7 @@ USE_TZ = True
 SESSION_COOKIE_SECURE = False
 SESSION_SAVE_EVERY_REQUEST = False
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
-PLATFORM_NAME = "Navoica.pl"
+
 
 # CMS base
 CMS_BASE = 'localhost:8001'
