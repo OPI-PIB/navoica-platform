@@ -81,8 +81,8 @@ else:
                 </span>
               </li>
             % elif cert_status['status'] == 'downloadable' and cert_status.get('show_cert_web_view', False):
-              <li class="action action-certificate">
-                <a class="btn" href="${cert_status['cert_web_view_url']}" target="_blank"
+              <li class="">
+                <a class="btn btn-primary" style="width: 100%; margin-top:10px" href="${cert_status['cert_web_view_url']}" target="_blank"
                    title="${_('This link will open the certificate web view')}">
                   ${_("View {cert_name_short}").format(cert_name_short=cert_name_short,)}
                 </a>

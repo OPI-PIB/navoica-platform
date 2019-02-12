@@ -968,11 +968,12 @@
             @extend %btn-inherited-primary;
             @include box-sizing(border-box);
 
-            padding: 7px $baseline*0.75;
             float: none;
             border-radius: 3px;
             display: block;
             text-align: center;
+            margin-top: 10px;
+            width: 100%;
 
             a:link,
             a:visited {

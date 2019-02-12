@@ -59,8 +59,6 @@
 %btn-inherited-primary {
   @extend %btn-inherited;
 
-  @include linear-gradient(top, rgba($white, 0.3), rgba($white, 0));
-
   border: 1px solid shade($action-primary-bg, 10%);
   background-color: $action-primary-bg;
   color: $action-primary-fg;
