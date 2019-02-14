@@ -13212,7 +13212,10 @@ a:hover {
 
 .sidebar-header {
   color: #22193E;
-  font-size: 22px
+  font-size: 20px;
+  border-bottom: 1px solid #d1d2d3;
+  padding: 10px 0;
+  margin: 0 0 20px;
 }
 
 .list-group-header {
@@ -13783,4 +13786,30 @@ button.facet-option.discovery-button.selected {
     color: white;
 }
 
+a#clear-all-filters {
+    color: #B43F37;
+    border: none;
+    background: none;
+}
+
+a#clear-all-filters:hover {
+    backgroung-color: #97352e;
+    color: #fff;
+    border-color: #97352e;
+}
+
+a#clear-all-filters:active {
+    color: #fff;
+    background-color: #B43F37;
+    border-color: #B43F37;
+}
+
+a#clear-all-filters:focus {
+    box-shadow: none !important;
+}
+
+div#discovery-message {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
 

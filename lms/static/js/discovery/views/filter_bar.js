@@ -38,6 +38,7 @@
                 var label = new FilterLabel({model: filter});
                 this.$ul.append(label.render().el);
                 this.show();
+		document.getElementById('clear-all-filters').style.display = 'block';
             },
 
             hideIfEmpty: function() {
@@ -49,16 +50,19 @@
             resetFilters: function() {
                 this.$ul.empty();
                 this.hide();
+		document.getElementById('clear-all-filters').style.display = 'none';
             },
 
             clearFilter: function(event) {
                 var $target = $(event.currentTarget);
                 var filter = this.collection.get($target.data('type'));
                 this.trigger('clearFilter', filter.id);
+		document.getElementById('clear-all-filters').style.display = 'none';
             },
 
             clearAll: function(event) {
                 this.trigger('clearAll');
+		document.getElementById('clear-all-filters').style.display = 'none';
             },
 
             show: function() {
@@ -68,6 +72,7 @@
             hide: function() {
                 this.$ul.empty();
                 this.$el.addClass('is-collapsed');
+		document.getElementById('clear-all-filters').style.display = 'none';
             }
 
         });
