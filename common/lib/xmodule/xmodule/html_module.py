@@ -25,6 +25,8 @@ from xmodule.util.misc import escape_html_characters
 from xmodule.x_module import DEPRECATION_VSCOMPAT_EVENT, XModule
 from xmodule.xml_module import XmlDescriptor, name_to_pathname
 
+from .fields import Boolean2
+
 log = logging.getLogger("edx.courseware")
 
 # Make '_' a no-op so we can scrape strings. Using lambda instead of
@@ -382,12 +384,14 @@ class StaticTabFields(object):
         scope=Scope.settings,
         default="Pusta",
     )
-    course_staff_only = Boolean(
-        display_name=_("Hide Page From Learners"),
+    course_staff_only = Boolean2(
         help=_("If you select this option, only course team members with"
                " the Staff or Admin role see this page."),
         default=False,
-        scope=Scope.settings
+        scope=Scope.settings,
+        display_name=_("Hide Page From Learners"),
+        values=({'display_name': "Tak", "value": True},
+                {'display_name': "Nie", "value": False})
     )
     data = String(
         default=textwrap.dedent(u"""\
