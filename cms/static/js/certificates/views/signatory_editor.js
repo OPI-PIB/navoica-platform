@@ -72,7 +72,7 @@ function($, _, Backbone, gettext,
                 modelIsValid: this.model.isValid(),
                 error: this.model.validationError
             }, this.model.attributes, {
-                signatory_number: this.getModelIndex(this.model) + 1,
+                signatory_number: this.getModelIndex(this.model),
                 signatories_count: this.model.collection.length,
                 isNew: this.model.isNew(),
                 is_editing_all_collections: this.isEditingAllCollections,

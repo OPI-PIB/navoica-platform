@@ -17,10 +17,6 @@
           <span class="signatory-title-label"><b><%- gettext("Title") %>:</b>&nbsp;</span>
           <span class="signatory-title-value"><%= _.escape(title).replace(new RegExp('\r?\n','g'), '<br />') %></span>
         </div>
-        <div>
-          <span class="signatory-organization-label"><b><%- gettext("Organization") %>:</b>&nbsp;</span>
-          <span class="signatory-organization-value"><%- organization %></span>
-        </div>
     </div>
     <div class="signatory-image">
       <% if (signature_image_path != "") { %>
