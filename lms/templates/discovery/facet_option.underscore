@@ -1,5 +1,6 @@
 <li>
     <button data-facet="<%- facet %>" data-value="<%- term %>" data-text="<%- name %>" class="facet-option discovery-button <%- selected ? 'selected' : '' %>">
+        <input type="checkbox"  <%- selected ? 'checked' : '' %>>
         <%- gettext(name) %>
         <span class="count">
             <span class="count-number"><%- count %></span>
