@@ -41,7 +41,7 @@ course_mode_class = course_mode if course_mode else ''
         }
 
         #container {
-            margin: 128px auto 20px;
+            margin: 40px auto 20px;
             max-width: 1122px;
             min-width: 777.767px;
             max-height: 792px;
@@ -235,7 +235,7 @@ course_mode_class = course_mode if course_mode else ''
         header .left, header .right {
             width: 50%;
             float: left;
-            padding-top: 30px;
+            padding-top: 15px;
             padding-left: 10px;
             padding-right: 10px;
         }
@@ -289,12 +289,18 @@ course_mode_class = course_mode if course_mode else ''
             max-height: 72px;
         }
 
+        .print-footer{
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+
         @media print {
             @page {
                 size: landscape;
             }
 
-            footer.footer,.wrapper-header,.wrapper-footer {
+            footer.footer,.wrapper-header,.wrapper-footer,.print-footer {
                 display: none;
             }
 
