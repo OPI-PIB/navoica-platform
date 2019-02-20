@@ -10,9 +10,8 @@ course_mode_class = course_mode if course_mode else ''
     <div id="certificate">
         <section>
             <header>
-                <span class="left"><img src="https://navoica.pl/static/images/logo-light-bg.svg" height="30"></span>
-                <span class="right"><img src="http://fmn.org.pl/wp-content/themes/fmn/build/images/logo.svg"
-                                         height="30"></span>
+                <span class="left"><img src="/static/images/logo-light-bg.svg" height="30"></span>
+                <span class="right"><img src="/static/images/org/${organizer}.png" height="30"></span>
             </header>
             <div id="certificate-content">
                 <p class="fancy"><span>Zaświadczenie</span></p>
@@ -49,7 +48,7 @@ course_mode_class = course_mode if course_mode else ''
             <footer>
                 <div id="note">
                     <p>
-                        Dokument poświadcza ukończenie kursu ${accomplishment_copy_course_name} na platformie
+                        Dokument poświadcza ukończenie kursu "${accomplishment_copy_course_name}" na platformie
                         ${platform_name}, którego organizatorem jest ${organizer}
                     </p>
                 </div>
@@ -61,5 +60,11 @@ course_mode_class = course_mode if course_mode else ''
 
     </div>
 </div>
-<link rel="stylesheet" href="/static/css/polipedia.css" type="text/css" media="screen" />
+<div>
+    <button onclick="window.print()" class="action action-print btn-black btn-small" id="action-print-view">
+        <span class="icon fa fa-print" aria-hidden="true"></span>
+        Wydrukuj certyfikat
+    </button>
+</div>
+<link rel="stylesheet" href="/static/css/polipedia.css" type="text/css" media="screen"/>
 <%include file="/footer.html" />
