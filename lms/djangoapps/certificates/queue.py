@@ -322,7 +322,7 @@ class XQueueCertInterface(object):
         # Strip HTML from grade range label
         grade_contents = forced_grade or course_grade.letter_grade
         try:
-            grade_contents = lxml.html.fromstring(grade_contents).text_content()
+            grade_contents = "" #lxml.html.fromstring(grade_contents).text_content()
             passing = True
         except (TypeError, XMLSyntaxError, ParserError) as exc:
             LOGGER.info(
