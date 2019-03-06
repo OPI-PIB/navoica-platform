@@ -39,17 +39,15 @@ self.real_user = getattr(user, 'real_user', user)
 -->
 % endif
 
+<!--
 <li class="nav-item">
     <a class="btn btn-outline-primary" href="http://polskimooc.edu.pl" target="_blank">${_("About")}</a>
 </li>
-
-<li class="nav-item">
-    <a class="btn btn-outline-primary" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
-</li>
+-->
 
 % if show_explore_courses:
 <li class="mobile-nav-item hidden-mobile nav-item">
-    <a class="nav-link" href="${marketing_link('COURSES')}">${_('Discover New')}</a>
+    <a class="btn btn-outline-primary" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
 </li>
 % endif
 % if show_sysadmin_dashboard:
@@ -66,6 +64,10 @@ self.real_user = getattr(user, 'real_user', user)
     </a>
 </div>
 % endif
+
+<li class="nav-item">
+    <a class="btn btn-outline-primary" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
+</li>
 
 <%include file="user_dropdown.html"/>
 
