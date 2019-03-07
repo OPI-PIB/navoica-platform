@@ -16,13 +16,11 @@ show_sysadmin_dashboard = settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') 
 self.real_user = getattr(user, 'real_user', user)
 %>
 
-
-% if show_dashboard_tabs:
 <!--
+% if show_dashboard_tabs:
 <li class="nav-item">
     <a class="nav-link" href="${marketing_link('BLOG')}">${_("News")}</a>
 </li>
--->
 % if show_program_listing:
 <li class="mobile-nav-item hidden-mobile nav-item">
     <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
@@ -30,26 +28,23 @@ self.real_user = getattr(user, 'real_user', user)
     </a>
 </li>
 % endif
-<!--
 <li class="mobile-nav-item hidden-mobile nav-item">
     <a class="${'active ' if '/u/' in request.path  else ''}nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">
         ${_("Profile")}
     </a>
 </li>
--->
 % endif
 
-<!--
 <li class="nav-item">
     <a class="btn btn-outline-primary" href="http://polskimooc.edu.pl" target="_blank">${_("About")}</a>
 </li>
 -->
 
-% if show_explore_courses:
+<!--% if show_explore_courses:-->
 <li class="mobile-nav-item hidden-mobile nav-item">
     <a class="btn btn-outline-primary" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
 </li>
-% endif
+<!--% endif-->
 % if show_sysadmin_dashboard:
 <li class="mobile-nav-item hidden-mobile nav-item">
     ## Translators: This is short for "System administration".
