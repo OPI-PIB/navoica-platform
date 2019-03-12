@@ -15,6 +15,7 @@ course_mode_class = course_mode if course_mode else ''
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="${static.url(static.get_value('favicon_path', settings.FAVICON_PATH))}"/>
 
     <title>${document_title}</title>
 
@@ -289,7 +290,7 @@ course_mode_class = course_mode if course_mode else ''
             max-height: 72px;
         }
 
-        .print-footer{
+        .print-footer {
             text-align: center;
             margin-bottom: 20px;
 
@@ -300,7 +301,7 @@ course_mode_class = course_mode if course_mode else ''
                 size: landscape;
             }
 
-            footer.footer,.wrapper-header,.wrapper-footer,.print-footer {
+            footer.footer, .wrapper-header, .wrapper-footer, .print-footer {
                 display: none;
             }
 
@@ -311,7 +312,6 @@ course_mode_class = course_mode if course_mode else ''
                 width: 1122px;
                 height: 792px;
             }
-
 
 
         }
