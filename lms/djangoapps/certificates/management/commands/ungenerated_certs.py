@@ -105,8 +105,7 @@ class Command(BaseCommand):
             for student in enrolled_students:
 
                 course_grade = CourseGradeFactory().read(student, course)
-                if course_grade.letter_grade not in (
-                "Zaliczone", "Pass") or course_grade.passed:  # quite hacky due to change word Passing to Zaliczone
+                if not course_grade.passed:
                     LOGGER.info(
                         (
                             u"Student %s not passing due to letter grade '%s' "
