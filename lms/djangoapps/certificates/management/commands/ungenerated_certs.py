@@ -115,6 +115,7 @@ class Command(BaseCommand):
                         course_grade.letter_grade,
                         text_type(course_key)
                     )
+                    continue
 
                 count += 1
                 if count % status_interval == 0:
