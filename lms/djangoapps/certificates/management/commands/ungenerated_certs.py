@@ -62,7 +62,7 @@ class Command(BaseCommand):
             dest='force',
             default=False,
             help='Will generate new certificates for only those users whose entry in the certificate table matches '
-            'STATUS. STATUS can be generating, unavailable, deleted, error or notpassing.'
+                 'STATUS. STATUS can be generating, unavailable, deleted, error or notpassing.'
         )
 
     def handle(self, *args, **options):
@@ -105,15 +105,17 @@ class Command(BaseCommand):
             for student in enrolled_students:
 
                 course_grade = CourseGradeFactory().read(student, course)
-                if course_grade.letter_grade != "Zaliczone": #quite hacky due to change word Passing to Zaliczone
+                if course_grade.letter_grade not in (
+                "Zaliczone", "Pass"):  # quite hacky due to change word Passing to Zaliczone
                     LOGGER.info(
                         (
                             u"Student %s not passing due to letter grade '%s' "
-                            u"in course '%s'"
+                            u"in course '%s' ||| %s"
                         ),
                         student.id,
                         course_grade.letter_grade,
-                        text_type(course_key)
+                        text_type(course_key),
+                        course_grade.__dict__
                     )
                     continue
 
