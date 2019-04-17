@@ -15,6 +15,7 @@ from six import text_type
 from lms.djangoapps.certificates.api import generate_user_certificates
 from lms.djangoapps.certificates.models import CertificateStatuses, certificate_status_for_student
 from xmodule.modulestore.django import modulestore
+from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
 
 LOGGER = logging.getLogger(__name__)
 
@@ -102,6 +103,19 @@ class Command(BaseCommand):
             start = datetime.datetime.now(UTC)
 
             for student in enrolled_students:
+
+                course_grade = CourseGradeFactory().read(student, course)
+                if course_grade.letter_grade != "Zaliczone": #quite hacky due to change word Passing to Zaliczone
+                    LOGGER.info(
+                        (
+                            u"Student %s not passing due to letter grade '%s' "
+                            u"in course '%s'"
+                        ),
+                        student.id,
+                        course_grade.letter_grade,
+                        text_type(course_key)
+                    )
+
                 count += 1
                 if count % status_interval == 0:
                     # Print a status update with an approximation of
