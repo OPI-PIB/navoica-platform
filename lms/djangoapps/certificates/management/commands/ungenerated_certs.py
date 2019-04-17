@@ -110,12 +110,11 @@ class Command(BaseCommand):
                     LOGGER.info(
                         (
                             u"Student %s not passing due to letter grade '%s' "
-                            u"in course '%s' ||| %s"
+                            u"in course '%s'"
                         ),
                         student.id,
                         course_grade.letter_grade,
                         text_type(course_key),
-                        course_grade.__dict__
                     )
                     continue
 
