@@ -30,7 +30,69 @@ from openedx.core.djangolib.markup import HTML, Text
 <%include file="index_promo_video.html" />
 
 <%include file="${courses_list}" />
+<section class="about-us index-courses-list">
+	<div class="container" style="">
+	  <h2>O platformie  Navoica</h2>
+	  
+	  <div class="row courses-row">
 
+		<a href="/courses/course-v1:FMN+TK101+2018_1/about" class="col-md-6 col-xl-4 course-card card-color--new">
+			 
+			<figure class="course-card-image">
+			  <img src="/static/images/iconfinder_blackboard-data-summary-annual-report_3209360.png" alt="">
+			</figure>
+			<div class="course-card-content">
+			  <h3>Bogata oferta wirtualnych kursów</h3>
+				<p>Szeroki zakres tematyczny kursów o&nbsp;zróżnicowanym poziomie trudności. Każdy kursant znajdzie dla siebie interesujący kurs.</p>
+			</div>
+			<footer class="course-card-footer">
+			  <ul>
+					<li><time class="course-card-start"><i class="icon-calendar"></i> Rozpoczęcie: 2018-10-22</time></li>
+			  </ul>
+			</footer>
+		</a>
+
+		<a href="/courses/course-v1:PW+TTS+2018_1/about" class="col-md-6 col-xl-4 course-card card-color--new">
+			 
+			<figure class="course-card-image">
+			  <img src="/static/images/iconfinder_globe-notification-earth-language-global_3209346.png" alt="">
+			</figure>
+			<div class="course-card-content">
+			  <h3>Ogólnodostępna platforma kształcenia</h3>
+				<p>Dzięki platformie internetowej Navoica dotrzemy do każdego, kto chce się uczyć – bez względu na wiek i miejsce zamieszkania.</p>
+			</div>
+			<footer class="course-card-footer">
+			  <ul>
+					<li><time class="course-card-start"><i class="icon-calendar"></i> Rozpoczęcie: 2019-01-14</time></li>
+			  </ul>
+			</footer>
+		</a>
+
+
+		<a href="/courses/course-v1:FMN+ZS18+2018_S1/about" class="col-md-6 col-xl-4 course-card card-color--new">
+			 
+			<figure class="course-card-image">
+			  <img src="/static/images/iconfinder_city-building-urban-office-business_3209372.png" alt="">
+			</figure>
+			<div class="course-card-content">
+			  <h3>Sieć współpracy uczelni i instytucji</h3>
+				<p>Nowy ekosystem kształcenia online skupia: uczelnie, instytucje naukowe, biznes i organizacje pozarządowe.
+		</p>
+			</div>
+			<footer class="course-card-footer">
+			  <ul>
+					<li><time class="course-card-start"><i class="icon-calendar"></i> Rozpoczęcie: 2019-01-14</time></li>
+			  </ul>
+			</footer>
+		</a>
+
+	  </div>
+	</div>
+</section>
+
+<section class="link-all-courses about-us text-center">
+	<a href="/courses" class="btn btn-primary">Dowiedz się więcej o Navoice</a>
+</section>
 
 % if show_homepage_promo_video:
   <section id="video-modal" class="modal home-page-video-modal video-modal">

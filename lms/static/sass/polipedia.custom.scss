@@ -420,3 +420,12 @@ img.logo{ min-width:145px }
 .list-group.filters.is-collapsed{
   display: none;
 }
+
+.jumbotron h1 + p {
+    color: #000;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.jumbotron form {
+    background: rgba(50, 50, 50, .25);
+}
