@@ -1451,8 +1451,8 @@ PIPELINE_CSS = {
         'source_filenames': [
             'css/vendor/font-awesome.css',
             'css/vendor/jquery.qtip.min.css',
-            'css/polipedia.css',
             'css/navoica_new.css',
+            'css/polipedia.css',
         ],
         'output_filename': 'css/lms-style-vendor.css',
     },
