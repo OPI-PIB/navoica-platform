@@ -390,8 +390,8 @@ class StaticTabFields(object):
         default=False,
         scope=Scope.settings,
         display_name=_("Hide Page From Learners"),
-        values=({'display_name': "Tak", "value": True},
-                {'display_name': "Nie", "value": False})
+        values=({'display_name': "Nie", "value": True},
+                {'display_name': "Tak", "value": False})
     )
     data = String(
         default=textwrap.dedent(u"""\
