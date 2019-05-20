@@ -485,7 +485,7 @@ def render_pdf_cert_by_uuid(request, certificate_uuid):
     output =  render_cert_by_uuid(request, certificate_uuid)
 
     multipart_form_data = {
-        'file': ('index.html', unicode(output.content)),
+        'file': ('index.html', str(output.content)),
         'marginTop': (None, 0,),
         'marginBottom': (None, 0,),
         'marginLeft': (None, 0,),
