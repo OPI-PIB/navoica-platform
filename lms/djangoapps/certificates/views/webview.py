@@ -48,7 +48,7 @@ from student.models import LinkedInAddToProfileConfiguration
 from util import organizations_helpers as organization_api
 from util.date_utils import strftime_localized
 from util.views import handle_500
-
+import requests
 
 log = logging.getLogger(__name__)
 _ = translation.ugettext
@@ -483,7 +483,28 @@ def render_cert_by_uuid(request, certificate_uuid):
 
 def render_pdf_cert_by_uuid(request, certificate_uuid):
     output =  render_cert_by_uuid(request, certificate_uuid)
-    print output
+
+    multipart_form_data = {
+        'file': ('index.html', output),
+        'remoteURL': (None, 'https://wp.pl'),
+        'marginTop': (None, 0,),
+        'marginBottom': (None, 0,),
+        'marginLeft': (None, 0,),
+        'marginRight': (None, 0,),
+        'landscape': (None, True,),
+    }
+
+    # $ docker run --rm -p 3000:3000 thecodingmachine/gotenberg:5
+    r = requests.post('http://gotenberg:3000/convert/html', files=multipart_form_data)
+
+    filename = "certyfikat.pdf"
+
+    if (r.status_code == 200):
+        response = HttpResponse(r, content_type='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename="' + filename + '"'
+        return response
+
+
     return output
 
 @handle_500(
