@@ -53,7 +53,7 @@ course_mode_class = course_mode if course_mode else ''
                     </p>
                 </div>
                 <div id="link">
-                    <a href="">link do zaświadczenia</a>
+                    <a href="${request.path}">link do zaświadczenia</a>
                 </div>
             </footer>
         </section>
@@ -62,7 +62,7 @@ course_mode_class = course_mode if course_mode else ''
 </div>
 <div class="print-footer">
     <a href="${request.path}/pdf">
-        <span class="icon fa fa-download" aria-hidden="true"></span> Pobierz certyfikat
+        Pobierz certyfikat [PDF]
     </a>
 </div>
 <link rel="stylesheet" href="https://navoica.pl/static/css/polipedia.css" type="text/css" media="screen"/>
