@@ -485,12 +485,12 @@ def render_pdf_cert_by_uuid(request, certificate_uuid):
     output =  render_cert_by_uuid(request, certificate_uuid)
 
     multipart_form_data = {
-        'file': ('index.html', str(output.content)),
-        'marginTop': (None, 0,),
-        'marginBottom': (None, 0,),
-        'marginLeft': (None, 0,),
-        'marginRight': (None, 0,),
-        'landscape': (None, True,),
+        'file': ('index.html', output.content),
+        'marginTop': (None, '0',),
+        'marginBottom': (None, '0',),
+        'marginLeft': (None, '0',),
+        'marginRight': (None, '0',),
+        'landscape': (None, 'true',),
     }
 
     # $ docker run --rm -p 3000:3000 thecodingmachine/gotenberg:5
