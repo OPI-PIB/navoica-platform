@@ -481,6 +481,10 @@ def render_cert_by_uuid(request, certificate_uuid):
     except GeneratedCertificate.DoesNotExist:
         raise Http404
 
+def render_pdf_cert_by_uuid(request, certificate_uuid):
+    output =  render_cert_by_uuid(request, certificate_uuid)
+    print output
+    return output
 
 @handle_500(
     template_path="certificates/server-error.html",
@@ -617,6 +621,11 @@ def render_html_view(request, user_id, course_id):
         # Render the certificate
         return _render_valid_certificate(request, context, custom_template)
 
+
+def render_pdf_view(request, user_id, course_id):
+    output = render_html_view(request, user_id, course_id)
+    print output
+    return output
 
 def _get_catalog_data_for_course(course_key):
     """

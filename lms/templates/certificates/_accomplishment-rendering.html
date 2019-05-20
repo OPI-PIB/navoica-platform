@@ -10,8 +10,8 @@ course_mode_class = course_mode if course_mode else ''
     <div id="certificate">
         <section>
             <header>
-                <span class="left"><img src="/static/images/logo-light-bg.svg" width="150"></span>
-                <span class="right"><img src="/static/images/org/${organizer}.png?1" width="150"></span>
+                <span class="left"><img src="https://navoica.pl/static/images/logo-light-bg.svg" width="150"></span>
+                <span class="right"><img src="https://navoica.pl/static/images/org/${organizer}.png" width="150"></span>
             </header>
             <div id="certificate-content">
                 <p class="fancy"><span>Zaświadczenie</span></p>
@@ -33,7 +33,7 @@ course_mode_class = course_mode if course_mode else ''
                             <li>
                                 <div class="instructor">
                                     <img style="max-width: 200px" class="signatory-signature"
-                                         src="${signatory['signature_image_path']}">
+                                         src="https://navoica.pl/${signatory['signature_image_path']}">
                                     <p class="instructor-name">${signatory['name']}</p>
                                     <p class="instructor-position">${signatory['title']}</p>
                                 </div>
@@ -61,10 +61,9 @@ course_mode_class = course_mode if course_mode else ''
     </div>
 </div>
 <div class="print-footer">
-    <button onclick="window.print()" class="action action-print btn-black btn-small" id="action-print-view">
-        <span class="icon fa fa-print" aria-hidden="true"></span>
-        Wydrukuj certyfikat
-    </button>
+    <a href="/pdf">
+        <span class="icon fa fa-download" aria-hidden="true"></span> Pobierz certyfikat
+    </a>
 </div>
-<link rel="stylesheet" href="/static/css/polipedia.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="https://navoica.pl/static/css/polipedia.css" type="text/css" media="screen"/>
 <%include file="/footer.html" />
