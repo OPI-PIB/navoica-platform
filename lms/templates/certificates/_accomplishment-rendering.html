@@ -62,7 +62,7 @@ course_mode_class = course_mode if course_mode else ''
     </div>
 </div>
 <div class="print-footer">
-    <button onclick="window.location.href='${settings.LMS_ROOT_URL}${request.path}/pdf'" class="action action-print btn-black btn-small" id="action-print-view">
+    <button onclick="window.location.href='${settings.LMS_ROOT_URL}${request.path}/pdf?preview='${request.GET.preview}" class="action action-print btn-black btn-small" id="action-print-view">
         <span class="icon fa fa-download" aria-hidden="true"></span>
         Pobierz certyfikat [PDF]
     </button>
