@@ -420,3 +420,5 @@ img.logo{ min-width:145px }
 .list-group.filters.is-collapsed{
   display: none;
 }
+
+.search-facets-lists button:active:not(:disabled), .search-facets-lists button:focus:not(:disabled), .search-facets-lists button.facet-option.discovery-button.selected { color:black; box-shadow: 0 0 0 0 transparent; background-color: transparent; border-color: transparent; }

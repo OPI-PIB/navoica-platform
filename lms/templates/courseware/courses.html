@@ -12,7 +12,7 @@
 
 % if course_discovery_enabled:
 <%block name="header_extras">
-  % for template_name in ["course_card", "filter_bar", "filter", "facet", "facet_option"]:
+  % for template_name in ["course_card", "filter_bar", "filter", "facet", "facet_option", "facet_select"]:
   <script type="text/template" id="${template_name}-tpl">
       <%static:include path="discovery/${template_name}.underscore" />
   </script>
@@ -36,9 +36,10 @@
       <div class="row">
         <div class="col-md-3">
           <div class="bg-light bg-brand p-4 rounded search-facets">
-            <div id="filter-bar" class="list-group filters hide-phone is-collapsed">
+            <div id="discovery-message" class="search-status-label fa-pull-left">Filtrowanie</div>
+            <div id="filter-bar" class=" filters hide-phone is-collapsed">
             </div>
-	    <hr class="my-4">
+	    <hr class="my-5">
             <section class="search-facets-lists">
             </section>
           </div>
