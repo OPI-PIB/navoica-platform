@@ -62,9 +62,10 @@ course_mode_class = course_mode if course_mode else ''
     </div>
 </div>
 <div class="print-footer">
-    <a href="${settings.LMS_ROOT_URL}${request.path}/pdf">
+    <button onclick="window.location.href='${settings.LMS_ROOT_URL}${request.path}/pdf'" class="action action-print btn-black btn-small" id="action-print-view">
+        <span class="icon fa fa-download" aria-hidden="true"></span>
         Pobierz certyfikat [PDF]
-    </a>
+    </button>
 </div>
 <link rel="stylesheet" href="${settings.LMS_ROOT_URL}/static/css/polipedia.css" type="text/css" media="screen"/>
 <%include file="/footer.html" />
