@@ -10,6 +10,7 @@ import openedx.core.djangoapps.common_views.xblock
 import openedx.core.djangoapps.debug.views
 import openedx.core.djangoapps.external_auth.views
 import openedx.core.djangoapps.lang_pref.views
+from django.views.generic import TemplateView
 
 from ratelimitbackend import admin
 
