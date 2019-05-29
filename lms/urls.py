@@ -138,6 +138,11 @@ urlpatterns = [
     url(r'^api/experiments/', include('experiments.urls', namespace='api_experiments')),
 ]
 
+robots = TemplateView.as_view(template_name='robots.txt', content_type='text/plain')
+urlpatterns += [
+    url(r'^robots\.txt$', robots, name='robots')
+]
+
 # TODO: This needs to move to a separate urls.py once the student_account and
 # student views below find a home together
 if settings.FEATURES.get('ENABLE_COMBINED_LOGIN_REGISTRATION'):

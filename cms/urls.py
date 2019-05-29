@@ -160,6 +160,11 @@ urlpatterns = [
     url(r'^accessibility$', contentstore.views.accessibility, name='accessibility'),
 ]
 
+robots = TemplateView.as_view(template_name='robots.txt', content_type='text/plain')
+urlpatterns += [
+    url(r'^robots\.txt$', robots, name='robots')
+]
+
 JS_INFO_DICT = {
     'domain': 'djangojs',
     # We need to explicitly include external Django apps that are not in LOCALE_PATHS.
