@@ -33,7 +33,7 @@ course_mode_class = course_mode if course_mode else ''
                             % if loop.index < 2:
                             <li>
                                 <div class="instructor">
-                                    <img style="max-width: 100px; max-height: 100px" class="signatory-signature"
+                                    <img style="max-width: 100px !important; max-height: 100px" class="signatory-signature"
                                          src="${settings.LMS_ROOT_URL}${signatory['signature_image_path']}">
                                     <p class="instructor-name">${signatory['name']}</p>
                                     <p class="instructor-position">${signatory['title']}</p>
