@@ -616,6 +616,7 @@ DEBUG = False
 SESSION_COOKIE_SECURE = False
 SESSION_SAVE_EVERY_REQUEST = False
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+SESSION_COOKIE_AGE = 86400
 
 # Site info
 SITE_NAME = "localhost:8001"
