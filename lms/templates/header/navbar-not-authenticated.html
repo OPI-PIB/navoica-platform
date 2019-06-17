@@ -23,7 +23,7 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 
 % if courses_are_browsable:
 <li class="nav-item">
-    <a class="btn btn-outline-primary" href="${marketing_link('COURSES')}">${_("Katalog kursów")}</a>
+    <a href="${marketing_link('COURSES')}"><button type="button" class="btn btn-outline-primary btn-sm">${_("Katalog kursów")}</button>
 </li>
 % endif
 
@@ -56,18 +56,18 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 % if allows_login:
 % if restrict_enroll_for_course:
 <li class="nav-item">
-    <a class="btn btn-primar" href="${reverse('course-specific-register', args=[text_type(course.id)])}"><i class="icon-user"></i> ${_("Register")}</a>
+    <a class="btn btn-primary btn-smr" href="${reverse('course-specific-register', args=[text_type(course.id)])}"></i> ${_("Register")}</a>
 </li>
 <li class="nav-item">
-    <a class="btn btn-primary" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}"><i class="fas fa-lock"></i> ${_("Sign in")}</a>
+    <a class="btn btn-primary btn-sm" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}"></i> ${_("Sign in")}</a>
 </li>
 % else:
 <li class="nav-item">
-    <a class="btn btn-outline-primary" href="/login${login_query()}"><i class="fas fa-lock"></i> ${_("Sign in")}</a>
+    <a class="btn btn-primary btn-sm" href="/login${login_query()}"></i> ${_("Sign in")}</a>
 </li>
 % if allow_public_account_creation:
 <li class="nav-item">
-    <a class="btn btn-primary" href="/register${login_query()}"><i class="icon-user"></i> ${_("Register")}</a>
+    <a class="btn btn-primary btn-sm" href="/register${login_query()}"> ${_("Register")}</a>
 </li>
 % endif
 % endif

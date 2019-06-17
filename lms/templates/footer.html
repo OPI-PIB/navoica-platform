@@ -10,19 +10,17 @@ from django.conf import settings
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
 
-<footer class="footer bg-light">
-    <div class="container container-md">
-        <span>
+<footer class="border-top"">
+    <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-4">
-                <strong>Navoica.pl</strong>
+            <div class="col-lg-4 mr-auto">
+                <h4 class="mt-5 mb-3">Navoica.pl</h4>
                 <p align="justify">Polska platforma z kursami typu MOOC, dostępnymi w&nbsp;języku polskim, bez opłat i dla każdego zarejestrowanego użytkownika.</p>
 		<a href="https://www.facebook.com/Polski-MOOC-295767534600329/" target="_blank"><img src="/static/images/polskimooc_facebook_s.png"alt="Facebook"></a>
             </div>
 
-            <div class="col-sm-6 col-md-3 offset-md-1">
-                <strong>Poznaj nas</strong>
-
+            <div class="col-lg-3">
+                <h4 class="mt-5 mb-3">Poznaj nas</h4>
                 <ul>
                     % for item_num, link in enumerate(footer['navigation_links'], start=1):
                     <li>
@@ -32,8 +30,8 @@ from django.conf import settings
                 </ul>
             </div>
 
-            <div class="col-sm-6 col-md-3 offset-md-1">
-                <strong>Informacje prawne</strong>
+            <div class="col-lg-3">
+                <h4 class="mt-5 mb-3">Informacje prawne</h4>
                 <ul>
                     <li><a href="/tos">Warunki Korzystania z Serwisu</a></li>
                     <li><a href="/privacy">Polityka Prywatności</a></li>
@@ -41,19 +39,19 @@ from django.conf import settings
                 </ul>
             </div>
         </div>
-        <div class="footer-logos row align-items-center justify-content-center text-center">
-            <div class="col">
-                <img src="/static/images/patrons/logo_mnisw.jpg"
-                     alt="Ministerstwo Nauki i Szkolnictwa Wyższego">
+        
+        <div class="row footer-logos mt-5 pt-5 border-top">
+            <div class="col-lg-3 d-flex mb-3">
+                <img style="max-width:297px" src="/static/images/patrons/logo_mnisw.jpg" alt="Ministerstwo Nauki i Szkolnictwa Wyższego">
             </div>
-            <div class="col">
-                <img src="/static/images/patrons/logo_krasp.jpg" alt="KRASP">
+            <div class="col-lg-3 d-flex mb-3">
+                <img style="max-width:128px" src="/static/images/patrons/logo_krasp.jpg" alt="KRASP">
             </div>
-            <div class="col">
-                <img src="/static/images/patrons/logo_fmn.jpg" alt="Fundacja Młodej Nauki">
+            <div class="col-lg-3 d-flex mb-3">
+                <img style="max-width:220px" src="/static/images/patrons/logo_fmn.jpg" alt="Fundacja Młodej Nauki">
             </div>
-            <div class="col">
-                <img src="/static/images/patrons/logo_opi_pib.png" alt="OPI - PIB">
+            <div class="col-lg-3 d-flex mb-3">
+                <img style="max-width:181px" src="/static/images/patrons/logo_opi_pib.png" alt="OPI - PIB">
             </div>
         </div>
         <p class="footer-copyright"><span>&copy; Copyright 2018-2019 Navoica.pl</span> — Wszelkie prawa zastrzeżone. | ver.${ settings.PLATFORM_VERSION }</p>
@@ -71,4 +69,7 @@ from django.conf import settings
 % for url in footer_css_urls:
 <link rel="stylesheet" type="text/css" href="${url}"></link>
 % endfor
+
+</body>
+</html>
 % endif

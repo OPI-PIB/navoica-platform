@@ -31,7 +31,8 @@ HeaderFactory();
 </%block>
 % endif
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-md fixed-top navbar-light">
     % if use_cookie_banner and ENABLE_GDPR_COMPAT_FLAG.is_enabled_without_course_context():
     ${static.renderReact(
     component="CookiePolicyBanner",
@@ -40,8 +41,8 @@ HeaderFactory();
     )}
     % endif
     <div class="container">
-		<a style="margin-right: 30px;margin-bottom: 10px;margin-top: 10px;" href="/">
-            <img style="max-width: fit-content" height="40" src="/static/images/logo-light-bg.svg" class="logo">
+		<a class="navbar-brand" href="/">
+            <img style="max-height: 40px;" src="/static/images/logo-light-bg.svg">
         </a>
 
         % if course and user.is_authenticated():
@@ -69,20 +70,21 @@ HeaderFactory();
                     </div>
                 </div>
             </form>
-          % else:
-			<div class="w-100"></div>
+	  % else:
+		<div></div>
           % endif
 
         % endif
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
 
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
 
             <ul class="navbar-nav ml-auto">
                 % if user.is_authenticated():

@@ -9,28 +9,29 @@ from six import text_type
 
 
 
-
-<a href="${reverse('about_course', args=[text_type(course.id)])}" class="col-md-6 col-xl-3 course-card card-color--new">
-	 <%
-		  course_start_date = course.advertised_start or course.start
-	  %>
-	<figure class="course-card-image">
-	  <img src="${course.course_image_url}" alt="">
-	</figure>
-	<div class="course-card-content">
-	  <h3>${course.display_name_with_default}</h3>
-	  % if course.organizer:
-		<p>${settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]}</p>
-	  % endif
-	</div>
-	<footer class="course-card-footer">
-	  <ul>
-		% if course_start_date is not None:
-			<li><time class="course-card-start"><i class="icon-calendar"></i> ${_("Starts")}: ${course_start_date.strftime('%Y-%m-%d')}</time></li>
-		% endif
-	  </ul>
-	</footer>
-</a>
+<div class="col-lg-3 col-md-6 mb-3">
+	<a href="${reverse('about_course', args=[text_type(course.id)])}" class="card h-100">
+		<div class="card-body d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+		 <%
+			  course_start_date = course.advertised_start or course.start
+	 	 %>
+			<figure>
+	  			<img class="card-img-top" src="${course.course_image_url}" alt="">
+			</figure>
+			<div>
+	 			 <h4 class="card-title">${course.display_name_with_default}</h4>
+	  				% if course.organizer:
+					<p class="card-text">${settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]}</p>
+	  				% endif
+         		 </div>
+		</div>
+		<div class="card-footer small">
+			% if course_start_date is not None:
+				<p>${_("Starts")}:<time> ${course_start_date.strftime('%Y-%m-%d')}</time></p>
+			% endif
+		</div>
+	</a>
+</div>
 
 <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
 DateUtilFactory.transform(iterationKey=".localized_datetime");

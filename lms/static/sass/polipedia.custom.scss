@@ -5,34 +5,6 @@
   border-bottom: 3px solid #B43F37
 }
 
-@media (min-width: 576px) {
-  nav.navbar .container {
-    max-width: 540px;
-    width: -webkit-fill-available !important;
-  }
-}
-
-@media (min-width: 768px) {
-  nav.navbar .container {
-    max-width: 720px;
-    width: -webkit-fill-available !important;
-  }
-}
-
-@media (min-width: 992px) {
-  nav.navbar .container {
-    max-width: 960px;
-    width: -webkit-fill-available !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  nav.navbar .container {
-    max-width: 1240px;
-    width: -webkit-fill-available !important;
-  }
-}
-
 a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus, a:not(.btn):hover, div.info-wrapper section.handouts ol li div.hitarea:hover + h4:not(.btn), div.info-wrapper section.handouts ol li div.hitarea:focus + h4:not(.btn), a:not(.btn):focus, a:visited:not(.btn):hover, div.info-wrapper section.handouts ol li div.hitarea:hover + h4:visited:not(.btn), div.info-wrapper section.handouts ol li div.hitarea:focus + h4:visited:not(.btn), a:visited:not(.btn):focus {
   color: #B43F37;
 }
@@ -421,10 +393,10 @@ img.logo{ min-width:145px }
   display: none;
 }
 
-.jumbotron h1 + p {
-    color: #000;
-    text-shadow: 1px 1px 1px #fff;
-}
+//.jumbotron h1 + p {
+//    color: #000;
+//    text-shadow: 1px 1px 1px #fff;
+//}
 
 .jumbotron form {
     background: rgba(50, 50, 50, .25);
