@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 This is the common settings file, intended to set sane defaults. If you have a
@@ -1451,10 +1452,11 @@ PIPELINE_CSS = {
         'source_filenames': [
             'css/vendor/font-awesome.css',
             'css/vendor/jquery.qtip.min.css',
-            'css/navoica-home.css',
-            'css/navoica.css',	      
-            'css/polipedia.css',
-        ],
+            'css/style.css',
+	    'css/courses.scss',
+	    #'css/polipedia.css',
+            #'css/polipedia.custom.css',
+	  ],
         'output_filename': 'css/lms-style-vendor.css',
     },
     'style-vendor-tinymce-content': {
@@ -1471,7 +1473,7 @@ PIPELINE_CSS = {
     },
     'style-main-v1': {
         'source_filenames': [
-            'css/lms-main-v1.css',
+           # 'css/lms-main-v1.css',
         ],
         'output_filename': 'css/lms-main-v1.css',
     },
