@@ -1707,6 +1707,7 @@
     "Superscript": "Indeks g\u00f3rny", 
     "Supported": "Wspierane", 
     "Supported file types: {supportedVideoTypes}": "Obs\u0142ugiwane typy plik\u00f3w: {supportedVideoTypes}", 
+    "Survey": "Ankieta", 
     "TAB back to the list of draggable items and repeat this process until all of the draggable items have been placed on their respective dropzones.": "Przyciskiem TAB wr\u00f3\u0107 do listy element\u00f3w i powtarzaj czynno\u015b\u0107 a\u017c wszystkie elementy zostan\u0105 przez ciebie dopasowane do stref.", 
     "TOTAL": "SUMA", 
     "Table": "Tabela", 
