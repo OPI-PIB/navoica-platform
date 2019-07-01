@@ -435,7 +435,7 @@ class CourseFields(object):
         display_name=_("Advanced Module List"),
         help=_("Enter the names of the advanced modules to use in your course."),
         scope=Scope.settings,
-        default=['videojs', 'survey']
+        default=['videojs', 'survey', 'openassessment']
     )
     has_children = True
     info_sidebar_name = String(
