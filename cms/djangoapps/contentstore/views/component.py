@@ -35,7 +35,7 @@ __all__ = [
 log = logging.getLogger(__name__)
 
 # NOTE: This list is disjoint from ADVANCED_COMPONENT_TYPES
-COMPONENT_TYPES = ['discussion', 'html', 'problem', 'video', 'videojs']
+COMPONENT_TYPES = ['discussion', 'html', 'problem',]
 
 ADVANCED_COMPONENT_TYPES = sorted(set(name for name, class_ in XBlock.load_classes()) - set(COMPONENT_TYPES))
 
@@ -241,8 +241,8 @@ def get_component_templates(courselike, library=False):
         'discussion': _("Discussion"),
         'html': _("HTML"),
         'problem': _("Problem"),
-        'video': _("Video"),
-        'videojs': "VideoJS"
+        'video': _("Video from Youtube"),
+        'videojs': _("Video from cloud")
     }
 
     component_templates = []
@@ -390,6 +390,26 @@ def get_component_templates(courselike, library=False):
             "Improper format for course advanced keys! %s",
             course_advanced_keys
         )
+
+    video_component_templates = {
+        "type": "advanced-videos",
+        "templates": [],
+        "display_name": _("Videos"),
+        "support_legend": create_support_legend_dict()
+    }
+
+    for category in ['video','videojs']:
+            video_component_templates['templates'].append(
+                create_template_dict(
+                    component_display_names[category],
+                    category,
+                    advanced_component_types[category]
+                )
+            )
+            categories.add(category)
+
+    component_templates.insert(0, video_component_templates)
+
     if len(advanced_component_templates['templates']) > 0:
         component_templates.insert(0, advanced_component_templates)
 
