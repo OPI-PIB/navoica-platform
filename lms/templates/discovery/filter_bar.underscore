@@ -1,4 +1,6 @@
 <div class="d-flex justify-content-between align-items-center">
-  <div id="discovery-message" class="search-status-label">Filtrowanie</div>
-  <a id="clear-all-filters"  href="#" class="clear-filters flt-right btn btn-primary btn-sm btn-icon"><i class="icon-plus-circle"></i>Wyczyść filtry</a>
+<span class="d-none d-md-block">Filtry</span>
+  <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true">Filtry</a>
+  <a id="clear-all-filters" href="#" class="clear-filters flt-right btn btn-primary btn-sm btn-icon">wyczyść filtry</a>
 </div>
+
