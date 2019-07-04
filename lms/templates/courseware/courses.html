@@ -12,7 +12,7 @@
 
 % if course_discovery_enabled:
 <%block name="header_extras">
-  % for template_name in ["course_card", "filter_bar", "filter", "facet", "facet_option", "facet_select"]:
+  % for template_name in ["course_card", "filter_bar", "filter", "facet", "facet_option"]:
   <script type="text/template" id="${template_name}-tpl">
       <%static:include path="discovery/${template_name}.underscore" />
   </script>
@@ -30,44 +30,43 @@
 
 <%block name="pagetitle">${_("Courses")}</%block>
 
-<main id="main" aria-label="Content" tabindex="-1">
-   <div class="container">
-     <h1 class="sidebar-header">${_('List of Courses')}</h1>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="bg-light bg-brand p-4 rounded search-facets">
-            <div id="discovery-message" class="search-status-label fa-pull-left">Filtrowanie</div>
-            <div id="filter-bar" class=" filters hide-phone is-collapsed">
-            </div>
-	    <hr class="my-5">
-            <section class="search-facets-lists">
-            </section>
-          </div>
-        </div>
-        <div class="col-md-9">
-          <div class="bg-light p-4 rounded">
-            <header class="d-flex justify-content-between align-items-center">
-              <div id="discovery-form" role="search" aria-label="course" class="m-0">
-				<div id="discovery-message" class="search-status-label"></div>
-			  </div>
+<main class="container">
+   <header id="course-list-header">
+      <h2 class="display-2 text-center">${_('List of Courses')}</h2>
               <form>
-                <div class="input-group">
-                  <input class="form-control form-control-sm" name="search_query" type="search" placeholder="${_('Search for a course')}">
+                <div id="search-form" class="input-group mt-2 mb-4 p-2">
+                  <input class="form-control form-control" name="search_query" type="search" placeholder="Nazwa kursu">
                   <div class="input-group-append">
-                    <button class="btn btn-primary btn-sm" type="submit"><i class="icon-search"></i></button>
+                    <button class="btn btn-light btn-outline-secondary" type="submit" id="button-addon2">Szukaj</button>
                   </div>
                 </div>
               </form>
+   </header>
+
+        <aside id="filters" class="sidebar">
+          <div class="bg-light bg-brand rounded search-facets">
+            <h5 id="filter-bar" class="list-group filters hide-phone is-collapsed">
+            </h5>
+	    <hr class="mb-2">
+  	      <div id="search-facets-lists" class="search-facets-lists collapse">
+              </div>
+           </div> 
+        </aside>
+
+
+        <section id="results">
+           <header id="course-list-header">
+              <div id="discovery-form" role="search" aria-label="course" class="m-0">
+				<h5 id="discovery-message" class="search-status-label"></h5>
+	      </div>
             </header>
-            
-            <hr class="my-4">
-            
-            <div class="row courses-row courses-listing courses" role="region" aria-label="${_('List of Courses')}">
-				<div class="row courses-row courses-listing">
-				</div>
-           </div>
-          </div>
-        </div>
+
+	    <hr class="mb-2">
+                        
+            <div class="courses-row courses-listing courses" role="region" aria-label="${_('List of Courses')}">
+		<div class="row courses-row courses-listing"></div>
+            </div>
+        </section>
       </div>
-   </div>
+
 </main>

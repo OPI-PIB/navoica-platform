@@ -1,9 +1,7 @@
-<li>
-    <button data-facet="<%- facet %>" data-value="<%- term %>" data-text="<%- name %>" class="facet-option discovery-button <%- selected ? 'selected' : '' %>">
-        <input type="checkbox"  <%- selected ? 'checked' : '' %>>
-        <%- gettext(name) %>
-        <span class="count">
-            <span class="count-number"><%- count %></span>
-        </span>
+<li id="filter-list">
+    <button type="button" data-facet="<%- facet %>" data-value="<%- term %>" data-text="<%- name %>" class="list-group-item list-group-item-action d-flex facet-option discovery-button <%- selected ? 'selected' : '' %>">
+	<span class="label flex-fill"><%- gettext(name) %></span>
+	<span class="count-number"><%- count %></span>
     </button>
 </li>
+
