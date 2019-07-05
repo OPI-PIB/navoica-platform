@@ -165,6 +165,7 @@ SECRET_KEY = 'dev key'
 STUDIO_NAME = _("Navoica.pl Studio")
 STUDIO_SHORT_NAME = _("Studio")
 FEATURES = {
+	'ENABLE_UNICODE_USERNAME': True,
     'GITHUB_PUSH': False,
 
     # for consistency in user-experience, keep the value of the following 3 settings

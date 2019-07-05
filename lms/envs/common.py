@@ -83,6 +83,7 @@ MANUAL_ENROLLMENT_ROLE_CHOICES = ['Learner', 'Support', 'Partner']
 
 # Features
 FEATURES = {
+	'ENABLE_UNICODE_USERNAME': True,
 	'BYPASS_ACTIVATION_EMAIL': False,
     'DISPLAY_DEBUG_INFO_TO_STAFF': True,
     'DISPLAY_HISTOGRAMS_TO_STAFF': False,  # For large courses this slows down courseware access for staff.
