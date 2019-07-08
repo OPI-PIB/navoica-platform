@@ -58,7 +58,7 @@ body {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.625;
   color: #212529;
   text-align: left;
   background-color: #fff;
@@ -378,13 +378,13 @@ h6, .h6 {
 
 .display-3 {
   font-size: 1.375rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
 }
 
 .display-4 {
   font-size: 1.125rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
 }
 
@@ -392,7 +392,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 small, .small {
@@ -1467,11 +1467,11 @@ pre {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: calc(1.625em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.625;
   color: #212529;
   background-color: #fff;
   background-clip: padding-box;
@@ -1520,7 +1520,7 @@ select.form-control:focus::-ms-value {
   padding-bottom: calc(0.375rem + 1px);
   margin-bottom: 0;
   font-size: inherit;
-  line-height: 1.5;
+  line-height: 1.625;
 }
 
 .col-form-label-lg {
@@ -1543,7 +1543,7 @@ select.form-control:focus::-ms-value {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.625;
   color: #212529;
   background-color: transparent;
   border: solid transparent;
@@ -1651,7 +1651,7 @@ textarea.form-control {
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1.625;
   color: #fff;
   background-color: rgba(40, 167, 69, 0.9);
   border-radius: 0;
@@ -1659,11 +1659,11 @@ textarea.form-control {
 
 .was-validated .form-control:valid, .form-control.is-valid {
   border-color: #28a745;
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1.625em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: center right calc(0.375em + 0.1875rem);
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: center right calc(0.40625em + 0.1875rem);
+  background-size: calc(0.8125em + 0.375rem) calc(0.8125em + 0.375rem);
 }
 
 .was-validated .form-control:valid:focus, .form-control.is-valid:focus {
@@ -1684,14 +1684,14 @@ textarea.form-control {
 }
 
 .was-validated textarea.form-control:valid, textarea.form-control.is-valid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  padding-right: calc(1.625em + 0.75rem);
+  background-position: top calc(0.40625em + 0.1875rem) right calc(0.40625em + 0.1875rem);
 }
 
 .was-validated .custom-select:valid, .custom-select.is-valid {
   border-color: #28a745;
   padding-right: calc((1em + 0.75rem) * 3 / 4 + 1.75rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem (center / 8px) 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right (1.75rem / calc(0.75em + 0.375rem)) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem (center / 8px) 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right (1.75rem / calc(0.8125em + 0.375rem)) calc(0.8125em + 0.375rem);
 }
 
 .was-validated .custom-select:valid:focus, .custom-select.is-valid:focus {
@@ -1806,7 +1806,7 @@ textarea.form-control {
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1.625;
   color: #fff;
   background-color: rgba(208, 53, 63, 0.9);
   border-radius: 0;
@@ -1814,11 +1814,11 @@ textarea.form-control {
 
 .was-validated .form-control:invalid, .form-control.is-invalid {
   border-color: #D0353F;
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1.625em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23D0353F' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23D0353F' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
   background-repeat: no-repeat;
-  background-position: center right calc(0.375em + 0.1875rem);
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: center right calc(0.40625em + 0.1875rem);
+  background-size: calc(0.8125em + 0.375rem) calc(0.8125em + 0.375rem);
 }
 
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
@@ -1839,14 +1839,14 @@ textarea.form-control {
 }
 
 .was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  padding-right: calc(1.625em + 0.75rem);
+  background-position: top calc(0.40625em + 0.1875rem) right calc(0.40625em + 0.1875rem);
 }
 
 .was-validated .custom-select:invalid, .custom-select.is-invalid {
   border-color: #D0353F;
   padding-right: calc((1em + 0.75rem) * 3 / 4 + 1.75rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem (center / 8px) 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23D0353F' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23D0353F' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right (1.75rem / calc(0.75em + 0.375rem)) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem (center / 8px) 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23D0353F' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23D0353F' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right (1.75rem / calc(0.8125em + 0.375rem)) calc(0.8125em + 0.375rem);
 }
 
 .was-validated .custom-select:invalid:focus, .custom-select.is-invalid:focus {
@@ -2014,7 +2014,7 @@ textarea.form-control {
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.625;
   border-radius: 0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   &:hover {
@@ -3244,7 +3244,7 @@ input {
   margin-bottom: 0;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.625;
   color: #212529;
   text-align: center;
   white-space: nowrap;
@@ -3332,7 +3332,7 @@ input {
 .custom-control {
   position: relative;
   display: block;
-  min-height: 1.5rem;
+  min-height: 1.625rem;
   padding-left: 1.5rem;
 }
 
@@ -3377,7 +3377,7 @@ input {
   vertical-align: top;
   &::before {
     position: absolute;
-    top: 0.25rem;
+    top: 0.3125rem;
     left: -1.5rem;
     display: block;
     width: 1rem;
@@ -3389,7 +3389,7 @@ input {
   }
   &::after {
     position: absolute;
-    top: 0.25rem;
+    top: 0.3125rem;
     left: -1.5rem;
     display: block;
     width: 1rem;
@@ -3448,7 +3448,7 @@ input {
       border-radius: 0.5rem;
     }
     &::after {
-      top: calc(0.25rem + 2px);
+      top: calc(0.3125rem + 2px);
       left: calc(-2.25rem + 2px);
       width: calc(1rem - 4px);
       height: calc(1rem - 4px);
@@ -3477,11 +3477,11 @@ input {
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: calc(1.625em + 0.75rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.625;
   color: #212529;
   vertical-align: middle;
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem (center / 8px) 10px;
@@ -3532,7 +3532,7 @@ input {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: calc(1.625em + 0.75rem + 2px);
   margin-bottom: 0;
 }
 
@@ -3540,7 +3540,7 @@ input {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: calc(1.625em + 0.75rem + 2px);
   margin: 0;
   opacity: 0;
   &:focus ~ .custom-file-label {
@@ -3564,10 +3564,10 @@ input {
   right: 0;
   left: 0;
   z-index: 1;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: calc(1.625em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.625;
   color: #212529;
   background-color: #fff;
   border: 1px solid #ced4da;
@@ -3579,9 +3579,9 @@ input {
     bottom: 0;
     z-index: 3;
     display: block;
-    height: calc(1.5em + 0.75rem);
+    height: calc(1.625em + 0.75rem);
     padding: 0.375rem 0.75rem;
-    line-height: 1.5;
+    line-height: 1.625;
     color: #212529;
     content: "Browse";
     background-color: #e9ecef;
@@ -3837,8 +3837,8 @@ input {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.40625rem;
-  padding-bottom: 0.40625rem;
+  padding-top: 0.39844rem;
+  padding-bottom: 0.39844rem;
   margin-right: 1rem;
   font-size: 1.125rem;
   line-height: inherit;
@@ -4695,7 +4695,7 @@ a.badge-dark {
 .jumbotron {
   padding: 4rem 2rem;
   margin-bottom: 4rem;
-  background-color: #e9ecef;
+  background-color: #f8f9fa;
   border-radius: 0;
 }
 
@@ -4921,7 +4921,7 @@ a.badge-dark {
 .list-group-item {
   position: relative;
   display: block;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 0.5rem;
   margin-bottom: -1px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -5370,7 +5370,7 @@ a.close.disabled {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.625;
 }
 
 .modal-body {
@@ -5445,7 +5445,7 @@ a.close.disabled {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.625;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -5555,7 +5555,7 @@ a.close.disabled {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.625;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -8631,9 +8631,9 @@ header .jumbotron {
   line-height: 1.15;
 }
 
-section {
+body > section {
   margin: 0;
-  padding: 2rem 0 !important;
+  padding: 2rem 0;
   &.border-top {
     border-color: #ced4da !important;
   }
@@ -8767,11 +8767,9 @@ footer {
   .display-2 {
     font-size: 2.25rem;
   }
-  .display-3 {
-    font-size: 1.5rem;
-  }
-  .display-4 {
+  .display-3, .display-4 {
     font-size: 1.25rem;
+    font-weight: 400;
   }
   .card-body {
     > figure {
@@ -8831,14 +8829,11 @@ footer {
   .navbar {
     height: 4rem;
   }
-  section {
-    padding: 3rem 0 !important;
+  body > section {
+    padding: 3rem 0;
   }
-  section .display-2 {
-    margin: 0 0 3rem;
-  }
-  .card-body > figure {
-    margin: 0 0 1rem;
+  section .display-2, .card-body > figure {
+    margin: 0 0 1rem !important;
   }
   .card-text {
     font-size: 0.9375rem;
@@ -8855,7 +8850,7 @@ footer {
   }
 }
 
-//DOPISANE
+//Dopisane
 .col-lg-3.d-flex.mb-3 {
     max-height: 72px;
 }

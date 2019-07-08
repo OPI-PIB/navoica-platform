@@ -1,3 +1,4 @@
+
 <%!
   import json
   from django.utils.translation import ugettext as _
@@ -30,43 +31,45 @@
 
 <%block name="pagetitle">${_("Courses")}</%block>
 
-<main class="container">
-   <header id="course-list-header">
-      <h2 class="display-2 text-center">${_('List of Courses')}</h2>
-              <form>
-                <div id="search-form" class="input-group mt-2 mb-4 p-2">
-                  <input class="form-control form-control" name="search_query" type="search" placeholder="Nazwa kursu">
-                  <div class="input-group-append">
-                    <button class="btn btn-light btn-outline-secondary" type="submit" id="button-addon2">Szukaj</button>
-                  </div>
-                </div>
-              </form>
-   </header>
+	<header id="course-list-header">
+	  <div class="jumbotron">
+	    <div class="container">
+	      <h2 class="display-2 text-center">${_('List of Courses')}</h2>
+	      <form>
+	        <div id="search-form" class="input-group mt-2 mb-4 p-2">
+	          <input class="form-control form-control" name="search_query" type="search" placeholder="Nazwa kursu">
+	          <div class="input-group-append">
+	            <button class="btn btn-light btn-outline-secondary" type="submit" id="button-addon2">Szukaj</button>
+		  </div>
+		</div>
+	      </form>
+	    </div>
+	  </div>
+	</header>
+
+<div id="content" class="bg-light border-top">
+    <main class="container">
 
         <aside id="filters" class="sidebar">
           <div class="bg-light bg-brand rounded search-facets">
-            <h5 id="filter-bar" class="list-group filters hide-phone is-collapsed">
-            </h5>
-	    <hr class="mb-2">
+            <h2 id="filter-bar" class="list-group filters hide-phone is-collapsed">
+            </h2>
+
   	      <div id="search-facets-lists" class="search-facets-lists collapse">
               </div>
            </div> 
         </aside>
 
-
         <section id="results">
-           <header id="course-list-header">
+           <header id="courses-list-header">
               <div id="discovery-form" role="search" aria-label="course" class="m-0">
-				<h5 id="discovery-message" class="search-status-label"></h5>
+				<h2 id="discovery-message" class="search-status-label"></h2>
 	      </div>
             </header>
-
-	    <hr class="mb-2">
                         
             <div class="courses-row courses-listing courses" role="region" aria-label="${_('List of Courses')}">
 		<div class="row courses-row courses-listing"></div>
             </div>
         </section>
-      </div>
-
-</main>
+    </main>
+</div>
