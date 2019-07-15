@@ -6,7 +6,7 @@
 }
 
 a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus, a:not(.btn):hover, div.info-wrapper section.handouts ol li div.hitarea:hover + h4:not(.btn), div.info-wrapper section.handouts ol li div.hitarea:focus + h4:not(.btn), a:not(.btn):focus, a:visited:not(.btn):hover, div.info-wrapper section.handouts ol li div.hitarea:hover + h4:visited:not(.btn), div.info-wrapper section.handouts ol li div.hitarea:focus + h4:visited:not(.btn), a:visited:not(.btn):focus {
-  color: #B43F37;
+//  color: #B43F37;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -260,7 +260,7 @@ li.field-group.field-education-level.form-group.form-group-optional {
 }
 
 a:focus {
-  background-color: transparent;
+//  background-color: transparent;
 }
 
 .breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited {
@@ -295,7 +295,7 @@ a:focus {
  }
 
 a:not(.btn) {
-  color: #B43F37 !important;
+// color: #B43F37;
 }
 
 h1, .h1 {
@@ -364,11 +364,25 @@ h1, .h1 {
     height: auto;
 }
 
-.wrap-instructor-info .instructor-info-action:hover { background-color:transparent !important }
-.slick-header-column.ui-state-default { height:auto !important }
-a:not(.btn):hover { text-decoration: underline !important }
-.instructor-nav button:focus:not(:disabled) { color: black !important }
-.course-content .popup-content p { color:white; font-size:14px }
+.wrap-instructor-info .instructor-info-action:hover { 
+  background-color:transparent !important 
+}
+
+.slick-header-column.ui-state-default {
+  height:auto !important 
+}
+
+a:not(.btn):hover {
+//  text-decoration: underline !important 
+}
+
+.instructor-nav button:focus:not(:disabled) {
+  color: black !important
+}
+
+.course-content .popup-content p {
+ color:white; font-size:14px 
+}
 
 .setting-input{
   color: #B43F37 !important;
@@ -389,15 +403,15 @@ img.logo{ min-width:145px }
   }
 }
 
-.list-group.filters.is-collapsed{
-  display: none;
-}
+//.list-group.filters.is-collapsed{
+// display: none;
+//}
 
 //.jumbotron h1 + p {
 //    color: #000;
 //    text-shadow: 1px 1px 1px #fff;
 //}
 
-.jumbotron form {
-    background: rgba(50, 50, 50, .25);
-}
+//.jumbotron form {
+//    background: rgba(50, 50, 50, .25);
+//}

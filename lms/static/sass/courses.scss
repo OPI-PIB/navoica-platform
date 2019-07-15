@@ -4910,11 +4910,16 @@ a.badge-dark {
     z-index: 1;
     color: #495057;
     text-decoration: none;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa !important;
+    box-shadow: unset !important;
+     border: 1px solid rgba(0, 0, 0, 0.125) !important;
   }
   &:active {
     color: #212529;
-    background-color: #e9ecef;
+    background-color: #e9ecef !important;
+    box-shadow: unset !important;
+    border-color:  unset !important;
+    border: 1px solid rgba(0, 0, 0, 0.125) !important;
   }
 }
 
@@ -8600,7 +8605,7 @@ body > header {
   margin: 4rem 0 0;
 }
 
-header .jumbotron {
+.bg-brand.jumbotron {
   margin: 0;
   padding: 4rem 0;
   p.lead {
@@ -8876,7 +8881,8 @@ footer {
 }
 
 #content {
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
+  margin: 0;
   .display-2 {
     margin: 0 0 2rem;
   }
@@ -8940,9 +8946,9 @@ main.container {
       margin-left: 1rem;
     }
     &.selected {
-      background-color: #f8f9fa;
-      border-color: #dee2e6;
-      color: #D0353F;
+      background-color: #f8f9fa !important;
+      border-color: #dee2e6 !important;
+      color: #D0353F !important;
       .count-number {
         color: transparent;
         position: relative;
@@ -9023,12 +9029,8 @@ main.container {
   width: 1px;
   word-wrap: normal;
 }
-//DOPISANE
-#course-list-header {
-  background-image: none;
-  margin: 0;
-}
 
+//DOPISANE
 #search-form {
     background: rgba(200,200,200,0.25);
 }
@@ -9092,4 +9094,12 @@ button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-butto
   margin-bottom: -1px !important;
 }
 
+.bg-light {
+  background-image:none;
+  backround: none;
+}
+
+#header_jumbotron {
+  background-color: #f8f9fa !important;
+}
 

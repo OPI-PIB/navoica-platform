@@ -1451,9 +1451,10 @@ PIPELINE_CSS = {
             'css/vendor/jquery.qtip.min.css',
 	    'css/all.css',
             'css/style.css',
-	    'css/courses.css',
-	    #'css/polipedia.css',
-            #'css/polipedia.custom.css',
+            'css/courses.css',
+            'css/course.css',
+	    'css/polipedia.css',
+            'css/polipedia.custom.css',
 	  ],
         'output_filename': 'css/lms-style-vendor.css',
     },
@@ -1472,7 +1473,7 @@ PIPELINE_CSS = {
     'style-main-v1': {
         'source_filenames': [
            # 'css/lms-main-v1.css',
-        ],
+         ],
         'output_filename': 'css/lms-main-v1.css',
     },
     'style-main-v1-rtl': {
@@ -2358,7 +2359,7 @@ JWT_AUTH = {
     'JWT_VERIFY_EXPIRATION': True,
     # TODO Set JWT_ISSUER and JWT_AUDIENCE to values specific to your service/organization.
     'JWT_ISSUER': 'change-me',
-    'JWT_AUDIENCE': None,
+    'JWT_AUDIENCE': False,
     'JWT_PAYLOAD_GET_USERNAME_HANDLER': lambda d: d.get('username'),
     'JWT_LEEWAY': 1,
     'JWT_DECODE_HANDLER': 'edx_rest_framework_extensions.utils.jwt_decode_handler',
