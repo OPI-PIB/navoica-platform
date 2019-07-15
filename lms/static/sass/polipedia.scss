@@ -334,7 +334,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
-  color: inherit
+//  color: inherit
 }
 
 h1, .h1 {
@@ -12852,16 +12852,16 @@ a:hover {
   z-index: 99
 }
 
-.jumbotron::after {
-  background-color: rgba(52, 58, 64, 0.85);
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 96
-}
+//.jumbotron::after {
+//  background-color: rgba(52, 58, 64, 0.85);
+//  content: "";
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  position: absolute;
+//  z-index: 96
+//}
 
 //.jumbotron h1 {
 //  font-size: 45px;
@@ -13227,13 +13227,13 @@ a:hover {
   border: 0
 }
 
-.list-group .list-group-item {
-  background-color: rgba(255, 255, 255, 0);
-  border: 0;
-  border-bottom: 1px solid #8C88B1;
-  border-radius: 0;
-  padding: 8px 0
-}
+//.list-group .list-group-item {
+//  background-color: rgba(255, 255, 255, 0);
+//  border: 0;
+//  border-bottom: 1px solid #8C88B1;
+//  border-radius: 0;
+//  padding: 8px 0
+//}
 
 .list-group .list-group-item .list-group-count {
   background-color: #B43F37;
@@ -13745,25 +13745,25 @@ input[type="submit"]:hover:not(:disabled) {
   border: none;
 }
 
-.search-facets-lists .facet-option {
-  background: none;
-  border: none;
-  text-shadow: none;
-  color: black;
-  text-align: left;
-  width: 100%;
-  box-shadow: none;
-}
+//.search-facets-lists .facet-option {
+//  background: none;
+//  border: none;
+//  text-shadow: none;
+//  color: black;
+//  text-align: left;
+//  width: 100%;
+//  box-shadow: none;
+//}
 
 .facet-list .count {
   float: right;
 }
 
-.header-facet {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
-}
+//.header-facet {
+//  font-size: 18px;
+//  font-weight: bold;
+//  margin-top: 10px;
+//}
 
 .search-facets-lists .collapse button:hover:not(:disabled) {
       background: none;
