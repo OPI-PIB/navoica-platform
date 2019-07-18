@@ -17,6 +17,7 @@ FEATURES.update({
     'ENABLE_COURSEWARE_INDEX': True,
     'ENABLE_LIBRARY_INDEX': True,
     'ENABLE_DISCUSSION_SERVICE': True,
+    'ENABLE_CREATOR_GROUP': True,
 })
 
 CREDENTIALS_SERVICE_USERNAME = 'credentials_worker'
@@ -32,15 +33,10 @@ TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'pl'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-#EMAIL_HOST = 'smtp.sendgrid.net'
-#EMAIL_PORT = 25
-#EMAIL_HOST_USER = 'apikey'
-#EMAIL_HOST_PASSWORD = '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'
-
-EMAIL_HOST = ''
+EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
 
 DEFAULT_FROM_EMAIL = 'registration@edx-dev.opi.org.pl'
 DEFAULT_FEEDBACK_EMAIL = 'feedback@edx-dev.opi.org.pl'
