@@ -165,6 +165,7 @@ SECRET_KEY = 'dev key'
 STUDIO_NAME = _("Navoica.pl Studio")
 STUDIO_SHORT_NAME = _("Studio")
 FEATURES = {
+	'BYPASS_ACTIVATION_EMAIL': False,
 	'ENABLE_UNICODE_USERNAME': True,
     'GITHUB_PUSH': False,
 
