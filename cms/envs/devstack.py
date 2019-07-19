@@ -127,7 +127,7 @@ SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 FEATURES['CERTIFICATES_HTML_VIEW'] = True
 
 ########################## AUTHOR PERMISSION #######################
-FEATURES['ENABLE_CREATOR_GROUP'] = False
+FEATURES['ENABLE_CREATOR_GROUP'] = True
 
 ################################# DJANGO-REQUIRE ###############################
 
