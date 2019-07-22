@@ -59,7 +59,7 @@ EDX_ROOT = path(__file__).abspath().dirname().dirname().dirname()  # /edx-platfo
 ################################### FEATURES ###################################
 # The display name of the platform to be used in templates/emails/etc.
 PLATFORM_NAME = "Navoica.pl"
-PLATFORM_DESCRIPTION = _('Your Platform Description Here')
+PLATFORM_DESCRIPTION = _('Skorzystaj z bezpłatnych kursów online oferowanych przez polskie uczelnie i instytucje.')
 CC_MERCHANT_NAME = PLATFORM_NAME
 
 PLATFORM_VERSION = subprocess.check_output(["git -C %s tag" % EDX_ROOT],shell=True)
