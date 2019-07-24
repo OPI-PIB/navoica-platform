@@ -8832,8 +8832,16 @@ footer {
   body > section {
     padding: 3rem 0;
   }
-  section .display-2, .card-body > figure {
-    margin: 0 0 1rem !important;
+  section {
+    .display-2 {
+      margin: 0 0 1rem;
+    }
+    > .container > .display-2 {
+      margin: 0 0 3rem;
+    }
+  }
+  .card-body > figure {
+    margin: 0 0 1rem;
   }
   .card-text {
     font-size: 0.9375rem;
@@ -8873,5 +8881,10 @@ button#button-addon2 {
 
 p.lead.text-center.my-3 {
     font-size: 1.625rem !important;
-      line-height: 1.625 !important;
+}
+
+@media (min-width: 1280px) {
+  img.card-img-top {
+      height: 214px !important;
+  }
 }
