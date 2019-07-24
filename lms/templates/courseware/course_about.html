@@ -121,37 +121,41 @@ from six import string_types
               href_class = "register"
           %>
 
-      <header class="course-header">
-        <div class="row align-items-top">
-          <div class="col-md-6 col-lg-3">
-              % if get_course_about_section(request, course, "video"):
-				<div class="embed-responsive embed-responsive-16by9">
-					  ${get_course_about_section(request, course, "video")}
-				</div>
+      <header class="bg-light">
+        <div class="jumbotron" id="header_jumbotron">
+          <div id="container">		
+          <article id="article">
+            <h1 class="display-2">${course.display_name_with_default_escaped}</h1>
+            <p>${get_course_about_section(request, course, "short_description")}</p>
+          
+          <div class="my-3">
+              %if user.is_authenticated() and registered:
+			<span class="register disabled">${_("You are enrolled in this course")}</span><br/>
+			<a href="${course_target}" class="btn btn-lg btn-primary btn-icon">${_("View Course")}</a>
 		  %else:
-					<img style="max-width: 100%;" src="${course_image_urls['large']}" class="d-block mx-auto">
+			<a href="${reg_href}" class="btn btn-lg btn-primary btn-icon ${href_class}">Weź udział w kursie</a>
 		  % endif
-
           </div>
-
-          <div class="col-lg-5 pt-4 pt-lg-0">
-            <h1>${course.display_name_with_default_escaped}</h1>
-            <p class="mt-0">${get_course_about_section(request, course, "short_description")}</p>
-            % if course.organizer:
+        </article>
+	<aside id="filter">
+	  <header id="courses-list-header">
+	    <h2 id="organizator">
+               <span class="d-none d-md-block">Ogranizator</span>
+            </h2>
+	  </header>
+	  <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+                        <div class="organizer-logo">
+                            <p class="mt-2 mx-auto text-center">
+                                % if course.organizer:
 				<% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
 				<img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
 			% endif
-          </div>
-          <div class="col-lg-4 text-lg-center pt-4 pt-lg-0">
-              %if user.is_authenticated() and registered:
-			<span class="register disabled">${_("You are enrolled in this course")}</span><br/>
-			<a href="${course_target}" class="btn btn-lg btn-primary btn-icon"><i class="icon-book"></i> ${_("View Course")}</a>
-		  %else:
-			<a href="${reg_href}" class="btn btn-lg btn-primary btn-icon ${href_class}"><i class="icon-book"></i> Weź udział w kursie</a>
-		  % endif
-          </div>
-        </div>
+                            </p>
+                        </div>
+                    </div>
+	</aside>
       </header>
+
 
 %if user.is_authenticated() and registered:
 
@@ -208,11 +212,11 @@ from six import string_types
   </%block>
   <%block name="course_about_details">
     % if (course.organizer and get_course_about_section(request, course, "overview") and course.difficulty and course.course_category and course.timetable and get_course_about_section(request, course, "effort")):
-	<div id="content" class="border-top">
+	<div id="content_course" class="border-top">
         <main class="container">
 		  <article id="results">
 			<header id="courses-list-header">
-			   <h2>Opis Kursu</h2>
+			   <h2 id="h2">Opis Kursu</h2>
 			</header>
 			${get_course_about_section(request, course, "overview")}
 			% if get_course_about_section(request, course, "course_staff_extended"):
@@ -221,9 +225,25 @@ from six import string_types
 			% endif
 		  </article>
 
-          <aside id="filters" class="sidebar">
+          <aside id="filter" class="sidebar">
+	    <header id="courses-list-header">
+                <h2 id="h2">
+                    <span class="d-none d-md-block">Podgląd kursu</span>
+                </h2>
+            </header>
+	    % if get_course_about_section(request, course, "video"):
+		<div class="embed-responsive embed-responsive-16by9">
+		  ${get_course_about_section(request, course, "video")}
+		</div>
+	    %else:
+		<div class="hero">
+		  <img src="${course_image_urls['large']}">
+		</div>
+	    % endif
+
+          
             <header id="courses-list-header">
-                <h2>
+                <h2 id="h2">
                     <span class="d-none d-md-block">Informacje podstawowe</span>
                     <a href="#basic-data-facets" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">Informacje podstawowe</a>
                 </h2>
@@ -358,7 +378,7 @@ from six import string_types
                   <i class="icon-flag"></i>
                 </div>
                 <div class="course-details-content">
-                  h6>${_("Enrollment end")}:<h6>
+                  <h6>${_("Enrollment end")}:</h6>
                    % if isinstance(course_end_date, string_types):
                       <div class="important-dates-item-text final-date">${course_end_date}</div>
                   % else:

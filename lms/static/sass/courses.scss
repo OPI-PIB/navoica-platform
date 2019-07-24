@@ -372,13 +372,13 @@ h6, .h6 {
 
 .display-2 {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
 }
 
 .display-3 {
   font-size: 1.375rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -4912,7 +4912,7 @@ a.badge-dark {
     text-decoration: none;
     background-color: #f8f9fa !important;
     box-shadow: unset !important;
-     border: 1px solid rgba(0, 0, 0, 0.125) !important;
+    border: 1px solid rgba(0, 0, 0, 0.125) !important;
   }
   &:active {
     color: #212529;
@@ -8605,7 +8605,7 @@ body > header {
   margin: 4rem 0 0;
 }
 
-.bg-brand.jumbotron {
+.bg-brand .jumbotron {
   margin: 0;
   padding: 4rem 0;
   p.lead {
@@ -8806,13 +8806,13 @@ footer {
     font-size: 4rem;
   }
   .display-2 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   .display-3 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   .display-4 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   header .jumbotron {
     padding: 4rem 0;
@@ -8875,9 +8875,6 @@ footer {
       font-size: 87.5%;
     }
   }
-   .card-img-top {
-     height: 214.47px !important;    
-   }
 }
 
 #content {
@@ -8967,11 +8964,9 @@ main.container {
 }
 
 //#discovery-form {
-//  background: rgba(200, 200, 200, 0.25);
-//  button, input {
-//    color: #212529;
-//  }
-//}
+//  background: rgba(200, 200, 200, 0.25); }
+//  #discovery-form button, #discovery-form input {
+//    color: #212529; }
 
 @media (min-width: 960px) {
   main.container {
