@@ -123,11 +123,11 @@ from six import string_types
 
       <header class="bg-light">
         <div class="jumbotron" id="header_jumbotron">
-          <div id="container">		
+          <div id="container">
           <article id="article">
             <h1 class="display-2">${course.display_name_with_default_escaped}</h1>
             <p>${get_course_about_section(request, course, "short_description")}</p>
-          
+
           <div class="my-3">
               %if user.is_authenticated() and registered:
 			<span class="register disabled">${_("You are enrolled in this course")}</span><br/>
@@ -241,15 +241,16 @@ from six import string_types
 		</div>
 	    % endif
 
-          
+
             <header id="courses-list-header">
                 <h2 id="h2">
                     <span class="d-none d-md-block">Informacje podstawowe</span>
-                    <a href="#basic-data-facets" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">Informacje podstawowe</a>
                 </h2>
             </header>
-            <ul class="course-details list-group list-group-flush"">
-			
+              <a href="#basic-data-facets" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none mb-2">Informacje podstawowe</a>
+              <div id="basic-data-facets" class="collapse">
+            <ul class="course-details list-group list-group-flush">
+
 			% if course.difficulty:
 	       <li class="list-group-item">
                 <div class="course-details-icon ${course.difficulty}">
@@ -281,15 +282,15 @@ from six import string_types
                 </div>
               </li>
             % endif
-            
-            
+
+
 			% if course.timetable:
               <li class="list-group-item">
                 <div class="course-details-icon">
                   <i class="icon-time"></i>
                 </div>
                 <div class="course-details-content">
-                  <h6>Czas trwania kursu:</h6> 
+                  <h6>Czas trwania kursu:</h6>
 		  <div>${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}</div>
                 </div>
               </li>
@@ -397,17 +398,17 @@ from six import string_types
                   <i class="icon-time"></i>
                 </div>
                 <div class="course-details-content">
-				   <%					
+				   <%
 						txt = get_course_about_section(request, course, "effort")
 						course_effort = txt
 						txt = float(txt.replace(':', '.'))
-                   %>	                 
-                  <h6>Tygodniowy wysiłek godzinowy:</h6> 
+                   %>
+                  <h6>Tygodniowy wysiłek godzinowy:</h6>
 		  <div>${ungettext("{effort} hour", "{effort} hours", txt).format(effort=course_effort) | h}</div>
                 </div>
               </li>
             % endif
-              
+
 		     % if course.organizer:
               <li class="list-group-item">
                 <div class="course-details-icon">
@@ -421,7 +422,7 @@ from six import string_types
               </li>
              % endif
             </ul>
-            
+              </div>
           % if user.is_authenticated() and registered:
           <!--
             <h2>Może Cię zainteresować</h2>
