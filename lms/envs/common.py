@@ -409,7 +409,7 @@ FEATURES = {
     # Whether to send an email for failed password reset attempts or not. This is mainly useful for notifying users
     # that they don't have an account associated with email addresses they believe they've registered with.
     'ENABLE_PASSWORD_RESET_FAILURE_EMAIL': False,
-    
+
     'UNSUPPORTED_BROWSER_ALERT_VERSIONS': "{e:0,f:-3,o:0,s:-3,c:-3,i:20}",
 }
 
@@ -1357,7 +1357,6 @@ base_application_js = [
     'js/src/accessibility_tools.js',
     'js/toggle_login_modal.js',
     'js/src/lang_edx.js',
-    'js/polipedia.min.js'
 ]
 
 dashboard_js = (
@@ -1453,8 +1452,6 @@ PIPELINE_CSS = {
             'css/style.css',
             'css/courses.css',
             'css/course.css',
-	    'css/polipedia.css',
-            'css/polipedia.custom.css',
 	  ],
         'output_filename': 'css/lms-style-vendor.css',
     },
@@ -1564,7 +1561,6 @@ PIPELINE_CSS = {
     FOOTER_CSS['openedx']['ltr']: {
         'source_filenames': [
             'css/lms-footer.css',
-            'css/polipedia.css'
         ],
         'output_filename': 'css/lms-footer.css',
     },
