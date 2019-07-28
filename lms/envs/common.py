@@ -1446,12 +1446,16 @@ credit_web_view_js = [
 PIPELINE_CSS = {
     'style-vendor': {
         'source_filenames': [
+            #'css/lms-main-v1.css',
             'css/vendor/font-awesome.css',
             'css/vendor/jquery.qtip.min.css',
-	    'css/all.css',
+            'css/all.css',
             'css/style.css',
             'css/courses.css',
             'css/course.css',
+            #'css/polipedia.css',
+            #'css/polipedia.custom.css',
+            'css/navoica.custom.css'
 	  ],
         'output_filename': 'css/lms-style-vendor.css',
     },
@@ -1469,7 +1473,7 @@ PIPELINE_CSS = {
     },
     'style-main-v1': {
         'source_filenames': [
-           # 'css/lms-main-v1.css',
+           #'css/lms-main-v1.css',
          ],
         'output_filename': 'css/lms-main-v1.css',
     },
@@ -1561,6 +1565,7 @@ PIPELINE_CSS = {
     FOOTER_CSS['openedx']['ltr']: {
         'source_filenames': [
             'css/lms-footer.css',
+            'css/polipedia.css'
         ],
         'output_filename': 'css/lms-footer.css',
     },
