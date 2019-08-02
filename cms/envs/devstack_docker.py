@@ -38,6 +38,8 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = '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'
 
-DEFAULT_FROM_EMAIL = 'registration@edx-dev.opi.org.pl'
-DEFAULT_FEEDBACK_EMAIL = 'feedback@edx-dev.opi.org.pl'
-SERVER_EMAIL = 'devops@edx-dev.opi.org.pl'
+DEFAULT_FROM_EMAIL = 'registration@navoica.pl'
+DEFAULT_FEEDBACK_EMAIL = 'feedback@navoica.pl'
+SERVER_EMAIL = 'devops@navoica.pl'
+
+COURSE_DISCOVERY_FACETS = ['difficulty', 'availability', 'status', 'key']

@@ -26,6 +26,7 @@ def can_view_courses_for_username(requesting_user, target_username):
 
     # AnonymousUser has no username, so we test for requesting_user's own
     # username before prohibiting an empty target_username.
+    print(requesting_user.username)
     if requesting_user.username == target_username:
         return True
     elif not target_username:

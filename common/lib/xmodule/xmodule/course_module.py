@@ -1112,6 +1112,14 @@ class CourseDescriptor(CourseFields, SequenceDescriptor, LicenseMixin):
         Returns False if there is no end date specified.
         """
         return course_metadata_utils.has_course_ended(self.end)
+        
+    def has_ended2(self, when=None):
+        """
+        Returns:
+            True if course run has a defined end and it has passed
+        """
+        when = when or datetime.datetime.now(pytz.UTC)
+        return bool(self.end and self.end < when)
 
     def may_certify(self):
         """
@@ -1268,6 +1276,23 @@ class CourseDescriptor(CourseFields, SequenceDescriptor, LicenseMixin):
             return flag.lower() in ['true', 'yes', 'y']
         else:
             return bool(flag)
+            
+    @property
+    def availability(self):
+        """
+        Returns availability of the course.
+        """
+        now = datetime.now(utc)
+        upcoming_cutoff = now + timedelta(days=60)
+        
+        if self.has_ended2(now):
+            return _('Archived')
+        elif self.start and (self.start <= now):
+            return _('Current')
+        elif self.start and (now < self.start < upcoming_cutoff):
+            return _('Starting Soon')
+        else:
+            return _('Upcoming')
 
     @property
     def sorting_score(self):

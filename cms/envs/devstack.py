@@ -135,11 +135,11 @@ FEATURES['ENABLE_CREATOR_GROUP'] = True
 REQUIRE_DEBUG = DEBUG
 
 ########################### OAUTH2 #################################
-OAUTH_OIDC_ISSUER = 'http://127.0.0.1:8000/oauth2'
+OAUTH_OIDC_ISSUER = 'http://edx.devstack.lms:18000/oauth2'
 
 JWT_AUTH.update({
     'JWT_SECRET_KEY': 'lms-secret',
-    'JWT_ISSUER': 'http://127.0.0.1:8000/oauth2',
+    'JWT_ISSUER': 'http://edx.devstack.lms:18000/oauth2',
     'JWT_AUDIENCE': 'lms-key',
 })
 
