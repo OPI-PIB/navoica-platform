@@ -2674,6 +2674,15 @@ COURSE_DISCOVERY_MEANINGS = {
     'difficulty': {
         'name': 'Course Difficulty',
         'terms': {b[0]: b[1] for b in ALL_COURSE_DIFFICULTY},
+    },
+    'availability': {
+        'name': 'Dostępność',
+        'terms': {
+            'Upcoming': 'Nadchodzący',
+            'Starting Soon': 'Dostępny',
+            'Current': 'Trwający',
+            'Archived': 'Zakończony',
+        }
     }
 }
 
