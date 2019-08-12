@@ -1450,9 +1450,10 @@ PIPELINE_CSS = {
             'css/vendor/font-awesome.css',
             'css/vendor/jquery.qtip.min.css',
             'css/all.css',
-            'css/style.css',
-            'css/courses.css',
-            'css/course.css',
+            #'css/style.css',
+            #'css/courses.css',
+            #'css/course.css',
+	    'css/course-toc.css',
             #'css/polipedia.css',
             #'css/polipedia.custom.css',
             'css/navoica.custom.css'

@@ -41,8 +41,8 @@ self.real_user = getattr(user, 'real_user', user)
 -->
 
 <!--% if show_explore_courses:-->
-<li class="mobile-nav-item hidden-mobile nav-item">
-    <a class="btn btn-outline-primary" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
+<li class="nav-item">
+    <a class="btn btn-outline-primary btn-sm" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
 </li>
 <!--% endif-->
 % if show_sysadmin_dashboard:
@@ -60,9 +60,11 @@ self.real_user = getattr(user, 'real_user', user)
 </div>
 % endif
 
+<!--
 <li class="nav-item">
     <a class="btn btn-outline-primary" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
 </li>
+-->
 
 <%include file="user_dropdown.html"/>
 

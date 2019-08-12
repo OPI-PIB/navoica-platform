@@ -35,14 +35,13 @@ if course is not None:
     %>
 
 
-<nav class="course-nav py-2">
-          <ul class="nav border-bottom pb-2">
+<nav>
+   <div class="nav nav-tabs" id="nav-tab" role="tablist">
               % for tab in tab_list:
                     <%
                     tab_is_active = tab.tab_id in (active_page, default_tab)
                     %>
-            <li class="nav-item">
-                        <a href="${tab.link_func(course, reverse)}" class="nav-link ${'active' if tab_is_active else ''}">
+                    <a href="${tab.link_func(course, reverse)}" class="nav-link ${'active' if tab_is_active else ''}">
                             ${_(tab.name)}
                             % if tab_is_active:
                                 <span class="sr-only">, ${_('current location')}</span>
@@ -52,11 +51,9 @@ if course is not None:
                                 ## notification image that indicates the tab "needs attention".
                                 <img src="${tab_image}" alt="${_('needs attention')}" />
                             %endif
-                        </a>
-                    </li>
-               % endfor
-
-          </ul>
+                     </a>
+                % endfor
+           </div>
         </nav>
 
 
