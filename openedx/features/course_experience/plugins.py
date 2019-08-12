@@ -38,7 +38,7 @@ class CourseUpdatesTool(CourseTool):
         """
         Returns icon classes needed to represent this tool.
         """
-        return 'fa fa-newspaper-o'
+        return 'far fa-file-alt'
 
     @classmethod
     def is_enabled(cls, request, course_key):

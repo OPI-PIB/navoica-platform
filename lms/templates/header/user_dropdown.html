@@ -21,9 +21,12 @@ displayname = get_enterprise_learner_generic_name(request) or username
 %>
 
  <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle font-weight-bold text-dark text-right" href="${reverse('dashboard')}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img class="mr-2 rounded-circle" src="${profile_image_url}" width="32" height="32"> ${displayname}
-            </a>
+            <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" href="${reverse('dashboard')}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <!-- 
+             <img class="mr-2 rounded-circle" src="${profile_image_url}" width="32" height="32">
+	     -->				
+             ${displayname}
+             </button>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="${reverse('dashboard')}" role="menuitem">${_("My Courses")}</a>
                 <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a>

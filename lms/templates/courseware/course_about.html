@@ -122,8 +122,8 @@ from six import string_types
           %>
 
       <header class="bg-light">
-        <div class="jumbotron" id="header_jumbotron">
-          <div id="container">
+        <div class="jumbotron">
+          <div class="container">
           <article id="article">
             <h1 class="display-2">${course.display_name_with_default_escaped}</h1>
             <p>${get_course_about_section(request, course, "short_description")}</p>
@@ -137,7 +137,7 @@ from six import string_types
 		  % endif
           </div>
         </article>
-	<aside id="filter">
+	<aside>
 	  <header id="courses-list-header">
 	    <h2 id="organizator">
                <span class="d-none d-md-block">Ogranizator</span>

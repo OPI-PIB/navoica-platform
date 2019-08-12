@@ -24,7 +24,11 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
 </%block>
 
 <%block name="content">
-<div class="course-view page-content-container" id="course-container">
+<div class="border-top" id="content">
+  <main class="container">
+   <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="d-flex">
 
     % if ENABLE_DASHBOARD_TAB.is_enabled(course_key):
         ${static.renderReact(
@@ -42,16 +46,19 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
         )}
     % endif
 
-    <header class="page-header has-secondary">
-        <div class="page-header-main">
-            <nav aria-label="${_('Course Outline')}" class="sr-is-focusable" tabindex="-1">
-                <h2 class="hd hd-3 page-title">${course.display_name_with_default}</h2>
-                <small>${course.display_org_with_default} ${course.display_number_with_default}</small>
-            </nav>
-        </div>
-        <div class="page-header-secondary">
+    <article id="results">
+         <header class="d-flex justify-content-between">
+            <h2 id="h2">Spis treści</h2>
+              <button class="btn btn-sm btn-outline-primary"
+                      id="expand-collapse-outline-all-button"
+                      aria-expanded="false"
+                      aria-controls="course-outline-block-tree">
+               <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
+               </button>
+          </header>
+
             % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
-                <div class="page-header-search">
+                <div id="discovery-form1" class="input-group my-3 p-2">
                     <form class="search-form input-group" role="search" action="${reverse('openedx.course_search.course_search_results', args=[course_key])}">
                         <label class="field-label sr-only" for="search" id="search-hint">${_('Search the course')}</label>
                         <input
@@ -62,12 +69,12 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                                 placeholder="${_('Search the course')}"
                         />
                         <span class="input-group-btn">
-                            <button class="btn btn-outline-primary search-button" type="submit">${_('Search')}</button>
+                            <button class="btn btn-light btn-oytline-secondary" type="submit">${_('Search')}</button>
                         </span>
                     </form>
                 </div>
             % endif
-            <div class="form-actions">
+        <!--<div class="form-actions">
                 % if resume_course_url:
                     <a class="btn btn-primary action-resume-course" href="${resume_course_url}">
                         % if has_visited_course:
@@ -77,11 +84,9 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                         % endif
                     </a>
                 % endif
-            </div>
-        </div>
-    </header>
-    <div class="page-content">
-        <div class="page-content-main">
+            </div>-->
+    
+       <section class="faq">
             % if course_home_message_fragment:
                 ${HTML(course_home_message_fragment.body_html())}
             % endif
@@ -95,8 +100,10 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
             % if outline_fragment:
                 ${HTML(outline_fragment.body_html())}
             % endif
-        </div>
-        <aside class="page-content-secondary course-sidebar">
+        </section>
+   </article>
+
+        <aside id="filter" class="sidebar"">
             % if has_goal_permission:
                 <div class="section section-goals ${'' if current_goal else 'hidden'}">
                     <div class="current-goal-container">
@@ -123,19 +130,25 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                 </div>
             % endif
             % if course_tools:
-                <div class="section section-tools">
-                    <h3 class="hd-6 section-title">${_("Course Tools")}</h3>
-                    <ul class="list-unstyled">
+                <header id="courses-list-header">
+                    <h2 id="h2">
+			<span class="d-none d-md-block">${_("Course Tools")}</span>
+		    </h2>
+		</header>
+
+                    <ul class="course-details list-group list-group-flush mb-3">
                         % for course_tool in course_tools:
-                            <li class="course-tool">
-                                <a class="course-tool-link" data-analytics-id="${course_tool.analytics_id()}" href="${course_tool.url(course_key)}">
-                                    <span class="icon ${course_tool.icon_classes()}" aria-hidden="true"></span>
-                                    ${course_tool.title()}
-                                </a>
+                            <li class="list-group-item">
+                              <div class="course-details-icon">  
+                                <i class="icon ${course_tool.icon_classes()}"></i>
+                              </div>
+                                <div class="course-details-content">  
+                                  <a href="${course_tool.url(course_key)}">${course_tool.title()}</a>
+                                </div>  
                             </li>
                         % endfor
                     </ul>
-                </div>
+   
             % endif
             % if upgrade_url and upgrade_price:
                 <div class="section section-upgrade course-home-sidebar-upgrade">
@@ -155,21 +168,25 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                 </div>
             % endif
             % if dates_fragment:
-                <div class="section section-dates">
+                <div class="course-details list-group list-group-flush mb-3">
                     ${HTML(dates_fragment.body_html())}
                 </div>
             % endif
             % if handouts_html:
-                <div class="section section-handouts">
+                <!--<div class="section section-handouts">
                     <h3 class="hd-6 section-title">${_("Course Handouts")}</h3>
-                    ${HTML(handouts_html)}
+                    ${HTML(handouts_html)}-->
                 </div>
             % endif
         </aside>
+     </div>
     </div>
     % if course_sock_fragment:
         ${HTML(course_sock_fragment.body_html())}
     % endif
+
+   </div>
+  </main>
 </div>
 </%block>
 
