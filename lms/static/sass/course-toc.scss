@@ -8871,7 +8871,7 @@ footer {
 
 #content {
   border-color: #ced4da !important;
-  margin: 0 0 4rem;
+//  margin: 0 0 4rem;
   /*
   padding: 3*$font-size-base 0;
   */
@@ -9117,7 +9117,7 @@ main.container aside {
 
 @media (min-width: 960px) {
   #content {
-    margin: 0 0 4rem;
+//    margin: 0 0 4rem;
     padding: 3rem 0;
   }
   main.container .d-flex, .jumbotron > .container .d-flex {
@@ -9417,7 +9417,13 @@ input.form-control.form-control {
     text-decoration: none;
     background-color: transparent;
     border: none;
-    font-size: 1rem;
+    font-size: 0.875rem;
+    text-transform: none;
+}
+
+#clear-all-filters:hover {
+  color: #96232a;
+  text-decoration: underline;
 }
 
 button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-button.selected {
@@ -9443,7 +9449,7 @@ button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-butto
 //    margin-bottom: 1rem !important;
     margin-top:1rem !important;
 //    padding-bottom: 1rem !important;
-    font-size: 1rem !important;
+//    font-size: 1rem !important;
 }
 
 #courses-list-header {
@@ -9471,16 +9477,16 @@ button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-butto
   color: #212529;
   color: darkcyan;
   display: block;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: .02em;
   line-height: 1;
   margin: 1rem 0 0;
   text-transform: uppercase;
   word-spacing: .04em;
-  border-bottom: 1px solid #dee2e6;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+//  border-bottom: 1px solid #dee2e6;
+//  margin-bottom: 1rem;
+//  padding-bottom: 1rem;
   backgorund: none !important;
 }
 
@@ -9492,6 +9498,7 @@ main.container {
   flex: 0 0 304px;
   margin-right: 1rem;
   padding-right: 1rem;
+  border-left: 0 !important;
 }
 
 #search-facets-lists {
@@ -9797,4 +9804,26 @@ header .jumbotron {
 
 #courses {
   margin: 0 !important;
+}
+
+#header_jumbotron {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa !important;
+    border-radius: 0;
+}
+
+#header_results, #filter-bar {
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.875rem !important;
+}
+
+.bg-light.bg-brand.rounded.search-facets {
+   margin: 0 !important;
+}
+
+#content {
+  background-color: #f8f9fa !important;
+  border-top: 1px solid #dee2e6 !important;
 }
