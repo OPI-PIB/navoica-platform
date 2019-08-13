@@ -36,7 +36,7 @@
 	    <div class="container">
 	      <h2 class="display-2 text-center">${_('List of Courses')}</h2>
 	      <form>
-	        <div id="search-form" class="input-group mt-2 mb-4 p-2">
+	        <div id="search-form" class="input-group my-3 p-2">
 	          <input class="form-control form-control" name="search_query" type="search" placeholder="Nazwa kursu">
 	          <div class="input-group-append">
 	            <button class="btn btn-light btn-outline-secondary" type="submit" id="button-addon2">Szukaj</button>
@@ -47,7 +47,7 @@
 	  </div>
 	</header>
 
-<div id="content" class="bg-light border-top">
+<div id="content">
     <main class="container">
 
         <aside id="filters" class="sidebar">
@@ -62,7 +62,7 @@
         </aside>
 
         <section id="results">
-           <header>
+           <header id="header_results">
               <div id="discovery-form" role="search" aria-label="course" class="m-0">
 				<h2 id="discovery-message" class="search-status-label"></h2>
 	      </div>
