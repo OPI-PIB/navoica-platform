@@ -9104,7 +9104,7 @@ aside {
 }
 
 main.container aside {
-  order: -1;
+//  order: -1;
   .list-group-flush .list-group-item {
     border: 0;
     padding-left: 0;
@@ -9384,6 +9384,7 @@ button#button-addon2 {
 
 p.lead.text-center.my-3 {
     font-size: 1.625rem !important;
+    line-height: 1.25;
 }
 
 @media (min-width: 1280px) {
@@ -9455,6 +9456,8 @@ button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-butto
 #courses-list-header {
   background-image: none;
   margin: 0 0 1rem !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  padding-bottom: 1rem;
 }
 
 .list-group-item {
@@ -9465,15 +9468,11 @@ button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-butto
 //  background-color: #f8f9fa !important;
 //}
 
-.course-details .course-details-icon.easy {
-  color: green
-}
-
 .course-details .course-details-icon.medium {
   color: #fd7e14
 }
 
-#organizator, #discovery-message, .d-flex.justify-content-between.align-items-center {
+#organizator, #discovery-message, .d-flex.justify-content-between.align-items-center, #h2 {
   color: #212529;
   color: darkcyan;
   display: block;
@@ -9512,10 +9511,10 @@ main.container {
   }
 }
 
-//#article, main.container > .jumbotron > .container > {
+.container {
 //  display: flex;
 // flex-flow: column;
-//}
+}
 
 #article {
    flex: 1 1;
@@ -9601,16 +9600,6 @@ main.container {
         font-size: 15px !important;
       }
     }
-    section {
-      p, li {
-        font-size: 15px !important;
-      }
-    }
-    article {
-      p, li { 
-        font-size: 15px !important;
-      }
-    }
   }
   .jumbotron > .container > {
     aside {
@@ -9619,11 +9608,6 @@ main.container {
       }
     }
     section {
-      p, li {
-        font-size: 15px !important;
-      }
-    }
-    article {
       p, li {
         font-size: 15px !important;
       }
@@ -9798,8 +9782,9 @@ main.container {
     margin: 4rem 0 0;
 }
 
-header .jumbotron {
+#jumbotron {
   background: rgba(255, 255, 255, 0.75);
+  padding: 4rem 0;
 }
 
 #courses {
@@ -9826,4 +9811,12 @@ header .jumbotron {
 #content {
   background-color: #f8f9fa !important;
   border-top: 1px solid #dee2e6 !important;
+}
+
+.input-group.my-2.p-2 {
+   background: rgba(200, 200, 200, 0.25);
+}
+
+#container-flex {
+   display: flex !important;
 }

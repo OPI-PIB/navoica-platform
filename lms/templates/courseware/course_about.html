@@ -1,3 +1,4 @@
+
 <%namespace name='static' file='../static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
@@ -123,10 +124,10 @@ from six import string_types
 
       <header class="bg-light">
         <div class="jumbotron">
-          <div class="container">
+          <div class="container" id="container-flex">
           <article id="article">
             <h1 class="display-2">${course.display_name_with_default_escaped}</h1>
-            <p>${get_course_about_section(request, course, "short_description")}</p>
+            <p class="lead my-3">${get_course_about_section(request, course, "short_description")}</p>
 
           <div class="my-3">
               %if user.is_authenticated() and registered:
@@ -254,7 +255,7 @@ from six import string_types
 			% if course.difficulty:
 	       <li class="list-group-item">
                 <div class="course-details-icon ${course.difficulty}">
-                  <i class="icon-level"></i>
+                  <i class="fas fa-star-half-alt"></i>
                 </div>
                 <div class="course-details-content">
 				  <% for a in settings.ALL_COURSE_DIFFICULTY:
@@ -270,7 +271,7 @@ from six import string_types
 			% if course.course_category:
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="icon-briefcase"></i>
+                  <i class="icon fa fa-graduation-cap"></i>
                 </div>
                 <div class="course-details-content">
 				  <% for a in settings.ALL_COURSE_CATEGORY:
@@ -287,7 +288,7 @@ from six import string_types
 			% if course.timetable:
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="icon-time"></i>
+                  <i class="icon far fa-clock"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>Czas trwania kursu:</h6>
@@ -303,7 +304,7 @@ from six import string_types
 
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="icon-calendar"></i>
+                  <i class="far fa-calendar-alt"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>${_("Classes Start")}:</h6>
@@ -329,7 +330,7 @@ from six import string_types
 
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="icon-flag"></i>
+                  <i class="far fa-bell"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>${_("Classes End")}:</h6>
@@ -353,7 +354,7 @@ from six import string_types
 
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="icon-calendar"></i>
+                  <i class="fas fa-calendar-alt"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>${_("Enrollment start")}:</h6>
@@ -376,7 +377,7 @@ from six import string_types
 
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="icon-flag"></i>
+                  <i class="fas fa-bell"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>${_("Enrollment end")}:</h6>
@@ -395,7 +396,7 @@ from six import string_types
             % if get_course_about_section(request, course, "effort"):
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="icon-time"></i>
+                  <i class="fas fa-battery-three-quarters"></i>
                 </div>
                 <div class="course-details-content">
 				   <%
@@ -412,7 +413,7 @@ from six import string_types
 		     % if course.organizer:
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="icon-briefcase"></i>
+                  <i class="fas fa-landmark"></i>
                 </div>
                 <div class="course-details-content">
                   <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
