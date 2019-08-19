@@ -9330,9 +9330,9 @@ article .display-3 {
   .card-body {
     padding: 1rem;
     .list-group-flush {
-      border-top: 1px solid #dee2e6;
-      margin-left: 1rem;
-      padding: 1rem 0;
+//      border-top: 1px solid #dee2e6;
+//      margin-left: 1rem;
+//      padding: 1rem 0;
       .list-group-item {
         border: 0;
         padding-left: 0;
@@ -9808,9 +9808,10 @@ main.container {
    margin: 0 !important;
 }
 
-#content {
+#content1 {
   background-color: #f8f9fa !important;
   border-top: 1px solid #dee2e6 !important;
+  padding: 3rem 0;
 }
 
 .input-group.my-2.p-2 {
@@ -9819,4 +9820,32 @@ main.container {
 
 #container-flex {
    display: flex !important;
+}
+
+#nav-tabContent {
+   width: 100%;
+}
+
+@media (min-width: 960px) {
+  main.container .d-flex>aside{
+    order: initial !important;
+  }
+}
+
+main.container .d-flex>aside {
+  order: -1;
+}
+
+.is-hidden {
+  display: none;
+} 
+
+#section[aria-expanded="true"] {
+   border-bottom: 1px solid #dee2e6;
+   margin-left: 1rem;
+}
+
+#section[aria-expanded="false"] {
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 12px -2px #dee2e6, 0 -2px 4px -4px #dee2e6;
 }

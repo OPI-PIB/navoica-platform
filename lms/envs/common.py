@@ -2361,7 +2361,7 @@ JWT_AUTH = {
     'JWT_VERIFY_EXPIRATION': True,
     # TODO Set JWT_ISSUER and JWT_AUDIENCE to values specific to your service/organization.
     'JWT_ISSUER': 'change-me',
-    'JWT_AUDIENCE': False,
+    'JWT_AUDIENCE': None,
     'JWT_PAYLOAD_GET_USERNAME_HANDLER': lambda d: d.get('username'),
     'JWT_LEEWAY': 1,
     'JWT_DECODE_HANDLER': 'edx_rest_framework_extensions.utils.jwt_decode_handler',
