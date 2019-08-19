@@ -2678,9 +2678,9 @@ COURSE_DISCOVERY_MEANINGS = {
     'availability': {
         'name': 'Dostępność',
         'terms': {
-            'Upcoming': 'Nadchodzący',
-            'Starting Soon': 'Dostępny',
-            'Current': 'Trwający',
+            'Upcoming': 'W przygotowaniu',
+            'Starting Soon': 'Nadchodzący',
+            'Current': 'W trakcie',
             'Archived': 'Zakończony',
         }
     }
