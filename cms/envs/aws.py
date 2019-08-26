@@ -602,10 +602,14 @@ CMS_BASE = ENV_TOKENS.get('CMS_BASE', 'studio.navoica.pl')
 
 FEATURES['ENABLE_INSTRUCTOR_EMAIL'] = True;
 
-INSTALLED_APPS += (
-    'raven.contrib.django.raven_compat',
-)
+try:
+    import raven
+    INSTALLED_APPS += (
+        'raven.contrib.django.raven_compat',
+    )
 
-RAVEN_CONFIG = {
-    'dsn': 'https://a342ede52f964fff8909b06024477edc@sentry.io/1355968',
-}
+    RAVEN_CONFIG = {
+        'dsn': 'https://a342ede52f964fff8909b06024477edc@sentry.io/1355968',
+    }
+except:
+    pass
