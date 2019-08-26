@@ -26,7 +26,7 @@ from .common import *
 from openedx.core.lib.derived import derive_settings
 from openedx.core.lib.logsettings import get_logger_config
 import os
-import raven
+
 
 from path import Path as path
 from xmodule.modulestore.modulestore_settings import convert_module_store_setting_if_needed
@@ -1106,11 +1106,14 @@ plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.LMS, plugin_c
 ########################## Derive Any Derived Settings  #######################
 
 derive_settings(__name__)
+try:
+    import raven
+    INSTALLED_APPS += (
+        'raven.contrib.django.raven_compat',
+    )
 
-INSTALLED_APPS += (
-    'raven.contrib.django.raven_compat',
-)
-
-RAVEN_CONFIG = {
-    'dsn': 'https://e3e1ce00e050403687828d5981c2fa72:8e8d9d55e69d4320a8f38808210a0e13@sentry.io/1283941',
-}
+    RAVEN_CONFIG = {
+        'dsn': 'https://e3e1ce00e050403687828d5981c2fa72:8e8d9d55e69d4320a8f38808210a0e13@sentry.io/1283941',
+    }
+except:
+    pass
