@@ -1,4 +1,5 @@
 
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -1488,7 +1489,7 @@ pre {
     background-color: #fff;
     border-color: #e89ca1;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(208, 53, 63, 0.25);
+    box-shadow: 0 0 0 0.2rem #dee2e6;
   }
   &::placeholder {
     color: #6c757d;
@@ -2024,7 +2025,7 @@ textarea.form-control {
   }
   &:focus, &.focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(208, 53, 63, 0.25);
+    box-shadow: 0 0 0 0.2rem #dee2e6;
   }
   &.disabled, &:disabled {
     opacity: 0.65;
@@ -3347,13 +3348,13 @@ input {
   z-index: -1;
   opacity: 0;
   &:checked ~ .custom-control-label::before {
-    color: #D0353F;
-    border-color: #D0353F;
+    color: #6c757d;
+    border-color: #6c757d;
     background-color: #fff;
   }
   &:focus {
     ~ .custom-control-label::before {
-      box-shadow: 0 0 0 0.2rem rgba(208, 53, 63, 0.25);
+      box-shadow: 0 0 0 0.2rem #dee2e6;
     }
     &:not(:checked) ~ .custom-control-label::before {
       border-color: #e89ca1;
@@ -3406,7 +3407,7 @@ input {
   }
   .custom-control-input {
     &:checked ~ .custom-control-label::after {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23D0353F' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%236c757d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
     }
     &:indeterminate ~ .custom-control-label {
       &::before {
@@ -3414,7 +3415,7 @@ input {
         background-color: #D0353F;
       }
       &::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3e%3cpath stroke='%23D0353F' d='M0 2h4'/%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3e%3cpath stroke='%236c757d' d='M0 2h4'/%3e%3c/svg%3e");
       }
     }
     &:disabled {
@@ -3431,7 +3432,7 @@ input {
   }
   .custom-control-input {
     &:checked ~ .custom-control-label::after {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23D0353F'/%3e%3c/svg%3e");
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%236c757d'/%3e%3c/svg%3e");
     }
     &:disabled:checked ~ .custom-control-label::before {
       background-color: rgba(208, 53, 63, 0.5);
@@ -3546,7 +3547,7 @@ input {
   opacity: 0;
   &:focus ~ .custom-file-label {
     border-color: #e89ca1;
-    box-shadow: 0 0 0 0.2rem rgba(208, 53, 63, 0.25);
+    box-shadow: 0 0 0 0.2rem #dee2e6;
   }
   &:disabled ~ .custom-file-label {
     background-color: #e9ecef;
@@ -3600,7 +3601,7 @@ input {
   &:focus {
     outline: none;
     &::-webkit-slider-thumb, &::-moz-range-thumb, &::-ms-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(208, 53, 63, 0.25);
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #dee2e6;
     }
   }
   &::-moz-focus-outer {
@@ -4412,7 +4413,7 @@ input {
   &:focus {
     z-index: 2;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(208, 53, 63, 0.25);
+    box-shadow: 0 0 0 0.2rem #dee2e6;
   }
 }
 
@@ -8581,15 +8582,19 @@ a.text-dark {
   }
 }
 
-a:not(.card), h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+a:not(.card) {
   font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 700;
 }
 
 .small {
   font-size: 1rem;
 }
 
-body > header, .bg-light {
+body > header {
   background-image: none;
   background-position: center center;
   background-size: cover;
@@ -8603,7 +8608,7 @@ header .jumbotron {
   p.lead {
     font-size: 1.125rem;
     font-weight: 400;
-    line-height: 1.625;
+    line-height: 1.5;
   }
   .input-group {
     background: rgba(200, 200, 200, 0.5);
@@ -8690,7 +8695,7 @@ section .display-2 {
 .card-footer {
   background: transparent;
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0 1rem 1rem;
   p {
     margin: 0;
   }
@@ -8756,10 +8761,7 @@ footer {
   .display-2 {
     font-size: 2.25rem;
   }
-  .display-3 {
-    font-size: 1.25rem;
-  }
-  .display-4 {
+  .display-3, .display-4 {
     font-size: 1.25rem;
     font-weight: 400;
   }
@@ -8803,11 +8805,21 @@ footer {
   .display-2 {
     font-size: 2.25rem;
   }
-  .display-3, .display-4 {
+  .display-3 {
+    font-size: 1.75rem;
+  }
+  .display-4 {
     font-size: 1.25rem;
   }
   header .jumbotron {
     padding: 4rem 0;
+  }
+  .card-body {
+    padding: 1rem 1rem 1.5rem;
+    > figure {
+      flex: 0 0 20rem;
+      margin: 0 1rem 0 0;
+    }
   }
   .card-title {
     min-height: 3rem;
@@ -8824,8 +8836,17 @@ footer {
   section .display-2 {
     margin: 0 0 3rem;
   }
-  .card-body > figure {
-    margin: 0 0 1rem;
+  .card-body {
+    /*
+      > figure {
+        margin: 0 0 $font-size-base;
+      }
+      */
+  }
+  .card-title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    min-height: 3rem;
   }
   .card-text {
     font-size: 0.9375rem;
@@ -8870,200 +8891,47 @@ footer {
 }
 
 #content {
-  border-color: #ced4da !important;
-//  margin: 0 0 4rem;
-  /*
-  padding: 3*$font-size-base 0;
-  */
+  padding: 3rem 0;
   .display-2 {
     margin: 0 0 2rem;
   }
 }
 
-main.container .d-flex, .jumbotron > .container .d-flex {
+main.container {
   display: flex;
   flex-flow: column;
-}
-
-main.container .d-flex > {
-  aside header, section header, article header {
-    border-bottom: 1px solid #dee2e6;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-.jumbotron > .container .d-flex > {
-  aside header, section header, article header {
-    border-bottom: 1px solid #dee2e6;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-main.container .d-flex > {
-  aside header {
-    h2, a {
+  > {
+    aside header, section header {
+      /*
+        align-items: flex-start;
+        */
+      border-bottom: 1px solid #dee2e6;
+      /*
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        */
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+    }
+    aside header h2, section header h2 {
       color: #212529;
       color: darkcyan;
       display: block;
       font-size: 1rem;
       font-weight: 700;
       letter-spacing: .02em;
-      line-height: 1.7143;
+      line-height: 1;
       margin: 1rem 0 0;
-      padding: calc(.25em + 1px) 0;
-      text-transform: uppercase;
-      word-spacing: .04em;
-    }
-  }
-  section header {
-    h2, a {
-      color: #212529;
-      color: darkcyan;
-      display: block;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: .02em;
-      line-height: 1.7143;
-      margin: 1rem 0 0;
-      padding: calc(.25em + 1px) 0;
-      text-transform: uppercase;
-      word-spacing: .04em;
-    }
-  }
-  article header {
-    h2, a {
-      color: #212529;
-      color: darkcyan;
-      display: block;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: .02em;
-      line-height: 1.7143;
-      margin: 1rem 0 0;
-      padding: calc(.25em + 1px) 0;
       text-transform: uppercase;
       word-spacing: .04em;
     }
   }
 }
 
-.jumbotron > .container .d-flex > {
-  aside header {
-    h2, a {
-      color: #212529;
-      color: darkcyan;
-      display: block;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: .02em;
-      line-height: 1.7143;
-      margin: 1rem 0 0;
-      padding: calc(.25em + 1px) 0;
-      text-transform: uppercase;
-      word-spacing: .04em;
-    }
-  }
-  section header {
-    h2, a {
-      color: #212529;
-      color: darkcyan;
-      display: block;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: .02em;
-      line-height: 1.7143;
-      margin: 1rem 0 0;
-      padding: calc(.25em + 1px) 0;
-      text-transform: uppercase;
-      word-spacing: .04em;
-    }
-  }
-  article header {
-    h2, a {
-      color: #212529;
-      color: darkcyan;
-      display: block;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: .02em;
-      line-height: 1.7143;
-      margin: 1rem 0 0;
-      padding: calc(.25em + 1px) 0;
-      text-transform: uppercase;
-      word-spacing: .04em;
-    }
-  }
-}
-
-main.container .d-flex section, .jumbotron > .container .d-flex section {
-  margin-bottom: 3rem;
-}
-
-main.container nav, .jumbotron > .container nav {
-  margin-top: -2rem;
-  overflow: hidden;
-  padding-left: 1px;
-  position: relative;
-  top: calc(4rem + 1px);
-}
-
-main.container nav .nav-tabs, .jumbotron > .container nav .nav-tabs {
-  align-items: flex-end;
-  border-color: #ced4da;
-  justify-content: stretch;
-}
-
-main.container nav .nav-tabs .nav-item, .jumbotron > .container nav .nav-tabs .nav-item {
-  align-items: center;
-  background: #fff;
-  border: 1px solid #ced4da;
-  color: #343a40;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  font-size: 15px;
-  font-weight: 700;
-  height: 4rem;
-  justify-content: flex-end;
-  letter-spacing: .02em;
-  margin-left: -1px;
-  padding: 0 4rem 1.125rem;
-  text-transform: uppercase;
-}
-
-main.container nav .nav-tabs .nav-item.active, .jumbotron > .container nav .nav-tabs .nav-item.active {
-  background: #fff;
-  border-bottom-color: #fff;
-  box-shadow: 0 4px 8px #adb5bd;
-  height: 4.25rem;
-  padding: 0 4rem 1.125rem;
-  z-index: 10;
-}
-
-aside {
+.search-facets-lists {
   .header-facet {
     font-weight: 700;
-  }
-  a.media {
-    margin-bottom: 2rem;
-    .hero {
-      height: 220px;
-      overflow: hidden;
-      position: relative;
-      img {
-        width: 100%;
-      }
-      .play-intro::after {
-        content: "\25b6";
-        color: rgba(255, 255, 255, 0.75);
-        font-size: 64px;
-      }
-    }
-  }
-  .organizer-logo {
-    max-width: 80%;
   }
   .list-group {
     margin-bottom: 1rem;
@@ -9071,19 +8939,17 @@ aside {
   .list-group-item {
     align-items: flex-start;
     display: flex;
-    margin-bottom: 0.5rem;
     .count-number {
       margin-left: 1rem;
     }
     &.selected {
       background-color: #f8f9fa;
       border-color: #dee2e6;
-      color: #D0353F;
       .count-number {
         color: transparent;
         position: relative;
         &::before {
-          color: #D0353F;
+          color: #343a40;
           content: "\f00d";
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
@@ -9099,134 +8965,53 @@ aside {
 #discovery-form {
 //  background: rgba(200, 200, 200, 0.25);
   button, input {
-  color: #212529;
-  }
-}
-
-main.container aside {
-//  order: -1;
-  .list-group-flush .list-group-item {
-    border: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  h6 {
-    font-size: 1rem;
+    color: #212529;
   }
 }
 
 @media (min-width: 960px) {
-  #content {
-//    margin: 0 0 4rem;
-    padding: 3rem 0;
-  }
-  main.container .d-flex, .jumbotron > .container .d-flex {
+  main.container {
     align-items: stretch;
     flex-flow: row wrap;
-  }
-  main.container .d-flex > {
-    aside header, section header, article header {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-  .jumbotron > .container .d-flex > {
-    aside header, section header, article header {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-  main.container .d-flex > {
-    aside header {
-      h2, a {
-        font-size: 0.875rem;
-        line-height: 1.7143;
-        margin: 0;
-        padding: calc(.25em + 1px) 0;
-        text-align: left;
+    > {
+      aside header, section header {
+        display: flex;
+        justify-content: space-between;
       }
-    }
-    section header {
-      h2, a {
-        font-size: 0.875rem;
-        line-height: 1.7143;
-        margin: 0;
-        padding: calc(.25em + 1px) 0;
-        text-align: left;
+      aside header {
+        h2, a {
+          font-size: 0.875rem;
+          line-height: 1;
+          margin: 0;
+          text-align: left;
+        }
       }
-    }
-    article header {
-      h2, a {
-        font-size: 0.875rem;
-        line-height: 1.7143;
-        margin: 0;
-        padding: calc(.25em + 1px) 0;
-        text-align: left;
+      section header {
+        h2, a {
+          font-size: 0.875rem;
+          line-height: 1;
+          margin: 0;
+          text-align: left;
+        }
       }
-    }
-  }
-  .jumbotron > .container .d-flex > {
-    aside header {
-      h2, a {
-        font-size: 0.875rem;
-        line-height: 1.7143;
-        margin: 0;
-        padding: calc(.25em + 1px) 0;
-        text-align: left;
+      aside {
+        flex: 0 0 304px;
+        margin-right: 1rem;
+        padding-right: 1rem;
+        #search-facets-lists {
+          display: block !important;
+        }
       }
-    }
-    section header {
-      h2, a {
-        font-size: 0.875rem;
-        line-height: 1.7143;
-        margin: 0;
-        padding: calc(.25em + 1px) 0;
-        text-align: left;
+      section {
+        flex: 1 1;
       }
-    }
-    article header {
-      h2, a {
-        font-size: 0.875rem;
-        line-height: 1.7143;
-        margin: 0;
-        padding: calc(.25em + 1px) 0;
-        text-align: left;
-      }
-    }
-  }
-  main.container .d-flex > aside, .jumbotron > .container .d-flex > aside {
-    border-left: 1px solid #dee2e6;
-    flex: 0 0 346px;
-    margin-left: 2rem;
-    order: initial;
-    padding-left: 2rem;
-  }
-  main.container .d-flex > aside .list-group-item, .jumbotron > .container .d-flex > aside .list-group-item {
-    font-size: 87.5%;
-  }
-  main.container .d-flex > aside h6, .jumbotron > .container .d-flex > aside h6 {
-    font-size: 0.875rem;
-    line-height: 21px;
-    margin-bottom: 0;
-  }
-  main.container .d-flex > aside #basic-data-facets, .jumbotron > .container .d-flex > aside #basic-data-facets {
-    display: block !important;
-  }
-  main.container .d-flex > {
-    section, article {
-      flex: 1 1;
-    }
-  }
-  .jumbotron > .container .d-flex > {
-    section, article {
-      flex: 1 1;
     }
   }
 }
 
 @media (min-width: 1280px) {
-  main.container .d-flex > aside, .jumbotron > .container .d-flex > aside {
-    flex: 0 0 426px;
+  main.container > aside .search-facets-lists .list-group-item {
+    font-size: 87.5%;
   }
 }
 
@@ -9241,122 +9026,42 @@ main.container aside {
   word-wrap: normal;
 }
 
-.course-details .course-details-icon {
-  align-items: center;
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 50%;
-  box-sizing: border-box;
-  color: #6c757d;
-  color: darkcyan;
+.card .course-details {
   display: flex;
-  flex: 0 0 36px;
-  font-size: 18px;
-  height: 36px;
-  justify-content: center;
-  margin-right: 12px;
-  margin-top: -1px;
-  text-align: center;
-}
-
-/*
- *  Course page styles
- */
-
-article .display-3 {
-  color: #333;
-  margin: 0 0 1rem;
-  &::before {
-    display: block;
-    width: 200px;
-    height: 2px;
-    background: #333;
-    margin-bottom: 12px;
-  }
-}
-
-.media-list {
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  padding: 1rem;
-}
-
-.accordion {
-  &.level-0 > .card > .card-header {
-    background: #f8f9fa;
-    padding: 0;
-    :first-child {
-      &[aria-expanded="false"]::before {
-        content: "+";
-        left: 12px;
-      }
-      &[aria-expanded="true"]::before {
-        content: "\2012";
-        left: 12px;
+  flex-direction: row;
+  justify-content: flex-start;
+  .list-group-item {
+    align-items: flex-start;
+    border: 0;
+    display: flex;
+    flex: 0 1 300px;
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    .course-details-icon {
+      align-items: center;
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 50%;
+      box-sizing: border-box;
+      color: #6c757d;
+      color: darkcyan;
+      display: flex;
+      flex: 0 0 36px;
+      font-size: 18px;
+      height: 36px;
+      justify-content: center;
+      margin-right: 12px;
+      margin-top: -1px;
+      text-align: center;
+    }
+    .course-details-content {
+      h6, div {
+        font-size: 15px;
+        line-height: 1.2;
       }
     }
-  }
-  &.level-1 {
-    margin: calc(-1rem - 1px);
-    .card-body {
-      padding-top: 0;
-    }
-  }
-  .card-header {
-    padding: 0;
-    :first-child {
-      display: block;
-      padding: 0;
-      width: 100%;
-      .btn {
-        font-weight: inherit;
-        padding: 0.75rem 2rem;
-        text-align: left;
-        width: 100%;
-      }
-      .btn-link {
-        color: #212529;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-      &::before {
-        display: block;
-        left: 4px;
-        position: absolute;
-      }
-    }
-  }
-  .card-body {
-//    padding: 1rem;
-    .list-group-flush {
-//      border-top: 1px solid #dee2e6;
-      margin-left: 1rem;
-//      padding: 1rem 0;
-      .list-group-item {
-        border: 0;
-        padding-left: 0;
-        padding-: 1rem;
-        &:hover {
-          background: transparent;
-        }
-      }
-      .list-group-item-action {
-        color: #D0353F;
-      }
-      .list-group-item p {
-        font-weight: 400;
-      }
-    }
-  }
-}
-
-.action-preview-form {
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  > div {
-    flex: 0 0 49%;
-    font-size: 14px;
   }
 }
 
@@ -9649,6 +9354,7 @@ main.container {
     align-items: center;
     background: #fff;
     border: 1px solid #ced4da !important;
+    border-botton: none !important;
     color: #343a40;
     display: flex;
     flex: 1;
@@ -9666,10 +9372,10 @@ main.container {
 
 .nav-link.active {
     background: #fff;
-    border-bottom-color: #fff;
+    border-bottom-color: #fff !important;
     box-shadow: 0 4px 8px #adb5bd;
     height: 4.25rem;
-    padding: 0 4rem 1.125rem;
+    padding: 0;
     z-index: 10;
 }
 
@@ -9835,3 +9541,16 @@ main.container .d-flex>aside {
       padding: 0 !important;
    }
 }
+
+.bg-light {
+  background-image: none;
+  background-position: center center;
+  background-size: cover;
+  box-sizing: border-box;
+  margin: 4rem 0 0;
+}
+
+#entitlement-unenrollment-modal {
+  display: none;
+}
+
