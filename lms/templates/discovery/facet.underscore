@@ -4,10 +4,15 @@
  	   		<%- gettext(displayName) %>
 		</div>
 	</div>
-
-<div data-facet= class="facet-list">
-    <%= HtmlUtils.ensureHtml(optionsHtml) %>
-</div>
+<% if (listIsHuge) { %>
+	<select data-facet="<%- name %>" class="facet-list collapse select_list">
+		<%= HtmlUtils.ensureHtml(optionsHtml) %>
+	</select>
+<% } else { %>
+	<div data-facet= class="facet-list">
+		<%= HtmlUtils.ensureHtml(optionsHtml) %>
+	</div>
+<% } %>
 <% if (listIsHuge) { %>
     <div class="toggle ">
         <button class="show-more discovery-button">
@@ -19,4 +24,3 @@
     </div>
 <% } %>
 </div>
-
