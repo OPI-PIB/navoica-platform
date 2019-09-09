@@ -7,10 +7,10 @@ LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
     'class': 'logging.NullHandler',
 }
 
-PLATFORM_NAME = 'Polski MOOC Draft'
+PLATFORM_NAME = 'Navoica Draft'
 LOGGING['loggers']['tracking']['handlers'] = ['console']
 HOMEPAGE_COURSE_MAX = 4
-LMS_BASE = os.environ.get('LMS_BASE', 'polskimooc-test.opi.org.pl')
+LMS_BASE = os.environ.get('LMS_BASE', 'draft.navoica.pl')
 CMS_BASE = 'studio-'+LMS_BASE
 SITE_NAME = LMS_BASE
 LMS_ROOT_URL = 'http://{}'.format(LMS_BASE)
@@ -42,7 +42,7 @@ FEATURES.update({
     'ENABLE_DISCUSSION_SERVICE': True,
     'SHOW_HEADER_LANGUAGE_SELECTOR': True,
     'ENABLE_ENTERPRISE_INTEGRATION': False,
-    "PREVIEW_LMS_BASE": "preview-polskimooc-test.opi.org.pl", 
+    "PREVIEW_LMS_BASE": "draft.navoica.pl",
 })
 
 ENABLE_MKTG_SITE = os.environ.get('ENABLE_MARKETING_SITE', False)

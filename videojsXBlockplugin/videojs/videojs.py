@@ -105,7 +105,7 @@ class videojsXBlock(XBlock):
         
         context = {
             'display_name': self.display_name,
-            'url': fullUrl,
+            'url': fullUrl.strip(),
             'allow_download': self.allow_download,
             'source_text': self.source_text,
             'subtitle_url': self.subtitle_url,
@@ -130,10 +130,10 @@ class videojsXBlock(XBlock):
         """
         context = {
             'display_name': self.display_name,
-            'url': self.url,
+            'url': self.url.strip(),
             'allow_download': self.allow_download,
             'source_text': self.source_text,
-            'source_url': self.source_url,
+            'source_url': self.source_url.strip(),
             'subtitle_text': self.subtitle_text,
             'subtitle_url': self.subtitle_url,
             'start_time': self.start_time,
@@ -157,7 +157,7 @@ class videojsXBlock(XBlock):
         The saving handler.
         """
         self.display_name = data['display_name']
-        self.url = data['url']
+        self.url = data['url'].strip()
         self.allow_download = True if data['allow_download'] == "True" else False # Str to Bool translation
         self.source_text = data['source_text']
 
@@ -178,7 +178,7 @@ class videojsXBlock(XBlock):
 
                 self.subtitle_url = settings.MEDIA_URL+'subtitle/polish/'+filename
 
-        self.source_url = data['source_url']
+        self.source_url = data['source_url'].strip()
         self.subtitle_text = data['subtitle_text']
         self.start_time = ''.join(data['start_time'].split()) # Remove whitespace
         self.end_time = ''.join(data['end_time'].split()) # Remove whitespace

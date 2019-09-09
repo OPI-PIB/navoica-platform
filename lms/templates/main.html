@@ -41,10 +41,12 @@ from pipeline_mako import render_require_js_path_overrides
 <%def name="pagetitle()" />
   <%block name="title">
       <title>
-       Navoica
+       Navoica – Platforma edukacyjna
       </title>
   </%block>
-
+  
+  <meta name="description" content="Skorzystaj z bezpłatnych kursów online oferowanych przez polskie uczelnie i instytucje.">
+  
   % if not allow_iframing:
       <script type="text/javascript">
         /* immediately break out of an iframe if coming from the marketing website */

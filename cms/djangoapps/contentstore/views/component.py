@@ -35,7 +35,7 @@ __all__ = [
 log = logging.getLogger(__name__)
 
 # NOTE: This list is disjoint from ADVANCED_COMPONENT_TYPES
-COMPONENT_TYPES = ['discussion', 'html', 'problem', 'video']
+COMPONENT_TYPES = ['discussion', 'html', 'problem', ]
 
 ADVANCED_COMPONENT_TYPES = sorted(set(name for name, class_ in XBlock.load_classes()) - set(COMPONENT_TYPES))
 
@@ -176,6 +176,7 @@ def get_component_templates(courselike, library=False):
     """
     Returns the applicable component templates that can be used by the specified course or library.
     """
+
     def create_template_dict(name, category, support_level, boilerplate_name=None, tab="common", hinted=False):
         """
         Creates a component template dict.
@@ -241,7 +242,8 @@ def get_component_templates(courselike, library=False):
         'discussion': _("Discussion"),
         'html': _("HTML"),
         'problem': _("Problem"),
-        'video': _("Video")
+        'video': _("Video from Youtube"),
+        'videojs': _("Video from cloud")
     }
 
     component_templates = []
@@ -294,7 +296,8 @@ def get_component_templates(courselike, library=False):
 
                         templates_for_category.append(
                             create_template_dict(
-                                _(template['metadata'].get('display_name')),    # pylint: disable=translation-of-non-string
+                                _(template['metadata'].get('display_name')),
+                                # pylint: disable=translation-of-non-string
                                 category,
                                 support_level_with_template,
                                 template_id,
@@ -360,6 +363,12 @@ def get_component_templates(courselike, library=False):
     }
     advanced_component_types = _advanced_component_types(allow_unsupported)
     # Set component types according to course policy file
+
+    try:
+        course_advanced_keys.pop(course_advanced_keys.index("videojs"))
+    except ValueError:
+        pass
+
     if isinstance(course_advanced_keys, list):
         for category in course_advanced_keys:
             if category in advanced_component_types.keys() and category not in categories:
@@ -389,6 +398,26 @@ def get_component_templates(courselike, library=False):
             "Improper format for course advanced keys! %s",
             course_advanced_keys
         )
+
+    video_component_templates = {
+        "type": "advanced-videos",
+        "templates": [],
+        "display_name": _("Video"),
+        "support_legend": create_support_legend_dict()
+    }
+
+    for category in ['video', 'videojs']:
+        video_component_templates['templates'].append(
+            create_template_dict(
+                component_display_names[category],
+                category,
+                advanced_component_types[category]
+            )
+        )
+        categories.add(category)
+
+    component_templates.insert(0, video_component_templates)
+
     if len(advanced_component_templates['templates']) > 0:
         component_templates.insert(0, advanced_component_templates)
 

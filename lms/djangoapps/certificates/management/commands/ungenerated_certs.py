@@ -15,6 +15,7 @@ from six import text_type
 from lms.djangoapps.certificates.api import generate_user_certificates
 from lms.djangoapps.certificates.models import CertificateStatuses, certificate_status_for_student
 from xmodule.modulestore.django import modulestore
+from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
 
 LOGGER = logging.getLogger(__name__)
 
@@ -61,7 +62,7 @@ class Command(BaseCommand):
             dest='force',
             default=False,
             help='Will generate new certificates for only those users whose entry in the certificate table matches '
-            'STATUS. STATUS can be generating, unavailable, deleted, error or notpassing.'
+                 'STATUS. STATUS can be generating, unavailable, deleted, error or notpassing.'
         )
 
     def handle(self, *args, **options):
@@ -102,6 +103,20 @@ class Command(BaseCommand):
             start = datetime.datetime.now(UTC)
 
             for student in enrolled_students:
+
+                course_grade = CourseGradeFactory().read(student, course)
+                if not course_grade.passed:
+                    LOGGER.info(
+                        (
+                            u"Student %s not passing due to letter grade '%s' "
+                            u"in course '%s'"
+                        ),
+                        student.id,
+                        course_grade.letter_grade,
+                        text_type(course_key),
+                    )
+                    continue
+
                 count += 1
                 if count % status_interval == 0:
                     # Print a status update with an approximation of

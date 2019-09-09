@@ -9,12 +9,22 @@ from lms.djangoapps.certificates import views
 urlpatterns = [
     # Certificates HTML view end point to render web certs by user and course
     url(
+        r'^user/(?P<user_id>[^/]*)/course/{course_id}/pdf'.format(course_id=settings.COURSE_ID_PATTERN),
+        views.render_pdf_view,
+        name='pdf_view'
+    ),
+    url(
         r'^user/(?P<user_id>[^/]*)/course/{course_id}'.format(course_id=settings.COURSE_ID_PATTERN),
         views.render_html_view,
         name='html_view'
     ),
 
     # Certificates HTML view end point to render web certs by certificate_uuid
+    url(
+        r'^(?P<certificate_uuid>[0-9a-f]{32})/pdf$',
+        views.render_pdf_cert_by_uuid,
+        name='render_pdf_cert_by_uuid'
+    ),
     url(
         r'^(?P<certificate_uuid>[0-9a-f]{32})$',
         views.render_cert_by_uuid,

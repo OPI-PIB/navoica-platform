@@ -10,6 +10,7 @@ import openedx.core.djangoapps.common_views.xblock
 import openedx.core.djangoapps.debug.views
 import openedx.core.djangoapps.external_auth.views
 import openedx.core.djangoapps.lang_pref.views
+from django.views.generic import TemplateView
 
 from ratelimitbackend import admin
 
@@ -158,6 +159,11 @@ urlpatterns = [
     url(r'^api/val/v0/', include('edxval.urls')),
     url(r'^api/tasks/v0/', include('user_tasks.urls')),
     url(r'^accessibility$', contentstore.views.accessibility, name='accessibility'),
+]
+
+robots = TemplateView.as_view(template_name='robots.txt', content_type='text/plain')
+urlpatterns += [
+    url(r'^robots\.txt$', robots, name='robots')
 ]
 
 JS_INFO_DICT = {

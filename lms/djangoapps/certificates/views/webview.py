@@ -48,7 +48,8 @@ from student.models import LinkedInAddToProfileConfiguration
 from util import organizations_helpers as organization_api
 from util.date_utils import strftime_localized
 from util.views import handle_500
-
+import requests
+from django.contrib.auth.decorators import login_required
 
 log = logging.getLogger(__name__)
 _ = translation.ugettext
@@ -467,7 +468,7 @@ def _update_organization_context(context, course):
     else:
         context['organizer'] = partner_short_name
 
-
+@login_required
 def render_cert_by_uuid(request, certificate_uuid):
     """
     This public view generates an HTML representation of the specified certificate
@@ -481,11 +482,38 @@ def render_cert_by_uuid(request, certificate_uuid):
     except GeneratedCertificate.DoesNotExist:
         raise Http404
 
+@login_required
+def render_pdf_cert_by_uuid(request, certificate_uuid):
+    output =  render_cert_by_uuid(request, certificate_uuid)
+
+    multipart_form_data = {
+        'file': ('index.html', output.content),
+        'marginTop': (None, '0',),
+        'marginBottom': (None, '0',),
+        'marginLeft': (None, '0',),
+        'marginRight': (None, '0',),
+        'landscape': (None, 'true',),
+    }
+
+    # $ docker run --rm -p 3000:3000 thecodingmachine/gotenberg:5
+    r = requests.post('http://gotenberg:3000/convert/html', files=multipart_form_data)
+
+    filename = "certyfikat.pdf"
+
+    if (r.status_code == 200):
+        response = HttpResponse(r, content_type='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename="' + filename + '"'
+        return response
+
+
+    return output
+
 
 @handle_500(
     template_path="certificates/server-error.html",
     test_func=lambda request: request.GET.get('preview', None)
 )
+@login_required
 def render_html_view(request, user_id, course_id):
     """
     This public view generates an HTML representation of the specified user and course
@@ -617,6 +645,30 @@ def render_html_view(request, user_id, course_id):
         # Render the certificate
         return _render_valid_certificate(request, context, custom_template)
 
+@login_required
+def render_pdf_view(request, user_id, course_id):
+    output = render_html_view(request, user_id, course_id)
+
+    multipart_form_data = {
+        'file': ('index.html', output.content),
+        'marginTop': (None, '0',),
+        'marginBottom': (None, '0',),
+        'marginLeft': (None, '0',),
+        'marginRight': (None, '0',),
+        'landscape': (None, 'true',),
+    }
+
+    # $ docker run --rm -p 3000:3000 thecodingmachine/gotenberg:5
+    r = requests.post('http://gotenberg:3000/convert/html', files=multipart_form_data)
+
+    filename = "certyfikat.pdf"
+
+    if (r.status_code == 200):
+        response = HttpResponse(r, content_type='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename="' + filename + '"'
+        return response
+
+    return output
 
 def _get_catalog_data_for_course(course_key):
     """

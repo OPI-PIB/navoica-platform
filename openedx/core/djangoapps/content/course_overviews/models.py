@@ -110,6 +110,7 @@ class CourseOverview(TimeStampedModel):
     course_category = TextField(null=True)
     timetable = TextField(null=True)
     is_new = BooleanField(default=True)
+    availability = TextField(null=True)
 
     @classmethod
     def _create_or_update(cls, course):
@@ -208,6 +209,8 @@ class CourseOverview(TimeStampedModel):
         
         
         course_overview.is_new = course.is_newish
+        
+        course_overview.availability = course.availability
 
         if not CatalogIntegration.is_enabled():
             course_overview.language = course.language
