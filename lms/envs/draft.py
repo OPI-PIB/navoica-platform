@@ -42,7 +42,7 @@ FEATURES.update({
     'ENABLE_DISCUSSION_SERVICE': True,
     'SHOW_HEADER_LANGUAGE_SELECTOR': True,
     'ENABLE_ENTERPRISE_INTEGRATION': False,
-    "PREVIEW_LMS_BASE": "draft.navoica.pl",
+    "PREVIEW_LMS_BASE": "preview-draft.navoica.pl",
 })
 
 ENABLE_MKTG_SITE = os.environ.get('ENABLE_MARKETING_SITE', False)
