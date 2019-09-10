@@ -9,7 +9,7 @@ LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
 
 LOGGING['loggers']['tracking']['handlers'] = ['console']
 HOMEPAGE_COURSE_MAX = 4
-LMS_BASE = os.environ.get('LMS_BASE', 'edx-dev.opi.org.pl')
+LMS_BASE = os.environ.get('LMS_BASE', 'draft.navoica.pl')
 CMS_BASE = 'studio.'+LMS_BASE
 SITE_NAME = LMS_BASE
 LMS_ROOT_URL = 'http://{}'.format(LMS_BASE)
@@ -74,7 +74,7 @@ MKTG_URLS = {
 
 CREDENTIALS_SERVICE_USERNAME = 'credentials_worker'
 
-COURSE_CATALOG_API_URL = 'http://localhost:18381/api/v1/'
+COURSE_CATALOG_API_URL = 'http://edx.devstack.discovery:18381/api/v1/'
 
 LANGUAGE_CODE = 'pl'
 

@@ -60,7 +60,7 @@ EDX_ROOT = path(__file__).abspath().dirname().dirname().dirname()  # /edx-platfo
 ################################### FEATURES ###################################
 # The display name of the platform to be used in templates/emails/etc.
 PLATFORM_NAME = "Navoica.pl"
-PLATFORM_DESCRIPTION = _('Your Platform Description Here')
+PLATFORM_DESCRIPTION = _('Skorzystaj z bezpłatnych kursów online oferowanych przez polskie uczelnie i instytucje.')
 CC_MERCHANT_NAME = PLATFORM_NAME
 
 PLATFORM_VERSION = subprocess.check_output(["git -C %s tag" % EDX_ROOT],shell=True)
@@ -84,6 +84,7 @@ MANUAL_ENROLLMENT_ROLE_CHOICES = ['Learner', 'Support', 'Partner']
 
 # Features
 FEATURES = {
+	'ENABLE_UNICODE_USERNAME': True,
 	'BYPASS_ACTIVATION_EMAIL': False,
     'DISPLAY_DEBUG_INFO_TO_STAFF': True,
     'DISPLAY_HISTOGRAMS_TO_STAFF': False,  # For large courses this slows down courseware access for staff.
@@ -413,7 +414,8 @@ FEATURES = {
     'UNSUPPORTED_BROWSER_ALERT_VERSIONS': "{e:0,f:-3,o:0,s:-3,c:-3,i:20}",
 }
 
-COURSE_DISCOVERY_FILTERS = ['course_category', 'organizer', 'modes', 'difficulty']
+
+COURSE_DISCOVERY_FILTERS = ['course_category', 'organizer', 'modes', 'difficulty', 'availability']
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
 COURSE_REVIEWS_TOOL_PROVIDER_FRAGMENT_NAME = 'coursetalk-reviews-fragment.html'
@@ -916,7 +918,7 @@ USE_TZ = True
 SESSION_COOKIE_SECURE = False
 SESSION_SAVE_EVERY_REQUEST = False
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
-
+SESSION_COOKIE_AGE = 86400
 
 # CMS base
 CMS_BASE = 'localhost:8001'
@@ -2682,6 +2684,15 @@ COURSE_DISCOVERY_MEANINGS = {
     'difficulty': {
         'name': 'Course Difficulty',
         'terms': {b[0]: b[1] for b in ALL_COURSE_DIFFICULTY},
+    },
+    'availability': {
+        'name': 'Dostępność',
+        'terms': {
+            'Upcoming': 'W przygotowaniu',
+            'Starting Soon': 'Nadchodzący',
+            'Current': 'W trakcie',
+            'Archived': 'Zakończony',
+        }
     }
 }
 
@@ -3246,5 +3257,6 @@ ELASTIC_FIELD_MAPPINGS = {
     'course_category': {'type': 'string'},
     'organizer': {'type': 'string'},
     'difficulty': {'type': 'string'},
-    'is_new': {'type': 'boolean'}
+    'is_new': {'type': 'boolean'},
+    'availability': {'type': 'string'}
 }

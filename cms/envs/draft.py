@@ -9,16 +9,16 @@ LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
 
 LOGGING['loggers']['tracking']['handlers'] = ['console']
 
-PLATFORM_NAME = 'Studio Polski MOOC Draft'
-LMS_BASE = 'polskimooc-test.opi.org.pl'
-CMS_BASE = 'studio-polskimooc-test.opi.org.pl'
+PLATFORM_NAME = 'Studio Navoica Draft'
+LMS_BASE = 'draft.navoica.pl'
+CMS_BASE = 'studio-draft.navoica.pl'
 LMS_ROOT_URL = 'http://{}'.format(LMS_BASE)
 
 FEATURES.update({
     'ENABLE_COURSEWARE_INDEX': True,
     'ENABLE_LIBRARY_INDEX': True,
     'ENABLE_DISCUSSION_SERVICE': True,
-    "PREVIEW_LMS_BASE": "preview-polskimooc-test.opi.org.pl", 
+    "PREVIEW_LMS_BASE": "preview-draft.navoica.pl",
 })
 
 CREDENTIALS_SERVICE_USERNAME = 'credentials_worker'
@@ -39,9 +39,9 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = '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'
 
-DEFAULT_FROM_EMAIL = 'registration@polskimooc-test.opi.org.pl'
-DEFAULT_FEEDBACK_EMAIL = 'feedback@polskimooc-test.opi.org.pl'
-SERVER_EMAIL = 'devops@polskimooc-test.opi.org.pl'
+DEFAULT_FROM_EMAIL = 'registration@draft.navoica.pl'
+DEFAULT_FEEDBACK_EMAIL = 'feedback@draft.navoica.pl'
+SERVER_EMAIL = 'devops@draft.navoica.pl'
 
 WEBPACK_CONFIG_PATH = 'webpack.prod.config.js'
 

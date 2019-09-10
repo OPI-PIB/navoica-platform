@@ -41,10 +41,12 @@ from pipeline_mako import render_require_js_path_overrides
 <%def name="pagetitle()" />
   <%block name="title">
       <title>
-       Navoica
+       Navoica – Platforma edukacyjna
       </title>
   </%block>
-
+  
+  <meta name="description" content="Skorzystaj z bezpłatnych kursów online oferowanych przez polskie uczelnie i instytucje.">
+  
   % if not allow_iframing:
       <script type="text/javascript">
         /* immediately break out of an iframe if coming from the marketing website */
@@ -105,7 +107,6 @@ from pipeline_mako import render_require_js_path_overrides
     }).call(this, require || RequireJS.require);
   </script>
   <script type="text/javascript" src="${static.url("lms/js/require-config.js")}"></script>
-  <script src="${static.url("jjs/jquery.min.js")}"></script>
   <script src="${static.url("js/popper.min.js")}"></script>
   <script src="${static.url("js/bootstrap.min.js")}"></script>
   <%block name="js_overrides">
@@ -157,9 +158,6 @@ from pipeline_mako import render_require_js_path_overrides
         branch.init('${branch_key | n, js_escaped_string}');
     </script>
 % endif
-
-          <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" / >
-	  <link rel="stylesheet" href="/static/css/courses.css" type="text/css" media="all" / >
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=latin-ext">
 
 </head>

@@ -3,7 +3,8 @@
         'underscore',
         'backbone',
         'js/discovery/models/course_card',
-        'js/discovery/models/facet_option'
+        'js/discovery/models/facet_option',
+        'js/discovery/models/facet_select'
     ], function(_, Backbone, CourseCard, FacetOption) {
         'use strict';
 

@@ -1,5 +1,6 @@
 <%page expression_filter="h"/>
 <%! from django.utils.translation import ugettext as _ %>
+<%! from django.conf import settings %>
 <%namespace name='static' file='../static_content.html'/>
 <%
 course_mode_class = course_mode if course_mode else ''
@@ -10,8 +11,8 @@ course_mode_class = course_mode if course_mode else ''
     <div id="certificate">
         <section>
             <header>
-                <span class="left"><img src="/static/images/logo-light-bg.svg" width="150"></span>
-                <span class="right"><img src="/static/images/org/${organizer}.png?1" width="150"></span>
+                <span class="left"><img src="${settings.LMS_ROOT_URL}/static/images/logo-light-bg.svg" width="150"></span>
+                <span class="right"><img src="${settings.LMS_ROOT_URL}/static/images/org/${organizer}.png" width="150"></span>
             </header>
             <div id="certificate-content">
                 <p class="fancy"><span>Zaświadczenie</span></p>
@@ -32,8 +33,8 @@ course_mode_class = course_mode if course_mode else ''
                             % if loop.index < 2:
                             <li>
                                 <div class="instructor">
-                                    <img style="max-width: 200px" class="signatory-signature"
-                                         src="${signatory['signature_image_path']}">
+                                    <img style="max-width: 100px !important; max-height: 100px" class="signatory-signature"
+                                         src="${settings.LMS_ROOT_URL}${signatory['signature_image_path']}">
                                     <p class="instructor-name">${signatory['name']}</p>
                                     <p class="instructor-position">${signatory['title']}</p>
                                 </div>
@@ -53,7 +54,7 @@ course_mode_class = course_mode if course_mode else ''
                     </p>
                 </div>
                 <div id="link">
-                    <a href="">link do zaświadczenia</a>
+                    <a href="${settings.LMS_ROOT_URL}${request.path}">link do zaświadczenia</a>
                 </div>
             </footer>
         </section>
@@ -61,10 +62,10 @@ course_mode_class = course_mode if course_mode else ''
     </div>
 </div>
 <div class="print-footer">
-    <button onclick="window.print()" class="action action-print btn-black btn-small" id="action-print-view">
-        <span class="icon fa fa-print" aria-hidden="true"></span>
-        Wydrukuj certyfikat
+    <button onclick="window.location.href='${settings.LMS_ROOT_URL}${request.path}/pdf?preview=${request.GET.get('preview','')}'" class="action action-print btn-black btn-small" id="action-print-view">
+        <span class="icon fa fa-download" aria-hidden="true"></span>
+        Pobierz certyfikat [PDF]
     </button>
 </div>
-<link rel="stylesheet" href="/static/css/polipedia.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="${settings.LMS_ROOT_URL}/static/css/polipedia.css" type="text/css" media="screen"/>
 <%include file="/footer.html" />

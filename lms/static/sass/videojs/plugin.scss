@@ -65,17 +65,22 @@
     }
 
     .vjs-quality-dropdown ul li a {
-      color: #fff;
+      color: #fff !important;
       text-decoration: none;
       padding: 5px 10px;
       display: table;
       width: 100%;
     }
 
-    .vjs-quality-dropdown ul li.current a,
+    .vjs-quality-dropdown ul li.current a {
+      background-color: #fff;
+      color: #2B333F;
+    }
+
+    .vjs-quality-dropdown ul li a:focus,
     .vjs-quality-dropdown ul li a:hover {
-      background: #000;
-      color: rgb(255, 0, 0);
+       background-color: rgba(115,133,159,0.5);
+       text-decoration: none !important;
     }
   }
 }

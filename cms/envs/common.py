@@ -165,6 +165,8 @@ SECRET_KEY = 'dev key'
 STUDIO_NAME = _("Navoica.pl Studio")
 STUDIO_SHORT_NAME = _("Studio")
 FEATURES = {
+	'BYPASS_ACTIVATION_EMAIL': False,
+	'ENABLE_UNICODE_USERNAME': True,
     'GITHUB_PUSH': False,
 
     # for consistency in user-experience, keep the value of the following 3 settings
@@ -616,6 +618,7 @@ DEBUG = False
 SESSION_COOKIE_SECURE = False
 SESSION_SAVE_EVERY_REQUEST = False
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+SESSION_COOKIE_AGE = 86400
 
 # Site info
 SITE_NAME = "localhost:8001"
@@ -1301,10 +1304,10 @@ DEFAULT_COURSE_LANGUAGE = "en"
 #               None to omit.
 #
 ADVANCED_PROBLEM_TYPES = [
-    {
-        'component': 'openassessment',
-        'boilerplate_name': None,
-    },
+    #{
+    #    'component': 'openassessment',
+    #    'boilerplate_name': None,
+    #},
     {
         'component': 'drag-and-drop-v2',
         'boilerplate_name': None

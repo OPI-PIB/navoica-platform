@@ -49,6 +49,7 @@ from student import views as student_views
 from student_account import views as student_account_views
 from track import views as track_views
 from util import views as util_views
+from django.views.generic import TemplateView
 
 if settings.DEBUG or settings.FEATURES.get('ENABLE_DJANGO_ADMIN_SITE'):
     django_autodiscover()
@@ -136,6 +137,11 @@ urlpatterns = [
 
     url(r'^dashboard/', include('learner_dashboard.urls')),
     url(r'^api/experiments/', include('experiments.urls', namespace='api_experiments')),
+]
+
+robots = TemplateView.as_view(template_name='robots.txt', content_type='text/plain')
+urlpatterns += [
+    url(r'^robots\.txt$', robots, name='robots')
 ]
 
 # TODO: This needs to move to a separate urls.py once the student_account and
