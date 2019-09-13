@@ -2116,10 +2116,10 @@
     "View child items": "Zobacz elementy poboczne", 
     "View discussion": "Wy\u015bwietl dyskusj\u0119", 
     "Viewing %s course": [
-      "Wyszukane kursy: %s", 
-      "Wyszukane kursy: %s", 
-      "Wyszukane kursy: %s", 
-      "Wyszukane kursy: %s"
+      "Znalezionych kursów: %s", 
+      "Znalezionych kursów %s", 
+      "Znalezionych kursów %s", 
+      "Znalezionych kursów %s"
     ], 
     "Visibility": "Widoczno\u015b\u0107", 
     "Visible to": "Widoczny dla", 
