@@ -63,11 +63,11 @@ HeaderFactory();
 
 
          % if request.path != '/':
-            <form style="width: 900px;" method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
+            <form method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
                 <div class="input-group w-100">
-                    <input class="form-control form-control" type="search" name="search_query" placeholder="Wpisz szukaną frazę">
+                    <input class="form-control" type="search" name="search_query" placeholder="Wpisz szukaną frazę">
                     <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+                        <button class="btn btn-light btn-outline-secondary" type="submit">Szukaj</button>
                     </div>
                 </div>
             </form>

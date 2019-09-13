@@ -9606,3 +9606,10 @@ main.container .d-flex>aside {
 #main {
     margin: 8rem 0 0;
 }
+
+@media (min-width: 960px) {
+  .d-none {
+    display: block !important;
+    width:400px;
+ }
+}
