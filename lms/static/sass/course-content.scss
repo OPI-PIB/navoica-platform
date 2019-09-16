@@ -3653,6 +3653,7 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  text-align: center;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -4572,8 +4573,8 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .jumbotron {
-  padding: 4rem 2rem;
-  margin-bottom: 4rem;
+  padding: 0;
+  margin-bottom: 0;
   background-color: #f8f9fa;
   border-radius: 0;
 }
@@ -9093,23 +9094,23 @@ main.container .d-flex section,
 }
 
 main.container nav,
-.jumbotron > .container nav {
-  margin-top: -2rem;
-  overflow: hidden;
-  padding-left: 1px;
-  position: relative;
-  top: calc(4rem + 1px);
+.jumbotronn > .container nav {
+  margin-top: 0;
+    overflow: hidden;
+    padding-left: 1px;
+    position: relative;
+    top: 1px;
 }
 
 main.container nav .nav-tabs,
-.jumbotron > .container nav .nav-tabs {
+.jumbotronn > .container nav .nav-tabs {
   align-items: flex-end;
   border-color: #ced4da;
   justify-content: stretch;
 }
 
 main.container nav .nav-tabs .nav-item,
-.jumbotron > .container nav .nav-tabs .nav-item {
+.jumbotronn > .container nav .nav-tabs .nav-item {
   align-items: center;
   background: #fff;
   border: 1px solid #ced4da;
@@ -9132,7 +9133,7 @@ main.container nav .nav-tabs .nav-item,
 }
 
 main.container nav .nav-tabs .nav-item.active,
-.jumbotron > .container nav .nav-tabs .nav-item.active {
+.jumbotronn > .container nav .nav-tabs .nav-item.active {
   background: #fff;
   border-bottom-color: #fff;
   box-shadow: 0 4px 8px #adb5bd;

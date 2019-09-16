@@ -59,6 +59,10 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
 <script type="text/javascript" src="${static.url('js/src/tooltip_manager.js')}"></script>
 
 <link href="${static.url('css/vendor/jquery.autocomplete.css')}" rel="stylesheet" type="text/css">
+
+<link href="${static.url('css/course-content.css')}" rel="stylesheet" type="text/css">
+
+
   ${HTML(fragment.head_html())}
 </%block>
 
@@ -116,13 +120,14 @@ ${HTML(fragment.foot_html())}
   <%include file="/courseware/course_navigation.html" args="active_page='courseware'" />
 % endif
 
-<div class="container"
+<div id="content" class="border-top">
+
+<main class="container"
   % if getattr(course, 'language'):
     lang="${course.language}"
   % endif
   >
   <div class="course-wrapper" role="presentation">
-
 % if disable_accordion is UNDEFINED or not disable_accordion:
     <div class="course-index">
 
@@ -170,22 +175,22 @@ ${HTML(fragment.foot_html())}
                     <div class="has-breadcrumbs">
                         <div class="breadcrumbs">
                             % if COURSE_OUTLINE_PAGE_FLAG.is_enabled(course.id):
-                                <span class="nav-item nav-item-course">
+                                <span class="nav-item nav-item-course breadcrumb-item">
                                     <a href="${course_url}">${course_home_page_title(course)}</a>
                                 </span>
-                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                /
                             % endif
                             % if chapter:
                                 <span class="nav-item nav-item-chapter" data-course-position="${course.position}" data-chapter-position="${chapter.position}">
                                     <a href="${course_url}#${unicode(chapter.location)}">${chapter.display_name_with_default}</a>
                                 </span>
-                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                /
                             % endif
                             % if section:
                                 <span class="nav-item nav-item-section">
                                     <a href="${course_url}#${unicode(section.location)}">${section.display_name_with_default}</a>
                                 </span>
-                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                /
                             % endif
                             <span class="nav-item nav-item-sequence">${sequence_title}</span>
                         </div>
@@ -194,7 +199,7 @@ ${HTML(fragment.foot_html())}
             </div>
         </header>
 
-        <main id="main" tabindex="-1" aria-label="Content">
+        <main tabindex="-1" aria-label="Content">
             % if getattr(course, 'entrance_exam_enabled') and \
                getattr(course, 'entrance_exam_minimum_score_pct') and \
                entrance_exam_current_score is not UNDEFINED:
@@ -237,6 +242,7 @@ ${HTML(fragment.foot_html())}
 
   </div>
   ${HTML(course_sock_fragment.body_html())}
+</main>
 </div>
 <div class="container-footer">
   % if settings.FEATURES.get("LICENSING", False):
