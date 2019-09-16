@@ -5,6 +5,17 @@
 .login #register-form .status.message.is-shown, .login #login-form .status.message.is-shown, .login #passwordreset-form .status.message.is-shown, .register #register-form .status.message.is-shown, .register #login-form .status.message.is-shown, .register #passwordreset-form .status.message.is-shown, .passwordreset #register-form .status.message.is-shown, .passwordreset #login-form .status.message.is-shown, .passwordreset #passwordreset-form .status.message.is-shown, #forgot-password-modal #password-reset #register-form .status.message.is-shown, #forgot-password-modal #password-reset #login-form .status.message.is-shown, #forgot-password-modal #password-reset #passwordreset-form .status.message.is-shown {
     display: block;
 }
+
+.video-js{
+  width: 100% !important;
+}
+
+footer,body,#content,.container-footer {
+  background-color: white;
+}
+.jumbotronn{
+      background-color: #f8f9fa;
+}
 //main,section.container{
 //  padding-top:100px
 //}

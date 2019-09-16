@@ -34,15 +34,15 @@ if course is not None:
     tab_list = get_course_tab_list(request, course)
     %>
 
-<div style="background-color: #f8f9fa">
+<div class="jumbotronn">
 <div class="container">
-<nav id="ok">
+<nav>
    <div class="nav nav-tabs" id="nav-tab" role="tablist">
               % for tab in tab_list:
                     <%
                     tab_is_active = tab.tab_id in (active_page, default_tab)
                     %>
-                    <a href="${tab.link_func(course, reverse)}" style="margin-bottom: -6px;" class="nav-link ${'active' if tab_is_active else ''}">
+                    <a href="${tab.link_func(course, reverse)}" class="nav-link ${'active' if tab_is_active else ''}">
                             ${_(tab.name)}
                             % if tab_is_active:
                                 <span class="sr-only">, ${_('current location')}</span>
