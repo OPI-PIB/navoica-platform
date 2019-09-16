@@ -2232,7 +2232,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/capa_base.py
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid "Randomization"
-msgstr "Randomizacja"
+msgstr "Losowanie zmiennych wartości"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid ""
@@ -2675,7 +2675,7 @@ msgid ""
 msgstr ""
 "Wyświetlana studentom cena uczestnictwa w kursie. Jeśli cena uczestnictwa w "
 "kursie została ustawiona przez administratora w bazie danych, to właśnie ona"
-" będzie widoczna, zamiast tej."
+" będzie widoczna zamiast tej."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Advertised Start"
@@ -2688,7 +2688,7 @@ msgid ""
 "the start date that you have set for this course is used."
 msgstr ""
 "Wpisz tekst służący za tymczasową promocyjną informację o starcie kursu, "
-"taki jak \"Zima 2018\". Jeśli pozostawisz pole puste, użyta zostanie pełna "
+"na przykład \"Zima 2018\". Jeśli pozostawisz \"null\", pojawi się  "
 "data rozpoczęcia kursu."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -2719,8 +2719,7 @@ msgstr ""
 msgid ""
 "Enter the name of the course as it should appear in the edX.org course list."
 msgstr ""
-"Podaj nazwę kursu w takiej formie, w jakiej ma być wyświetlana na liście "
-"kursów w katalogu platformy."
+"Podaj nazwę kursu, która będzie wyświetlana w katalogu kursów."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Display Name"
@@ -2764,14 +2763,16 @@ msgid ""
 "brackets: [[\"2015-09-15\", \"2015-09-21\"], [\"2015-10-01\", "
 "\"2015-10-08\"]] "
 msgstr ""
-"Wprowadź w nawiasach kwadratowych i cudzysłowach pary dat pomiędzy którymi "
-"studenci nie będą mogli zamieszczać wpisów na forum dyskusyjnym. Format "
-"każdej pary dat powinien wyglądać następująco: [\"RRRR-MM-DD\", \"RRRR-MM-"
-"DD\"]. Aby poza datami doprecyzować również czas, sformatuj każdą parę w "
-"następujący sposób: [\"RRRR-MM-DDTGG:MM\", \"RRRR-MM-DDTGG:MM\"]. Upewnij "
-"się, żeby poprzedzić wskazanie czasu literą \"T\". Tym samym przykładowy "
-"wpis definiujący okresy nieaktywności forum dyskusyjnego powinien wyglądać "
-"następująco: [[\"2015-09-15\", \"2015-09-21\"], [\"2015-10-01\", "
+"W nawiasach kwadratowych i cudzysłowach wprowadź zakres dat, "
+"w którym studenci nie będą mogli zamieszczać wpisów na forum "
+"dyskusyjnym. Format zakresu dat powinien wyglądać następująco: "
+"[\"RRRR-MM-DD\", \"RRRR-MM-"
+"DD\"]. Aby dodatkowo określić zakres godzinowy, "
+"sformatuj dane w następujący sposób: "
+"[\"RRRR-MM-DDTGG:MM\", \"RRRR-MM-DDTGG:MM\"]. "
+"Zakres godzinowy poprzedź literą „T”. \"T\". "
+"Przykład: "
+"[[\"2015-09-15\", \"2015-09-21\"], [\"2015-10-01\", "
 "\"2015-10-08\"]]"
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -2787,11 +2788,11 @@ msgid ""
 "must be unique. In \"id\" values, the only special characters that are "
 "supported are underscore, hyphen, and period."
 msgstr ""
-"Wprowadź kategorie dyskusji w następującym formacie: \"Nazwakategorii\": "
-"{\"id\": \"i4x-InstitutionName-CourseNumber-course-CourseRun\"}. Przykład "
-"sformułowania kategorii kursu: \"Pytania do kadry\": {\"id\": \"i4x-"
-"UniversityX-MUS101-course-2015_T1\"}. Pole \"identyfikator\" musi być różne "
-"dla każdej kategorii."
+"Wpisz nazwy Ogólnych kategorii w Dyskusji (przypisanych dla całego kursu) "
+"w następujący sposób: \"NazwaKategorii\":{\"id\":\"i4x-NazwaOrganizacji-NumerKursu-Kurs-NumerEdycjiKursu\"}. "
+"Wartość \"id\" musi być unikalna. W wartościach \"id\" jedynymi dopuszczalnymi znakami specjalnymi "
+"są podkreślenie, myślnik i kropka. Dla nowych postów zamieszczanych na stronie dyskusji "
+"można określić kategorię domyślną, zmieniając jej atrybut z \"default\" na \"true\"."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Discussion Sorting Alphabetical"
@@ -2805,7 +2806,7 @@ msgid ""
 msgstr ""
 "Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\", kategorie i "
 "podkategorie zostaną posortowane alfabetycznie. Jeśli \"false\", zostaną "
-"posortowane chronologicznie według daty i czasu publikacji."
+"posortowane chronologicznie według daty ich publikacji."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Announcement Date"
@@ -2862,7 +2863,7 @@ msgstr "Ustawienia przesyłania plików filmowych"
 msgid ""
 "Enter the unique identifier for your course's video files provided by edX."
 msgstr ""
-"Wprowadź unikalny identyfikator dla plików filmowych twojego kursu "
+"Wprowadź unikalny identyfikator do plików filmowych twojego kursu "
 "dostarczony przez obsługę platformy."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3033,7 +3034,7 @@ msgid ""
 "\"%m-%d-%Y\" for MM-DD-YYYY, \"%d-%m-%Y\" for DD-MM-YYYY, \"%Y-%m-%d\" for "
 "YYYY-MM-DD, or \"%Y-%d-%m\" for YYYY-DD-MM."
 msgstr ""
-"Wprowadź format terminów końcowych. Domyślny format to Mies DD, RRRR. "
+"Wprowadź format terminów końcowych. Domyślny format to MM-DD-RRRR. "
 "Wprowadź \"%m-%d-%Y\" dla MM-DD-RRRR, \"%d-%m-%Y\" dla DD-MM-RRRR, "
 "\"%Y-%m-%d\" dla RRRR-MM-DD lub \"%Y-%d-%m\" dla RRRR-DD-MM."
 
@@ -3044,7 +3045,7 @@ msgstr "Domena zewnętrznego logowania"
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enter the external login method students can use for the course."
 msgstr ""
-"Wprowadź metodę zewnętrznego logowania z której mogą skorzystać studenci "
+"Wprowadź metodę zewnętrznego logowania, z której mogą skorzystać studenci "
 "kursu."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3075,13 +3076,13 @@ msgid ""
 "early_with_info. To display only the links to passing students as soon as "
 "certificates are generated, enter early_no_info."
 msgstr ""
-"Wprowadź komunikat end, early_with_info lub early_no_info. Po wygenerowaniu "
-"certyfikatów studenci, którzy zdali materiał kursowy, zobaczą odnośnik do "
-"swojego certyfikatu z poziomu pulpitu studenta, z kolei studenci, którzy nie"
+"Wprowadź komunikat end, early_with_info lub early_no_info. "
+"Studenci, którzy zaliczyli kurs, zobaczą odnośnik do "
+"swojego certyfikatu z poziomu pulpitu studenta. Z kolei studenci, którzy nie"
 " zdali, zobaczą komunikat dotyczący polityki ocen. Domyślnym ustawieniem "
 "jest end, czyli informacja na temat certyfikatów jest widoczna dla "
 "wszystkich studentów po zakończeniu kursu. Aby wyświetlić wszystkim "
-"studentom stosowną informację z chwilą wygenerowania certyfikatów, wpisz "
+"studentom własciwą informację w chwili wygenerowania certyfikatu, wpisz "
 "opcję early_with_info. Z kolei aby wyświetlić informację z chwilą "
 "wygenerowania certyfikatów tylko tym studentom, którzy zdali materiał "
 "kursowy, wprowadź komendę early_no_info."
@@ -3096,20 +3097,20 @@ msgid ""
 "Files & Uploads page. You can also set the course image on the Settings & "
 "Details page."
 msgstr ""
-"Wyedytuj nazwę pliku graficznego kursu. Musisz przesłać ten plik z poziomu "
-"strony \"Zarządzanie plikami\". Możesz również ustawić obrazek kursu z "
+"Wpisz nazwę pliku grafiki kursu. Prześlij ten plik na platformę – "
+"\"Zarządzanie plikami\". Grafikę możesz ustawić z "
 "poziomu strony \"Ustawienia i szczegóły\"."
 
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "Course Banner Image"
-msgstr "Banner kursu"
+msgstr "Grafika kursu"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
 "Edit the name of the banner image file. You can set the banner image on the "
 "Settings & Details page."
 msgstr ""
-"Wyedytuj nazwę bannera kursu. Możesz ustawić banner z poziomu strony "
+"Edytuj nazwę grafiki kursu. Możesz przypisać grafikę z poziomu "
 "\"Ustawienia i szczegóły\"."
 
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
@@ -3121,7 +3122,7 @@ msgid ""
 "Edit the name of the video thumbnail image file. You can set the video "
 "thumbnail image on the Settings & Details page."
 msgstr ""
-"Wyedytuj nazwę grafiki - miniatury filmu. Możesz ją ustawić z poziomu strony"
+"Wpisz nazwę grafiki - miniatury filmu. Możesz ją ustawić z poziomu "
 " \"Ustawienia i szczegóły\"."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3143,7 +3144,7 @@ msgid ""
 " when they complete the course. For instance, \"Certificate\"."
 msgstr ""
 "Użyj tego ustawienia wyłącznie w przypadku generowania certyfikatów w PDF. "
-"Między cudzysłowami wpisz skróconą nazwę typu certyfikatu, który otrzymują "
+"Między cudzysłowami wpisz skróconą nazwę certyfikatu, który otrzymują "
 "studenci po ukończeniu kursu. Dla przykładu, \"Certyfikat\"."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3157,7 +3158,7 @@ msgid ""
 "when they complete the course. For instance, \"Certificate of Achievement\"."
 msgstr ""
 "Użyj tego ustawienia wyłącznie w przypadku generowania certyfikatów w PDF. "
-"Między cudzysłowami wpisz pełną nazwę typu certyfikatu, który otrzymują "
+"Między cudzysłowami wpisz pełną nazwę certyfikatu, który otrzymują "
 "studenci po ukończeniu kursu. Dla przykładu, \"Certyfikat ukończenia "
 "kursu\"."
 
@@ -3247,7 +3248,7 @@ msgstr ""
 "Wpisz nazwę organizacji realizującej kurs. To ustawienie nadpisuje "
 "informację wprowadzoną w momencie zakładania kursu. Aby wyświetlać nazwę "
 "organizatora, która została wpisana w momencie zakładania kursu, pozostaw "
-"pole puste."
+"\"null\"."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Number Display String"
@@ -3260,7 +3261,7 @@ msgid ""
 " use the course number that you entered when you created the course, enter "
 "null."
 msgstr ""
-"Wpisz numer kursu do wyświetlenia w informacjach o kursie. To ustawienie "
+"Wpisz numer kursu, który zostanie wyświetlony w informacjach o kursie. To ustawienie "
 "nadpisuje informację wprowadzoną w momencie zakładania kursu. Aby wyświetlać"
 " numer kursu, który został wpisany w momencie zakładania kursu, pozostaw "
 "pole puste."
@@ -3275,7 +3276,7 @@ msgid ""
 " an unlimited number of students, enter null."
 msgstr ""
 "Podaj maksymalną liczbę studentów, którzy mogą się zapisać na kurs. Aby nie "
-"wprowadzać limitu studentów, pozostaw pole puste."
+"wprowadzać limitu studentów, pozostaw \"null\"."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Allow Public Wiki Access"
@@ -3287,7 +3288,7 @@ msgid ""
 "they're not enrolled in the course."
 msgstr ""
 "Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\", użytkownicy "
-"platformy mogą przeglądać wiki tego kursu nawet jeśli nie są na niego "
+"platformy mogą przeglądać wiki tego kursu, nawet jeśli nie są na niego "
 "zapisani."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3297,7 +3298,7 @@ msgstr "Tylko na zaproszenia"
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Whether to restrict enrollment to invitation by the course staff."
 msgstr ""
-"Rejestracja na kurs wyłącznie na zaproszenia wysyłane przez kadrę kursu."
+"Rejestracja na kurs możliwa tylko po otrzymaniu zaproszenia od kadry."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Pre-Course Survey Name"
@@ -3335,9 +3336,9 @@ msgid ""
 " not show in catalog and do not allow access to an about page)."
 msgstr ""
 "Pozwala określić widoczność kursu w katalogu kursów. Dostępne są trzy opcje:"
-" 'both' (wyświetla w katalogu kursów i pozwala na przeglądanie strony \"o "
+" 'both' (wyświetla kurs w katalogu i pozwala na przeglądanie strony \"o "
 "kursie\"), \"about\" (pozwala wyłącznie na przeglądanie strony \"o "
-"kursie\"), 'none' (nie wyświetla w katalogu kursów i nie pozwala na "
+"kursie\"), 'none' (nie wyświetla kursu w katalogu i nie pozwala na "
 "przeglądanie strony \"o kursie\")."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3433,10 +3434,11 @@ msgid ""
 "{example_format}. In \"id\" values, the only supported special characters "
 "are underscore, hyphen, and period."
 msgstr ""
-"W poniższych nawiasach określ maksymalną wielkość zespołu oraz tematy dla "
-"zespołów. Upewnij się, aby załączyć wszystkie zestawy tematów wewnątrz "
-"nawiasów kwadratowych, z przecinkiem po zamknięciu nawiasu klamrowego dla "
-"każdego tematu, oraz z przecinkiem na końcu nawiasu kwadratowego. Dla "
+"W powyższych nawiasach określ maksymalną liczbę osób "
+"w zespole oraz tematy. Wpisz wszystkie "
+"zestawy tematów w nawiasach kwadratowych, "
+"postaw przecinek po zamknięciu nawiasu klamrowego z tematem; "
+"postaw przecinek na końcu nawiasu kwadratowego. Dla "
 "przykładu, aby określić, że maksymalna wielkość zespołu to 5 osób, a lista "
 "obejmuje 2 tematy, wprowadź konfigurację w następującym formacie: "
 "{example_format}. W wartościach identyfikatora jedynymi dopuszczalnymi "
@@ -3470,8 +3472,8 @@ msgid ""
 msgstr ""
 "Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\", studenci będą "
 "mogli podejść do egzaminu bez trybu nadzorowania. Jeśli wybierzesz "
-"\"false\", studenci muszę podejść do egzaminu w trybie egzaminu "
-"nadzorowanego. Ta opcja jest aktywna tylko jeśli tryb egzaminów "
+"\"false\", studenci będą zmuszeni podejść do egzaminu w trybie egzaminu "
+"nadzorowanego. Ta opcja jest aktywna tylko, jeśli tryb egzaminów "
 "nadzorowanych jest włączony dla tego kursu."
 
 #: common/lib/xmodule/xmodule/course_module.py
@@ -3498,7 +3500,7 @@ msgid ""
 "Proctored Exams is set to true."
 msgstr ""
 "Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\", egzaminy z limitem"
-" czasu będą dostępne dla twojego kursu. Niezależnie od tego ustawienia, "
+" czasu będą dostępne dla twojego kursu. Niezależnie od tego ustawienia "
 "egzaminy z limitem czasu są włączone jeśli opcja \"Aktywuj egzaminy "
 "nadzorowane\" jest ustawiona na \"true\"."
 
@@ -3553,9 +3555,9 @@ msgid ""
 "Enter true or false. If this value is true, you can hide a subsection until "
 "learners earn a minimum score in another, prerequisite subsection."
 msgstr ""
-"Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\", możesz ukryć "
-"lekcję przed dostępem studenta do momentu, aż uzyska on minimalny wynik "
-"zaliczający inną, np. poprzednią lekcję."
+"Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\". "
+"Możesz ukryć lekcję w widoku studenta dopóki nie uzyska "
+"on wyniku zaliczającego inną, np. poprzednią lekcję."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Learning Information"
@@ -3567,11 +3569,11 @@ msgstr "Określ, czego mogą się nauczyć studenci uczestniczący w kursie."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Instructor"
-msgstr "Instruktor kursu"
+msgstr "Prowadzący kurs"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enter the details for Course Instructor"
-msgstr "Wprowadź informacje na temat instruktora kursu"
+msgstr "Wprowadź informacje na temat prowadzącego kursu"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Add Unsupported Problems and Tools"
@@ -4169,8 +4171,8 @@ msgid ""
 "problems in your course. Valid values are \"always\", \"onreset\", "
 "\"never\", and \"per_student\"."
 msgstr ""
-"Określ domyślną wartość częstości losowania zmiennych wartości w ćwiczeniach"
-" z elementami losowymi. To ustawienie powinno być w trybie \"never\", w "
+"Określ domyślną wartość częstości losowania zmiennych wartości w ćwiczeniach. "
+"To ustawienie powinno być w trybie \"never\", w "
 "innym przypadku należy dostarczyć skrypt Python, który zidentyfikuje i "
 "wylosuje określone wartości dla większości pytań w kursie. Możliwe wartości "
 "to \"always\", \"onreset\", \"never\" i \"per_student\"."
@@ -4196,7 +4198,7 @@ msgid ""
 "Enter the path to use for files on the Files & Uploads page. This value "
 "overrides the Studio default, c4x://."
 msgstr ""
-"Wprowadź ścieżkę dla plików sekcji \"Zarządzanie plikami\". Ta zmiana "
+"Wprowadź ścieżkę do plików sekcji \"Zarządzanie plikami\". Ta zmiana "
 "spowoduje podmianę domyślnej ścieżki w Studio, c4x://."
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
@@ -4220,9 +4222,9 @@ msgid ""
 "specific number, you cannot set the Maximum Attempts for individual problems"
 " to unlimited."
 msgstr ""
-"Wprowadź maksymalną liczbę prób, jakie student może podjąć w celu wykonania "
-"ćwiczenia. Domyślnie liczba maksymalnych dopuszczalnych prób jest ustawiona "
-"na zero, co oznacza, że studenci mają nieograniczoną liczbę podejść. Możesz "
+"Wprowadź maksymalną liczbę prób podejścia do ćwiczeń. "
+"Domyślnie liczba maksymalnych dopuszczalnych prób jest ustawiona "
+"na \"null\", co oznacza, że studenci mają nieograniczoną liczbę podejść. Możesz "
 "zmienić to ustawienie dla poszczególnych ćwiczeń, aczkolwiek jeśli domyślna "
 "liczba prób jest ustawiona na liczbę większą od zera, nie możesz ustawić "
 "nieograniczonej liczby prób dla wybranych ćwiczeń."
@@ -4237,11 +4239,11 @@ msgid ""
 "moocsupport@mathworks.com"
 msgstr ""
 "Wprowadź kod API udostępniony przez MathWorks i pozwalający na dostęp do "
-"MATLAB Hosted Service. Ten klucz można wykorzystać wyłącznie dla bieżącego "
-"kursu i przez ograniczony okres czasu. Proszę nie wykorzystywać kodu API do "
-"innych kursów i powiadomić MathWorks w przypadku wykrycia nieautoryzowanego "
-"korzystania z klucza. Aby uzyskać klucz dla swojego kursu, albo zgłosić "
-"problem, proszę skontaktować się na moocsupport@mathworks.com"
+"MATLAB Hosted Service. Ten klucz można wykorzystać wyłącznie do tego kursu "
+"i przez określony czas. Nie wykorzystuj kodu API do "
+"innych kursów i powiadom MathWorks w przypadku wykrycia nieautoryzowanego "
+"korzystania z klucza. Aby uzyskać klucz do tego kursu lub zgłosić "
+"problem, napisz na moocsupport@mathworks.com"
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 #: cms/templates/certificates.html cms/templates/group_configurations.html
@@ -4257,13 +4259,13 @@ msgstr "Wprowadź konfiguracje określające sposób łączenia studentów w gru
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid "Enable video caching system"
-msgstr "Włącz system cach'ujący filmy"
+msgstr "Włącz system cachujący filmy"
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid ""
 "Enter true or false. If true, video caching will be used for HTML5 videos."
 msgstr ""
-"Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\", cach'owanie filmów"
+"Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\", cachowanie filmów"
 " będzie stosowane dla filmów HTML5."
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
@@ -4295,9 +4297,9 @@ msgid ""
 "settings. All existing problems are affected when this course-wide setting "
 "is changed."
 msgstr ""
-"Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\", ćwiczenia w tym "
-"kursie będą domyślnie wyświetlać przycisk resetu. Możesz zmienić to "
-"ustawienie dla każdego ćwiczenia z osobna w jego opcjach, natomiast wybór "
+"Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\", "
+"we wszystkich ćwiczeniach domyślnie zostanie wyświetlony resetu. "
+"Możesz zmienić to ustawienie dla każdego ćwiczenia z osobna, natomiast wybór "
 "opcji w tym miejscu powoduje zmianę obecnych ustawień dla wszystkich "
 "istniejących ćwiczeń w kursie."
 
@@ -4310,7 +4312,7 @@ msgid ""
 "Enter true or false. If true, students can use the Student Notes feature."
 msgstr ""
 "Wprowadź \"true\" lub \"false\". Jeśli wpiszesz \"true\", studenci będą "
-"mogli używać funkcjonalności notatek studenta."
+"mogli używać funkcjonalności \"Notatki\"."
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid ""
@@ -4364,7 +4366,7 @@ msgstr "Pytanie w głosowaniu"
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid "Enter the date by which problems are due."
-msgstr "Wprowadź termin końcowy na ukończenie ćwiczeń."
+msgstr "Wprowadź termin końcowy na zrobienie ćwiczeń."
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid "Hide sequence content After Due Date"
@@ -7940,7 +7942,7 @@ msgid ""
 "the block is considered visible to all. Note that this field is ignored if "
 "the block is visible_to_staff_only."
 msgstr ""
-"Wskazanie określające którym grupom zostanie wyświetlony ten blok. Kluczami "
+"Wskazanie określające, którym grupom zostanie wyświetlony ten blok. Kluczami "
 "są identyfikatory konfiguracji grup, a wartościami listy identyfikatorów "
 "grup. Jeśli nie ma klucza dla konfiguracji grupy lub zestaw identyfikatorów "
 "grup jest pusty, wtedy blok uznawany jest za widoczny dla wszystkich. Weź "
@@ -20072,16 +20074,14 @@ msgid ""
 "Specify a course title to use on the certificate if the course's official "
 "title is too long to be displayed well."
 msgstr ""
-"Określ nazwę kursu, która ma znajdować się na certyfikacie, jeśli oficjalna "
-"nazwa kursu jest zbyt długa i nie wyświetla się poprawnie."
+"Wpisz nazwę kursu."
 
 #: cms/templates/certificates.html
 msgid ""
 "For verified certificates, specify between one and four signatories and "
 "upload the associated images."
 msgstr ""
-"W celu naniesienia podpisów na certyfikat, określ od jednego do czterech sygnatariuszy "
-"i prześlij stosowne podpisy."
+"Aby umieścić podpisy na certyfikacie, przxeślij je na platformę z poziomu sekcji \"Certyfikaty\"."
 
 #: cms/templates/certificates.html
 msgid ""
@@ -20089,16 +20089,14 @@ msgid ""
 "right corner of the form and select {em_start}Edit{em_end} or the delete "
 "icon."
 msgstr ""
-"Aby wyedytować lub usunąć certyfikat zanim zostanie aktywowany, najedź na "
-"prawy górny róg formularza i wybierz opcję {em_start}Edytuj{em_end} lub "
-"ikonę usunięcia."
+"Aby edytować lub usunąć certyfikat, kliknij Edytuj lub ikonę kosza (prawy górny róg formularza)."
 
 #: cms/templates/certificates.html
 msgid ""
 "To view a sample certificate, choose a course mode and select "
 "{em_start}Preview Certificate{em_end}."
 msgstr ""
-"Aby wyświetlić przykładowy certyfikat, zaznacz tryb kursu i wybierz "
+"Możesz podejrzeć certyfikat przed jego aktywacją - "
 "{em_start}Podgląd certyfikatu{em_end}."
 
 #: cms/templates/certificates.html
@@ -20111,10 +20109,9 @@ msgid ""
 "Staff or Admin role selects {em_start}Activate{em_end}. Only course team "
 "members with these roles can edit or delete an activated certificate."
 msgstr ""
-"Aby rozpocząć wydawanie certyfikatów, członek kadry o statusie "
-"administratora lub prowadzącego musi kliknąć {em_start}Aktywuj{em_end}. "
-"Wyłącznie członkowie kadry kursu o tych rolach mogą edytować lub usuwać "
-"aktywowany certyfikat."
+"Aby aktywować certyfikat, kliknij Aktywuj (może to zrobić tylko Prowadzący oraz Administrator). "
+"Prowadzący oraz Administrator mogą edytować "
+"i usunąć aktywowany certyfikat."
 
 #: cms/templates/certificates.html
 msgid ""
@@ -20122,9 +20119,8 @@ msgid ""
 "learners who have already earned certificates will no longer be able to "
 "access them."
 msgstr ""
-"{em_start}Pamiętaj, aby nie usuwać{em_end} certyfikatów od momentu "
-"rozpoczęcia kursu; studenci, którzy otrzymali certyfikaty, nie będą mieć do "
-"nich dostępu."
+"{em_start}Uwaga:{em_end} nie usuwaj certyfikatów z trwających kursów. "
+"Studenci, którzy już otrzymali certyfikat, nie będą mieli do niego dostępu."
 
 #: cms/templates/certificates.html
 msgid "Learn more about certificates"
@@ -20437,9 +20433,9 @@ msgid ""
 " particular discussions in the forums, announce schedule changes, and "
 "respond to student questions. You add or edit updates in HTML."
 msgstr ""
-"Korzystaj z aktualności kursu aby powiadamiać studentów o ważnych datach lub"
+"Korzystaj z \"Aktualności\" kursu, aby powiadamiać studentów o ważnych datach lub"
 " egzaminach, podkreślać szczególne dyskusje na forum, ogłaszać zmiany "
-"harmonogramu i odpowiadać na pytania studentów. Aktualności można dodawać i "
+"w harmonogramie i odpowiadać na pytania studentów. Aktualności można dodawać i "
 "edytować w formacie HTML."
 
 #: cms/templates/course_outline.html
@@ -20548,29 +20544,30 @@ msgstr "Z harmonogramem prowadzącego"
 
 #: cms/templates/course_outline.html
 msgid "Creating your course organization"
-msgstr "Organizowanie twojego kursu"
+msgstr "Struktura kursu"
 
 #: cms/templates/course_outline.html
 msgid "You add sections, subsections, and units directly in the outline."
 msgstr ""
-"Dodajesz moduły, lekcje i jednostki bezpośrednio z poziomu programu kursu."
+"Bezpośrednio z poziomu programu kursu dodajesz moduły, lekcje i jednostki."
 
 #: cms/templates/course_outline.html
 msgid ""
 "Create a section, then add subsections and units. Open a unit to add course "
 "components."
 msgstr ""
-"Utwórz moduł, a następnie dodaj lekcje i jednostki. Otwórz jednostkę, aby dodać "
-"do niej treść kursu."
+"Utwórz moduł, a następnie dodaj lekcje i jednostki. "
+"Otwórz jednostkę, aby dodać do niej treść kursu."
 
 #: cms/templates/course_outline.html
 msgid "Reorganizing your course"
-msgstr "Reorganizowanie twojego kursu"
+msgstr "Zmiana struktury kursu"
 
 #: cms/templates/course_outline.html
 msgid "Drag sections, subsections, and units to new locations in the outline."
 msgstr ""
-"Przeciągaj moduły, lekcje i jednostki do wybranych miejsc w programie kursu."
+"Przeciągaj moduły, lekcje i jednostki do wybranych miejsc "
+"w kursie (metoda \"Przeciągnij i upuść\")."
 
 #: cms/templates/course_outline.html
 msgid "Learn more about the course outline"
@@ -20578,7 +20575,7 @@ msgstr "Dowiedz się więcej na temat programu kursu"
 
 #: cms/templates/course_outline.html
 msgid "Setting release dates and grading policies"
-msgstr "Ustalanie dat publikacji kursu i polityki ocen"
+msgstr "Dostępność kursu i polityka ocen"
 
 #: cms/templates/course_outline.html
 msgid ""
@@ -20586,9 +20583,8 @@ msgid ""
 "date. When you configure a subsection, you can also set the grading policy "
 "and due date."
 msgstr ""
-"Kliknij na znajdującą się obok modułu lub lekcji ikonę \"Skonfiguruj\", "
-"aby ustalić datę upublicznienia danej sekcji. Po jej skonfigurowaniu możesz "
-"również ustalić politykę ocen i termin końcowy."
+"Kliknij w znajdującą się obok modułu lub lekcji ikonę  \"Skonfiguruj\", "
+"(ikona koła zębatego) i ustaw datę upublicznienia danej sekcji. " "Następnie określ politykę ocen i termin końcowy."
 
 #: cms/templates/course_outline.html
 msgid "Learn more about grading policy settings"
@@ -20596,15 +20592,15 @@ msgstr "Dowiedz się więcej na temat ustawień polityki ocen"
 
 #: cms/templates/course_outline.html
 msgid "Changing the content learners see"
-msgstr "Zmiana treści widocznej dla studentów"
+msgstr "Widoczność treści"
 
 #: cms/templates/course_outline.html
 msgid ""
 "To publish draft content, select the Publish icon for a section, subsection,"
 " or unit."
 msgstr ""
-"Aby opublikować szkic materiału, wybierz znajdującą się obok modułu, "
-"lekcji lub jednostki ikonę \"Opublikuj\"."
+"Aby opublikować materiał, wybierz znajdującą się obok modułu, "
+"lekcji lub jednostki ikonę \"Opublikuj\" (ikona strzałeczki)."
 
 #: cms/templates/course_outline.html
 msgid ""
@@ -20613,10 +20609,10 @@ msgid ""
 "{em_start}Hide{em_end} option. Grades for hidden sections, subsections, and "
 "units are not included in grade calculations."
 msgstr ""
-"Aby ukryć moduł, lekcję lub jednostkę przed dostępem dla studentów, wybierz "
-"ikonę \"Skonfiguruj\" stosownej sekcji, a następnie sięgnij po opcję "
-"{em_start}Ukryj{em_end}. Oceny dla ukrytych modułów, lekcji lub jednostek "
-"nie są brane pod uwagę przez kalkulator ocen."
+"Aby ukryć moduł, lekcję lub jednostkę przed studentami, wybierz "
+"ikonę \"Skonfiguruj\", kliknij w zakładkę \"Widoczność\" "
+"i zaznacz opcję {em_start}Ukryj{em_end}. "
+"Oceny dla ukrytych sekcji nie będą wówczas brane pod uwagę."
 
 #: cms/templates/course_outline.html
 msgid ""
@@ -20625,10 +20621,11 @@ msgid ""
 "{em_start}Hide content after due date{em_end}. Grades for the subsection "
 "remain included in grade calculations."
 msgstr ""
-"Aby ukryć treść lekcji po ostatecznym terminie na jej ukończenie, wybierz"
-" ikonę \"Skonfiguruj\" stosownej lekcji, a następnie sięgnij po opcję "
-"{em_start}Ukryj treść po terminie ostatecznym{em_end}. Oceny zdobyte z "
-"lekcji pozostaną brane pod uwagę przez kalkulator ocen."
+"Aby ukryć treść po upłynięciu ostatecznego terminu na jej "
+"ukończenie, wybierz ikonę \"Skonfiguruj\", "
+"kliknij w zakładkę \"Widoczność\" "
+"i zaznacz opcję {em_start}Ukryj treść po terminie końcowym{em_end}. "
+"Oceny dla ukrytych sekcji zostaną wówczas wzięte pod uwagę."
 
 #: cms/templates/course_outline.html
 msgid "Learn more about content visibility settings"
@@ -20651,9 +20648,9 @@ msgid ""
 "view the page even if they are not registered for or logged in to your "
 "course."
 msgstr ""
-"Uwaga: Strony są widoczne publicznie. Jeśli użytkownicy znają adres URL "
-"strony, mogą ją widzieć nawet jeśli nie są zarejestrowani ani zalogowani do "
-"twojego kursu."
+"Uwaga: strony są widoczne publicznie. W przypadku gdy użytkownicy znają adres URL "
+"strony, mogą ją widzieć, nawet jeśli nie są zarejestrowani ani zapisani na "
+"twój kurs."
 
 #: cms/templates/edit-tabs.html
 msgid "Show this page"
@@ -20685,13 +20682,12 @@ msgid ""
 "(Home, Course, Discussion, Wiki, and Progress) are followed by textbooks and"
 " custom pages that you create."
 msgstr ""
-"Strony tworzą poziome menu znajdujące się w górnej części twojego kursu. "
-"Domyślne strony (Strona główna, Kurs, Dyskusja, Wiki i Postęp) uzupełniają "
-"podręczniki oraz strony, które dodasz według własnego uznania."
+"Strony tworzą poziome menu w górnej części twojego kursu. "
+"Domyślne strony to: Strona główna, Kurs, Dyskusja i Postęp."
 
 #: cms/templates/edit-tabs.html
 msgid "Custom pages"
-msgstr "Zindywidualizowane strony"
+msgstr "Twoje strony"
 
 #: cms/templates/edit-tabs.html
 msgid ""
@@ -20699,9 +20695,8 @@ msgid ""
 "course content. For example, you can create pages for the grading policy, "
 "course slides, and a course calendar. "
 msgstr ""
-"Możesz tworzyć i edytować własne zindywidualizowane strony i zamieszczać na "
-"nich dodatkowe treści. Dla przykładu, możesz utworzyć stronę z regulaminem "
-"kursu lub regulaminem przedmiotu, kalendarzem kursowym, albo ze slajdami."
+"Możesz tworzyć swoje strony, np. z regulaminem, "
+"kalendarzem wydarzeń, filmem lub galerią zdjęć."
 
 #: cms/templates/edit-tabs.html
 msgid "How do pages look to students in my course?"
@@ -20824,11 +20819,11 @@ msgid ""
 "contains the course structure and content. You can also re-import courses "
 "that you've exported."
 msgstr ""
-"Możesz eksportować kursy i edytować je poza {studio_name}. Wyeksportowany "
-"plik posiada format .tar.gz (czyli jest to plik .tar skompresowany przez GNU"
-" Zip) i zawiera strukturę i treść kursu. Możesz także importować wcześniej "
-"wyeksportowane kursy."
+"Możesz eksportować kursy i edytować je poza {studio_name}. "
+"Wyeksportowany plik ma format .tar.gz (czyli jest to plik .tar skompresowany przez GNU"
+" Zip) i zawiera strukturę i treść kursu. "
 
+"
 #: cms/templates/export.html
 msgid ""
 "{em_start}Caution:{em_end} When you export a course, information such as "
@@ -20837,11 +20832,9 @@ msgid ""
 " exported files, you may also be sharing sensitive or license-specific "
 "information."
 msgstr ""
-"{em_start}Ostrzeżenie:{em_end} Jeśli eksportujesz kurs, informacje takie jak"
-" klucze MATLAB API, klucze LTI, ukryte przypisy, a także odnośniki do miejsc"
-" adnotacji, są zawarte w eksportowanych danych. Jeśli dzielisz się z kimś "
-"eksportowanym plikiem, miej na uwadze, że plik może zawierać \"wrażliwe\" "
-"dane."
+"{em_start}Uwaga:{em_end} takie dane, jak: "
+"klucze MATLAB API, klucze LTI, ukryte przypisy, "
+"odnośniki do miejsc adnotacji zostają zapisane w wyeksportowanych plikach."
 
 #: cms/templates/export.html
 msgid "Export My Library Content"
@@ -21010,13 +21003,13 @@ msgid ""
 "may want to create a copy of your course that you can later import into "
 "another course instance and customize."
 msgstr ""
-"Być może zechcesz edytować zawartość XML swojego kursu poza {studio_name}. "
-"Możesz również wykorzystać wyeksportowany plik jako kopię zapasową swojego "
-"kursu, albo utworzyć kopię kursu, którą zaimportujesz na inną platformę."
+"Wyeksportowany plik możesz zaimportować w systemie zewnętrznym, "
+"na innej platformie. Wyeksportowany plik stanowi "
+"kopię zapasową kursu."
 
 #: cms/templates/export.html
 msgid "What content is exported?"
-msgstr "Jakie treści podlegają eksportowaniu?"
+msgstr "Jakie treści zostają wyeksportowane?"
 
 #: cms/templates/export.html
 msgid ""
@@ -21026,12 +21019,12 @@ msgid ""
 "data, grading information, discussion forum data, course settings, and "
 "course team information, is not exported."
 msgstr ""
-"Eksportowaniu podlegają treści kursu oraz jego struktura (w tym moduły, "
-"lekcje i jednostki), a także wartości ustawień zaawansowanych, takich jak "
-"klucze MATLAB API i klucze autentykacji LTI. Pozostałe dane, takie jak "
-"informacje o studentach, polityka ocen, zasoby forum dyskusyjnego, "
-"ustawienia kursu oraz informacje o kadrze kursu, nie podlegają "
-"eksportowaniu."
+"Ektprtowi podlega struktura kursu (moduły, lekcje, jednostki) "
+"i jego zawrtość; konfiguracja ustawień zaawansowanych, w tym: "
+"klucze MATLAB API i klucze LTI. "
+"Nie zostaną wyeksportowane: informacje o studentach, "
+"polityka ocen, wątki forum dyskusyjnego, "
+"ustawienia kursu, skład kadry."
 
 #. Translators: ".tar.gz" is a file extension, and should not be translated
 #: cms/templates/export.html
@@ -21040,9 +21033,8 @@ msgid ""
 "data includes the course.xml file, as well as subfolders that contain course"
 " content."
 msgstr ""
-"Użyj programu archiwizacyjnego do wypakowania danych z pliku .tar.gz. "
-"Pobrane dane obejmują plik course.xml oraz podfoldery, które zawierają "
-"treści kursu."
+"Użyj programu archiwizacyjnego do wypakowania danych z pliku .tar.gz."
+
 
 #: cms/templates/export.html
 msgid "Learn more about exporting a course"
@@ -21143,10 +21135,10 @@ msgid ""
 "create cohort-specific courseware. In other words, you can customize the "
 "content that particular cohorts see in your course."
 msgstr ""
-"Jeśli w swoim kursie masz włączony system kohort, możesz wykorzystać grupy "
-"treści, aby stworzyć osobny materiał kursowy dla danej kohorty. Innymi "
-"słowy, możesz dostosować treść materiałów szkoleniowych, które dana grupa "
-"studentów zobaczy w swoim kursie."
+"Jeśli w swoim kursie utworzyłeś już kohorty (grupy użytkowników), "
+"możesz wykorzystać \"grupy treści\". "
+"Utworzoną grupę treści możesz przypisać do konkretnej kohorty, "
+"tzn. udostępnić część materiału tylko pewnej grupie użytkowników."
 
 #: cms/templates/group_configurations.html
 msgid ""
@@ -21156,12 +21148,7 @@ msgid ""
 " Only learners in the cohorts that are associated with the specified content"
 " groups see the additional content."
 msgstr ""
-"Każda stworzona przez ciebie grupa treści może być powiązana z co najmniej "
-"jedną kohortą. Jako dodatek do materiałów kursowych przewidzianych dla "
-"wszystkich studentów, możesz tworzyć treści widoczne wyłącznie dla "
-"określonej przez ciebie grupy studentów. Tylko kursanci w kohortach, do "
-"których przyporządkowano określoną grupę treści, zobaczą te dodatkowe "
-"materiały."
+
 
 #: cms/templates/group_configurations.html
 msgid ""
@@ -21171,11 +21158,9 @@ msgid ""
 "use by a unit. To delete a content group, hover over its box and click the "
 "delete icon."
 msgstr ""
-"Kliknij na {em_start}Nowa grupa treści{em_end}, aby dodać nową grupę treści."
-" Aby wyedytować jej nazwę, najedź na jej pole i kliknij "
-"{em_start}Edytuj{em_end}. Możesz usunąć grupę zawartości tylko wtedy, jeśli "
-"nie znajduje się ona w użyciu w co najmniej jednym ekranie, najeżdżając na "
-"jej pole i klikając na ikonę usunięcia."
+"Kliknij na {em_start}Nowa grupa treści{em_end} "
+"i wpisz nazwę grupy. "
+"Dalsza konfiguracja grup treści jest możliwa z poziomu programu kursu."
 
 #: cms/templates/group_configurations.html
 msgid ""
@@ -21223,8 +21208,7 @@ msgid ""
 "{studio_name} helps manage your online courses, so you can focus on teaching"
 " them"
 msgstr ""
-"{studio_name} pomaga zarządzać twoimi kursami online, abyś mógł się skupić "
-"na nauczaniu."
+"Tworzenie kursów online w {studio_name} pozwoli Ci skoncentrować się na przekazywaniu wiedzy."
 
 #: cms/templates/howitworks.html
 msgid "{studio_name}'s Many Features"
@@ -21240,7 +21224,7 @@ msgstr "Powiększ obrazek"
 
 #: cms/templates/howitworks.html
 msgid "Keeping Your Course Organized"
-msgstr "Czytelna organizacja kursu"
+msgstr "Przejrzysta struktura kursu"
 
 #: cms/templates/howitworks.html
 msgid ""
@@ -21248,10 +21232,10 @@ msgid ""
 "{strong_start}Outline{strong_end} editor, providing a simple hierarchy and "
 "easy drag and drop to help you and your students stay organized."
 msgstr ""
-"Kręgosłupem kursu jest sposób jego zorganizowania. {studio_name} oferuje "
-"{strong_start}intuicyjny edytor{strong_end} korzystający z prostych systemów"
-" hierarchii i umożliwiający budowę metodą \"przeciągnij i upuść\", dzięki "
-"czemu ty i twoi studenci nie zgubicie się w trakcie przebiegu kursu."
+"Istotą kursu jest jego struktura. {studio_name} oferuje "
+"{strong_start}intuicyjny edytor{strong_end} "
+"umożliwiający budowę kursu metodą \"przeciągnij i upuść\", dzięki "
+"czemu tworzenie kursów jest łatwe i przyjemne."
 
 #: cms/templates/howitworks.html
 msgid "Simple Organization For Content"
@@ -21262,34 +21246,34 @@ msgid ""
 "{studio_name} uses a simple hierarchy of {strong_start}sections{strong_end} "
 "and {strong_start}subsections{strong_end} to organize your content."
 msgstr ""
-"{studio_name} opiera się na prostym systemie hierarchii "
-"{strong_start}modułów{strong_end} i {strong_start}lekcji{strong_end} w "
-"celu czytelnego porządkowania udostępnianych treści."
+"{studio_name} opiera się na prostym systemie tworzenia hierarchii "
+"{strong_start}modułów{strong_end} i {strong_start}lekcji{strong_end}. "
+"Dzięki temu układ kursu treści staje się czytelny."
 
 #: cms/templates/howitworks.html
 msgid "Change Your Mind Anytime"
-msgstr "Zmieniaj i reorganizuj w dowolnym momencie"
+msgstr "Zmieniaj w dowolnym momencie"
 
 #: cms/templates/howitworks.html
 msgid ""
 "Draft your outline and build content anywhere. Simple drag and drop tools "
 "let you reorganize quickly."
 msgstr ""
-"Stwórz zarys swojego kursu, a następnie dowolnie zmieniaj, rozbudowuj i "
-"usuwaj poszczególne elementy za pośrednictwem prostych narzędzi typu "
+"Dowolnie zmieniaj, rozbudowuj i "
+"usuwaj poszczególne elementy za pomocą metody "
 "\"przeciągnij i upuść\"."
 
 #: cms/templates/howitworks.html
 msgid "Go A Week Or A Semester At A Time"
-msgstr "Udostępniaj lekcje co tydzień lub na cały semestr z góry"
+msgstr "Udostępniaj lekcje, kiedy chcesz"
 
 #: cms/templates/howitworks.html
 msgid ""
 "Build and release {strong_start}sections{strong_end} to your students "
 "incrementally. You don't have to have it all done at once."
 msgstr ""
-"Stopniowo projektuj i udostępniaj {strong_start}moduły{strong_end} swoim "
-"studentom. Nie musisz od razu przygotowywać całego kursu."
+"Możesz udostępnić wszystkie moduły kursu od razu "
+"bądź publikować materiały według swojego harmonogramu."
 
 #: cms/templates/howitworks.html
 msgid "Learning is More than Just Lectures"
@@ -21301,33 +21285,35 @@ msgid ""
 "learning. Insert videos, discussions, and a wide variety of exercises with "
 "just a few clicks."
 msgstr ""
-"{studio_name} pozwala splatać ze sobą treści w sposób wzmacniający proces "
-"nauki. Za pomocą kilku kliknięć umieścisz film, ilustrację, tabelę, miejsca "
-"na dyskusję, a także szeroki wybór ćwiczeń."
+"{studio_name} umożliwia łączenie ze sobą różnych form treści, "
+"co korzystnie wpływa na proces uczenia się. "
+"Za pomocą kilku kliknięć umieścisz film, tabelę, "
+"stworzysz miejsce na dyskusję, zbudujesz różnorodne ćwiczenia "
+i testy sprawdzające zdobytą wiedzę. "
 
 #: cms/templates/howitworks.html
 msgid "Create Learning Pathways"
-msgstr "Twórz ścieżki edukacji"
+msgstr "Twórz różnorodne treści"
 
 #: cms/templates/howitworks.html
 msgid ""
 "Help your students understand one concept at a time with multimedia, HTML, "
 "and exercises."
 msgstr ""
-"Pomóż studentom zrozumieć zagadnienie wykorzystując multimedia, dodatki w "
-"HTML i ćwiczenia."
+"Możesz pomóc studentom zrozumieć zagadnienie, "
+"wykorzystując multimedia, edytor HTML, ćwiczenia."
 
 #: cms/templates/howitworks.html
 msgid "Work Visually, Organize Quickly"
-msgstr "Pracuj z podglądem, organizuj płynnie"
+msgstr "Pracuj z podglądem"
 
 #: cms/templates/howitworks.html
 msgid ""
 "Work visually and see exactly what your students will see. Reorganize all "
 "your content with drag and drop."
 msgstr ""
-"Pracuj z podglądem i sprawdź co dokładnie zobaczą twoi studenci. Reorganizuj"
-" wszystkie swoje treści z użyciem opcji \"przeciągnij i upuść\"."
+"Pracuj z podglądem i na bieżąco sprawdzaj widok użytkownika, "
+"czyli to, co zobaczą twoi studenci."
 
 #: cms/templates/howitworks.html
 msgid "A Broad Library of Problem Types"
@@ -21338,8 +21324,10 @@ msgid ""
 "It's more than just multiple choice. {studio_name} supports more than a "
 "dozen types of problems to challenge your learners."
 msgstr ""
-"Nie tylko testy zamknięte. {studio_name} oferuje więcej niż tuzin typów "
-"ćwiczeń, które sprawdzą wiedzę twoich studentów."
+"W {studio_name} możesz przygotować ćwiczenia, "
+"quizy i testy różnego typu, m.in.: pytania zamknięte jednokrotnego "
+"i wielokrotnego wyboru, wykorzystujące rozwijaną listę odpowiedzi, "
+"zadania otwarte." 
 
 #: cms/templates/howitworks.html
 msgid ""
@@ -21351,7 +21339,7 @@ msgstr ""
 
 #: cms/templates/howitworks.html
 msgid "Simple, Fast, and Incremental Publishing. With Friends."
-msgstr "Organizowanie kursu wspólnie ze współpracownikami"
+msgstr "Współtworzenie kursu"
 
 #: cms/templates/howitworks.html
 msgid ""
@@ -21360,11 +21348,9 @@ msgid ""
 "incremental release when it makes sense. And with co-authors, you can have a"
 " whole team building a course, together."
 msgstr ""
-"{studio_name} działa jak aplikacje internetowe, który już znasz, ale zostało"
-" zbudowane w taki sposób, aby maksymalnie uprościć zarządzanie kursem. "
-"Natychmiast publikuj treści na stronie, albo udostępniaj je w określonych "
-"terminach. Dzięki systemowi współautorów możesz zgromadzić pokaźną kadrę, "
-"która wspólnie zaprojektuje i poprowadzi kurs."
+"{studio_name} zostało zaprojektowane w taki sposób, aby maksymalnie uprościć zarządzanie kursem. "
+"Wykorzystaj możliwość współtworzenia kursu, zbuduj mocną kadrę, "
+"z którą wspólnie opracujesz i wdrożysz materiał."
 
 #: cms/templates/howitworks.html
 msgid "Instant Changes"
@@ -21375,12 +21361,12 @@ msgid ""
 "Caught a bug? No problem. When you want, your changes go live when you click"
 " Save."
 msgstr ""
-"Znalazłeś błąd w swoim kursie? Nie ma problemu. Po kliknięciu \"Zapisz\" "
-"twoje zmiany są natychmiast widoczne."
+"Znalazłeś błąd w swoim kursie? Nie ma problemu! "
+"Popraw go, zapisz i opublikuj poprawioną wersję."
 
 #: cms/templates/howitworks.html
 msgid "Release-On Date Publishing"
-msgstr "Publikowanie w określonym terminie"
+msgstr "Publikowanie w dowolnym terminie"
 
 #: cms/templates/howitworks.html
 msgid ""
@@ -21388,9 +21374,7 @@ msgid ""
 " it to go live and {studio_name} takes care of the rest. Build your course "
 "incrementally."
 msgstr ""
-"Po zaprojektowaniu {strong_start}modułu{strong_end}, wybierz datę, kiedy "
-"ma on zostać upubliczniony, a {studio_name} zajmie się resztą. Projektuj "
-"poszczególne sekcje wtedy, kiedy jest ci wygodnie."
+"Udostępniaj poszczególne sekcje, kiedy chcesz."
 
 #: cms/templates/howitworks.html
 msgid "Work in Teams"
@@ -21401,8 +21385,8 @@ msgid ""
 "Co-authors have full access to all the same authoring tools. Make your "
 "course better through a team effort."
 msgstr ""
-"Współpracownicy mają dostęp do tych samych narzędzi projektowych. Spraw, że "
-"twoje kursy będą lepsze dzięki pracy zespołowej."
+"Kadra ma dostęp do tych samych narzędzi, co ty. "
+"Praca zespołowa ułatwi proces tworzenia kursu."
 
 #: cms/templates/howitworks.html
 msgid "Sign Up for {studio_name} Today!"
@@ -21517,11 +21501,10 @@ msgid ""
 "recommend that you export the current course, so that you have a backup copy"
 " of it."
 msgstr ""
-"Zanim kontynuujesz, upewnij się, że chcesz zaimportować kurs. Zawartości "
-"importowanego kursu podmienią treści obecnego kursu. {em_start}Czynności "
-"importowania kursu nie można cofnąć{em_end}. Zanim przejdziesz dalej, "
-"zalecamy wyeksportowanie obecnej zawartości kursu, aby dysponować jej kopią "
-"zapasową."
+"Uwaga: czynności importowania kursu nie można cofnąć. "
+"Zawartosć nowego zaimportowanego kursu "
+"nadpisze poprzednią wersję. "
+"Przed importem zalecamy wyeksportowanie obecnej zawartości kursu."
 
 #: cms/templates/import.html
 msgid ""
@@ -21529,9 +21512,9 @@ msgid ""
 "compressed with GNU Zip). This .tar.gz file must contain a course.xml file. "
 "It may also contain other files."
 msgstr ""
-"Importowany kurs musi być plikiem w formacie .tar.gz (czyli plikiem .tar "
-"skompresowanym przy użyciu GNU Zip). Plik .tar.gz musi zawierać plik "
-"course.xml i może zawierać dowolne inne pliki."
+"Plik z kursem do importu powinien mieć rozszerzenie .tar.ez "
+"(czyli plik .tar skompresowany przy "
+"użyciu GNU Zip) i zawierać plik course.xml."
 
 #: cms/templates/import.html
 msgid ""
@@ -21540,11 +21523,11 @@ msgid ""
 "completed. We recommend, however, that you don't make important changes to "
 "your course until the import operation has completed."
 msgstr ""
-"Proces importowania składa się z pięciu etapów. W trakcie pierwszych dwóch "
-"etapów musisz pozostać na tej stronie. Możesz opuścić tę stronę po "
-"zakończeniu procesu rozpakowywania. Zalecamy, aby nie dokonywać "
-"jakichkolwiek zmian w swoim kursie aż do momentu pełnego zakończenia "
-"operacji importowania kursu."
+"Proces importu składa się z pięciu etapów. W trakcie dwóch "
+"pierwszych pozostań na tej stronie. "
+"Stronę możesz opuścić po ukończeniu procesu rozpakowywania. "
+"Nie wprowadzaj żadnych zmian w swoim kursie "
+"dopóki nie zakończy się proces importu."
 
 #: cms/templates/import.html
 msgid "Select a .tar.gz File to Replace Your Library Content"
@@ -21692,12 +21675,13 @@ msgid ""
 "existing course altogether. Or, you may have developed a course outside "
 "{studio_name}."
 msgstr ""
-"Być może zechcesz uruchomić nową wersję dotychczasowego kursu, całkowicie "
-"zmienić obecny kurs, albo opracowałeś kurs poza {studio_name}."
+"W miejsce istniejącego kursu możesz wgrać nową jego wersję. "
+"Możesz również zaimportować plik z kursem, który został "
+"wyeksportowany z zewnętrznego narzędzia."
 
 #: cms/templates/import.html
 msgid "What content is imported?"
-msgstr "Jakie treści podlegają zaimportowaniu?"
+msgstr "Jakie treści zostaną zaimportowane?"
 
 #: cms/templates/import.html
 msgid ""
@@ -21706,14 +21690,14 @@ msgid ""
 "information, discussion forum data, course settings, and course team "
 "information, remains the same as it was in the existing course."
 msgstr ""
-"Importowaniu podlegają treści kursu oraz jego struktura (w tym rozdziały, "
-"lekcje i ekrany). Pozostałe dane, takie jak informacje o studentach, "
-"polityka ocen, zasoby forum dyskusyjnego, ustawienia kursu oraz informacje o"
-" kadrze kursu pozostają takie same jak w istniejącym kursie."
+"Zostaną zaimportowane: struktura kursu i jego zawartość; "
+"skonfigurowane terminy; polityka oceniania; utworzone grupy treści; "
+"Konfiguracja ustawień zaawansowanych. "
+"Nie zostaną zaimportowane: informacje o studentach, polityka" "oceniania, wątki w dyskusjach, kadra."
 
 #: cms/templates/import.html
 msgid "Warning: Importing while a course is running"
-msgstr "Ostrzeżenie: próbujesz dokonać zaimportowania do trwającego kursu"
+msgstr "Uwaga: nie rób importu do trwającego kursu"
 
 #: cms/templates/import.html
 msgid ""
@@ -21722,10 +21706,9 @@ msgid ""
 "associated with those Problem components may be lost. This data includes "
 "students' problem scores."
 msgstr ""
-"Jeśli dokonasz zaimportowania do trwającego kursu i zmienisz adresy URL "
-"(albo nody url_name) dowolnych ćwiczeń, dane powiązane z treściami tych "
-"ćwiczeń mogą zostać usunięte. Dotyczy to wyników studentów uzyskanych z "
-"ćwiczeń lub egzaminów."
+"Jeśli zrobisz import do trwającego kursu "
+"i zmienisz adresy url ćwiczeń, dane dotyczące "
+"tych ćwiczeń zostaną utracone."
 
 #: cms/templates/import.html
 msgid "Learn more about importing a course"
@@ -22063,7 +22046,7 @@ msgstr ""
 
 #: cms/templates/index.html
 msgid "New to {studio_name}?"
-msgstr "Debiutujesz z pracą w {studio_name}?"
+msgstr "Zaczynasz pracę w {studio_name}?"
 
 #: cms/templates/index.html
 msgid ""
@@ -22072,11 +22055,12 @@ msgid ""
 " of the page to access our continually updated documentation and other "
 "{studio_name} resources."
 msgstr ""
-"Klikając na znajdujący się w prawym górnym rogu przycisk \"Pomoc\" możesz "
-"uzyskać więcej informacji o aktualnie przeglądanej stronie w {studio_name}. "
-"Możesz również użyć odnośników z dolnej części strony, aby przejść do "
-"dokumentacji i innych pomocnych materiałów dotyczących pracy w "
-"{studio_name}."
+"Gdy klikniesz w znajdujący się w prawym "
+"górnym rogu przycisk \"Pomoc\", uzyskasz "
+"więcej informacji na temat aktualnie przeglądanej strony. "
+"Możesz również kliknąć w odnośniki zamieszczone w stopce serwisu, "
+"aby przejść do dokumentacji i innych pomocnych materiałów "
+"dotyczących pracy w {studio_name}."
 
 #: cms/templates/index.html
 msgid "Getting Started with {studio_name}"
@@ -22246,23 +22230,23 @@ msgstr "Dodaj nowego członka kadry"
 
 #: cms/templates/manage_users.html
 msgid "Course Team Roles"
-msgstr "Role członków kadry kursu"
+msgstr "Uprawnienia kadry kursu"
 
 #: cms/templates/manage_users.html
 msgid ""
 "Course team members with the Staff role are course co-authors. They have "
 "full writing and editing privileges on all course content."
 msgstr ""
-"Członkowie zespołu o statusie \"Kadra\" posiadają uprawnienia "
-"współautorów. Mogą oni tworzyć i edytować wszystkie treści kursu."
+"Członkowie zespołu o statusie \"Kadra\" mają uprawnienia "
+"współautorów. Mogą oni tworzyć i edytować wszystkie treści."
 
 #: cms/templates/manage_users.html
 msgid ""
 "Admins are course team members who can add and remove other course team "
 "members."
 msgstr ""
-"Administratorzy są członkami kadry kursu, którzy mogą dodawać i usuwać "
-"innych członków kadry."
+"Administratorzy są członkami kadry. "
+"Tylko oni mogą dodawać i usuwać innych członków kadry."
 
 #: cms/templates/manage_users.html
 msgid ""
@@ -22413,7 +22397,7 @@ msgstr "Najczęstsze pytania o {studio_name}"
 
 #: cms/templates/register.html
 msgid "Who is {studio_name} for?"
-msgstr "Dla kogo przewidziane jest {studio_name}?"
+msgstr "Dla kogo jest {studio_name}?"
 
 #: cms/templates/register.html
 msgid ""
@@ -22422,17 +22406,14 @@ msgid ""
 "members, teaching assistants and course staff, and members of instructional "
 "technology groups."
 msgstr ""
-"{studio_name} jest przewidziane dla każdego, kto pragnie przygotować i "
-"przeprowadzić kurs na platformie {platform_name}. Użytkownikami są z reguły "
-"nauczyciele akademiccy, pracownicy naukowi, a także administratorzy "
-"techniczni i kierownicy kursów."
+"{studio_name} jest dla każdego, kto chciałby stworzyć kurs na platformie Navoica. "
+"Twórcami kursów są z reguły nauczyciele akademiccy oraz pracownicy naukowi."
 
 #: cms/templates/register.html
 msgid ""
 "How technically savvy do I need to be to create courses in {studio_name}?"
 msgstr ""
-"Jaką wiedzą techniczną muszę dysponować, aby móc tworzyć kursy za pomocą "
-"{studio_name}?"
+"Jaką widzę techniczną powinienem posiadać, aby móc tworzyć kursy?"
 
 #: cms/templates/register.html
 msgid ""
@@ -22442,19 +22423,16 @@ msgid ""
 "features, a technical background would be helpful. As always, we are here to"
 " help, so don't hesitate to dive right in."
 msgstr ""
-"{studio_name} opracowano w taki sposób, aby korzystanie z niego było łatwe "
-"dla osób zaznajomionych z typowymi sieciowymi środowiskami autorskimi "
-"(Wordpress, Moodle, itd.). Nie jest wymagana jakakolwiek wiedza "
-"programistyczna, natomiast dla niektórych zaawansowanych funkcji wiedza "
-"techniczna jest bardzo pomocna. Oczywiście do Państwa dyspozycji pozostaje "
-"obsługa platformy, która jest po to, aby pomóc i odpowiedzieć na każdy "
-"problem."
+"Nie jest wymagana jakakolwiek wiedza programistyczna, "
+"jednak znajomość środowisk typu CMS na pewno ułatwi pracę w {studio_name}. "
+"Pamiętaj, że w razie trudności w obsłudze platformy, "
+"nasza pomoc techniczna jest do twojej dyspozycji."
 
 #: cms/templates/register.html
 msgid "I've never authored a course online before. Is there help?"
 msgstr ""
-"Nigdy wcześniej nie projektowałem i nie prowadziłem kursu online. Gdzie mogę"
-" znaleźć pomoc i od czego zacząć?"
+"Nigdy wcześniej tworzyłem kursu online. Gdzie mogę znaleźć pomoc? "
+"Od czego powinienem zacząć?"
 
 #: cms/templates/register.html
 msgid ""
@@ -22463,11 +22441,10 @@ msgid ""
 "running an online course. Additionally, we're always here to help, just drop"
 " us a note."
 msgstr ""
-"Dla rozpoczynających pracę z systemem stworzyliśmy kurs online edx101, w "
-"którym przedstawiliśmy podstawy projektowania kursów online: od "
-"przygotowywania filmów, tworzenia ćwiczeń, po prowadzenie i zarządzanie "
-"kursem. W przypadku dodatkowych pytań lub niejasności jesteśmy zawsze gotowi"
-" do udzielenia pomocy."
+"Dla początkujących stworzyliśmy kurs „Techniczne tworzenie kursów MOOC”, "
+"w którym przedstawiliśmy krok po kroku, jak zaprojektować i zbudować kurs, "
+"jak osadzić filmy, utworzyć ćwiczenia oraz jak tym kursem potem zarządzać. "
+"Jeśli masz dodatkowe pytania, skontaktuj się z pomocąś techniczną platformy."
 
 #: cms/templates/settings.html
 msgid "Schedule & Details Settings"
@@ -22568,7 +22545,7 @@ msgstr "Harmonogram kursu"
 
 #: cms/templates/settings.html
 msgid "Dates that control when your course can be viewed"
-msgstr "Daty określające kiedy twój kurs będzie widoczny"
+msgstr "Daty określające, kiedy twój kurs będzie widoczny"
 
 #: cms/templates/settings.html
 msgid "First day the course begins"
@@ -22592,7 +22569,7 @@ msgstr "Godzina zakończenia kursu"
 
 #: cms/templates/settings.html
 msgid "Enrollment Start Date"
-msgstr "Data rozpoczęcia rekrutacji"
+msgstr "Data rozpoczęcia zapisów"
 
 #: cms/templates/settings.html
 msgid "First day students can enroll"
@@ -22604,7 +22581,7 @@ msgstr "Godzina rozpoczęcia zapisów"
 
 #: cms/templates/settings.html
 msgid "Enrollment End Date"
-msgstr "Data zakończenia rekrutacji"
+msgstr "Data zakończenia zapisów"
 
 #: cms/templates/settings.html
 msgid "Last day students can enroll."
@@ -22651,9 +22628,9 @@ msgid ""
 " that are taught in a specific language. It is also used to localize the "
 "'From:' field in bulk emails."
 msgstr ""
-"W tym miejscu wskaż język kursu. Pomoże to studentom w odnalezieniu kursu "
-"nauczanego w określonym języku, a także w przetłumaczeniu pola nadawcy dla "
-"celów wysyłki wiadomości e-mail."
+"W tym miejscu wskaż język kursu. Pomoże to studentom "
+"w odnalezieniu kursu w określonym języku, "
+"a także w przetłumaczeniu pola nadawcy przy wysyłce wiadomości e-mail."
 
 #: cms/templates/settings.html
 msgid "Introducing Your Course"
@@ -22738,7 +22715,7 @@ msgid ""
 "You can manage this image along with all of your other {a_link_start}files "
 "and uploads{a_link_end}"
 msgstr ""
-"Możesz zarządzać tym i innymi plikami graficznymi na "
+"Plikami graficznymi możesz zarządzać na "
 "stronie {a_link_start}zarządzania plikami{a_link_end}."
 
 #: cms/templates/settings.html
@@ -22760,7 +22737,7 @@ msgid ""
 "Please provide a valid path and name to your course image (Note: only JPEG "
 "or PNG format supported)"
 msgstr ""
-"Proszę podać działający odnośnik i nazwę zdjęcia lub grafiki twojego kursu "
+"Wpisz odnośnik do grafiki "
 "(uwaga: dozwolone są wyłącznie formaty JPEG lub PNG)."
 
 #: cms/templates/settings.html
@@ -22791,7 +22768,7 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Upload Course Banner Image"
-msgstr "Prześlij banner kursu"
+msgstr "Prześlij grafikę kursu"
 
 #: cms/templates/settings.html
 msgid "Video Thumbnail Image"
@@ -22968,8 +22945,8 @@ msgid ""
 "Your course's schedule determines when students can enroll in and begin a "
 "course."
 msgstr ""
-"Harmonogram twojego kursu pozwala określić kiedy studenci mogą się na niego "
-"zapisać i rozpocząć naukę."
+"W harmonogramie kursu określ terminy: kiedy kurs się rozpoczyna, "
+"kiedy kończy, od kiedy do kiedy trwają zapisy".
 
 #: cms/templates/settings.html
 msgid ""
@@ -22978,10 +22955,10 @@ msgid ""
 "video, and estimated time requirements. Students use About pages to choose "
 "new courses to take."
 msgstr ""
-"Pozostałe informacje z tej strony są widoczne na podstronie \"O kursie\". "
-"Obejmują przegląd kursu, zdjęcie / grafikę, film promocyjny, a także "
-"informacje o spodziewanym zobowiązaniu czasowym. Studenci przeglądają strony"
-" \"O kursie\" w celu wyboru kursów, w których będą uczestniczyć."
+"Tu wpisujesz informacje, które będą widoczne na stronie "
+"\"O kursie\" (język, poziom zaawansowania, organizator, "
+"kategoria kursu, czas trwania kursu). W tym miejscu "
+"możesz dodać krótki opis kursu oraz grafikę."
 
 #: cms/templates/settings_advanced.html
 msgid "Your policy changes have been saved."
@@ -23001,12 +22978,11 @@ msgid ""
 "{strong_start}Warning{strong_end}: Do not modify these policies unless you "
 "are familiar with their purpose."
 msgstr ""
-"{strong_start}Ostrzeżenie{strong_end}: nie modyfikuj tych ustawień, chyba, "
-"że jesteś w stu procentach pewien ich celu."
+"{strong_start}Uwaga{strong_end}: konfiguracja tych ustawień wymaga wiedzy programistycznej."
 
 #: cms/templates/settings_advanced.html
 msgid "Show Deprecated Settings"
-msgstr "Pokaż przestarzałe ustawienia"
+msgstr "Pokaż poprzednie wersje"
 
 #: cms/templates/settings_advanced.html
 msgid "What do advanced settings do?"
@@ -23018,10 +22994,9 @@ msgid ""
 "can edit manual policies, which are JSON-based key and value pairs that "
 "control specific course settings."
 msgstr ""
-"Ustawienia zaawansowane kontrolują określone funkcjonalności kursu. Na tej "
-"stronie możesz ręcznie edytować ustawienia polityk, które są opartymi na "
-"JSON parami kluczy i wartości odpowiedzialnymi za określone ustawienia "
-"kursu."
+"Ustawienia zaawansowane służą do konfiguracji funkcjonalności "
+"kursu. Aby zarządzać tymi ustawieniami, wymagana jest wiedza "
+"programistyczna."
 
 #: cms/templates/settings_advanced.html
 msgid ""
@@ -23029,10 +23004,7 @@ msgid ""
 "elsewhere in {studio_name}. Do not edit policies unless you are familiar "
 "with both their purpose and syntax."
 msgstr ""
-"Każda polityka, którą w tym miejscu zmodyfikujesz, nadpisze ustawienia i "
-"informacje zdefiniowane w innych miejscach w {studio_name}. Zalecamy "
-"powstrzymanie się od edycji polityki, jeśli nie jesteś zaznajomiony z jej "
-"celem i syntax."
+
 
 #: cms/templates/settings_advanced.html
 msgid ""
@@ -23040,9 +23012,7 @@ msgid ""
 " you use double quotation marks (\") around the string. Do not use single "
 "quotation marks (')."
 msgstr ""
-"{em_start}Uwaga:{em_end} jeśli wprowadzasz linijki jako wartości polityki, "
-"upewnij się, że obejmujesz linijkę znakami cudzysłowu (\"). Nie używaj "
-"pojedynczego znaku cytowania (')."
+
 
 #: cms/templates/settings_graders.html
 msgid "Grading Settings"
@@ -23104,7 +23074,7 @@ msgstr "Kategorie i etykiety dla ćwiczeń podlegających ocenie"
 
 #: cms/templates/settings_graders.html
 msgid "New Assignment Type"
-msgstr "Nowy typ ćwiczenia"
+msgstr "Nowy typ zadania"
 
 #: cms/templates/settings_graders.html
 msgid "What can I do on this page?"
@@ -23116,17 +23086,14 @@ msgid ""
 "course is pass/fail or graded by letter, and to establish the thresholds for"
 " each grade."
 msgstr ""
-"Możesz skorzystać z suwaka znajdującego się pod \"Ogólnym zakresem ocen\" w "
-"celu wyboru formy ukończenia kursu - na zaliczenie lub na ocenę, oraz żeby "
-"określić wymagany poziom dla każdej oceny."
+"Za pomocą suwaka możesz ustawić próg zaliczeniowy."
 
 #: cms/templates/settings_graders.html
 msgid ""
 "You can specify whether your course offers students a grace period for late "
 "assignments."
 msgstr ""
-"Możesz określić czy twój kurs oferuje studentom okres prolongaty dla ćwiczeń"
-" wykonywanych po terminie."
+"Możesz określić czas prolongaty dla ćwiczeń wykonanych po terminie."
 
 #: cms/templates/settings_graders.html
 msgid ""
@@ -23134,9 +23101,10 @@ msgid ""
 "exams, and specify how much of a student's grade each assignment type is "
 "worth."
 msgstr ""
-"Możesz tworzyć typy ćwiczeń, takie jak prace domowe, laboratoria, quizy lub "
-"egzaminy i określać w jakim stopniu dane ćwiczenie wpływa na końcową ocenę "
-"studenta."
+"Możesz tworzyć typy ćwiczeń (kategorie ćwiczeń), "
+"np. prace domowe, quizy, testy, egzaminy "
+"i przypisać im tzw. Wagę, czyli w jakim stopniu "
+"dane ćwiczenie wpływa na końcową ocenę."
 
 #: cms/templates/studio_xblock_wrapper.html
 msgid "Expand or Collapse"
@@ -23169,9 +23137,10 @@ msgid ""
 "textbooks into chapters can also help students more easily find topic-based "
 "information."
 msgstr ""
-"Podzielenie podręcznika na rozdziały obniża studentom czas jego wczytywania,"
-" w szczególności tym ze słabym łączem internetowym, a także pozwala "
-"studentom na łatwiejsze wyszukiwanie informacji na interesujący ich temat."
+"Po pierwsze, podzielenie jednego dużego pliku na mniejsze części "
+"skraca czas wczytywania – mniejsze pliki się szybciej wczytują. "
+"Po drugie, kiedy materiał jest podzielony, łatwiej w nim odnaleźć "
+"interesującą nas informację."
 
 #: cms/templates/textbooks.html
 msgid "What if my book isn't divided into chapters?"
