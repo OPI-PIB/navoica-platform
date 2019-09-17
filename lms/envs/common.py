@@ -409,8 +409,10 @@ FEATURES = {
     # Whether to send an email for failed password reset attempts or not. This is mainly useful for notifying users
     # that they don't have an account associated with email addresses they believe they've registered with.
     'ENABLE_PASSWORD_RESET_FAILURE_EMAIL': False,
-    
+
     'UNSUPPORTED_BROWSER_ALERT_VERSIONS': "{e:0,f:-3,o:0,s:-3,c:-3,i:20}",
+
+    'CUSTOM_CERTIFICATE_TEMPLATES_ENABLED': True
 }
 
 COURSE_DISCOVERY_FILTERS = ['modes', 'course_category', 'organizer', 'difficulty', 'availability', 'status', 'key']

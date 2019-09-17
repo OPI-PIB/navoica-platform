@@ -478,7 +478,7 @@ def get_certificate_template(course_key, mode, language):
     # only consider active templates
     active_templates = CertificateTemplate.objects.filter(is_active=True)
 
-    if org_id and mode:  # get template by org, mode, and key
+    if mode:  # get template by org, mode, and key
         org_mode_and_key_templates = active_templates.filter(
             organization_id=org_id,
             mode=mode,
