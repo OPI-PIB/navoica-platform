@@ -9161,10 +9161,6 @@ button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-butto
   padding-bottom: 1rem;
 }
 
-.list-group-item {
-  margin-bottom: -1px !important;
-}
-
 list-group-item {
    border: none !important;
 }
@@ -9176,11 +9172,11 @@ list-group-item {
   font-weight: 700;
   letter-spacing: .02em;
   line-height: 1;
-  margin: 1rem 0 0;
+//  margin: 1rem 0 0;
   text-transform: uppercase;
   word-spacing: .04em;
   backgorund: none !important;
-  padding: calc(.25em + 1px) 0;
+//  padding: calc(.25em + 1px) 0;
 }
 
 main.container {
@@ -9285,7 +9281,7 @@ main.container {
   }
   main.container > {
     aside {
-      p, li {
+      p {
         font-size: 15px !important;
       }
     }
@@ -9612,4 +9608,29 @@ main.container .d-flex>aside {
     display: block !important;
     width:400px;
  }
+}
+
+aside {
+  .list-group-item {
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 0.5rem;
+    border: 0;
+  }
+}
+
+#form-control {
+  height: unset !important;
+}
+
+aside {
+  .hero {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+    img {
+      width: 100%
+    }
+  }
 }
