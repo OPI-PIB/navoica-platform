@@ -21,6 +21,7 @@ FEATURES.update({
     'ENABLE_COURSEWARE_INDEX': True,
     'ENABLE_LIBRARY_INDEX': True,
     'ENABLE_DISCUSSION_SERVICE': True,
+    'ENABLE_VIDEO_UPLOAD_PIPELINE': True,
     "PREVIEW_LMS_BASE": "preview-draft.navoica.pl",
 })
 
