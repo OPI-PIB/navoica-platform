@@ -4,29 +4,48 @@ from django.core.urlresolvers import reverse
 %>
 
 
-<div class="col-md-4">
+<aside id="filter" class="sidebar">
+  <header id="header-login">
+    <h2 id="h2">
+      <span class="d-none d-md-block">${_("Helpful Information")}</span>
+    </h2>
+  </header>
 
-    <header>
-        <h2 class="sr">${_("Helpful Information")}</h2>
-    </header>
-
-    % if settings.FEATURES.get('AUTH_USE_OPENID'):
+      % if settings.FEATURES.get('AUTH_USE_OPENID'):
     <!-- <div class="cta cta-login-options-openid">
       <h3>${_("Login via OpenID")}</h3>
       <p>${_('You can now start learning with {platform_name} by logging in with your <a rel="external" href="http://openid.net/">OpenID account</a>.').format(platform_name=platform_name)}</p>
       <a class="action action-login-openid" href="#">${_("Login via OpenID")}</a>
     </div> -->
     % endif
-
-    <h2>${_("Not Enrolled?")}</h2>
-    <p><a href="${reverse('register_user')}">${_("Sign up for {platform_name} today!").format(platform_name=platform_name)}</a></p>
+  
+  <div id="basic-data-facets" class="collapse">
+    <ul class="course-details list-group list-group-flush">
+      <li class="list-group-item">
+        <div class="course-details-icon easy">
+          <i class="fas fa-user-times"></i>
+        </div>
+        <div class="course-details-content">
+          <h6>${_("Not Enrolled?")}</h6>
+          <div><a href="${reverse('register_user')}">${_("Sign up for {platform_name} today!").format(platform_name=platform_name)}</a></div>
+        </div>
+      </li>
 
     % if settings.MKTG_URL_LINK_MAP.get('FAQ'):
-    <h2>${_("Need Help?")}</h2>
-    <p>
-        Czy potrzebujesz pomocy w zalogowaniu się lub obsłudze swojego konta Polski MOOC? Skontaktuj się z naszym działem pomocy technicznej dostępnym pod adresem <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a>.
-    </p>
-    % endif
-    <a href="https://www.facebook.com/Polski-MOOC-295767534600329/" target="_blank"><img src="/static/images/facebook-ikona.png" alt="Facebook">
-    </a>
-</div>
+      <li class="list-group-item">
+        <div class="course-details-icon">
+          <i class="far fa-envelope-open"></i>
+        </div>
+        <div class="course-details-content">
+          <h6>${_("Need Help?")}</h6>
+          <div>Czy potrzebujesz pomocy w zalogowaniu się lub obsłudze swojego konta Polski MOOC?<br>
+               Skontaktuj się z naszym działem pomocy technicznej dostępnym pod adresem <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a>.
+          </div>
+         </div>
+       </li>
+     </ul>
+   </div>
+  % endif
+<!--    <a href="https://www.facebook.com/Polski-MOOC-295767534600329/" target="_blank"><img src="/static/images/facebook-ikona.png" alt="Facebook">
+    </a>-->
+</aside>

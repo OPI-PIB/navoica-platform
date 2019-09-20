@@ -10323,13 +10323,40 @@ aside {
   padding-left: 8px;
   margin-right: auto;
   margin-left: auto;
+  .d-flex {
+    flex-flow: column;
+  }
 }
 
 @media (min-width: 960px) {
   .login {
-    max-width: 960px
+    max-width: 960px;
+    .d-flex {
+      align-items: stretch;
+      flex-flow: row wrap;
+    }
+    #results {
+      flex: 1 1;
+    }
+    #filter {
+      order: initial;
+    }
+  }
+  #basic-data-facets {
+    display: block !important;
+    .list-group-item {
+      font-size: 87.5%;
+    }
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .login {
+    max-width: 1280px;
   }
 }
+
 
 #header-login {
   display: flex;
@@ -10337,6 +10364,9 @@ aside {
   border-bottom: 1px solid #dee2e6;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+  #h2 {
+    margin: 1rem 0 0;
+  }
 }
 
 #forgot-password-link {
@@ -10347,3 +10377,57 @@ label {
   color: #212529;
   text-transform: none;
 }
+
+.login #login-form .status.message {
+   display: none;
+}
+
+.login #login-form .status.message.is-shown {
+   display: block;
+}
+
+#alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb !important;
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+#alert-primary {
+    color: #770f1d;
+    background-color: #fad2d7;
+    border-color: #f7c0c7 !important;
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+@media (min-width: 1280px) {
+  #filter {
+    flex: 0 0 426px;
+  }
+}
+
+.group.group-form.group-form-requiredinformation {
+    background-color: rgba(200, 200, 200, 0.05);
+    box-shadow: 0 0 4px inset #ced4da;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+#email:focus, #password:focus {
+     color: #212529 !important;
+     background-color: #fff !important;
+     border-color: #f28f9c !important;
+     outline: 0;
+     box-shadow: 0 0 0 0.2rem #dee2e6;
+}
+
+#filter {
+  order: -1;
+}
+

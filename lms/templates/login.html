@@ -102,7 +102,7 @@ from third_party_auth import provider, pipeline
           attr('aria-disabled', false).
           removeProp('disabled').
           removeAttr('disabled').
-          html("<i class='icon-user'></i> ${_('Sign in')}");
+          html("<i class='fas fa-check'></i> ${_('Sign in')}");
       }
       else {
         $submitButton.
@@ -177,11 +177,11 @@ from third_party_auth import provider, pipeline
       <form role="form" id="login-form" method="post" data-remote="true" action="/login_ajax" novalidate autocomplete="disabled">
 
 		  <!-- status messages -->
-		  <div role="alert" class="status message">
+		  <div role="alert" class="status message" id="alert-info">
 			<h3 class="message-title">${_("We're Sorry, {platform_name} accounts are unavailable currently").format(platform_name=platform_name)}</h3>
 		  </div>
 
-		  <div role="alert" class="status message submission-error" tabindex="-1">
+		  <div role="alert" class="status message submission-error" id="alert-primary" tabindex="-1">
 			<h3 class="message-title">${_("We couldn't log you in.")} </h3>
 			<ul class="message-copy">
 			  <li>${_("Your email or password is incorrect")}</li>
