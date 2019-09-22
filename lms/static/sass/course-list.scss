@@ -10431,3 +10431,81 @@ label {
   order: -1;
 }
 
+.inner-wrapper {
+    transform: none;
+    transition: transform 0.3s ease-out;
+    max-width: 500px;
+    margin: 1.75rem auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    outline: 0;
+}
+
+.text-muted {
+    display: block;
+    font-size: 0.875rem;
+    font-style: italic;
+    margin-top: .25rem;
+    line-height: 1.625;
+}
+
+#exampleModalLabel {
+    color: darkcyan;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    line-height: 1.7143;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-transform: uppercase;
+    word-spacing: .04em;
+}
+
+.close-modal {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    background-color: transparent;
+    border: 0;
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+}
+
+.close-modal {
+   opacity: .75;
+}
+
+fieldset {
+  label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.modal-footer {
+  padding: 1rem 0 0 0 !important;
+}
+
+#group-form-login {
+  margin-bottom: 1rem;
+}
+
+#forgot-password-modal {
+  verflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 19px;
+}
+
