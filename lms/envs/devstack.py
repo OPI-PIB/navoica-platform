@@ -25,6 +25,8 @@ ENTERPRISE_API_URL = LMS_INTERNAL_ROOT_URL + '/enterprise/api/v1/'
 TIME_ZONE = 'Europe/Warsaw'
 ################################ LOGGERS ######################################
 
+COMMENTS_SERVICE_URL = "http://edx.devstack.forum:4567"
+
 # Silence noisy logs
 import logging
 
