@@ -9,37 +9,64 @@ from django.core.urlresolvers import reverse
 
 % if has_extauth_info is UNDEFINED:
 
-<div class="">
-  <h2 class="title">${_("Already registered?")}</h2>
-  <p class="instructions">
-    <a class="btn-login-action" href="${reverse('signin_user')}${login_query()}">
-      ${_("Log in")}
-    </a>
-  </p>
-</div>
+<div id="basic-data-facets" class="collapse">
+  <ul class="course-details list-group list-group-flush">
+    <li class="list-group-item">
+      <div class="course-details-icon easy">
+        <i class="fas fa-user-check"></i>
+      </div>
+      <div class="course-details-content">
+        <h6>${_("Already registered?")}</h6>
+        <div>
+          <a class="btn-login-action" href="${reverse('signin_user')}${login_query()}">
+      ${_("Log in")} </a>
+        </div>
+      </div>
+    </li>
 
 % endif
 
 ## TODO: Use a %block tag or something to allow themes to
 ##       override in a more generalizable fashion.
-<div class="cta cta-welcome">
-  <h2>${_("Welcome to {platform_name}").format(platform_name=platform_name)}</h2>
-  <p>${_("Registering with {platform_name} gives you access to all of our current and future free courses. Not ready to take a course just yet? Registering puts you on our mailing list - we will update you as courses are added.").format(platform_name=platform_name)}</p>
-</div>
+    <li class="list-group-item">
+      <div class="course-details-icon">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div class="course-details-content">
+        <h6>${_("Welcome to {platform_name}").format(platform_name=platform_name)}</h6>
+        <div>${_("Registering with {platform_name} gives you access to all of our current and future free courses. Not ready to take a course just yet? Registering puts you on our mailing list - we will update you as courses are added.").format(platform_name=platform_name)}
+        </div>
+      </div>
+    </li>
 
-<div class="cta cta-nextsteps">
-  <h2>${_("Next Steps")}</h2>
-    <p>${_("As part of joining {platform_name}, you will receive an email message with instructions for activating your account. Don't see the email? Check your spam folder and mark {platform_name} emails as 'not spam'. At {platform_name}, we communicate mostly through email.").format(platform_name=platform_name)}</p>
-</div>
+    <li class="list-group-item">
+      <div class="course-details-icon">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+      <div class="course-details-content">
+        <h6>${_("Next Steps")}</h6>
+        <div>${_("As part of joining {platform_name}, you will receive an email message with instructions for activating your account. Don't see the email? Check your spam folder and mark {platform_name} emails as 'not spam'. At {platform_name}, we communicate mostly through email.").format(platform_name=platform_name)}
+        </div>
+      </div>
+    </li>
 
 % if settings.MKTG_URL_LINK_MAP.get('FAQ'):
-  <div class="cta cta-help">
-    <h2>${_("Need Help?")}</h2>
-    <p>${_("Need help registering with {platform_name}?").format(platform_name=platform_name)}
+    <li class="list-group-item">
+      <div class="course-details-icon">
+        <i class="far fa-envelope-open"></i>
+      </div>
+      <div class="course-details-content">
+        <h6>${_("Need Help?")}</h6>
+        <div>${_("Need help registering with {platform_name}?").format(platform_name=platform_name)}
     	${_("Skontaktuj się z naszym działem pomocy technicznej dostepnym pod adresem ")}	
-      <a href="mailto:mooc_help@opi.org.pl">
-          ${_("mooc_help@opi.org.pl.")}
-      </a>
-      ${_("You can find the answers to most of your questions in our list of FAQs. After you enroll in a course, you can also find answers in the course discussions.")}</p>
-  </div>
+          <a href="mailto:mooc_help@opi.org.pl">
+            ${_("mooc_help@opi.org.pl.")}
+          </a>
+          <br>
+        ${_("You can find the answers to most of your questions in our list of FAQs. After you enroll in a course, you can also find answers in the course discussions.")}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
 % endif
