@@ -1454,7 +1454,7 @@ PIPELINE_CSS = {
             #'css/courses.css',
             #'css/course.css',
 	    #'css/course-toc.css',
-             'css/course-list.css',
+            'css/course-list.css',
             #'css/polipedia.css',
             #'css/polipedia.custom.css',
             #'css/navoica.custom.css'

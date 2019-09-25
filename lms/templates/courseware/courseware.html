@@ -244,7 +244,7 @@ ${HTML(fragment.foot_html())}
   ${HTML(course_sock_fragment.body_html())}
 </main>
 </div>
-<div class="container-footer">
+<div class="container">
   % if settings.FEATURES.get("LICENSING", False):
     <div class="course-license">
     % if getattr(course, "license", None):
