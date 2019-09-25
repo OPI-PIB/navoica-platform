@@ -667,7 +667,7 @@ pre code {
 }
 
 .order-first {
-  order: -1;
+  order: -1 !important;
 }
 
 .order-last {
@@ -830,7 +830,7 @@ pre code {
     max-width: 100%;
   }
   .order-sm-first {
-    order: -1;
+    order: -1 !important;
   }
   .order-sm-last {
     order: 13;
@@ -972,7 +972,7 @@ pre code {
     max-width: 100%;
   }
   .order-md-first {
-    order: -1;
+    order: -1 !important;
   }
   .order-md-last {
     order: 13;
@@ -3652,8 +3652,9 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 15px;
   text-align: center;
+  height: auto;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -3678,6 +3679,8 @@ input[type="button"].btn-block {
   border: 1px solid transparent;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  height: auto;
+  padding: 15px;
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
@@ -4594,7 +4597,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 .alert {
   position: relative;
   padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   border: 1px solid transparent;
   border-radius: 0;
 }
@@ -9044,9 +9047,6 @@ footer li {
 #content {
   border-color: #ced4da !important;
   margin: 0 0 4rem;
-  /*
-  padding: 3*$font-size-base 0;
-  */
 }
 
 #content .display-2 {
@@ -9091,6 +9091,10 @@ main.container .d-flex > aside header h2, main.container .d-flex > aside header 
 main.container .d-flex section,
 .jumbotron > .container .d-flex section {
   margin-bottom: 3rem;
+}
+
+.jumbotronn {
+  background-color: #f8f9fa;
 }
 
 main.container nav,
@@ -9146,6 +9150,13 @@ aside .header-facet {
   font-weight: 700;
 }
 
+main.container{
+      display: block;
+}
+
+.course-wrapper .course-content .xblock.xblock-student_view-vertical, .course-wrapper .courseware-results-wrapper .xblock.xblock-student_view-vertical {
+   max-width: auto;
+}
 aside a.media {
   margin-bottom: 2rem;
 }
@@ -9216,7 +9227,7 @@ aside .list-group-item.selected .count-number::before {
 }
 
 main.container aside {
-  order: -1;
+  order: -1 !important;
 }
 
 main.container aside .list-group-flush .list-group-item {
@@ -9232,7 +9243,7 @@ main.container aside h6 {
 
 @media (min-width: 960px) {
   #content {
-    margin: 0 0 4rem;
+    margin: 0;
     padding: 3rem 0;
   }
   .jumbotron > .container .d-flex {
@@ -9288,8 +9299,12 @@ main.container aside h6 {
     border-right: 1px solid #dee2e6;
     flex: 0 0 290px;
     margin-right: 2rem;
-    order: -1;
+    order: -1 !important;
     padding-right: 2rem;
+    margin-left: 0;
+    padding-left: 0;
+    background-color: transparent;
+    border-left: none;
   }
   main.container .d-flex > aside .list-group-item {
     font-size: 87.5%;
@@ -9509,7 +9524,7 @@ article .display-3::before {
   margin-top: 0;
   overflow: hidden;
   padding-left: 0;
-  position: static;
+  position: absolute;
   top: auto;
 }
 
@@ -9650,4 +9665,30 @@ article .display-3::before {
 
 .btn-sm i, .btn-group-sm > .btn i {
   margin-right: .5rem;
+}
+
+.course-license{
+  text-align: right;
+}
+
+.course-wrapper main{
+  padding: 0;
+}
+
+.fa-other:before {
+    content: "\f249";
+}
+
+.fa-problem:before {
+    content: "\f128";
+}
+.course-content{
+  margin-top: 0 !important;
+}
+.breadcrumbs .nav-item{
+  margin-left: 0 !important;
+  margin-bottom: 10px !important;
+}
+.video-js{
+  width: 100% !important;
 }
