@@ -382,7 +382,7 @@ h6, .h6 {
 
 .display-2 {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.2;
 }
 
@@ -10665,7 +10665,6 @@ article .display-3 {
 }
 
 #content {
-  padding-top: 7rem;
 
   .vert .problems-wrapper {
     .problem-progress {
@@ -10997,6 +10996,7 @@ input.form-control.form-control {
     border: none;
     font-size: 0.875rem;
     text-transform: none;
+    
 }
 
 #clear-all-filters:hover {
@@ -11018,33 +11018,39 @@ button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-butto
     padding: 0 !important;
 }
 
-.d-flex.justify-content-between.align-items-center {
-    line-height: 1 !important;
-}
+//.d-flex.justify-content-between.align-items-center {
+//    line-height: 1 !important;
+//}
 
 #courses-list-header {
-  background-image: none;
   margin: 0 0 1rem !important;
   border-bottom: 1px solid #dee2e6 !important;
   padding-bottom: 1rem;
 }
 
-list-group-item {
-   border: none !important;
+li.list-group-item {
+  border: none !important;
 }
 
-#organizator, #discovery-message, .d-flex.justify-content-between.align-items-center, #h2 {
+#organizator, #discovery-message, #h2 {
   color: darkcyan;
   display: block;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: .02em;
   line-height: 1;
-//  margin: 1rem 0 0;
   text-transform: uppercase;
   word-spacing: .04em;
   backgorund: none !important;
-  padding: calc(.25em + 1px) 0;
+  margin: 1rem 0 0;
+}
+
+@media (min-width: 960px) {
+  #h2, #discovery-message, {
+    font-size: 0.875rem;
+    text-align: left;
+    margin: 0;
+  }
 }
 
 main.container {
@@ -11063,25 +11069,18 @@ main.container {
   }
 }
 
-//#search-facets-lists {
-//  display: block !important;
-//}
-
-@media (min-width: 960px) {
-  main.container, #article {
-    align-items: stretch;
-    flex-flow: row wrap;
-  }
-}
-
-#article {
-   flex: 1 1;
-  }
 
 @media (min-width: 960px) {
   #content_course {
     margin: 0 0 4rem;
     padding: 3rem 0;
+  }
+  main.container, #article {
+    align-items: stretch;
+    flex-flow: row wrap;
+  }
+  #article {
+   flex: 1 1;
   }
   aside,
     .jumbotron > .container > aside {
@@ -11247,10 +11246,6 @@ main.container {
     z-index: 10;
 }
 
-//#discovery-form1 {
-//  background: rgba(200, 200, 200, 0.25);
-//}
-
 .section-name.accordion-trigger.bg1, subsection-text.accordion-trigger.bg1{
    background: #f8f9fa;
    padding: 0.75rem 2rem !important;
@@ -11346,7 +11341,7 @@ main.container {
 }
 
 .bg-light.bg-brand.rounded.search-facets {
-  margin: 0 0 2rem 0 !important;
+  margin: 0 0 1rem 0 !important;
   padding-bottom: 1rem;
   border-bottom: 1px solid #dee2e6;
 }
@@ -11363,6 +11358,7 @@ main.container {
 
 #container-flex {
    display: flex !important;
+   flex-flow: column;
 }
 
 #nav-tabContent {
@@ -11384,15 +11380,13 @@ main.container .d-flex>aside {
 }
 
 #section[aria-expanded="true"] {
-//   border-bottom: 1px solid #dee2e6;
-   .list-group.list-group-flush {
+  .list-group.list-group-flush {
      pading: 1rem 0;
    }
 }
 
 #section[aria-expanded="false"] {
-//    border: 1px solid #dee2e6;
-    box-shadow: 0 4px 12px -2px #dee2e6, 0 -2px 4px -4px #dee2e6;
+  box-shadow: 0 4px 12px -2px #dee2e6, 0 -2px 4px -4px #dee2e6;
 }
 
 .list-group.list-group-flush {
@@ -11534,9 +11528,6 @@ aside {
     overflow: hidden;
     position: relative;
     margin-bottom: 2rem;
-    img {
-      width: 100%
-    }
   }
 }
 
@@ -11580,7 +11571,6 @@ aside {
   }
 }
 
-
 #header-login {
   display: flex;
   justify-content: space-between;
@@ -11608,8 +11598,6 @@ label {
 .login #login-form .status.message.is-shown {
    display: block;
 }
-
-
 
 #alert-info {
     color: #0c5460;
@@ -11652,8 +11640,10 @@ label {
      box-shadow: 0 0 0 0.2rem #dee2e6;
 }
 
-#filter {
-  order: -1;
+@media (min-width: 960px) {
+  #filter {
+    order: initial;
+  }
 }
 
 .inner-wrapper {
@@ -11782,5 +11772,25 @@ fieldset {
   .search-facets-lists {
     display: block !important;
   }
+  #container-flex {
+    align-items: stretch;
+    flex-flow: row wrap;
+    display: flex;
+    img {
+      width: 100%;
+    }
+  }
 }
+
+.btn-outline-primary.dropdown-toggle {
+  margin: 1rem 0 0;
+}
+
+@media (min-width: 1280px) {
+  main.container > aside, .jumbotron > .container > aside {
+    flex: 0 0 426px;
+  }
+}
+
+
 
