@@ -140,20 +140,19 @@ from six import string_types
         </article>
 	<aside>
 	  <header id="courses-list-header">
-	    <h2 id="h2">
-               Ogranizator
-            </h2>
-	  </header>
-	  <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
-                        <div class="organizer-logo">
-                            <p class="mt-2 mx-auto text-center">
-                                % if course.organizer:
-				<% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
-				<img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
-			% endif
-                            </p>
-                        </div>
-                    </div>
+                <h2 id="h2">
+                    Podgląd kursu
+                </h2>
+            </header>
+	    % if get_course_about_section(request, course, "video"):
+		<div class="embed-responsive embed-responsive-16by9">
+		  ${get_course_about_section(request, course, "video")}
+		</div>
+	    %else:
+		<div class="hero">
+		  <img src="${course_image_urls['large']}">
+		</div>
+	    % endif
 	</aside>
       </header>
 
@@ -213,7 +212,7 @@ from six import string_types
   </%block>
   <%block name="course_about_details">
     % if (course.organizer and get_course_about_section(request, course, "overview") and course.difficulty and course.course_category and course.timetable and get_course_about_section(request, course, "effort")):
-	<div id="content_course" class="border-top">
+	<div id="content" class="border-top">
         <main class="container">
 		  <article id="results">
 			<header id="courses-list-header">
@@ -227,20 +226,22 @@ from six import string_types
 		  </article>
 
           <aside id="filter" class="sidebar">
-	    <header id="courses-list-header">
-                <h2 id="h2">
-                    <span class="d-none d-md-block">Podgląd kursu</span>
-                </h2>
-            </header>
-	    % if get_course_about_section(request, course, "video"):
-		<div class="embed-responsive embed-responsive-16by9">
-		  ${get_course_about_section(request, course, "video")}
-		</div>
-	    %else:
-		<div class="hero">
-		  <img src="${course_image_urls['large']}">
-		</div>
-	    % endif
+             <header id="courses-list-header">
+	       <h2 id="h2">
+                <span class="d-none d-md-block">Ogranizator</span>
+              </h2>
+	     </header>
+	     <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+                        <div class="organizer-logo">
+                            <p class="mt-2 mx-auto text-center">
+                                % if course.organizer:
+				<% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+				<img src="/static/images/org/${course_organize}.png" height="80">
+			% endif
+                            </p>
+                        </div>
+                    </div>
+	    
 
 
             <header id="courses-list-header">
