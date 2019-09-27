@@ -126,15 +126,15 @@ from student.models import CourseEnrollment
 
 </div>
 
-<div id="content" class="border-top">
+<div id="content" class="bg-light border-top" style="padding-top: 3rem; margin-bottom: 0;">
     <main class="container">
 
       <section id="results">
-        <header>
-          <h2>Lista kursów</h2>
+        <header id="header-login">
+          <h2 id="h2">Lista kursów</h2>
         </header>
          
-          <div class="_container">
+
           % if len(course_entitlements + course_enrollments) > 0:
             <div class="row">
             <%
@@ -280,7 +280,7 @@ from student.models import CourseEnrollment
             </div>
           </div>
         % endif
-         </div>
+
       </section>
     </main>
 </div>
@@ -318,31 +318,39 @@ from student.models import CourseEnrollment
 
 <div id="unenroll-modal" class="modal unenroll-modal" aria-hidden="true">
   <div class="inner-wrapper" role="dialog" aria-labelledby="unenrollment-modal-title">
-    <button class="close-modal">
-      <span class="icon fa fa-remove" aria-hidden="true"></span>
-      <span class="sr">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Wypisz się z kursu</h5>    
+        <button class="close-modal">
+          <span aria-hidden="true">×</span>
+          <span class="sr">
         ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
         ${_("Close")}
-      </span>
-    </button>
+          </span>
+       </button>
+     </div>
 
-    <header class="unenroll-header">
-      <h6 id="unenrollment-modal-title">
-        <span id='track-info'></span>
-        <span id='refund-info'></span>
-        <span class="sr">,
-          ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
-          ${_("window open")}
-        </span>
-      </h6>
-      <hr/>
-    </header>
+           <div class="modal-body">
+                <form id="info_body">
+                    <div class="instructions">
+                        <div id="track-info">
+                            Czy na pewno chcesz się wypisać z kursu
+                            <h3 id="unenroll_course_name">${course_overview.display_name_with_default}</h3>
+                            <p>
+                                (kod kursu: <span id="unenroll_course_number">${course_overview.display_number_with_default}</span>)?
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
     <div id="unenroll_error" class="modal-form-error"></div>
     <form id="unenroll_form" method="post" data-remote="true" action="${reverse('change_enrollment')}">
       <input name="course_id" id="unenroll_course_id" type="hidden" />
       <input name="enrollment_action" type="hidden" value="unenroll" />
-      <div class="submit">
-        <input name="submit" type="submit" value="${_("Unenroll")}" />
+      <div class="modal-footer" style="padding: 1rem !important;">
+        <div class="form-actions d-flex w-100">
+          <button name="submit" type="submit" id="pwd_reset_button" class="action action-primary action-update btn btn-primary flex-grow-1 text-center">Wypisz się</button>
+        </div>
       </div>
     </form>
   </div>
