@@ -11340,12 +11340,6 @@ main.container {
   font-size: 0.875rem !important;
 }
 
-.bg-light.bg-brand.rounded.search-facets {
-  margin: 0 0 1rem 0 !important;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #dee2e6;
-}
-
 #content1 {
   background-color: #f8f9fa !important;
   border-top: 1px solid #dee2e6 !important;
@@ -11412,6 +11406,18 @@ main.container .d-flex>aside {
   background-size: cover;
   box-sizing: border-box;
   margin: 4rem 0 0;
+}
+
+.search-facets {
+  margin: 0 0 1rem 0 !important;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+@media (min-width: 960px) {
+  .search-facets {
+    border-bottom: none;
+  }
 }
 
 #entitlement-unenrollment-modal {
@@ -11792,5 +11798,7 @@ fieldset {
   }
 }
 
-
+#content {
+    padding-top: 7rem;
+}
 
