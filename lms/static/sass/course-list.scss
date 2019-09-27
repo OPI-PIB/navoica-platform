@@ -540,8 +540,8 @@ pre {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -8px;
-  margin-left: -8px;
+  margin-right: -4px;
+  margin-left: -4px;
 }
 
 .no-gutters {
@@ -4501,6 +4501,91 @@ input {
         color: rgba(0, 0, 0, 0.9);
       }
     }
+  }
+}
+
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
+
+  > {
+    hr {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .list-group {
+      &:first-child .list-group-item:first-child {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      &:last-child .list-group-item:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.card-title {
+  margin-bottom: 1rem;
+}
+
+.card-subtitle {
+  margin-top: -0.5rem;
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link {
+  &:hover {
+    text-decoration: none;
+  }
+
+  + .card-link {
+    margin-left: 1rem;
+  }
+}
+
+.card-header {
+  padding: 1rem 1rem;
+  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 0 solid rgba(0, 0, 0, 0.125);
+
+  &:first-child {
+    border-radius: calc(0 - 0) calc(0 - 0) 0 0;
+  }
+
+  + .list-group .list-group-item:first-child {
+    border-top: 0;
+  }
+}
+
+.card-footer {
+  padding: 1rem 1rem;
+  background-color: #fff;
+  border-top: 0 solid rgba(0, 0, 0, 0.125);
+
+  &:last-child {
+    border-radius: 0 0 calc(0 - 0) calc(0 - 0);
   }
 }
 
@@ -9855,7 +9940,7 @@ footer {
   }
 
   .card-text {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
   }
 
   .about-us figure img {
@@ -10159,6 +10244,58 @@ aside {
   }
 }
 
+@media (min-width: 960px) {
+  main.container {
+    align-items: stretch;
+    flex-flow: row wrap;
+
+    > {
+      aside header, section header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      aside header {
+        h2, a {
+          font-size: 0.875rem;
+          line-height: 1;
+          margin: 0;
+          text-align: left;
+        }
+      }
+
+      section header {
+        h2, a {
+          font-size: 0.875rem;
+          line-height: 1;
+          margin: 0;
+          text-align: left;
+        }
+      }
+
+      aside {
+        flex: 0 0 304px;
+        margin-right: 1rem;
+        padding-right: 1rem;
+
+        #search-facets-lists {
+          display: block !important;
+        }
+      }
+
+      section {
+        flex: 1 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  main.container > aside .search-facets-lists .list-group-item {
+    font-size: 87.5%;
+  }
+}
+
 main.container aside {
   order: -1;
 
@@ -10331,6 +10468,51 @@ main.container aside {
   width: 1px;
   word-wrap: normal;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  justify-content: flex-start;
+
+  h4 {
+    font-weight: 700;
+
+    a {
+      font-weight: 700;
+    }
+  }
+}
+
+.card-body figure + div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card {
+  .course-meta {
+    margin: 0 0 1rem;
+    min-height: 4.875em;
+
+    p {
+      margin: 0;
+
+      strong {
+        margin-right: .5em;
+
+        &::after {
+          content: ":";
+        }
+      }
+    }
+  }
+}
+
+.card-text {
+    border-top: none;
+    padding: .5rem 0;
+  }
 
 .course-details .course-details-icon {
   align-items: center;
@@ -10933,6 +11115,19 @@ article .display-3 {
 
   #login-form .form-actions button[type="submit"], #register-form .form-actions button[type="submit"] {
     flex: 1;
+  }
+}
+
+
+.card-footer {
+  border-top: none;
+  font-weight: initial;
+  margin-top: auto;
+  padding-top: .5rem;
+
+  .course-meta {
+    margin: 0;
+    min-height: auto;
   }
 }
 
@@ -11799,6 +11994,17 @@ fieldset {
 }
 
 #content {
-    padding-top: 7rem;
+  padding-top: 7rem;
+}
+
+#track-info {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    margin: 0 0 -1px;
+    padding: 1rem;
+}
+
+#border_top {
+  border-top: 1px solid #e9ecef;
 }
 

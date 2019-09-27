@@ -40,7 +40,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
 
 
-<div class="col-lg-12 mb-2">
+<div class="col-lg-3 col-md-6 mb-1">
 
     % if display_course_modes_on_dashboard:
     <%
@@ -59,8 +59,8 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
     <% mode_class = '' %>
   % endif
     <% course_target = reverse(course_home_url_name(course_overview.id), args=[unicode(course_overview.id)]) %>
-          <a href="${course_target}" class="card h-100">
-            <div class="card-body d-flex flex-column flex-sm-row">
+          <div href="${course_target}" class="card h-100">
+            <div class="card-body d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
               <figure>
                 <img src="${course_overview.image_urls['small']}" class="card-img-top">
               </figure>
@@ -68,26 +68,33 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
                 % if show_courseware_link and not is_unfulfilled_entitlement:
             % if not is_course_blocked:
-              <h4 class="card-title">${course_overview.display_name_with_default}</h4>
+              <h4 class="card-title">
+                <a href="${course_target}"> ${course_overview.display_name_with_default}</a>
+              </h4>
             % else:
-              <!--<a class="disable-look" data-course-key="${enrollment.course_id}">${course_overview.display_name_with_default}</a>-->
+              <a class="disable-look" data-course-key="${enrollment.course_id}">${course_overview.display_name_with_default}</a>
             % endif
           % else:
             <span>${course_overview.display_name_with_default}</span>
           % endif
 
-           <p class="card-text mb-0">
-              Organizator: 
-              <strong>${course_overview.display_org_with_default}</strong>
-            </p>
-            <p class="card-text mb-0">
-              Kod kursu: 
-              <strong>${course_overview.display_number_with_default}</strong>
-            </p>
-            <p class="card-text mt-2">${course_overview.short_description}</p>
-            </div>
+           <div class="course-meta">
+             <p>
+                <strong>Organizator:</strong> 
+                <span>${course_overview.display_org_with_default}</span>
+             </p>
+             <p>
+                <strong>Kod kursu:</strong> 
+                <span>${course_overview.display_number_with_default}</span>
+             </p>
+           </div> 
+           <p class="card-text" id="border_top">${course_overview.short_description}</p>
            </div>
-           <div class="card-footer small">
+          </div>
+
+
+           <div class="card-footer" id="border_top">
+             <div class="course-meta">
 
                 <%
             if course_overview.start_date_is_still_default:
@@ -115,8 +122,8 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                 % if isinstance(course_date, basestring):
                         <span class="course-card-start info-date-block">i class="icon-calendar"></i> ${container_string.format(date=course_date)}</span>
                     % elif course_date is not None:
-                        <time class="course-card-start info-date-block localized-datetime" data-language="pl" data-timezone="${user_timezone}" data-datetime="${course_date.strftime('%Y-%m-%dT%H:%M:%S%z')}" data-format=${format} data-string="${container_string}"><                        <span class="course-card-start info-date-block localized-datetime" data-language="pl" data-timezone="${user_timezone}" data-datetime="${course_date.strftime('%Y-%m-%dT%H:%M:%S%z')}" data-format=${format} data-string="${container_string}"><</span>
-</time>
+                        <strong><span class="course-card-start info-date-block localized-datetime" data-language="pl" data-timezone="${user_timezone}" data-datetime="${course_date.strftime('%Y-%m-%dT%H:%M:%S%z')}" data-format=${format} data-string="${container_string}"><                        <span class="course-card-start info-date-block localized-datetime" data-language="pl" data-timezone="${user_timezone}" data-datetime="${course_date.strftime('%Y-%m-%dT%H:%M:%S%z')}" data-format=${format} data-string="${container_string}"><</span></strong>
+</span>
                     % endif
 
                 <span class="info-date-block-container">
@@ -149,18 +156,11 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                 </div>
             % endif
 
-              <ul class="list-unstyled d-flex">
-                <li class="dropdown">
-                  <!--<a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-cog"></i>
-                  </a>-->
-
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-
                       % if can_unenroll:
                           <% course_refund_url = reverse('course_run_refund_status', args=[unicode(course_overview.id)]) %>
                               % if not is_course_blocked:
-                              <!--<a href="#unenroll-modal" id="unenroll-btn" class="dropdown-item action-unenroll" rel="leanModal"
+                              
+                              (<a href="#unenroll-modal" id="unenroll-0" rel="leanModal"
                                  data-course-id="${course_overview.id}"
                                  course-id="${course_overview.id}"
                                  data-course-number="${course_overview.number}"
@@ -171,9 +171,9 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                                  data-course-cert-name-long="${cert_name_long}"
                                  data-course-enrollment-mode="${enrollment.mode}">
                                 ${_('Unenroll')}
-                              </a>-->
+                              </a>)
                               % else:
-                              <!--<a class="dropdown-item" id="unenroll-btn"
+                              <a class="dropdown-item" id="unenroll-0"
                                  data-course-id="${course_overview.id}"
                                  data-course-number="${course_overview.number}"
                                  data-course-name="${course_overview.display_name_with_default}"
@@ -183,27 +183,24 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                                  data-course-cert-name-long="${cert_name_long}"
                                  data-course-enrollment-mode="${enrollment.mode}">
                                 ${_('Unenroll')}
-                              </a>-->
+                              </a>)
                             % endif
                     % endif
                      % if false:
                         % if show_email_settings:
                           % if not is_course_blocked:
-                            <!--<a href="#email-settings-modal" class="dropdown-item action-email-settings" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>-->
+                            <a href="#email-settings-modal" class="dropdown-item action-email-settings" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
                           % else:
-                            <!--<a class="dropdown-item action-email-settings" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>-->
+                            <a class="dropdown-item action-email-settings" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
                           % endif
                         % endif
                       % endif
-                  </div>
+ 
                 </div>
-                <!--<li class="ml-3"><a class="btn btn-primary" href="${course_target}">Wyświetl kurs</a></li>-->
-              </ul>
+
+  
            <!-- </div>-->
           </div>
-
-          <footer class="wrapper-messages-primary wrapper-course-list-item">
-    <div class="messages-list">
 
       % if entitlement and not entitlement_expired_at:
         <div class="course-entitlement-selection-container ${'' if is_unfulfilled_entitlement else 'hidden'}"></div>
@@ -235,7 +232,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
             % for program in related_programs:
             <li>
               <span class="category-icon ${program['type'].lower()}-icon" aria-hidden="true"></span>
-              <!--<span><a href="${program['detail_url']}">${u'{title} {type}'.format(title=program['title'], type=program['type'])}</a></span>-->
+              <<span><a href="${program['detail_url']}">${u'{title} {type}'.format(title=program['title'], type=program['type'])}</a></span>
             </li>
             % endfor
           </ul>
@@ -374,10 +371,9 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
           </p>
         </div>
         % endif
-    </div>
-  </footer>
 
-  </a>
+
+  </div>
 </div>
 
 <script>
