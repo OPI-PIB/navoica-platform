@@ -99,7 +99,7 @@
                             if (facet !== 'search_query') {
                                 var option = this.discovery.facetOptions.findWhere({
                                     facet: facet,
-                                    term: term
+                                    term: term.toString()
                                 });
                                 if (option) {
                                     option.set('selected', true);
