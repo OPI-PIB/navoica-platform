@@ -132,19 +132,14 @@ from third_party_auth import provider, pipeline
 
 <%include file="forgot_password_modal.html" />
 
-%if account_activation_messages:
-  <div class="activation-message-container">
-	% for account_activation_message in account_activation_messages:
-	  <div class="account-activation ${account_activation_message.tags}" role="alert" aria-label="Account Activation Message" tabindex="-1">
-		<div class="message-copy" >
-		  ${ account_activation_message | n, decode.utf8 }
-		</div>
-	  </div>
-	% endfor
-  </div>
-%endif
 
-%if banner_account_activation_message:
+
+
+
+<div id="content" class="border-top">
+  <main class="login">
+  
+  %if banner_account_activation_message:
 	<div class="dashboard-banner">
 		<div class="wrapper-msg urgency-high">
 		  <div class="msg">
@@ -161,8 +156,18 @@ from third_party_auth import provider, pipeline
 	</div>
 %endif
 
-<div id="content" class="border-top">
-  <main class="login">
+%if account_activation_messages:
+  <div class="activation-message-container">
+	% for account_activation_message in account_activation_messages:
+	  <div class="account-activation ${account_activation_message.tags}" role="alert" aria-label="Account Activation Message" tabindex="-1">
+		<div class="message-copy" >
+		  ${ account_activation_message | n, decode.utf8 }
+		</div>
+	  </div>
+	% endfor
+  </div>
+%endif
+
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <div class="d-flex">
