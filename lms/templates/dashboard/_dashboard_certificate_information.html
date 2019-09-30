@@ -43,7 +43,7 @@ else:
       </p>
     </div>
   % else:
-    <div class="message message-status ${status_css_class} is-shown">
+    <div class="card-footer message message-status ${status_css_class} is-shown">
       <p class="message-copy">${_("Your final grade:")}
         <span class="grade-value">${"{0:.0f}%".format(float(cert_status['grade'])*100)}</span>.
 
