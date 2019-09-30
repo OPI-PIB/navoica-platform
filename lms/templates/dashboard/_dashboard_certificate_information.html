@@ -32,7 +32,7 @@ else:
 
 % if cert_status['status'] != 'processing':
   % if cert_status['status'] == 'certificate_earned_but_not_available':
-    <div class="message message-status ${status_css_class} is-shown">
+    <div class="card-footer message message-status ${status_css_class} is-shown">
       <div class="course-meta">
         <%
           certificate_available_date_string = course_overview.certificate_available_date.strftime('%Y-%m-%dT%H:%M:%S%z')
@@ -73,51 +73,37 @@ else:
 
       % if cert_status['status'] == 'generating' or cert_status['status'] == 'downloadable' or cert_status['show_survey_button']:
         <div class="wrapper-message-primary">
-          <ul class="actions actions-primary">
             % if cert_status['status'] == 'generating':
-              <li class="action">
                 <span class="disabled">
                   ${_("Your {cert_name_short} is Generating").format(cert_name_short=cert_name_short)}
                 </span>
-              </li>
             % elif cert_status['status'] == 'downloadable' and cert_status.get('show_cert_web_view', False):
-              <li class="">
                 <a class="btn btn-primary" style="width: 100%; margin-top:10px" href="${cert_status['cert_web_view_url']}" target="_blank"
                    title="${_('This link will open the certificate web view')}">
                   ${_("View {cert_name_short}").format(cert_name_short=cert_name_short,)}
                 </a>
-              </li>
             % elif cert_status['status'] == 'downloadable' and enrollment.mode in CourseMode.NON_VERIFIED_MODES:
-              <li class="action action-certificate">
                 <a class="btn" href="${cert_status['download_url']}"
                    title="${_('This link will open/download a PDF document')}">
                   ${_("Download {cert_name_short} (PDF)").format(cert_name_short=cert_name_short,)}
                 </a>
-              </li>
             % elif cert_status['status'] == 'downloadable' and enrollment.mode == 'verified' and cert_status['mode'] == 'honor':
-              <li class="action">
                 <a class="btn" href="${cert_status['download_url']}"
                    title="${_('This link will open/download a PDF document')}">
                   ${_("Download Your {cert_name_short} (PDF)").format(cert_name_short=cert_name_short)}
                 </a>
-              </li>
             % elif cert_status['status'] == 'downloadable' and enrollment.mode in CourseMode.VERIFIED_MODES:
-              <li class="action">
                 <a class="btn" href="${cert_status['download_url']}"
                    title="${_('This link will open/download a PDF document of your verified {cert_name_long}.').format(cert_name_long=cert_name_long)}">
                   ${_("Download Your ID Verified {cert_name_short} (PDF)").format(cert_name_short=cert_name_short)}
                 </a>
-              </li>
             % endif
 
             % if cert_status['show_survey_button']:
-              <li class="action">
                 <a class="cta" href="${cert_status['survey_url']}">
                   ${_("Complete our course feedback survey")}
                 </a>
-              </li>
             % endif
-          </ul>
         </div>
 
         % if cert_status['status'] == 'downloadable' and cert_status['linked_in_url']:
