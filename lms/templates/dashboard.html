@@ -321,7 +321,7 @@ from student.models import CourseEnrollment
 <div id="unenroll-modal" class="modal unenroll-modal" aria-hidden="true">
   <div class="inner-wrapper" role="dialog" aria-labelledby="unenrollment-modal-title">
     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Wypisz się z kursu</h5>    
+      <h5 class="modal-title" id="exampleModalLabel">Wypisz się z kursu</h5>
         <button class="close-modal">
           <span aria-hidden="true">×</span>
           <span class="sr">
@@ -336,9 +336,9 @@ from student.models import CourseEnrollment
                     <div class="instructions">
                         <div id="track-info">
                             Czy na pewno chcesz się wypisać z kursu
-                            <h3 id="unenroll_course_name">${course_overview.display_name_with_default}</h3>
+                            <h3 id="unenroll_course_name"></h3>
                             <p>
-                                (kod kursu: <span id="unenroll_course_number">${course_overview.display_number_with_default}</span>)?
+                                (kod kursu: <span id="unenroll_course_number"></span>)?
                             </p>
                         </div>
                     </div>
