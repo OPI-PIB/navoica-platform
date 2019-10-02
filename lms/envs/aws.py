@@ -167,18 +167,7 @@ SESSION_SAVE_EVERY_REQUEST = ENV_TOKENS.get('SESSION_SAVE_EVERY_REQUEST', SESSIO
 AWS_SES_REGION_NAME = ENV_TOKENS.get('AWS_SES_REGION_NAME', 'us-east-1')
 AWS_SES_REGION_ENDPOINT = ENV_TOKENS.get('AWS_SES_REGION_ENDPOINT', 'email.us-east-1.amazonaws.com')
 
-REGISTRATION_EXTRA_FIELDS = {
-    'confirm_email': 'hidden',
-    'level_of_education': 'optional',
-    'gender': 'optional',
-    'year_of_birth': 'optional',
-    'mailing_address': 'hidden',
-    'goals': 'hidden',
-    'honor_code': 'required',
-    'terms_of_service': 'hidden',
-    'city': 'hidden',
-    'country': 'optional',
-}
+#REGISTRATION_EXTRA_FIELDS = ENV_TOKENS.get('REGISTRATION_EXTRA_FIELDS', REGISTRATION_EXTRA_FIELDS)
 REGISTRATION_EXTENSION_FORM = ENV_TOKENS.get('REGISTRATION_EXTENSION_FORM', REGISTRATION_EXTENSION_FORM)
 REGISTRATION_EMAIL_PATTERNS_ALLOWED = ENV_TOKENS.get('REGISTRATION_EMAIL_PATTERNS_ALLOWED')
 REGISTRATION_FIELD_ORDER = ENV_TOKENS.get('REGISTRATION_FIELD_ORDER', REGISTRATION_FIELD_ORDER)
