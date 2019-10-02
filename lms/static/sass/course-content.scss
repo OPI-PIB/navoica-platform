@@ -9524,9 +9524,9 @@ article .display-3::before {
 
 .sidebar .sequence-nav nav {
   margin-top: 0;
-  overflow: hidden;
+  overflow: visible;
   padding-left: 0;
-  position: absolute;
+  position: static;
   top: auto;
 }
 
