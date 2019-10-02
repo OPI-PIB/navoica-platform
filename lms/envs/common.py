@@ -413,7 +413,7 @@ FEATURES = {
     'UNSUPPORTED_BROWSER_ALERT_VERSIONS': "{e:0,f:-3,o:0,s:-3,c:-3,i:20}",
 }
 
-COURSE_DISCOVERY_FILTERS = ['course_category', 'organizer', 'modes', 'difficulty']
+COURSE_DISCOVERY_FILTERS = ['course_category', 'organizer', 'difficulty']
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
 COURSE_REVIEWS_TOOL_PROVIDER_FRAGMENT_NAME = 'coursetalk-reviews-fragment.html'
