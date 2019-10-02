@@ -231,24 +231,25 @@ from student.models import UserProfile
         </div>
     </div>
 
+% if settings.REGISTRATION_EXTRA_FIELDS['goals'] != 'hidden':
+	<div class="group group-form group-form-personalinformation2">
+		<div class="list-input">
+			% if settings.REGISTRATION_EXTRA_FIELDS['mailing_address'] != 'hidden':
+			<div class="field ${settings.REGISTRATION_EXTRA_FIELDS['mailing_address']} text" id="field-address-mailing">
+				<label for="address-mailing">${_("Mailing Address")}</label>
+				<textarea id="address-mailing" name="mailing_address" value="" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['mailing_address'] == 'required' else ''}></textarea>
+			</div>
+			% endif
 
-<div class="group group-form group-form-personalinformation2">
-    <div class="list-input">
-        % if settings.REGISTRATION_EXTRA_FIELDS['mailing_address'] != 'hidden':
-        <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['mailing_address']} text" id="field-address-mailing">
-            <label for="address-mailing">${_("Mailing Address")}</label>
-            <textarea id="address-mailing" name="mailing_address" value="" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['mailing_address'] == 'required' else ''}></textarea>
-        </div>
-        % endif
-
-        % if settings.REGISTRATION_EXTRA_FIELDS['goals'] != 'hidden':
-        <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['goals']} text" id="field-goals">
-            <label for="goals">${_("Please share with us your reasons for registering with {platform_name}").format(platform_name=platform_name)}</label>
-            <textarea class="form-control" id="goals" name="goals" value="" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['goals'] == 'required' else ''}></textarea>
-        </div>
-        % endif
-    </div>
-</div>
+			% if settings.REGISTRATION_EXTRA_FIELDS['goals'] != 'hidden':
+			<div class="field ${settings.REGISTRATION_EXTRA_FIELDS['goals']} text" id="field-goals">
+				<label for="goals">${_("Please share with us your reasons for registering with {platform_name}").format(platform_name=platform_name)}</label>
+				<textarea class="form-control" id="goals" name="goals" value="" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['goals'] == 'required' else ''}></textarea>
+			</div>
+			% endif
+		</div>
+	</div>
+% endif
 
 <div class="group group-form group-form-accountacknowledgements">
     <h2 class="sr">${_("Account Acknowledgements")}</h2>
