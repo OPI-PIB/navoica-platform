@@ -170,7 +170,7 @@ from student.models import UserProfile
         </div>
         % endif
         % if settings.REGISTRATION_EXTRA_FIELDS['country'] != 'hidden':
-        <div class="field-group form-group-${settings.REGISTRATION_EXTRA_FIELDS['country']}">
+        <div class="field-group form-group form-group-${settings.REGISTRATION_EXTRA_FIELDS['country']}">
             <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['country']} select" id="field-country">
                 <label for="country">${_("Country")}</label>
                 <select class="custom-select ${settings.REGISTRATION_EXTRA_FIELDS['country']}" id="country" name="country" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['country'] == 'required' else ''}>
