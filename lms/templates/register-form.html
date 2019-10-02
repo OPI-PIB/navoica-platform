@@ -217,7 +217,7 @@ from student.models import UserProfile
                 <div class="field-group field-yob form-group form-group-${settings.REGISTRATION_EXTRA_FIELDS['year_of_birth']}">
                     <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['year_of_birth']} select" id="field-yob">
                         <label for="yob">${_("Year of Birth")}</label>
-                        <select class="custom-select" id="yob" name="year_of_birth" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['year_of_birth'] == 'required' else ''}>
+                        <select class="form-control" id="yob" name="year_of_birth" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['year_of_birth'] == 'required' else ''}>
                         <option value="">--</option>
                         %for year in UserProfile.VALID_YEARS:
                         <option value="${year}">${year}</option>
