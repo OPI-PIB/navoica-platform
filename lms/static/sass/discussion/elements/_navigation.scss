@@ -197,7 +197,7 @@
     color: $forum-color-response-count;
     font-size: $forum-small-font-size;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
     text-overflow: ellipsis;
 
     @include rtl {
