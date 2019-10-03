@@ -10,6 +10,7 @@ from django.conf import settings
 from django.utils.translation import ugettext as _
 from django.template.defaultfilters import escapejs
 from django.urls import reverse
+from courseware.courses import get_course_about_section
 
 from django_comment_client.permissions import has_permission
 from openedx.core.djangolib.js_utils import dump_js_escaped_json, js_escaped_string
@@ -24,8 +25,41 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
 </%block>
 
 <%block name="content">
+
+<header>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="d-flex">
+        <article>
+          <h1 class="display-2">${course.display_name_with_default}</h1>
+          <p class="lead mt-3">Kod kursu: <strong>${course.display_org_with_default} ${course.display_number_with_default}</strong></p>
+          <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
+     </article>
+  <aside>
+    <header>
+	  <h2>Ogranizator</h2>
+	</header>
+	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+           <div class="organizer-logo">
+              <p class="mt-2 mx-auto text-center">
+                % if course.organizer:
+                  <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+                    <img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
+                % endif
+              </p>
+            </div>
+          </div>
+	</aside>
+
+    </div>
+  </div>
+</header>
+
+
 <div class="border-top" id="content">
+
   <main class="container">
+
    <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
       <div class="d-flex">
@@ -85,7 +119,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                     </a>
                 % endif
             </div>
-    
+
        <section class="faq">
             % if course_home_message_fragment:
                 ${HTML(course_home_message_fragment.body_html())}
@@ -139,16 +173,16 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                     <ul class="course-details list-group list-group-flush mb-3">
                         % for course_tool in course_tools:
                             <li class="list-group-item">
-                              <div class="course-details-icon">  
+                              <div class="course-details-icon">
                                 <i class="icon ${course_tool.icon_classes()}"></i>
                               </div>
-                                <div class="course-details-content">  
+                                <div class="course-details-content">
                                   <a href="${course_tool.url(course_key)}">${course_tool.title()}</a>
-                                </div>  
+                                </div>
                             </li>
                         % endfor
                     </ul>
-   
+
             % endif
             % if upgrade_url and upgrade_price:
                 <div class="section section-upgrade course-home-sidebar-upgrade">

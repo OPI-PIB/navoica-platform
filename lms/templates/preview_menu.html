@@ -19,7 +19,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
   <script src="${static.url('js/course_info.js')}">
 </script>
 
-        % if course:
+% if show_preview_menu:
     <%
     def selected(is_selected):
       return "selected" if is_selected else ""
@@ -40,7 +40,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
           <h1 class="display-2">${course.display_name_with_default}</h1>
           <p class="lead mt-3">Kod kursu: <strong>${course.display_org_with_default} ${course.display_number_with_default}</strong></p>
           <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
-        % if show_preview_menu:
+
         <div class="wrapper-preview-menu">
           <div class="preview-menu">
            <div class="action-preview">
@@ -79,7 +79,6 @@ show_preview_menu = course and staff_access and supports_preview_menu
 	    % endif
 	  </div>
 	</div>
-            % endif
      </article>
 
   <aside>
@@ -102,7 +101,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
   </div>
 </header>
 
- % if show_preview_menu:
+
     <%
     preview_options = {
         "courseId": course.id,
@@ -114,6 +113,4 @@ show_preview_menu = course and staff_access and supports_preview_menu
     <%static:require_module_async module_name="lms/js/preview/preview_factory" class_name="PreviewFactory">
         PreviewFactory(${preview_options | n, dump_js_escaped_json});
     </%static:require_module_async>
-
-% endif
 % endif
