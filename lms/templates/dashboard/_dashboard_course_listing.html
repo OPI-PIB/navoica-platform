@@ -80,14 +80,14 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
            <div class="course-meta">
              <p>
-                <strong>Organizator:</strong> 
+                <strong>Organizator:</strong>
                 <span>${course_overview.display_org_with_default}</span>
              </p>
              <p>
-                <strong>Kod kursu:</strong> 
+                <strong>Kod kursu:</strong>
                 <span>${course_overview.display_number_with_default}</span>
              </p>
-           </div> 
+           </div>
            <p class="card-text" id="border_top">${course_overview.short_description}</p>
            </div>
           </div>
@@ -159,8 +159,8 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                       % if can_unenroll:
                           <% course_refund_url = reverse('course_run_refund_status', args=[unicode(course_overview.id)]) %>
                               % if not is_course_blocked:
-                              
-                              (<a href="#unenroll-modal" id="unenroll-0" rel="leanModal"
+
+                              (<a href="#unenroll-modal" id="unenroll-0" class="action-unenroll" rel="leanModal"
                                  data-course-id="${course_overview.id}"
                                  course-id="${course_overview.id}"
                                  data-course-number="${course_overview.number}"
@@ -173,7 +173,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                                 ${_('Unenroll')}
                               </a>)
                               % else:
-                              <a class="dropdown-item" id="unenroll-0"
+                              <a class="dropdown-item action-unenroll"  id="unenroll-0"
                                  data-course-id="${course_overview.id}"
                                  data-course-number="${course_overview.number}"
                                  data-course-name="${course_overview.display_name_with_default}"
@@ -195,10 +195,10 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                           % endif
                         % endif
                       % endif
- 
+
                 </div>
 
-  
+
            <!-- </div>-->
           </div>
 
