@@ -136,27 +136,6 @@ from six import string_types
 		  %else:
 			<a href="${reg_href}" class="btn btn-lg btn-primary btn-icon ${href_class}">Weź udział w kursie</a>
 		  % endif
-          </div>
-        </article>
-	<aside>
-	  <header id="courses-list-header">
-                <h2 id="h2">
-                    Wizytówka kursu
-                </h2>
-            </header>
-	    % if get_course_about_section(request, course, "video"):
-		<div class="embed-responsive embed-responsive-16by9">
-		  ${get_course_about_section(request, course, "video")}
-		</div>
-	    %else:
-		<div class="hero">
-		  <img src="${course_image_urls['large']}">
-		</div>
-	    % endif
-	</aside>
-      </header>
-
-
 %if user.is_authenticated() and registered:
 
 %elif in_cart:
@@ -208,6 +187,29 @@ from six import string_types
   </a>-->
   <div id="register_error"></div>
 %endif
+</div>
+
+        </article>
+	<aside>
+	  <header id="courses-list-header">
+                <h2 id="h2">
+                    Wizytówka kursu
+                </h2>
+            </header>
+	    % if get_course_about_section(request, course, "video"):
+		<div class="embed-responsive embed-responsive-16by9">
+		  ${get_course_about_section(request, course, "video")}
+		</div>
+	    %else:
+		<div class="hero">
+		  <img src="${course_image_urls['large']}">
+		</div>
+	    % endif
+	</aside>
+      </header>
+
+
+
 
   </%block>
   <%block name="course_about_details">
