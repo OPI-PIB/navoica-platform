@@ -48,7 +48,7 @@
                 } else if (this.requiresParentalConsent) {
                     this._super(
                         HtmlUtils.interpolateHtml(
-                            gettext('You must be over 13 to share a full profile. If you are over 13, make sure that you have specified a birth year on the {account_settings_page_link}'),  // eslint-disable-line max-len
+                            gettext('<br>' 'You must be over 13 to share a full profile. If you are over 13, make sure that you have specified a birth year on the {account_settings_page_link}'),  // eslint-disable-line max-len
                             {account_settings_page_link: accountSettingsLink}
                         )
                     );

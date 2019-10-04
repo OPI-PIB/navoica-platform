@@ -21,21 +21,35 @@ from openedx.core.djangolib.markup import HTML
 <%static:css group='style-course'/>
 </%block>
 
+
+<div id="content" class="border-top">
+    <main class="container">
+
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+                <div class="d-flex">
+                    <article id="results">
+                    % if own_profile:
+                    <header>
+                      <h2>
+                        <span class="d-none d-md-block">Mój profil</span>
+                      </h2>
+                    </header>
+                    <h1>
+                      <strong>Uzupełnij profil,</strong> <br>
+                      aby stworzyć swoją wizytówkę na platformie Navoica.pl.
+                    </h1>
+                    % endif
+
+
 <div class="message-banner" aria-live="polite"></div>
-<main id="main" aria-label="Content" tabindex="-1">
     <div class="wrapper-profile">
         <div class="profile ${'profile-self' if own_profile else 'profile-other'}">
             <div class="wrapper-profile-field-account-privacy"></div>
-            % if own_profile:
-                <div class="profile-header">
-                    <div class="header">${_("My Profile")}</div>
-                    <div class="subheader">
-                        ${_('Build out your profile to personalize your identity on {platform_name}.').format(
-                            platform_name=platform_name,
-                        )}
-                    </div>
-                </div>
-            % endif
+
+
+            
             <div class="wrapper-profile-sections account-settings-container">
                 <div class="ui-loading-indicator">
                     <p><span class="spin"><span class="icon fa fa-refresh" aria-hidden="true"></span></span> <span class="copy">${_("Loading")}</span></p>
@@ -61,7 +75,13 @@ from openedx.core.djangolib.markup import HTML
             </div>
         </div>
     </div>
+
+</article>
+</div>
+</div>
+</div>
 </main>
+</div>
 
 <%block name="js_extra">
 <%static:require_module module_name="learner_profile/js/learner_profile_factory" class_name="LearnerProfileFactory">
