@@ -958,7 +958,7 @@ STATICFILES_DIRS = [
     NODE_MODULES_ROOT / "@edx",
 ]
 
-FAVICON_PATH = 'images/favicon.polskimooc.png'
+FAVICON_PATH = 'images/favicon.ico'
 DEFAULT_COURSE_ABOUT_IMAGE_URL = 'images/pencils.jpg'
 
 # User-uploaded content

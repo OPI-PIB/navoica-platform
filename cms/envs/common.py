@@ -668,6 +668,8 @@ USE_L10N = True
 
 STATICI18N_ROOT = PROJECT_ROOT / "static"
 
+FAVICON_PATH = 'images/favicon.ico'
+
 # Localization strings (e.g. django.po) are under these directories
 LOCALE_PATHS = _make_locale_paths
 derived('LOCALE_PATHS')
