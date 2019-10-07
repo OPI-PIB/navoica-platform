@@ -72,6 +72,7 @@
 
             render: function() {
                 var grouped = this.collection.groupBy('facet');
+                console.log(grouped);
                 var htmlSnippet = HtmlUtils.joinHtml.apply(
                 this, _.map(grouped, function(options, facetKey) {
                     if (options.length > 0) {

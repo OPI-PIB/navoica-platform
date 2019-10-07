@@ -41,5 +41,3 @@ EMAIL_HOST_PASSWORD = 'SG.0M77nEwjQNCIzwn75JHJTQ.Uc-gkaplC8La9CW1EZaWohJS3X6TcmZ
 DEFAULT_FROM_EMAIL = 'registration@navoica.pl'
 DEFAULT_FEEDBACK_EMAIL = 'feedback@navoica.pl'
 SERVER_EMAIL = 'devops@navoica.pl'
-
-COURSE_DISCOVERY_FACETS = ['difficulty', 'availability', 'status', 'key']
