@@ -38,10 +38,8 @@ TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'pl'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST = 'mailer1.opi.org.pl'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
 
 DEFAULT_FROM_EMAIL = 'registration@draft.navoica.pl'
 DEFAULT_FEEDBACK_EMAIL = 'feedback@draft.navoica.pl'
