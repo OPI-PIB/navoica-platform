@@ -439,9 +439,10 @@ class SequenceModule(SequenceFields, ProctoringFields, XModule):
         for item in display_items:
             # NOTE (CCB): This seems like a hack, but I don't see a better method of determining the type/category.
             item_type = item.get_icon_class()
-            k = str(item.children[0])
-            if k.find('drag-and-drop-v2')!=-1:
-				item_type = 'problem'
+            if item.children:
+                k = str(item.children[0])
+                if k.find('drag-and-drop-v2')!=-1:
+                    item_type = 'problem'
             usage_id = item.scope_ids.usage_id
 
             if item_type == 'problem' and not is_user_authenticated:
