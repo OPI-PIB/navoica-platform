@@ -2,47 +2,59 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 
-<%block name="pagetitle">${_("Contact")}</%block>
+<div id="content" class="border-top">
+    <main class="container">
 
-<main id="main" aria-label="Content" tabindex="-1">
-    <section class="container about">
-        <h1>
-            <%block name="pageheader">${page_header or _("Contact")}</%block>
-        </h1>
-        <p>
-            <%block name="pagecontent"><p style="margin-bottom:0cm"><span style="line-height:100%"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"><b>Navoica.pl &ndash; Platforma kształcenia na odległość Ministerstwa Nauki i Szkolnictwa Wyższego</b></font></font></font></span></p>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
-<p style="margin-bottom:0cm"><span style="line-height:100%"></span></p>
+                <div class="d-flex">
+                    <article id="results">
+                        <header>
+                            <h2>
+                                <span class="d-none d-md-block">Kontakt</span>
+                            </h2>
+                        </header>
 
-<p style="margin-bottom:0cm"><span style="line-height:100%"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt">Adres korespondencyjny:</font></font></font></span></p>
+                        <h1>
+                            <strong>Navoica.pl</strong>
+                            <br>
+                            Platforma kształcenia na odległość Ministerstwa Nauki i Szkolnictwa Wyższego.
+                        </h1>
 
-<p style="margin-bottom:0cm"><span style="line-height:100%"></span></p>
 
-<p style="margin-bottom:0cm"><span style="line-height:100%"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt">
-Fundacja Młodej Nauki<br/>
-ul. Uniwersytecka 5 lok. 12<br/>
-02-036 Warszawa
-</font></font></font></span></p>
+                        <address>
+                            <h4>Adres korespondencyjny:</h4>
+                            <p>
+                                Fundacja Młodej Nauki<br>
+                                ul. Uniwersytecka 5 lok. 12<br>
+                                02-036 Warszawa
+                            </p>
+                            <p>
+                                <strong>Tel.</strong>: +48 22 234 42 53<br>
+                                <strong>KRS</strong>: 0000492014<br>
+                                <strong>NIP</strong>: 5213664198<br>
+                                <strong>REGON</strong>: 147051213
+                            </p>
+                        </address>
 
-<p style="margin-bottom:0cm"><span style="line-height:100%"></span></p>
+                        <div>
+                            <h4>Operator merytoryczny</h4>
+                            <p>Fundacja Młodej Nauki</p>
+                            <p>Kontakt w sprawach ogólnych, pytania, współpraca, media: <a href="mailto:fmn@fmn.org.pl">fmn@fmn.org.pl</a></p>
 
-<p style="margin-bottom:0cm"><span style="line-height:100%"> <font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt">Tel. +48 22 234 42 53<br/>
-KRS: 0000492014<br/>
-NIP: 5213664198<br/>
-REGON: 147051213</font></font></font></span></p>
+                            <h4>Operator techniczny</h4>
+                            <p>Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy</p>
+                            <p>Pomoc techniczna, problemy, uwagi techniczne: <a href="mooc_help@opi.org.pl">mooc_help@opi.org.pl</a></p>
+                        </div>
 
-<p style="margin-bottom:0cm"><span style="line-height:100%"></span></p>
+                    </article>
 
-<p style="margin-bottom:0cm"><span style="line-height:100%"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"><b>Operator merytoryczny:</b></font></font></font><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"> Fundacja Młodej Nauki</font></font></font></span></p>
+                </div>
 
-<p style="margin:0px"><span style="line-height:100%"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt">Kontakt w sprawach og&oacute;lnych, pytania, wsp&oacute;łpraca, media: </font></font></font><a href="mailto:fmn@fmn.org.pl"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"><b>fmn@fmn.org.pl</b></font></font></font></a></span></p>
+            </div>
 
-<p style="margin-bottom:0cm"><span style="line-height:100%"></span></p>
+        </div>
 
-<p style="margin-bottom:0cm"><span style="line-height:100%"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"><b>Operator techniczny:</b></font></font></font><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"> Ośrodek Przetwarzania Informacji &ndash; Państwowy Instytut Badawczy</font></font></font></span></p>
-
-<p style="margin:0px"><span style="line-height:100%"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt">Pomoc techniczna, problemy, uwagi techniczne: </font></font></font><a href="mailto:mooc_help@opi.org.pl"><font face="Times New Roman, serif"><font size="3"><font style="font-size: 12pt"><b>mooc_help@opi.org.pl</b></font></font></font></a></span></p>
-</%block>
-        </p>
-    </section>
-</main>
+    </main>
+</div>
