@@ -12434,3 +12434,11 @@ fieldset {
   font-weight: 600;
 }
 
+#contact h4::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: darkcyan;
+    margin-bottom: 8px;
+}
