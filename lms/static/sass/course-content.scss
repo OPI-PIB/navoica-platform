@@ -13,7 +13,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #d0353f;
+  --primary: #E41D37;
   --secondary: #adb5bd;
   --success: #28a745;
   --info: #17a2b8;
@@ -2067,8 +2067,8 @@ fieldset:disabled a.btn {
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #D0353F;
-  border-color: #D0353F;
+  background-color: #E41D37;
+  border-color: #E41D37;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
@@ -2322,14 +2322,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #D0353F;
-  border-color: #D0353F;
+  color: #E41D37;
+  border-color: #E41D37;
 }
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #D0353F;
-  border-color: #D0353F;
+  background-color: #E41D37;
+  border-color: #E41D37;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
@@ -9694,4 +9694,52 @@ article .display-3::before {
 }
 .video-js{
   width: 100% !important;
+}
+
+.bookmark-button {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+  color: #E41D37;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.7143;
+}  
+
+.bookmark-button:hover, .bookmark-button:active, .bookmark-button:focus {
+  color: #E41D37;
+  background: #f8f9fa !important;
+  border-color: #dee2e6 !important; 
+  text-decoration: none !important;
+}
+
+.problem-action-btn {
+  margin-right: 0 !important;
+  max-width: unset !important;
+}
+
+.submission-feedback {
+  margin: 0 !important;
+  color: initial !important;
+}
+
+.submit-attempt-container {
+  padding: 0 !important;
+}
+
+#content .vert .notification {
+  float: unset;
+  border-top: none;
+  margin-top: unset;
+  line-height: unset;
+  .icon {
+    top: unset;
+  }
+  .fa-info-circle {
+    color: #f8f9fa;
+    top: unset;
+  }
+  .fa-save, .fa-exclamation-circle {
+    color: initial;
+    width: auto;
+   }
 }
