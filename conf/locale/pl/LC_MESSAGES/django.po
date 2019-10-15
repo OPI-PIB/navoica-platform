@@ -24455,7 +24455,11 @@ msgstr[1] "{num} znaków"
 msgstr[2] "{num} znaków"
 msgstr[3] "{num} znaków"
 
-
+#. Translators: This message is shown to users who enter a password matching
+#. the username they enter(ed).
+#: common/djangoapps/util/password_policy_validators.py
+msgid "Password cannot be the same as the username."
+msgstr "Hasło nie może być takie samo jak nazwa użytkownika"
 
 
 #: default_data.py
