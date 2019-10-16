@@ -12442,3 +12442,24 @@ fieldset {
     background: darkcyan;
     margin-bottom: 8px;
 }
+
+.dashboard-banner {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  .wrapper-msg {
+    color: #770f1d;
+    padding: 1rem;
+    background-color: #fad2d7;
+    border: 1px solid #f7c0c7;
+    .title {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .copy {
+      font-size: .8750rem;
+      p {
+        margin: 0rem;
+      }
+    }
+  }
+}
