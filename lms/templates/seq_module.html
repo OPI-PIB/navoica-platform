@@ -82,14 +82,16 @@
             </section>
 
             <div>
-                <button class="btn btn-sm btn-outline-primary sequence-nav-button button-previous">
-                    <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
-                    <span class="sequence-nav-button-label">${_('Previous')}</span>
-                </button>
-                <button class="btn btn-sm btn-outline-primary sequence-nav-button button-next">
-                    <span class="sequence-nav-button-label">${_('Next')}</span>
-                    <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
-                </button>
+				<nav class="sequence-bottom" aria-label="${_('Section')}">
+					<button class="btn btn-sm btn-outline-primary sequence-nav-button button-previous">
+						<span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+						<span class="sequence-nav-button-label">${_('Previous')}</span>
+					</button>
+					<button class="btn btn-sm btn-outline-primary sequence-nav-button button-next">
+						<span class="sequence-nav-button-label">${_('Next')}</span>
+						<span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+					</button>
+				</nav>
             </div>
 
         </article>
