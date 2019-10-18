@@ -13,6 +13,8 @@ from django.core.urlresolvers import reverse
 from django_comment_client.permissions import has_permission
 from openedx.core.djangolib.js_utils import dump_js_escaped_json, js_escaped_string
 from openedx.core.djangolib.markup import HTML
+
+from openedx.features.course_experience import course_home_page_title, COURSE_OUTLINE_PAGE_FLAG
 %>
 
 <section class="discussion discussion-board page-content-container" id="discussion-container"
@@ -39,6 +41,23 @@ from openedx.core.djangolib.markup import HTML
             % endif
             ## Search box
             <div class="forum-search"></div>
+        </div>
+    </header>
+    <header class="page-header has-secondary">
+        <div class="page-header-main">
+            <nav aria-label="${_('Course')}" class="sr-is-focusable" tabindex="-1">
+                <div class="has-breadcrumbs">
+                    <div class="breadcrumbs">
+                        % if COURSE_OUTLINE_PAGE_FLAG.is_enabled(course.id):
+                            <span class="nav-item nav-item-course breadcrumb-item">
+                                <a href="127.0.0.1:18000">aasdasds</a>
+                            </span>
+                            /
+                        % endif
+                        
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
     <div class="page-content"

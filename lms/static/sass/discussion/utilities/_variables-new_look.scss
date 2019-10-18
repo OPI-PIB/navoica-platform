@@ -1,0 +1,162 @@
+// Variables
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+// Color system
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+$grays: () !default;
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+$red: #D0353F !default;
+$primary: $red !default;
+$secondary: $gray-500 !default;
+$light: $gray-100 !default;
+// Set a specific jump point for requesting color jumps
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+// Options
+// Quickly modify global styling by enabling or disabling optional features.
+// Spacing
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 0.5),
+    2: ($spacer * 1.0),
+    3: ($spacer * 1.5),
+    4: ($spacer * 2.0),
+    5: ($spacer * 2.5)
+  ),
+  $spacers
+);
+// This variable affects the `.h-*` and `.w-*` classes.
+// Body
+// Settings for the `<body>` element.
+// Links
+// Style anchor elements.
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+// Paragraphs
+// Style p element.
+// Grid breakpoints
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  xs: 0, // -480 phone portrait
+  sm: 480px, // 480-960 phone landscape
+  md: 960px, // 960-1280 tablet portrait
+  lg: 1280px // 1280- tablet landscape
+) !default;
+// Grid containers
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  md: 960px, // tablet landscape
+  lg: 1280px // desktop
+) !default;
+// Grid columns
+// Set the number of columns and specify the width of the gutters.
+$grid-gutter-width: 16px !default;
+// Components
+// Define common padding and border radius sizes and more.
+$line-height-lg: 1.6;
+$line-height-sm: 1.7143;
+$border-radius: 0 !default;
+$border-radius-lg: 0 !default;
+$border-radius-sm: 0 !default;
+$component-border-radius: 0 !default;
+// Typography
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.125 !default;
+$font-size-md: $font-size-base * .875 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-semibold: 600;
+$font-weight-bold: 700 !default;
+$font-weight-extrabold: 800;
+$line-height-base: 1.625 !default;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.125;
+$h5-font-size: $font-size-base * 1;
+$h6-font-size: $font-size-base * 0.875;
+$display1-size: 2.500*$font-size-base;
+$display2-size: 2.000*$font-size-base;
+$display3-size: 1.375*$font-size-base;
+$display4-size: 1.125*$font-size-base;
+$display1-sm-size: 3.000*$font-size-base;
+$display2-sm-size: 2.250*$font-size-base;
+$display3-sm-size: 1.500*$font-size-base;
+$display4-sm-size: 1.250*$font-size-base;
+$display1-md-size: 4.000*$font-size-base;
+$display2-md-size: 2.250*$font-size-base;
+$display3-md-size: 1.750*$font-size-base;
+$display4-md-size: 1.250*$font-size-base;
+$display2-weight: $font-weight-semibold;
+$display3-weight: $font-weight-semibold;
+$display4-weight: $font-weight-normal;
+$lead-font-size: $font-size-base * 1.625 !default;
+$lead-font-weight: 400 !default;
+$small-font-size: 87.5% !default;
+$hr-border-color: rgba($black, .5) !default;
+// Tables
+// Buttons + Forms
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+$input-btn-focus-width:    .2rem !default;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $gray-300 !default;
+// Buttons
+// For each of Bootstrap's buttons, define text, background, and border color.
+$btn-font-weight: $font-weight-semibold;
+// Forms
+$input-color: $gray-900 !default;
+$custom-control-indicator-checked-color:  $gray-600 !default;
+$custom-control-indicator-checked-bg: $white;
+$custom-control-indicator-checked-border-color: $gray-600 !default;
+
+// Jumbotron
+$jumbotron-padding: 4rem !default;
+$jumbotron-padding-y: 4 * $font-size-base !default;
+$jumbotron-padding-x: .5 * $font-size-base !default;
+$jumbotron-bg: $light;
+
+// Cards
+$card-spacer-y: $font-size-base;
+$card-spacer-x: $font-size-base;
+$card-border-width: 0;
+$card-border: 1px solid map_get($grays, "300");
+$card-cap-bg: $white;
+
+// List group
+$list-group-item-padding-y:  .5rem !default;
+$list-group-item-padding-x:  .5rem !default;
+
+// Breadcrumbs
+$breadcrumb-bg:   transparent;
+
+// @import "bootstrap/scss/bootstrap";
