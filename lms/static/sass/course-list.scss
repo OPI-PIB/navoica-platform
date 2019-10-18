@@ -4754,12 +4754,6 @@ input {
   border-radius: calc(0 - 0);
 }
 
-.card-img-top {
-  width: 100%;
-  border-top-left-radius: calc(0 - 0);
-  border-top-right-radius: calc(0 - 0);
-}
-
 .card-img-bottom {
   width: 100%;
   border-bottom-right-radius: calc(0 - 0);
@@ -7109,6 +7103,9 @@ button.bg-dark {
   padding-top: 100%;
 }
 
+.embed-responsive .card-img-top {
+    object-fit: cover;
+}
 .flex-row {
   flex-direction: row !important;
 }
@@ -11158,8 +11155,25 @@ p.lead.text-center.my-3 {
     line-height: 1.25;
 }
 
+/* Equal-height card images, cf. https://stackoverflow.com/a/47698201/1375163*/
+.card-img-top {
+    /*height: 11vw;*/
+    width: 100%;
+    border-top-left-radius: calc(0 - 0);
+    border-top-right-radius: calc(0 - 0);
+    height: 11rem;
+    object-fit: cover;
+}
+
+@media (max-width: 1280px) {
+   .card-img-top {
+     height: auto;
+   }
+}
+
+
 @media (min-width: 1280px) {
-  img.card-img-top {
+    .card-img-top {
       max-height: 214px !important;
   }
 }
@@ -11201,12 +11215,6 @@ input.form-control.form-control {
 
 button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-button.selected {
     color: #E41D37;
-}
-
-@media (min-width: 480px) {
-   .card-img-top {
-     height: auto;
-   }
 }
 
 .search-facets-lists {
