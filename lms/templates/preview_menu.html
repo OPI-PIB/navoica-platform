@@ -32,12 +32,15 @@ show_preview_menu = course and staff_access and supports_preview_menu
     student_selected = selected(not staff_selected and not specific_student_selected and not masquerade_group_id)
     %>
 
+
+
 <header class="bg-light">
   <div class="jumbotron">
     <div class="container">
       <div class="d-flex">
         <article>
-          <h1 class="display-2">${course.display_name_with_default}</h1>
+
+          <h1 class="display-2">${course.display_name_with_default} ${supports_preview_menu}</h1>
           <p class="lead mt-3">Kod kursu: <strong>${course.display_org_with_default} ${course.display_number_with_default}</strong></p>
           <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
 
@@ -113,4 +116,38 @@ show_preview_menu = course and staff_access and supports_preview_menu
     <%static:require_module_async module_name="lms/js/preview/preview_factory" class_name="PreviewFactory">
         PreviewFactory(${preview_options | n, dump_js_escaped_json});
     </%static:require_module_async>
+
+% else:
+
+% if course:
+<header>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="d-flex">
+        <article>
+          <h1 class="display-2">${course.display_name_with_default}</h1>
+          <p class="lead mt-3">Kod kursu: <strong>${course.display_org_with_default} ${course.display_number_with_default}</strong></p>
+          <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
+     </article>
+  <aside>
+    <header>
+	  <h2>Ogranizator</h2>
+	</header>
+	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+           <div class="organizer-logo">
+              <p class="mt-2 mx-auto text-center">
+                % if course.organizer:
+                  <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+                    <img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
+                % endif
+              </p>
+            </div>
+          </div>
+	</aside>
+
+    </div>
+  </div>
+</header>
+% endif
+
 % endif
