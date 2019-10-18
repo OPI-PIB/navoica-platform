@@ -12096,7 +12096,7 @@ fieldset {
     font-size: 1.125rem;
     font-weight: 600;
     margin: 0;
-    border: none !important; 
+    border: none !important;
     background-color: unset;
     height: unset;
     padding: 0;
@@ -12195,9 +12195,9 @@ fieldset {
   .u-field-value-display {
     color: #212529;
     background-color: #f8f9fa;
-    text-decoration: none; 
+    text-decoration: none;
     display: inline-block;
-    cursor: unset;  
+    cursor: unset;
  //   border: 1px solid #E41D37 !important;
  //   padding: 0.25rem 0.5rem !important;
     font-size: 0.875rem;
@@ -12414,8 +12414,8 @@ fieldset {
 
 .u-field-header {
   .fa {
-    display: none !important; 
-  } 
+    display: none !important;
+  }
 }
 
 #u-field-message-country, #u-field-message-language_proficiencies {
@@ -12424,7 +12424,7 @@ fieldset {
 
 .u-field-value.field {
   .u-field-value-readonly {
-     display: none;    
+     display: none;
   }
 }
 
@@ -12463,3 +12463,42 @@ fieldset {
     }
   }
 }
+
+.card-body > figure {
+    flex: 0 0 10rem;
+    margin: 0 1rem 0 0;
+    position: relative; }
+    .card-body > figure .course-card-label {
+      align-items: center;
+      background: lightseagreen;
+      border: 0;
+      color: #fff;
+      display: flex;
+      flex: 0 0 auto;
+      font-size: 12px;
+      font-weight: 600;
+      left: -9px;
+      letter-spacing: .05em;
+      line-height: 1;
+      margin-right: 1rem;
+      min-width: auto;
+      padding: 8px 8px 10px;
+      position: absolute;
+      text-transform: uppercase;
+      bottom: 10px; }
+      .card-body > figure .course-card-label::after {
+        background: transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 9px solid #008f8f;
+        content: "";
+        display: block;
+        height: 10px;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 9px; }
+  .card-body figure + div {
+    flex: 1 1; }
+  .about-us .card-body > figure {
+    flex: 0 0 8rem;
+    margin: 0 1rem 0 0; }
