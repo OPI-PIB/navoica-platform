@@ -967,13 +967,13 @@ div.problem .action {
   }
 
   .problem-action-btn {
-    @include margin-right($baseline / 5);
+//    @include margin-right($baseline / 5);
 
-    max-width: 110px;
+//    max-width: 110px;
 
     .icon {
-      margin-bottom: $baseline / 10;
-      display: block;
+//      margin-bottom: $baseline / 10;
+//      display: block;
     }
 
     @media print {
@@ -983,7 +983,7 @@ div.problem .action {
   }
 
   .submit-attempt-container {
-    padding-bottom: $baseline;
+//    padding-bottom: $baseline;
     flex-grow: 1;
 
     @media (max-width: $bp-screen-lg) {
@@ -1002,7 +1002,7 @@ div.problem .action {
   .submission-feedback {
     @include margin-right($baseline / 2);
 
-    margin-top: $baseline / 2;
+//    margin-top: $baseline / 2;
     display: inline-block;
     color: $gray-d1;
     font-size: $medium-font-size;
@@ -1148,7 +1148,7 @@ div.problem {
       }
     }
 
-    .notification-btn-wrapper {
+    .notification-btn-fwrapper {
       @include float(right);
     }
 
