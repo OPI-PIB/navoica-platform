@@ -1,6 +1,6 @@
 // discussion - elements - navigation
 // ====================
-
+@import "../utilities/variables-new_look";
 // ------
 // Discussion Forums Page Header
 // ------
@@ -237,7 +237,10 @@
     transition: none;
     align-items: center;
     justify-content: space-between;
-    color: $forum-color-read-post;
+    // color: $forum-color-read-post;
+    color: $primary;
+    text-decoration: none;
+    background-color: transparent;
 
     &:hover,
     &:active,

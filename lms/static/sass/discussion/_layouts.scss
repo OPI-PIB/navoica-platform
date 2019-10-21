@@ -763,3 +763,22 @@
   }
 
 }
+
+main.container {
+  aside {
+    order: -1;
+
+    .list-group-flush {
+      .list-group-item {
+        border: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    h6 {
+      font-size: $font-size-base;
+      line-height: 21px;
+    }
+  }
+}

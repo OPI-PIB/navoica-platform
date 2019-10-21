@@ -66,9 +66,14 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
       % endif
     >
         <div class="discussion-body">
-            <main id="main" class="discussion-column" aria-label="Content" tabindex="-1">
-                <article class="new-post-article is-hidden" style="display: none" tabindex="-1" aria-label="${_("New topic form")}"></article>
-                <div class="forum-content"></div>
+            <main id="main" class="discussion-column" aria-label="Content" tabindex="0">
+              <header>
+                <h2>
+                  <span class="d-none d-md-block">${_("Discusion")}</span>
+                </h2>
+              </header>
+              <article class="new-post-article is-hidden" style="display: none" tabindex="-1" aria-label="${_("New topic form")}"></article>
+              <div class="forum-content"></div>
             </main>
             <aside class="forum-nav" role="complementary" aria-label="${_("Discussion thread list")}">
                 <%include file="_filter_dropdown.html" />
