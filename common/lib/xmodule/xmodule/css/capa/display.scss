@@ -957,13 +957,14 @@ div.problem .action {
   flex-wrap: wrap;
 
   .problem-action-button-wrapper {
-    @include border-right(1px solid $light-gray1);
+//    @include border-right(1px solid $light-gray1);
 
     display: inline-block;
 
     &:last-child {
       border: none;
     }
+
   }
 
   .problem-action-btn {
@@ -978,6 +979,15 @@ div.problem .action {
 
     @media print {
       display: none;
+    }
+
+    &:hover {
+      border: 1px solid #B43F37;
+      background-color: #B43F37;
+      color: #fff;
+      box-shadow: none;
+      border-radius: 3px;
+      padding: 3px 11px;
     }
 
   }
@@ -1157,7 +1167,7 @@ div.problem {
   .notification-btn {
     @include float(right);
 
-    padding: ($baseline / 10) ($baseline / 4);
+//    padding: ($baseline / 10) ($baseline / 4);
     min-width: ($baseline * 3);
     display: block;
     clear: both;
@@ -1179,12 +1189,18 @@ div.problem {
     }
 
     &.btn-default {
-      background-color: transparent;
+//      background-color: transparent;
     }
 
-    &.btn-brand {
+    &.btn-brand, 
+    &.btn-default {
       &:hover {
-        background-color: $btn-brand-focus-background;
+        border: 1px solid #B43F37;
+        background-color: #B43F37;
+        color: #fff;
+        box-shadow: none;
+        border-radius: 3px;
+        padding: 3px 11px;
       }
     }
   }
