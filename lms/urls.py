@@ -138,8 +138,12 @@ urlpatterns = [
     url(r'^dashboard/', include('learner_dashboard.urls')),
     url(r'^api/experiments/', include('experiments.urls', namespace='api_experiments')),
 ]
+#robots.txt
+robots_file = 'robots.txt'
+if settings.LMS_BASE == "navoica.pl":
+    robots_file = 'robots-allow.txt'
 
-robots = TemplateView.as_view(template_name='robots.txt', content_type='text/plain')
+robots = TemplateView.as_view(template_name=robots_file, content_type='text/plain')
 urlpatterns += [
     url(r'^robots\.txt$', robots, name='robots')
 ]
