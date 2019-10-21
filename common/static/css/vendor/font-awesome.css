@@ -11,13 +11,16 @@
   font-weight: normal;
   font-style: normal;
 }
-.fa {
+.fa, .fas {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.fa, .fas {
+  margin-right: 0.5rem;
 }
 /* makes the font 33% larger relative to the icon container */
 .fa-lg {
