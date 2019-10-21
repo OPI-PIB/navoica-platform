@@ -46,7 +46,7 @@ HeaderFactory();
         </a>
 
         % if course and user.is_authenticated():
-         <!--
+
          <span style="white-space: nowrap">
               % if course.organizer:
                           <span class="provider"><strong>${settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]}</strong></span><br>
@@ -57,7 +57,6 @@ HeaderFactory();
               % endif
              <span class="course-name" title="${course.display_name_with_default}">${course.display_name_with_default}</span>
            </span>
-           -->
 
         % else:
 

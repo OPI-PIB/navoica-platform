@@ -3,7 +3,7 @@
 	  <div class="card-body d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
 	    <figure>
 		<img class="card-img-top" src="<%- image_url %>" alt="" />
-		
+
 		<% if (is_new) { %>
 			<span class="course-card-label">Nowy kurs</span>
 		<% } %>
@@ -20,4 +20,4 @@
 		<p><time class="course-card-start"><i class="icon-calendar"></i> <%- interpolate(gettext("Starts: %(start_date)s"),{ start_date: start }, true) %></time></p>
 	  </div>
 	</a>
-  
+
