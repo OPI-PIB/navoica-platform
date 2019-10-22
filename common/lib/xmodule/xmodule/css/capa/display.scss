@@ -957,33 +957,43 @@ div.problem .action {
   flex-wrap: wrap;
 
   .problem-action-button-wrapper {
-    @include border-right(1px solid $light-gray1);
+//    @include border-right(1px solid $light-gray1);
 
     display: inline-block;
 
     &:last-child {
       border: none;
     }
+
   }
 
   .problem-action-btn {
-    @include margin-right($baseline / 5);
+//    @include margin-right($baseline / 5);
 
-    max-width: 110px;
+//    max-width: 110px;
 
     .icon {
-      margin-bottom: $baseline / 10;
-      display: block;
+//      margin-bottom: $baseline / 10;
+//      display: block;
     }
 
     @media print {
       display: none;
     }
 
+    &:hover {
+      border: 1px solid #B43F37;
+      background-color: #B43F37;
+      color: #fff;
+      box-shadow: none;
+      border-radius: 3px;
+      padding: 3px 11px;
+    }
+
   }
 
   .submit-attempt-container {
-    padding-bottom: $baseline;
+//    padding-bottom: $baseline;
     flex-grow: 1;
 
     @media (max-width: $bp-screen-lg) {
@@ -1002,7 +1012,7 @@ div.problem .action {
   .submission-feedback {
     @include margin-right($baseline / 2);
 
-    margin-top: $baseline / 2;
+//    margin-top: $baseline / 2;
     display: inline-block;
     color: $gray-d1;
     font-size: $medium-font-size;
@@ -1148,7 +1158,7 @@ div.problem {
       }
     }
 
-    .notification-btn-wrapper {
+    .notification-btn-fwrapper {
       @include float(right);
     }
 
@@ -1157,7 +1167,7 @@ div.problem {
   .notification-btn {
     @include float(right);
 
-    padding: ($baseline / 10) ($baseline / 4);
+//    padding: ($baseline / 10) ($baseline / 4);
     min-width: ($baseline * 3);
     display: block;
     clear: both;
@@ -1179,12 +1189,18 @@ div.problem {
     }
 
     &.btn-default {
-      background-color: transparent;
+//      background-color: transparent;
     }
 
-    &.btn-brand {
+    &.btn-brand, 
+    &.btn-default {
       &:hover {
-        background-color: $btn-brand-focus-background;
+        border: 1px solid #B43F37;
+        background-color: #B43F37;
+        color: #fff;
+        box-shadow: none;
+        border-radius: 3px;
+        padding: 3px 11px;
       }
     }
   }
