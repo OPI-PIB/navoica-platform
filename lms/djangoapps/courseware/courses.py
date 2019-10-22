@@ -476,18 +476,11 @@ def sort_by_start_date(courses, reverse=False):
     Returns a list of courses sorted by their start date, latest first.
     """
     
-    if reverse is False:
-        courses = sorted(
-            courses,
-            key=lambda course: (course.has_ended(), course.start is None, course.start),
-            reverse=False
-        )
-    else:
-        courses = sorted(
-            courses,
-            key=lambda course: (course.has_ended(), course.start is None, course.start),
-            reverse=True
-        )
+    courses = sorted(
+        courses,
+        key=lambda course: (course.has_ended(), course.start is None, course.start),
+        reverse=False
+    )
 
     return courses
 
