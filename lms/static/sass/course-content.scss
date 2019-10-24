@@ -9665,7 +9665,7 @@ article .display-3::before {
   padding: .25rem .75rem;
 }
 
-.btn-sm i, .btn-group-sm > .btn i {
+.btn-group-sm > .btn i {
   margin-right: .5rem;
 }
 
@@ -9713,7 +9713,13 @@ article .display-3::before {
 
 .problem-action-btn {
   margin-right: 0 !important;
-  max-width: unset !important;
+  max-width: 8em;
+  .save {
+    max-width: 5em;
+  }
+  .reset {
+    max-width: 6em;
+  }
 }
 
 .submission-feedback {
@@ -9722,12 +9728,10 @@ article .display-3::before {
 }
 
 .submit-attempt-container {
-  padding: 0 !important;
+  padding-bottom: 1rem;
 }
 
 #content .vert .notification {
-  float: unset;
-  border-top: none;
   margin-top: unset;
   line-height: unset;
   .icon {
@@ -9741,11 +9745,8 @@ article .display-3::before {
     color: initial;
     width: auto;
    }
+  .notification-hint {
+    border: 1px solid #d9d9d9 !important;
+    float: left;
+  }
 }  
-
-.notification-hint {
-  border-top: 1px solid #d9d9d9 !important;
-  float: left;
-}  
-
-.
