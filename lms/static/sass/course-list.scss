@@ -12472,6 +12472,22 @@ fieldset {
   }
 }
 
+
+.activation-message-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  .message-copy {
+    color: #770f1d;
+    padding: 1rem;
+    background-color: #fad2d7;
+    border: 1px solid #f7c0c7;
+    .message-title {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+}
+
 .display-none {
   display: none !important;
 }
