@@ -11514,7 +11514,7 @@ main.container {
 }
 
 #header {
-    background-image: url(https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80);
+    background-image: url("/static/images/photo-keyboard.jpeg");
     background-position: center center;
     background-size: cover;
     box-sizing: border-box;
@@ -12472,6 +12472,26 @@ fieldset {
   }
 }
 
+
+.activation-message-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  .message-copy {
+    color: #770f1d;
+    padding: 1rem;
+    background-color: #fad2d7;
+    border: 1px solid #f7c0c7;
+    .message-title {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.display-none {
+  display: none !important;
+}
+
 .card-body > figure {
     flex: 0 0 10rem;
     margin: 0 1rem 0 0;
@@ -12510,3 +12530,9 @@ fieldset {
   .about-us .card-body > figure {
     flex: 0 0 8rem;
     margin: 0 1rem 0 0; }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
