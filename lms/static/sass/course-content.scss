@@ -9712,13 +9712,8 @@ article .display-3::before {
 }
 
 .problem-action-btn {
-  margin-right: 0 !important;
-  max-width: 8em;
-  .save {
-    max-width: 5em;
-  }
-  .reset {
-    max-width: 6em;
+  .show-label {
+    white-space: nowrap;
   }
 }
 
@@ -9728,7 +9723,7 @@ article .display-3::before {
 }
 
 .submit-attempt-container {
-  padding-bottom: 1rem;
+  padding-bottom: 1rem !important;
 }
 
 #content .vert .notification {
@@ -9750,3 +9745,7 @@ article .display-3::before {
     float: left;
   }
 }  
+
+.wrap-instructor-info .btn-debug {
+  margin-right: .25rem;
+}

@@ -10936,7 +10936,7 @@ article .display-3 {
         border-top: 0;
         display: flex;
         margin-bottom: 1rem;
-        padding: 1rem;
+        padding: 1rem 1rem 0 1rem;
 
         .submit-attempt-container {
           align-items: center;
@@ -10950,12 +10950,10 @@ article .display-3 {
         }
 
         .problem-action-buttons-wrapper {
-          align-items: center;
-          display: flex;
-          padding-bottom: 1rem;
-
+          display: unset;
           .problem-action-button-wrapper {
             margin-right: .25rem;
+            padding-bottom: 1rem;
           }
         }
       }
