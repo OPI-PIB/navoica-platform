@@ -16,3 +16,10 @@
     margin-top: 0;
   }
 }
+.d-flex{
+  .justify-content-between {
+    align-items: stretch;
+    flex-flow: row wrap;
+    justify-content: space-between !important;
+  }
+}

@@ -5,13 +5,55 @@
 // Discussion Forums Page Header
 // ------
 
-.discussion-board > .page-header {
-  .has-breadcrumbs .breadcrumbs {
-    margin-bottom: ($baseline / 2);
-    font-size: font-size(base);
-    font-weight: font-weight(semi-bold);
-    line-height: $line-height-base;
+// .discussion-board > .page-header {
+//   .has-breadcrumbs .breadcrumbs {
+//     margin-bottom: ($baseline / 2);
+//     font-size: font-size(base);
+//     font-weight: font-weight(semi-bold);
+//     line-height: $line-height-base;
+//   }
+// }
+
+.container nav[aria-label="breadcrumb"] {
+  /*
+  border-bottom: 1px solid map_get($grays, "300");
+  */
+  margin-bottom: $font-size-base * 3;
+  overflow: hidden;
+  padding: $font-size-base * .5 0 $font-size-base * 1.5;
+  position: static;
+
+  .breadcrumb {
+    font-size: 14px;
+    // margin: 0;
+    margin: 0 .5em 0 1em;
+    padding: 0;
   }
+
+  li.breadcrumb-item::after {
+    content: "/";
+    margin: 0 .5em 0 1em;
+  }
+
+  li.breadcrumb-item:last-child::after {
+    content: none;
+  }
+
+  li.breadcrumb-item:nth-child(2)::before {
+    content: "Temat:";
+    font-style: italic;
+  }
+
+  li.breadcrumb-item:nth-child(3)::before {
+    content: "Wpis:";
+    font-style: italic;
+  }
+
+  li.breadcrumb-item:nth-child(4)::before {
+    content: "Wpis:";
+    font-style: italic;
+  }
+
 }
 
 // -----------
@@ -19,7 +61,7 @@
 // -----------
 .forum-nav-browse-menu-wrapper {
   border-bottom: 1px solid $forum-color-border;
-  background: theme-color("light");
+  // background: theme-color("light");
 }
 
 .forum-nav-browse-filter {
@@ -89,14 +131,81 @@
 }
 
 .forum-nav-browse-menu {
-  @include padding-left(0);
 
-  margin: 0;
-  font-size: $forum-base-font-size;
-  overflow-y: scroll;
-  list-style: none;
-  max-height: 600px;
+  > li {
+    border: 0;
+    margin: 0 0 .5rem;
+
+  }
+
+  li {
+    cursor: pointer;
+    font-size: 14px;
+    list-style: none;
+
+    &::before {
+      color: map_get($grays, "600");
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
+      font-size: 10px;
+      font-weight: 900;
+      line-height: 2;
+      margin-right: 4px;
+      width: 12px;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    span {
+      color: $red;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+
+    }
+
+    li {
+      padding-left: 16px;
+
+      &::before {
+        display: none;
+      }
+
+      span {
+        display: flex;
+        flex: 1;
+        flex-flow: row nowrap;
+        font-weight: 400;
+        margin-top: 4px;
+
+        &::before {
+          color: map_get($grays, "600");
+          content: "\f054";
+          flex: 0 0 12px;
+          font-family: "Font Awesome 5 Free";
+          font-size: 10px;
+          font-weight: 900;
+          line-height: 2;
+          margin-right: 4px;
+        }
+
+      }
+    }
+
+  }
 }
+// Old 
+// .forum-nav-browse-menu {
+//   @include padding-left(0);
+
+//   margin: 0;
+//   font-size: $forum-base-font-size;
+//   overflow-y: scroll;
+//   list-style: none;
+//   // max-height: 600px;
+// }
 
 .forum-nav-browse-submenu {
   list-style: none;
@@ -178,8 +287,8 @@
 .forum-nav-thread-list {
   padding-left: 0 !important; // should *not* be RTLed, see below for explanation
   min-height: 60px;  // @TODO: Remove this when we have a real empty state for the discussion thread list
-  max-height: 800px;
-  border-bottom: 1px solid theme-color("light");
+  // max-height: 800px;
+  // border-bottom: 1px solid theme-color("light");
   margin: 0;
   overflow-y: auto;
   list-style: none;
@@ -221,7 +330,7 @@
 }
 
 .forum-nav-thread {
-  border-bottom: 1px solid $forum-color-border;
+  // border-bottom: 1px solid $forum-color-border;
   // background-color: $forum-color-background;
   margin-bottom: 0;
 
@@ -350,24 +459,25 @@
   border-radius: $forum-border-radius;
   padding: ($baseline/10) ($baseline/5);
   min-width: 2em; // Fit most comment counts but allow expansion if necessary
-  background-color: theme-color("light");
-
   // Speech bubble tail
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: (-$baseline/4);
+  
+  // background-color: theme-color("light");
 
-    @include right($baseline/4);
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   bottom: (-$baseline/4);
 
-    width: 0;
-    height: 0;
-    border-style: solid;
+  //   @include right($baseline/4);
 
-    @include border-width(0, ($baseline/4), ($baseline/4), 0);
-    @include border-color(transparent, $forum-color-border, transparent, transparent);
-  }
+  //   width: 0;
+  //   height: 0;
+  //   border-style: solid;
+
+  //   @include border-width(0, ($baseline/4), ($baseline/4), 0);
+  //   @include border-color(transparent, $forum-color-border, transparent, transparent);
+  // }
 }
 
 .forum-nav-load-more {
@@ -719,6 +829,60 @@
     background-color: map_get($grays, "100");
     border: 1px solid map_get($grays, "300");
     padding: .5rem;
+
+  }
+
+}
+
+.discussion-body {
+
+  form {
+    background-color: map_get($grays, "100");
+    border: 1px solid map_get($grays, "200");
+    margin: 0;
+    padding: 1rem;
+
+    legend,
+    label.field-label {
+      display: block;
+      margin: 0;
+    }
+
+    .post-field {
+      margin: 0 0 2rem;
+    }
+
+    .field-label > .field-label-text,
+    legend > .field-label-text,
+    label.field-label-text,
+    span.field-label-text {
+      display: block;
+      font-size: 1.125rem;
+      font-weight: $font-weight-semibold;
+      margin: 0;
+      padding: 0 0 .25rem;
+    }
+
+    .field-help {
+      font-size: .875rem;
+      font-style: italic;
+      margin: 0;
+      padding: 0 0 1rem;
+    }
+
+    .post-type-label {
+      display: block;
+    }
+
+    input + .field-input-label {
+      font-size: 14px;
+    }
+
+    .action {
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+    }
 
   }
 

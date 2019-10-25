@@ -1,5 +1,91 @@
 // Layouts for discussion pages
 @import "utilities/variables-new_look";
+
+div {
+
+}
+div {
+  .justify-content-between {
+    align-items: stretch;
+    flex-flow: row wrap;
+    justify-content: space-between !important;  
+  }
+}
+
+@include media-breakpoint-up(md) {
+  #content {
+    margin: 0 0 $jumbotron-padding-y;
+    padding: 3*$font-size-base 0;
+  }
+
+  .jumbotron > .container {
+    .d-flex {
+      align-items: stretch;
+      flex-flow: row wrap;
+    }
+  }
+}
+
+// div.justify-content-between {
+//   align-items: stretch;
+//   flex-flow: row wrap;
+//   justify-content: space-between !important;
+// }
+
+
+
+
+// @include media-breakpoint-down(sm) {
+//   header .jumbotron {
+//     p {
+//       &.lead {
+//         font-size: 1.25 * $font-size-base;
+//       }
+//     }
+//   }
+
+//   .navbar {
+//     &-nav {
+//       padding: 0 0 .5*$font-size-base;
+
+//       .nav-item {
+//         border-top: 1px solid map_get($grays, "300");
+//         font-size: $font-size-base;
+//         //margin: 0 .5*$font-size-base;
+//         margin: 0;
+//         // padding: 0;
+
+//         // .nav-link {
+//         //   padding: .5*$font-size-base;
+//         // }
+
+//         .nav-link.active {
+//           // padding: unset;
+//           // padding: 12;
+//           margin-bottom: -1px;
+//           // TODO
+//           color: #495057;
+//           background-color: #fff;
+//           border-color: #dee2e6 #dee2e6 #fff;
+//         }
+
+//         .dropdown-item {
+//           padding: .5*$font-size-base;
+//         }
+
+//         .btn {
+//           border: 0;
+//           padding: .5*$font-size-base;
+//           text-align: left;
+//           width: 100%;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
 // .discussion-user-profile-board {
 //   .discussion-profile-title {
 //     margin-bottom: $baseline / 5;

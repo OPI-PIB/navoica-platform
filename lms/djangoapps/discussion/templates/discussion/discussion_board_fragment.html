@@ -17,6 +17,13 @@ from openedx.core.djangolib.markup import HTML
 from openedx.features.course_experience import course_home_page_title, COURSE_OUTLINE_PAGE_FLAG
 %>
 
+## Breadcrumb navigation
+<div class="page-header-main">
+    <nav aria-label="${_('Discussions')}" class="sr-is-focusable" tabindex="-1">
+        <div class="has-breadcrumbs"></div>
+    </nav>
+</div>
+
 <section class="discussion discussion-board page-content-container" id="discussion-container"
          data-course-id="${course.id}"
          data-user-create-comment="${json.dumps(can_create_comment)}"
@@ -25,13 +32,13 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
          data-sort-preference="${sort_preference}"
          data-flag-moderator="${json.dumps(flag_moderator)}"
          data-user-group-id="${user_group_id}">
-    <header class="page-header has-secondary">
-        ## Breadcrumb navigation
+    <!-- <header class="page-header has-secondary"> -->
+<!--         ## Breadcrumb navigation
         <div class="page-header-main">
             <nav aria-label="${_('Discussions')}" class="sr-is-focusable" tabindex="-1">
                 <div class="has-breadcrumbs"></div>
             </nav>
-        </div>
+        </div> -->
         <div class="page-header-secondary">
             ## Add Post button
             % if has_permission(user, 'create_thread', course.id):
@@ -43,29 +50,27 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
             <div class="forum-search"></div>
         </div>
     </header>
-    <header class="page-header has-secondary">
-        <div class="page-header-main">
-            <nav aria-label="${_('Course')}" class="sr-is-focusable" tabindex="-1">
-                <div class="has-breadcrumbs">
-                    <div class="breadcrumbs">
-                        % if COURSE_OUTLINE_PAGE_FLAG.is_enabled(course.id):
-                            <span class="nav-item nav-item-course breadcrumb-item">
-                                <a href="127.0.0.1:18000">aasdasds</a>
-                            </span>
-                            /
-                        % endif
-                        
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+
     <div class="page-content"
       % if getattr(course, 'language'):
         lang="${course.language}"
       % endif
     >
-        <div class="discussion-body">
+      <div class="d-flex justify-content-between">
+        <header class="page-header has-secondary">
+          <div class="page-header-secondary">
+              ## Add Post button
+              % if has_permission(user, 'create_thread', course.id):
+              <div class="forum-actions">
+                  <button class="btn btn-outline-primary btn-small new-post-btn">${_("Add a Post")}</button>
+              </div>
+              % endif
+              ## Search box
+              <div class="forum-search"></div>
+          </div>
+        </header>
+      </div>
+        <div class="discussion-body d-flex my-2">
             <main id="main" class="discussion-column" aria-label="Content" tabindex="0">
               <header>
                 <h2>
