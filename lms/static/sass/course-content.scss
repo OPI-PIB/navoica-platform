@@ -2256,7 +2256,7 @@ fieldset:disabled a.btn {
 .btn-light {
   color: #212529;
   background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  border-color: #adb5bd;
 }
 
 .btn-light:hover {
@@ -7163,7 +7163,7 @@ button.bg-dark:focus {
 }
 
 .p-2 {
-  padding: 1rem !important;
+  padding: 0 !important;
 }
 
 .pt-2,
@@ -9092,6 +9092,7 @@ main.container .d-flex > aside header h2, main.container .d-flex > aside header 
 main.container .d-flex section,
 .jumbotron > .container .d-flex section {
   margin-bottom: 3rem;
+  margin-top: 5px;
 }
 
 .jumbotronn {
@@ -9462,6 +9463,17 @@ article .display-3::before {
 .accordion .card-body .list-group-flush .list-group-item-action {
   color: #D0353F;
 }
+
+.accordion.subsection #section[aria-expanded="false"]::before {
+    content: "+";
+    left: 12px;
+  }
+
+ .accordion.subsection #section[aria-expanded="true"]::before {
+    content: "\2012";
+    left: 12px;
+  }
+
 
 .accordion .card-body .list-group-flush .list-group-item p {
   font-weight: 400;
