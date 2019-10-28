@@ -147,7 +147,7 @@
       color: map_get($grays, "600");
       content: "\f054";
       font-family: "Font Awesome 5 Free";
-      font-size: 10px;
+      font-size: 100px;
       font-weight: 900;
       line-height: 2;
       margin-right: 4px;
@@ -733,7 +733,94 @@
   .discussion-column {
     flex: 1 1;
     padding: 0 2rem 1rem;
+    margin-top: 0;
 
+    .discussion-post {
+      border: $card-border;
+      box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
+      padding: 2rem;
+    }
+
+    .post-header-actions,
+    .response-header-actions,
+    .comment-actions-list {
+      display: none;
+    }
+
+    .post-title {
+      color: $dark;
+      display: flex;
+      font-size: 1.75rem;
+      font-weight: $font-weight-semibold;
+      line-height: 1.4286;
+      margin-bottom: 1.2857em;
+    }
+
+    .posted-details {
+      font-size: .875rem;
+      font-style: italic;
+      margin: 0;
+      padding: 0 0 1rem;
+    }
+
+    .add-response {
+      border-bottom: 1px solid map_get($grays, "300");
+      padding: 0 0 2rem;
+      margin: 1.5rem 0 !important;
+    }
+
+    .response-count {
+      font-weight: $font-weight-semibold;
+    }
+
+    .responses {
+      margin: 0;
+      padding: 0;
+    }
+
+    .forum-response {
+      border: $card-border;
+      box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
+      list-style: none;
+      margin: 2rem 0;
+      padding: 2rem;
+
+      &::before {
+        background: darkcyan;
+        content: "";
+        display: block;
+        height: 4px;
+        margin-bottom: 8px;
+        width: 80px;
+      }
+    }
+
+    .comments {
+      background-color: map_get($grays, "100");
+      border: 1px solid map_get($grays, "200");
+      margin: 0 0 -1px;
+      padding: 1rem;
+
+      > li {
+        border-top: 1px solid map_get($grays, "300");
+        list-style: none;
+        margin: 1rem 0 0;
+        padding: 1rem 0 0;
+
+        &:first-child {
+          border: 0;
+          margin: 0;
+          padding: 0;
+        }
+
+        .discussion-comment,
+        .wmd-preview-container {
+          font-size: .875em;
+          line-height: 1.8571;
+        }
+
+      }
+    }
   }
 
   .post-labels {
@@ -834,6 +921,23 @@
 
 }
 
+@include media-breakpoint-up(lg) {
+  .jumbotron > .container {
+    .d-flex {
+      > aside {
+        flex: 0 0 426px;
+      }
+    }
+  }
+  main.container {
+    .d-flex {
+      > aside {
+        flex: 0 0 290px;
+      }
+    }
+  }
+}
+
 .discussion-body {
 
   form {
@@ -884,6 +988,36 @@
       justify-content: space-between;
     }
 
+  }
+
+}
+
+.forum-nav {
+  .btn-groups {
+    position: relative;
+    top: 4px;
+
+    .btn {
+      font-size: 13px;
+      padding: 0 .25rem;
+    }
+
+    .dropdown-menu {
+      padding: 0;
+    }
+
+    .dropdown-header,
+    .dropdown-item {
+      padding: .25rem 1rem;
+    }
+
+    .dropdown-toggle::after {
+      display: none;
+    }
+
+    .forum-nav-browse-filter {
+      width: 258px;
+    }
   }
 
 }
