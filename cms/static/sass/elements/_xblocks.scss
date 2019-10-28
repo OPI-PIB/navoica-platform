@@ -96,7 +96,7 @@
       .action-item {
         display: inline-block;
 
-        .action-button {
+        .action-button, .edit-button, .delete-button {
           @include transition(all $tmg-f3 linear 0s);
 
           display: block;
@@ -118,9 +118,6 @@
             text-transform: uppercase;
           }
 
-          &.delete-button:hover {
-            background-color: $gray-l1;
-          }
         }
 
         .icon {

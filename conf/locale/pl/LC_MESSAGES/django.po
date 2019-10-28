@@ -23400,8 +23400,8 @@ msgid ""
 "\n"
 "{url}"
 msgstr ""
-"Twoje żądanie uzyskania uprawnień twórcy kursów w {studio_name} zostało "
-"zaakceptowane. Aby rozpocząć prace nad kursem, odwiedź odnośnik {url}"
+"Twoja prośba o uprawnienia twórcy kursów w {studio_name} została "
+"zaakceptowana. Aby stworzyć swój pierwszy kurs, zaloguj się na {url}"
 
 #: cms/templates/emails/course_creator_revoked.txt
 msgid ""
@@ -24455,7 +24455,11 @@ msgstr[1] "{num} znaków"
 msgstr[2] "{num} znaków"
 msgstr[3] "{num} znaków"
 
-
+#. Translators: This message is shown to users who enter a password matching
+#. the username they enter(ed).
+#: common/djangoapps/util/password_policy_validators.py
+msgid "Password cannot be the same as the username."
+msgstr "Hasło nie może być takie samo jak nazwa użytkownika"
 
 
 #: default_data.py

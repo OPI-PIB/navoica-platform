@@ -4774,12 +4774,6 @@ input {
   border-radius: calc(0 - 0);
 }
 
-.card-img-top {
-  width: 100%;
-  border-top-left-radius: calc(0 - 0);
-  border-top-right-radius: calc(0 - 0);
-}
-
 .card-img-bottom {
   width: 100%;
   border-bottom-right-radius: calc(0 - 0);
@@ -7129,6 +7123,9 @@ button.bg-dark {
   padding-top: 100%;
 }
 
+.embed-responsive .card-img-top {
+    object-fit: cover;
+}
 .flex-row {
   flex-direction: row !important;
 }
@@ -11178,8 +11175,25 @@ p.lead.text-center.my-3 {
     line-height: 1.25;
 }
 
+/* Equal-height card images, cf. https://stackoverflow.com/a/47698201/1375163*/
+.card-img-top {
+    /*height: 11vw;*/
+    width: 100%;
+    border-top-left-radius: calc(0 - 0);
+    border-top-right-radius: calc(0 - 0);
+    height: 11rem;
+    object-fit: cover;
+}
+
+@media (max-width: 1280px) {
+   .card-img-top {
+     height: auto;
+   }
+}
+
+
 @media (min-width: 1280px) {
-  img.card-img-top {
+    .card-img-top {
       max-height: 214px !important;
   }
 }
@@ -11221,12 +11235,6 @@ input.form-control.form-control {
 
 button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-button.selected {
     color: #E41D37;
-}
-
-@media (min-width: 480px) {
-   .card-img-top {
-     height: auto;
-   }
 }
 
 .search-facets-lists {
@@ -11526,7 +11534,7 @@ main.container {
 }
 
 #header {
-    background-image: url(https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80);
+    background-image: url("/static/images/photo-keyboard.jpeg");
     background-position: center center;
     background-size: cover;
     box-sizing: border-box;
@@ -12120,7 +12128,7 @@ fieldset {
     font-size: 1.125rem;
     font-weight: 600;
     margin: 0;
-    border: none !important; 
+    border: none !important;
     background-color: unset;
     height: unset;
     padding: 0;
@@ -12219,9 +12227,9 @@ fieldset {
   .u-field-value-display {
     color: #212529;
     background-color: #f8f9fa;
-    text-decoration: none; 
+    text-decoration: none;
     display: inline-block;
-    cursor: unset;  
+    cursor: unset;
  //   border: 1px solid #E41D37 !important;
  //   padding: 0.25rem 0.5rem !important;
     font-size: 0.875rem;
@@ -12438,8 +12446,8 @@ fieldset {
 
 .u-field-header {
   .fa {
-    display: none !important; 
-  } 
+    display: none !important;
+  }
 }
 
 #u-field-message-country, #u-field-message-language_proficiencies {
@@ -12448,7 +12456,7 @@ fieldset {
 
 .u-field-value.field {
   .u-field-value-readonly {
-     display: none;    
+     display: none;
   }
 }
 
@@ -12468,3 +12476,88 @@ fieldset {
     margin-bottom: 8px;
 }
 
+.dashboard-banner {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  .wrapper-msg {
+    color: #770f1d;
+    padding: 1rem;
+    background-color: #fad2d7;
+    border: 1px solid #f7c0c7;
+    .title {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .copy {
+      font-size: .8750rem;
+      p {
+        margin: 0rem;
+      }
+    }
+  }
+}
+
+
+.activation-message-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  .message-copy {
+    color: #770f1d;
+    padding: 1rem;
+    background-color: #fad2d7;
+    border: 1px solid #f7c0c7;
+    .message-title {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.display-none {
+  display: none !important;
+}
+
+.card-body > figure {
+    flex: 0 0 10rem;
+    margin: 0 1rem 0 0;
+    position: relative; }
+    .card-body > figure .course-card-label {
+      align-items: center;
+      background: lightseagreen;
+      border: 0;
+      color: #fff;
+      display: flex;
+      flex: 0 0 auto;
+      font-size: 12px;
+      font-weight: 600;
+      left: -9px;
+      letter-spacing: .05em;
+      line-height: 1;
+      margin-right: 1rem;
+      min-width: auto;
+      padding: 8px 8px 10px;
+      position: absolute;
+      text-transform: uppercase;
+      bottom: 10px; }
+      .card-body > figure .course-card-label::after {
+        background: transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 9px solid #008f8f;
+        content: "";
+        display: block;
+        height: 10px;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 9px; }
+  .card-body figure + div {
+    flex: 1 1; }
+  .about-us .card-body > figure {
+    flex: 0 0 8rem;
+    margin: 0 1rem 0 0; }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -191,6 +191,15 @@ class DateSummary(object):
         """
         return self.date_html(date_format='shortTime')
 
+    @property
+    def isodate_html(self):
+        """
+        Returns a long representation of the date as HTML.
+
+        Note: this returns a span that will be localized on the client.
+        """
+        return self.date_html(date_format='ISODate')
+
     def __repr__(self):
         return u'DateSummary: "{title}" {date} is_enabled={is_enabled}'.format(
             title=self.title,
@@ -257,7 +266,7 @@ class CourseStartDate(DateSummary):
                     request,
                     Text(_("Course starts in {time_remaining_string} at {course_start_time}.")).format(
                         time_remaining_string=self.time_remaining_string,
-                        course_start_time=self.short_time_html,
+                        course_start_time=self.isodate_html,
                     )
                 )
 

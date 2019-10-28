@@ -24,36 +24,9 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
   <link rel="stylesheet" type="text/css" href="${static.url('paragon/static/paragon.min.css')}" />
 </%block>
 
+
+
 <%block name="content">
-
-<header>
-  <div class="jumbotron">
-    <div class="container">
-      <div class="d-flex">
-        <article>
-          <h1 class="display-2">${course.display_name_with_default}</h1>
-          <p class="lead mt-3">Kod kursu: <strong>${course.display_org_with_default} ${course.display_number_with_default}</strong></p>
-          <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
-     </article>
-  <aside>
-    <header>
-	  <h2>Ogranizator</h2>
-	</header>
-	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
-           <div class="organizer-logo">
-              <p class="mt-2 mx-auto text-center">
-                % if course.organizer:
-                  <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
-                    <img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
-                % endif
-              </p>
-            </div>
-          </div>
-	</aside>
-
-    </div>
-  </div>
-</header>
 
 
 <div class="border-top" id="content">
@@ -83,12 +56,16 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
     <article id="results">
          <header class="d-flex justify-content-between">
             <h2 id="h2">Spis treści</h2>
-              <button class="btn btn-sm btn-outline-primary"
-                      id="expand-collapse-outline-all-button"
-                      aria-expanded="false"
-                      aria-controls="course-outline-block-tree">
-               <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
-               </button>
+             % if resume_course_url:
+                    <a class="btn btn-sm btn-outline-primary red" href="${resume_course_url}">
+                        % if has_visited_course:
+                            <span data-action-type="resume">${_("Resume Course")}</span>
+                        % else:
+                            <span data-action-type="start">${_("Start Course")}</span>
+                        % endif
+                    </a>
+                % endif
+              
           </header>
 
             % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
@@ -109,15 +86,12 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                 </div>
             % endif
         <div class="form-actions">
-                % if resume_course_url:
-                    <a class="btn btn-primary action-resume-course" href="${resume_course_url}">
-                        % if has_visited_course:
-                            <span data-action-type="resume">${_("Resume Course")}</span>
-                        % else:
-                            <span data-action-type="start">${_("Start Course")}</span>
-                        % endif
-                    </a>
-                % endif
+               <button class="btn btn-primary action-resume-course"
+                      id="expand-collapse-outline-all-button"
+                      aria-expanded="false"
+                      aria-controls="course-outline-block-tree">
+               <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
+               </button>
             </div>
 
        <section class="faq">
