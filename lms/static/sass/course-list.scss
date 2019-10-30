@@ -9994,6 +9994,9 @@ footer {
   border-color: #ced4da !important;
   margin: 0 0 4rem;
 
+.login {
+  margin-top: 30px;
+}
   /*
   padding: 3*$font-size-base 0;
   */
@@ -10040,6 +10043,7 @@ main.container .d-flex > {
       word-spacing: .04em;
     }
   }
+
 
   section header {
     h2, a {
@@ -11440,11 +11444,11 @@ main.container > aside {
     border-botton: none !important;
     color: #343a40 !important;
     display: flex;
-    flex: 1;
     flex-direction: column;
     font-size: 15px;
     font-weight: 700 !important;
     height: 4rem;
+    flex: 1;
     justify-content: flex-end;
     letter-spacing: .02em;
     margin-left: -1px;
@@ -12618,9 +12622,15 @@ main.container nav .nav-tabs .nav-item.active,
   padding: 2rem !important;
   }
   #content {
-  padding-top: 0;
+  padding-top: 30px !important;
   margin: 0;
+  border-top: 0 !important
 }
+
+  #header-login {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
 #courses-list-header {
   padding-bottom:0;
 }
@@ -12630,6 +12640,20 @@ margin:0 auto;
 aside .hero {
   padding-bottom: 0;
   margin-bottom: 0;
+}
+main.container .d-flex {
+  flex-direction: column-reverse;
+}
+.nav-link {
+  width: 50%;
+  flex: auto;
+}
+.field-gender, .field-yob {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.dashboard-banner, .activation-message-container {
+  padding-top: 8px;
 }
 }
 
@@ -12641,6 +12665,20 @@ aside .hero {
   main.container > aside {
     flex: 0 0 345px;
   }
+}
 
+main.container .d-flex > article header {
+  margin-top: -1rem;
+}
 
+.accordion .card-body .list-group-flush {
+  padding: 0;
+}
+
+button#section.subsection-text.accordion-trigger.bg1 {
+  font-size: 14px;
+}
+
+.fas {
+  margin-right: 0;
 }
