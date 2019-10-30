@@ -10659,51 +10659,6 @@ article .display-3 {
   }
 }
 
-.container nav[aria-label="breadcrumb"] {
-  /*
-  border-bottom: 1px solid map_get($grays, "300");
-  */
-  margin-bottom: 3rem;
-  overflow: hidden;
-  padding: 0.5rem 0 1.5rem;
-  position: static;
-
-  .breadcrumb {
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-  }
-
-  li.breadcrumb-item {
-    &:nth-child(1)::after, &:nth-child(2)::after {
-      content: "/";
-      margin: 0 .5em 0 1em;
-    }
-
-    &:nth-child(3) {
-      &::after {
-        content: "/";
-        margin: 0 .5em 0 1em;
-      }
-
-      &::before {
-        content: "Lekcja:";
-        font-style: italic;
-      }
-    }
-
-    &:nth-child(2)::before {
-      content: "Moduł: ";
-      font-style: italic;
-    }
-
-    &:nth-child(4)::before {
-      content: "Jednostka: ";
-      font-style: italic;
-    }
-  }
-}
-
 .sidebar .sequence-nav nav {
   margin-top: 0;
   overflow: hidden;

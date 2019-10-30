@@ -1537,7 +1537,7 @@ PIPELINE_CSS = {
     },
     'style-inline-discussion': {
         'source_filenames': [
-            'css/discussion/inline-discussion.css',
+            #'css/discussion/inline-discussion.css',
         ],
         'output_filename': 'css/discussion/inline-discussion.css',
     },
