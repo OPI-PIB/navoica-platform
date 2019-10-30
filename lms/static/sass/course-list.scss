@@ -519,8 +519,8 @@ pre {
 
 .container, .container-fluid {
   width: 100%;
-  padding-right: 4px;
-  padding-left: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -4124,6 +4124,9 @@ input {
     border: 1px solid transparent;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    height: auto;
+    padding: 15px;
+    white-space: nowrap;
 
     &:hover, &:focus {
       border-color: #e9ecef #e9ecef #dee2e6;
@@ -7948,8 +7951,12 @@ button.bg-dark {
   margin-right: 1.5rem !important;
 }
 
-.mb-3, .my-3 {
+.my-3 {
   margin-bottom: 1.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 0.5rem !important;
 }
 
 .ml-3, .mx-3 {
@@ -9862,7 +9869,7 @@ footer {
   .card-body {
     > figure {
       flex: 0 0 10rem;
-      margin: 0 1rem 0 0;
+      margin: 0;
     }
 
     figure + div {
@@ -9872,7 +9879,7 @@ footer {
 
   .about-us .card-body > figure {
     flex: 0 0 8rem;
-    margin: 0 1rem 0 0;
+    margin: 0;
   }
 }
 
@@ -11150,8 +11157,9 @@ button#button-addon2 {
     padding: 3rem 0 !important;
 }
 
+
 p.lead.text-center.my-3 {
-    font-size: 1.625rem !important;
+    font-size: 1.25rem !important;
     line-height: 1.25;
 }
 
@@ -11278,6 +11286,11 @@ main.container {
     margin: 0 0 4rem;
     padding: 3rem 0;
   }
+
+main.container > aside {
+  margin-right:0;
+}
+
   main.container, #article {
     align-items: stretch;
     flex-flow: row wrap;
@@ -11445,7 +11458,6 @@ main.container {
     border-bottom-color: #fff !important;
     box-shadow: 0 4px 8px #adb5bd;
     height: 4.25rem;
-    padding: 0;
     z-index: 10;
 }
 
@@ -11466,10 +11478,6 @@ main.container {
 #a1[aria-expanded="true"]::before {
     content: "\2012";
     left: 12px;
-}
-
-.nav-link.active {
-    border-bottom-color: #fff !important;
 }
 
 .wrapper-preview-menu .action-preview-username-container {
@@ -11761,9 +11769,6 @@ aside {
     #results {
       flex: 1 1;
     }
-    #filter {
-      order: initial;
-    }
   }
   #basic-data-facets {
     display: block !important;
@@ -11771,7 +11776,15 @@ aside {
       font-size: 87.5%;
     }
   }
-
+  #filter {
+    border-right: 1px solid #dee2e6;
+    margin-right: 2rem;
+    order: -1 !important;
+    padding-right: 2rem;
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -12535,4 +12548,96 @@ fieldset {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+main.container .d-flex>article header a.red { color: #D0353F; line-height: 1.625; font-size: 1rem; padding: 0.375rem 0.75rem; text-transform:none }
+main.container .d-flex>article header a.red:hover { color:white }
+
+
+
+.jumbotronn {
+  background-color: #f8f9fa;
+}
+
+main.container nav,
+.jumbotronn > .container nav {
+  margin-top: 0;
+    overflow: hidden;
+    padding-left: 1px;
+    position: relative;
+    top: 1px;
+}
+
+main.container nav .nav-tabs,
+.jumbotronn > .container nav .nav-tabs {
+  align-items: flex-end;
+  border-color: #ced4da;
+  justify-content: stretch;
+}
+
+main.container nav .nav-tabs .nav-item,
+.jumbotronn > .container nav .nav-tabs .nav-item {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ced4da;
+  color: #343a40;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 600;
+  height: 4rem;
+  justify-content: center;
+  /*
+        letter-spacing: .02em;
+        */
+  margin-left: -1px;
+  padding: 0;
+  /*
+        text-transform: uppercase;
+        */
+}
+
+main.container nav .nav-tabs .nav-item.active,
+.jumbotronn > .container nav .nav-tabs .nav-item.active {
+  background: #fff;
+  border-bottom-color: #fff;
+  box-shadow: 0 4px 8px #adb5bd;
+  height: 4.25rem;
+  padding: 0;
+  z-index: 10;
+
+.card-body > figure {
+  margin:0 0 1rem;
+}
+
+
+@media (max-width: 960px) {
+  #courses, .about-us {
+  padding: 2rem !important;
+  }
+  #content {
+  padding-top: 0;
+  margin: 0;
+}
+#courses-list-header {
+  padding-bottom:0;
+}
+aside .organizer-logo {
+margin:0 auto;
+}
+aside .hero {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+}
+
+@media (min-width: 480px) and (max-width: 1279px) {
+  .card-title {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  main.container > aside {
+    flex: 0 0 345px;
+  }
 }
