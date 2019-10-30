@@ -9478,7 +9478,7 @@ article .display-3::before {
   font-size: 14px;
 }
 
-.container nav[aria-label="breadcrumb"] {
+.container .has-breadcrumbs {
   /*
   border-bottom: 1px solid map_get($grays, "300");
   */
@@ -9488,38 +9488,38 @@ article .display-3::before {
   position: static;
 }
 
-.container nav[aria-label="breadcrumb"] .breadcrumb {
+.container .breadcrumbs {
   font-size: 14px;
   margin: 0;
   padding: 0;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(1)::after {
+.container .breadcrumbs .nav-item:nth-child(1)::after {
   content: "/";
   margin: 0 .5em 0 1em;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(2)::after {
+.container .breadcrumbs .nav-item:nth-child(2)::after {
   content: "/";
   margin: 0 .5em 0 1em;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(3)::after {
+.container .breadcrumbs .nav-item:nth-child(3)::after {
   content: "/";
   margin: 0 .5em 0 1em;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(3)::before {
+.container .breadcrumbs .nav-item:nth-child(3)::before {
   content: "Lekcja:";
   font-style: italic;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(2)::before {
+.container .breadcrumbs .nav-item:nth-child(2)::before {
   content: "Moduł: ";
   font-style: italic;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(4)::before {
+.container .breadcrumbs .nav-item:nth-child(4)::before {
   content: "Jednostka: ";
   font-style: italic;
 }
