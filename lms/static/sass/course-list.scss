@@ -12581,6 +12581,20 @@ main.container nav .nav-tabs .nav-item.active,
   margin: 0;
   border-top: 0 !important
 }
+.container .has-breadcrumbs {
+  margin-bottom: 0 !important;}
+
+
+solution {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#seq_content .btn-outline-light {
+  margin-top:2px;
+  margin-bottom:2px;
+}
 
   #header-login {
     border-bottom: 0;
@@ -12634,6 +12648,70 @@ button#section.subsection-text.accordion-trigger.bg1 {
   font-size: 14px;
 }
 
-.fas {
+.fas, .fa {
   margin-right: 0;
+}
+
+main.container .d-flex > article header {
+  margin-top: -1px;
+}
+
+#discovery-form1 {
+  padding: 0 !important;
+}
+
+#course-outline-block-tree {
+  margin-top: 10px;
+}
+
+#content .vert .problems-wrapper .problem .field {
+  border-top: 0 solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  align-items: center;
+  display: flex;
+  padding: 1rem 1rem 1rem 3rem;
+}
+
+#content .vert .problems-wrapper .problem .field:last-child {
+  border-bottom: none;
+}
+
+#content .vert .problems-wrapper .problem .field:first-child {
+  border-top: 0.5px solid #e9ecef;
+}
+
+.alert-danger {
+  color:
+#770f1d;
+background-color:
+#fad2d7;
+border-color:
+#f7c0c7;
+}
+
+.alert-success {
+    color: 
+#155724;
+background-color:
+#d4edda;
+border-color:
+#c3e6cb;
+}
+
+#content .vert .problems-wrapper .problem .notification, #content .vert .problems-wrapper .problem .notification.general {
+  display:flex;
+  align-items: center;
+}
+
+solution {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+fieldset label {
+  font-weight: normal;
+}
+
+#content .vert .problems-wrapper .problem p {
+  font-weight: 600;
 }
