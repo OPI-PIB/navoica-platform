@@ -42,7 +42,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, b, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
@@ -9482,7 +9482,6 @@ article .display-3::before {
   /*
   border-bottom: 1px solid map_get($grays, "300");
   */
-  margin-bottom: 3rem;
   overflow: hidden;
   padding: 0.5rem 0 1.5rem;
   position: static;
@@ -9496,17 +9495,17 @@ article .display-3::before {
 
 .container .breadcrumbs .nav-item:nth-child(1)::after {
   content: "/";
-  margin: 0 .5em 0 1em;
+  margin: 0 .5em 0 .5em;
 }
 
 .container .breadcrumbs .nav-item:nth-child(2)::after {
   content: "/";
-  margin: 0 .5em 0 1em;
+  margin: 0 .5em 0 .5em;
 }
 
 .container .breadcrumbs .nav-item:nth-child(3)::after {
   content: "/";
-  margin: 0 .5em 0 1em;
+  margin: 0 .5em 0 .5em
 }
 
 .container .breadcrumbs .nav-item:nth-child(3)::before {
@@ -9743,4 +9742,21 @@ article .display-3::before {
     color: initial;
     width: auto;
    }
+}
+
+#content .vert .problems-wrapper {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 0 1rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.course-content #results .d-flex {
+  margin-top: 0;
+}
+
+@media (min-width: 960px) {
+  main.container .d-flex > aside .sequence {
+    display: block !important;
+  }
 }
