@@ -17,13 +17,6 @@ from openedx.core.djangolib.markup import HTML
 from openedx.features.course_experience import course_home_page_title, COURSE_OUTLINE_PAGE_FLAG
 %>
 
-## Breadcrumb navigation
-<div class="page-header-main">
-    <nav aria-label="${_('Discussions')}" class="sr-is-focusable" tabindex="-1">
-        <div class="has-breadcrumbs"></div>
-    </nav>
-</div>
-
 <section class="discussion discussion-board page-content-container" id="discussion-container"
          data-course-id="${course.id}"
          data-user-create-comment="${json.dumps(can_create_comment)}"
@@ -32,14 +25,14 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
          data-sort-preference="${sort_preference}"
          data-flag-moderator="${json.dumps(flag_moderator)}"
          data-user-group-id="${user_group_id}">
-    <!-- <header class="page-header has-secondary"> -->
-<!--         ## Breadcrumb navigation
-        <div class="page-header-main">
-            <nav aria-label="${_('Discussions')}" class="sr-is-focusable" tabindex="-1">
-                <div class="has-breadcrumbs"></div>
-            </nav>
-        </div> -->
+
         <div class="page-header-secondary">
+          ## Breadcrumb navigation
+          <div class="page-header-main">
+              <nav aria-label="${_('Discussions')}" class="sr-is-focusable" tabindex="-1">
+                  <div class="has-breadcrumbs"></div>
+              </nav>
+          </div>
             ## Add Post button
             % if has_permission(user, 'create_thread', course.id):
             <div class="forum-actions">
