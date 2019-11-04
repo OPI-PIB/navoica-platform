@@ -2256,7 +2256,7 @@ fieldset:disabled a.btn {
 .btn-light {
   color: #212529;
   background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  border-color: #adb5bd;
 }
 
 .btn-light:hover {
@@ -7163,7 +7163,7 @@ button.bg-dark:focus {
 }
 
 .p-2 {
-  padding: 1rem !important;
+  padding: 0 !important;
 }
 
 .pt-2,
@@ -9094,6 +9094,7 @@ main.container .d-flex>article header a.red:hover { color:white }
 main.container .d-flex section,
 .jumbotron > .container .d-flex section {
   margin-bottom: 3rem;
+  margin-top: 5px;
 }
 
 /*.jumbotronn {
@@ -9464,6 +9465,17 @@ article .display-3::before {
   color: #D0353F;
 }
 
+.accordion.subsection #section[aria-expanded="false"]::before {
+    content: "+";
+    left: 12px;
+  }
+
+ .accordion.subsection #section[aria-expanded="true"]::before {
+    content: "\2012";
+    left: 12px;
+  }
+
+
 .accordion .card-body .list-group-flush .list-group-item p {
   font-weight: 400;
 }
@@ -9666,7 +9678,7 @@ article .display-3::before {
   padding: .25rem .75rem;
 }
 
-.btn-sm i, .btn-group-sm > .btn i {
+.btn-group-sm > .btn i {
   margin-right: .5rem;
 }
 
@@ -9713,8 +9725,9 @@ article .display-3::before {
 }
 
 .problem-action-btn {
-  margin-right: 0 !important;
-  max-width: unset !important;
+  .show-label {
+    white-space: nowrap;
+  }
 }
 
 .submission-feedback {
@@ -9723,12 +9736,10 @@ article .display-3::before {
 }
 
 .submit-attempt-container {
-  padding: 0 !important;
+  padding-bottom: 1rem !important;
 }
 
 #content .vert .notification {
-  float: unset;
-  border-top: none;
   margin-top: unset;
   line-height: unset;
   .icon {
@@ -9742,6 +9753,10 @@ article .display-3::before {
     color: initial;
     width: auto;
    }
+     .notification-hint {
+    border: 1px solid #d9d9d9 !important;
+    float: left;
+  }
 }
 
 #content .vert .problems-wrapper {
@@ -9759,4 +9774,8 @@ article .display-3::before {
   main.container .d-flex > aside .sequence {
     display: block !important;
   }
+}  
+
+.wrap-instructor-info .btn-debug {
+  margin-right: .25rem;
 }

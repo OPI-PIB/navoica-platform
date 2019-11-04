@@ -2,8 +2,9 @@
 
 # This will copy each source language to a new directory at the end of the i18n generate step
 # which allows us to migrate to a new locale code without re-creating the Transifex project.
-edx_lang_map:
-    zh_CN: zh_HANS
+#edx_lang_map:
+#    en: pl
+TRANSIFEX_URL: 'https://www.transifex.com/navoica/navoica-1/'
 
 locales:
     - en  # English - Source Language
