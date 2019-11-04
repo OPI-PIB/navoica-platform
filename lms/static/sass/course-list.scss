@@ -12740,3 +12740,21 @@ fieldset label {
 #content .vert .problems-wrapper .problem p {
   font-weight: 600;
 }
+
+button#section.subsection-text.accordion-trigger.bg1[aria-expanded="false"]::before {
+        content: "+";
+        left: 12px;
+      }
+
+button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::before {
+        content: "\2012";
+        left: 12px;
+      }
+
+#content .vert .problems-wrapper .problem [class*="inputtype"] {
+  border: 0;
+}      
+
+#seq_content .vert {
+  border-top:0;
+}
