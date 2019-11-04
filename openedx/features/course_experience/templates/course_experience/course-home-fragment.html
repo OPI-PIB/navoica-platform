@@ -56,12 +56,16 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
     <article id="results">
          <header class="d-flex justify-content-between">
             <h2 id="h2">Spis treści</h2>
-              <button class="btn btn-sm btn-outline-primary"
-                      id="expand-collapse-outline-all-button"
-                      aria-expanded="false"
-                      aria-controls="course-outline-block-tree">
-               <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
-               </button>
+             % if resume_course_url:
+                    <a class="btn btn-sm btn-outline-primary red" href="${resume_course_url}">
+                        % if has_visited_course:
+                            <span data-action-type="resume">${_("Resume Course")}</span>
+                        % else:
+                            <span data-action-type="start">${_("Start Course")}</span>
+                        % endif
+                    </a>
+                % endif
+              
           </header>
 
             % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
@@ -82,15 +86,12 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                 </div>
             % endif
         <div class="form-actions">
-                % if resume_course_url:
-                    <a class="btn btn-primary action-resume-course" href="${resume_course_url}">
-                        % if has_visited_course:
-                            <span data-action-type="resume">${_("Resume Course")}</span>
-                        % else:
-                            <span data-action-type="start">${_("Start Course")}</span>
-                        % endif
-                    </a>
-                % endif
+               <button class="btn btn-primary action-resume-course"
+                      id="expand-collapse-outline-all-button"
+                      aria-expanded="false"
+                      aria-controls="course-outline-block-tree">
+               <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
+               </button>
             </div>
 
        <section class="faq">

@@ -3,216 +3,483 @@
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("Terms of Service")}</%block>
-
+<div class="container">
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="container about">
-       <h2><span lang="pl-PL">Regulamin korzystania z usług elektronicznych
+        <h2><span lang="pl-PL">Regulamin korzystania z usług elektronicznych
 dostępnych na platformie edukacyjnej Navoica</span></h2>
-<p>
+        <p>
+        </p>
+        <p align="justify"><span lang="pl-PL"><strong>Słownik pojęć</strong></span></p>
+        <p align="justify"><span
+                lang="pl-PL">W rozumieniu niniejszego regulaminu niżej wymienione pojęcia oznaczają:</span></p>
+        <ol style="PADDING-LEFT: 75px">
+            <li>Adres email – oznaczenie systemu teleinformatycznego umożliwiające porozumiewanie się za pomocą środków
+                komunikacji elektronicznej, w szczególności poczty elektronicznej;
+            </li>
+            <li>Formularz rejestracyjny – formularz on–line wypełniany przez osobę fizyczną w celu założenia Konta
+                uprawniającego do korzystania z usług świadczonych za pośrednictwem platformy Navoica przypisanych do
+                Konta;
+            </li>
+            <li>Hasło – ciąg znaków umożliwiający Użytkownikowi na autoryzowany dostęp do Konta;</li>
+            <li>Informacja o usłudze – każda informacja przeznaczona bezpośrednio lub pośrednio do promowania Usług
+                i/lub Platformy za pomocą środków komunikacji elektronicznej z Użytkownikiem;
+            </li>
+            <li>Konto – dostępny za pośrednictwem Platformy zbiór zasobów i ustawień utworzonych dla Użytkownika
+                umożliwiający mu korzystanie po zalogowaniu z dostępnych aktualnie funkcjonalności oraz przypisanych
+                Usług;
+            </li>
+            <li>Operator techniczny – Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy z siedzibą w
+                Warszawie, al. Niepodległości 188b, wpisany do rejestru przedsiębiorców prowadzonego przez Sąd Rejonowy
+                dla m.st. Warszawy, XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem 0000127372, NIP 525
+                – 000 – 91 – 40, REGON 006746090. Operator techniczny zapewnia utrzymanie Platformy edukacyjnej we
+                właściwym środowisku informatycznym, odpowiada za prawidłowe świadczenie Usług pod względem technicznym
+                oraz wspiera użytkowników w zakresie sposobów korzystania z Usługi;
+            </li>
+            <li>Operator merytoryczny – Fundacja Młodej Nauki z siedzibą w Warszawie przy ul. Uniwersyteckiej 5 lok. 12,
+                02-036 Warszawa. Operator merytoryczny odpowiada za pozyskiwanie, dobór oraz prezentowanie kursów
+                on-line udostępnianych na Platformie;
+            </li>
+            <li>Platforma lub Platforma edukacyjna – należący do Usługodawcy serwis internetowy o nazwie "Navoica", za
+                pośrednictwem którego udostępniane są Usługi. Portal prowadzony jest pod adresem URL <a
+                        href="http://navoica.pl">http://navoica.pl</a>;
+            </li>
+            <li>Regulamin – niniejszy regulamin, określający warunki świadczenia usług drogą elektroniczną za
+                pośrednictwem Portalu;
+            </li>
+            <li>RODO - Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 w sprawie ochrony osób fizycznych w
+                związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia
+                dyrektywy 95/46/WE
+            </li>
+            <li>Umowa – oznacza umowę pomiędzy Usługodawcą a Użytkownikiem zawieraną na warunkach określonych w
+                Regulaminie, której przedmiotem jest świadczenie usług drogą elektroniczną, w rozumieniu ustawy z dnia
+                18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. U. z 2017, poz. 1279 z późn. zm.);
+            </li>
+            <li>Usługodawca – Minister właściwy ds. nauki i szkolnictwa wyższego z siedzibą przy ul. Wspólnej 1/3,
+                00-529 Warszawa;
+            </li>
+            <li>Usługa – usługi świadczone drogą elektroniczną przez Usługodawcę w ramach Platformy edukacyjnej wskazane
+                w rozdziale IV Regulaminu;
+            </li>
+            <li>Użytkownik – każda osoba fizyczna posiadająca Konto.</li>
+        </ol>
 
-</p>
-<p align="justify"><span lang="pl-PL"><strong>Słownik pojęć</strong></span></p>
-<p align="justify"><span lang="pl-PL">W rozumieniu niniejszego regulaminu niżej wymienione pojęcia oznaczają:</span></p>
-<ol style="PADDING-LEFT: 75px">
-	<li>Adres email – oznaczenie systemu teleinformatycznego umożliwiające porozumiewanie się za pomocą środków komunikacji elektronicznej, w szczególności poczty elektronicznej;</li>
-	<li>Formularz rejestracyjny – formularz on–line wypełniany przez osobę fizyczną w celu założenia Konta uprawniającego do korzystania z usług świadczonych za pośrednictwem platformy Navoica przypisanych do Konta;</li>
-	<li>Hasło – ciąg znaków umożliwiający Użytkownikowi na autoryzowany dostęp do Konta;</li>
-	<li>Informacja o usłudze – każda informacja przeznaczona bezpośrednio lub pośrednio do promowania Usług i/lub Platformy za pomocą środków komunikacji elektronicznej z Użytkownikiem;</li>
-    <li>Konto – dostępny za pośrednictwem Platformy zbiór zasobów i ustawień utworzonych dla Użytkownika umożliwiający mu korzystanie po zalogowaniu z dostępnych aktualnie funkcjonalności oraz przypisanych Usług;</li>
-    <li>Operator techniczny – Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy z siedzibą w Warszawie, al. Niepodległości 188b, wpisany do rejestru przedsiębiorców prowadzonego przez Sąd Rejonowy dla m.st. Warszawy, XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem 0000127372, NIP 525 – 000 – 91 – 40, REGON 006746090. Operator techniczny zapewnia utrzymanie Platformy edukacyjnej we właściwym środowisku informatycznym, odpowiada za prawidłowe świadczenie Usług pod względem technicznym  oraz wspiera użytkowników w zakresie sposobów korzystania z Usługi;</li>
-    <li>Operator merytoryczny – Fundacja Młodej Nauki z siedzibą w Warszawie przy ul. Uniwersyteckiej 5 lok. 12, 02-036 Warszawa. Operator merytoryczny odpowiada za pozyskiwanie, dobór oraz prezentowanie kursów on-line udostępnianych na Platformie;</li>
-    <li>Platforma lub Platforma edukacyjna – należący do Usługodawcy serwis internetowy o nazwie "Navoica", za pośrednictwem którego udostępniane są Usługi. Portal prowadzony jest pod adresem URL <a href="http://navoica.pl">http://navoica.pl</a>;</li>
-    <li>Regulamin – niniejszy regulamin, określający warunki świadczenia usług drogą elektroniczną za pośrednictwem Portalu;</li>
-    <li>RODO - Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE</li>
-    <li>Umowa – oznacza umowę pomiędzy Usługodawcą a Użytkownikiem zawieraną na warunkach określonych w Regulaminie, której przedmiotem jest świadczenie usług drogą elektroniczną, w rozumieniu ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. U. z 2017, poz. 1279 z późn. zm.);</li>
-    <li>Usługodawca – Minister właściwy ds. nauki i szkolnictwa wyższego z siedzibą przy ul. Wspólnej 1/3, 00-529 Warszawa;</li>
-    <li>Usługa – usługi świadczone drogą elektroniczną przez Usługodawcę w ramach Platformy edukacyjnej wskazane w rozdziale IV Regulaminu;</li>
-    <li>Użytkownik – każda osoba fizyczna posiadająca Konto.</li>
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Postanowienia ogólne</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Regulamin określa zasady korzystania przez Użytkowników z Usług oraz warunki ich świadczenia przez
+                Usługodawcę.
+            </li>
+            <li>Warunkiem rozpoczęcia korzystania z Usług jest zawarcie Umowy zgodnie z Regulaminem.</li>
+            <li>Usługodawca zastrzega sobie prawo do określenia szczegółowych zasad oraz zakresu świadczenia
+                poszczególnych Usług w odrębnych regulaminach.
+            </li>
+            <li>Regulamin jest udostępniany nieprzerwanie na Platformie edukacyjnej w sposób umożliwiający Użytkownikom
+                jego pozyskanie, odtwarzanie i utrwalanie jego treści.
+            </li>
+            <li>Korzystanie z Usług możliwe jest jedynie w przypadku akceptacji Regulaminu. Użytkownicy, którzy nie
+                akceptują Regulaminu, nie mogą korzystać z Usług, ani żądać jakichkolwiek świadczeń ze strony
+                Usługodawcy.
+            </li>
+            <li>Użytkownicy mają możliwość korzystania z portali i usług świadczonych za pośrednictwem Platformy poprzez
+                stosowne połączenia do stron internetowych innych usługodawców lub portali. W sytuacji opisanej w zdaniu
+                poprzednim stosuje się odpowiednie przepisy prawa, regulaminy lub inne dokumenty określone dla tych
+                portali lub usług. Usługodawca w takim przypadku nie jest stroną umów o świadczenie usług drogą
+                elektroniczną zawieranych pomiędzy Użytkownikiem a usługodawcą, o którym mowa w zdaniu pierwszym, ani
+                też nie ponosi odpowiedzialności za usługi świadczone na rzecz Użytkowników przez tych usługodawców.
+            </li>
+            <li>W sprawach nieuregulowanych Regulaminem mają zastosowanie obowiązujące w tym zakresie przepisy prawa
+                polskiego, a wszelkie spory rozstrzygane będą przez sądy polskie właściwe dla Usługodawcy.
+            </li>
+            <li>W odniesieniu do praw i obowiązków określonych w Regulaminie i przypisanych Usługodawcy w zakresie ich
+                realizacji w jego imieniu działa Operator techniczny, który pełni również rolę punktu kontaktowego dla
+                Usługodawcy.
+            </li>
+        </ol>
 
-<p align="justify"><span lang="pl-PL"><strong>Postanowienia ogólne</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Regulamin określa zasady korzystania przez Użytkowników z Usług oraz warunki ich świadczenia przez Usługodawcę.</li>
-    <li>Warunkiem rozpoczęcia korzystania z Usług jest zawarcie Umowy zgodnie z Regulaminem.</li>
-    <li>Usługodawca zastrzega sobie prawo do określenia szczegółowych zasad oraz zakresu świadczenia poszczególnych Usług w odrębnych regulaminach.</li>
-    <li>Regulamin jest udostępniany nieprzerwanie na Platformie edukacyjnej w sposób umożliwiający Użytkownikom jego pozyskanie, odtwarzanie i utrwalanie jego treści.</li>
-    <li>Korzystanie z Usług możliwe jest jedynie w przypadku akceptacji Regulaminu. Użytkownicy, którzy nie akceptują Regulaminu, nie mogą korzystać z Usług, ani żądać jakichkolwiek świadczeń ze strony Usługodawcy.</li>
-    <li>Użytkownicy mają możliwość korzystania z portali i usług świadczonych za pośrednictwem Platformy poprzez stosowne połączenia do stron internetowych innych usługodawców lub portali. W sytuacji opisanej w zdaniu poprzednim stosuje się odpowiednie przepisy prawa, regulaminy lub inne dokumenty określone dla tych portali lub usług. Usługodawca w takim przypadku nie jest stroną umów o świadczenie usług drogą elektroniczną zawieranych pomiędzy Użytkownikiem a usługodawcą, o którym mowa w zdaniu pierwszym, ani też nie ponosi odpowiedzialności za usługi świadczone na rzecz Użytkowników przez tych usługodawców.</li>
-    <li>W sprawach nieuregulowanych Regulaminem mają zastosowanie obowiązujące w tym zakresie przepisy prawa polskiego, a wszelkie spory rozstrzygane będą przez sądy polskie właściwe dla Usługodawcy.</li>
-    <li>W odniesieniu do praw i obowiązków określonych w Regulaminie i przypisanych Usługodawcy w zakresie ich realizacji w jego imieniu działa Operator techniczny, który pełni również rolę punktu kontaktowego dla Usługodawcy.</li>
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Warunki techniczne</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Warunkiem technicznym korzystania z Usług jest posiadanie komputera lub urządzenia mobilnego typu
+                laptop, tablet lub smartfon z dostępem do sieci Internet i z zainstalowaną przeglądarką internetową
+                wskazaną w ust.2 oraz Adresu e-mail działającego na dowolnym serwerze.
+            </li>
+            <li>Korzystanie z Platformy edukacyjnej możliwe jest zasadniczo przy spełnieniu następujących wymagań
+                technicznych:
+                <ol type="a">
+                    <li>przeglądarki: Edge 43 lub wyższy, Google Chrome 70 lub wyższy, Mozilla Firefox 61 lub wyższy,
+                        Safari 12 lub wyższy, Opera 56 lub wyższy;
+                    </li>
+                    <li>włączona obsługa cookies (ciasteczek) oraz Local Storage;</li>
+                    <li> włączona obsługa JavaScript w przeglądarce.</li>
+                </ol>
+            </li>
+            <li>W celu korzystania z Usługi urządzenie mobilne musi mieć zapewnione aktywne połączenie internetowe.</li>
+            <li>Usługodawca zastrzega i informuje, że korzystanie z Platformy edukacyjnej może wiązać się ze
+                standardowym ryzykiem związanym z korzystania sieci Internet oraz rekomenduje Użytkownikom podjęcie
+                odpowiednich kroków celem jego zminimalizowania, w szczególności stosowania odpowiednich zabezpieczeń
+                urządzeń informatycznych z których Użytkownik korzysta z Usługi, nieudostępniania loginu i hasła,
+                korzystania z programów antywirusowych oraz aktualnych przeglądarek internetowych.
+            </li>
+        </ol>
 
-<p align="justify"><span lang="pl-PL"><strong>Warunki techniczne</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Warunkiem technicznym korzystania z Usług jest posiadanie komputera lub urządzenia mobilnego typu laptop, tablet lub smartfon z dostępem do sieci Internet i z zainstalowaną przeglądarką internetową wskazaną w ust.2 oraz Adresu e-mail działającego na dowolnym serwerze.</li>
-    <li>Korzystanie z Platformy edukacyjnej możliwe jest zasadniczo przy spełnieniu następujących wymagań technicznych: <ol type="a">
-        <li>przeglądarki: Edge 43 lub wyższy, Google Chrome 70 lub wyższy, Mozilla Firefox 61 lub wyższy, Safari 12 lub wyższy, Opera 56 lub wyższy;</li>
-        <li>włączona obsługa cookies (ciasteczek) oraz Local Storage;</li>
-        <li> włączona obsługa JavaScript w przeglądarce.</li>
-    </ol></li>
-    <li>W celu korzystania z Usługi urządzenie mobilne musi mieć zapewnione aktywne połączenie internetowe.</li>
-    <li>Usługodawca zastrzega i informuje, że korzystanie z Platformy edukacyjnej może wiązać się ze standardowym ryzykiem związanym z korzystania sieci Internet oraz rekomenduje Użytkownikom podjęcie odpowiednich kroków celem jego zminimalizowania, w szczególności stosowania odpowiednich zabezpieczeń urządzeń informatycznych z których Użytkownik korzysta z Usługi, nieudostępniania loginu i hasła, korzystania z programów antywirusowych oraz aktualnych przeglądarek internetowych.</li>
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Zakres usług</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Usługodawca świadczy Usługi zgodnie z Regulaminem.</li>
+            <li>Usługa świadczona na rzecz Użytkownika polega na:
+                <ol type="a">
+                    <li>możliwości pozyskania informacji o aktualnie prowadzonych kursach kompetencyjnych zamieszczanych
+                        przez Operatora merytorycznego,
+                    </li>
+                    <li>udostępnianiu powyższych kursów w taki sposób, aby Użytkownik spełniając warunki techniczne
+                        określone w Regulaminie miał do nich dostęp w miejscu i czasie przez siebie wybranym i mógł się
+                        zarejestrować w celu korzystania z nich,
+                    </li>
+                    <li>korzystanie z kursów podnoszących kompetencje i umiejętności Użytkowników,</li>
+                    <li>możliwości zgłaszania uwag lub kierowania zapytań za pośrednictwem dedykowanych formularzy,</li>
+                    <li>możliwość zarejestrowania się w celu korzystania z wybranych kursów,</li>
+                    <li>rejestrowanie i utrzymanie Konta dla Użytkownika,</li>
+                    <li>przesyłanie informacji o kursach, na żądanie Użytkowników lub po wyrażeniu dodatkowej zgody,
+                    </li>
+                    <li>administrowanie i utrzymanie Konta,</li>
+                    <li>wydawanie zaświadczeń ukończenia kursu.</li>
+                </ol>
+            </li>
+            <li>Korzystnie przez Użytkownika z kursów dostępnych na Platformie następuje za pośrednictwem utworzonego
+                Konta i wymaga dodatkowego zapisania na wybrany kurs on-line.
+            </li>
+            <li>Dostęp do świadczonych Usług jest bezpłatny, w szczególności nie są pobierane opłaty za dokonanie
+                rejestracji Konta, korzystanie z kursów, korzystanie z dostępnych formularzy.
+            </li>
+        </ol>
 
-<p align="justify"><span lang="pl-PL"><strong>Zakres usług</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Usługodawca świadczy Usługi zgodnie z Regulaminem.</li>
-    <li>Usługa świadczona na rzecz Użytkownika polega na:<ol type="a">
-        <li>możliwości pozyskania informacji o aktualnie prowadzonych kursach kompetencyjnych zamieszczanych przez Operatora merytorycznego,</li>
-        <li>udostępnianiu powyższych kursów w taki sposób, aby Użytkownik spełniając warunki techniczne określone w Regulaminie miał do nich dostęp w miejscu i czasie przez siebie wybranym i mógł się zarejestrować w celu korzystania z nich,</li>
-        <li>korzystanie z kursów podnoszących kompetencje i umiejętności Użytkowników,</li>
-        <li>możliwości zgłaszania uwag lub kierowania zapytań za pośrednictwem dedykowanych formularzy,</li>
-        <li>możliwość zarejestrowania się w celu korzystania z wybranych kursów,</li>
-        <li>rejestrowanie i utrzymanie Konta dla Użytkownika,</li>
-        <li>przesyłanie informacji o kursach, na żądanie Użytkowników lub po wyrażeniu dodatkowej zgody,</li>
-        <li>administrowanie i utrzymanie Konta,</li>
-        <li>wydawanie zaświadczeń ukończenia kursu.</li>
-    </ol></li>
-    <li>Korzystnie przez Użytkownika z kursów dostępnych na Platformie następuje za pośrednictwem utworzonego Konta i wymaga dodatkowego zapisania na wybrany kurs on-line.</li>
-    <li>Dostęp do świadczonych Usług jest bezpłatny, w szczególności nie są pobierane opłaty za dokonanie rejestracji Konta, korzystanie z kursów, korzystanie z dostępnych formularzy.</li>
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Zawarcie i rozwiązanie Umowy</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Umowa zostaje zawarta odpowiednio z chwilą akceptacji Regulaminu.</li>
+            <li>Użytkownik zawierając Umowę oświadcza, że zapoznał się z Regulaminem i akceptują w całości jego
+                postanowienia.
+            </li>
+            <li>Umowa z Użytkownikiem zostaje zawarta na czas nieokreślony.</li>
+            <li>Użytkownik może rozwiązać Umowę w każdym czasie poprzez zgłoszenie odpowiedniego oświadczenia na adres
+                e-mail <a href="mailto:mooc_hepl@opi.org.pl">mooc_hepl@opi.org.pl</a> lub listownie na adres Operatora
+                technicznego. Skutkiem rozwiązania umowy jest usunięcie Konta i brak możliwości korzystania z Usług.
+            </li>
+            <li>Usługodawca lub działający w jego imieniu Operator techniczny ma prawo: rozwiązać Umowę lub zablokować
+                Konto Użytkownika w następujących przypadkach:
+                <ol type="a">
+                    <li>zmiany obowiązujących przepisów prawa lub działalności statutowej,</li>
+                    <li>powzięcia uzasadnionych informacji, że Użytkownik korzysta z Usług w sposób sprzeczny z prawem,
+                        dobrymi obyczajami, naruszają dobra osobiste osób trzecich lub uzasadnione interesy Usługodawcy,
+                        Operatora technicznego lub Operatora merytorycznego,
+                    </li>
+                    <li>umieszczania przez Usługobiorcę treści niezgodnych z Regulaminem,</li>
+                    <li>uznania wniesionego sprzeciwu z przyczyn związanych ze szczególną sytuacją Użytkownika, zgodnie
+                        z art. 21 RODO,
+                    </li>
+                    <li>braku akceptacji zmian w Regulaminie.</li>
+                </ol>
+            </li>
+            <li>O rozwiązaniu umowy Usługodawca lub działające w jego imieniu Operator techniczny poinformuje
+                Użytkownika najpóźniej w terminie 72 godzin od zaistnienia okoliczności uzasadniających rozwiązanie
+                Umowy, przesyłając stosowane oświadczenie na Adres e-mail Użytkownika podany odpowiednio w procesie
+                rejestracji Konta. Rozwiązanie Umowy następuje w terminie 14 dni od przesłania oświadczenia.
+            </li>
 
-<p align="justify"><span lang="pl-PL"><strong>Zawarcie i rozwiązanie Umowy</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Umowa zostaje zawarta odpowiednio z chwilą akceptacji Regulaminu.</li>
-    <li>Użytkownik zawierając Umowę oświadcza, że zapoznał się z Regulaminem i akceptują w całości jego postanowienia.</li>
-    <li>Umowa z Użytkownikiem zostaje zawarta na czas nieokreślony.</li>
-    <li>Użytkownik może rozwiązać Umowę w każdym czasie poprzez zgłoszenie odpowiedniego oświadczenia na adres e-mail <a href="mailto:mooc_hepl@opi.org.pl">mooc_hepl@opi.org.pl</a> lub listownie na adres Operatora technicznego. Skutkiem rozwiązania umowy jest usunięcie Konta i brak możliwości korzystania z Usług.</li>
-    <li>Usługodawca lub działający w jego imieniu Operator techniczny ma prawo: rozwiązać Umowę lub zablokować Konto Użytkownika w następujących przypadkach:<ol type="a">
-        <li>zmiany obowiązujących przepisów prawa lub działalności statutowej,</li>
-        <li>powzięcia uzasadnionych informacji, że Użytkownik korzysta z Usług w sposób sprzeczny z prawem, dobrymi obyczajami, naruszają dobra osobiste osób trzecich lub uzasadnione interesy Usługodawcy, Operatora technicznego lub Operatora merytorycznego,</li>
-        <li>umieszczania przez Usługobiorcę treści niezgodnych z Regulaminem,</li>
-        <li>uznania wniesionego sprzeciwu z przyczyn związanych ze szczególną sytuacją Użytkownika, zgodnie z art. 21 RODO,</li>
-        <li>braku akceptacji zmian w Regulaminie.</li>
-    </ol></li>
-    <li>O rozwiązaniu umowy Usługodawca lub działające w jego imieniu Operator techniczny poinformuje Użytkownika najpóźniej w terminie 72 godzin od zaistnienia okoliczności uzasadniających rozwiązanie Umowy, przesyłając stosowane oświadczenie na Adres e-mail Użytkownika podany odpowiednio w procesie rejestracji Konta. Rozwiązanie Umowy następuje w terminie 14 dni od przesłania oświadczenia.</li>
+        </ol>
 
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Rejestracja konta</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Użytkownik chcąc korzystać z kursów on-line dostępnych aktualnie na Platformie powinien dokonać procesu
+                rejestracji i założyć Konto. Konto zakłada się w procesie rejestracji poprzez wypełnienie Formularza
+                rejestracyjnego, podanie danych obowiązkowych oraz zapoznanie się i zaakceptowanie Regulaminu.
+            </li>
+            <li>Proces rejestracji polega na wypełnieniu i przesłaniu formularza dostępnego pod adresem: <a
+                    href="https://navoica.pl/register">https://navoica.pl/register</a></li>
+            <li>Operator techniczny po otrzymaniu prawidłowo wypełnionego Formularza rejestracyjnego i akceptacji
+                Regulaminu, utworzy dla Użytkownika, o którym mowa w ust. 1, unikalne Konto o identyfikatorze będącym
+                podanym przez niego Adresem e-mail poczty elektronicznej i wybranej nazwie.
+            </li>
+            <li>Adres email jest powiązany z Kontem i stanowi konieczną formę identyfikacji wobec Użytkownika i będzie
+                wykorzystywany do wszelkiej korespondencji związanej ze świadczeniem Usług.
+            </li>
+            <li>Operator techniczny może odmówić utworzenia Konta o określonej nazwie, jeżeli jest ona już używana przez
+                innych Użytkowników lub jeżeli poweźmie uzasadnioną, wiarygodną informację, że jest ona sprzeczna z
+                prawem, dobrymi obyczajami, narusza dobra osobiste lub uzasadnione interesy jakichkolwiek osób trzecich.
+            </li>
+            <li>Konto jest aktywne w ciągu 24 godzin od zakończenia procesu rejestracji.</li>
+            <li>Użytkownik wskazany w ust. 1 uzyskuje dostęp do Konta za pomocą swojego adresu email oraz hasła.
+                Jednocześnie zobowiązany jest nie ujawniać jakiejkolwiek osobie nieuprawnionej w jego imieniu hasła i
+                ponosi wyłączną odpowiedzialność za szkody wyrządzone na skutek jego ujawnienia.
+            </li>
 
-<p align="justify"><span lang="pl-PL"><strong>Rejestracja konta</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Użytkownik chcąc korzystać z kursów on-line dostępnych aktualnie na Platformie powinien dokonać procesu rejestracji i założyć Konto. Konto zakłada się w procesie rejestracji poprzez wypełnienie Formularza rejestracyjnego, podanie danych obowiązkowych oraz zapoznanie się i zaakceptowanie Regulaminu.</li>
-    <li>Proces rejestracji polega na wypełnieniu i przesłaniu formularza dostępnego pod adresem: <a href="https://navoica.pl/register">https://navoica.pl/register</a></li>
-    <li>Operator techniczny po otrzymaniu prawidłowo wypełnionego Formularza rejestracyjnego i akceptacji Regulaminu, utworzy dla Użytkownika, o którym mowa w ust. 1, unikalne Konto o identyfikatorze będącym podanym przez niego Adresem e-mail poczty elektronicznej i wybranej nazwie.</li>
-    <li>Adres email jest powiązany z Kontem i stanowi konieczną formę identyfikacji wobec Użytkownika i będzie wykorzystywany do wszelkiej korespondencji związanej ze świadczeniem Usług.</li>
-    <li>Operator techniczny może odmówić utworzenia Konta o określonej nazwie, jeżeli jest ona już używana przez innych Użytkowników lub jeżeli poweźmie uzasadnioną, wiarygodną informację, że jest ona sprzeczna z prawem, dobrymi obyczajami, narusza dobra osobiste lub uzasadnione interesy jakichkolwiek osób trzecich.</li>
-    <li>Konto jest aktywne w ciągu 24 godzin od zakończenia procesu rejestracji.</li>
-    <li>Użytkownik wskazany w ust. 1 uzyskuje dostęp do Konta za pomocą swojego adresu email oraz hasła. Jednocześnie zobowiązany jest nie ujawniać jakiejkolwiek osobie nieuprawnionej w jego imieniu hasła i ponosi wyłączną odpowiedzialność za szkody wyrządzone na skutek jego ujawnienia.</li>
+        </ol>
 
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Zasady korzystania z Usług</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Korzystanie z Usług jest dobrowolne.</li>
+            <li>W celu sprawnej realizacji Usługi Użytkownik akceptuje konieczność posiadania aktualnego, czynnego
+                adresu e-mail. Adres ten jest podawany bezpośrednio w Formularzu rejestracyjnym. Usługobiorca
+                zobowiązany jest do bieżącego monitorowania podanego adresu e-mail, a w przypadku jego zmiany – do
+                niezwłocznego zaktualizowania tej informacji lub poinformowania Operatora technicznego.
+            </li>
+            <li>Korzystając z Usług Użytkownik zobowiązuje się do podania prawdziwych danych wymaganych w procesie
+                rejestracji Konta.
+            </li>
+            <li>Użytkownik ponosi całkowitą odpowiedzialność za nieprawdziwość złożonych oświadczeń i zapewnień oraz za
+                niedopełnienie zobowiązań wynikających z Regulaminu.
+            </li>
+            <li>Korzystając z narzędzi umożliwiających przekazywanie informacji dostępnych za pośrednictwem Platformy
+                należy wprowadzać dane w polach do tego przeznaczonych. Pola mogą zawierać tylko te dane, do których
+                zostały przeznaczone.
+            </li>
+            <li>Niedopuszczalne jest posiadanie więcej niż jednego Konta dla tego samego Użytkownika.</li>
+            <li>Zabrania się udostępniania Konta innym podmiotom.</li>
+            <li>Niedopuszczalne są działania mogące utrudniać lub destabilizować działanie Platformy lub Usług.</li>
+            <li>Użytkownik jest zobowiązany w szczególności do:
+                <ol type="a">
+                    <li>powstrzymywania się od jakichkolwiek działań mogących utrudnić lub zakłócić funkcjonowanie
+                        Platformy oraz od korzystania z Usług w sposób uciążliwy dla innych Użytkowników,
+                    </li>
+                    <li>przestrzegania autorskich praw majątkowych oraz praw wynikających z rejestracji wynalazków,
+                        patentów, znaków towarowych, wzorów użytkowych i przemysłowych innych osób,
+                    </li>
+                    <li>powstrzymywania się od jakichkolwiek działań naruszających prywatność, w szczególności
+                        zbierania, przetwarzania i rozpowszechniania informacji o Usługobiorcach nie będących
+                        Jednostkami naukowymi bez ich wyraźnej zgody, chyba że jest to dozwolone przez przepisy prawa i
+                        Regulamin,
+                    </li>
+                    <li>wykorzystywania Usług do celów komercyjnych.</li>
+                </ol>
+            </li>
+        </ol>
+        <p align="justify"><span lang="pl-PL"><strong>Prawa i obowiązki Usługodawcy/ Operatora technicznego/ Operatora merytorycznego</strong></span>
+        </p>
 
-<p align="justify"><span lang="pl-PL"><strong>Zasady korzystania z Usług</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Korzystanie z Usług jest dobrowolne.</li>
-    <li>W celu sprawnej realizacji Usługi Użytkownik akceptuje konieczność posiadania aktualnego, czynnego adresu e-mail. Adres ten jest podawany bezpośrednio w Formularzu rejestracyjnym. Usługobiorca zobowiązany jest do bieżącego monitorowania podanego adresu e-mail, a w przypadku jego zmiany – do niezwłocznego zaktualizowania tej informacji lub poinformowania Operatora technicznego. </li>
-    <li>Korzystając z Usług Użytkownik zobowiązuje się do podania prawdziwych danych wymaganych w procesie rejestracji Konta.</li>
-    <li>Użytkownik ponosi całkowitą odpowiedzialność za nieprawdziwość złożonych oświadczeń i zapewnień oraz za niedopełnienie zobowiązań wynikających z Regulaminu.</li>
-    <li>Korzystając z narzędzi umożliwiających przekazywanie informacji dostępnych za pośrednictwem Platformy należy wprowadzać dane w polach do tego przeznaczonych. Pola mogą zawierać tylko te dane, do których zostały przeznaczone.</li>
-    <li>Niedopuszczalne jest posiadanie więcej niż jednego Konta dla tego samego Użytkownika.</li>
-    <li>Zabrania się udostępniania Konta innym podmiotom.</li>
-    <li>Niedopuszczalne są działania mogące utrudniać lub destabilizować działanie Platformy lub Usług.</li>
-    <li>Użytkownik jest zobowiązany w szczególności do:<ol type="a">
-        <li>powstrzymywania się od jakichkolwiek działań mogących utrudnić lub zakłócić funkcjonowanie Platformy oraz od korzystania z Usług w sposób uciążliwy dla innych Użytkowników,</li>
-        <li>przestrzegania autorskich praw majątkowych oraz praw wynikających z rejestracji wynalazków, patentów, znaków towarowych, wzorów użytkowych i przemysłowych innych osób,</li>
-        <li>powstrzymywania się od jakichkolwiek działań naruszających prywatność, w szczególności zbierania, przetwarzania i rozpowszechniania informacji o Usługobiorcach nie będących Jednostkami naukowymi bez ich wyraźnej zgody, chyba że jest to dozwolone przez przepisy prawa i Regulamin,</li>
-        <li>wykorzystywania Usług do celów komercyjnych.</li>
-    </ol></li>
-</ol>
-<p align="justify"><span lang="pl-PL"><strong>Prawa i obowiązki Usługodawcy/ Operatora technicznego/ Operatora merytorycznego</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Usługodawca zastrzega sobie prawo dowolnej modyfikacji Usług oraz sposobu działania Platformy, w tym
+                zaprzestania działalności, przeniesienia praw oraz podjęcia dozwolonych przez prawo czynności związanych
+                z Platformą. Użytkownikowi nie przysługują z tego tytułu żadne roszczenia względem Usługodawcy.
+            </li>
+            <li>Operator techniczny zastrzega sobie prawo do zmodyfikowania i/lub usunięcia Konta Użytkownika, którego
+                działania zostaną uznane za szkodliwe dla Platformy lub niezgodne z Regulaminem.
+            </li>
+            <li>Operator merytoryczny zastrzega sobie prawo zamieszczania kursów o dowolnej tematyce naukowej oraz
+                zakresie zdobywanych umiejętności i kompetencji, a także różnym stopniu trudności. Operator merytoryczny
+                ma również prawo usuwania kursów z Platformy w dowolnym momencie lub ich modyfikacji.
+            </li>
+            <li>Operator merytoryczny określa odrębnie dla danego kursu: kategorie tematyczne, czas trwania, termin
+                rozpoczęcia i zakończenia kursu, terminy zapisów. Informacje podstawowe na temat kursów będą
+                zamieszczane na Platformie i przypisane dla danego kursu.
+            </li>
+            <li>Usługodawca lub Operator techniczny zastrzega sobie prawo do:
+                <ol type="a">
+                    <li>przejściowego zaprzestania świadczenia Usług w całości lub w części,</li>
+                    <li>okresowego zawieszenia świadczenia Usług w związku z przeprowadzaniem prac konserwacyjnych,</li>
+                    <li>wysyłania na adres email Użytkowników komunikatów technicznych, prawnych i transakcyjnych
+                        związanych z funkcjonowaniem Platformy i/lub świadczeniem Usług,
+                    </li>
+                    <li>odmowy świadczenia Usług, jeśli Użytkownik poda błędny, fałszywy lub tymczasowy adres email lub
+                        dane w Formularzu rejestracyjnym,
+                    </li>
+                    <li>odmowy świadczenia Usług, jeżeli Użytkownik nie przestrzega postanowień Regulaminu,</li>
+                    <li>dowolnej modyfikacji świadczonych Usług oraz sposobu działania Platformy bez wcześniejszego
+                        powiadamiania o takim zamiarze,
+                    </li>
+                    <li>dowolnego personalizowania treści informacji wysyłanych do Użytkowników oraz dowolnego
+                        wybierania adresatów.
+                    </li>
+                </ol>
+            </li>
+            <li>W przypadku stwierdzenia nieprawdziwych lub nieaktualnych danych podanych przez Użytkownika, Operator
+                techniczny ma prawo go wezwać do niezwłocznego usunięcia nieprawidłowości.
+            </li>
+            <li>Usługodawca/ Operator techniczny/ Operator merytoryczny nie udziela żadnej gwarancji prawidłowego
+                działania Platformy i/ lub Usług w całości albo w części w zakresie w jakim nie ma wpływu na jakość
+                świadczenia Usługi, np. ze względu na dostawców usług internetowych, informatycznych, itp.
+            </li>
+            <li>Operator techniczny zastrzega sobie prawo do ingerencji w Konto Usługobiorcy w celu usunięcia zakłócenia
+                lub problemu w funkcjonowaniu Konta lub Platformy.
+            </li>
 
-<ol style="PADDING-LEFT: 25px">
-    <li>Usługodawca zastrzega sobie prawo dowolnej modyfikacji Usług oraz sposobu działania Platformy, w tym zaprzestania działalności, przeniesienia praw oraz podjęcia dozwolonych przez prawo czynności związanych z Platformą. Użytkownikowi nie przysługują z tego tytułu żadne roszczenia względem Usługodawcy.</li>
-    <li>Operator techniczny zastrzega sobie prawo do zmodyfikowania i/lub usunięcia Konta Użytkownika, którego działania zostaną uznane za szkodliwe dla Platformy lub niezgodne z Regulaminem.</li>
-    <li>Operator merytoryczny zastrzega sobie prawo zamieszczania kursów o dowolnej tematyce naukowej oraz zakresie zdobywanych umiejętności i kompetencji, a także różnym stopniu trudności. Operator merytoryczny ma również prawo usuwania kursów z Platformy w dowolnym momencie lub ich modyfikacji.</li>
-    <li>Operator merytoryczny określa odrębnie dla danego kursu: kategorie tematyczne, czas trwania, termin rozpoczęcia i zakończenia kursu, terminy zapisów. Informacje podstawowe na temat kursów będą zamieszczane na Platformie i przypisane dla danego kursu.</li>
-    <li>Usługodawca lub Operator techniczny zastrzega sobie prawo do:<ol type="a">
-        <li>przejściowego zaprzestania świadczenia Usług w całości lub w części,</li>
-        <li>okresowego zawieszenia świadczenia Usług w związku z przeprowadzaniem prac konserwacyjnych,</li>
-        <li>wysyłania na adres email Użytkowników komunikatów technicznych, prawnych i transakcyjnych związanych z funkcjonowaniem Platformy i/lub świadczeniem Usług,</li>
-        <li>odmowy świadczenia Usług, jeśli Użytkownik poda błędny, fałszywy lub tymczasowy adres email lub dane w Formularzu rejestracyjnym,</li>
-        <li>odmowy świadczenia Usług, jeżeli Użytkownik nie przestrzega postanowień Regulaminu,</li>
-        <li>dowolnej modyfikacji świadczonych Usług oraz sposobu działania Platformy bez wcześniejszego powiadamiania o takim zamiarze,</li>
-        <li>dowolnego personalizowania treści informacji wysyłanych do Użytkowników oraz dowolnego wybierania adresatów.</li>
-    </ol></li>
-    <li>W przypadku stwierdzenia nieprawdziwych lub nieaktualnych danych podanych przez Użytkownika, Operator techniczny ma prawo go wezwać do niezwłocznego usunięcia nieprawidłowości.</li>
-    <li>Usługodawca/ Operator techniczny/ Operator merytoryczny nie udziela żadnej gwarancji prawidłowego działania Platformy i/ lub Usług w całości albo w części w zakresie w jakim nie ma wpływu na jakość świadczenia Usługi, np. ze względu na dostawców usług internetowych, informatycznych, itp.</li>
-    <li>Operator techniczny zastrzega sobie prawo do ingerencji w Konto Usługobiorcy w celu usunięcia zakłócenia lub problemu w funkcjonowaniu Konta lub Platformy.</li>
+        </ol>
 
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Płatności za usługi</strong></span></p>
 
-<p align="justify"><span lang="pl-PL"><strong>Płatności za usługi</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Portal ma charakter niekomercyjny i prowadzony jest w ramach działalności statutowej Usługodawcy jako
+                wykonywanie zadania w interesie publicznym.
+            </li>
+            <li>Korzystanie z Usług jest nieodpłatne.</li>
+            <li>Usługodawca zwraca uwagę, że korzystanie z Usług za pośrednictwem Platformy wymagać będzie połączenia z
+                siecią Internet i wiązać się będzie z kosztami transmisji danych, zgodnie z obowiązującym cennikiem
+                usług planu taryfowego operatora sieci, z której dany Użytkownik/ usługobiorca korzysta.
+            </li>
 
-<ol style="PADDING-LEFT: 25px">
-    <li>Portal ma charakter niekomercyjny i prowadzony jest w ramach działalności statutowej Usługodawcy jako wykonywanie zadania w interesie publicznym.</li>
-    <li>Korzystanie z Usług jest nieodpłatne.</li>
-    <li>Usługodawca zwraca uwagę, że korzystanie z Usług za pośrednictwem Platformy wymagać będzie połączenia z siecią Internet i wiązać się będzie z kosztami transmisji danych, zgodnie z obowiązującym cennikiem usług planu taryfowego operatora sieci, z której dany Użytkownik/ usługobiorca korzysta.</li>
+        </ol>
 
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Odpowiedzialność</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Użytkownik ponosi pełną odpowiedzialność za złamanie prawa bądź szkodę wywołaną jego działaniami, w
+                szczególności podaniem nieprawdziwych danych, naruszeniem dóbr osobistych lub praw autorskich oraz praw
+                pokrewnych.
+            </li>
+            <li>Usługodawca lub Operator techniczny lub Operator merytoryczny nie ponosi odpowiedzialności za
+                jakiekolwiek szkody powstałe na skutek zaprzestania świadczenia Usług w całości lub części na rzecz
+                Użytkowników. Usługodawca nie jest również odpowiedzialny za szkody powstałe na skutek zaprzestania
+                świadczenia Usług i usunięcia Konta Użytkownika naruszającego Regulamin.
+            </li>
+            <li>Podmioty wskazane w ust. 2 nie ponoszą odpowiedzialności za:
+                <ol type="a">
+                    <li>szkody wyrządzone osobom trzecim lub następstwa działań, powstałe w wyniku korzystania przez
+                        Użytkowników z Usług w sposób sprzeczny z Regulaminem lub przepisami prawa,
+                    </li>
+                    <li>za treści udostępniane przez Użytkowników w ramach Usług, które to treści naruszają prawo lub
+                        chronione prawem dobra osób trzecich,
+                    </li>
+                    <li>zgodność z prawdą zamieszczonych przez Użytkowników informacji,</li>
+                    <li>utratę przez Użytkowników danych spowodowanych działaniem czynników zewnętrznych (np. awaria
+                        sprzętu) lub też innymi okolicznościami niezależnymi od Usługodawcy (działanie osób trzecich),
+                    </li>
+                    <li>szkody wynikłe na skutek braku ciągłości dostarczania Usług, będące następstwem okoliczności, za
+                        które Podmioty wskazane w ust. 3 nie ponoszą odpowiedzialności (siła wyższa, działania
+                        zaniechania osób trzecich, awarie, itp.),
+                    </li>
+                    <li>podania przez Użytkowników nieprawdziwych lub niepełnych informacji przy rejestracji Konta,
+                        nieprzestrzegania przez Użytkowników warunków Regulaminu,
+                    </li>
+                    <li>działania lub zaniechania dostawców usług internetowych oraz awarie i zakłócenia w działaniu
+                        sieci internetowej, za pośrednictwem której Użytkownik korzysta z Platformy,
+                    </li>
+                    <li>skutki wynikające z wejścia przez osoby trzecie w posiadanie loginu lub Hasła,</li>
+                    <li>przerwy w świadczeniu Usługi zaistniałych z przyczyn niezależnych od Usługodawcy lub Operatora
+                        technicznego.
+                    </li>
+                </ol>
+            </li>
+            <li>W przypadku otrzymania urzędowego zawiadomienia o bezprawnym charakterze przechowywanych danych
+                dostarczonych przez Użytkownika i uniemożliwienia mu dostępu do tych danych, Usługodawca lub Operator
+                merytoryczny nie ponosi odpowiedzialności względem tego Użytkownika za szkodę powstałą w wyniku
+                uniemożliwienia dostępu do tych danych.
+            </li>
+            <li>Operator merytoryczny nie ponosi odpowiedzialności za dane przekazane w celu otrzymania potwierdzenia
+                ukończenia kursu lub wydania zaświadczenia, w przypadku gdy użytkownik poda je w sposób błędny lub
+                nieprawdziwy.
+            </li>
 
-<p align="justify"><span lang="pl-PL"><strong>Odpowiedzialność</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Użytkownik ponosi pełną odpowiedzialność za złamanie prawa bądź szkodę wywołaną jego działaniami, w szczególności podaniem nieprawdziwych danych, naruszeniem dóbr osobistych lub praw autorskich oraz praw pokrewnych.</li>
-    <li>Usługodawca lub Operator techniczny lub Operator merytoryczny nie ponosi odpowiedzialności za jakiekolwiek szkody powstałe na skutek zaprzestania świadczenia Usług w całości lub części na rzecz Użytkowników. Usługodawca nie jest również odpowiedzialny za szkody powstałe na skutek zaprzestania świadczenia Usług i usunięcia Konta Użytkownika naruszającego Regulamin.</li>
-    <li>Podmioty wskazane w ust. 2 nie ponoszą odpowiedzialności za:<ol type="a">
-        <li>szkody wyrządzone osobom trzecim lub następstwa działań, powstałe w wyniku korzystania przez Użytkowników z Usług w sposób sprzeczny z Regulaminem lub przepisami prawa,</li>
-        <li>za treści udostępniane przez Użytkowników w ramach Usług, które to treści naruszają prawo lub chronione prawem dobra osób trzecich,</li>
-        <li>zgodność z prawdą zamieszczonych przez Użytkowników informacji,</li>
-        <li>utratę przez Użytkowników danych spowodowanych działaniem czynników zewnętrznych (np. awaria sprzętu) lub też innymi okolicznościami niezależnymi od Usługodawcy (działanie osób trzecich),</li>
-        <li>szkody wynikłe na skutek braku ciągłości dostarczania Usług, będące następstwem okoliczności, za które Podmioty wskazane w ust. 3 nie ponoszą odpowiedzialności (siła wyższa, działania zaniechania osób trzecich, awarie, itp.),</li>
-        <li>podania przez Użytkowników nieprawdziwych lub niepełnych informacji przy rejestracji Konta, nieprzestrzegania przez Użytkowników warunków Regulaminu,</li>
-        <li>działania lub zaniechania dostawców usług internetowych oraz awarie i zakłócenia w działaniu sieci internetowej, za pośrednictwem której Użytkownik korzysta z Platformy,</li>
-        <li>skutki wynikające z wejścia przez osoby trzecie w posiadanie loginu lub Hasła,</li>
-        <li>przerwy w świadczeniu Usługi zaistniałych z przyczyn niezależnych od Usługodawcy lub Operatora technicznego.</li>
-    </ol></li>
-    <li>W przypadku otrzymania urzędowego zawiadomienia o bezprawnym charakterze przechowywanych danych dostarczonych przez Użytkownika i uniemożliwienia mu dostępu do tych danych, Usługodawca lub Operator merytoryczny nie ponosi odpowiedzialności względem tego Użytkownika za szkodę powstałą w wyniku uniemożliwienia dostępu do tych danych.</li>
-    <li>Operator merytoryczny nie ponosi odpowiedzialności za dane przekazane w celu otrzymania potwierdzenia ukończenia kursu lub wydania zaświadczenia, w przypadku gdy użytkownik poda je w sposób błędny lub nieprawdziwy.</li>
+        </ol>
 
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Prawa autorskie oraz licencje</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Wszelkie prawa do utworów, w rozumieniu ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach
+                pokrewnych (Dz. U. z 2018r. poz. 1181 z późn. zm.), stanowiących część Platformy, w tym do całego utworu
+                jak i jego fragmentów, a w szczególności do elementów tekstowych, graficznych, multimedialnych oraz
+                elementów programistycznych generujących i obsługujących Platformę lub pozwalających na korzystanie z
+                Usługi, są zastrzeżone odpowiednio na rzecz Usługodawcy lub Operatora merytorycznego lub Operatora
+                technicznego.
+            </li>
+            <li>Użytkownik nie ma prawa sprzedawać lub w inny sposób wprowadzać do obrotu lub rozpowszechniać w celach
+                zarobkowych lub komercyjnych Platformy lub jego fragmentu, w szczególności przesyłać lub udostępniać ich
+                w systemach i sieciach komputerowych lub jakichkolwiek innych systemach teleinformatycznych.
+            </li>
+            <li>Każde naruszenie praw autorskich przez Użytkownika może spowodować jego odpowiedzialność cywilną lub
+                karną z tego tytułu.
+            </li>
 
-<p align="justify"><span lang="pl-PL"><strong>Prawa autorskie oraz licencje</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Wszelkie prawa do utworów, w rozumieniu ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (Dz. U. z 2018r. poz. 1181 z późn. zm.), stanowiących część Platformy, w tym do całego utworu jak i jego fragmentów, a w szczególności do elementów tekstowych, graficznych, multimedialnych oraz elementów programistycznych generujących i obsługujących Platformę lub pozwalających na korzystanie z Usługi, są zastrzeżone odpowiednio na rzecz Usługodawcy lub Operatora merytorycznego lub Operatora technicznego.</li>
-    <li>Użytkownik nie ma prawa sprzedawać lub w inny sposób wprowadzać do obrotu lub rozpowszechniać w celach zarobkowych lub komercyjnych Platformy lub jego fragmentu, w szczególności przesyłać lub udostępniać ich w systemach i sieciach komputerowych lub jakichkolwiek innych systemach teleinformatycznych.</li>
-    <li>Każde naruszenie praw autorskich przez Użytkownika może spowodować jego odpowiedzialność cywilną lub karną z tego tytułu.</li>
+        </ol>
 
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Ochrona danych osobowych</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Ochrona danych realizowana jest zgodnie z Polityką prywatności dostępną na stronie <a
+                    href="https://navoica.pl">navoica.pl</a></li>
 
-<p align="justify"><span lang="pl-PL"><strong>Ochrona danych osobowych</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Ochrona danych realizowana jest zgodnie z Polityką prywatności dostępną na stronie <a href="https://navoica.pl">navoica.pl</a></li>
+        </ol>
 
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Zabezpieczenie danych</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Dane gromadzone przez Usługodawcę są zabezpieczone przed nieuprawnionym dostępem zabezpieczeniami
+                systemowymi, fizycznymi i organizacyjnymi zgodnie z przyjętą i aktualnie obowiązującą w tym zakresie
+                polityką bezpieczeństwa informacji i danych osobowych.
+            </li>
+            <li>Usługodawca oraz działający w jego imieniu Operator techniczny oświadcza, iż dokłada należytej
+                staranności, aby zapewnić wszystkim Użytkownikom wysoki poziom bezpieczeństwa w zakresie korzystania z
+                dedykowanych im funkcji. Wszelkie zdarzenia mające wpływ na bezpieczeństwo przekazu informacji, danych,
+                w tym również dotyczące podejrzenia udostępniania plików zawierających wirusy i innych plików o podobnym
+                charakterze lub innych aniżeli pliki mechanizmów destrukcyjnych należy zgłaszać mailowo na adres <a
+                        href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a>.
+            </li>
+        </ol>
 
-<p align="justify"><span lang="pl-PL"><strong>Zabezpieczenie danych</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Dane gromadzone przez Usługodawcę są zabezpieczone przed nieuprawnionym dostępem zabezpieczeniami systemowymi, fizycznymi i organizacyjnymi zgodnie z przyjętą i aktualnie obowiązującą w tym zakresie polityką bezpieczeństwa informacji i danych osobowych.</li>
-    <li>Usługodawca oraz działający w jego imieniu Operator techniczny oświadcza, iż dokłada należytej staranności, aby zapewnić wszystkim Użytkownikom wysoki poziom bezpieczeństwa w zakresie korzystania z dedykowanych im funkcji. Wszelkie zdarzenia mające wpływ na bezpieczeństwo przekazu informacji, danych, w tym również dotyczące podejrzenia udostępniania plików zawierających wirusy i innych plików o podobnym charakterze lub innych aniżeli pliki mechanizmów destrukcyjnych należy zgłaszać mailowo na adres <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a>.</li>
-</ol>
+        <p align="justify"><span lang="pl-PL"><strong>Postępowanie reklamacyjne</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Zakłócenia w funkcjonowaniu, problemy i uwagi związane ze świadczonymi usługami w ramach Platformy mogą
+                być reklamowane przez Użytkownika poprzez zgłoszenie tego z wykorzystaniem adresu e-mail <a
+                        href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a>.
+            </li>
+            <li>Użytkownik może złożyć reklamację, jeżeli przewidziane Regulaminem dedykowane im Usługi nie są
+                realizowane lub są realizowane niezgodnie z postanowieniami Regulaminu.
+            </li>
+            <li>Reklamacja może być zgłoszona w terminie 30 dni licząc od daty zdarzenia będącego przedmiotem
+                reklamacji.
+            </li>
+            <li>Reklamację można złożyć za pomocą korespondencji elektronicznej na adres e-mail: <a
+                    href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a> lub w formie listu poleconego
+                przesłanego na adres: Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy, Al. Niepodległości
+                188b, 00-608 Warszawa.
+            </li>
+            <li>Reklamacja powinna zawierać co najmniej: imię i nazwisko, adres e-mail lub inny adres korespondencyjny,
+                okoliczności uzasadniające reklamację, a także konkretne żądanie związane ze składaną reklamacją.
+            </li>
+            <li>Jeżeli podane w reklamacji dane lub informacje wymagają uzupełnienia, podmiot rozpatrujący reklamację
+                przed rozpatrzeniem reklamacji, zwróci się do zgłaszającego o jej uzupełnienie we wskazanym zakresie.
+            </li>
+            <li>Usługodawca rozpoznaje reklamację w terminie 30 dni od daty otrzymania prawidłowo złożonej reklamacji
+                (zawierającej wymagane elementy i niewymagającej uzupełnienia). W sprawach zawiłych Usługodawca może
+                wydłużyć ten termin do 60 dni po uprzednim powiadomieniu składającego reklamację. Użytkownik otrzyma
+                informację o sposobie rozpatrzenia reklamacji drogą korespondencji elektronicznej, na podany przez
+                siebie adres e-mail.
+            </li>
+            <li>Usługodawca zastrzega sobie prawo do pozostawienia reklamacji bez rozpoznania, jeżeli wynikać ona będzie
+                z nieznajomości Regulaminu lub przepisów prawa.
+            </li>
 
-<p align="justify"><span lang="pl-PL"><strong>Postępowanie reklamacyjne</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Zakłócenia w funkcjonowaniu, problemy i uwagi związane ze świadczonymi usługami w ramach Platformy mogą być reklamowane przez Użytkownika poprzez zgłoszenie tego z wykorzystaniem adresu e-mail <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a>.</li>
-    <li>Użytkownik może złożyć reklamację, jeżeli przewidziane Regulaminem dedykowane im Usługi nie są realizowane lub są realizowane niezgodnie z postanowieniami Regulaminu.</li>
-    <li>Reklamacja może być zgłoszona w terminie 30 dni licząc od daty zdarzenia będącego przedmiotem reklamacji.</li>
-    <li>Reklamację można złożyć za pomocą korespondencji elektronicznej na adres e-mail: <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a> lub w formie listu poleconego przesłanego na adres: Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy, Al. Niepodległości 188b, 00-608 Warszawa.</li>
-    <li>Reklamacja powinna zawierać co najmniej: imię i nazwisko, adres e-mail lub inny adres korespondencyjny, okoliczności uzasadniające reklamację, a także konkretne żądanie związane ze składaną reklamacją.</li>
-    <li>Jeżeli podane w reklamacji dane lub informacje wymagają uzupełnienia, podmiot rozpatrujący reklamację przed rozpatrzeniem reklamacji, zwróci się do zgłaszającego o jej uzupełnienie we wskazanym zakresie.</li>
-    <li>Usługodawca rozpoznaje reklamację w terminie 30 dni od daty otrzymania prawidłowo złożonej reklamacji (zawierającej wymagane elementy i niewymagającej uzupełnienia). W sprawach zawiłych Usługodawca może wydłużyć ten termin do 60 dni po uprzednim powiadomieniu składającego reklamację. Użytkownik otrzyma informację o sposobie rozpatrzenia reklamacji drogą korespondencji elektronicznej, na podany przez siebie adres e-mail.</li>
-    <li>Usługodawca zastrzega sobie prawo do pozostawienia reklamacji bez rozpoznania, jeżeli wynikać ona będzie z nieznajomości Regulaminu lub przepisów prawa.</li>
+        </ol>
 
-</ol>    
+        <p align="justify"><span lang="pl-PL"><strong>Postanowienia końcowe</strong></span></p>
+        <ol style="PADDING-LEFT: 25px">
+            <li>Usługodawca zastrzega sobie prawo do zmiany treści Regulaminu.</li>
+            <li>Użytkownicy zostaną poinformowani o zmianach Regulaminu stosownym komunikatem zamieszczonym na
+                Platformie oraz informacją przesłaną na adres e-mail podany odpowiednio w Formularzu rejestracyjnym lub
+                zamieszczoną informacją o zmianie regulaminu wraz z jego treścią dostępną po zalogowaniu do Konta.
+            </li>
+            <li>Użytkownik może odmówić akceptacji zmian przesyłając Usługodawcy stosowne oświadczenie w tym zakresie w
+                formie pisemnej, mailowej na adres <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a> lub, w
+                przypadku posiadaczy Konta, zaznaczając brak akceptacji zmian po zalogowaniu do Konta. Oświadczenie o
+                braku akceptacji zmian powinno być przekazane Usługodawcy niezwłocznie jednak nie później niż w terminie
+                30 dni od daty otrzymania powiadomienia o zmianie Regulaminu w sposób określony w ust. 2. Brak
+                oświadczenia w powyższym terminie jest uznany za akceptację zmian przez Użytkownika. Przesłanie
+                oświadczenia jest równoznaczne z rozwiązaniem Umowy przez Użytkownika z zachowaniem 14 dniowego terminu
+                wypowiedzenia, liczonego od dnia otrzymania przez Usługodawcę informacji o odmowie akceptacji zmian.
+            </li>
+            <li>Użytkownik ponosi ryzyko nieotrzymania powiadomienia o zmianie Regulaminu z powodu nieaktualnego,
+                nieprawdziwego lub należącego do innego podmiotu adresu e-mail.
+            </li>
+            <li>W przypadku zmiany Regulaminu Użytkownikom wyświetlona zostanie lista najważniejszych zmian. Użytkownik
+                zobowiązany jest do zapoznania się z Regulaminem w nowym brzmieniu.
+            </li>
+            <li>Wszelkie spory związane z realizacją Umowy będą rozstrzygane przez polskie sądy powszechne właściwe ze
+                względu na siedzibę Usługodawcy, przy czym w przypadku sporów na tle sposobu realizacji przez
+                Usługodawcę Usług, postępowanie sądowe może być wszczęte po wyczerpaniu drogi postępowania
+                reklamacyjnego, w pozostałych przypadkach Strony zobowiązują się w pierwszej kolejności dążyć do
+                polubownego rozstrzygnięcia sporów w drodze negocjacji prowadzonych przez okres 90 dni.
+            </li>
+            <li>Prawem właściwym dla całości Umowy jest prawo polskie.</li>
+            <li>W kwestiach nieuregulowanych w Umowach zawartych z Usługodawcą zastosowanie mają przepisy prawa
+                polskiego.
+            </li>
+            <li>Jeżeli którekolwiek postanowienie Regulaminu zostanie uznane prawomocnym orzeczeniem sądu za nieważne,
+                pozostałe postanowienia pozostają w mocy.
+            </li>
+            <li>Regulamin obowiązuje od 30.10.2018r.</li>
 
-<p align="justify"><span lang="pl-PL"><strong>Postanowienia końcowe</strong></span></p>
-<ol style="PADDING-LEFT: 25px">
-    <li>Usługodawca zastrzega sobie prawo do zmiany treści Regulaminu.</li>
-    <li>Użytkownicy zostaną poinformowani o zmianach Regulaminu stosownym komunikatem zamieszczonym na Platformie oraz informacją przesłaną na adres e-mail podany odpowiednio w Formularzu rejestracyjnym lub zamieszczoną informacją o zmianie regulaminu wraz z jego treścią dostępną po zalogowaniu do Konta.</li>
-    <li>Użytkownik może odmówić akceptacji zmian przesyłając Usługodawcy stosowne oświadczenie w tym zakresie w formie pisemnej, mailowej na adres <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a> lub, w przypadku posiadaczy Konta, zaznaczając brak akceptacji zmian po zalogowaniu do Konta. Oświadczenie o braku akceptacji zmian powinno być przekazane Usługodawcy niezwłocznie jednak nie później niż w terminie 30 dni od daty otrzymania powiadomienia o zmianie Regulaminu w sposób określony w ust. 2. Brak oświadczenia w powyższym terminie jest uznany za akceptację zmian przez Użytkownika. Przesłanie oświadczenia jest równoznaczne z rozwiązaniem Umowy przez Użytkownika z zachowaniem 14 dniowego terminu wypowiedzenia, liczonego od dnia otrzymania przez Usługodawcę informacji o odmowie akceptacji zmian.</li>
-    <li>Użytkownik ponosi ryzyko nieotrzymania powiadomienia o zmianie Regulaminu z powodu nieaktualnego, nieprawdziwego lub należącego do innego podmiotu adresu e-mail.</li>
-    <li>W przypadku zmiany Regulaminu Użytkownikom wyświetlona zostanie lista najważniejszych zmian. Użytkownik zobowiązany jest do zapoznania się z Regulaminem w nowym brzmieniu.</li>
-    <li>Wszelkie spory związane z realizacją Umowy będą rozstrzygane przez polskie sądy powszechne właściwe ze względu na siedzibę Usługodawcy, przy czym w przypadku sporów na tle sposobu realizacji przez Usługodawcę Usług, postępowanie sądowe może być wszczęte po wyczerpaniu drogi postępowania reklamacyjnego, w pozostałych przypadkach Strony zobowiązują się w pierwszej kolejności dążyć do polubownego rozstrzygnięcia sporów w drodze negocjacji prowadzonych przez okres 90 dni.</li>
-    <li>Prawem właściwym dla całości Umowy jest prawo polskie.</li>
-    <li>W kwestiach nieuregulowanych w Umowach zawartych z Usługodawcą zastosowanie mają przepisy prawa polskiego.</li>
-    <li>Jeżeli którekolwiek postanowienie Regulaminu zostanie uznane prawomocnym orzeczeniem sądu za nieważne, pozostałe postanowienia pozostają w mocy.</li>
-    <li>Regulamin obowiązuje od 30.10.2018r.</li>
-
-</ol>
+        </ol>
+    </section>
+    </main>
+</div>

@@ -38,14 +38,15 @@ from django.core.urlresolvers import reverse
         </div>
         <div class="course-details-content">
           <h6>${_("Need Help?")}</h6>
-          <div>Czy potrzebujesz pomocy w zalogowaniu się lub obsłudze swojego konta Polski MOOC?<br>
-               Skontaktuj się z naszym działem pomocy technicznej dostępnym pod adresem <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a>.
+          <div>${_("Looking for help signing in or with your {platform_name} account?").format(platform_name=platform_name)}<br>
+          Skontaktuj się z naszym działem pomocy technicznej dostępnym pod adresem <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a>.
           </div>
          </div>
        </li>
      </ul>
+    <a href="https://www.facebook.com/Polski-MOOC-295767534600329/" target="_blank">
+      <img class="center" src="/static/images/facebook-ikona.png" alt="Facebook">
+    </a>
    </div>
   % endif
-<!--    <a href="https://www.facebook.com/Polski-MOOC-295767534600329/" target="_blank"><img src="/static/images/facebook-ikona.png" alt="Facebook">
-    </a>-->
 </aside>
