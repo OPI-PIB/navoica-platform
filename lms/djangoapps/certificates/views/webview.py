@@ -468,7 +468,7 @@ def _update_organization_context(context, course):
     else:
         context['organizer'] = partner_short_name
 
-@login_required
+
 def render_cert_by_uuid(request, certificate_uuid):
     """
     This public view generates an HTML representation of the specified certificate
@@ -482,7 +482,6 @@ def render_cert_by_uuid(request, certificate_uuid):
     except GeneratedCertificate.DoesNotExist:
         raise Http404
 
-@login_required
 def render_pdf_cert_by_uuid(request, certificate_uuid):
     output =  render_cert_by_uuid(request, certificate_uuid)
 
@@ -513,7 +512,7 @@ def render_pdf_cert_by_uuid(request, certificate_uuid):
     template_path="certificates/server-error.html",
     test_func=lambda request: request.GET.get('preview', None)
 )
-@login_required
+
 def render_html_view(request, user_id, course_id):
     """
     This public view generates an HTML representation of the specified user and course
