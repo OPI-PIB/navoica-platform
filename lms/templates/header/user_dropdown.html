@@ -31,6 +31,7 @@ displayname = get_enterprise_learner_generic_name(request) or username
                 <a class="dropdown-item" href="${reverse('dashboard')}" role="menuitem">${_("My Courses")}</a>
                 <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a>
                 <a class="dropdown-item" href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a>
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a>
             </div>
 

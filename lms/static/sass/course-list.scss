@@ -2237,7 +2237,7 @@ textarea.form-control {
 
   &:focus, &.focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem #dee2e6;
+  //  box-shadow: 0 0 0 0.2rem #dee2e6;
   }
 
   &.disabled, &:disabled {
@@ -2267,7 +2267,7 @@ a.btn.disabled, fieldset:disabled a.btn {
   }
 
   &:focus, &.focus {
-    box-shadow: 0 0 0 0.2rem rgba(232, 63, 85, 0.5);
+  //  box-shadow: 0 0 0 0.2rem rgba(232, 63, 85, 0.5);
   }
 
   &.disabled, &:disabled {
@@ -2293,12 +2293,12 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-primary:not(:disabled):not(.disabled) {
   &:active:focus, &.active:focus {
-    box-shadow: 0 0 0 0.2rem rgba(232, 63, 85, 0.5);
+  //  box-shadow: 0 0 0 0.2rem rgba(232, 63, 85, 0.5);
   }
 }
 
 .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(232, 63, 85, 0.5);
+//  box-shadow: 0 0 0 0.2rem rgba(232, 63, 85, 0.5);
 }
 
 .btn-secondary {
@@ -2634,7 +2634,7 @@ a.btn.disabled, fieldset:disabled a.btn {
   }
 
   &:focus, &.focus {
-    box-shadow: 0 0 0 0.2rem rgba(228, 29, 55, 0.5);
+  //  box-shadow: 0 0 0 0.2rem rgba(228, 29, 55, 0.5);
   }
 
   &.disabled, &:disabled {
@@ -3086,16 +3086,16 @@ input {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
+//  min-width: 10rem;
+// padding: 0.5rem 0;
+//  margin: 0.125rem 0 0;
   font-size: 1rem;
   color: #212529;
   text-align: left;
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+//  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0;
 }
 
@@ -3249,7 +3249,7 @@ input {
 
 .dropdown-divider {
   height: 0;
-  margin: 0.5rem 0;
+//  margin: 0.5rem 0;
   overflow: hidden;
   border-top: 1px solid #e9ecef;
 }
@@ -3257,7 +3257,7 @@ input {
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: 0.25rem 1.5rem;
+  padding: 0.25rem 1rem;
   clear: both;
   font-weight: 400;
   color: #212529;
@@ -9837,7 +9837,7 @@ footer {
   }
 
   .navbar-nav {
-    padding: 0 0 0.5rem;
+  //  padding: 0 0 0.5rem;
 
     .nav-item {
       border-top: 1px solid #dee2e6;
@@ -9915,7 +9915,7 @@ footer {
 
     .dropdown-item {
       font-size: 1rem;
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
 
     .btn {
@@ -12739,4 +12739,11 @@ fieldset label {
 
 #content .vert .problems-wrapper .problem p {
   font-weight: 600;
+}
+
+.dropdown-menu .dropdown-item {
+  &:active, &:hover, &:focus {
+    color: #b8162b;
+    background-color: #fff;
+  }
 }
