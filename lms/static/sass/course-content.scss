@@ -9759,7 +9759,7 @@ article .display-3::before {
   }
 }
 
-#content .vert .problems-wrapper {
+#content .vert .problem {
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
   padding: 0 1rem;
@@ -9779,3 +9779,7 @@ article .display-3::before {
 .wrap-instructor-info .btn-debug {
   margin-right: .25rem;
 }
+ 
+#seq_content .vert {
+  border-bottom: 0;
+} 

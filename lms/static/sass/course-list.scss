@@ -12649,6 +12649,20 @@ main.container .d-flex {
 .dashboard-banner, .activation-message-container {
   padding-top: 8px;
 }
+.wrapper-profile-sections .wrapper-profile-section-container-one {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+.wrapper-profile-sections {
+  flex-direction: column;
+}
+#courses-list-header {
+  border-bottom: 0 !important;
+}
+.wrapper-account-settings {
+  padding: 0;
+}
+
 }
 
 @media (min-width: 480px) and (max-width: 1279px) {
@@ -12661,9 +12675,6 @@ main.container .d-flex {
   }
 }
 
-main.container .d-flex > article header {
-  margin-top: -1rem;
-}
 
 .accordion .card-body .list-group-flush {
   padding: 0;
@@ -12678,7 +12689,7 @@ button#section.subsection-text.accordion-trigger.bg1 {
 }
 
 main.container .d-flex > article header {
-  margin-top: -1px;
+  margin-top: -17px;
 }
 
 #discovery-form1 {
@@ -12746,4 +12757,36 @@ fieldset label {
     color: #b8162b;
     background-color: #fff;
   }
+} 
+
+button#section.subsection-text.accordion-trigger.bg1[aria-expanded="false"]::before {
+        content: "+";
+        left: 12px;
+      }
+
+button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::before {
+        content: "\2012";
+        left: 12px;
+      }
+
+#content .vert .problems-wrapper .problem [class*="inputtype"] {
+  border: 0;
+}      
+
+#seq_content .vert {
+  border-top:0;
+}
+
+.list-group .list-group-item {
+  margin-bottom: 1px !important;
+}
+.list-group-item-action:focus {
+  background-color: #fff;
+}
+.list-group-item-action:active {
+  background-color: #fff;
+}
+
+button:not(:disabled), [type="submit"]:not(:disabled) {
+  border: 1px solid #dee2e6;
 }
