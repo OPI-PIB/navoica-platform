@@ -2647,7 +2647,8 @@ ALL_COURSE_ORGANIZER = [
     [u"1", u"Fundacja Młodej Nauki"],
     [u"2", u"Politechnika Warszawska"],
     [u"3", u"Politechnika Łódzka"],
-    [u"4", u"OPI PIB"]
+    [u"4", u"OPI PIB"],
+    [u"5", u"Uczelnia Techniczno-Handlowa im. Heleny Chodkowskiej"]
 ]
 
 ALL_COURSE_CATEGORY = [
