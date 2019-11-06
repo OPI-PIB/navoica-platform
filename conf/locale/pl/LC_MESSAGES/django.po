@@ -24,6 +24,7 @@
 #
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# krystianlygas <krystian.lygas@gmail.com>, 2019
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX translation file
@@ -47,7 +48,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-10-25 09:19+0000\n"
+"POT-Creation-Date: 2019-11-06 07:50+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -6389,7 +6390,7 @@ msgstr ""
 msgid "Syllabus"
 msgstr "Konspekt"
 
-#: lms/djangoapps/courseware/tabs.py lms/templates/courseware/progress.html
+#: lms/djangoapps/courseware/tabs.py
 #: lms/templates/peer_grading/peer_grading.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 msgid "Progress"
@@ -13462,6 +13463,10 @@ msgstr "Zarejestruj się w {platform_name} już dziś!"
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid "Need Help?"
 msgstr "Potrzebujesz pomocy?"
+
+#: lms/templates/login-sidebar.html
+msgid "Looking for help signing in or with your {platform_name} account?"
+msgstr "Szukasz pomocy przy logowaniu na swoim koncie {platform_name}?"
 
 #: lms/templates/login.html
 msgid "Log into your {platform_name} Account"
