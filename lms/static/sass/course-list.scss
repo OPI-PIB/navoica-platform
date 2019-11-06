@@ -12790,3 +12790,18 @@ button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::befo
 button:not(:disabled), [type="submit"]:not(:disabled) {
   border: 1px solid #dee2e6;
 }
+
+img.message-author {
+  display: none;
+}
+
+.course-message .message-content {
+  padding: 5px;
+  margin-bottom:5px;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #770f1d;
+  background-color: #fad2d7;
+  border: 1px solid #f7c0c7;
+}
+
