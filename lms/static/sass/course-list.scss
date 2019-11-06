@@ -10325,7 +10325,7 @@ aside {
 }
 
 main.container aside {
-  order: -1;
+//  order: -1;
 
   .list-group-flush .list-group-item {
     border: 0;
@@ -12788,5 +12788,33 @@ button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::befo
 }
 
 button:not(:disabled), [type="submit"]:not(:disabled) {
-  border: 1px solid #dee2e6;
+//  border: 1px solid #dee2e6;
+}
+
+@media (min-width: 960px) {
+  .navbar {
+    img {
+      max-height: 34px !important;
+      display: block !important;
+    }
+    #img-mobile {
+      display: none !important;
+    }
+  }
+}
+
+.navbar {
+  img {
+    max-height: 34px;
+    display: none;
+  }
+   #img-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 960px) {
+  main.container aside {
+    order: -1;
+  }
 }
