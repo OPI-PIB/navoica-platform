@@ -17,6 +17,21 @@ from openedx.core.djangolib.markup import HTML
 from openedx.features.course_experience import course_home_page_title, COURSE_OUTLINE_PAGE_FLAG
 %>
 
+<div id="content" class="border-top">
+<main class="container">
+<div id="nav-tabContent" class="tab-content">
+  
+<div id="nav-home" class="tab-pane fade show active" role="tbpanel" aria-labelledby="nav-home-tab">
+  
+
+<div class="page-header-secondary">
+  ## Breadcrumb navigation
+  <div class="page-header-main">
+    <nav aria-label="${_('Discussions')}" class="sr-is-focusable" tabindex="-1">
+      <div class="has-breadcrumbs"></div>
+    </nav>
+  </div>
+</div>
 <section class="discussion discussion-board page-content-container" id="discussion-container"
          data-course-id="${course.id}"
          data-user-create-comment="${json.dumps(can_create_comment)}"
@@ -26,23 +41,15 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
          data-flag-moderator="${json.dumps(flag_moderator)}"
          data-user-group-id="${user_group_id}">
 
-        <div class="page-header-secondary">
-          ## Breadcrumb navigation
-          <div class="page-header-main">
-              <nav aria-label="${_('Discussions')}" class="sr-is-focusable" tabindex="-1">
-                  <div class="has-breadcrumbs"></div>
-              </nav>
-          </div>
-            ## Add Post button
+<!--             ## Add Post button
             % if has_permission(user, 'create_thread', course.id):
             <div class="forum-actions">
                 <button class="btn btn-outline-primary btn-small new-post-btn">${_("Add a Post")}</button>
             </div>
             % endif
             ## Search box
-            <div class="forum-search"></div>
-        </div>
-    </header>
+            <div class="forum-search"></div> -->
+    <!-- </header> -->
 
     <div class="page-content"
       % if getattr(course, 'language'):
@@ -50,18 +57,12 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
       % endif
     >
       <div class="d-flex justify-content-between">
-        <header class="page-header has-secondary">
-          <div class="page-header-secondary">
-              ## Add Post button
-              % if has_permission(user, 'create_thread', course.id):
-              <div class="forum-actions">
-                  <button class="btn btn-outline-primary btn-small new-post-btn">${_("Add a Post")}</button>
-              </div>
-              % endif
-              ## Search box
-              <div class="forum-search"></div>
-          </div>
-        </header>
+        ## Add Post button
+          % if has_permission(user, 'create_thread', course.id):
+            <button class="btn btn-outline-primary btn-small new-post-btn">${_("Add a Post")}</button>
+          % endif
+        ## Search box
+        <div class="forum-search"></div>
       </div>
         <div class="discussion-body d-flex my-2">
             <main id="main" class="discussion-column" aria-label="Content" tabindex="0">
@@ -75,11 +76,15 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
             </main>
             <aside class="forum-nav" role="complementary" aria-label="${_("Discussion thread list")}">
                 <%include file="_filter_dropdown.html" />
-                <div class="discussion-thread-list-container"></div>
+                <div class="collapse-panel collapse discussion-thread-list-container"></div>
             </aside>
         </div>
     </div>
 </section>
+</div>
+</div>
+</main>
+</div>  
 
 <%include file="_underscore_templates.html" />
 <%include file="_thread_list_template.html" />
