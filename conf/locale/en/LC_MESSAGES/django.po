@@ -32,8 +32,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-11-06 10:11+0000\n"
-"PO-Revision-Date: 2019-11-06 10:11:40.144913\n"
+"POT-Creation-Date: 2019-11-06 13:45+0000\n"
+"PO-Revision-Date: 2019-11-06 13:45:09.922616\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -12325,6 +12325,11 @@ msgid "You do not have any notes."
 msgstr ""
 
 #: lms/templates/preview_menu.html
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "Course edition"
+msgstr ""
+
+#: lms/templates/preview_menu.html
 msgid "Learner"
 msgstr ""
 
@@ -14937,6 +14942,10 @@ msgid ""
 "Since we did not have a valid set of verification photos from you when your "
 "{cert_name_long} was generated, we could not grant you a verified "
 "{cert_name_short}. An honor code {cert_name_short} has been granted instead."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "Course organizer"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
