@@ -41,7 +41,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
         <article>
 
           <h1 class="display-2">${course.display_name_with_default}</h1>
-          <p class="lead mt-3">Kod kursu: <strong>${course.display_org_with_default} ${course.display_number_with_default}</strong></p>
+          <p class="lead mt-3">${_("Course edition")}: <strong>${course.id.run}</strong></p>
           <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
 
         <div class="wrapper-preview-menu">
@@ -126,7 +126,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
       <div class="d-flex">
         <article>
           <h1 class="display-2">${course.display_name_with_default}</h1>
-          <p class="lead mt-3">Kod kursu: <strong>${course.display_org_with_default} ${course.display_number_with_default}</strong></p>
+          <p class="lead mt-3"> ${_("Course edition")}: <strong>${course.id.run}</strong></p>
           <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
      </article>
   <aside>
