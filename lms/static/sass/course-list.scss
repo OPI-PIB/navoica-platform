@@ -9705,7 +9705,7 @@ body > header {
 
 header .jumbotron {
   margin: 0;
-  padding: 4rem 0;
+  padding: 3rem 0;
 
   p.lead {
     font-size: 1.125rem;
@@ -9725,7 +9725,7 @@ header .jumbotron {
 
 .display-2 {
   font-size: 2rem;
-  line-height: 1.15;
+  line-height: 2.15;
 }
 
 body > section {
@@ -9938,7 +9938,7 @@ footer {
   }
 
   header .jumbotron {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 
   .card-title {
@@ -10325,7 +10325,7 @@ aside {
 }
 
 main.container aside {
-  order: -1;
+//  order: -1;
 
   .list-group-flush .list-group-item {
     border: 0;
@@ -12662,7 +12662,7 @@ main.container .d-flex {
 .wrapper-account-settings {
   padding: 0;
 }
-
+.page-header-search .input-text {width: 15rem;}
 }
 
 @media (min-width: 480px) and (max-width: 1279px) {
@@ -12788,6 +12788,7 @@ button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::befo
 }
 
 button:not(:disabled), [type="submit"]:not(:disabled) {
+
   border: 1px solid #dee2e6;
 }
 
@@ -12805,3 +12806,67 @@ img.message-author {
   border: 1px solid #f7c0c7;
 }
 
+
+//  border: 1px solid #dee2e6;
+
+
+@media (min-width: 960px) {
+  .navbar {
+    img {
+      max-height: 34px !important;
+      display: block !important;
+    }
+    #img-mobile {
+      display: none !important;
+    }
+  }
+}
+
+.navbar {
+  img {
+    max-height: 34px;
+    display: none;
+  }
+   #img-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 960px) {
+  main.container aside {
+    order: -1;
+  }
+}
+
+.message-copy {
+  margin-bottom: 3rem;
+}
+
+.welcome-message, .updates-article {
+background-color:
+#f8f9fa;
+border: 1px solid
+#e9ecef;
+padding: 0.5rem;
+margin-top: 0.5rem;
+margin-bottom: 0.5rem;
+}
+
+.dismiss-message {
+  display: none;
+}
+.page-header-search {
+  display:flex !important;
+  justify-content: center;
+}
+.page-header-search .search-form {display:flex !important;}
+
+.page-header-search .input-text {width: 35rem;}
+
+.page-header-search .input-text[type="search"] + button {
+  color:
+#E41D37;
+background-color:
+#fff;
+border: 1px solid #E41D37;
+}
