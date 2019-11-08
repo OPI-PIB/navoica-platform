@@ -71,7 +71,11 @@ div {
         header {
           display: flex;
           justify-content: space-between;
-
+          
+          h1 {
+            font-weight: 600;
+          }
+          
           h2, a {
             font-size: $h6-font-size;
             line-height: 1.7143;
@@ -90,8 +94,8 @@ div {
         border-left: 1px solid map_get($grays, "300");
         flex: 0 0 346px;
         margin-left: $font-size-base * 2;
-        // order: initial;
-        order: -1;
+        order: initial;
+        // order: -1;
         padding-left: $font-size-base * 2;
 
         .list-group-item {
