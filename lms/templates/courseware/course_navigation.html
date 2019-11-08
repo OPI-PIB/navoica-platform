@@ -34,9 +34,24 @@ if course is not None:
     tab_list = get_course_tab_list(request, course)
     %>
 
+  
+
 <div class="jumbotronn">
 <div class="container">
 <nav>
+    <form>
+        <select id="action-preview-select" class="nav nav-tabs" name="tab" onchange="location = this.value">
+             % for tab in tab_list:
+                    <%
+                    tab_is_active = tab.tab_id in (active_page, default_tab)
+              %>
+                    <option value="${tab.link_func(course, reverse)}" selected="${'active' if tab_is_active else ''}">${_(tab.name)}        
+                    </option>
+              %endfor
+
+        </select>
+    </form>
+        
    <div class="nav nav-tabs" id="nav-tab" role="tablist">
               % for tab in tab_list:
                     <%
