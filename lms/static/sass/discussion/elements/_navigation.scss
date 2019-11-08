@@ -1204,6 +1204,33 @@ section.page-content-container {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+button {
+  .btn-outline {
+    .dropdown-toggle {
+      border-color: map_get($grays, "300");
+      background: map_get($grays, "300");
+    }
+  }
+}
+ 
+.btn-neutral {
+  border-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid map_get($grays, "200");
+    color: map_get($grays, "900");
+  }
+
+  &:focus {
+   background-color: transparent; 
+  }
+
+  &:checked {
+    border: 1px solid map_get($grays, "200");
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
@@ -1213,11 +1240,14 @@ section.page-content-container {
 .btn:hover {
   color: map_get($grays, "900");
   text-decoration: none;
+  background: #e41d37;
 }
 
 .btn:focus, .btn.focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem map_get($grays, "300");
+  background: #e41d37;
+  border-color: #e41d37;
 }
 
 .btn.disabled, .btn:disabled {
