@@ -12830,6 +12830,16 @@ img.message-author {
   main.container aside {
     order: -1;
   }
+  .page-header-search .input-text {
+    width: 20rem !important;
+  }
+  .page-header-search {
+    margin-top: 1rem !important;
+    margin-bottom:1rem;
+  }
+  .search-results {
+    margin-top:1rem !important;
+  }
 }
 
 .message-copy {
@@ -12851,6 +12861,7 @@ img.message-author {
 .page-header-search {
   display:flex !important;
   justify-content: center;
+  margin-top: 4rem;
 }
 
 .page-header-search .search-form {
@@ -12865,4 +12876,75 @@ img.message-author {
   color: #E41D37;
   background-color: #fff;
   border: 1px solid #E41D37;
+}
+
+.page-banner .user-messages .alert-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-banner .message-content {
+  margin-left: 5px;
+}
+
+.fa-angle-right::before {
+  content: "/";
+ }
+
+.has-breadcrumbs {
+  font-size: 14px;
+  overflow: hidden;
+  padding: 0.5rem 0 1.5rem;
+  position: static;
+}
+
+#course-container {
+  width: 100%;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1280px;
+}
+
+.page-header-main {
+  margin-top: 3rem;
+}
+
+.search-result-list {
+  margin: 3rem;
+}
+
+#instructor-dashboard-content .instructor-nav {
+  list-style-type:none;
+  display: flex;
+  padding-left: 0;
+}
+
+.instructor-dashboard-wrapper-2 #main {
+  margin-top: 2rem;
+}
+
+#instructor-dashboard-content .list-input {
+  list-style-type:none;
+  padding-left: 0;
+}
+
+#membership textarea {
+  display:flex !important;
+}
+
+#instructor-dashboard-content select {
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 0;
+}
+
+#instructor-dashboard-content input[type="button"] {
+  border: 1px solid #D0353F;;
+  color: #fff;
+  border-radius: 0;
+  background-color: #D0353F;
+  text-align: center;
 }
