@@ -11462,7 +11462,7 @@ main.container > aside {
     display: none;
 }
 
-#action-preview-select, .form-control.action-preview-username {
+#action-preview-select, #action-tab-select, .form-control.action-preview-username {
     height: calc(1.7143em + 0.5rem + 2px);
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
@@ -12948,3 +12948,21 @@ img.message-author {
   background-color: #D0353F;
   text-align: center;
 }
+
+@media (min-width: 960px) {
+  #action-tab-select {
+    display: none;
+  } 
+} 
+
+@media (max-width: 960px) {
+  #action-tab-select {
+    display: block;
+  }   
+  #nav-tab {
+    display: none;
+  }
+}
+
+ 
+
