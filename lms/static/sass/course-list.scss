@@ -12840,6 +12840,19 @@ img.message-author {
   .search-results {
     margin-top:1rem !important;
   }
+.batch-beta-testers label {
+  display:flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.view-instructordash .nav-tabs .nav-link.active {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+.view-instructordash .jumbotronn {
+  border-bottom: 0 !important;
+}
+
 }
 
 .message-copy {
@@ -12920,19 +12933,26 @@ img.message-author {
   list-style-type:none;
   display: flex;
   padding-left: 0;
+  flex-wrap:wrap;
+}
+
+#instructor-dashboard-content .instructor-nav .nav-item {
+  margin-right:2px; 
+  margin-top: 2px;
 }
 
 .instructor-dashboard-wrapper-2 #main {
   margin-top: 2rem;
 }
 
-#instructor-dashboard-content .list-input {
+#instructor-dashboard-content ul {
   list-style-type:none;
   padding-left: 0;
 }
 
 #membership textarea {
   display:flex !important;
+  width: 60%;
 }
 
 #instructor-dashboard-content select {
@@ -12941,10 +12961,20 @@ img.message-author {
   border-radius: 0;
 }
 
-#instructor-dashboard-content input[type="button"] {
+#instructor-dashboard-content button, #instructor-dashboard-content input[type="button"] {
   border: 1px solid #D0353F;;
   color: #fff;
   border-radius: 0;
   background-color: #D0353F;
   text-align: center;
+  padding: 4px 12px;
+  margin-bottom: 2px;
+}
+
+.enroll-option .hint {
+  display: flex;
+}
+
+.view-instructordash .jumbotronn {
+  border-bottom: 1px solid #dee2e6;
 }
