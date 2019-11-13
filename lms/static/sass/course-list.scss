@@ -12786,9 +12786,9 @@ button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::befo
   background-color: #fff;
 }
 
-button:not(:disabled), [type="submit"]:not(:disabled) {
-  border: 1px solid #dee2e6;
-}
+// button:not(:disabled), [type="submit"]:not(:disabled) {
+//   border: 1px solid #dee2e6;
+// }
 
 img.message-author {
   display: none;
@@ -12969,6 +12969,7 @@ img.message-author {
   text-align: center;
   padding: 4px 12px;
   margin-bottom: 2px;
+  white-space:break-spaces;
 }
 
 .enroll-option .hint {
@@ -12988,6 +12989,17 @@ img.message-author {
   #nav-tab {
     display: none;
   }
+  #instructor-dashboard-content .location-example {
+    font-size: 10px;
+  }
+  .member-list tr {
+    display: flex;
+    flex-direction: column;
+  }
+#membership textarea {
+  width: 100%;
+}
+
 }
 
 .view-instructordash .jumbotronn {
