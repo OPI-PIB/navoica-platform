@@ -19,6 +19,8 @@ show_preview_menu = course and staff_access and supports_preview_menu
   <script src="${static.url('js/course_info.js')}">
 </script>
 
+% if request.path.endswith("course/"):
+
 % if show_preview_menu:
     <%
     def selected(is_selected):
@@ -120,6 +122,9 @@ show_preview_menu = course and staff_access and supports_preview_menu
 % else:
 
 % if course:
+
+
+
 <header id="header-course">
   <div class="jumbotron">
     <div class="container">
@@ -151,5 +156,11 @@ show_preview_menu = course and staff_access and supports_preview_menu
 
 
 % endif
+
+% endif
+
+% else:
+
+<header id="header-course" class="bg-light" style="padding-bottom: 50px"></header>
 
 % endif
