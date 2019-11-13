@@ -2625,7 +2625,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-outline-primary {
   color: #E41D37;
-  border-color: #E41D37;
+  border-color: #E41D37 !important;
 
   &:hover {
     color: #fff;
@@ -12984,7 +12984,11 @@ img.message-author {
 @media (max-width: 960px) {
   #action-tab-select {
     display: block;
+    margin-bottom: 1rem;
   }   
+  #action-tab-select:focus {
+    box-shadow: unset;
+  }
   #nav-tab {
     display: none;
   }
