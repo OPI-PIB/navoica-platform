@@ -1551,7 +1551,7 @@ PIPELINE_CSS = {
         'source_filenames': [
             'css/vendor/ova/annotator.css',
             'css/vendor/ova/edx-annotator.css',
-            'css/vendor/ova/video-js.min.css',
+            #'css/vendor/ova/video-js.min.css',
             'css/vendor/ova/rangeslider.css',
             'css/vendor/ova/share-annotator.css',
             'css/vendor/ova/richText-annotator.css',
@@ -2647,7 +2647,8 @@ ALL_COURSE_ORGANIZER = [
     [u"1", u"Fundacja Młodej Nauki"],
     [u"2", u"Politechnika Warszawska"],
     [u"3", u"Politechnika Łódzka"],
-    [u"4", u"OPI PIB"]
+    [u"4", u"OPI PIB"],
+    [u"5", u"Uczelnia Techniczno-Handlowa im. Heleny Chodkowskiej"]
 ]
 
 ALL_COURSE_CATEGORY = [
