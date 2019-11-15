@@ -1453,7 +1453,7 @@ PIPELINE_CSS = {
             #'css/style.css',
             #'css/courses.css',
             #'css/course.css',
-	    #'css/course-toc.css',
+	        #'css/course-toc.css',
             'css/course-list.css',
             #'css/polipedia.css',
             #'css/polipedia.custom.css',
@@ -1487,13 +1487,13 @@ PIPELINE_CSS = {
     },
     'style-main-v2': {
         'source_filenames': [
-            'css/lms-main-v2.css',
+            # 'css/lms-main-v2.css',
         ],
         'output_filename': 'css/lms-main-v2.css',
     },
     'style-main-v2-rtl': {
         'source_filenames': [
-            'css/lms-main-v2-rtl.css',
+            # 'css/lms-main-v2-rtl.css',
         ],
         'output_filename': 'css/lms-main-v2-rtl.css',
     },
@@ -1507,7 +1507,7 @@ PIPELINE_CSS = {
     },
     'style-course': {
         'source_filenames': [
-            'css/lms-course.css',
+            'css/course-content.css',
         ],
         'output_filename': 'css/lms-course.css',
     },
@@ -1537,7 +1537,7 @@ PIPELINE_CSS = {
     },
     'style-inline-discussion': {
         'source_filenames': [
-            'css/discussion/inline-discussion.css',
+            #'css/discussion/inline-discussion.css',
         ],
         'output_filename': 'css/discussion/inline-discussion.css',
     },

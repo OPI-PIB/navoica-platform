@@ -42,7 +42,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, b, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
@@ -145,7 +145,7 @@ sup {
 }
 
 a {
-  color: #D0353F;
+  color: #E41D37;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2037,7 +2037,7 @@ textarea.form-control {
 
 .btn:focus, .btn.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem #dee2e6;
+//  box-shadow: 0 0 0 0.2rem #dee2e6;
 }
 
 .btn.disabled, .btn:disabled {
@@ -2333,7 +2333,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(208, 53, 63, 0.5);
+//  box-shadow: 0 0 0 0.2rem rgba(208, 53, 63, 0.5);
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
@@ -3999,7 +3999,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(228, 29, 55, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-light .navbar-text {
@@ -9097,7 +9097,7 @@ main.container .d-flex section,
   margin-top: 5px;
 }
 
-.jumbotronn {
+/*.jumbotronn {
   background-color: #f8f9fa;
 }
 
@@ -9130,15 +9130,15 @@ main.container nav .nav-tabs .nav-item,
   font-weight: 600;
   height: 4rem;
   justify-content: center;
-  /*
+  
         letter-spacing: .02em;
-        */
+        
   margin-left: -1px;
   padding: 0;
-  /*
+  
         text-transform: uppercase;
-        */
-}
+        
+}*/
 
 main.container nav .nav-tabs .nav-item.active,
 .jumbotronn > .container nav .nav-tabs .nav-item.active {
@@ -9490,48 +9490,47 @@ article .display-3::before {
   font-size: 14px;
 }
 
-.container nav[aria-label="breadcrumb"] {
+.container .has-breadcrumbs {
   /*
   border-bottom: 1px solid map_get($grays, "300");
   */
-  margin-bottom: 3rem;
   overflow: hidden;
   padding: 0.5rem 0 1.5rem;
   position: static;
 }
 
-.container nav[aria-label="breadcrumb"] .breadcrumb {
+.container .breadcrumbs {
   font-size: 14px;
   margin: 0;
   padding: 0;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(1)::after {
+.container .breadcrumbs .nav-item:nth-child(1)::after {
   content: "/";
-  margin: 0 .5em 0 1em;
+  margin: 0 .5em 0 .5em;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(2)::after {
+.container .breadcrumbs .nav-item:nth-child(2)::after {
   content: "/";
-  margin: 0 .5em 0 1em;
+  margin: 0 .5em 0 .5em;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(3)::after {
+.container .breadcrumbs .nav-item:nth-child(3)::after {
   content: "/";
-  margin: 0 .5em 0 1em;
+  margin: 0 .5em 0 .5em
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(3)::before {
+.container .breadcrumbs .nav-item:nth-child(3)::before {
   content: "Lekcja:";
   font-style: italic;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(2)::before {
+.container .breadcrumbs .nav-item:nth-child(2)::before {
   content: "Moduł: ";
   font-style: italic;
 }
 
-.container nav[aria-label="breadcrumb"] li.breadcrumb-item:nth-child(4)::before {
+.container .breadcrumbs .nav-item:nth-child(4)::before {
   content: "Jednostka: ";
   font-style: italic;
 }
@@ -9751,12 +9750,33 @@ article .display-3::before {
     color: initial;
     width: auto;
    }
-  .notification-hint {
+     .notification-hint {
     border: 1px solid #d9d9d9 !important;
     float: left;
   }
 }
 
+#content .vert .problem {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 0 1rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.course-content #results .d-flex {
+  margin-top: 0;
+}
+
+@media (min-width: 960px) {
+  main.container .d-flex > aside .sequence {
+    display: block !important;
+  }
+}  
+
 .wrap-instructor-info .btn-debug {
   margin-right: .25rem;
 }
+ 
+#seq_content .vert {
+  border-bottom: 0;
+} 
