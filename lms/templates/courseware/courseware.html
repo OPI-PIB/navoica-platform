@@ -60,8 +60,6 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
 
 <link href="${static.url('css/vendor/jquery.autocomplete.css')}" rel="stylesheet" type="text/css">
 
-<link href="${static.url('css/course-content.css')}" rel="stylesheet" type="text/css">
-
 
   ${HTML(fragment.head_html())}
 </%block>
@@ -175,22 +173,19 @@ ${HTML(fragment.foot_html())}
                     <div class="has-breadcrumbs">
                         <div class="breadcrumbs">
                             % if COURSE_OUTLINE_PAGE_FLAG.is_enabled(course.id):
-                                <span class="nav-item nav-item-course breadcrumb-item">
+                                <span class="nav-item nav-item-course">
                                     <a href="${course_url}">${course_home_page_title(course)}</a>
                                 </span>
-                                /
                             % endif
                             % if chapter:
                                 <span class="nav-item nav-item-chapter" data-course-position="${course.position}" data-chapter-position="${chapter.position}">
                                     <a href="${course_url}#${unicode(chapter.location)}">${chapter.display_name_with_default}</a>
                                 </span>
-                                /
                             % endif
                             % if section:
                                 <span class="nav-item nav-item-section">
                                     <a href="${course_url}#${unicode(section.location)}">${section.display_name_with_default}</a>
                                 </span>
-                                /
                             % endif
                             <span class="nav-item nav-item-sequence">${sequence_title}</span>
                         </div>
