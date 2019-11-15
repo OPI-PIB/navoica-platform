@@ -9,9 +9,13 @@ div {
     align-items: stretch;
     flex-flow: row wrap;
     justify-content: space-between !important;  
+    line-height: 1.7143;
   }
 }
 
+.display-2 {
+  font-weight: 600;
+} 
 // @include media-breakpoint-up(md) {
 //   #content {
 //     margin: 0 0 $jumbotron-padding-y;

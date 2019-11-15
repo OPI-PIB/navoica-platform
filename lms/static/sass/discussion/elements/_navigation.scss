@@ -16,6 +16,12 @@
 //   }
 // }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .btn-link.all-topics.btn-fake-breadrumbs {
   span {
     // color: $red;
@@ -23,8 +29,34 @@
     text-decoration: none;
     background-color: transparent;
     font-size: 14px;
+    font-weight: 600;
     margin: 0 .5em 0 1em;
+    margin-top: -2rem !important;
     padding: 0;
+  }
+}
+
+.border-top{
+  padding: 0 !important;
+}
+
+.breadcrumbs {
+  margin-bottom: 3rem;
+  padding: 0.5rem 0 1.5rem;
+  overflow: hidden;
+  position: static;
+
+}
+
+@media (min-width: 960px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
   }
 }
 
@@ -34,7 +66,7 @@
   */
   margin-bottom: $font-size-base * 3;
   overflow: hidden;
-  padding: $font-size-base * .5 0 $font-size-base * 1.5;
+  // padding: $font-size-base * .5 0 $font-size-base * 1.5;
   position: static;
 
   .breadcrumb {
@@ -641,7 +673,6 @@
         }
 
         span {
-          // color: $red;
           color: #e41d37;
           display: inline-block;
           font-size: 14px;
@@ -1175,11 +1206,11 @@ main.container nav .nav-tabs .nav-item.active,
 }
 
 // .discussion .discussion-board 
-section.page-content-container {
-  border-top: 1px;
-  border-top-color: map_get($grays, "300");
-  border-top-style: solid;
-}
+// section.page-content-container {
+//   border-top: 1px;
+//   border-top-color: map_get($grays, "300");
+//   border-top-style: solid;
+// }
 // .nav-link.active {
 //   display: block;
 //   padding: 15px !important;
@@ -1202,6 +1233,34 @@ section.page-content-container {
   line-height: 1.625;
   border-radius: 0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
+
+
+
+.forum-search {
+  background: rgba(200, 200, 200, .25);
+  flex: 0 1 600px;
+
+  button, input {
+    color: map_get($grays, "900");
+  }
+
+  .search-button {
+    border-radius: 0 !important;
+    border-color: map_get($grays, "500");
+    background: map_get($grays, "100");
+
+    &:hover {
+      border-color: map_get($grays, "500");
+      background: map_get($grays, "500");
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem map_get($grays, "300");
+      border-color: map_get($grays, "500");
+      background: map_get($grays, "500");
+    }
+  }
 }
 
 button {
@@ -1212,7 +1271,18 @@ button {
     }
   }
 }
- 
+
+.new-post-btn {
+  color: $white !important;
+  background-color: #e41d37 !important;
+  border-color: #e41d37 !important;
+
+  &:hover {
+    background-color: $red !important;
+    border-color: $red !important;    
+  }
+}
+
 .btn-neutral {
   border-color: transparent;
 
@@ -1381,3 +1451,6 @@ input[type="button"].btn-block {
 
 // fixes for jumbotron and jumbotronn
 
+.form-control {
+  line-height: 1.7143;
+}
