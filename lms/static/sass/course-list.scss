@@ -12818,7 +12818,7 @@ img.message-author {
 .navbar {
   img {
     max-height: 34px;
-    display: none;
+  //  display: none;
   }
    #img-mobile {
     display: block;
@@ -12919,7 +12919,7 @@ img.message-author {
 }
 
 .page-header-main {
-  margin-top: 3rem;
+//  margin-top: 3rem;
 }
 
 .search-result-list {
@@ -12982,7 +12982,7 @@ img.message-author {
 @media (max-width: 960px) {
   #action-tab-select {
     display: block;
-    margin-bottom: 1rem;
+    margin: 4rem 0 1rem 0;
   }   
   #action-tab-select:focus {
     box-shadow: unset;
@@ -13007,4 +13007,27 @@ img.message-author {
 
 .view-instructordash .jumbotronn {
   border-bottom: 1px solid #dee2e6;
+}
+
+.provider {
+  white-space: break-spaces;
+}
+
+@media (max-width: 960px) {
+  #provider_course {
+    text-align: center;
+    order: 1;
+    width: 960px;
+  }
+  header .jumbotron {
+    padding-top: 5rem;
+  }
+}
+
+#nav-tab {
+  padding-top: 1rem;
+}
+
+.jumbotronn {
+  padding-top: 2rem;
 }
