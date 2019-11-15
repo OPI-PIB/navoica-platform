@@ -1,13 +1,18 @@
 <%page expression_filter="h"/>
 <%! from django.utils.translation import ugettext as _ %>
 <script type="text/template" id="thread-list-template">
-    <div class="forum-nav-thread-list-wrapper" id="sort-filter-wrapper" tabindex="-1">
+    <div class="collapse-panel collapse show forum-nav-thread-list-wrapper" id="sort-filter-wrapper" tabindex="-1">
+        <header>
+        <h2>
+            <span class="d-none d-md-block">${_("All Posts")}</span>
+        </h2>
         <div class="forum-nav-refine-bar">
             <label class="forum-nav-filter-main">
                 ## Translators: This labels a filter menu in forum navigation
                 <span class="sr">${_("Filter:")}</span>
                 <select class="forum-nav-filter-main-control">
                     ## Translators: This is a menu option for showing all forum threads unfiltered
+                    <option selected disabled hidden><i class="fas fa-filter"></i></option>
                     <option value="all">${_("Show all posts")}</option>
                     ## Translators: This is a menu option for showing only unread forum threads
                     <option value="unread">${_("Unread posts")}</option>
@@ -45,6 +50,7 @@
                 </select>
             </label>
         </div>
+        </header>
         <div class="search-alerts"></div>
         <ul class="forum-nav-thread-list"></ul>
     </div>
