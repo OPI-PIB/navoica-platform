@@ -11597,7 +11597,7 @@ main.container .d-flex>aside {
   background-position: center center;
   background-size: cover;
   box-sizing: border-box;
-  margin: 4rem 0 0;
+  // margin: 4rem 0 0;
 }
 
 .search-facets {
@@ -12764,11 +12764,13 @@ fieldset label {
 button#section.subsection-text.accordion-trigger.bg1[aria-expanded="false"]::before {
         content: "+";
         left: 12px;
+        margin-right: 5px;
       }
 
 button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::before {
         content: "\2012";
         left: 12px;
+        margin-right: 5px;
       }
 
 #content .vert .problems-wrapper .problem [class*="inputtype"] {
@@ -12847,7 +12849,7 @@ img.message-author {
   .view-instructordash .nav-tabs .nav-link.active {
     border-bottom: 1px solid #dee2e6 !important;
   }
-  .view-instructordash .jumbotronn {
+ .jumbotronn {
     border-bottom: 0 !important;
   }
 }
@@ -12864,9 +12866,9 @@ img.message-author {
   margin-bottom: 0.5rem;
 }
 
-.dismiss-message {
-  display: none;
-}
+// .dismiss-message {
+//   display: none;
+// }
 
 .page-header-search {
   display:flex !important;
@@ -13025,7 +13027,7 @@ img.message-author {
   width: 100%;
 }
 
-.view-instructordash .jumbotronn {
+.jumbotronn {
   border-bottom: 1px solid #dee2e6;
 }
 // #seq_content .vert .xblock ol {
@@ -13097,4 +13099,12 @@ margin-right:10px;
 
 #course-content .speed-option {
   width:50px;
+}
+
+span.complete-checkmark.fa.fa-check {
+  margin-right: 5px;
+}
+
+#header-course {
+  margin: 4rem 0 0 0;
 }
