@@ -11597,7 +11597,7 @@ main.container .d-flex>aside {
   background-position: center center;
   background-size: cover;
   box-sizing: border-box;
-  // margin: 4rem 0 0;
+  margin: 4rem 0 0;
 }
 
 .search-facets {
@@ -13107,4 +13107,15 @@ span.complete-checkmark.fa.fa-check {
 
 #header-course {
   margin: 4rem 0 0 0;
+}
+
+
+#register-form .new-vp::after {color:
+#E41D37;
+content: '\f069';
+font-family: "Font Awesome 5 Free";
+font-size: 10px;
+font-weight: 900;
+margin-left: .2em;
+vertical-align: top;
 }
