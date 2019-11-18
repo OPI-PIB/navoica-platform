@@ -1,4 +1,4 @@
-define(['jquery', 'date', 'jquery.ui.regional.pl' ,'moment' ,'js/utils/change_on_enter', 'jquery.ui', 'jquery.timepicker'],
+define(['jquery', 'date', 'js/utils/regional_pl' ,'moment' ,'js/utils/change_on_enter', 'jquery.ui', 'jquery.timepicker'],
 function($, date, RegionalPl,  moment, TriggerChangeEventOnEnter) {
     'use strict';
     var setupDatePicker = function(fieldName, view, index) {

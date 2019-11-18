@@ -89,7 +89,6 @@
             'jquery': 'common/js/vendor/jquery',
             'jquery-migrate': 'common/js/vendor/jquery-migrate',
             'jquery.ui': 'js/vendor/jquery-ui.min',
-            'jquery.ui.regional.pl' : 'js/vendor/jquery-ui-regional-pl',
             'jquery.form': 'js/vendor/jquery.form',
             'jquery.markitup': 'js/vendor/markitup/jquery.markitup',
             'jquery.leanModal': 'js/vendor/jquery.leanModal',
