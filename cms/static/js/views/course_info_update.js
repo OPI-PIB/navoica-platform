@@ -84,7 +84,7 @@ define(['codemirror',
                             value = '';
                         }
                     }
-                    value = $.datepicker.formatDate('MM d, yy', value);
+                    value = $.datepicker.formatDate('dd/mm/yy', value);
                 }
                 var targetModel = this.collection.get(this.$currentPost.attr('name'));
                 var prevValue = targetModel.get(attr);
@@ -163,7 +163,7 @@ define(['codemirror',
                 var targetModel = this.eventModel(event);
                 targetModel.set({
                 // translate short-form date (for input) into long form date (for display)
-                    date: $.datepicker.formatDate('MM d, yy', new Date(this.dateEntry(event).val())),
+                    date: $.datepicker.formatDate('dd/mm/yy', new Date.parse(this.dateEntry(event).val())),
                     content: this.$codeMirror.getValue(),
                     push_notification_selected: this.push_notification_selected(event)
                 });
@@ -213,7 +213,7 @@ define(['codemirror',
                 var targetModel = this.eventModel(event);
             // translate long-form date (for viewing) into short-form date (for input)
                 if (targetModel.get('date') && targetModel.isValid()) {
-                    $(this.dateEntry(event)).val($.datepicker.formatDate('mm/dd/yy', new Date(targetModel.get('date'))));
+                    $(this.dateEntry(event)).val($.datepicker.formatDate('mm/dd/yy', new Date.parse(targetModel.get('date'))));
                 } else {
                     $(this.dateEntry(event)).val('MM/DD/YY');
                 }
