@@ -10327,8 +10327,6 @@ aside {
 }
 
 main.container aside {
-//  order: -1;
-
   .list-group-flush .list-group-item {
     border: 0;
     padding-left: 0;
@@ -10388,11 +10386,11 @@ main.container aside {
       }
 
       aside {
-        border-left: 1px solid #dee2e6;
-        flex: 0 0 346px;
-        margin-left: 2rem;
-        order: initial;
-        padding-left: 2rem;
+      //  border-left: 1px solid #dee2e6;
+      //  flex: 0 0 346px;
+      //  margin-left: 2rem;
+      //  order: initial;
+      //  padding-left: 2rem;
 
         .list-group-item {
           font-size: 87.5%;
@@ -10454,12 +10452,13 @@ main.container aside {
       }
 
       aside {
-        border-left: 1px solid #dee2e6;
-        flex: 0 0 426px;
-        margin-left: 2rem;
-        order: 1;
-        padding-left: 2rem;
-
+        border-right: 1px solid #dee2e6;
+        margin-right: 2rem;
+        padding-right: 2rem;
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        
         .list-group-item {
           font-size: 87.5%;
         }
@@ -11553,11 +11552,11 @@ main.container > aside {
 
 @media (min-width: 960px) {
   main.container .d-flex>aside{
-    order: initial !important;
+//    order: initial !important;
   }
 }
 
-main.container .d-flex>aside {
+main.container .d-flex > aside {
   order: -1;
 }
 
@@ -11759,13 +11758,13 @@ aside {
     }
   }
   #filter {
-    border-right: 1px solid #dee2e6;
-    margin-right: 2rem;
-    order: -1 !important;
-    padding-right: 2rem;
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
+  //  border-right: 1px solid #dee2e6;
+  //  margin-right: 2rem;
+  //  order: -1 !important;
+  //  padding-right: 2rem;
+  //  margin-left: 0;
+  //  padding-left: 0;
+  // border-left: none;
   }
 }
 
@@ -11774,9 +11773,6 @@ aside {
     max-width: 1280px;
   }
 }
-
-
-
 
 #header-login {
   display: flex;
@@ -12827,7 +12823,7 @@ img.message-author {
 
 @media (max-width: 960px) {
   main.container aside {
-    order: -1;
+  //  order: -1;
   }
   .page-header-search .input-text {
     width: 20rem !important;
