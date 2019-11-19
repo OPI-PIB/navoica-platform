@@ -19,6 +19,8 @@ show_preview_menu = course and staff_access and supports_preview_menu
   <script src="${static.url('js/course_info.js')}">
 </script>
 
+% if request.path.endswith("course/"):
+
 % if show_preview_menu:
     <%
     def selected(is_selected):
@@ -86,8 +88,8 @@ show_preview_menu = course and staff_access and supports_preview_menu
 
   <aside>
     <header>
-	  <h2>Ogranizator</h2>
-	</header>
+	    <h2>Organizator</h2>
+	  </header>
 	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
            <div class="organizer-logo">
               <p class="mt-2 mx-auto text-center">
@@ -120,7 +122,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
 % else:
 
 % if course:
-<header id="header-course">
+<header id="header-course" class="bg-light">
   <div class="jumbotron">
     <div class="container">
       <div class="d-flex">
@@ -131,7 +133,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
      </article>
   <aside>
     <header>
-	  <h2>Ogranizator</h2>
+	  <h2>Organizator</h2>
 	</header>
 	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
            <div class="organizer-logo">
@@ -151,5 +153,11 @@ show_preview_menu = course and staff_access and supports_preview_menu
 
 
 % endif
+
+% endif
+
+% else:
+
+<header id="header-course" class="bg-light"></header>
 
 % endif

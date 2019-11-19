@@ -1,11 +1,15 @@
 <div class="breadcrumbs">
     <span class="nav-item">
-        <button class="btn-link all-topics">
-            <span class="icon fa fa-bars" aria-hidden="true"></span><%- gettext('All Topics') %>
+        <button class="btn-link all-topics btn-fake-breadrumbs">
+            <!--<span class="icon fa fa-bars" aria-hidden="true"></span>-->
+            <span class="nav-item nav-item-course breadcrumb-item">
+            <%- gettext('All Topics') %>
+            </span>
         </button>
     </span>
     <% contents.forEach(function(content) { %>
-        <span class="fa fa-angle-right"></span>
+    	/
+        <!--<span class="fa fa-angle-right"></span>-->
         <span class="nav-item"><%- content %></span>
     <% }); %>
 </div>
