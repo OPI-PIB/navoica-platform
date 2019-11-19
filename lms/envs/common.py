@@ -977,6 +977,7 @@ LANGUAGE_COOKIE = "openedx-language-preference"
 LANGUAGES = [
     ('en', u'English'),
     ('pl', u'Polski'),  # Polish
+    ('en_us', u'English_US'),  # English_US
 ]
 
 LANGUAGE_DICT = dict(LANGUAGES)

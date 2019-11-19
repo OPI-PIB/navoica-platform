@@ -43,7 +43,6 @@
         transform = function(iterationKey) {
             var context;
             $(iterationKey).each(function() {
-                debugger;
                 if (isValid($(this).data('datetime'))) {
                     dateFormat = DateUtils.dateFormatEnum[$(this).data('format')];
                     if (typeof dateFormat === 'undefined') {
