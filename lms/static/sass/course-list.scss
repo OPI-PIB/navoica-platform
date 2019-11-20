@@ -37,6 +37,8 @@
   --font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+//@import "course/instructor/instructor_2";
+
 * {
   box-sizing: border-box;
 
@@ -10614,9 +10616,9 @@ article .display-3 {
     padding: 0;
 
     :first-child {
-      display: block;
-      padding: 0;
-      width: 100%;
+    //  display: block;
+    //  padding: 0;
+    //  width: 100%;
 
       .btn {
         font-weight: inherit;
@@ -10634,9 +10636,9 @@ article .display-3 {
       }
 
       &::before {
-        display: block;
-        left: 4px;
-        position: absolute;
+      //  display: block;
+      //  left: 4px;
+      //  position: absolute;
       }
     }
   }
@@ -11443,7 +11445,7 @@ main.container > aside {
 
 .section-name.accordion-trigger.bg1, subsection-text.accordion-trigger.bg1{
    background: #f8f9fa;
-   padding: 0.75rem 2rem !important;
+   padding: 0.75rem 1rem !important;
    border-radius: 0;
  }
 
@@ -13027,3 +13029,4 @@ img.message-author {
 .jumbotronn {
   padding-top: 2rem;
 }
+
