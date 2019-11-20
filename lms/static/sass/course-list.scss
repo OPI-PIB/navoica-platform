@@ -547,7 +547,7 @@ padding-left: 0;
 #password-reset-complete-anchor{
 margin-top: 4rem !important;
 }
- 
+
 @media (min-width: 960px) {
   .container {
     max-width: 960px;
@@ -4513,7 +4513,7 @@ input {
   }
 
   .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(228, 29, 55, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23e41d37' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 
   .navbar-text {
@@ -4653,7 +4653,7 @@ input {
   }
 
   .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 
   .navbar-text {
@@ -10458,7 +10458,7 @@ main.container aside {
         margin-left: 0;
         padding-left: 0;
         border-left: none;
-        
+
         .list-group-item {
           font-size: 87.5%;
         }
@@ -12724,7 +12724,7 @@ border-color:
 }
 
 .alert-success {
-    color: 
+    color:
 #155724;
 background-color:
 #d4edda;
@@ -12755,7 +12755,7 @@ fieldset label {
     color: #b8162b;
     background-color: #fff;
   }
-} 
+}
 
 button#section.subsection-text.accordion-trigger.bg1[aria-expanded="false"]::before {
         content: "+";
@@ -12769,7 +12769,7 @@ button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::befo
 
 #content .vert .problems-wrapper .problem [class*="inputtype"] {
   border: 0;
-}      
+}
 
 #seq_content .vert {
   border-top:0;
@@ -12930,7 +12930,7 @@ img.message-author {
 }
 
 #instructor-dashboard-content .instructor-nav .nav-item {
-  margin-right:2px; 
+  margin-right:2px;
   margin-top: 2px;
 }
 
@@ -12972,14 +12972,14 @@ img.message-author {
 @media (min-width: 960px) {
   #action-tab-select {
     display: none;
-  } 
-} 
+  }
+}
 
 @media (max-width: 960px) {
   #action-tab-select {
     display: block;
     margin: 4rem 0 1rem 0;
-  }   
+  }
   #action-tab-select:focus {
     box-shadow: unset;
   }
