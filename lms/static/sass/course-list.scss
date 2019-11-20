@@ -37,7 +37,6 @@
   --font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-//@import "course/instructor/instructor_2";
 
 * {
   box-sizing: border-box;
@@ -5298,7 +5297,6 @@ a.badge-dark {
 .alert {
   position: relative;
   padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0;
 }
@@ -10727,10 +10725,6 @@ article .display-3 {
     float: right;
     justify-content: flex-end;
 
-    &.studio-view {
-      margin-bottom: 1rem;
-    }
-
     .instructor-info-action::before {
       /*
         content: "\f121";
@@ -12621,10 +12615,11 @@ solution {
   margin-bottom:2px;
 }
 
-  #header-login {
-    border-bottom: 0;
-    padding-bottom: 0;
-  }
+#header-login {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
 #courses-list-header {
   padding-bottom:0;
 }
@@ -12762,11 +12757,13 @@ fieldset label {
 button#section.subsection-text.accordion-trigger.bg1[aria-expanded="false"]::before {
         content: "+";
         left: 12px;
+        margin-right: 5px;
       }
 
 button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::before {
         content: "\2012";
         left: 12px;
+        margin-right: 5px;
       }
 
 #content .vert .problems-wrapper .problem [class*="inputtype"] {
@@ -12845,7 +12842,7 @@ img.message-author {
   .view-instructordash .nav-tabs .nav-link.active {
     border-bottom: 1px solid #dee2e6 !important;
   }
-  .view-instructordash .jumbotronn {
+ .jumbotronn {
     border-bottom: 0 !important;
   }
 }
@@ -12862,9 +12859,9 @@ img.message-author {
   margin-bottom: 0.5rem;
 }
 
-.dismiss-message {
-  display: none;
-}
+// .dismiss-message {
+//   display: none;
+// }
 
 .page-header-search {
   display:flex !important;
@@ -12988,10 +12985,29 @@ img.message-author {
   #nav-tab {
     display: none;
   }
+  #course-content .page-header-main {
+    margin-top: 0;
+  }
+  #course-content .has-breadcrumbs {
+    padding:0;
+  }
+  #course-content #seq_content {
+    display:flex;
+    flex-direction: column;
+  }
+  #course-content #seq_content .vert .xblock ol {
+   flex-direction:column;
+  }
+  #course-content .speeds.menu-container {
+   display:block;
+  }
+  #course-content .volume {
+   right:18%
+  }
 }
 
 #instructor-dashboard-content .location-example {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .member-list tr {
@@ -13003,8 +13019,93 @@ img.message-author {
   width: 100%;
 }
 
-.view-instructordash .jumbotronn {
-  border-bottom: 1px solid #dee2e6;
+#course-content .video-speeds.menu {
+  display: flex;
+justify-content: space-around;
+}
+
+#course-content #seq_content .vert .xblock li {
+  line-height:1;
+   font-size:14px;
+}
+
+#course-content .spacing {
+  display:none !important;
+}
+
+#course-content .vcr {
+  display:flex;
+  margin-bottom:20px;
+}
+#course-content #seq_content .vert .xblock ol {
+  list-style-type: none;
+  display:flex;
+  flex-wrap:wrap;
+  padding-left:0;
+  margin-bottom: 0;
+}
+
+#course-content .secondary-controls {
+  display:flex;
+  align-items:center;
+}
+
+#course-content .control {
+  height:35px;
+}
+
+#course-content .ui-slider-vertical {
+  height:70px;
+  margin-bottom:10px;
+  margin-right:10px;
+}
+
+#course-content .volume {
+ transform: rotate(270deg);
+ margin-top: 0;
+ right:25%;
+ position: absolute;
+}
+
+
+#course-content .volume .control {
+ transform: rotate(90deg);
+}
+
+#course-content .speeds.menu-container {
+  display:flex;
+}
+
+#course-content .subtitles {
+  max-height: 1500px !important;
+}
+
+#course-content .volume-slider-container {
+  display:flex;
+  justify-content: center;
+}
+
+#course-content .speed-option {
+  width:50px;
+}
+
+span.complete-checkmark.fa.fa-check {
+  margin-right: 5px;
+}
+
+#header-course {
+  margin: 4rem 0 0 0;
+}
+
+
+#register-form .new-vp::after {
+  color: #E41D37;
+  content: '\f069';
+  font-family: "Font Awesome 5 Free";
+  font-size: 10px;
+  font-weight: 900;
+  margin-left: .2em;
+  vertical-align: top;
 }
 
 .provider {
@@ -13030,3 +13131,26 @@ img.message-author {
   padding-top: 2rem;
 }
 
+#results #h2 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#main {
+  margin: 0 auto !important;
+}
+
+.instructor-dashboard-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.idash-section {
+  display: none;
+  &.active-section {
+    display: block;
+  }
+}
+
+
+//@import "course/instructor/instructor_2";
