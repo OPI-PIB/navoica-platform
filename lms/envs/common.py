@@ -266,6 +266,8 @@ FEATURES = {
     # courses listed in the announcement dates order - this is default Open edX behavior.
     # Set to True to change the course sorting behavior by their start dates, latest first.
     'ENABLE_COURSE_SORTING_BY_START_DATE': False,
+    
+    'ENABLE_MAIN_PAGE_PROMOTION': True,
 
     # Expose Mobile REST API. Note that if you use this, you must also set
     # ENABLE_OAUTH2_PROVIDER to True
@@ -2639,7 +2641,7 @@ ALL_LANGUAGES = [
 
 ALL_COURSE_DIFFICULTY = [
     [u"easy", u"początkujący"],
-    [u"medium", u"średnio-zaawansowany"],
+    [u"medium", u"średnio zaawansowany"],
     [u"hard", u"zaawansowany"]
 ]
 

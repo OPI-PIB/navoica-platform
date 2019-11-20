@@ -349,6 +349,13 @@ class CourseFields(object):
         ),
         scope=Scope.settings
     )
+    main_page = Boolean(
+        display_name=_("Show curse on main page."),
+        help=_(
+            "Enter true or false. If true, the course appears on the section 'New Courses' on main page."
+        ),
+        scope=Scope.settings
+    )
     mobile_available = Boolean(
         display_name=_("Mobile Course Available"),
         help=_("Enter true or false. If true, the course will be available to mobile devices."),

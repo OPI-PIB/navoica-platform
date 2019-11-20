@@ -152,8 +152,17 @@ def index(request, extra_context=None, user=AnonymousUser()):
     if extra_context is None:
         extra_context = {}
 
-    courses = get_courses(user)
+    
 
+    if configuration_helpers.get_value(
+            "ENABLE_MAIN_PAGE_PROMOTION",
+            settings.FEATURES["ENABLE_MAIN_PAGE_PROMOTION"],
+    ):
+        courses = get_courses(user, None, {'main_page':True})
+    else:
+        courses = get_courses(user)
+        
+        
     if configuration_helpers.get_value(
             "ENABLE_COURSE_SORTING_BY_START_DATE",
             settings.FEATURES["ENABLE_COURSE_SORTING_BY_START_DATE"],
