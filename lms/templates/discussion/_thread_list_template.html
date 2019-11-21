@@ -7,9 +7,9 @@
             <span class="d-none d-md-block">${_("All Posts")}</span>
         </h2>
         <div class="forum-nav-refine-bar">
-            <label class="forum-nav-filter-main">
+            ##<label class="forum-nav-filter-main">
                 ## Translators: This labels a filter menu in forum navigation
-                <span class="sr">${_("Filter:")}</span>
+                ##<span class="sr">${_("Filter:")}</span>
                 <select class="forum-nav-filter-main-control">
                     ## Translators: This is a menu option for showing all forum threads unfiltered
                     <option selected disabled hidden><i class="fas fa-filter"></i></option>
@@ -25,10 +25,12 @@
                         <option value="flagged">${_("Flagged")}</option>
                     %endif
                 </select>
+                <i class="fa fa-lg fa-filter"></i>
             ## xss-lint: disable=python-parse-error,python-wrap-html
-            </label>${"<% if (isDiscussionDivisionEnabled && isPrivilegedUser) { %>" | n, decode.utf8}<label class="forum-nav-filter-cohort">
+            ## </label>
+            ${"<% if (isDiscussionDivisionEnabled && isPrivilegedUser) { %>" | n, decode.utf8}<label class="forum-nav-filter-cohort">
                 ## Translators: This labels a group menu in forum navigation
-                <span class="sr">${_("Group:")}</span>
+                ## <span class="sr">${_("Group:")}</span>
                 <select class="forum-nav-filter-cohort-control">
                     <option value="">${_("in all groups")}</option>
                         ## groups is not iterable sometimes because inline discussions xmodule doesn't pass it
@@ -37,18 +39,22 @@
                         %endfor
                 </select>
             ## xss-lint: disable=python-parse-error,python-wrap-html
-            </label>${"<% } %>" | n, decode.utf8}<label class="forum-nav-sort">
+            ## </label>
+            ${"<% } %>" | n, decode.utf8}
+            ## <label class="forum-nav-sort">
                 ## Translators: This labels a sort menu in forum navigation
-                <span class="sr">${_("Sort:")}</span>
+                ## <span class="sr">${_("Sort:")}</span>
                 <select class="forum-nav-sort-control">
                     ## Translators: This is a menu option for sorting forum threads
+                    <option selected="" disabled="" hidden=""></option>
                     <option value="activity">${_("by recent activity")}</option>
                     ## Translators: This is a menu option for sorting forum threads
                     <option value="comments">${_("by most activity")}</option>
                     ## Translators: This is a menu option for sorting forum threads
                     <option value="votes">${_("by most votes")}</option>
                 </select>
-            </label>
+                <i class="fa fa-lg fa-sort-amount-desc"></i>
+            ## </label>
         </div>
         </header>
         <div class="search-alerts"></div>
