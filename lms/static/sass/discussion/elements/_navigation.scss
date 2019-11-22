@@ -254,12 +254,12 @@
 // Sort and filter bar
 // -------------------
 
-.forum-nav-refine-bar {
+.forum-nav-refine-bar  {
   @include clearfix();
   @include border-radius($forum-border-radius, $forum-border-radius, 0, 0);
 
   font-size: $forum-small-font-size;
-  border-bottom: 1px solid $forum-color-border;
+  // border-bottom: 1px solid $forum-color-border;
   background-color: theme-color("light");
   padding: ($baseline/4) ($baseline/2);
   color: $black;
@@ -310,6 +310,26 @@
 
 .forum-nav-sort-control {
   @extend %forum-nav-select;
+}
+.forum-nav-filter-main-control,
+.forum-nav-sort-control {
+  position: absolute;
+  width: 1rem;
+  border: none;
+  max-width: 100%;
+  background-color:  transparent;
+  position: absolute;
+  width: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  // background-color: #47792;
+  color: transparent;
+
+  option {
+    color: $black;
+  }
 }
 
 // -----------
@@ -945,7 +965,7 @@
   .forum-nav-browse-filter,
   .forum-nav-refine-bar {
     background-color: map_get($grays, "100");
-    border: 1px solid map_get($grays, "300");
+    // border: 1px solid map_get($grays, "300");
     padding: .5rem;
 
   }
