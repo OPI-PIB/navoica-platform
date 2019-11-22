@@ -41,11 +41,11 @@ from pipeline_mako import render_require_js_path_overrides
 <%def name="pagetitle()" />
   <%block name="title">
       <title>
-       Navoica – Platforma edukacyjna
+       ${_('Navoica.pl - Polish MOOC platform')}
       </title>
   </%block>
   <%block name="metadescription">
-      <meta name="description" content="Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat i dla każdego zarejestrowanego użytkownika. Czytaj Nawojka" />
+      <meta name="description" content="${_('Polish MOOC platform offering free of charge online courses for every registered user. ')}" />
   </%block>
 
   % if not allow_iframing:
