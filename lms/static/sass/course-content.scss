@@ -9790,3 +9790,66 @@ article .display-3::before {
 .instructor-info-action {
   margin-bottom: 1rem;
 }
+
+
+/**
+** PROGRESS
+**/
+.profile-wrapper {
+  .grade-detail-graph {
+    min-height: 400px;
+    width: 100%;
+  }
+}
+
+.chapters {
+  border-top: 1px solid #e3e3e3;
+  margin-top: lh();
+  padding-left: 0;
+
+  section {
+    border-bottom: 1px solid #e3e3e3;
+    display: table;
+    padding: lh() 0;
+    width: 100%;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .hd {
+      display: table-cell;
+      letter-spacing: 0;
+      margin: 0;
+      padding: 0;
+      padding-right: flex-gutter(9);
+      text-transform: none;
+      width: flex-grid(2, 9);
+      vertical-align: top;
+    }
+
+    .scores {
+      margin: lh(0.5) 0;
+
+      dt {
+        display: inline-block;
+        width: auto;
+        margin: initial;
+        margin-right: 1rem;
+        border: initial;
+        padding: initial;
+        font-size: em(14);
+      }
+
+      dd {
+        display: inline-block;
+        margin: 0;
+        padding-right: 1rem;
+        margin-right: 1rem;
+        font-size: em(14);
+        font-weight: normal;
+        color: #6c757d;
+      }
+    }  
+  }
+}

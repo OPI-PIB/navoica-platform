@@ -45,17 +45,6 @@ username = get_enterprise_learner_generic_name(request) or student.username
 </script>
 
 </%block>
-
-<style>
-    .jumbotronn{margin: 0}
-</style>
-<header style="margin: 0" class="bg-light">
-      <div class="jumbotron" id="header_jumbotron">
-        <div class="container">
-          <h2 class="display-2 text-center">${_("Progress")}</h2>
-        </div>
-      </div>
-    </header>
      
 <%include file="/courseware/course_navigation.html" args="active_page='progress'" />
 <div class="border-top" id="content">
@@ -68,8 +57,8 @@ username = get_enterprise_learner_generic_name(request) or student.username
               % endif
               >
                 % if staff_access and studio_url is not None:
-                <div class="wrap-instructor-info">
-                    <a class="instructor-info-action studio-view" href="${studio_url}">${_("View Grading in studio")}</a>
+                <div class="wrap-instructor-info studio-view">
+                    <a class="instructor-info-action  btn btn-sm btn-outline-light" href="${studio_url}"><i class="fas fa-desktop"></i>${_("View Grading in studio")}</a>
                 </div>
                 % endif
                 <h2 class="hd hd-2 progress-certificates-title">
