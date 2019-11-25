@@ -50,7 +50,6 @@ def safe_parse_date(date):
     except ValueError:  # occurs for ill-formatted date values
         return datetime.today()
 
-
 class CourseUpdatesView(CourseTabView):
     """
     The course updates page.

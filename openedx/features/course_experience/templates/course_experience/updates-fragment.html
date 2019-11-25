@@ -1,0 +1,37 @@
+## mako
+
+<%page expression_filter="h"/>
+<%namespace name='static' file='../static_content.html'/>
+
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML
+from datetime import datetime
+%>
+
+<%block name="content">
+% for updates in ordered_updates:
+       <div class="update-message" id="update-message-${updates['id']}" data-id="${updates['id']}">
+           <div class="d-flex justify-content-between">
+                 % if updates['date'] is not Empty:
+                     <%
+                     update_date = datetime.strptime(updates['date'], '%d/%m/%Y')
+                      %>
+                      <h2 id="h2">${_('Update,')}  <span class="localized-datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="shortDate" data-datetime="${update_date}"></span></h2>
+                 % endif
+                <div class="dismiss-message">
+                    <button class="btn btn-sm btn-outline-primary red">
+                        <span data-action-type="resume">${_("Dismiss")}</span>
+                    </button>
+                 </div>
+           </div>
+            ${HTML(updates['content'])}
+       </div>
+
+% endfor
+
+</%block>
+
+<%static:webpack entry="Updates">
+new Updates({ messageContainer: '.update-message',  dismissButton: '.dismiss-message button'});
+</%static:webpack>
