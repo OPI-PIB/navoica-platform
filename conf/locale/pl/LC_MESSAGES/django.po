@@ -8,6 +8,7 @@
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # krystianlygas <krystian.lygas@gmail.com>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
@@ -17,6 +18,7 @@
 #
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  mako.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -28,6 +30,7 @@
 # krystianlygas <krystian.lygas@gmail.com>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
+# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -53,7 +56,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-11-06 07:50+0000\n"
+"POT-Creation-Date: 2019-11-25 10:46+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -2931,6 +2934,16 @@ msgstr ""
 "się tymczasowe oznaczenie \"Nowy\"."
 
 #: common/lib/xmodule/xmodule/course_module.py
+msgid "Show curse on main page."
+msgstr "Wyświetl kurs na stronie głównej. "
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"Enter true or false. If true, the course appears on the section 'New "
+"Courses' on main page."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Mobile Course Available"
 msgstr "Dostępny kurs mobilny"
 
@@ -5782,13 +5795,11 @@ msgstr ""
 "osiągnięcia, które są przyznawane za ukończenie kursów na platformie "
 "{platform_name}."
 
-#. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 #. Translators:  'All rights reserved' is a legal term used in copyrighting to
 #. protect published content
 #: lms/djangoapps/certificates/views/webview.py
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
-#: lms/templates/footer.html
 msgid "All rights reserved"
 msgstr "Wszelkie prawa zastrzeżone"
 
@@ -12071,6 +12082,8 @@ msgstr "Przesyłanie ukończone"
 msgid ""
 "File {filename} exceeds maximum size of {maximum_size_in_megabytes} MB."
 msgstr ""
+"Plik {filename} przekracza maksymalny rozmiar {maximum_size_in_megabytes} "
+"MB."
 
 #: cms/djangoapps/contentstore/views/certificates.py
 msgid "must have name of the certificate"
@@ -13208,6 +13221,10 @@ msgstr ""
 msgid "Honor code "
 msgstr "Kodeks honorowy"
 
+#: lms/templates/footer.html
+msgid "All rights reserved  "
+msgstr ""
+
 #: lms/templates/forgot_password_modal.html
 msgid "Password Reset"
 msgstr "Zresetuj hasło"
@@ -13666,7 +13683,7 @@ msgstr "Naciśnij, aby uruchomić"
 
 #: lms/templates/main.html
 msgid "Navoica.pl - Polish MOOC platform"
-msgstr "Navoica.pl - Polski MOOC"
+msgstr "Navoica.pl – Platforma edukacyjna"
 
 #: lms/templates/main.html
 msgid ""
