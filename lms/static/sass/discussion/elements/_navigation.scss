@@ -792,6 +792,20 @@
       padding: 2rem;
     }
 
+    .response-header {
+      border: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      .username {
+        display: inline-block;
+        font-size: 1.375rem;
+        font-weight: 600;
+        line-height: 1.6363;
+        margin: 0 0 .8182em;
+      }
+    }
+
     .post-header-actions,
     .response-header-actions,
     .comment-actions-list {
@@ -815,9 +829,14 @@
     }
 
     .add-response {
-      border-bottom: 1px solid map_get($grays, "300");
+      // border-bottom: 1px solid map_get($grays, "300");
       padding: 0 0 2rem;
       margin: 1.5rem 0 !important;
+
+      .add-response-btn {
+        font-size: 0.875rem;
+        line-height: 1.7143;
+      }
     }
 
     .response-count {
@@ -844,6 +863,9 @@
         margin-bottom: 8px;
         width: 80px;
       }
+      .discussion-response {
+        padding: 0;
+      }
     }
 
     .comments {
@@ -851,6 +873,7 @@
       border: 1px solid map_get($grays, "200");
       margin: 0 0 -1px;
       padding: 1rem;
+      box-shadow: none;
 
       > li {
         border-top: 1px solid map_get($grays, "300");
@@ -869,7 +892,9 @@
           font-size: .875em;
           line-height: 1.8571;
         }
-
+        // .wmd-preview-container {
+        //   border: none;
+        // }
       }
     }
   }
@@ -993,7 +1018,7 @@
 
   form {
     background-color: map_get($grays, "100");
-    border: 1px solid map_get($grays, "200");
+    // border: 1px solid map_get($grays, "200");
     margin: 0;
     padding: 1rem;
 
@@ -1248,13 +1273,19 @@ main.container nav .nav-tabs .nav-item.active,
 
 .forum-search {
   background: rgba(200, 200, 200, .25);
-  flex: 0 1 600px;
+  // flex: 0 1 600px;
+
+  .btn-outline-primary {
+    border-color: transparent !important;
+  }
+
 
   button, input {
     color: map_get($grays, "900");
   }
 
-  .search-button {
+  .btn.btn-outline-primary.btn-small.search-button {
+  // .search-button.btn-outline-primary {
     border-radius: 0 !important;
     border-color: map_get($grays, "500");
     background: map_get($grays, "100");
@@ -1481,4 +1512,13 @@ input[type="button"].btn-block {
   &::before {
     font-weight: 900;
   }
+}
+
+.fa-filter {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.wmd-preview-container {
+  border: none;
 }
