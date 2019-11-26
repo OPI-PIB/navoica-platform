@@ -9799,6 +9799,32 @@ article .display-3::before {
   .grade-detail-graph {
     min-height: 400px;
     width: 100%;
+  } 
+
+  @media (max-width: 1280px) {
+    .grade-detail-graph {
+      overflow: scroll;
+    }
+  }
+
+  .instructor-info-action {
+    &:active {
+      background: #f8f9fa !important;
+      border-color: #dee2e6 !important;
+      color: #D0353F !important;
+    }
+
+    &:hover {
+      background: #f8f9fa !important;
+      border-color: #dee2e6 !important;
+      color: #D0353F !important;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .tickLabel {
+      right: unset !important;
+    }
   }
 }
 
@@ -9810,7 +9836,7 @@ article .display-3::before {
   section {
     border-bottom: 1px solid #e3e3e3;
     display: table;
-    padding: lh() 0;
+    padding: 1rem;
     width: 100%;
 
     &:last-child {
@@ -9822,10 +9848,55 @@ article .display-3::before {
       letter-spacing: 0;
       margin: 0;
       padding: 0;
-      padding-right: flex-gutter(9);
+      padding-right: 1rem;
       text-transform: none;
-      width: flex-grid(2, 9);
       vertical-align: top;
+      border-right: 1px solid #e3e3e3;
+      width: 426px;
+    }
+
+    @media (max-width: 960px) {
+      .hd {
+        width: 150px;
+      }
+    }
+
+
+
+    h4 {
+      border-right: none !important;
+      width: unset !important;
+    }
+
+    .sections {
+      display: inline-block;
+
+      > div {
+        padding-left: 1rem;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        .hd {
+
+          span {
+            color: #6c757d;
+            font-size: em(14);
+            font-weight: 100;
+          }
+        }
+
+        p {
+          &.override-notice {
+            color: #E41D37;
+          }
+        }
+      }
     }
 
     .scores {
@@ -9853,3 +9924,4 @@ article .display-3::before {
     }  
   }
 }
+
