@@ -25,7 +25,7 @@
         <div class="thread-preview-body"><%- threadPreview %></div>
       <% } %>
       <% if(typeof(subscribed) === "undefined") { var subscribed = null; } %>
-      <% if(pinned || subscribed || staff_authored || community_ta_authored) { %>
+<!--       <% if(pinned || subscribed || staff_authored || community_ta_authored) { %>
         <ul class="forum-nav-thread-labels">
         <% if (pinned) { %>
           <li class="post-label post-label-pinned">
@@ -56,7 +56,7 @@
           </li>
         <% } %>
         </ul>
-      <% } %>
+      <% } %> -->
     </div><div class="forum-nav-thread-wrapper-2">
       <%
       // Translators: 'votes_count' is a numerical placeholder for a specific discussion thread; 'span_start' and 'span_end' placeholders refer to HTML markup.  Please translate the word 'votes'.

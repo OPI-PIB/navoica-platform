@@ -76,3 +76,57 @@
     clear: both;
   }
 }
+
+.discussion-body {
+
+  form {
+    background-color: map_get($grays, "100");
+    border: 1px solid map_get($grays, "200");
+    margin: 0;
+    padding: 1rem;
+
+    legend,
+    label.field-label {
+      display: block;
+      margin: 0;
+    }
+
+    .post-field {
+      margin: 0 0 2rem;
+    }
+
+    .field-label > .field-label-text,
+    legend > .field-label-text,
+    label.field-label-text,
+    span.field-label-text {
+      display: block;
+      font-size: 1.125rem;
+      font-weight: $font-weight-semibold;
+      margin: 0;
+      padding: 0 0 .25rem;
+    }
+
+    .field-help {
+      font-size: .875rem;
+      font-style: italic;
+      margin: 0;
+      padding: 0 0 1rem;
+    }
+
+    .post-type-label {
+      display: block;
+    }
+
+    input + .field-input-label {
+      font-size: 14px;
+    }
+
+    .action {
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
+}
