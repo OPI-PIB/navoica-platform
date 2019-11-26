@@ -9,7 +9,7 @@
 <%namespace name='static' file='static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
-
+from django.core.urlresolvers import reverse
 from openedx.core.djangoapps.util.user_messages import PageLevelMessages
 from openedx.core.djangolib.js_utils import (
     dump_js_escaped_json, js_escaped_string
@@ -101,6 +101,29 @@ from openedx.core.release import RELEASE_LINE
           </div>
         </div>
       % endif
+
+        <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
+            <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }"/>
+             % if user.is_authenticated():
+            <input title="preference api" type="hidden" class="url-endpoint"
+                   value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
+            % else:
+            <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}"
+                   data-user-is-authenticated="false">
+            % endif
+            <!--<input name="next" type="hidden" value="/next/page/" />-->
+            <label><span class="sr">${_("Choose Language")}</span>
+                <select style="position:absolute; top:0; left:0;" class="input select language-selector" id="settings-language-value" name="language">
+                    % for language in settings.LANGUAGES:
+                    % if language[0] == LANGUAGE_CODE:
+                    <option value="${language[0]}" selected="selected">${language[1]}</option>
+                    % else:
+                    <option value="${language[0]}">${language[1]}</option>
+                    % endif
+                    % endfor
+                </select>
+            </label>
+        </form>
 
       <div id="page-alert">
       <%block name="page_alert"></%block>
