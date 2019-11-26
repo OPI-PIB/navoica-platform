@@ -11141,6 +11141,9 @@ article .display-3 {
     margin: 0px;
 }
 
+
+
+
 button#button-addon2 {
     background: #f8f9fa;
     color: #212529;
@@ -11402,6 +11405,19 @@ main.container {
   }
 }
 
+.section-update-message {
+  h1 {
+    font-size: 2.5rem !important;
+    font-weight: 600 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.2 !important;
+    &::before {
+      display:none !important;
+    }
+  }
+
+}
 .subsection-text {
     margin: 0;
     font-family: inherit;

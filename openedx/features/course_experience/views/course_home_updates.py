@@ -36,6 +36,6 @@ class UpdatesFragmentView(EdxFragmentView):
         context = {
             'ordered_updates': ordered_updates,
         }
-        html = render_to_string('course_experience/updates-fragment.html', context)
+        html = render_to_string('course_experience/course-home-updates-fragment.html', context)
         return Fragment(html)
 

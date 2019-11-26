@@ -1,7 +1,7 @@
 /* globals $ */
 import 'jquery.cookie';
 
-export class Updates {  // eslint-disable-line import/prefer-default-export
+export class HomeUpdates {  // eslint-disable-line import/prefer-default-export
   constructor(options) {
     let pastDate = new Date();
     let cookieExpiresInDays = 14;

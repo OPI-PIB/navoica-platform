@@ -25,13 +25,16 @@ from datetime import datetime
                     </button>
                  </div>
            </div>
+           <div id="update-message-content">
             ${HTML(updates['content'])}
+           </div>
+           <hr>
        </div>
 
 % endfor
 
 </%block>
 
-<%static:webpack entry="Updates">
-new Updates({ messageContainer: '.update-message',  dismissButton: '.dismiss-message button'});
+<%static:webpack entry="HomeUpdates">
+new HomeUpdates({ messageContainer: '.update-message',  dismissButton: '.dismiss-message button'});
 </%static:webpack>

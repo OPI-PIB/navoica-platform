@@ -35,7 +35,7 @@ from .course_dates import CourseDatesFragmentView
 from .course_home_messages import CourseHomeMessageFragmentView
 from .course_outline import CourseOutlineFragmentView
 from .course_sock import CourseSockFragmentView
-from .course_updates_fragment import UpdatesFragmentView
+from .course_home_updates import UpdatesFragmentView
 from .welcome_message import WelcomeMessageFragmentView
 from openedx.core.djangoapps.user_api.course_tag.api import get_course_tag
 
