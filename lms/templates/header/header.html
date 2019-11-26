@@ -149,7 +149,7 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
     % endif
     <label><span class="sr">${_("Choose Language")}</span>
         <select class="input select language-selector" id="settings-language-value" name="language">
-            % for language in languages:
+            % for language in settings.LANGUAGES:
             % if language[0] == LANGUAGE_CODE:
             <option value="${language[0]}" selected="selected">${language[1]}</option>
             % else:
