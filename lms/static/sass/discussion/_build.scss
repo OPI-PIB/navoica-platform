@@ -37,10 +37,10 @@ $static-path: '../..' !default;
 @import 'views/thread';
 @import 'views/create-edit-post';
 @import 'views/response';
-@import 'views/search';
+// @import 'views/search';
 @import 'views/inline';
 @import 'utilities/developer';
-@import 'utilities/shame';
+// @import 'utilities/shame';
 
 // Site status banner
 @import '../notifications';
@@ -48,3 +48,6 @@ $static-path: '../..' !default;
 // Extra theme-specific rules
 @import 'lms/theme/extras';
 @import 'lms/theme/extras-v2';
+
+// @import "utilities/variables-new_look";	
+// @import 'course-disc-add';

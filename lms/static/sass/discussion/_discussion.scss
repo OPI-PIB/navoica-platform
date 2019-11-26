@@ -6,7 +6,8 @@
   @include clearfix();
 
   width: 100%;
-  border: none;
+  border: 1px solid map_get($grays, "300");
+  // border: none;
   background: transparent;
   box-shadow: none;
 

@@ -28,26 +28,30 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
 
 <%block name="content">
 
-<div class="border-top" id="content">
-    <main class="container">
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <div class="d-flex">
-                    % if ENABLE_DASHBOARD_TAB.is_enabled(course_key):
-                        ${static.renderReact(
-                          component="UpsellExperimentModal",
-                          id="upsell-modal",
-                          props={},
-                        )}
-                    % endif
 
-                    % if INCLUDE_PORTFOLIO_UPSELL_MODAL.is_enabled():
-                        ${static.renderReact(
-                            component="PortfolioExperimentUpsellModal",
-                            id="portfolio-experiment-upsell-modal",
-                            props={}
-                        )}
-                    % endif
+<div class="border-top" id="content">
+
+  <main class="container">
+
+   <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="d-flex">
+
+    % if ENABLE_DASHBOARD_TAB.is_enabled(course_key):
+        ${static.renderReact(
+          component="UpsellExperimentModal",
+          id="upsell-modal",
+          props={},
+        )}
+    % endif
+
+    % if INCLUDE_PORTFOLIO_UPSELL_MODAL.is_enabled():
+        ${static.renderReact(
+            component="PortfolioExperimentUpsellModal",
+            id="portfolio-experiment-upsell-modal",
+            props={}
+        )}
+    % endif
 
                     <article id="results">
                         <div id="updates">
@@ -99,11 +103,11 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                                 ${HTML(course_home_message_fragment.body_html())}
                             % endif
 
-                            % if outline_fragment:
-                                ${HTML(outline_fragment.body_html())}
-                            % endif
-                        </section>
-                    </article>
+            % if outline_fragment:
+                ${HTML(outline_fragment.body_html())}
+            % endif
+        </section>
+   </article>
 
                     <aside id="filter" class="sidebar"">
                         % if has_goal_permission:
@@ -138,56 +142,57 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                                 </h2>
                             </header>
 
-                                <ul class="course-details list-group list-group-flush mb-3">
-                                    % for course_tool in course_tools:
-                                        <li class="list-group-item">
-                                          <div class="course-details-icon">
-                                            <i class="icon ${course_tool.icon_classes()}"></i>
-                                          </div>
-                                            <div class="course-details-content">
-                                              <a href="${course_tool.url(course_key)}">${course_tool.title()}</a>
-                                            </div>
-                                        </li>
-                                    % endfor
-                                </ul>
+                    <ul class="course-details list-group list-group-flush mb-3">
+                        % for course_tool in course_tools:
+                            <li class="list-group-item">
+                              <div class="course-details-icon">
+                                <i class="icon ${course_tool.icon_classes()}"></i>
+                              </div>
+                                <div class="course-details-content">
+                                  <a href="${course_tool.url(course_key)}">${course_tool.title()}</a>
+                                </div>
+                            </li>
+                        % endfor
+                    </ul>
 
-                        % endif
-                        % if upgrade_url and upgrade_price:
-                            <div class="section section-upgrade course-home-sidebar-upgrade">
-                                <h3 class="hd hd-6">${_("Pursue a verified certificate")}</h3>
-                                    <img src="https://courses.edx.org/static/images/edx-verified-mini-cert.png" alt="">
-                                    <div class="upgrade-container">
-                                        <p>
-                                            <a class="btn-brand btn-upgrade"
-                                               href="${upgrade_url}"
-                                               data-creative="sidebarupsell"
-                                               data-position="sidebar-message">
-                                               ${_("Upgrade ({price})").format(price=upgrade_price)}
-                                            </a>
-                                        </p>
-                                <p><button class="btn-link btn-small promo-learn-more">${_('Learn More')}</button></p>
-                                    </div>
-                            </div>
-                        % endif
-                        % if dates_fragment:
-                            <div class="course-details list-group list-group-flush mb-3">
-                                ${HTML(dates_fragment.body_html())}
-                            </div>
-                        % endif
-                        % if handouts_html:
-                            <!--<div class="section section-handouts">
-                                <h3 class="hd-6 section-title">${_("Course Handouts")}</h3>
-                                ${HTML(handouts_html)}-->
-##                             </div>
-                        % endif
-                    </aside>
-                </div>
-            </div>
-            % if course_sock_fragment:
-                ${HTML(course_sock_fragment.body_html())}
             % endif
-        </div>
-    </main>
+            % if upgrade_url and upgrade_price:
+                <div class="section section-upgrade course-home-sidebar-upgrade">
+                    <h3 class="hd hd-6">${_("Pursue a verified certificate")}</h3>
+                        <img src="https://courses.edx.org/static/images/edx-verified-mini-cert.png" alt="">
+                        <div class="upgrade-container">
+                            <p>
+                                <a class="btn-brand btn-upgrade"
+                                   href="${upgrade_url}"
+                                   data-creative="sidebarupsell"
+                                   data-position="sidebar-message">
+                                   ${_("Upgrade ({price})").format(price=upgrade_price)}
+                                </a>
+                            </p>
+                    <p><button class="btn-link btn-small promo-learn-more">${_('Learn More')}</button></p>
+                        </div>
+                </div>
+            % endif
+            % if dates_fragment:
+                <div class="course-details list-group list-group-flush mb-3">
+                    ${HTML(dates_fragment.body_html())}
+                </div>
+            % endif
+            % if handouts_html:
+                <!--<div class="section section-handouts">
+                    <h3 class="hd-6 section-title">${_("Course Handouts")}</h3>
+                    ${HTML(handouts_html)}-->
+                </div>
+            % endif
+        </aside>
+     </div>
+    </div>
+    % if course_sock_fragment:
+        ${HTML(course_sock_fragment.body_html())}
+    % endif
+
+   </div>
+  </main>
 </div>
 </%block>
 

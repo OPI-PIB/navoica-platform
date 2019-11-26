@@ -6,9 +6,11 @@
 #
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# krystianlygas <krystian.lygas@gmail.com>, 2019
+# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
-# edX translation file.
+# edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
 # Copyright (C) 2019 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2019.
@@ -23,20 +25,23 @@
 # EdX Team <info@edx.org>, 2019.
 #
 # Translators:
-# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # krystianlygas <krystian.lygas@gmail.com>, 2019
+# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
-# edX translation file
+# edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
 # Copyright (C) 2019 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2019.
 #
 # Translators:
+# krystianlygas <krystian.lygas@gmail.com>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 #
 # #-#-#-#-#  wiki.po (0.1a)  #-#-#-#-#
-# edX translation file
+# edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
 # Copyright (C) 2019 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2019.
@@ -808,6 +813,11 @@ msgid ""
 "an email, check your spam folders or <a id=\"support_email\"  "
 "href=\"{support_url}\">contact {platform} Support</a>."
 msgstr ""
+"Aby się zalogować, niezbędna jest aktywacja Twojego konta. <br /><br "
+"/>Wysłaliśmy link aktywacyjny na adres e-mail <strong>{email}</strong>. "
+"Jeśli nie otrzymałeś wiadomości, sprawdź folder spam lub skontaktuj się z <a"
+" id=\"support_email\"  href=\"{support_url}\">zespołem wsparcia platformy "
+"{platform}</a>."
 
 #: common/djangoapps/student/views/login.py
 msgid "Too many failed login attempts. Try again later."
@@ -3511,7 +3521,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "Course Organizer"
-msgstr "Organizator kursu"
+msgstr "Organizator"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Specify the organizer of your course."
@@ -5772,11 +5782,13 @@ msgstr ""
 "osiągnięcia, które są przyznawane za ukończenie kursów na platformie "
 "{platform_name}."
 
+#. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 #. Translators:  'All rights reserved' is a legal term used in copyrighting to
 #. protect published content
 #: lms/djangoapps/certificates/views/webview.py
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
+#: lms/templates/footer.html
 msgid "All rights reserved"
 msgstr "Wszelkie prawa zastrzeżone"
 
@@ -10389,7 +10401,8 @@ msgstr ""
 "innych artykułach, co może być korzyścią lub wadą."
 
 #: lms/templates/wiki/plugins/attachments/index.html
-#: lms/templates/dashboard.html lms/templates/api_admin/catalogs/search.html
+#: lms/templates/dashboard.html lms/templates/index.html
+#: lms/templates/api_admin/catalogs/search.html
 #: lms/templates/courseware/courseware.html
 #: lms/templates/edxnotes/edxnotes.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
@@ -12669,6 +12682,7 @@ msgstr "Edycja kursu:"
 #: cms/templates/index.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
+#: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
@@ -12930,6 +12944,10 @@ msgid "Add a Post"
 msgstr "Dodaj wpis"
 
 #: lms/djangoapps/discussion/templates/discussion/discussion_board_fragment.html
+msgid "Discusion"
+msgstr "Forum"
+
+#: lms/djangoapps/discussion/templates/discussion/discussion_board_fragment.html
 msgid "New topic form"
 msgstr "Załóż nowy temat"
 
@@ -13000,7 +13018,7 @@ msgstr "Ukryj notatki"
 msgid "Bookmarked"
 msgstr "Dodano do zakładek"
 
-#: lms/templates/bookmark_button.html
+#: lms/templates/bookmark_button.html lms/templates/seq_module.html
 msgid "Bookmark this page"
 msgstr "Dodaj tę stronę do zakładek"
 
@@ -13081,7 +13099,7 @@ msgstr "Chcę otrzymywać powiadomienia e-mail z kursu"
 msgid "Save Settings"
 msgstr "Zapisz ustawienia"
 
-#: lms/templates/edit_unit_link.html
+#: lms/templates/edit_unit_link.html lms/templates/seq_module.html
 msgid "View Unit in Studio"
 msgstr "Wyświetl ekran w Studio"
 
@@ -13120,7 +13138,7 @@ msgstr "Przed przystąpieniem do lekcji musisz się zarejestrować"
 #: lms/templates/enroll_staff.html lms/templates/courseware/course_about.html
 msgctxt "self"
 msgid "Enroll"
-msgstr ""
+msgstr "Zapisz się"
 
 #: lms/templates/enroll_staff.html
 msgid "Don't enroll"
@@ -13157,6 +13175,38 @@ msgstr "Debug: "
 #: lms/templates/extauth_failure.html
 msgid "External Authentication failed"
 msgstr "Zewnętrzna autoryzacja nie powiodła się"
+
+#: lms/templates/footer.html
+msgid "Navoica.pl"
+msgstr "Navoica.pl"
+
+#: lms/templates/footer.html
+msgid ""
+"Polish MOOC platform offering free of charge online courses for every "
+"registered user."
+msgstr ""
+"Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat"
+" i dla każdego zarejestrowanego użytkownika."
+
+#: lms/templates/footer.html
+msgid "Contact us"
+msgstr "Kontakt"
+
+#: lms/templates/footer.html
+msgid "Legal information"
+msgstr "Informacje prawne"
+
+#: lms/templates/footer.html
+msgid "Terms of use"
+msgstr "Warunki Korzystania z Serwisu"
+
+#: lms/templates/footer.html lms/templates/api_admin/terms_of_service.html
+msgid "Privacy"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "Honor code "
+msgstr "Kodeks honorowy"
 
 #: lms/templates/forgot_password_modal.html
 msgid "Password Reset"
@@ -13375,6 +13425,62 @@ msgstr ""
 msgid "Note: only instructors may annotate."
 msgstr "Uwaga: tylko prowadzący mogą tworzyć notatki."
 
+#: lms/templates/index.html
+msgid "ACCESSIBLE KNOWLEDGE"
+msgstr "NAUKA DOSTĘPNA"
+
+#: lms/templates/index.html
+msgid "Free online courses offered by Polish universities and institutions"
+msgstr "Bezpłatne kursy online oferowane przez polskie uczelnie i instytucje"
+
+#: lms/templates/index.html
+msgid "What do you want to learn?"
+msgstr "Nazwa kursu"
+
+#: lms/templates/index.html
+msgid "About Navoica"
+msgstr "O platformie Navoica"
+
+#: lms/templates/index.html
+msgid "Wide range of online courses "
+msgstr "Bogata oferta wirtualnych kursów"
+
+#: lms/templates/index.html
+msgid ""
+"A broad spectrum of courses with varying levels of expertise. Everyone can "
+"find an interesting course for themselves."
+msgstr ""
+"Szeroki zakres tematyczny kursów o zróżnicowanym poziomie trudności. Każdy "
+"kursant znajdzie dla siebie interesujący kurs."
+
+#: lms/templates/index.html
+msgid "Publicly available learning platform"
+msgstr "Ogólnodostępna platforma kształcenia"
+
+#: lms/templates/index.html
+msgid ""
+"We reach anyone who wants to learn \\u2013 regardless of their age or place "
+"of residence."
+msgstr ""
+"Dzięki platformie internetowej Navoica dotrzemy do każdego, kto chce się "
+"uczyć – bez względu na wiek i miejsce zamieszkania."
+
+#: lms/templates/index.html
+msgid "Network of universities and institutions "
+msgstr "Sieć współpracy uczelni i instytucji"
+
+#: lms/templates/index.html
+msgid ""
+"New online learning ecosystem brings together: universities, research "
+"institutes, businesses and NGOs. Find out more about Navoica"
+msgstr ""
+"Nowy ekosystem kształcenia online skupia: uczelnie, instytucje naukowe, "
+"biznes i organizacje pozarządowe."
+
+#: lms/templates/index.html
+msgid "Find out more about Navoica"
+msgstr "Dowiedz się więcej o Navoice"
+
 #. Translators: 'Open edX' is a registered trademark, please keep this
 #. untranslated. See http://open.edx.org for more information.
 #: lms/templates/index_overlay.html
@@ -13558,6 +13664,18 @@ msgstr "Komentarz oceniającego do twojej pracy:"
 msgid "Press to Launch"
 msgstr "Naciśnij, aby uruchomić"
 
+#: lms/templates/main.html
+msgid "Navoica.pl - Polish MOOC platform"
+msgstr "Navoica.pl - Polski MOOC"
+
+#: lms/templates/main.html
+msgid ""
+"Polish MOOC platform offering free of charge online courses for every "
+"registered user. "
+msgstr ""
+"Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat"
+" i dla każdego zarejestrowanego użytkownika."
+
 #: lms/templates/manage_user_standing.html
 msgid "Manage student accounts"
 msgstr "Zarządzaj kontami studentów"
@@ -13635,6 +13753,11 @@ msgstr "Surowe dane:"
 #: lms/templates/videoannotation.html
 msgid "You do not have any notes."
 msgstr "Nie posiadasz żadnych notatek."
+
+#: lms/templates/preview_menu.html
+#: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "Course edition"
+msgstr "Edycja kursu"
 
 #: lms/templates/preview_menu.html
 msgid "Learner"
@@ -13888,6 +14011,7 @@ msgid "Already registered?"
 msgstr "Jesteś już zarejestrowany/a?"
 
 #: lms/templates/register-sidebar.html
+#: lms/templates/header/navbar-not-authenticated.html
 #: themes/stanford-style/lms/templates/register-sidebar.html
 #: wiki/templates/wiki/base.html wiki/templates/wiki/accounts/login.html
 #: wiki/templates/wiki/accounts/signup.html
@@ -14750,10 +14874,6 @@ msgid ""
 "re-distribute, relicense and otherwise use, make available and exploit such "
 "content, in whole or in part, in any form and in any media formats and "
 "through any media channels (now known or hereafter developed)."
-msgstr ""
-
-#: lms/templates/api_admin/terms_of_service.html
-msgid "Privacy"
 msgstr ""
 
 #: lms/templates/api_admin/terms_of_service.html
@@ -16445,6 +16565,10 @@ msgstr ""
 "Zaświadczeniem Honorowym."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+msgid "Course organizer"
+msgstr "Organizator"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Coming Soon"
 msgstr "Wkrótce"
 
@@ -16906,6 +17030,10 @@ msgid "Discussion topics list"
 msgstr "Lista tematów dyskusji"
 
 #: lms/templates/discussion/_filter_dropdown.html
+msgid "Topics"
+msgstr "Tematy"
+
+#: lms/templates/discussion/_filter_dropdown.html
 msgid "Filter Topics"
 msgstr "Filtruj tematy"
 
@@ -16921,12 +17049,15 @@ msgstr "Wszystkie dyskusje"
 msgid "Posts I'm Following"
 msgstr "Wpisy, które obserwuję"
 
+#: lms/templates/discussion/_thread_list_template.html
+msgid "All Posts"
+msgstr ""
+
 #. Translators: This labels a filter menu in forum navigation
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Filter:"
 msgstr "Filtruj:"
 
-#. Translators: This is a menu option for showing all forum threads unfiltered
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Show all posts"
 msgstr "Pokaż wszystkie wpisy"
@@ -17941,10 +18072,6 @@ msgstr "Sysadmin"
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
 msgid "Shopping Cart"
 msgstr "Koszyk"
-
-#: lms/templates/header/navbar-not-authenticated.html
-msgid "Katalog kursów"
-msgstr ""
 
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
@@ -21947,8 +22074,8 @@ msgid ""
 "and due date."
 msgstr ""
 "Kliknij w znajdującą się obok modułu lub lekcji ikonę  \"Skonfiguruj\" "
-"(ikona koła zębatego) i ustaw datę upublicznienia danej sekcji. \" "
-"\"Następnie określ politykę ocen i termin końcowy."
+"(ikona koła zębatego) i ustaw datę upublicznienia danej sekcji. Następnie "
+"określ politykę ocen i termin końcowy."
 
 #: cms/templates/course_outline.html
 msgid "Learn more about grading policy settings"

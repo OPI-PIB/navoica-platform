@@ -45,14 +45,14 @@
                         <a class="instructor-info-action btn btn-sm btn-outline-light"
                            href="//studio.navoica.pl/container/block-v1:PLodzka+IT101+2018_1+type@vertical+block@89a2f7844ca14fd08d2a34342ef81eec">
                             <i class="fas fa-code"></i>
-                            Wyświetl ekran w Studio
+                            ${_('View Unit in Studio')}
                         </a>
                     </div>
                     <div class="xblock xblock-student_view xblock-student_view-vertical xblock-initialized">
                         <div class="bookmark-button-wrapper">
                             <button class="btn btn-sm btn-outline-light bookmark-button" aria-pressed="false">
                                 <i class="far fa-bookmark"></i>
-                                <span class="bookmark-text">Dodaj tę stronę do zakładek</span>
+                                <span class="bookmark-text">${_('Bookmark this page')}</span>
                             </button>
                         </div>
                         <div class="vert-mod" data-completion-delay-ms="5000">
@@ -102,8 +102,9 @@
                     <span class="d-none d-md-block">Zawartość jednostki lekcyjnej</span>
                 </h2>
             </header>
+            <a href="#sequence" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">Zawartość jednostki lekcyjnej</a>
             <div class="xblock xblock-student_view xblock-student_view-sequential xmodule_display xmodule_SequenceModule xblock-initialized">
-                <div class="sequence">
+                <div id="sequence" class="sequence collapse">
                     <div class="sequence-nav">
                         <nav class="sequence-list-wrapper" aria-label="Sekwencja">
                             <ul id="sequence-list" class="course-details list-group list-group-flush mb-3">
