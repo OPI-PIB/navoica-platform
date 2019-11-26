@@ -11177,6 +11177,11 @@ input.form-control.form-control {
 
 #results {
    padding: 0 !important;
+   order: 1;
+}
+
+#result {
+  flex: 1 1;
 }
 
 #clear-all-filters {
@@ -11204,10 +11209,6 @@ button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-butto
 .search-facets-lists {
     padding: 0 !important;
 }
-
-//.d-flex.justify-content-between.align-items-center {
-//    line-height: 1 !important;
-//}
 
 #courses-list-header {
   margin: 0 0 1rem !important;
@@ -11439,7 +11440,7 @@ main.container > aside {
 
 .section-name.accordion-trigger.bg1, subsection-text.accordion-trigger.bg1{
    background: #f8f9fa;
-   padding: 0.75rem 1rem !important;
+   padding: 0.75rem 2rem !important;
    border-radius: 0;
  }
 
@@ -11546,15 +11547,6 @@ main.container > aside {
    width: 100%;
 }
 
-@media (min-width: 960px) {
-  main.container .d-flex>aside{
-//    order: initial !important;
-  }
-}
-
-main.container .d-flex > aside {
-  order: -1;
-}
 
 .is-hidden {
   display: none;
@@ -12566,14 +12558,8 @@ main.container nav .nav-tabs .nav-item,
   font-weight: 600;
   height: 4rem;
   justify-content: center;
-  /*
-        letter-spacing: .02em;
-        */
   margin-left: -1px;
   padding: 0;
-  /*
-        text-transform: uppercase;
-        */
 }
 
 main.container nav .nav-tabs .nav-item.active,
@@ -12712,21 +12698,15 @@ main.container .d-flex > article header {
 }
 
 .alert-danger {
-  color:
-#770f1d;
-background-color:
-#fad2d7;
-border-color:
-#f7c0c7;
+  color: #770f1d;
+  background-color: #fad2d7;
+  border-color: #f7c0c7;
 }
 
 .alert-success {
-    color:
-#155724;
-background-color:
-#d4edda;
-border-color:
-#c3e6cb;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
 }
 
 #content .vert .problems-wrapper .problem .notification, #content .vert .problems-wrapper .problem .notification.general {
@@ -12813,7 +12793,6 @@ img.message-author {
 .navbar {
   img {
     max-height: 34px;
-  //  display: none;
   }
    #img-mobile {
     display: block;
@@ -12821,9 +12800,6 @@ img.message-author {
 }
 
 @media (max-width: 960px) {
-  main.container aside {
-  //  order: -1;
-  }
   .page-header-search .input-text {
     width: 20rem !important;
   }
@@ -12858,10 +12834,6 @@ img.message-author {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-
-// .dismiss-message {
-//   display: none;
-// }
 
 .page-header-search {
   display:flex !important;
@@ -12911,10 +12883,6 @@ img.message-author {
   margin-right: auto;
   margin-left: auto;
   max-width: 1280px;
-}
-
-.page-header-main {
-//  margin-top: 3rem;
 }
 
 .search-result-list {

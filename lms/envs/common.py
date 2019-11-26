@@ -1458,6 +1458,7 @@ PIPELINE_CSS = {
             #'css/course.css',
 	        #'css/course-toc.css',
             'css/course-list.css',
+            #'css/course-content.css',
             #'css/polipedia.css',
             #'css/polipedia.custom.css',
             #'css/navoica.custom.css'
@@ -1512,7 +1513,7 @@ PIPELINE_CSS = {
         'source_filenames': [
             'css/course-content.css',
         ],
-        'output_filename': 'css/lms-course.css',
+        'output_filename': 'css/course-content.css',
     },
     'style-course-rtl': {
         'source_filenames': [
