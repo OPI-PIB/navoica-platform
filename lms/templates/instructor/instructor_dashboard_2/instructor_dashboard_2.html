@@ -112,11 +112,14 @@ from openedx.core.djangolib.markup import HTML
         <main id="main" aria-label="Content" tabindex="-1">
         <section class="instructor-dashboard-content-2" id="instructor-dashboard-content">
           <h2 class="hd hd-2 instructor-dashboard-title">${_("Instructor Dashboard")}</h2>
-          <div class="wrap-instructor-info studio-view">
+          
+            <div class="wrap-instructor-info studio-view">
             %if studio_url:
-            <a class="instructor-info-action" href="${studio_url}">${_("View Course in Studio")}</a>
+              <a class="instructor-info-action  btn btn-sm btn-outline-light" href="${studio_url}">
+                <i class="fas fa-desktop"></i>${_("View Course in Studio")}</a>
             %endif
-          </div>
+            </div>
+        
 
         ## links which are tied to idash-sections below.
         ## the links are activated and handled in instructor_dashboard.js
