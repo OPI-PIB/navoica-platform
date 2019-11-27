@@ -11,7 +11,7 @@
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
-# edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
+# edX translation file.
 # Copyright (C) 2019 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2019.
@@ -29,11 +29,11 @@
 # Translators:
 # krystianlygas <krystian.lygas@gmail.com>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
-# edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
+# edX translation file
 # Copyright (C) 2019 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2019.
@@ -42,6 +42,7 @@
 # krystianlygas <krystian.lygas@gmail.com>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  wiki.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -3951,6 +3952,10 @@ msgid "Any Type"
 msgstr "Dowolny typ "
 
 #: common/lib/xmodule/xmodule/library_content_module.py
+msgid "Randomized Content Block"
+msgstr "Zadanie losowane z puli pytań"
+
+#: common/lib/xmodule/xmodule/library_content_module.py
 #: cms/templates/widgets/header.html
 msgid "Library"
 msgstr "Biblioteka"
@@ -7756,7 +7761,7 @@ msgstr "Członkostwo"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Cohorts"
-msgstr "Kohorty"
+msgstr "Grupy"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: lms/djangoapps/discussion/templates/discussion/discussion_board_fragment.html
@@ -10798,7 +10803,7 @@ msgstr "Domyślna grupa"
 
 #: openedx/core/djangoapps/course_groups/cohorts.py
 msgid "You cannot create two cohorts with the same name"
-msgstr "Nie możesz stworzyć dwóch kohort o tej samej nazwie"
+msgstr "Nie możesz stworzyć dwóch grup o tej samej nazwie"
 
 #: openedx/core/djangoapps/course_groups/cohorts.py
 msgid ""
@@ -11710,6 +11715,7 @@ msgstr ""
 
 #: openedx/core/djangoapps/util/user_messages.py
 #: cms/templates/course_outline.html cms/templates/index.html
+#: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 #: openedx/features/course_experience/templates/course_experience/welcome-message-fragment.html
 msgid "Dismiss"
@@ -11919,7 +11925,7 @@ msgid ""
 "The groups in this configuration can be mapped to cohorts in the Instructor "
 "Dashboard."
 msgstr ""
-"Grupy w tej konfiguracji mogą być mapowane do kohort z poziomu pulpitu "
+"Grupy w tej konfiguracji mogą być mapowane do grup z poziomu pulpitu "
 "prowadzącego."
 
 #: cms/djangoapps/contentstore/course_group_config.py
@@ -12653,6 +12659,12 @@ msgstr "Nie znaleziono strony"
 msgid "Content"
 msgstr "Treść"
 
+#: cms/templates/base.html cms/templates/widgets/header.html
+#: lms/templates/header/header.html lms/templates/navigation/navigation.html
+#: lms/templates/widgets/footer-language-selector.html
+msgid "Choose Language"
+msgstr "Wybierz język"
+
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
@@ -12804,12 +12816,6 @@ msgstr "Zresetuj"
 #: themes/red-theme/lms/templates/footer.html
 msgid "Legal"
 msgstr "Informacje prawne"
-
-#: cms/templates/widgets/header.html lms/templates/header/header.html
-#: lms/templates/navigation/navigation.html
-#: lms/templates/widgets/footer-language-selector.html
-msgid "Choose Language"
-msgstr "Wybierz język"
 
 #: cms/templates/widgets/header.html lms/templates/user_dropdown.html
 #: lms/templates/header/user_dropdown.html
@@ -13691,7 +13697,7 @@ msgid ""
 "registered user. "
 msgstr ""
 "Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat"
-" i dla każdego zarejestrowanego użytkownika."
+" i dla każdego zarejestrowanego użytkownika. Czytaj Nawojka."
 
 #: lms/templates/manage_user_standing.html
 msgid "Manage student accounts"
@@ -14192,11 +14198,11 @@ msgstr "Grupy nieaktywne"
 
 #: lms/templates/staff_problem_info.html
 msgid "Staff Debug Info"
-msgstr "Tryb debugowania kadry - informacje"
+msgstr "Informacje o elemencie"
 
 #: lms/templates/staff_problem_info.html
 msgid "Submission history"
-msgstr "Historia zgłoszeń"
+msgstr "Historia odpowiedzi"
 
 #: lms/templates/staff_problem_info.html
 msgid "{platform_name} Content Quality Assessment"
@@ -21026,6 +21032,10 @@ msgstr ""
 msgid "Expand All"
 msgstr "Rozwiń wszystko"
 
+#: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
+msgid "Update,"
+msgstr "Aktualizacja,"
+
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
 msgid "Prerequisite: "
 msgstr ""
@@ -21117,6 +21127,10 @@ msgstr "Ten kurs nie ma żadnych opublikowanych aktualności."
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 msgid "Latest Update"
 msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/welcome-message-fragment.html
+msgid "Welcome Message"
+msgstr "Wiadomość powitalna"
 
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html
 msgid "Search Results"
@@ -22637,10 +22651,9 @@ msgid ""
 "create cohort-specific courseware. In other words, you can customize the "
 "content that particular cohorts see in your course."
 msgstr ""
-"Jeśli w swoim kursie utworzyłeś już kohorty (grupy użytkowników), możesz "
-"wykorzystać \"grupy treści\". Utworzoną grupę treści możesz przypisać do "
-"konkretnej kohorty, tzn. udostępnić część materiału tylko pewnej grupie "
-"użytkowników."
+"Jeśli w swoim kursie utworzyłeś już grupy użytkowników, możesz wykorzystać "
+"\"grupy treści\". Utworzone treści możesz przypisać do konkretnej grupy, "
+"tzn. udostępnić część materiału tylko pewnej grupie użytkowników."
 
 #: cms/templates/group_configurations.html
 msgid ""

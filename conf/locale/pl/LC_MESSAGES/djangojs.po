@@ -141,7 +141,6 @@ msgstr "Usuwanie"
 #: common/static/bundles/js/pages/textbooks.js
 #: common/static/common/js/components/utils/view_utils.js
 #: lms/static/js/Markdown.Editor.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: cms/templates/js/add-xblock-component-menu.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -228,37 +227,6 @@ msgstr "Błąd importowania kursu"
 #: common/static/bundles/Import.js
 msgid "There was an error with the upload"
 msgstr "Wystąpił błąd przesyłania pliku"
-
-#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
-#: common/static/bundles/CourseOrLibraryListing.js
-msgid "Organization:"
-msgstr "Organizacja:"
-
-#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
-#: common/static/bundles/CourseOrLibraryListing.js
-msgid "Course Number:"
-msgstr "Numer kursu:"
-
-#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
-#: common/static/bundles/CourseOrLibraryListing.js
-msgid "Course Run:"
-msgstr "Edycja kursu:"
-
-#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
-#: common/static/bundles/CourseOrLibraryListing.js
-msgid "(Read-only)"
-msgstr "(tylko do odczytu)"
-
-#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
-#: common/static/bundles/CourseOrLibraryListing.js
-msgid "Re-run Course"
-msgstr "Wznów kurs"
-
-#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
-#: common/static/bundles/CourseOrLibraryListing.js
-#: cms/templates/js/show-textbook.underscore
-msgid "View Live"
-msgstr "Zobacz wersję próbną"
 
 #. Translators: This is the status of an active video upload
 #: cms/static/js/models/active_video_upload.js cms/static/js/views/assets.js
@@ -404,7 +372,6 @@ msgstr "Nieznany"
 #: cms/static/js/views/manage_users_and_roles.js
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Are you sure?"
 msgstr "Czy jesteś pewien?"
 
@@ -2225,6 +2192,31 @@ msgstr ""
 msgid "There was an error updating your goal."
 msgstr ""
 
+#: common/static/bundles/CourseOrLibraryListing.js
+msgid "Organization:"
+msgstr "Organizacja:"
+
+#: common/static/bundles/CourseOrLibraryListing.js
+msgid "Course Number:"
+msgstr "Numer kursu:"
+
+#: common/static/bundles/CourseOrLibraryListing.js
+msgid "Course Run:"
+msgstr "Edycja kursu:"
+
+#: common/static/bundles/CourseOrLibraryListing.js
+msgid "(Read-only)"
+msgstr "(tylko do odczytu)"
+
+#: common/static/bundles/CourseOrLibraryListing.js
+msgid "Re-run Course"
+msgstr "Wznów kurs"
+
+#: common/static/bundles/CourseOrLibraryListing.js
+#: cms/templates/js/show-textbook.underscore
+msgid "View Live"
+msgstr "Zobacz wersję próbną"
+
 #: common/static/bundles/EntitlementFactory.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
@@ -2337,38 +2329,31 @@ msgid ""
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
-#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Reset Your Password"
 msgstr "Zresetuj swoje hasło"
 
 #: common/static/bundles/PasswordResetConfirmation.js
-#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Enter and confirm your new password."
 msgstr "Wpisz i potwierdź nowe hasło"
 
 #: common/static/bundles/PasswordResetConfirmation.js
-#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "New Password"
 msgstr "Nowe hasło"
 
 #: common/static/bundles/PasswordResetConfirmation.js
-#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Confirm Password"
 msgstr "Potwierdź hasło"
 
 #: common/static/bundles/PasswordResetConfirmation.js
-#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Passwords do not match."
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
-#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Reset My Password"
 msgstr "Resetuj moje hasło"
 
 #: common/static/bundles/PasswordResetConfirmation.js
-#: lms/static/js/student_account/components/PasswordResetInput.jsx
 msgid "Error: "
 msgstr ""
 
@@ -2388,50 +2373,40 @@ msgid "Enrolled"
 msgstr "Zapisany"
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/errors_list.jsx
 msgid "Please fix the following errors:"
 msgstr "Napraw poniższe błędy"
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "Files that you upload must be smaller than 5MB in size."
 msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid ""
 "Files that you upload must be PDFs or image files in .gif, .jpg, .jpeg, or "
 ".png format."
 msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
-#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Something went wrong. Please try again later."
 msgstr "Coś poszło nie tak. Spróbuj ponownie później."
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "Add Attachment"
 msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "(Optional)"
 msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "Remove file"
 msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "Course Name"
 msgstr "Nazwa kursu"
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "Not specific to a course"
 msgstr "Nieokreślony kurs"
 
@@ -2440,23 +2415,19 @@ msgid "What can we help you with?"
 msgstr "Z czym możemy Ci pomóc?"
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Subject"
 msgstr "Temat"
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "Details"
 msgstr "Opis"
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "The more you tell us, the more quickly and helpfully we can respond!"
 msgstr "Im więcej nam powiesz, tym szybciej i lepiej możemy odpowiedzieć!"
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 #: common/static/common/templates/discussion/new-post.underscore
 #: common/static/common/templates/discussion/thread-response.underscore
 #: common/static/common/templates/discussion/thread.underscore
@@ -2485,7 +2456,6 @@ msgstr ""
 "pośrednictwem poczty e-mail za pomocą "
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid ""
 "Select a course or select \"Not specific to a course\" for your support "
 "request."
@@ -2494,23 +2464,18 @@ msgstr ""
 "wsparcia."
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Enter a subject for your support request."
 msgstr "Wprowadź temat dla prośby o wsparcie."
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Enter some details for your support request."
 msgstr "Wprowadź szczegóły dotyczące prośby o wsparcie."
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
-#: lms/djangoapps/support/static/support/jsx/success.jsx
 msgid "Contact Us"
 msgstr "Kontakt"
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Find answers to the top questions asked by learners."
 msgstr "Znajdź odpowiedzi na najważniejsze pytania zadawane przez uczniów."
 
@@ -2519,7 +2484,6 @@ msgid "Search the Help Center"
 msgstr "Przeszukaj centrum pomocy"
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/success.jsx
 msgid "Go to my Dashboard"
 msgstr ""
 
@@ -2528,20 +2492,16 @@ msgid "Go to "
 msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/success.jsx
 msgid ""
 "Thank you for submitting a request! We will contact you within 24 hours."
 msgstr ""
 
 #: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/upload_progress.jsx
 msgid "Cancel upload"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "You may also lose access to verified certificates and other program "
 "credentials like MicroMasters certificates. If you want to make a copy of "
@@ -2551,13 +2511,11 @@ msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid "We’re sorry to see you go!"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid ""
 "Please note: Deletion of your account and personal data is permanent and "
 "cannot be undone. EdX will not be able to recover your account or the data "
@@ -2566,7 +2524,6 @@ msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid ""
 "Once your account is deleted, you cannot use it to take courses on the edX "
 "app, edx.org, or any other site hosted by edX. This includes access to "
@@ -2577,32 +2534,27 @@ msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Delete My Account"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Password is incorrect"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Unable to delete account"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Please re-enter your password."
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "Sorry, there was an error trying to process your request. Please try again "
 "later."
@@ -2610,13 +2562,11 @@ msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "A Password is required"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "You have selected “Delete my account.” Deletion of your account and personal"
 " data is permanent and cannot be undone. EdX will not be able to recover "
@@ -2625,7 +2575,6 @@ msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "If you proceed, you will be unable to use this account to take courses on "
 "the edX app, edx.org, or any other site hosted by edX. This includes access "
@@ -2636,7 +2585,6 @@ msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "If you still wish to continue and delete your account, please enter your "
 "account password:"
@@ -2644,19 +2592,16 @@ msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Yes, Delete"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "We're sorry to see you go! Your account will be deleted shortly."
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
-#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "Account deletion, including removal from email lists, may take a few weeks "
 "to fully process through our system. If you want to opt-out of emails before"
@@ -4056,7 +4001,7 @@ msgstr ""
 
 #: lms/static/js/discussions_management/views/discussions.js
 msgid "Cohorts"
-msgstr "Kohorty"
+msgstr "Grupy"
 
 #: lms/static/js/discussions_management/views/discussions.js
 msgid ""
@@ -4064,10 +4009,10 @@ msgid ""
 "of cohort, see the same discussion topics, but within divided topics, only "
 "members of the same cohort see and respond to each others’ posts. "
 msgstr ""
-"Używaj kohort jako podstawy do dzielenia dyskusji. Wszyscy studenci, "
-"niezależnie od ich kohorty, widzą te same tematy dyskusji, natomiast wpisy "
+"Używaj grup jako podstawy do dzielenia dyskusji. Wszyscy studenci, "
+"niezależnie od ich grupy, widzą te same tematy dyskusji, natomiast wpisy "
 "wewnątrz podzielonych dyskusji widzą wyłącznie studenci będący w tej samej "
-"kohorcie."
+"grupie."
 
 #: lms/static/js/discussions_management/views/discussions.js
 msgid "Discussion topics in the course are not divided."
@@ -4280,7 +4225,7 @@ msgstr "Nie można dodać grupy"
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "You currently have no cohorts configured"
-msgstr "Aktualnie nie posiadasz skonfigurowanych żadnych grup"
+msgstr "Aktualnie nie posiadasz żadnych skonfigurowanych grup"
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "Add Cohort"
@@ -4351,9 +4296,9 @@ msgid ""
 "This course has automatic cohorting enabled for verified track learners, but"
 " cohorts are disabled. You must enable cohorts for the feature to work."
 msgstr ""
-"Ten kurs wykorzystuje system automatycznych kohort dla studentów ścieżki "
-"zweryfikowanej, jednak system kohort został wyłączony. Chcąc korzystać z "
-"tego rozwiązania musisz włączyć system kohort."
+"Ten kurs wykorzystuje system automatycznych grup dla studentów ścieżki "
+"zweryfikowanej, jednak system grup został wyłączony. Chcąc korzystać z tego "
+"rozwiązania musisz włączyć system grup."
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Allow students to generate certificates for this course?"
