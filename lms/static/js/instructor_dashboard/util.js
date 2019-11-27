@@ -474,7 +474,7 @@
             options = {
                 enableCellNavigation: true,
                 enableColumnReorder: false,
-                rowHeight: 30,
+                rowHeight: 40,
                 forceFitColumns: true
             };
             columns = [
