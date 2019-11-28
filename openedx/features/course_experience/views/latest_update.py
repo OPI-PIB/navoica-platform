@@ -29,6 +29,7 @@ class LatestUpdateFragmentView(EdxFragmentView):
         course = get_course_with_access(request.user, 'load', course_key, check_if_enrolled=True)
 
         update_html = self.latest_update_html(request, course)
+
         if not update_html:
             return None
 
@@ -36,6 +37,7 @@ class LatestUpdateFragmentView(EdxFragmentView):
             'update_html': update_html,
         }
         html = render_to_string('course_experience/latest-update-fragment.html', context)
+
         return Fragment(html)
 
     @classmethod
@@ -50,3 +52,4 @@ class LatestUpdateFragmentView(EdxFragmentView):
             content = ordered_updates[0]['content']
 
         return content
+

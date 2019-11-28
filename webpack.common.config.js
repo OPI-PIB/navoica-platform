@@ -51,6 +51,7 @@ module.exports = {
         Currency: './openedx/features/course_experience/static/course_experience/js/currency.js',
         Enrollment: './openedx/features/course_experience/static/course_experience/js/Enrollment.js',
         LatestUpdate: './openedx/features/course_experience/static/course_experience/js/LatestUpdate.js',
+        HomeUpdates: './openedx/features/course_experience/static/course_experience/js/HomeUpdates.js',
         WelcomeMessage: './openedx/features/course_experience/static/course_experience/js/WelcomeMessage.js',
 
         CookiePolicyBanner: './common/static/js/src/CookiePolicyBanner.jsx',

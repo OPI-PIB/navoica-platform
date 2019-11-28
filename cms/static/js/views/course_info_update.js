@@ -6,7 +6,9 @@ define(['codemirror',
     'js/views/validation',
     'js/models/course_update',
     'common/js/components/views/feedback_prompt',
-    'common/js/components/views/feedback_notification'],
+    'common/js/components/views/feedback_notification',
+    'js/vendor/summernote/summernote-lite',
+    ],
     function(CodeMirror, ModalUtils, DateUtils, HtmlUtils, CourseInfoHelper, ValidatingView, CourseUpdateModel,
              PromptView, NotificationView) {
         'use strict';
@@ -31,6 +33,7 @@ define(['codemirror',
 
             render: function() {
                 // iterate over updates and create views for each using the template
+
                 var updateList = this.$el.find('#course-update-list'),
                     self = this;
                 $(updateList).empty();
@@ -46,6 +49,25 @@ define(['codemirror',
                             );
                             DateUtils.setupDatePicker('date', self, index);
                             update.isValid();
+                            // update.target.$el.find('#summernote').summernote('code',update.get('content'));
+                            // console.log($(update.target));
+                            $('.text-editor').eq(-1).summernote({
+                                tabsize: 2,
+                                height: 300,
+                                toolbar: [
+                                    // [groupName, [list of button]]
+                                    ['misc',['undo','redo']],
+                                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                                    ['fontsize', ['fontsize']],
+                                    ['color', ['color']],
+                                    ['para', ['paragraph']],
+                                    ['height', ['height']],
+                                    ['misc',['codeview', 'fullscreen']]
+                                    ],
+                                });
+
+                            $('.text-editor').eq(-1).summernote('code',update.get('content'));
                         } catch (e) {
                             // ignore
                         } finally {
@@ -68,6 +90,7 @@ define(['codemirror',
                         $(updateForm).hide();
                     }
                 });
+
                 return this;
             },
 
@@ -84,7 +107,7 @@ define(['codemirror',
                             value = '';
                         }
                     }
-                    value = $.datepicker.formatDate('MM d, yy', value);
+                    value = $.datepicker.formatDate('dd/mm/yy', value);
                 }
                 var targetModel = this.collection.get(this.$currentPost.attr('name'));
                 var prevValue = targetModel.get(attr);
@@ -140,12 +163,12 @@ define(['codemirror',
                 var updateEle = this.$el.find('#course-update-list');
                 $(updateEle).prepend($newForm);
 
-                var $textArea = $newForm.find('.new-update-content').first();
-                this.$codeMirror = CodeMirror.fromTextArea($textArea.get(0), {
-                    mode: 'text/html',
-                    lineNumbers: true,
-                    lineWrapping: true
-                });
+                // var $textArea = $newForm.find('.new-update-content').first();
+                // this.$codeMirror = CodeMirror.fromTextArea($textArea.get(0), {
+                //     mode: 'text/html',
+                //     lineNumbers: true,
+                //     lineWrapping: true
+                // });
 
                 $newForm.addClass('editing');
                 this.$currentPost = $newForm.closest('li');
@@ -154,8 +177,21 @@ define(['codemirror',
                 this.$modalCover = ModalUtils.showModalCover(false, function() {
                 // Binding empty function to prevent default hideModal.
                 });
-
                 DateUtils.setupDatePicker('date', this, 0);
+                this.$el.find('#text-editor').summernote({
+                                tabsize: 2,
+                                height: 300,
+                                toolbar: [
+                                    // [groupName, [list of button]]
+                                    ['misc',['undo','redo']],
+                                    ['style', ['style', 'fontsize','fontname','bold', 'italic', 'underline', 'clear']],
+                                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                                    ['color', ['color']],
+                                    ['para', ['paragraph']],
+                                    ['height', ['height']],
+                                    ['misc',['codeview', 'fullscreen']]
+                                    ],
+                                });
             },
 
             onSave: function(event) {
@@ -163,8 +199,9 @@ define(['codemirror',
                 var targetModel = this.eventModel(event);
                 targetModel.set({
                 // translate short-form date (for input) into long form date (for display)
-                    date: $.datepicker.formatDate('MM d, yy', new Date(this.dateEntry(event).val())),
-                    content: this.$codeMirror.getValue(),
+                    date: $.datepicker.formatDate('dd/mm/yy', new Date.parse(this.dateEntry(event).val())),
+                    content: this.$el.find('#text-editor').summernote('code'),
+                    // content: this.$codeMirror.getValue(),
                     push_notification_selected: this.push_notification_selected(event)
                 });
             // push change to display, hide the editor, submit the change
@@ -213,12 +250,12 @@ define(['codemirror',
                 var targetModel = this.eventModel(event);
             // translate long-form date (for viewing) into short-form date (for input)
                 if (targetModel.get('date') && targetModel.isValid()) {
-                    $(this.dateEntry(event)).val($.datepicker.formatDate('mm/dd/yy', new Date(targetModel.get('date'))));
+                    $(this.dateEntry(event)).val($.datepicker.formatDate('mm/dd/yy', new Date.parse(targetModel.get('date'))));
                 } else {
                     $(this.dateEntry(event)).val('MM/DD/YY');
                 }
-                this.$codeMirror = CourseInfoHelper.editWithCodeMirror(
-                targetModel, 'content', self.options.base_asset_url, $textArea.get(0));
+
+                this.$el.find('#summernote').summernote('code',targetModel.get('content'));
 
             // Variable stored for unit test.
                 this.$modalCover = ModalUtils.showModalCover(false,

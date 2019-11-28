@@ -12,16 +12,15 @@ from openedx.core.djangolib.markup import HTML, Text
 <header id="header">
     <div id="jumbotron">
         <div class="container">
-            <h1 class="display-1 text-center text-uppercase">Nauka dostępna</h1>
+            <h1 class="display-1 text-center text-uppercase">${_('ACCESSIBLE KNOWLEDGE')}</h1>
             <h1 class="display-none">Platforma Navoica (czytaj Nawojka lub Nawoica)</h1>
-            <p class="lead text-center my-3">Bezpłatne kursy online oferowane przez polskie uczelnie i instytucje</p>
+            <p class="lead text-center my-3">${_('Free online courses offered by Polish universities and institutions')}</p>
 	      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
 				<form method="get" action="/courses">
 					<div class="input-group my-2 p-2">
-					  <input class="form-control form-control-lg" type="search" name="search_query" placeholder="Nazwa kursu">
-					  <button class="btn btn-outline-secondary btn-lg" type="submit" id="button-addon2">Szukaj</button>
+					  <input class="form-control form-control-lg" type="search" name="search_query" placeholder="${_('What do you want to learn?')}">
+					  <button class="btn btn-outline-secondary btn-lg" type="submit" id="button-addon2">${_('Search')}</button>
 					  </div>
-					</div>
 			  </form>
 		   % endif
 		</div>
@@ -35,7 +34,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <section class="about-us border-top">
     <div class="container">
 
-        <h2 class="display-2 text-center">O platformie Navoica</h2>
+        <h2 class="display-2 text-center">${_('About Navoica')}</h2>
 
         <div class="row">
             <div class="col-md-4 mb-3 h-100 text-center">
@@ -44,10 +43,8 @@ from openedx.core.djangolib.markup import HTML, Text
                         <img class="mx-auto" src="/static/images/navoica-wirtualne-kursy.png" alt="">
                     </figure>
                     <div class="text-sm-left text-md-center">
-                        <h4 class="card-title">Bogata oferta wirtualnych kursów</h4>
-                        <p class="card-text">Szeroki zakres tematyczny kursów o&nbsp;zróżnicowanym poziomie trudności.
-                            Każdy
-                            kursant znajdzie dla siebie interesujący kurs.</p>
+                        <h4 class="card-title">${_('Wide range of online courses ')}</h4>
+                        <p class="card-text">${_('A broad spectrum of courses with varying levels of expertise. Everyone can find an interesting course for themselves.')}</p>
                     </div>
                 </div>
             </div>
@@ -57,10 +54,8 @@ from openedx.core.djangolib.markup import HTML, Text
                         <img class="mx-auto" src="/static/images/navoica-platforma-ksztalcenia.png" alt="">
                     </figure>
                     <div class="text-sm-left text-md-center">
-                        <h4 class="card-title">Ogólnodostępna platforma kształcenia</h4>
-                        <p class="card-text">Dzięki platformie internetowej Navoica dotrzemy do każdego, kto chce się
-                            uczyć
-                            – bez względu na wiek i&nbsp;miejsce zamieszkania.</p>
+                        <h4 class="card-title">${_('Publicly available learning platform')}</h4>
+                        <p class="card-text">${_('We reach anyone who wants to learn \\u2013 regardless of their age or place of residence.')}</p>
                     </div>
                 </div>
             </div>
@@ -70,16 +65,15 @@ from openedx.core.djangolib.markup import HTML, Text
                         <img class="mx-auto" src="/static/images/navoica-siec-wspolpracy.png" alt="">
                     </figure>
                     <div class="text-sm-left text-md-center">
-                        <h4 class="card-title">Sieć współpracy uczelni i instytucji</h4>
-                        <p class="card-text">Nowy ekosystem kształcenia online skupia: uczelnie, instytucje naukowe,
-                            biznes i organizacje pozarządowe.</p>
+                        <h4 class="card-title">${_('Network of universities and institutions ')}</h4>
+                        <p class="card-text">${_('New online learning ecosystem brings together: universities, research institutes, businesses and NGOs. Find out more about Navoica')}</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="mt-4 text-center">
-            <a class="btn btn-outline-primary btn-lg" href="http://navoica.edu.pl/" target="_blank" role="button">Dowiedz się więcej o Navoice</a>
+            <a class="btn btn-outline-primary btn-lg" href="http://navoica.edu.pl/" target="_blank" role="button">${_('Find out more about Navoica')}</a>
         </div>
 
     </div>

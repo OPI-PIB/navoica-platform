@@ -5,7 +5,7 @@
 
 <%!
 from django.utils.translation import ugettext as _
-
+from datetime import datetime
 from openedx.core.djangolib.markup import HTML
 from openedx.features.course_experience import course_home_page_title
 %>
@@ -39,7 +39,10 @@ from openedx.features.course_experience import course_home_page_title
                     % for index, update in enumerate(updates):
                         <article class="updates-article">
                             % if not update.get("is_error"):
-                                <div class="date">${update.get("date")}</div>
+                                <%
+                                    update_date = datetime.strptime(update.get("date"), '%d/%m/%Y')
+                                %>
+                                <div class="localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="shortDate" data-datetime="${update_date}"></div>
                             % endif
                             <div class="article-content">
                                 ${HTML(update.get("content"))}
@@ -57,3 +60,7 @@ from openedx.features.course_experience import course_home_page_title
 </div></div>
     </div>
 </%block>
+
+<%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
+    DateUtilFactory.transform(iterationKey=".localized_datetime");
+</%static:require_module_async>

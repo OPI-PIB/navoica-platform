@@ -35,9 +35,9 @@ from .course_dates import CourseDatesFragmentView
 from .course_home_messages import CourseHomeMessageFragmentView
 from .course_outline import CourseOutlineFragmentView
 from .course_sock import CourseSockFragmentView
-from .latest_update import LatestUpdateFragmentView
+from .course_home_updates import UpdatesFragmentView
 from .welcome_message import WelcomeMessageFragmentView
-
+from openedx.core.djangoapps.user_api.course_tag.api import get_course_tag
 
 EMPTY_HANDOUTS_HTML = u'<ol></ol>'
 
@@ -108,7 +108,7 @@ class CourseHomeFragmentView(EdxFragmentView):
         """
         course_key = CourseKey.from_string(course_id)
         course = get_course_with_access(request.user, 'load', course_key)
-
+        PREFERENCE_KEY = 'view-welcome-message'
         # Render the course dates as a fragment
         dates_fragment = CourseDatesFragmentView().render_to_fragment(request, course_id=course_id, **kwargs)
 
@@ -122,8 +122,8 @@ class CourseHomeFragmentView(EdxFragmentView):
         }
         if user_access['is_enrolled'] or user_access['is_staff']:
             outline_fragment = CourseOutlineFragmentView().render_to_fragment(request, course_id=course_id, **kwargs)
-            if LATEST_UPDATE_FLAG.is_enabled(course_key):
-                update_message_fragment = LatestUpdateFragmentView().render_to_fragment(
+            if (get_course_tag(request.user, course_key, PREFERENCE_KEY) == 'False' or LATEST_UPDATE_FLAG.is_enabled(course_key)):
+                update_message_fragment = UpdatesFragmentView().render_to_fragment(
                     request, course_id=course_id, **kwargs
                 )
             else:

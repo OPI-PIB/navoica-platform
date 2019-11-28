@@ -1,5 +1,5 @@
-define(['jquery', 'date', 'js/utils/change_on_enter', 'jquery.ui', 'jquery.timepicker'],
-function($, date, TriggerChangeEventOnEnter) {
+define(['jquery', 'date', 'js/utils/regional_pl' ,'moment' ,'js/utils/change_on_enter', 'jquery.ui', 'jquery.timepicker'],
+function($, date, RegionalPl,  moment, TriggerChangeEventOnEnter) {
     'use strict';
     var setupDatePicker = function(fieldName, view, index) {
         var cacheModel;
@@ -16,7 +16,6 @@ function($, date, TriggerChangeEventOnEnter) {
         var cacheview = view;
         var setfield = function(event) {
             var newVal = getDate(datefield, timefield);
-
             // Setting to null clears the time as well, as date and time are linked.
             // Note also that the validation logic prevents us from clearing the start date
             // (start date is required by the back end).
@@ -27,6 +26,13 @@ function($, date, TriggerChangeEventOnEnter) {
         // instrument as date and time pickers
         timefield.timepicker({timeFormat: 'H:i'});
         datefield.datepicker({ dateFormat: 'dd/mm/yy' });
+
+        if ($("html").attr("lang")==='pl'){
+            $.datepicker.setDefaults(RegionalPl);
+        } else {
+            $.datepicker.setDefaults($.datepicker.regional['']);
+        }
+
 
         // Using the change event causes setfield to be triggered twice, but it is necessary
         // to pick up when the date is typed directly in the field.
@@ -97,7 +103,7 @@ function($, date, TriggerChangeEventOnEnter) {
 
     var parseDateFromString = function(stringDate) {
         if (stringDate && typeof stringDate === 'string') {
-            return new Date(stringDate);
+            return new Date.parse(stringDate);
         } else {
             return stringDate;
         }
