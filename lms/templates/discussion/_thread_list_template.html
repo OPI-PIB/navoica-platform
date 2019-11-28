@@ -1,7 +1,6 @@
 <%page expression_filter="h"/>
 <%! from django.utils.translation import ugettext as _ %>
 <script type="text/template" id="thread-list-template">
-    <div class="collapse-panel collapse show forum-nav-thread-list-wrapper" id="sort-filter-wrapper" tabindex="-1">
         <header>
         <h2>
             <span class="d-none d-md-block">${_("All Posts")}</span>
@@ -57,6 +56,8 @@
             ## </label>
         </div>
         </header>
+    <!-- <div class="collapse-panel collapse show forum-nav-thread-list-wrapper" id="sort-filter-wrapper" tabindex="-1"> -->
+    <div class="forum-nav-thread-list-wrapper" id="sort-filter-wrapper" tabindex="-1">
         <div class="search-alerts"></div>
         <ul class="forum-nav-thread-list"></ul>
     </div>

@@ -75,7 +75,6 @@
     margin: 0 .5em 0 1em;
     padding: 0;
   }
-
   li.breadcrumb-item::after {
     content: "/";
     margin: 0 .5em 0 1em;
@@ -85,7 +84,8 @@
     content: none;
   }
 
-  li.breadcrumb-item:nth-child(2)::before {
+  .nav-item.breadcrumb:nth-child(1)::before{
+  // li.breadcrumb-item:nth-child(2)::before {
     content: "Temat:";
     font-style: italic;
   }
@@ -345,6 +345,12 @@
   list-style: none;
   border-radius: 0 0 3px 3px;
 
+  &.never-read {
+    .forum-nav-thread-link {
+      box-shadow: 4px 0 0 #e41d3755 inset, -1px 0 0 $red;
+    }
+  }
+
   .forum-nav-thread-labels {
     margin: 5px 0 0;
     // Overrides overspecific courseware CSS from:
@@ -423,7 +429,8 @@
 
   &.never-read {
     .forum-nav-thread-link {
-      @include border-left(3px solid $forum-color-never-read-post);
+      // @include border-left(3px solid $forum-color-never-read-post);
+      @include border-left(3px solid #E41D37);
 
       // color: $forum-color-never-read-post;
     }
