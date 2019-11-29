@@ -35,14 +35,15 @@
 #
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-11-25 10:45+0000\n"
+"POT-Creation-Date: 2019-11-29 11:30+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
-"Last-Translator: Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019\n"
+"Last-Translator: Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -2913,6 +2914,34 @@ msgstr "%(field)s może składać się z maksymalnie %(count)d znaków."
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "Please enter your %(field)s."
 msgstr "Proszę podać %(field)s."
+
+#: common/static/common/js/vendor/common.min.js
+msgid "delete"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "has"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "get"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "Wrong offset!"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "Wrong length!"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "Promise-chain cycle"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "Promise can't be resolved itself"
+msgstr ""
 
 #: common/static/js/capa/drag_and_drop/base_image.js
 msgid "Drop target image"
@@ -9323,11 +9352,11 @@ msgstr ""
 
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Common Problem Types"
-msgstr ""
+msgstr "Popularne typy ćwiczeń"
 
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Advanced types of exercises"
-msgstr ""
+msgstr "Zaawansowane typy ćwiczeń"
 
 #: cms/templates/js/add-xblock-component-support-legend.underscore
 msgid "Supported"
@@ -9352,7 +9381,7 @@ msgstr "Prowizorycznie wspierany"
 
 #: cms/templates/js/add-xblock-component.underscore
 msgid "Add New Component"
-msgstr ""
+msgstr "Dodaj nowy element"
 
 #: cms/templates/js/advanced_entry.underscore
 msgid "Deprecated"
@@ -9686,7 +9715,7 @@ msgstr ""
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished units will not be released"
-msgstr ""
+msgstr "Nieopublikowane jednostki nie zostaną udostępnione"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished changes to content that will release in the future"
@@ -10285,6 +10314,8 @@ msgid ""
 "Draft saved on {lastSavedStart}{editedOn}{lastSavedEnd} by "
 "{editedByStart}{editedBy}{editedByEnd}"
 msgstr ""
+"Wersja robocza zapisana {lastSavedStart}{editedOn}{lastSavedEnd} przez "
+"{editedByStart}{editedBy}{editedByEnd}"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid ""
@@ -10303,7 +10334,7 @@ msgstr ""
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Will Be Visible To:"
-msgstr ""
+msgstr "Będzie widoczny dla:"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Staff Only"
