@@ -26,6 +26,7 @@
 #
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  underscore-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -7531,7 +7532,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "No results"
-msgstr ""
+msgstr "Brak wyników"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Course Key"
@@ -7600,7 +7601,7 @@ msgstr ""
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Username or email address"
-msgstr ""
+msgstr "Nazwa użytkownika lub adres e-mail"
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Course ID"
@@ -8034,7 +8035,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Bulk Exceptions"
-msgstr ""
+msgstr "Zbiorcze wyjątki"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid ""
@@ -8044,21 +8045,27 @@ msgid ""
 "include an optional note describing the reason for the exception in the "
 "second comma separated field."
 msgstr ""
+"Prześlij plik Comma Separated Values (.csv) , który zawiera nazwy "
+"użytkowników lub adresy e-mail studentów, którzy są traktowani jako wyjątki."
+" Podaj nazwę użytkownika lub adres e-mail w pierwszym pliku .csv. W drugim "
+"pliku .csv możesz dołączyć opcjonalną notatkę opisującą przyczynę wyjątku."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Upload a CSV file"
-msgstr ""
+msgstr "Prześlij plik CSV"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid "Add to Exception List"
-msgstr ""
+msgstr "Dodaj do listy wyjątków"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid ""
 "To invalidate a certificate for a particular learner, add the username or "
 "email address below."
 msgstr ""
+"Aby unieważnić zaświadczenie dla konkretnego studenta, poniżej podaj nazwę "
+"użytkownika lub adres e-mail."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Add notes about this learner"
@@ -8091,17 +8098,19 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid "Individual Exceptions"
-msgstr ""
+msgstr "Indywidualne wyjątki"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid ""
 "Enter the username or email address of each learner that you want to add as "
 "an exception."
 msgstr ""
+"Wprowadź nazwę użytkownika lub adres e-mail każdego ucznia, którego chcesz "
+"dodać jako wyjątek."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid "Student email or username"
-msgstr ""
+msgstr "Adres e-mail studenta lub jego nazwa użytkownika "
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid "Free text notes"
@@ -8109,11 +8118,11 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Generate Exception Certificates"
-msgstr ""
+msgstr "Generuj zaświadczenia o ukończeniu kursu w wyjątku"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "All users on the Exception list who do not yet have a certificate"
-msgstr ""
+msgstr "Wszyscy użytkownicy na liście wyjątków"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "All users on the Exception list"
@@ -9232,7 +9241,7 @@ msgstr[3] ""
 #: openedx/features/course_search/static/course_search/templates/course_search_results.underscore
 #: openedx/features/course_search/static/course_search/templates/dashboard_search_results.underscore
 msgid "Sorry, no results were found."
-msgstr ""
+msgstr "Przepraszamy, nie znaleziono żadnych wyników."
 
 #: openedx/features/learner_profile/static/learner_profile/templates/badge.underscore
 #, python-format

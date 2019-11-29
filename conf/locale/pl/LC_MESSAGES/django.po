@@ -7,8 +7,8 @@
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # krystianlygas <krystian.lygas@gmail.com>, 2019
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
@@ -29,8 +29,8 @@
 # Translators:
 # krystianlygas <krystian.lygas@gmail.com>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
-# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
+# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -7731,7 +7731,7 @@ msgstr "Egzaminy specjalne"
 #: lms/djangoapps/support/views/index.py cms/templates/certificates.html
 #: cms/templates/export.html cms/templates/widgets/header.html
 msgid "Certificates"
-msgstr "zaświadczenia o ukończeniu kursu"
+msgstr "Zaświadczenia o ukończeniu kursu"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Please Enter the numeric value for the course price"
@@ -12707,7 +12707,6 @@ msgstr "Edycja kursu:"
 #: cms/templates/index.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
-#: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
@@ -18078,6 +18077,7 @@ msgid "Profile"
 msgstr "Profil"
 
 #: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 msgid "Discover New"
 msgstr "Katalog kursów"
 
