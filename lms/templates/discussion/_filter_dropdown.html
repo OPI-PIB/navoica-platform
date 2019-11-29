@@ -62,10 +62,7 @@ from openedx.core.djangolib.markup import HTML
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-start" >
                     <form class="forum-nav-browse-filter input-group" autocomplete="off">
-                        <label>
-                            <span class="sr">${_("Filter Topics")}</span>
-                                <input type="text" id="forum-nav-browse-filter-input" role="combobox" aria-autocomplete="list" aria-label="Filtruj tematy" aria-expanded="true" aria-owns="discussion_topics_listbox" class="forum-nav-browse-filter-input form-control form-control-sm border border-secondary" placeholder="${_("filter topics")}"/>
-                        </label>
+                        <input type="text" id="_forum-nav-browse-filter-input" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-label="${_("Filter Topics")}" aria-owns="discussion_topics_listbox" class="forum-nav-browse-filter-input form-control form-control-sm border border-secondary" placeholder="${_("Filter Topics")}">
                     </form>
                 </div>
             </div>
