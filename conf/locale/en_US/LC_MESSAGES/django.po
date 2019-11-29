@@ -3478,6 +3478,10 @@ msgid "Any Type"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/library_content_module.py
+msgid "Randomized Content Block"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/library_content_module.py
 #: cms/templates/widgets/header.html
 msgid "Library"
 msgstr ""
@@ -10508,6 +10512,7 @@ msgstr ""
 
 #: openedx/core/djangoapps/util/user_messages.py
 #: cms/templates/course_outline.html cms/templates/index.html
+#: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 #: openedx/features/course_experience/templates/course_experience/welcome-message-fragment.html
 msgid "Dismiss"
@@ -11392,6 +11397,12 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
+#: cms/templates/base.html cms/templates/widgets/header.html
+#: lms/templates/header/header.html lms/templates/navigation/navigation.html
+#: lms/templates/widgets/footer-language-selector.html
+msgid "Choose Language"
+msgstr ""
+
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
@@ -11540,12 +11551,6 @@ msgstr ""
 #: cms/templates/widgets/footer.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "Legal"
-msgstr ""
-
-#: cms/templates/widgets/header.html lms/templates/header/header.html
-#: lms/templates/navigation/navigation.html
-#: lms/templates/widgets/footer-language-selector.html
-msgid "Choose Language"
 msgstr ""
 
 #: cms/templates/widgets/header.html lms/templates/user_dropdown.html
@@ -19004,6 +19009,10 @@ msgstr ""
 msgid "Expand All"
 msgstr ""
 
+#: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
+msgid "Update,"
+msgstr ""
+
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
 msgid "Prerequisite: "
 msgstr ""
@@ -19094,6 +19103,10 @@ msgstr ""
 
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 msgid "Latest Update"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/welcome-message-fragment.html
+msgid "Welcome Message"
 msgstr ""
 
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html
