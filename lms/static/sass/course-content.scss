@@ -31,6 +31,9 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+// course - instructor-only views
+@import "course/instructor/instructor_2";
+
 *,
 *::before,
 *::after {
@@ -10300,8 +10303,11 @@ article .display-3::before {
   }
 }
 
-
 .xmodule_HtmlModule img {
     max-width: 100%;
+}
+
+.slick-column-name {
+  fornt-size: 1rem;
 }
 

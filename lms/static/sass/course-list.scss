@@ -11180,7 +11180,6 @@ input.form-control.form-control {
 
 #results {
    padding: 0 !important;
-   order: 1;
 }
 
 #result {
@@ -12854,6 +12853,10 @@ img.message-author {
 .welcome-message #h2 {justify-content: center !important;}
 
 .welcome-message hr {display: none !important;}
+
+.dismiss-message {
+  display: none;
+}
 
 .page-header-search {
   display:flex !important;
