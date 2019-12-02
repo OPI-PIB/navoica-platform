@@ -8,6 +8,7 @@
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # krystianlygas <krystian.lygas@gmail.com>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
@@ -17,6 +18,7 @@
 #
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  mako.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -28,6 +30,7 @@
 # krystianlygas <krystian.lygas@gmail.com>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
+# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -39,6 +42,7 @@
 # krystianlygas <krystian.lygas@gmail.com>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  wiki.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -53,7 +57,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-11-06 07:50+0000\n"
+"POT-Creation-Date: 2019-11-25 10:46+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -2931,6 +2935,16 @@ msgstr ""
 "się tymczasowe oznaczenie \"Nowy\"."
 
 #: common/lib/xmodule/xmodule/course_module.py
+msgid "Show curse on main page."
+msgstr "Wyświetl kurs na stronie głównej. "
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"Enter true or false. If true, the course appears on the section 'New "
+"Courses' on main page."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Mobile Course Available"
 msgstr "Dostępny kurs mobilny"
 
@@ -3936,6 +3950,10 @@ msgstr "Nie odnaleziono adresu e-mail."
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Any Type"
 msgstr "Dowolny typ "
+
+#: common/lib/xmodule/xmodule/library_content_module.py
+msgid "Randomized Content Block"
+msgstr "Zadanie losowane z puli pytań"
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 #: cms/templates/widgets/header.html
@@ -5782,13 +5800,11 @@ msgstr ""
 "osiągnięcia, które są przyznawane za ukończenie kursów na platformie "
 "{platform_name}."
 
-#. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 #. Translators:  'All rights reserved' is a legal term used in copyrighting to
 #. protect published content
 #: lms/djangoapps/certificates/views/webview.py
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
-#: lms/templates/footer.html
 msgid "All rights reserved"
 msgstr "Wszelkie prawa zastrzeżone"
 
@@ -7379,7 +7395,7 @@ msgstr ""
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/api_helper.py
 msgid "survey"
-msgstr ""
+msgstr "ankieta"
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/api_helper.py
@@ -7715,7 +7731,7 @@ msgstr "Egzaminy specjalne"
 #: lms/djangoapps/support/views/index.py cms/templates/certificates.html
 #: cms/templates/export.html cms/templates/widgets/header.html
 msgid "Certificates"
-msgstr "zaświadczenia o ukończeniu kursu"
+msgstr "Zaświadczenia o ukończeniu kursu"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Please Enter the numeric value for the course price"
@@ -7745,7 +7761,7 @@ msgstr "Członkostwo"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 msgid "Cohorts"
-msgstr "Kohorty"
+msgstr "Grupy"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
 #: lms/djangoapps/discussion/templates/discussion/discussion_board_fragment.html
@@ -10787,7 +10803,7 @@ msgstr "Domyślna grupa"
 
 #: openedx/core/djangoapps/course_groups/cohorts.py
 msgid "You cannot create two cohorts with the same name"
-msgstr "Nie możesz stworzyć dwóch kohort o tej samej nazwie"
+msgstr "Nie możesz stworzyć dwóch grup o tej samej nazwie"
 
 #: openedx/core/djangoapps/course_groups/cohorts.py
 msgid ""
@@ -11699,6 +11715,7 @@ msgstr ""
 
 #: openedx/core/djangoapps/util/user_messages.py
 #: cms/templates/course_outline.html cms/templates/index.html
+#: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 #: openedx/features/course_experience/templates/course_experience/welcome-message-fragment.html
 msgid "Dismiss"
@@ -11908,7 +11925,7 @@ msgid ""
 "The groups in this configuration can be mapped to cohorts in the Instructor "
 "Dashboard."
 msgstr ""
-"Grupy w tej konfiguracji mogą być mapowane do kohort z poziomu pulpitu "
+"Grupy w tej konfiguracji mogą być mapowane do grup z poziomu pulpitu "
 "prowadzącego."
 
 #: cms/djangoapps/contentstore/course_group_config.py
@@ -12071,6 +12088,8 @@ msgstr "Przesyłanie ukończone"
 msgid ""
 "File {filename} exceeds maximum size of {maximum_size_in_megabytes} MB."
 msgstr ""
+"Plik {filename} przekracza maksymalny rozmiar {maximum_size_in_megabytes} "
+"MB."
 
 #: cms/djangoapps/contentstore/views/certificates.py
 msgid "must have name of the certificate"
@@ -12640,6 +12659,12 @@ msgstr "Nie znaleziono strony"
 msgid "Content"
 msgstr "Treść"
 
+#: cms/templates/base.html cms/templates/widgets/header.html
+#: lms/templates/header/header.html lms/templates/navigation/navigation.html
+#: lms/templates/widgets/footer-language-selector.html
+msgid "Choose Language"
+msgstr "Wybierz język"
+
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
@@ -12682,7 +12707,6 @@ msgstr "Edycja kursu:"
 #: cms/templates/index.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
-#: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
@@ -12791,12 +12815,6 @@ msgstr "Zresetuj"
 #: themes/red-theme/lms/templates/footer.html
 msgid "Legal"
 msgstr "Informacje prawne"
-
-#: cms/templates/widgets/header.html lms/templates/header/header.html
-#: lms/templates/navigation/navigation.html
-#: lms/templates/widgets/footer-language-selector.html
-msgid "Choose Language"
-msgstr "Wybierz język"
 
 #: cms/templates/widgets/header.html lms/templates/user_dropdown.html
 #: lms/templates/header/user_dropdown.html
@@ -13207,6 +13225,10 @@ msgstr ""
 #: lms/templates/footer.html
 msgid "Honor code "
 msgstr "Kodeks honorowy"
+
+#: lms/templates/footer.html
+msgid "All rights reserved  "
+msgstr ""
 
 #: lms/templates/forgot_password_modal.html
 msgid "Password Reset"
@@ -13666,7 +13688,7 @@ msgstr "Naciśnij, aby uruchomić"
 
 #: lms/templates/main.html
 msgid "Navoica.pl - Polish MOOC platform"
-msgstr "Navoica.pl - Polski MOOC"
+msgstr "Navoica.pl – Platforma edukacyjna"
 
 #: lms/templates/main.html
 msgid ""
@@ -13674,7 +13696,7 @@ msgid ""
 "registered user. "
 msgstr ""
 "Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat"
-" i dla każdego zarejestrowanego użytkownika."
+" i dla każdego zarejestrowanego użytkownika. Czytaj Nawojka."
 
 #: lms/templates/manage_user_standing.html
 msgid "Manage student accounts"
@@ -14175,11 +14197,11 @@ msgstr "Grupy nieaktywne"
 
 #: lms/templates/staff_problem_info.html
 msgid "Staff Debug Info"
-msgstr "Tryb debugowania kadry - informacje"
+msgstr "Informacje o elemencie"
 
 #: lms/templates/staff_problem_info.html
 msgid "Submission history"
-msgstr "Historia zgłoszeń"
+msgstr "Historia odpowiedzi"
 
 #: lms/templates/staff_problem_info.html
 msgid "{platform_name} Content Quality Assessment"
@@ -18055,6 +18077,7 @@ msgid "Profile"
 msgstr "Profil"
 
 #: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 msgid "Discover New"
 msgstr "Katalog kursów"
 
@@ -21009,6 +21032,10 @@ msgstr ""
 msgid "Expand All"
 msgstr "Rozwiń wszystko"
 
+#: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
+msgid "Update,"
+msgstr "Aktualizacja,"
+
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
 msgid "Prerequisite: "
 msgstr ""
@@ -21100,6 +21127,10 @@ msgstr "Ten kurs nie ma żadnych opublikowanych aktualności."
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 msgid "Latest Update"
 msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/welcome-message-fragment.html
+msgid "Welcome Message"
+msgstr "Wiadomość powitalna"
 
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html
 msgid "Search Results"
@@ -22620,10 +22651,9 @@ msgid ""
 "create cohort-specific courseware. In other words, you can customize the "
 "content that particular cohorts see in your course."
 msgstr ""
-"Jeśli w swoim kursie utworzyłeś już kohorty (grupy użytkowników), możesz "
-"wykorzystać \"grupy treści\". Utworzoną grupę treści możesz przypisać do "
-"konkretnej kohorty, tzn. udostępnić część materiału tylko pewnej grupie "
-"użytkowników."
+"Jeśli w swoim kursie utworzyłeś już grupy użytkowników, możesz wykorzystać "
+"\"grupy treści\". Utworzone treści możesz przypisać do konkretnej grupy, "
+"tzn. udostępnić część materiału tylko pewnej grupie użytkowników."
 
 #: cms/templates/group_configurations.html
 msgid ""

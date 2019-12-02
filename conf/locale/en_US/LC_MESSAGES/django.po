@@ -35,7 +35,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-11-18 14:43+0000\n"
+"POT-Creation-Date: 2019-11-25 10:46+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2019\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
@@ -2627,6 +2627,16 @@ msgid ""
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
+msgid "Show curse on main page."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid ""
+"Enter true or false. If true, the course appears on the section 'New "
+"Courses' on main page."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Mobile Course Available"
 msgstr ""
 
@@ -3465,6 +3475,10 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Any Type"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/library_content_module.py
+msgid "Randomized Content Block"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/library_content_module.py
@@ -5030,13 +5044,11 @@ msgid ""
 "awarded for course activities that {platform_name} students complete."
 msgstr ""
 
-#. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 #. Translators:  'All rights reserved' is a legal term used in copyrighting to
 #. protect published content
 #: lms/djangoapps/certificates/views/webview.py
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
-#: lms/templates/footer.html
 msgid "All rights reserved"
 msgstr ""
 
@@ -10500,6 +10512,7 @@ msgstr ""
 
 #: openedx/core/djangoapps/util/user_messages.py
 #: cms/templates/course_outline.html cms/templates/index.html
+#: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 #: openedx/features/course_experience/templates/course_experience/welcome-message-fragment.html
 msgid "Dismiss"
@@ -11384,6 +11397,12 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
+#: cms/templates/base.html cms/templates/widgets/header.html
+#: lms/templates/header/header.html lms/templates/navigation/navigation.html
+#: lms/templates/widgets/footer-language-selector.html
+msgid "Choose Language"
+msgstr ""
+
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
@@ -11532,12 +11551,6 @@ msgstr ""
 #: cms/templates/widgets/footer.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "Legal"
-msgstr ""
-
-#: cms/templates/widgets/header.html lms/templates/header/header.html
-#: lms/templates/navigation/navigation.html
-#: lms/templates/widgets/footer-language-selector.html
-msgid "Choose Language"
 msgstr ""
 
 #: cms/templates/widgets/header.html lms/templates/user_dropdown.html
@@ -11936,6 +11949,10 @@ msgstr ""
 
 #: lms/templates/footer.html
 msgid "Honor code "
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "All rights reserved  "
 msgstr ""
 
 #: lms/templates/forgot_password_modal.html
@@ -18992,6 +19009,10 @@ msgstr ""
 msgid "Expand All"
 msgstr ""
 
+#: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
+msgid "Update,"
+msgstr ""
+
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
 msgid "Prerequisite: "
 msgstr ""
@@ -19082,6 +19103,10 @@ msgstr ""
 
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 msgid "Latest Update"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/welcome-message-fragment.html
+msgid "Welcome Message"
 msgstr ""
 
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html

@@ -6,6 +6,7 @@
 #
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  djangojs-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
@@ -15,6 +16,7 @@
 #
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  underscore.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -24,6 +26,7 @@
 #
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  underscore-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -33,14 +36,15 @@
 #
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-11-06 07:50+0000\n"
+"POT-Creation-Date: 2019-11-29 11:30+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
-"Last-Translator: Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019\n"
+"Last-Translator: Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -1859,7 +1863,7 @@ msgstr ""
 #. displayed in the browser when a user needs to edit HTML
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Insert/Edit Image"
-msgstr ""
+msgstr "Wstaw/edytuj obraz"
 
 #: common/lib/xmodule/xmodule/js/src/lti/lti.js
 msgid ""
@@ -2192,19 +2196,19 @@ msgstr ""
 
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Organization:"
-msgstr ""
+msgstr "Organizacja:"
 
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Course Number:"
-msgstr ""
+msgstr "Numer kursu:"
 
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Course Run:"
-msgstr ""
+msgstr "Edycja kursu:"
 
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "(Read-only)"
-msgstr ""
+msgstr "(tylko do odczytu)"
 
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Re-run Course"
@@ -2911,6 +2915,34 @@ msgstr "%(field)s może składać się z maksymalnie %(count)d znaków."
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "Please enter your %(field)s."
 msgstr "Proszę podać %(field)s."
+
+#: common/static/common/js/vendor/common.min.js
+msgid "delete"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "has"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "get"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "Wrong offset!"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "Wrong length!"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "Promise-chain cycle"
+msgstr ""
+
+#: common/static/common/js/vendor/common.min.js
+msgid "Promise can't be resolved itself"
+msgstr ""
 
 #: common/static/js/capa/drag_and_drop/base_image.js
 msgid "Drop target image"
@@ -3999,7 +4031,7 @@ msgstr ""
 
 #: lms/static/js/discussions_management/views/discussions.js
 msgid "Cohorts"
-msgstr "Kohorty"
+msgstr "Grupy"
 
 #: lms/static/js/discussions_management/views/discussions.js
 msgid ""
@@ -4007,10 +4039,10 @@ msgid ""
 "of cohort, see the same discussion topics, but within divided topics, only "
 "members of the same cohort see and respond to each others’ posts. "
 msgstr ""
-"Używaj kohort jako podstawy do dzielenia dyskusji. Wszyscy studenci, "
-"niezależnie od ich kohorty, widzą te same tematy dyskusji, natomiast wpisy "
+"Używaj grup jako podstawy do dzielenia dyskusji. Wszyscy studenci, "
+"niezależnie od ich grupy, widzą te same tematy dyskusji, natomiast wpisy "
 "wewnątrz podzielonych dyskusji widzą wyłącznie studenci będący w tej samej "
-"kohorcie."
+"grupie."
 
 #: lms/static/js/discussions_management/views/discussions.js
 msgid "Discussion topics in the course are not divided."
@@ -4223,7 +4255,7 @@ msgstr "Nie można dodać grupy"
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "You currently have no cohorts configured"
-msgstr "Aktualnie nie posiadasz skonfigurowanych żadnych grup"
+msgstr "Aktualnie nie posiadasz żadnych skonfigurowanych grup"
 
 #: lms/static/js/groups/views/cohorts.js
 msgid "Add Cohort"
@@ -4294,9 +4326,9 @@ msgid ""
 "This course has automatic cohorting enabled for verified track learners, but"
 " cohorts are disabled. You must enable cohorts for the feature to work."
 msgstr ""
-"Ten kurs wykorzystuje system automatycznych kohort dla studentów ścieżki "
-"zweryfikowanej, jednak system kohort został wyłączony. Chcąc korzystać z "
-"tego rozwiązania musisz włączyć system kohort."
+"Ten kurs wykorzystuje system automatycznych grup dla studentów ścieżki "
+"zweryfikowanej, jednak system grup został wyłączony. Chcąc korzystać z tego "
+"rozwiązania musisz włączyć system grup."
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Allow students to generate certificates for this course?"
@@ -6029,6 +6061,7 @@ msgstr ""
 #: cms/static/js/views/active_video_upload_list.js
 msgid "{filename} exceeds maximum size of {maxFileSizeInGB} GB."
 msgstr ""
+"{filename} przekracza maksymalny dopuszczalny rozmiar {maxFileSizeInGB} GB."
 
 #: cms/static/js/views/active_video_upload_list.js
 msgid ": video upload complete."
@@ -7499,7 +7532,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "No results"
-msgstr ""
+msgstr "Brak wyników"
 
 #: lms/djangoapps/support/static/support/templates/certificates_results.underscore
 msgid "Course Key"
@@ -7568,7 +7601,7 @@ msgstr ""
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Username or email address"
-msgstr ""
+msgstr "Nazwa użytkownika lub adres e-mail"
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Course ID"
@@ -8002,7 +8035,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Bulk Exceptions"
-msgstr ""
+msgstr "Zbiorcze wyjątki"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid ""
@@ -8012,21 +8045,27 @@ msgid ""
 "include an optional note describing the reason for the exception in the "
 "second comma separated field."
 msgstr ""
+"Prześlij plik Comma Separated Values (.csv) , który zawiera nazwy "
+"użytkowników lub adresy e-mail studentów, którzy są traktowani jako wyjątki."
+" Podaj nazwę użytkownika lub adres e-mail w pierwszym pliku .csv. W drugim "
+"pliku .csv możesz dołączyć opcjonalną notatkę opisującą przyczynę wyjątku."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Upload a CSV file"
-msgstr ""
+msgstr "Prześlij plik CSV"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid "Add to Exception List"
-msgstr ""
+msgstr "Dodaj do listy wyjątków"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid ""
 "To invalidate a certificate for a particular learner, add the username or "
 "email address below."
 msgstr ""
+"Aby unieważnić zaświadczenie dla konkretnego studenta, poniżej podaj nazwę "
+"użytkownika lub adres e-mail."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-invalidation.underscore
 msgid "Add notes about this learner"
@@ -8059,17 +8098,19 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid "Individual Exceptions"
-msgstr ""
+msgstr "Indywidualne wyjątki"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid ""
 "Enter the username or email address of each learner that you want to add as "
 "an exception."
 msgstr ""
+"Wprowadź nazwę użytkownika lub adres e-mail każdego ucznia, którego chcesz "
+"dodać jako wyjątek."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid "Student email or username"
-msgstr ""
+msgstr "Adres e-mail studenta lub jego nazwa użytkownika "
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
 msgid "Free text notes"
@@ -8077,11 +8118,11 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Generate Exception Certificates"
-msgstr ""
+msgstr "Generuj zaświadczenia o ukończeniu kursu w wyjątku"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "All users on the Exception list who do not yet have a certificate"
-msgstr ""
+msgstr "Wszyscy użytkownicy na liście wyjątków"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "All users on the Exception list"
@@ -9200,7 +9241,7 @@ msgstr[3] ""
 #: openedx/features/course_search/static/course_search/templates/course_search_results.underscore
 #: openedx/features/course_search/static/course_search/templates/dashboard_search_results.underscore
 msgid "Sorry, no results were found."
-msgstr ""
+msgstr "Przepraszamy, nie znaleziono żadnych wyników."
 
 #: openedx/features/learner_profile/static/learner_profile/templates/badge.underscore
 #, python-format
@@ -9320,11 +9361,11 @@ msgstr ""
 
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Common Problem Types"
-msgstr ""
+msgstr "Popularne typy ćwiczeń"
 
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Advanced types of exercises"
-msgstr ""
+msgstr "Zaawansowane typy ćwiczeń"
 
 #: cms/templates/js/add-xblock-component-support-legend.underscore
 msgid "Supported"
@@ -9349,7 +9390,7 @@ msgstr "Prowizorycznie wspierany"
 
 #: cms/templates/js/add-xblock-component.underscore
 msgid "Add New Component"
-msgstr ""
+msgstr "Dodaj nowy element"
 
 #: cms/templates/js/advanced_entry.underscore
 msgid "Deprecated"
@@ -9683,7 +9724,7 @@ msgstr ""
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished units will not be released"
-msgstr ""
+msgstr "Nieopublikowane jednostki nie zostaną udostępnione"
 
 #: cms/templates/js/course-outline.underscore
 msgid "Unpublished changes to content that will release in the future"
@@ -10282,6 +10323,8 @@ msgid ""
 "Draft saved on {lastSavedStart}{editedOn}{lastSavedEnd} by "
 "{editedByStart}{editedBy}{editedByEnd}"
 msgstr ""
+"Wersja robocza zapisana {lastSavedStart}{editedOn}{lastSavedEnd} przez "
+"{editedByStart}{editedBy}{editedByEnd}"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid ""
@@ -10300,7 +10343,7 @@ msgstr ""
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Will Be Visible To:"
-msgstr ""
+msgstr "Będzie widoczny dla:"
 
 #: cms/templates/js/publish-xblock.underscore
 msgid "Staff Only"

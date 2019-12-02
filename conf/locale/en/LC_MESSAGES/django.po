@@ -32,8 +32,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-11-26 13:09+0000\n"
-"PO-Revision-Date: 2019-11-26 13:09:14.222897\n"
+"POT-Creation-Date: 2019-11-29 13:30+0000\n"
+"PO-Revision-Date: 2019-11-29 13:30:38.980049\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -3472,6 +3472,10 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid "Any Type"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/library_content_module.py
+msgid "Randomized Content Block"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/library_content_module.py
@@ -11390,6 +11394,12 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
+#: cms/templates/base.html cms/templates/widgets/header.html
+#: lms/templates/header/header.html lms/templates/navigation/navigation.html
+#: lms/templates/widgets/footer-language-selector.html
+msgid "Choose Language"
+msgstr ""
+
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
@@ -11432,7 +11442,6 @@ msgstr ""
 #: cms/templates/index.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
-#: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
@@ -11538,12 +11547,6 @@ msgstr ""
 #: cms/templates/widgets/footer.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "Legal"
-msgstr ""
-
-#: cms/templates/widgets/header.html lms/templates/header/header.html
-#: lms/templates/navigation/navigation.html
-#: lms/templates/widgets/footer-language-selector.html
-msgid "Choose Language"
 msgstr ""
 
 #: cms/templates/widgets/header.html lms/templates/user_dropdown.html
@@ -16333,6 +16336,7 @@ msgid "Profile"
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 msgid "Discover New"
 msgstr ""
 

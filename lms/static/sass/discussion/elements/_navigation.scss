@@ -75,7 +75,6 @@
     margin: 0 .5em 0 1em;
     padding: 0;
   }
-
   li.breadcrumb-item::after {
     content: "/";
     margin: 0 .5em 0 1em;
@@ -85,7 +84,8 @@
     content: none;
   }
 
-  li.breadcrumb-item:nth-child(2)::before {
+  .nav-item.breadcrumb:nth-child(1)::before{
+  // li.breadcrumb-item:nth-child(2)::before {
     content: "Temat:";
     font-style: italic;
   }
@@ -129,19 +129,19 @@
   width: 100%;
 }
 
-.forum-nav-browse-menu-following {
-  .icon {
-    @include float(left);
-    @include left($baseline / 2);
+// .forum-nav-browse-menu-following {
+//   .icon {
+//     @include float(left);
+//     @include left($baseline / 2);
 
-    position: relative;
-    top: 13px;
-  }
+//     position: relative;
+//     top: 13px;
+//   }
 
-  .forum-nav-browse-title {
-    @include padding-left($baseline * 1.5);
-  }
-}
+//   .forum-nav-browse-title {
+//     @include padding-left($baseline * 1.5);
+//   }
+// }
 
 .forum-nav-browse-menu-item {
   margin-bottom: 0;
@@ -151,7 +151,7 @@
   @include text-align(left);
 
   display: block;
-  width: 100%;
+  // width: 100%;
   border: 0;
   border-radius: 0;
   // border-bottom: 1px solid $forum-color-border;
@@ -243,39 +243,23 @@
 
   }
 }
-// Old 
-// .forum-nav-browse-menu {
-//   @include padding-left(0);
-
-//   margin: 0;
-//   font-size: $forum-base-font-size;
-//   overflow-y: scroll;
-//   list-style: none;
-//   // max-height: 600px;
-// }
 
 .forum-nav-browse-submenu {
   list-style: none;
   margin: 0;
   padding: 0;
-
-  li {
-    .forum-nav-browse-title {
-      @include padding-left($baseline);
-    }
-  }
 }
 
 // -------------------
 // Sort and filter bar
 // -------------------
 
-.forum-nav-refine-bar {
+.forum-nav-refine-bar  {
   @include clearfix();
   @include border-radius($forum-border-radius, $forum-border-radius, 0, 0);
 
   font-size: $forum-small-font-size;
-  border-bottom: 1px solid $forum-color-border;
+  // border-bottom: 1px solid $forum-color-border;
   background-color: theme-color("light");
   padding: ($baseline/4) ($baseline/2);
   color: $black;
@@ -327,6 +311,26 @@
 .forum-nav-sort-control {
   @extend %forum-nav-select;
 }
+.forum-nav-filter-main-control,
+.forum-nav-sort-control {
+  position: absolute;
+  width: 1rem;
+  border: none;
+  max-width: 100%;
+  background-color:  transparent;
+  position: absolute;
+  width: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  // background-color: #47792;
+  color: transparent;
+
+  option {
+    color: $black;
+  }
+}
 
 // -----------
 // Thread list
@@ -340,6 +344,12 @@
   overflow-y: auto;
   list-style: none;
   border-radius: 0 0 3px 3px;
+
+  &.never-read {
+    .forum-nav-thread-link {
+      box-shadow: 4px 0 0 #e41d3755 inset, -1px 0 0 $red;
+    }
+  }
 
   .forum-nav-thread-labels {
     margin: 5px 0 0;
@@ -419,7 +429,8 @@
 
   &.never-read {
     .forum-nav-thread-link {
-      @include border-left(3px solid $forum-color-never-read-post);
+      // @include border-left(3px solid $forum-color-never-read-post);
+      @include border-left(3px solid #E41D37);
 
       // color: $forum-color-never-read-post;
     }
@@ -788,7 +799,21 @@
       padding: 2rem;
     }
 
-    .post-header-actions,
+    .response-header {
+      border: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      .username {
+        display: inline-block;
+        font-size: 1.375rem;
+        font-weight: 600;
+        line-height: 1.6363;
+        margin: 0 0 .8182em;
+      }
+    }
+
+    // .post-header-actions,
     .response-header-actions,
     .comment-actions-list {
       display: none;
@@ -811,9 +836,14 @@
     }
 
     .add-response {
-      border-bottom: 1px solid map_get($grays, "300");
+      // border-bottom: 1px solid map_get($grays, "300");
       padding: 0 0 2rem;
       margin: 1.5rem 0 !important;
+
+      .add-response-btn {
+        font-size: 0.875rem;
+        line-height: 1.7143;
+      }
     }
 
     .response-count {
@@ -840,6 +870,9 @@
         margin-bottom: 8px;
         width: 80px;
       }
+      .discussion-response {
+        padding: 0;
+      }
     }
 
     .comments {
@@ -847,6 +880,7 @@
       border: 1px solid map_get($grays, "200");
       margin: 0 0 -1px;
       padding: 1rem;
+      box-shadow: none;
 
       > li {
         border-top: 1px solid map_get($grays, "300");
@@ -865,7 +899,9 @@
           font-size: .875em;
           line-height: 1.8571;
         }
-
+        // .wmd-preview-container {
+        //   border: none;
+        // }
       }
     }
   }
@@ -961,7 +997,7 @@
   .forum-nav-browse-filter,
   .forum-nav-refine-bar {
     background-color: map_get($grays, "100");
-    border: 1px solid map_get($grays, "300");
+    // border: 1px solid map_get($grays, "300");
     padding: .5rem;
 
   }
@@ -989,7 +1025,7 @@
 
   form {
     background-color: map_get($grays, "100");
-    border: 1px solid map_get($grays, "200");
+    // border: 1px solid map_get($grays, "200");
     margin: 0;
     padding: 1rem;
 
@@ -1027,6 +1063,10 @@
 
     input + .field-input-label {
       font-size: 14px;
+      
+      .form-control {
+        height: 1rem;
+      }
     }
 
     .action {
@@ -1200,9 +1240,9 @@ main.container nav .nav-tabs .nav-item.active,
     text-transform: uppercase;
     margin-bottom: -1px;
 
-    &.active {
-      padding: 0 4rem 1.125rem;
-    }
+    // &.active {
+    //   padding: 0 4rem 1.125rem;
+    // }
 }
 
 // .discussion .discussion-board 
@@ -1240,13 +1280,19 @@ main.container nav .nav-tabs .nav-item.active,
 
 .forum-search {
   background: rgba(200, 200, 200, .25);
-  flex: 0 1 600px;
+  // flex: 0 1 600px;
+
+  .btn-outline-primary {
+    border-color: transparent !important;
+  }
+
 
   button, input {
     color: map_get($grays, "900");
   }
 
-  .search-button {
+  .btn.btn-outline-primary.btn-small.search-button {
+  // .search-button.btn-outline-primary {
     border-radius: 0 !important;
     border-color: map_get($grays, "500");
     background: map_get($grays, "100");
@@ -1451,6 +1497,41 @@ input[type="button"].btn-block {
 
 // fixes for jumbotron and jumbotronn
 
-.form-control {
-  line-height: 1.7143;
+.field-input.form-control.input-text.search-input {
+  height: 1rem;
+}
+
+.fa-comments, 
+.fa-question, 
+.fa-navicon, 
+.fa-reorder, 
+.fa-bars, 
+.fa-search, 
+.fa-flag, 
+.fa-star, 
+.fa-sort,
+.fa-plus,
+.fa-lock,
+.fa-thumb-tack,
+.fa-remove,
+.fa-close, 
+.fa-times {
+  &::before {
+    font-weight: 900;
+  }
+}
+
+.fa-filter {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.wmd-preview-container {
+  border: none;
+}
+
+.btn {
+  i {
+    margin-right: 0 !important;
+  }
 }

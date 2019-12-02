@@ -11180,7 +11180,6 @@ input.form-control.form-control {
 
 #results {
    padding: 0 !important;
-   order: 1;
 }
 
 #result {
@@ -12843,12 +12842,20 @@ img.message-author {
   margin-bottom: 3rem;
 }
 
-.welcome-message, .updates-article {
+#updates, .welcome-message, .updates-article {
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.welcome-message #h2 {justify-content: center !important;}
+
+.welcome-message hr {display: none !important;}
+
+.dismiss-message {
+  display: none;
 }
 
 .page-header-search {
@@ -13136,3 +13143,6 @@ span.complete-checkmark.fa.fa-check {
   }
 }
 
+#header-course,#header{
+margin: 0
+}

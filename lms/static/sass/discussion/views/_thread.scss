@@ -49,7 +49,8 @@
 
 .thread-responses-wrapper,
 .post-extended-content {
-  padding: 0 ($baseline/2);
+  padding: 0;
+  // padding: 0 ($baseline/2);
 }
 
 // response layout
@@ -81,6 +82,7 @@
   .response-body {
     @extend %t-copy-sub2;
 
+    font-size: 1rem;
     display: inline-block;
     margin-bottom: ($baseline/2);
     width: flex-grid(10,12);
@@ -96,6 +98,12 @@
 
     position: absolute;
     top: $baseline / 2;
+  }
+}
+
+.discussion {
+ .comments {
+    box-shadow: 0 !important;
   }
 }
 
@@ -150,7 +158,8 @@
   @include padding(($baseline / 2), ($baseline * 1.5), 0, 0); //ensures content doesn't overlap on post or response actions.
 
   margin-bottom: 0.2em;
-  font-size: $forum-base-font-size;
+  // font-size: $forum-base-font-size;
+  font-size: 1rem;
 }
 
 // +post - individual element styling
@@ -170,7 +179,7 @@
   // post body
   .post-body {
     @extend %t-copy-sub1;
-
+    font-size: 1rem;
     padding: ($baseline/2) 0;
     max-width: calc(100% - #{$actions-dropdown-offset});
   }
