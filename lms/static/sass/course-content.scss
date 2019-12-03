@@ -9736,7 +9736,32 @@ article .display-3::before {
 
 
 .discussion {
-  border: 1px solid map_get($grays, "300");
+  // border: 1px solid map_get($grays, "300");
+
+  .inline-discussion-thread-container {
+    
+    .post-header {
+      margin-top: 0;
+      display: block;
+
+    }
+
+    .response-header {
+      margin-top: 0;
+
+    }
+
+    .inline-threads {
+      margin-bottom: 0;
+
+      header {
+        margin-bottom: 0;
+      }
+      .forum-content {
+        padding: 2rem;
+      }
+    }
+  }
 
   .forum-nav-thread-list-wrapper {
 
@@ -9869,17 +9894,32 @@ article .display-3::before {
 
   .forum-nav-browse-submenu {
   }
+  .discussion-post {
+    border:  1px solid map_get($grays, "300");
+    box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
+    padding: 2rem;
 
+    .post-header {
+      margin-top: 0 !important;
+    }
+  }
   .discussion-column {
     flex: 1 1;
     padding: 0 2rem 1rem;
 
-
-    .discussion-post {
-      border: $card-border;
-      box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
-      padding: 2rem;
+    .discussion-article {
+      margin-top: 0 !important;
     }
+
+    // .discussion-post {
+    //   border:  1px solid map_get($grays, "300");
+    //   box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
+    //   padding: 2rem;
+
+    //   .post-header {
+    //     margin-top: 0 !important;
+    //   }
+    // }
 
     .post-header-actions,
     .response-header-actions,
@@ -10073,12 +10113,39 @@ article .display-3::before {
     transition: none;
   }
 
-  .forum-nav-browse-filter,
+  // .forum-nav-browse-filter,
   .forum-nav-refine-bar {
-    background-color: map_get($grays, "100");
-    border: 1px solid map_get($grays, "300");
+
+    i {
+      padding: .5rem;
+    }
+
+    // border: 1px solid map_get($grays, "300");
     padding: .5rem;
 
+    background-color: theme-color("light");
+    color: $black;
+  
+    .forum-nav-filter-main-control,
+    .forum-nav-sort-control {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      border: none;
+      max-width: 100%;
+      background-color:  transparent;
+      position: absolute;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      // background-color: #47792;
+      color: transparent;
+
+      option {
+        color: $black;
+      }
+    }
   }
 
 }
