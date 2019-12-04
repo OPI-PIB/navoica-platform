@@ -2720,7 +2720,7 @@ COURSE_DISCOVERY_MEANINGS = {
         'terms': {b[0]: b[1] for b in ALL_COURSE_ORGANIZER},
     },
     'difficulty': {
-        'name': 'Course Difficulty',
+        'name': 'Poziom trudności',
         'terms': {b[0]: b[1] for b in ALL_COURSE_DIFFICULTY},
     }
 }
