@@ -15,8 +15,7 @@ from datetime import datetime
            <div class="d-flex justify-content-between">
                  % if updates['date'] is not Empty:
                      <%
-                     //update_date = datetime.strptime(updates['date'], '%d/%m/%Y')
-                     update_date = '11/10/2019'
+                     update_date = datetime.strptime(updates['date'], '%m/%d/%Y')
                       %>
                       <h2 id="h2">${_('Update,')}  <span class="localized-datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="shortDate" data-datetime="${update_date}"></span></h2>
                  % endif
