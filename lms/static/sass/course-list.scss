@@ -4247,7 +4247,8 @@ input {
   white-space: nowrap;
 
   &:hover, &:focus {
-    text-decoration: none;
+    text-decoration: none !important;
+    background-color: unset !important;
   }
 }
 
