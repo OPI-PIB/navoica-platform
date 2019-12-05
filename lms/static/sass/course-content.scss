@@ -9744,6 +9744,10 @@ article .display-3::before {
     
     .inline-threads {
       border: 1px solid map_get($grays, "300");
+
+      header {
+        margin-top: 0;
+      }
     }
 
     .post-header {
@@ -9757,7 +9761,7 @@ article .display-3::before {
 
     .inline-thread {
       .forum-content {
-        padding: 2rem;
+        padding: 1rem 1rem 1rem 0rem;
 
         .discussion-article {
           margin-top: 0 !important;
@@ -9767,7 +9771,9 @@ article .display-3::before {
               .thread-content-wrapper {
                 .discussion-post {
                   .post-header {
-                    .post-header-actions {}
+                    .post-header-actions {
+                      float: right;
+                    }
                     .post-header-content {}
                   }
                   .post-body{}
@@ -9854,16 +9860,12 @@ article .display-3::before {
                       }
 
                       .comment-actions-list {
-                        // @include float(right);
-                        // @include right(baseline / 2);
-
+                        float: right;
                         position: absolute;
-                        top: baseline / 2;
+                        right: 10px;
+                        top: 10px;
                       }
                     }
-                    // .wmd-preview-container {
-                    //   border: none;
-                    // }
                   }
                 }
               }
@@ -9879,7 +9881,6 @@ article .display-3::before {
 
     }
     .inline-threads {
-      // background-color: pink;
       margin-bottom: 0;
 
       header {
@@ -10445,4 +10446,3 @@ article .display-3::before {
 .slick-column-name {
   fornt-size: 1rem;
 }
-
