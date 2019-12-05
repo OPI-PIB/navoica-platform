@@ -35,7 +35,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-11-25 10:46+0000\n"
+"POT-Creation-Date: 2019-11-18 14:43+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2019\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
@@ -11445,7 +11445,6 @@ msgstr ""
 #: cms/templates/index.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
-#: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
@@ -15475,10 +15474,6 @@ msgid "Filter Topics"
 msgstr ""
 
 #: lms/templates/discussion/_filter_dropdown.html
-msgid "filter topics"
-msgstr ""
-
-#: lms/templates/discussion/_filter_dropdown.html
 msgid "All Discussions"
 msgstr ""
 
@@ -15488,11 +15483,6 @@ msgstr ""
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "All Posts"
-msgstr ""
-
-#. Translators: This labels a filter menu in forum navigation
-#: lms/templates/discussion/_thread_list_template.html
-msgid "Filter:"
 msgstr ""
 
 #: lms/templates/discussion/_thread_list_template.html
@@ -15516,21 +15506,10 @@ msgstr ""
 msgid "Flagged"
 msgstr ""
 
-#. Translators: This labels a group menu in forum navigation
-#: lms/templates/discussion/_thread_list_template.html
-msgid "Group:"
-msgstr ""
-
 #: lms/templates/discussion/_thread_list_template.html
 msgid "in all groups"
 msgstr ""
 
-#. Translators: This labels a sort menu in forum navigation
-#: lms/templates/discussion/_thread_list_template.html
-msgid "Sort:"
-msgstr ""
-
-#. Translators: This is a menu option for sorting forum threads
 #: lms/templates/discussion/_thread_list_template.html
 msgid "by recent activity"
 msgstr ""
@@ -16346,6 +16325,7 @@ msgid "Profile"
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 msgid "Discover New"
 msgstr ""
 
@@ -19010,7 +18990,7 @@ msgid "Expand All"
 msgstr ""
 
 #: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
-msgid "Update,"
+msgid "Update"
 msgstr ""
 
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
