@@ -45,10 +45,15 @@ def safe_parse_date(date):
     """
     Since this is used solely for ordering purposes, use today's date as a default
     """
+
     try:
-        return datetime.strptime(date, '%B %d, %Y')
+        return datetime.strptime(date, '%d/%m/%Y')
     except ValueError:  # occurs for ill-formatted date values
-        return datetime.today()
+        try:
+            return datetime.strptime(date, '%B %d, %Y') #old updates date string format
+        except ValueError:
+            return datetime.today()
+
 
 class CourseUpdatesView(CourseTabView):
     """
