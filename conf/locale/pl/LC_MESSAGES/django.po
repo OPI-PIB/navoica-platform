@@ -7,8 +7,8 @@
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 # krystianlygas <krystian.lygas@gmail.com>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
@@ -27,10 +27,10 @@
 # EdX Team <info@edx.org>, 2019.
 #
 # Translators:
-# krystianlygas <krystian.lygas@gmail.com>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
+# krystianlygas <krystian.lygas@gmail.com>, 2019
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -3531,7 +3531,7 @@ msgstr "Poziom trudności"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Specify the difficulty of your course."
-msgstr ""
+msgstr "Określ poziom trudności swojego kursu. "
 
 #: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "Course Organizer"
@@ -4702,6 +4702,7 @@ msgstr ""
 msgid ""
 "A list summarizing what students should look forward to in this section."
 msgstr ""
+"Spis zagadnień, których studenci powinni się spodziewać w tej części kursu. "
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 #, python-brace-format
@@ -6287,6 +6288,9 @@ msgid ""
 "{time_remaining_string} from now. You will also be able to view your "
 "certificates on your {learner_profile_link}."
 msgstr ""
+"Jeśli otrzymałeś zaświadczenie o ukończeniu kursu będziesz mieć do niego "
+"dostęp przez {time_remaining_string} od teraz. Możesz przeglądać swoje "
+"zaświadczenia na {learner_profile_link}."
 
 #: lms/djangoapps/courseware/date_summary.py
 #: openedx/features/learner_profile/templates/learner_profile/learner_profile.html
@@ -8297,6 +8301,8 @@ msgstr ""
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid "This unit's access settings refer to deleted or invalid groups."
 msgstr ""
+"Ustawienia dostępu do tej jednostki odwołują się do usuniętych lub "
+"nieprawidłowych grup."
 
 #: lms/djangoapps/lms_xblock/mixin.py
 msgid ""
@@ -11025,7 +11031,7 @@ msgstr "Zmiana języka na domyślny"
 
 #: openedx/core/djangoapps/debug/views.py
 msgid "This is a test message"
-msgstr ""
+msgstr "To jest wiadomość testowa. "
 
 #: openedx/core/djangoapps/debug/views.py
 msgid "This is a success message"
@@ -11407,7 +11413,7 @@ msgstr ""
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/subject.txt
 #, python-format
 msgid "Upgrade to earn a verified certificate on %(platform_name)s"
-msgstr ""
+msgstr "Uzyskaj zaświadczenie o ukończeniu kursu na %(platform_name)s"
 
 #: openedx/core/djangoapps/schedules/templates/schedules/edx_ace/upgradereminder/email/subject.txt
 #, python-format
@@ -11430,7 +11436,7 @@ msgstr ""
 
 #: openedx/core/djangoapps/theming/views.py
 msgid "Site theme reverted to the default"
-msgstr ""
+msgstr "Motyw witryny został przywrócony do ustawień domyślnych"
 
 #: openedx/core/djangoapps/theming/views.py
 #: openedx/core/djangoapps/theming/templates/theming/theming-admin-fragment.html
@@ -11681,6 +11687,10 @@ msgid ""
 "                   and agree to our {privacy_policy_link_start}Privacy "
 "Policy{privacy_policy_link_end}."
 msgstr ""
+"Tworząc konto na {platform_name}, zgadzasz się na "
+"{platform_name}{terms_of_service_link_start}{terms_of_service}{terms_of_service_link_end}"
+" i wyrażasz zgodę na {privacy_policy_link_start}Polityka "
+"prywatności{privacy_policy_link_end}."
 
 #. Translators: "Terms of service" is a legal document users must agree to
 #. in order to register a new account.
@@ -11917,7 +11927,7 @@ msgstr ""
 #: openedx/features/enterprise_support/api.py
 #, python-brace-format
 msgid "Enrollment in {course_title} was not complete."
-msgstr ""
+msgstr "Rejestracja na {course_title} nie została ukończona."
 
 #: openedx/features/enterprise_support/api.py
 #, python-brace-format
@@ -21064,8 +21074,8 @@ msgid "Expand All"
 msgstr "Rozwiń wszystko"
 
 #: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
-msgid "Update"
-msgstr ""
+msgid "Update,"
+msgstr "Aktualność, "
 
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
 msgid "Prerequisite: "
