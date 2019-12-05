@@ -606,7 +606,8 @@
 
   .forum-nav {
     align-items: stretch;
-    background: map_get($grays, "100");
+    // background-color: map_get($grays, "100");
+    background-color: #f8f9fa;
     border: 0;
     display: flex;
     flex: 0 0 580px;

@@ -9739,29 +9739,151 @@ article .display-3::before {
 
 
 .discussion {
-  // border: 1px solid map_get($grays, "300");
-
+  
   .inline-discussion-thread-container {
     
+    .inline-threads {
+      border: 1px solid map_get($grays, "300");
+    }
+
     .post-header {
       margin-top: 0;
       display: block;
-
     }
 
     .response-header {
       margin-top: 0;
-
     }
 
+    .inline-thread {
+      .forum-content {
+        padding: 2rem;
+
+        .discussion-article {
+          margin-top: 0 !important;
+
+          .thread-wrapper {
+            .thread-main-wrapper {
+              .thread-content-wrapper {
+                .discussion-post {
+                  .post-header {
+                    .post-header-actions {}
+                    .post-header-content {}
+                  }
+                  .post-body{}
+                  .post-context{}
+                }
+              }
+              .post-extended-content{}
+            }
+            .post-extended-content.thread-responses-wrapper {
+              display: block;
+
+              .response-btn-count-wrapper {
+                margin: 20px 0;
+                .add-response {
+                  display: block;
+                  .add-response-button {
+                    display: inline-block;
+                  }
+                }
+                .response-count {}
+              }
+              .responses {
+                display: block !important;
+                // margin: 0;
+                // padding: 0;
+
+                .forum-response {
+                  border: $card-border;
+                  box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
+                  list-style: none;
+                  margin: 2rem;
+                  padding: 2rem;
+
+                  &::before {
+                    background: darkcyan;
+                    content: "";
+                    display: block;
+                    height: 4px;
+                    margin-bottom: 8px;
+                    width: 80px;
+                  }
+                  .discussion-response {
+                    padding: 0;
+                  }
+                }
+
+                .comments {
+                  display: block !important;
+                  background-color: map_get($grays, "100");
+                  border: 1px solid map_get($grays, "200");
+                  margin: 0 0 -1px;
+                  padding: 1rem !important;
+                  box-shadow: none;
+
+                  > li {
+                    border-top: 1px solid map_get($grays, "300");
+                    list-style: none;
+                    margin: 1rem 0 0;
+                    // padding: 1rem 0 0;
+
+                    &:first-child {
+                      border: 0;
+                      margin: 0;
+                      padding: 0;
+                    }
+
+                    .discussion-comment,
+                    .wmd-preview-container {
+                      font-size: .875em;
+                      line-height: 1.8571;
+                    }
+                    .discussion-comment {
+                      .response-body {
+                        @extend %t-copy-sub2;
+
+                        font-size: 1rem;
+                        display: inline-block;
+                        margin-bottom: (baseline/2);
+                        width: flex-grid(10,12);
+
+                        p + p {
+                          margin-top: (baseline/2);
+                        }
+                      }
+
+                      .comment-actions-list {
+                        // @include float(right);
+                        // @include right(baseline / 2);
+
+                        position: absolute;
+                        top: baseline / 2;
+                      }
+                    }
+                    // .wmd-preview-container {
+                    //   border: none;
+                    // }
+                  }
+                }
+              }
+              //todo add rest of the classes and fix formating of the responses
+              // margin and padding
+              // time ago
+              // menu position
+              // how reporter and another flags works
+            }
+          }
+        }
+      }
+
+    }
     .inline-threads {
+      // background-color: pink;
       margin-bottom: 0;
 
       header {
         margin-bottom: 0;
-      }
-      .forum-content {
-        padding: 2rem;
       }
     }
   }
@@ -9910,10 +10032,6 @@ article .display-3::before {
     flex: 1 1;
     padding: 0 2rem 1rem;
 
-    .discussion-article {
-      margin-top: 0 !important;
-    }
-
     // .discussion-post {
     //   border:  1px solid map_get($grays, "300");
     //   box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
@@ -9954,56 +10072,6 @@ article .display-3::before {
 
     .response-count {
       font-weight: $font-weight-semibold;
-    }
-
-    .responses {
-      margin: 0;
-      padding: 0;
-    }
-
-    .forum-response {
-      border: $card-border;
-      box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
-      list-style: none;
-      margin: 2rem 0;
-      padding: 2rem;
-
-      &::before {
-        background: darkcyan;
-        content: "";
-        display: block;
-        height: 4px;
-        margin-bottom: 8px;
-        width: 80px;
-      }
-    }
-
-    .comments {
-      background-color: map_get($grays, "100");
-      border: 1px solid map_get($grays, "200");
-      margin: 0 0 -1px;
-      padding: 1rem;
-
-      > li {
-        border-top: 1px solid map_get($grays, "300");
-        list-style: none;
-        margin: 1rem 0 0;
-        padding: 1rem 0 0;
-
-        &:first-child {
-          border: 0;
-          margin: 0;
-          padding: 0;
-        }
-
-        .discussion-comment,
-        .wmd-preview-container {
-          font-size: .875em;
-          line-height: 1.8571;
-        }
-
-      }
-
     }
 
     .wmd-preview-label {
