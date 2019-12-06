@@ -907,6 +907,11 @@
     }
   }
 
+  .wmd-preview-label {
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+  }
+
   .post-labels {
     color: darkcyan;
     display: flex;
@@ -1024,9 +1029,16 @@
 
 .discussion-body {
 
+  .field-label {
+    line-height: unset;
+    .input-checkbox {
+      margin-right: 0;
+    }
+  }
+
   form {
-    background-color: map_get($grays, "100");
-    // border: 1px solid map_get($grays, "200");
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
     margin: 0;
     padding: 1rem;
 
@@ -1064,6 +1076,7 @@
 
     input + .field-input-label {
       font-size: 14px;
+      color: unset !important;
       
       .form-control {
         height: 1rem;
@@ -1078,6 +1091,34 @@
 
   }
 
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
 }
 
 .forum-nav {

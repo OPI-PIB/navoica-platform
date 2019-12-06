@@ -1,5 +1,4 @@
 <form class="forum-new-post-form">
-    <h<%- startHeader %> class="thread-title"><%- gettext("Add a Post") %></h<%- startHeader %>>
 
     <% if (mode === 'inline') { %>
         <button class="btn btn-outline-primary btn-default add-post-cancel">
@@ -67,8 +66,8 @@
         </div>
         <% } %>
     </div>
-    <div>
-        <button type="submit" class="btn btn-primary submit"><%- gettext('Submit') %></button>
-        <button type="button" class="btn btn-outline-primary cancel"><%- gettext('Cancel') %></button>
+    <div class="action">
+        <button type="submit" class="btn btn-sm btn-primary submit"><%- gettext('Submit') %></button>
+        <button type="button" class="btn btn-sm btn-outline-primary cancel"><%- gettext('Cancel') %></button>
     </div>
 </form>
