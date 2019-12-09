@@ -194,8 +194,9 @@
   @include float(right);
   @include margin-right($baseline / 2);
 
-  color: $forum-color-response-count;
+  //color: $forum-color-response-count;
   font-size: $forum-base-font-size;
+  margin-top: ($baseline / 2);
 }
 
 .response-pagination {

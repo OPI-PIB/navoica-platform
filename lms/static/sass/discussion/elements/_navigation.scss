@@ -1031,7 +1031,11 @@
 
   .field-label {
     line-height: unset;
+    color: #212529;
     .input-checkbox {
+      margin-right: 0;
+    }
+    .input-radio {
       margin-right: 0;
     }
   }
@@ -1061,6 +1065,7 @@
       font-weight: $font-weight-semibold;
       margin: 0;
       padding: 0 0 .25rem;
+      color: #212529;
     }
 
     .field-help {
