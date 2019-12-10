@@ -103,7 +103,8 @@ function($, date, RegionalPl,  moment, TriggerChangeEventOnEnter) {
 
     var parseDateFromString = function(stringDate) {
         if (stringDate && typeof stringDate === 'string') {
-            return new Date.parse(stringDate);
+            var parts = stringDate.split('/');
+            return new Date(parts[2], parts[1]-1, parts[0]);
         } else {
             return stringDate;
         }

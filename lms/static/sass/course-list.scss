@@ -4247,7 +4247,8 @@ input {
   white-space: nowrap;
 
   &:hover, &:focus {
-    text-decoration: none;
+    text-decoration: none !important;
+    background-color: unset !important;
   }
 }
 
@@ -13150,8 +13151,4 @@ span.complete-checkmark.fa.fa-check {
   &.active-section {
     display: block;
   }
-}
-
-#header-course,#header{
-margin: 0
 }
