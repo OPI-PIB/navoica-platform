@@ -40,7 +40,10 @@ from openedx.features.course_experience import course_home_page_title
                         <article class="updates-article">
                             % if not update.get("is_error"):
                                 <%
+                                try:
                                     update_date = datetime.strptime(update.get("date"), '%d/%m/%Y')
+                                except ValueError:
+                                    update_date = datetime.strptime(update.get("date"), '%B %d, %Y')
                                 %>
                                 <div class="localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="shortDate" data-datetime="${update_date}"></div>
                             % endif
