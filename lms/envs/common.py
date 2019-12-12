@@ -2647,7 +2647,7 @@ ALL_COURSE_DIFFICULTY = [
     [u"hard", u"zaawansowany"]
 ]
 
-ALL_COURSE_ORGANIZER = [
+ALL_COURSE_ORGANIZER = sorted([
     [u"1", u"Fundacja Młodej Nauki"],
     [u"2", u"Politechnika Warszawska"],
     [u"3", u"Politechnika Łódzka"],
@@ -2687,8 +2687,10 @@ ALL_COURSE_ORGANIZER = [
     [u"37", u"WSPiA Rzeszowska Szkoła Wyższa"],
     [u"38", u"Wyższa Szkoła Techniczna w Katowicach"],
     [u"39", u"Zachodniopomorska Szkoła Biznesu w Szczecinie"],
-    [u"40", u"Zachodniopomorski Uniwersytet Technologiczny w Szczecinie"]
-]
+    [u"40", u"Zachodniopomorski Uniwersytet Technologiczny w Szczecinie"],
+    [u"41", u"Centrum Nauki Kopernik"]
+], key=lambda x:x[1], reverse=False)
+
 
 ALL_COURSE_CATEGORY = [
     [u"business", u"Nauki biznesowe"],
