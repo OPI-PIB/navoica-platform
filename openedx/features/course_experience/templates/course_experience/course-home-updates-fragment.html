@@ -15,9 +15,12 @@ from datetime import datetime
            <div class="d-flex justify-content-between">
                  % if updates['date'] is not Empty:
                      <%
-                     update_date = datetime.strptime(updates['date'], '%d/%m/%Y')
+                     try:
+                        update_date = datetime.strptime(updates['date'], '%d/%m/%Y')
+                     except ValueError:
+                        update_date = datetime.strptime(updates['date'], '%B %d, %Y')
                       %>
-                      <h2 id="h2">${_('Update,')}  <span class="localized-datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="shortDate" data-datetime="${update_date}"></span></h2>
+                         <h2 id="h2"> ${_('Update,')} <span class="localized-datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="shortDate" data-datetime="${update_date}"></span></h2>
                  % endif
                 <div class="dismiss-message">
                     <button class="btn btn-sm btn-outline-primary red">

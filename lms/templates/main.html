@@ -59,6 +59,14 @@ from pipeline_mako import render_require_js_path_overrides
       </script>
   % endif
 
+<script>
+    var organizer_list = {
+    % for organizer in settings.ALL_COURSE_ORGANIZER:
+     "${organizer[0]}": "${organizer[1]}",
+    % endfor
+    }
+</script>
+
   <%
     jsi18n_path = "js/i18n/{language}/djangojs.js".format(language=LANGUAGE_CODE)
     ie11_fix_path = "js/ie11_find_array.js"

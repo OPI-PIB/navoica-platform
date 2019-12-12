@@ -266,7 +266,7 @@ FEATURES = {
     # courses listed in the announcement dates order - this is default Open edX behavior.
     # Set to True to change the course sorting behavior by their start dates, latest first.
     'ENABLE_COURSE_SORTING_BY_START_DATE': False,
-    
+
     'ENABLE_MAIN_PAGE_PROMOTION': True,
 
     # Expose Mobile REST API. Note that if you use this, you must also set
@@ -2647,7 +2647,7 @@ ALL_COURSE_DIFFICULTY = [
     [u"hard", u"zaawansowany"]
 ]
 
-ALL_COURSE_ORGANIZER = [
+ALL_COURSE_ORGANIZER = sorted([
     [u"1", u"Fundacja Młodej Nauki"],
     [u"2", u"Politechnika Warszawska"],
     [u"3", u"Politechnika Łódzka"],
@@ -2687,8 +2687,10 @@ ALL_COURSE_ORGANIZER = [
     [u"37", u"WSPiA Rzeszowska Szkoła Wyższa"],
     [u"38", u"Wyższa Szkoła Techniczna w Katowicach"],
     [u"39", u"Zachodniopomorska Szkoła Biznesu w Szczecinie"],
-    [u"40", u"Zachodniopomorski Uniwersytet Technologiczny w Szczecinie"]
-]
+    [u"40", u"Zachodniopomorski Uniwersytet Technologiczny w Szczecinie"],
+    [u"41", u"Centrum Nauki Kopernik"]
+], key=lambda x:x[1], reverse=False)
+
 
 ALL_COURSE_CATEGORY = [
     [u"business", u"Nauki biznesowe"],
@@ -2712,15 +2714,15 @@ COURSE_DISCOVERY_MEANINGS = {
         },
     },
     'course_category': {
-        'name': 'Kategoria',
+        'name': u'Kategoria',
         'terms': {b[0]: b[1] for b in ALL_COURSE_CATEGORY},
     },
     'organizer': {
-        'name': 'Organizator',
+        'name': u'Organizator',
         'terms': {b[0]: b[1] for b in ALL_COURSE_ORGANIZER},
     },
     'difficulty': {
-        'name': 'Course Difficulty',
+        'name': u'Poziom trudności',
         'terms': {b[0]: b[1] for b in ALL_COURSE_DIFFICULTY},
     }
 }
