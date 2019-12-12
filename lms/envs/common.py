@@ -2692,12 +2692,19 @@ ALL_COURSE_ORGANIZER = sorted([
 ], key=lambda x:x[1], reverse=False)
 
 
-ALL_COURSE_CATEGORY = [
-    [u"business", u"Nauki biznesowe"],
+ALL_COURSE_CATEGORY = sorted([
+    [u"language", u"Języki obce"],
     [u"human", u"Nauki humanistyczne"],
     [u"computer", u"Nauki komputerowe"],
-    [u"technical", u"Nauki techniczne"]
-]
+    [u"technical", u"Nauki techniczne"],
+    ["agricultural", u"Nauki rolnicze"],
+    ["social", u"Nauki społeczne"],
+    ["natural", u"Nauki ścisłe i przyrodnicze"],
+    ["art", u"Sztuka"],
+    ["management", u"Zarządzanie i ekonomia"],
+    ["medicine", u"Zdrowie i nauki medyczne"],
+    [u"business", u"Nauki biznesowe"],
+], key=lambda x:x[1], reverse=False)
 
 ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % week, week)]
                         for week in range(1, 50)]
