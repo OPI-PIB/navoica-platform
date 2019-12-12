@@ -5,8 +5,8 @@
 # EdX Team <info@edx.org>, 2019.
 #
 # Translators:
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  djangojs-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
@@ -15,8 +15,8 @@
 # EdX Team <info@edx.org>, 2019.
 #
 # Translators:
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 #
 # #-#-#-#-#  underscore.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -81,6 +81,7 @@ msgstr "Studio ma problem z zapisaniem twojej pracy"
 #: cms/static/js/views/list_item_editor.js
 #: cms/static/js/views/modals/edit_xblock.js cms/static/js/views/tabs.js
 #: cms/static/js/views/utils/xblock_utils.js
+#: common/static/bundles/js/pages/textbooks.b40cb34e1b234c0824d0.js
 #: common/static/bundles/js/pages/textbooks.js lms/static/js/ccx/schedule.js
 #: lms/static/js/views/fields.js
 msgid "Saving"
@@ -141,7 +142,9 @@ msgstr "Usuwanie"
 #: cms/static/js/views/show_textbook.js cms/static/js/views/tabs.js
 #: cms/static/js/views/validation.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: common/static/bundles/js/pages/login.js
 #: common/static/bundles/js/pages/textbooks.js
@@ -236,31 +239,37 @@ msgid "There was an error with the upload"
 msgstr "Wystąpił błąd przesyłania pliku"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.e1c3189b806d266c191f.js
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Organization:"
 msgstr "Organizacja:"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.e1c3189b806d266c191f.js
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Course Number:"
 msgstr "Numer kursu:"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.e1c3189b806d266c191f.js
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Course Run:"
 msgstr "Edycja kursu:"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.e1c3189b806d266c191f.js
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "(Read-only)"
 msgstr "(tylko do odczytu)"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.e1c3189b806d266c191f.js
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Re-run Course"
 msgstr "Wznów kurs"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.e1c3189b806d266c191f.js
 #: common/static/bundles/CourseOrLibraryListing.js
 #: cms/templates/js/show-textbook.underscore
 msgid "View Live"
@@ -285,7 +294,9 @@ msgid "asset_path is required"
 msgstr "Wymagany jest asset_path"
 
 #: cms/static/js/models/course.js cms/static/js/models/section.js
+#: common/static/bundles/js/pages/login.9ececbfbacf746642f6a.js
 #: common/static/bundles/js/pages/login.js
+#: common/static/bundles/js/pages/textbooks.b40cb34e1b234c0824d0.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "You must specify a name"
 msgstr "Musisz określić nazwę"
@@ -408,7 +419,9 @@ msgid "Unknown"
 msgstr "Nieznany"
 
 #: cms/static/js/views/manage_users_and_roles.js
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Are you sure?"
@@ -2215,256 +2228,332 @@ msgstr "Włącz transkrypcję"
 msgid "Turn off transcripts"
 msgstr "Wyłącz transkrypcję"
 
+#: common/static/bundles/CourseGoals.c826208c0ec7cd42046c.js
 #: common/static/bundles/CourseGoals.js
 msgid "Thank you for setting your course goal to "
-msgstr ""
+msgstr "Dziękujemy za ustalenie celu kursu: "
 
+#: common/static/bundles/CourseGoals.c826208c0ec7cd42046c.js
 #: common/static/bundles/CourseGoals.js
 msgid ""
 "There was an error in setting your goal, please reload the page and try "
 "again."
 msgstr ""
 
+#: common/static/bundles/CourseHome.ae9e7062098e85a8a9ae.js
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "You have successfully updated your goal."
-msgstr ""
+msgstr "Twój cel został pomyślnie zaktualizowany."
 
+#: common/static/bundles/CourseHome.ae9e7062098e85a8a9ae.js
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "There was an error updating your goal."
-msgstr ""
+msgstr "Wystąpił błąd podczas aktualizacji Twojego celu. "
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "(Self-paced) Starts {start}"
-msgstr ""
+msgstr "(W tempie właśnym) rozpocznie się {start}"
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "(Self-paced) Started {start}"
-msgstr ""
+msgstr "(W tempie własnym) rozpoczął się {start}"
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "(Self-paced) Ends {end}"
-msgstr ""
+msgstr "(W tempie własnym) zakończy się {end}"
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "(Self-paced) Ended {end}"
-msgstr ""
+msgstr "(W tempie własnym) zakończył się {end}"
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "Starts {start}"
-msgstr ""
+msgstr "Rozpocznie się {start}"
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "Started {start}"
-msgstr ""
+msgstr "Rozpoczął się {start}"
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "Ends {end}"
-msgstr ""
+msgstr "Zakończy się {end}"
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "You must select a session to access the course."
-msgstr ""
+msgstr "Musisz wybrać sesję, aby uzyskać dostęp do kursu."
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "There was an error. Please reload the page and try again."
-msgstr ""
+msgstr "Wystąpił błąd. Odśwież stronę i spróbuj ponownie."
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
-#: lms/templates/learner_dashboard/course_entitlement.underscore
 msgid "Change Session"
-msgstr ""
+msgstr "Zmień sesję"
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
-#: lms/templates/learner_dashboard/course_entitlement.underscore
 msgid "Select Session"
-msgstr ""
+msgstr "Wybierz sesję"
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "Leave Current Session"
-msgstr ""
+msgstr "Opuść bieżącą sesję"
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.js
-#: lms/static/js/learner_dashboard/views/course_entitlement_view.js
-msgid "Are you sure you want to select this session?"
-msgstr ""
-
-#: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "Are you sure you want to change to a different session?"
 msgstr ""
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
+#: common/static/bundles/ProgramDetailsFactory.js
+#: lms/static/js/learner_dashboard/views/course_entitlement_view.js
+msgid "Are you sure you want to select this session?"
+msgstr "Czy na pewno chcesz wybrać tę sesję?"
+
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
+#: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "Any course progress or grades from your current session will be lost."
 msgstr ""
+"Po opuszczeniu tej strony dane o poczynionym postępie w kursie i otrzymanych"
+" ocenach zostaną utracone."
 
+#: common/static/bundles/EntitlementFactory.2ac251e88cb9fa68cbbc.js
 #: common/static/bundles/EntitlementFactory.js
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "Are you sure that you want to leave this session?"
-msgstr ""
+msgstr "Czy na pewno chcesz opuścić tę stronę? "
 
+#: common/static/bundles/EntitlementUnenrollmentFactory.eb19750a7deda4895090.js
 #: common/static/bundles/EntitlementUnenrollmentFactory.js
 #: lms/static/js/learner_dashboard/views/entitlement_unenrollment_view.js
 msgid ""
 "Your unenrollment request could not be processed. Please try again later."
 msgstr ""
+"Próba wypisania się z kursu się nie powiodła. Spróbuj ponownie później."
 
+#: common/static/bundles/EntitlementUnenrollmentFactory.eb19750a7deda4895090.js
 #: common/static/bundles/EntitlementUnenrollmentFactory.js
 #: lms/static/js/learner_dashboard/views/entitlement_unenrollment_view.js
 msgid ""
 "Are you sure you want to unenroll from {courseName} ({courseNumber})? You "
 "will be refunded the amount you paid."
 msgstr ""
+"Czy na pewno chcesz się wypisać z kursu {courseName} ({courseNumber})? "
+"Otrzymasz zwrot poniesionych kosztów."
 
+#: common/static/bundles/PasswordResetConfirmation.81dbe7ae8d94e8a364d9.js
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Reset Your Password"
 msgstr "Zresetuj swoje hasło"
 
+#: common/static/bundles/PasswordResetConfirmation.81dbe7ae8d94e8a364d9.js
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Enter and confirm your new password."
 msgstr "Wpisz i potwierdź nowe hasło"
 
+#: common/static/bundles/PasswordResetConfirmation.81dbe7ae8d94e8a364d9.js
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "New Password"
 msgstr "Nowe hasło"
 
+#: common/static/bundles/PasswordResetConfirmation.81dbe7ae8d94e8a364d9.js
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Confirm Password"
 msgstr "Potwierdź hasło"
 
+#: common/static/bundles/PasswordResetConfirmation.81dbe7ae8d94e8a364d9.js
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Passwords do not match."
-msgstr ""
+msgstr "Podane hasła nie są identyczne. "
 
+#: common/static/bundles/PasswordResetConfirmation.81dbe7ae8d94e8a364d9.js
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Reset My Password"
 msgstr "Resetuj moje hasło"
 
+#: common/static/bundles/PasswordResetConfirmation.81dbe7ae8d94e8a364d9.js
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetInput.jsx
 msgid "Error: "
-msgstr ""
+msgstr "Błąd:"
 
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/program_details_sidebar_view.js
 msgid "{type} Progress"
 msgstr "{type} - postęp"
 
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/program_details_sidebar_view.js
 msgid "Earned Certificates"
 msgstr "Uzyskane certyfikaty"
 
+#: common/static/bundles/ProgramDetailsFactory.8f15e9f2944b9090de94.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/program_details_view.js
 msgid "Enrolled"
 msgstr "Zapisany"
 
+#: common/static/bundles/ReactRenderer.e98c1970aca10e9bb48c.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
+msgid "Component "
+msgstr ""
+
+#: common/static/bundles/ReactRenderer.e98c1970aca10e9bb48c.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
+msgid "Invalid props passed to component "
+msgstr ""
+
+#: common/static/bundles/ReactRenderer.e98c1970aca10e9bb48c.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
+msgid "Expected 1 element match for selector \""
+msgstr ""
+
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/errors_list.jsx
 msgid "Please fix the following errors:"
 msgstr "Napraw poniższe błędy"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "Files that you upload must be smaller than 5MB in size."
-msgstr ""
+msgstr "Przesyłane pliki muszą być mniejsze niż 5MB."
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid ""
 "Files that you upload must be PDFs or image files in .gif, .jpg, .jpeg, or "
 ".png format."
 msgstr ""
+"Przesyłane pliki muszą być plikami PDF lub plikami obrazów w formacie .gif, "
+".jpg, .jpeg lub .png."
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 #: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Something went wrong. Please try again later."
 msgstr "Coś poszło nie tak. Spróbuj ponownie później."
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "Add Attachment"
-msgstr ""
+msgstr "Dodaj załącznik"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "(Optional)"
-msgstr ""
+msgstr "(Opcjonalny)"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "Remove file"
 msgstr "Usuń plik"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "Course Name"
 msgstr "Nazwa kursu"
 
-#: common/static/bundles/SingleSupportForm.js
-#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
-msgid "Not specific to a course"
-msgstr "Nieokreślony kurs"
-
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 msgid "What can we help you with?"
 msgstr "Z czym możemy Ci pomóc?"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Subject"
 msgstr "Temat"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "Details"
 msgstr "Opis"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "The more you tell us, the more quickly and helpfully we can respond!"
 msgstr "Im więcej nam powiesz, tym szybciej i lepiej możemy odpowiedzieć!"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 #: common/static/common/templates/discussion/new-post.underscore
@@ -2474,26 +2563,31 @@ msgstr "Im więcej nam powiesz, tym szybciej i lepiej możemy odpowiedzieć!"
 msgid "Submit"
 msgstr "Prześlij"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 msgid "Sign in to so we can help you better."
 msgstr "Zaloguj się, abyśmy mogli Ci lepiej pomóc"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/login.underscore
 msgid "Sign in"
 msgstr "Zaloguj się"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 msgid "Create an account"
 msgstr "Utwórz konto"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 msgid "If you are unable to access your account contact us via email using "
 msgstr ""
 "Jeśli nie możesz uzyskać dostępu do swojego konta, skontaktuj się z nami za "
 "pośrednictwem poczty e-mail za pomocą "
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid ""
@@ -2503,52 +2597,70 @@ msgstr ""
 "Wybierz kurs lub wybierz \"Nieokreślony\" dla twojego zapytania dotyczącego "
 "wsparcia."
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Enter a subject for your support request."
 msgstr "Wprowadź temat dla prośby o wsparcie."
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Enter some details for your support request."
 msgstr "Wprowadź szczegóły dotyczące prośby o wsparcie."
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 #: lms/djangoapps/support/static/support/jsx/success.jsx
 msgid "Contact Us"
 msgstr "Kontakt"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Find answers to the top questions asked by learners."
 msgstr "Znajdź odpowiedzi na najważniejsze pytania zadawane przez uczniów."
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 msgid "Search the Help Center"
 msgstr "Przeszukaj centrum pomocy"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/success.jsx
 msgid "Go to my Dashboard"
-msgstr ""
+msgstr "Przejdź do mojego pulpitu"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 msgid "Go to "
-msgstr ""
+msgstr "Idź do"
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/success.jsx
 msgid ""
 "Thank you for submitting a request! We will contact you within 24 hours."
 msgstr ""
+"Dziękujemy za przesłanie zapytania! Skontaktujemy się z Tobą najszybciej jak"
+" to możliwe. "
 
+#: common/static/bundles/SingleSupportForm.6d8bf24858b5c031dea7.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/upload_progress.jsx
 msgid "Cancel upload"
-msgstr ""
+msgstr "Anuluj przesyłanie"
 
+#: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
+msgid "Not specific to a course"
+msgstr "Nieokreślony kurs"
+
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
@@ -2558,14 +2670,22 @@ msgid ""
 "these for your records before proceeding with deletion, follow the "
 "instructions for {htmlStart}printing or downloading a certificate{htmlEnd}."
 msgstr ""
+"Możesz także utracić dostęp do otrzymanych zaświadczeń i innych dokumentów "
+"takich jak zaświadczenia MicroMasters. Jeśli chcesz zachować kopie tych "
+"dokumentów zanim przejdziesz dalej, postępuj zgodnie z instrukcją, aby "
+"wydrukować {htmlStart} lub pobrać zaświadczenia {htmlEnd}."
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid "We’re sorry to see you go!"
-msgstr ""
+msgstr "Przykro nam, że odchodzisz!"
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid ""
@@ -2574,7 +2694,9 @@ msgid ""
 "that is deleted."
 msgstr ""
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid ""
@@ -2585,46 +2707,62 @@ msgid ""
 " Medical School."
 msgstr ""
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Delete My Account"
-msgstr ""
+msgstr "Usuń moje konto"
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Password is incorrect"
-msgstr ""
+msgstr "Nieprawidłowe hasło"
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Unable to delete account"
-msgstr ""
+msgstr "Nie udało się usunąć konta"
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Please re-enter your password."
-msgstr ""
+msgstr "Ponownie wpisz swoje hasło. "
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "Sorry, there was an error trying to process your request. Please try again "
 "later."
 msgstr ""
+"Przepraszamy, wystąpił błąd w trakcie przetwarzania twojego żądania. Spróbuj"
+" ponownie później."
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "A Password is required"
-msgstr ""
+msgstr "Hasło jest wymagane. "
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
@@ -2632,8 +2770,13 @@ msgid ""
 " data is permanent and cannot be undone. EdX will not be able to recover "
 "your account or the data that is deleted."
 msgstr ""
+"Wybrałeś/aś opcję „Usuń moje konto”. Usunięcie konta i danych osobowych jest"
+" trwałe i nie można go cofnąć. Nie będziemy w stanie odzyskać twojego konta "
+"ani usuniętych danych."
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
@@ -2644,27 +2787,35 @@ msgid ""
 "Harvard Medical School."
 msgstr ""
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "If you still wish to continue and delete your account, please enter your "
 "account password:"
-msgstr ""
+msgstr "Jeśli chcesz kontynuować i usunąć konto, wprowadź swoje hasło:"
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Yes, Delete"
-msgstr ""
+msgstr "Tak, usuń"
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "We're sorry to see you go! Your account will be deleted shortly."
-msgstr ""
+msgstr "Przykro nam, że odchodzisz! Twoje konto zostanie wkrótce usunięte."
 
+#: common/static/bundles/StudentAccountDeletion.b7913e701c90b26f69c4.js
 #: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.76b2eb623055b5614912.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
@@ -2672,13 +2823,38 @@ msgid ""
 "to fully process through our system. If you want to opt-out of emails before"
 " then, please unsubscribe from the footer of any email."
 msgstr ""
+"Usunięcie konta, w tym usunięcie z newslettera, może potrwać kilka tygodni "
+"zanim zostanie w pełni przetworzone przez nasz system. Jeśli chcesz "
+"wcześniej zrezygnować z otrzymywania wiadomości możesz anulować subskrypcję "
+"z poziomu stopki wysłanych od nas e-maili."
 
+#: common/static/bundles/UnenrollmentFactory.a4d82d886e2b05b0cf2b.js
 #: common/static/bundles/UnenrollmentFactory.js
 #: lms/static/js/dashboard/legacy.js
 #: lms/static/js/learner_dashboard/views/unenroll_view.js
 msgid ""
 "Unable to determine whether we should give you a refund because of System "
 "Error. Please try again later."
+msgstr ""
+"Nie możemy ustalić, czy powinniśmy otrzymać zwrot pieniężny z powodu błędu "
+"systemu. Spróbuj ponownie później."
+
+#: common/static/bundles/commons.9ccb6e3f2d912d665bcf.js
+msgid "The "
+msgstr ""
+
+#: common/static/bundles/commons.9ccb6e3f2d912d665bcf.js
+msgid "Invalid "
+msgstr ""
+
+#: common/static/bundles/commons.9ccb6e3f2d912d665bcf.js
+msgid "Property `"
+msgstr ""
+
+#: common/static/bundles/commons.9ccb6e3f2d912d665bcf.js
+msgid ""
+"\n"
+"["
 msgstr ""
 
 #: common/static/bundles/js/pages/login.js
@@ -2981,34 +3157,6 @@ msgstr "%(field)s może składać się z maksymalnie %(count)d znaków."
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "Please enter your %(field)s."
 msgstr "Proszę podać %(field)s."
-
-#: common/static/common/js/vendor/common.min.js
-msgid "delete"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "has"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "get"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "Wrong offset!"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "Wrong length!"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "Promise-chain cycle"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "Promise can't be resolved itself"
-msgstr ""
 
 #: common/static/js/capa/drag_and_drop/base_image.js
 msgid "Drop target image"
@@ -4041,6 +4189,7 @@ msgid ""
 "Are you sure you want to unenroll from the purchased course %(courseName)s "
 "(%(courseNumber)s)?"
 msgstr ""
+"Czy na pewno chcesz się wypisać z kursu %(courseName)s (%(courseNumber)s)?"
 
 #: lms/static/js/dashboard/legacy.js
 msgid ""
@@ -4053,6 +4202,8 @@ msgid ""
 "Are you sure you want to unenroll from the verified %(certNameLong)s  track "
 "of %(courseName)s  (%(courseNumber)s)?"
 msgstr ""
+"Czy na pewno chcesz się wypisać z %(certNameLong)s  ze ścieżki "
+"%(courseName)s  (%(courseNumber)s)?"
 
 #: lms/static/js/dashboard/legacy.js
 msgid ""
@@ -4065,6 +4216,8 @@ msgid ""
 "The refund deadline for this course has passed,so you will not receive a "
 "refund."
 msgstr ""
+"Termin ubiegania się o refundację tego kursu minął. Nie możesz otrzymać już "
+"zwrotu pieniędzy."
 
 #: lms/static/js/discovery/views/search_form.js
 #, javascript-format
@@ -4550,7 +4703,7 @@ msgstr "Uchyl dostęp"
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Group"
-msgstr ""
+msgstr "Grupa"
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Enter username or email"
@@ -4667,7 +4820,7 @@ msgstr "Pole powodu nie powinno pozostać puste."
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Role field should not be left unselected."
-msgstr ""
+msgstr "Pole \"rola\" musi być wypełnione. "
 
 #: lms/static/js/instructor_dashboard/membership.js
 msgid "Error enrolling/unenrolling users."
@@ -4992,7 +5145,7 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid "Please enter a score."
-msgstr ""
+msgstr "Proszę wpisać wynik. "
 
 #: lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
@@ -5210,7 +5363,7 @@ msgstr ""
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Successfully overrode problem score for {user}"
-msgstr ""
+msgstr "Pomyślnie zastąpiono ocenę za ćwiczenie studentowi {user}"
 
 #: lms/static/js/staff_debug_actions.js
 msgid "Could not override problem score for {user}."
@@ -5303,13 +5456,12 @@ msgid "We couldn't create your account."
 msgstr "Nie udało się utworzyć twojego konta."
 
 #: lms/static/js/student_account/views/RegisterView.js
-#: lms/templates/student_account/register.underscore
 msgid "Create Account"
-msgstr ""
+msgstr "Utwórz konto"
 
 #: lms/static/js/student_account/views/RegisterView.js
 msgid "(required)"
-msgstr ""
+msgstr "(wymagany)"
 
 #: lms/static/js/student_account/views/RegisterView.js
 msgid "You've successfully signed into %(currentProvider)s."
@@ -5328,6 +5480,9 @@ msgid ""
 "Your profile settings are managed by {enterprise_name}. Contact your "
 "administrator or {link_start}edX Support{link_end} for help."
 msgstr ""
+"Ustawieniami profilu zarządza {enterprise_name}. Skontaktuj się z "
+"administratorem lub wyślij wiadomość do naszego {link_start}działu pomocy "
+"technicznej{link_end}."
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Email Address (Sign In)"
@@ -5839,6 +5994,9 @@ msgid ""
 "sure that you have specified a birth year on the "
 "{account_settings_page_link}"
 msgstr ""
+"<br>Musisz mieć ukończone 13 lat aby mieć dostęp do pełnego profilu. Jeśli "
+"masz więcej niż 13 lat, upewnij się, że podałeś swój rok urodzenia w "
+"{account_settings_page_link}"
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_fields.js
 msgid "Profile Image"
@@ -6064,6 +6222,8 @@ msgstr ""
 #: cms/static/js/models/settings/course_details.js
 msgid "The certificate available date must be later than the course end date."
 msgstr ""
+"Data dostępności zaświadczenia musi być późniejsza niż data zakończenia "
+"kursu."
 
 #: cms/static/js/models/settings/course_details.js
 msgid "Key should only contain letters, numbers, _, or -"
@@ -6075,7 +6235,7 @@ msgstr "Proszę wprowadzić liczbę całkowitą od %(min)s do %(max)s."
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "The assignment type must have a name."
-msgstr ""
+msgstr "Ten typ zadania musi mieć nazwę."
 
 #: cms/static/js/models/settings/course_grader.js
 msgid "There's already another assignment type with this name."
@@ -6109,7 +6269,7 @@ msgstr ""
 
 #: cms/static/js/models/xblock_validation.js
 msgid "This unit has validation issues."
-msgstr ""
+msgstr "Ta jednostka posiada problemy z walidacją."
 
 #: cms/static/js/models/xblock_validation.js
 msgid "This component has validation issues."
@@ -6152,6 +6312,8 @@ msgid ""
 "{filename} is not in a supported file format. Supported file formats are "
 "{supportedFileFormats}."
 msgstr ""
+"Format pliku {filename} nie jest obsługiwany. Obsługiwane typy plików to "
+"{supportedFileFormats}."
 
 #: cms/static/js/views/active_video_upload_list.js
 msgid "{filename} exceeds maximum size of {maxFileSizeInGB} GB."
@@ -6240,43 +6402,44 @@ msgstr "Przetwarzanie żądania wznowienia"
 
 #: cms/static/js/views/course_video_settings.js
 msgid "An error has occurred. Wait a few minutes, and then try again."
-msgstr ""
+msgstr "Wystąpił błąd. Odczekaj kilka minut i spróbuj ponownie."
 
 #: cms/static/js/views/course_video_settings.js
 msgid "Select turnaround"
-msgstr ""
+msgstr "Oszacuj czas realizacji"
 
 #: cms/static/js/views/course_video_settings.js
 msgid "Select fidelity"
-msgstr ""
+msgstr "Wybierz wierność odtwarzania"
 
 #: cms/static/js/views/course_video_settings.js
 msgid "Select language"
-msgstr ""
+msgstr "Wybierz język"
 
 #: cms/static/js/views/course_video_settings.js
 msgid "Press Remove to remove language"
-msgstr ""
+msgstr "Naciśnij \"Usuń\" aby usunąć język. "
 
 #: cms/static/js/views/course_video_settings.js
 msgid "Settings updated"
-msgstr ""
+msgstr "Zapisano zmiany"
 
+#: cms/static/js/views/course_video_settings.js
 #: cms/templates/js/course-video-settings-update-settings-footer.underscore
 msgid "Last updated"
 msgstr "Ostatnio zaktualizowane"
 
 #: cms/static/js/views/course_video_settings.js
 msgid "Required"
-msgstr ""
+msgstr "Wymagany"
 
 #: cms/static/js/views/course_video_settings.js
 msgid "Automatic transcripts are disabled."
-msgstr ""
+msgstr "Automatyczna transkrypcja jest niedostępna."
 
 #: cms/static/js/views/course_video_settings.js
 msgid "{selectedProvider} credentials saved"
-msgstr ""
+msgstr "Zapisano dane logowania {selectedProvider} "
 
 #: cms/static/js/views/export.js
 msgid "There has been an error while exporting."
@@ -6542,23 +6705,23 @@ msgstr "Opublikuj"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Highlights for {display_name}"
-msgstr ""
+msgstr "Najważniejsze informacje dla {display_name}"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Enable Weekly Highlight Emails"
-msgstr ""
+msgstr "Zgadzam się na otrzymywanie tygodniowych podsumowań e-mailowych "
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Enable"
-msgstr ""
+msgstr "Włącz"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Not yet"
-msgstr ""
+msgstr "Jeszcze nie"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "All Learners and Staff"
-msgstr ""
+msgstr "Wszyscy studenci i kadra"
 
 #: cms/static/js/views/modals/course_outline_modals.js
 msgid "Basic"
@@ -7025,11 +7188,11 @@ msgstr "Prześlij tłumaczenie"
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "Add Thumbnail"
-msgstr ""
+msgstr "Dodaj miniaturę"
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "Edit Thumbnail"
-msgstr ""
+msgstr "Edytuj miniaturę"
 
 #. Translators: This is a 2 part text which tells the image requirements.
 #: cms/static/js/views/video_thumbnail.js
@@ -7037,10 +7200,12 @@ msgid ""
 "{InstructionsSpanStart}{videoImageResoultion}{lineBreak} "
 "{videoImageSupportedFileFormats}{spanEnd}"
 msgstr ""
+"{InstructionsSpanStart}{videoImageResoultion}{lineBreak} "
+"{videoImageSupportedFileFormats}{spanEnd}"
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "Image upload failed"
-msgstr ""
+msgstr "Przesyłanie obrazu nie powiodło się"
 
 #. Translators: This is a 3 part text which tells the image requirements.
 #: cms/static/js/views/video_thumbnail.js
@@ -7048,124 +7213,131 @@ msgid ""
 "{ReqTextSpanStart}Requirements{spanEnd}{lineBreak}{InstructionsSpanStart}{videoImageResoultion}{lineBreak}"
 " {videoImageSupportedFileFormats}{spanEnd}"
 msgstr ""
+"{ReqTextSpanStart}Requirements{spanEnd}{lineBreak}{InstructionsSpanStart}{videoImageResoultion}{lineBreak}"
+" {videoImageSupportedFileFormats}{spanEnd}"
 
 #. Translators: message will be like 1280x720 pixels
 #: cms/static/js/views/video_thumbnail.js
 msgid "{maxWidth}x{maxHeight} pixels"
-msgstr ""
+msgstr "{maxWidth}x{maxHeight} pikseli"
 
 #. Translators: message will be like Thumbnail for Arrow.mp4
 #: cms/static/js/views/video_thumbnail.js
 msgid "Thumbnail for {videoName}"
-msgstr ""
+msgstr "Miniatura {videoName}"
 
 #. Translators: message will be like Add Thumbnail - Arrow.mp4
 #: cms/static/js/views/video_thumbnail.js
 msgid "Add Thumbnail - {videoName}"
-msgstr ""
+msgstr "Dodaj miniaturę - {videoName}"
 
 #. Translators: humanizeDuration will be like 10 minutes, an hour and 20
 #. minutes etc
 #: cms/static/js/views/video_thumbnail.js
 msgid "Video duration is {humanizeDuration}"
-msgstr ""
+msgstr "Długość filmu: {humanizeDuration}"
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "minutes"
-msgstr ""
+msgstr "minut"
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "minute"
-msgstr ""
+msgstr "minuta"
 
 #. Translators: message will be like 15 minutes, 1 minute
 #: cms/static/js/views/video_thumbnail.js
 msgid "{minutes} {unit}"
-msgstr ""
+msgstr "{minutes} {unit}"
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "seconds"
-msgstr ""
+msgstr "sekund"
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "second"
-msgstr ""
+msgstr "sekunda"
 
 #. Translators: message will be like 20 seconds, 1 second
 #: cms/static/js/views/video_thumbnail.js
 msgid "{seconds} {unit}"
-msgstr ""
+msgstr "{seconds} {unit}"
 
 #. Translators: `and` will be used to combine both miuntes and seconds like
 #. `13 minutes and 45 seconds`
 #: cms/static/js/views/video_thumbnail.js
 msgid " and "
-msgstr ""
+msgstr ","
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "Video image upload started"
-msgstr ""
+msgstr "Rozpoczęto przesyłanie filmu"
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "Video image upload completed"
-msgstr ""
+msgstr "Zakończono przesyłanie filmu"
 
 #: cms/static/js/views/video_thumbnail.js
 msgid ""
 "This image file type is not supported. Supported file types are "
 "{supportedFileFormats}."
 msgstr ""
+"Ten typ pliku obrazu nie jest obsługiwany. Obsługiwane typy plików to "
+"{supportedFileFormats}."
 
 #. Translators: maxFileSizeInMB will be like 2 MB.
 #: cms/static/js/views/video_thumbnail.js
 msgid "The selected image must be smaller than {maxFileSizeInMB}."
-msgstr ""
+msgstr "Obraz musi być mniejszy niż {maxFileSizeInMB}."
 
 #. Translators: minFileSizeInKB will be like 2 KB.
 #: cms/static/js/views/video_thumbnail.js
 msgid "The selected image must be larger than {minFileSizeInKB}."
-msgstr ""
+msgstr "Obraz musi być większy niż {minFileSizeInKB}."
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "Could not upload the video image file"
-msgstr ""
+msgstr "Nie udało się przesłać pliku wideo."
 
 #: cms/static/js/views/video_thumbnail.js
 msgid "Image upload failed. "
-msgstr ""
+msgstr "Przesyłanie obrazu nie powiodło się"
 
 #: cms/static/js/views/video_transcripts.js
 msgid "The file could not be uploaded."
-msgstr ""
+msgstr "Nie udało się przesłać twojego pliku"
 
 #: cms/static/js/views/video_transcripts.js
 msgid "Hide transcripts ({transcriptCount})"
-msgstr ""
+msgstr "Ukryj transkrypcję ({transcriptCount})"
 
 #: cms/static/js/views/video_transcripts.js
 msgid "Show transcripts ({transcriptCount})"
-msgstr ""
+msgstr "Pokaż transkrypty ({transcriptCount})"
 
 #: cms/static/js/views/video_transcripts.js
 msgid ""
 "This file type is not supported. Supported file type is "
 "{supportedFileFormat}."
 msgstr ""
+"Ten typ pliku nie jest obsługiwany. Obsługiwany typ plików to "
+"{supportedFileFormat}."
 
 #: cms/static/js/views/video_transcripts.js
-#: cms/templates/js/video-transcripts.underscore
 msgid "{transcriptClientTitle}_{transcriptLanguageCode}.{fileExtension}"
-msgstr ""
+msgstr "{transcriptClientTitle}_{transcriptLanguageCode}.{fileExtension}"
 
 #: cms/static/js/views/video_transcripts.js
 msgid "Are you sure you want to remove this transcript?"
-msgstr ""
+msgstr "Czy na pewno chcesz usunąć tę transkrypcję?"
 
 #: cms/static/js/views/video_transcripts.js
 msgid ""
 "If you remove this transcript, the transcript will not be available for any "
 "components that use this video."
 msgstr ""
+"Jeśli usuniesz tę transkrypcję, nie będzie ona już dostępna dla osób "
+"wyświetlających ten plik wideo."
 
 #: cms/static/js/views/xblock_editor.js
 msgid "Editor"
