@@ -7,7 +7,7 @@
 $static-path: '../..';
 
 // Styles for discussions
-
+@import "utilities/variables-new_look";
 @import "utilities/variables-v1";
 @import "mixins";
 @import 'discussion'; // Process old file after definitions but before everything else, partial is deprecated.

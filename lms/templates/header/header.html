@@ -42,12 +42,13 @@ HeaderFactory();
     % endif
     <div class="container">
 		<a class="navbar-brand" href="/">
-            <img style="max-height: 34px;" src="/static/images/logo-light-bg.svg" alt="Nawojka">
+            <img src="/static/images/logo-light-bg.svg" alt="Nawojka">
+            <!--<img id="img-mobile" src="/static/images/navoica_m.png" alt="Nawojka">-->
         </a>
 
         % if course and user.is_authenticated():
 
-         <span style="white-space: nowrap">
+         <span id="provider_course">
               % if course.organizer:
                           <span class="provider"><strong>${settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]}</strong></span><br>
 
@@ -135,7 +136,7 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
 % endif
 
 % if header_language_selector_is_enabled():
-<% languages = released_languages() %>
+<% languages = settings.LANGUAGES %>
 % if len(languages) > 1:
 <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
     <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
@@ -149,11 +150,11 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
     <label><span class="sr">${_("Choose Language")}</span>
         <select class="input select language-selector" id="settings-language-value" name="language">
             % for language in languages:
-            % if language[0] == LANGUAGE_CODE:
-            <option value="${language[0]}" selected="selected">${language[1]}</option>
-            % else:
-            <option value="${language[0]}">${language[1]}</option>
-            % endif
+                % if language[0] == LANGUAGE_CODE:
+                <option value="${language[0]}" selected="selected">${language[1]}</option>
+                % else:
+                <option value="${language[0]}">${language[1]}</option>
+                % endif
             % endfor
         </select>
     </label>

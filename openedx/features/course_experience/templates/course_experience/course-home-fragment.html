@@ -36,82 +36,22 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
    <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
       <div class="d-flex">
+        % if ENABLE_DASHBOARD_TAB.is_enabled(course_key):
+            ${static.renderReact(
+              component="UpsellExperimentModal",
+              id="upsell-modal",
+              props={},
+            )}
+        % endif
 
-    % if ENABLE_DASHBOARD_TAB.is_enabled(course_key):
-        ${static.renderReact(
-          component="UpsellExperimentModal",
-          id="upsell-modal",
-          props={},
-        )}
-    % endif
-
-    % if INCLUDE_PORTFOLIO_UPSELL_MODAL.is_enabled():
-        ${static.renderReact(
-            component="PortfolioExperimentUpsellModal",
-            id="portfolio-experiment-upsell-modal",
-            props={}
-        )}
-    % endif
-
-    <article id="results">
-         <header class="d-flex justify-content-between">
-            <h2 id="h2">Spis treści</h2>
-             % if resume_course_url:
-                    <a class="btn btn-sm btn-outline-primary red" href="${resume_course_url}">
-                        % if has_visited_course:
-                            <span data-action-type="resume">${_("Resume Course")}</span>
-                        % else:
-                            <span data-action-type="start">${_("Start Course")}</span>
-                        % endif
-                    </a>
-                % endif
-              
-          </header>
-
-            % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
-                <div id="discovery-form1" class="input-group my-3 p-2">
-                    <form class="search-form input-group" role="search" action="${reverse('openedx.course_search.course_search_results', args=[course_key])}">
-                        <label class="field-label sr-only" for="search" id="search-hint">${_('Search the course')}</label>
-                        <input
-                                class="field-input input-text search-input form-control"
-                                type="search"
-                                name="query"
-                                id="search"
-                                placeholder="${_('Search the course')}"
-                        />
-                        <span class="input-group-btn">
-                            <button class="btn btn-light btn-oytline-secondary" type="submit">${_('Search')}</button>
-                        </span>
-                    </form>
-                </div>
-            % endif
-        <div class="form-actions">
-               <button class="btn btn-primary action-resume-course"
-                      id="expand-collapse-outline-all-button"
-                      aria-expanded="false"
-                      aria-controls="course-outline-block-tree">
-               <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
-               </button>
-            </div>
-
-       <section class="faq">
-            % if course_home_message_fragment:
-                ${HTML(course_home_message_fragment.body_html())}
-            % endif
-
-            % if update_message_fragment and UNIFIED_COURSE_TAB_FLAG.is_enabled(course.id):
-                <div class="section section-update-message">
-                    ${HTML(update_message_fragment.body_html())}
-                </div>
-            % endif
-
-            % if outline_fragment:
-                ${HTML(outline_fragment.body_html())}
-            % endif
-        </section>
-   </article>
-
-        <aside id="filter" class="sidebar"">
+        % if INCLUDE_PORTFOLIO_UPSELL_MODAL.is_enabled():
+            ${static.renderReact(
+                component="PortfolioExperimentUpsellModal",
+                id="portfolio-experiment-upsell-modal",
+                props={}
+            )}
+        % endif
+        <aside id="filter" class="sidebar">
             % if has_goal_permission:
                 <div class="section section-goals ${'' if current_goal else 'hidden'}">
                     <div class="current-goal-container">
@@ -140,23 +80,21 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
             % if course_tools:
                 <header id="courses-list-header">
                     <h2 id="h2">
-			<span class="d-none d-md-block">${_("Course Tools")}</span>
-		    </h2>
-		</header>
-
-                    <ul class="course-details list-group list-group-flush mb-3">
-                        % for course_tool in course_tools:
-                            <li class="list-group-item">
-                              <div class="course-details-icon">
-                                <i class="icon ${course_tool.icon_classes()}"></i>
-                              </div>
-                                <div class="course-details-content">
-                                  <a href="${course_tool.url(course_key)}">${course_tool.title()}</a>
-                                </div>
-                            </li>
-                        % endfor
-                    </ul>
-
+                    <span class="d-none d-md-block">${_("Course Tools")}</span>
+                    </h2>
+                </header>
+                <ul class="course-details list-group list-group-flush mb-3">
+                    % for course_tool in course_tools:
+                        <li class="list-group-item">
+                          <div class="course-details-icon">
+                            <i class="icon ${course_tool.icon_classes()}"></i>
+                          </div>
+                            <div class="course-details-content">
+                              <a href="${course_tool.url(course_key)}">${course_tool.title()}</a>
+                            </div>
+                        </li>
+                    % endfor
+                </ul>
             % endif
             % if upgrade_url and upgrade_price:
                 <div class="section section-upgrade course-home-sidebar-upgrade">
@@ -171,7 +109,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                                    ${_("Upgrade ({price})").format(price=upgrade_price)}
                                 </a>
                             </p>
-                    <p><button class="btn-link btn-small promo-learn-more">${_('Learn More')}</button></p>
+                            <p><button class="btn-link btn-small promo-learn-more">${_('Learn More')}</button></p>
                         </div>
                 </div>
             % endif
@@ -184,10 +122,65 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                 <!--<div class="section section-handouts">
                     <h3 class="hd-6 section-title">${_("Course Handouts")}</h3>
                     ${HTML(handouts_html)}-->
+##                 </div>
+            % endif
+            </aside>
+        <article id="results">
+            <div id="updates">
+                % if update_message_fragment and UNIFIED_COURSE_TAB_FLAG.is_enabled(course.id):
+                    <div class="section section-update-message">
+                        ${HTML(update_message_fragment.body_html())}
+                    </div>
+                % endif
+            </div>
+            <header class="d-flex justify-content-between">
+                <h2 id="h2">Spis treści</h2>
+                % if resume_course_url:
+                    <a class="btn btn-sm btn-outline-primary red" href="${resume_course_url}">
+                    % if has_visited_course:
+                    <span data-action-type="resume">${_("Resume Course")}</span>
+                    % else:
+                     <span data-action-type="start">${_("Start Course")}</span>
+                    % endif
+                    </a>
+                % endif
+             </header>
+            % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
+                <div id="discovery-form1" class="input-group my-3 p-2">
+                    <form class="search-form input-group" role="search" action="${reverse('openedx.course_search.course_search_results', args=[course_key])}">
+                        <label class="field-label sr-only" for="search" id="search-hint">${_('Search the course')}</label>
+                        <input
+                            class="field-input input-text search-input form-control"
+                            type="search"
+                            name="query"
+                            id="search"
+                            placeholder="${_('Search the course')}"
+                            />
+                        <span class="input-group-btn">
+                            <button class="btn btn-light btn-oytline-secondary" type="submit">${_('Search')}</button>
+                        </span>
+                    </form>
                 </div>
             % endif
-        </aside>
-     </div>
+            <div class="form-actions">
+                <button class="btn btn-primary action-resume-course"
+                      id="expand-collapse-outline-all-button"
+                      aria-expanded="false"
+                      aria-controls="course-outline-block-tree">
+               <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
+               </button>
+            </div>
+            <section class="faq">
+                % if course_home_message_fragment:
+                    ${HTML(course_home_message_fragment.body_html())}
+                % endif
+
+            % if outline_fragment:
+                ${HTML(outline_fragment.body_html())}
+            % endif
+            </section>
+        </article>
+      </div>
     </div>
     % if course_sock_fragment:
         ${HTML(course_sock_fragment.body_html())}
@@ -212,3 +205,6 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
 <%static:webpack entry="Enrollment">
     new CourseEnrollment('.enroll-btn', '${course_key | n, js_escaped_string}');
 </%static:webpack>
+<%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
+    DateUtilFactory.transform('.localized-datetime');
+</%static:require_module_async>

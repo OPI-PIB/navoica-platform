@@ -321,9 +321,6 @@ course_sections = blocks.get('children')
     % endif
 </main>
 
-<%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
-    DateUtilFactory.transform('.localized-datetime');
-</%static:require_module_async>
 
 <%static:webpack entry="CourseOutline">
     new CourseOutline();

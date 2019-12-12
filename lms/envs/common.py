@@ -267,6 +267,8 @@ FEATURES = {
     # Set to True to change the course sorting behavior by their start dates, latest first.
     'ENABLE_COURSE_SORTING_BY_START_DATE': False,
 
+    'ENABLE_MAIN_PAGE_PROMOTION': True,
+
     # Expose Mobile REST API. Note that if you use this, you must also set
     # ENABLE_OAUTH2_PROVIDER to True
     'ENABLE_MOBILE_REST_API': False,
@@ -977,6 +979,7 @@ LANGUAGE_COOKIE = "openedx-language-preference"
 LANGUAGES = [
     ('en', u'English'),
     ('pl', u'Polski'),  # Polish
+    ('en-US', u'English_US'),  # English_US
 ]
 
 LANGUAGE_DICT = dict(LANGUAGES)
@@ -1453,8 +1456,9 @@ PIPELINE_CSS = {
             #'css/style.css',
             #'css/courses.css',
             #'css/course.css',
-	    #'css/course-toc.css',
+	        #'css/course-toc.css',
             'css/course-list.css',
+            #'css/course-content.css',
             #'css/polipedia.css',
             #'css/polipedia.custom.css',
             #'css/navoica.custom.css'
@@ -1487,13 +1491,13 @@ PIPELINE_CSS = {
     },
     'style-main-v2': {
         'source_filenames': [
-            'css/lms-main-v2.css',
+            # 'css/lms-main-v2.css',
         ],
         'output_filename': 'css/lms-main-v2.css',
     },
     'style-main-v2-rtl': {
         'source_filenames': [
-            'css/lms-main-v2-rtl.css',
+            # 'css/lms-main-v2-rtl.css',
         ],
         'output_filename': 'css/lms-main-v2-rtl.css',
     },
@@ -1507,9 +1511,9 @@ PIPELINE_CSS = {
     },
     'style-course': {
         'source_filenames': [
-            'css/lms-course.css',
+            'css/course-content.css',
         ],
-        'output_filename': 'css/lms-course.css',
+        'output_filename': 'css/course-content.css',
     },
     'style-course-rtl': {
         'source_filenames': [
@@ -1537,7 +1541,7 @@ PIPELINE_CSS = {
     },
     'style-inline-discussion': {
         'source_filenames': [
-            'css/discussion/inline-discussion.css',
+            #'css/discussion/inline-discussion.css',
         ],
         'output_filename': 'css/discussion/inline-discussion.css',
     },
@@ -1551,7 +1555,7 @@ PIPELINE_CSS = {
         'source_filenames': [
             'css/vendor/ova/annotator.css',
             'css/vendor/ova/edx-annotator.css',
-            'css/vendor/ova/video-js.min.css',
+            #'css/vendor/ova/video-js.min.css',
             'css/vendor/ova/rangeslider.css',
             'css/vendor/ova/share-annotator.css',
             'css/vendor/ova/richText-annotator.css',
@@ -2639,16 +2643,54 @@ ALL_LANGUAGES = [
 
 ALL_COURSE_DIFFICULTY = [
     [u"easy", u"początkujący"],
-    [u"medium", u"średnio-zaawansowany"],
+    [u"medium", u"średnio zaawansowany"],
     [u"hard", u"zaawansowany"]
 ]
 
-ALL_COURSE_ORGANIZER = [
+ALL_COURSE_ORGANIZER = sorted([
     [u"1", u"Fundacja Młodej Nauki"],
     [u"2", u"Politechnika Warszawska"],
     [u"3", u"Politechnika Łódzka"],
-    [u"4", u"OPI PIB"]
-]
+    [u"4", u"OPI PIB"],
+    [u"5", u"Uczelnia Techniczno-Handlowa im. Heleny Chodkowskiej"],
+    [u"6", u"Akademia Finansów i Biznesu Vistula"],
+    [u"7", u"Akademia Ignatianum w Krakowie"],
+    [u"8", u"Akademia Sztuki Wojennej"],
+    [u"9", u"Akademia WSB"],
+    [u"10", u"Państwowa Wyższa Szkoła Zawodowa im. Witelona w Legnicy"],
+    [u"11", u"Politechnika Białostocka"],
+    [u"12", u"Politechnika Częstochowska"],
+    [u"13", u"Politechnika Gdańska"],
+    [u"14", u"Politechnika Krakowska"],
+    [u"15", u"Powszechna Wyższa Szkoła Humanistyczna 'Pomerania'"],
+    [u"16", u"Szkoła Wyższa im. Pawła Włodkowica w Płocku"],
+    [u"17", u"Uniwersytet Ekonomiczny w Poznaniu"],
+    [u"18", u"Uniwersytet Humanistyczno- Przyrodniczy im. Jana Długosza"],
+    [u"19", u"Uniwersytet im. Adama Mickiewicza w Poznaniu"],
+    [u"20", u"Uniwersytet Jagielloński"],
+    [u"21", u"Uniwersytet Kardynała Stefana Wyszyńskiego w Warszawie"],
+    [u"22", u"Uniwersytet Mikołaja Kopernika"],
+    [u"23", u"Uniwersytet Pedagogiczny im. KEN w Krakowie"],
+    [u"24", u"Uniwersytet Szczeciński"],
+    [u"25", u"Uniwersytet Śląski w Katowicach"],
+    [u"26", u"Uniwersytet Technologiczno- Przyrodniczy w Bydgoszczy"],
+    [u"27", u"Uniwersytet Technologiczno-Humanistyczny im. Kazimierza Pułaskiego"],
+    [u"28", u"Wojskowa Akademia Techniczna"],
+    [u"29", u"Wyższa Szkoła Biznesu i Przedsiębiorczości w Ostrowcu Św."],
+    [u"30", u"Wyższa Szkoła Ekonomii, Prawa i Nauk Medycznych"],
+    [u"31", u"Wyższa Szkoła Gospodarki w Bydgoszczy"],
+    [u"32", u"Wyższa Szkoła Handlowa we Wrocławiu"],
+    [u"33", u"Wyższa Szkoła Humanistyczna TWP"],
+    [u"34", u"Wyższa Szkoła Humanitas"],
+    [u"35", u"Wyższa Szkoła Informatyki i Zarządzania w Rzeszowie"],
+    [u"36", u"Wyższa Szkoła Integracji Europejskiej"],
+    [u"37", u"WSPiA Rzeszowska Szkoła Wyższa"],
+    [u"38", u"Wyższa Szkoła Techniczna w Katowicach"],
+    [u"39", u"Zachodniopomorska Szkoła Biznesu w Szczecinie"],
+    [u"40", u"Zachodniopomorski Uniwersytet Technologiczny w Szczecinie"],
+    [u"41", u"Centrum Nauki Kopernik"]
+], key=lambda x:x[1], reverse=False)
+
 
 ALL_COURSE_CATEGORY = [
     [u"business", u"Nauki biznesowe"],
@@ -2672,15 +2714,15 @@ COURSE_DISCOVERY_MEANINGS = {
         },
     },
     'course_category': {
-        'name': 'Kategoria',
+        'name': u'Kategoria',
         'terms': {b[0]: b[1] for b in ALL_COURSE_CATEGORY},
     },
     'organizer': {
-        'name': 'Organizator',
+        'name': u'Organizator',
         'terms': {b[0]: b[1] for b in ALL_COURSE_ORGANIZER},
     },
     'difficulty': {
-        'name': 'Course Difficulty',
+        'name': u'Poziom trudności',
         'terms': {b[0]: b[1] for b in ALL_COURSE_DIFFICULTY},
     }
 }

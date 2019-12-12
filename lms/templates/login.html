@@ -160,7 +160,7 @@ from third_party_auth import provider, pipeline
   <div class="activation-message-container">
 	% for account_activation_message in account_activation_messages:
 	  <div class="account-activation ${account_activation_message.tags}" role="alert" aria-label="Account Activation Message" tabindex="-1">
-		<div class="message-copy" >
+		<div class="message-copy nomargin" >
 		  ${ account_activation_message | n, decode.utf8 }
 		</div>
 	  </div>
@@ -171,7 +171,7 @@ from third_party_auth import provider, pipeline
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <div class="d-flex">
-          <article id="results">
+          <article id="result">
            <header id="header-login">
              <h2 id="h2">
                <span class="d-none d-md-block">Formularz logowania</span>

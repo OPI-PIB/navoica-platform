@@ -216,30 +216,31 @@ from six import string_types
     % if (course.organizer and get_course_about_section(request, course, "overview") and course.difficulty and course.course_category and course.timetable and get_course_about_section(request, course, "effort")):
 	<div id="content" class="border-top">
         <main class="container">
-		  <article id="results">
-			<header id="courses-list-header">
-			   <h2 id="h2">Opis Kursu</h2>
-			</header>
-			${get_course_about_section(request, course, "overview")}
-			% if get_course_about_section(request, course, "course_staff_extended"):
-				<h2>Lista prowadzących</h2>
-				${get_course_about_section(request, course, "course_staff_extended")}
-			% endif
-		  </article>
 
-          <aside id="filter" class="sidebar">
+                <article id="results">
+      <header id="courses-list-header">
+         <h2 id="h2">Opis Kursu</h2>
+      </header>
+      ${get_course_about_section(request, course, "overview")}
+      % if get_course_about_section(request, course, "course_staff_extended"):
+        <h2>Lista prowadzących</h2>
+        ${get_course_about_section(request, course, "course_staff_extended")}
+      % endif
+      </article>
+
+<aside class="sidebar">
              <header id="courses-list-header">
-	       <h2 id="h2">
-                <span class="d-none d-md-block">Ogranizator</span>
+         <h2 id="h2">
+                <span class="d-none d-md-block">Organizator</span>
               </h2>
-	     </header>
-	     <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+       </header>
+       <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
                         <div class="organizer-logo">
                             <p class="mt-2 mx-auto text-center">
                                 % if course.organizer:
-				<% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
-				<img src="/static/images/org/${course_organize}.png" height="80">
-			% endif
+        <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+        <img src="/static/images/org/${course_organize}.png" height="80">
+      % endif
                             </p>
                         </div>
                     </div>
@@ -255,47 +256,47 @@ from six import string_types
               <div id="basic-data-facets" class="collapse">
             <ul class="course-details list-group list-group-flush">
 
-			% if course.difficulty:
-	       <li class="list-group-item">
+      % if course.difficulty:
+         <li class="list-group-item">
                 <div class="course-details-icon ${course.difficulty}">
                   <i class="fas fa-star-half-alt"></i>
                 </div>
                 <div class="course-details-content">
-				  <% for a in settings.ALL_COURSE_DIFFICULTY:
-						if (a[0]==course.difficulty):
-							course_difficulty = a[1]
-				  %>
+          <% for a in settings.ALL_COURSE_DIFFICULTY:
+            if (a[0]==course.difficulty):
+              course_difficulty = a[1]
+          %>
                   <h6>Poziom trudności kursu:</h6>
                   <div>${course_difficulty}</div>
                 </div>
               </li>
             % endif
 
-			% if course.course_category:
+      % if course.course_category:
               <li class="list-group-item">
                 <div class="course-details-icon">
                   <i class="icon fa fa-graduation-cap"></i>
                 </div>
                 <div class="course-details-content">
-				  <% for a in settings.ALL_COURSE_CATEGORY:
-						if (a[0]==course.course_category):
-							course_c = a[1]
-				  %>
+          <% for a in settings.ALL_COURSE_CATEGORY:
+            if (a[0]==course.course_category):
+              course_c = a[1]
+          %>
                   <h6>Kategoria tematyczna:</h6>
-		  <div>${course_c}</div>
+      <div>${course_c}</div>
                 </div>
               </li>
             % endif
 
 
-			% if course.timetable:
+      % if course.timetable:
               <li class="list-group-item">
                 <div class="course-details-icon">
                   <i class="icon far fa-clock"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>Czas trwania kursu:</h6>
-		  <div>${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}</div>
+      <div>${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}</div>
                 </div>
               </li>
             % endif
@@ -402,18 +403,18 @@ from six import string_types
                   <i class="fas fa-battery-three-quarters"></i>
                 </div>
                 <div class="course-details-content">
-				   <%
-						txt = get_course_about_section(request, course, "effort")
-						course_effort = txt
-						txt = float(txt.replace(':', '.'))
+           <%
+            txt = get_course_about_section(request, course, "effort")
+            course_effort = txt
+            txt = float(txt.replace(':', '.'))
                    %>
                   <h6>Tygodniowy wysiłek godzinowy:</h6>
-		  <div>${ungettext("{effort} hour", "{effort} hours", txt).format(effort=course_effort) | h}</div>
+      <div>${ungettext("{effort} hour", "{effort} hours", txt).format(effort=course_effort) | h}</div>
                 </div>
               </li>
             % endif
 
-		     % if course.organizer:
+         % if course.organizer:
               <li class="list-group-item">
                 <div class="course-details-icon">
                   <i class="fas fa-landmark"></i>
@@ -421,7 +422,7 @@ from six import string_types
                 <div class="course-details-content">
                   <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
                   <h6>Organizator:</h5>
-		  <div>${course_organize}</div>
+      <div>${course_organize}</div>
                 </div>
               </li>
              % endif
@@ -449,6 +450,10 @@ from six import string_types
           % endif
 
           </aside>
+
+
+
+          
 
         </main>
       </div>

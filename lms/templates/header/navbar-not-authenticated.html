@@ -23,7 +23,7 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 
 % if courses_are_browsable:
 <li class="nav-item">
-    <a href="${marketing_link('COURSES')}"><button type="button" class="btn btn-outline-primary btn-sm">${_("Katalog kursów")}</button>
+    <a href="${marketing_link('COURSES')}"><button type="button" class="btn btn-outline-primary btn-sm">${_("Discover New")}</button>
 </li>
 % endif
 
@@ -63,7 +63,7 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 </li>
 % else:
 <li class="nav-item">
-    <a href="/login${login_query()}"><button type="button" class="btn btn-outline-primary btn-sm"> ${_("Sign in")}</button>
+    <a href="/login${login_query()}"><button type="button" class="btn btn-outline-primary btn-sm"> ${_("Log in")}</button>
 </li>
 % if allow_public_account_creation:
 <li class="nav-item">

@@ -80,12 +80,12 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
            <div class="course-meta">
              <p>
-                <strong>Organizator:</strong>
+                <strong>${_("Course organizer")}</strong>
                 <span>${course_overview.display_org_with_default}</span>
              </p>
              <p>
-                <strong>Kod kursu:</strong>
-                <span>${course_overview.display_number_with_default}</span>
+                <strong>${_("Course edition")}</strong>
+                <span>${course_overview.id.run}</span>
              </p>
            </div>
            <p class="card-text" id="border_top">${course_overview.short_description}</p>
@@ -120,10 +120,9 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
           %>
 
                 % if isinstance(course_date, basestring):
-                        <span class="course-card-start info-date-block">i class="icon-calendar"></i> ${container_string.format(date=course_date)}</span>
+                        <span class="course-card-start info-date-block"><i class="icon-calendar"></i> ${container_string.format(date=course_date)}</span>
                     % elif course_date is not None:
-                        <strong><span class="course-card-start info-date-block localized-datetime" data-language="pl" data-timezone="${user_timezone}" data-datetime="${course_date.strftime('%Y-%m-%dT%H:%M:%S%z')}" data-format=${format} data-string="${container_string}"><                        <span class="course-card-start info-date-block localized-datetime" data-language="pl" data-timezone="${user_timezone}" data-datetime="${course_date.strftime('%Y-%m-%dT%H:%M:%S%z')}" data-format=${format} data-string="${container_string}"><</span></strong>
-</span>
+                    <strong><span class="course-card-start info-date-block localized-datetime" data-language="${LANGUAGE_CODE}"  data-format-language="${LANGUAGE_CODE}" data-timezone="${user_timezone}"  data-datetime="${course_date.strftime('%Y-%m-%dT%H:%M:%S%z')}" data-format=${format} data-string="${container_string}"></span></strong>
                     % endif
 
                 <span class="info-date-block-container">

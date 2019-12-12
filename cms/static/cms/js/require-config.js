@@ -107,7 +107,7 @@
             'jquery.immediateDescendents': 'js/src/jquery.immediateDescendents',
             'datepair': 'js/vendor/timepicker/datepair',
             'date': 'js/vendor/date',
-            moment: 'common/js/vendor/moment-with-locales',
+            'moment': 'common/js/vendor/moment-with-locales',
             'moment-timezone': 'common/js/vendor/moment-timezone-with-data',
             'text': 'js/vendor/requirejs/text',
             'underscore': 'common/js/vendor/underscore',

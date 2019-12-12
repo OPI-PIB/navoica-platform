@@ -2,11 +2,14 @@
 // ====================
 // NOTE: this file is deprecated, and we should not continue to add to this file. Use other partials as appropriate.
 
+@import "utilities/variables-new_look";
+
 .discussion-body {
   @include clearfix();
 
   width: 100%;
-  border: none;
+  border: 1px solid map_get($grays, "300");
+  // border: none;
   background: transparent;
   box-shadow: none;
 
@@ -56,6 +59,52 @@
 
 // inline discussion module
 .discussion-module {
+  .card {
+    border: $card-border;
+    box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
+    color: $dark;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &-header {
+      //border-bottom: 1px solid map_get($grays, "300");
+      font-size: 1.25*$font-size-base;
+      font-weight: $font-weight-normal;
+      padding: .75*$font-size-base .5*$font-size-base;
+    }
+
+    &-body {
+      padding: .5*$font-size-base .5*$font-size-base $font-size-base;
+    }
+
+    &-title {
+      font-size: 1.125*$font-size-base;
+      font-weight: $font-weight-bold;
+      line-height: 1.5*$font-size-base;
+      margin: 0 0 $font-size-base;
+    }
+
+    &-text {
+      //font-size: $font-size-md;
+    }
+
+    &-footer {
+      //font-size: .9375*$font-size-base;
+      background: transparent;
+      font-weight: $font-weight-semibold;
+      padding: .5*$font-size-base;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    p {
+    }
+
+  }
   @extend .discussion-body;
 
   display: block;
@@ -107,7 +156,7 @@
 
   &.shown {
     background-color: theme-color("inverse");
-    color: $blue;
+    color: #e41d37;
   }
 }
 
@@ -166,3 +215,5 @@ section.discussion-pagination {
     }
   }
 }
+
+// .discussion-module

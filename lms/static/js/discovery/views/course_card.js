@@ -34,7 +34,7 @@
 
                 data['org_text'] = data['org'];
                 if (data['organizer']!==undefined){
-                    data['org_text'] = "organizer_"+data['organizer']
+                    data['org_text'] = organizer_list[+data['organizer']];
                 }
 
                 var userLanguage = 'pl',

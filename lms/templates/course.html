@@ -25,11 +25,12 @@ from six import text_type
 	  				% endif
          		 </div>
 		</div>
+
 		<div class="card-footer small">
 			% if course_start_date is not None:
-				<p>${_("Starts")}:<time> ${course_start_date.strftime('%Y-%m-%d')}</time></p>
-			% endif
-		</div>
+                ${_('Starts')}:  <span class="localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="shortDate" data-datetime="${course_start_date}"></span>
+            % endif
+        </div>
 	</a>
 </div>
 

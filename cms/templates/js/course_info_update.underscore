@@ -7,7 +7,7 @@
 			<input id="update-date-<%= updateModel.cid %>" type="text" class="date" value="<%= updateModel.get('date') %>">
 		</div>
 		<div class="row">
-			<textarea class="new-update-content text-editor"><%= updateModel.get('content') %></textarea>
+			<textarea class="new-update-content text-editor" id="text-editor"><%= updateModel.get('content') %></textarea>
 		</div>
         <%if (push_notification_enabled) { %>
     		<div class="row new-update-push-notification">
