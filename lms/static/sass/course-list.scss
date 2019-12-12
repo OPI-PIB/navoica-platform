@@ -12843,7 +12843,7 @@ img.message-author {
   margin-bottom: 3rem;
 }
 
-.update-message {
+.update-message, .welcome-message {
   padding: 0.5rem;
   margin-top: 0.5rem;
   margin-bottom: 2rem;
@@ -12998,6 +12998,7 @@ img.message-author {
   }
   #course-content #seq_content .vert .xblock ol {
    flex-direction:column;
+
   }
   #course-content .speeds.menu-container {
    display:block;
@@ -13026,8 +13027,9 @@ justify-content: space-around;
 }
 
 #course-content #seq_content .vert .xblock li {
-  line-height:1;
-   font-size:14px;
+  line-height:1.4;
+   font-size:16px;
+
 }
 
 #course-content .spacing {
@@ -13039,12 +13041,19 @@ justify-content: space-around;
   margin-bottom:20px;
 }
 #course-content #seq_content .vert .xblock ol {
-  list-style-type: none;
-  display:flex;
-  flex-wrap:wrap;
   padding-left:0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
+  padding-left:15px;
 }
+#course-content #seq_content .vert .xblock ul {
+  padding-left:0;
+  padding-left:15px;
+
+}
+#seq_content .vert .xblock h3::before, #seq_content .vert .xblock h4::before
+{display:none !important;}
+
+
 
 #course-content .secondary-controls {
   display:flex;
@@ -13152,3 +13161,8 @@ span.complete-checkmark.fa.fa-check {
     display: block;
   }
 }
+#seq_content .vert .xblock p {line-height: 1.6em !important;margin-top: 0 !important; margin-bottom: 1.416em !important; font-size: 1em !important;}
+#seq_content .vert .xblock h6 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight: 600; font-size: 0.75em !important;}
+#seq_content .vert .xblock h5 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight: 600; font-size: 0.83em !important;}
+#seq_content .vert .xblock h4 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight: 600; font-size: 1em !important;}
+#seq_content .vert .xblock h3 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight:400 !important; font-size: 1.1125em !important;}
