@@ -415,7 +415,7 @@ FEATURES = {
     'UNSUPPORTED_BROWSER_ALERT_VERSIONS': "{e:0,f:-3,o:0,s:-3,c:-3,i:20}",
 }
 
-COURSE_DISCOVERY_FILTERS = ['course_category', 'organizer', 'difficulty']
+COURSE_DISCOVERY_FILTERS = ['course_category', 'availability', 'organizer', 'difficulty']
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
 COURSE_REVIEWS_TOOL_PROVIDER_FRAGMENT_NAME = 'coursetalk-reviews-fragment.html'
@@ -2724,6 +2724,15 @@ COURSE_DISCOVERY_MEANINGS = {
     'difficulty': {
         'name': u'Poziom trudności',
         'terms': {b[0]: b[1] for b in ALL_COURSE_DIFFICULTY},
+    },
+    'availability': {
+        'name': 'Dostępność',
+        'terms': {
+            'Upcoming': 'W przygotowaniu',
+            'Starting Soon': 'Nadchodzący',
+            'Current': 'W trakcie',
+            'Archived': 'Zakończony',
+        }
     }
 }
 
@@ -3288,5 +3297,6 @@ ELASTIC_FIELD_MAPPINGS = {
     'course_category': {'type': 'string'},
     'organizer': {'type': 'string'},
     'difficulty': {'type': 'string'},
-    'is_new': {'type': 'boolean'}
+    'is_new': {'type': 'boolean'},
+    'availability': {'type': 'string'}
 }
