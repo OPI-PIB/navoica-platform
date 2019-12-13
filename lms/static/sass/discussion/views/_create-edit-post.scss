@@ -8,7 +8,7 @@
 
   box-sizing: border-box;
   margin: 0;
-  border-radius: $forum-border-radius;
+  //border-radius: $forum-border-radius;
   max-width: map-get($container-max-widths, xl);
 
   label,
@@ -166,12 +166,12 @@
   }
 
   select.field-input {
-    border: 1px solid $forum-color-border !important;  // !important required to override -webkit-appearance
-    height: 40px;
+  //  border: 1px solid $forum-color-border !important;  // !important required to override -webkit-appearance
+  //  height: 40px;
   }
 
   .post-topic.field-input {
-    width: 100%;
+  //  width: 100%;
   }
 
   .post-option {
