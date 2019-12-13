@@ -9790,7 +9790,17 @@ article .display-3::before {
                   .post-context{}
                 }
               }
-              .post-extended-content{}
+              .post-extended-content {
+                .discussion-reply-new {
+                  .reply-body {
+                    .wmd-panel {
+                      .wmd-button-row {
+
+                      }
+                    }
+                  }
+                }
+              }
             }
             .post-extended-content.thread-responses-wrapper {
               display: block;
@@ -9808,7 +9818,7 @@ article .display-3::before {
               .responses {
                 display: block !important;
                 // margin: 0;
-                // padding: 0;
+                padding: 0 !important;
 
                 .forum-response {
                   border: $card-border;
