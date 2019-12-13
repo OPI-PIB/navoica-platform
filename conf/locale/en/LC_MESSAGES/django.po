@@ -32,8 +32,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2019-12-05 12:41+0000\n"
-"PO-Revision-Date: 2019-12-05 12:41:08.784830\n"
+"POT-Creation-Date: 2019-12-12 11:00+0000\n"
+"PO-Revision-Date: 2019-12-12 11:00:15.630831\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -736,7 +736,7 @@ msgid ""
 "In order to sign in, you need to activate your account.<br /><br />We just "
 "sent an activation link to <strong>{email}</strong>.  If you do not receive "
 "an email, check your spam folders or <a id=\"support_email\"  "
-"href=\"{support_url}\">contact {platform} Support</a>."
+"href=\"{contact_url}\">contact {platform} Technical Support</a>."
 msgstr ""
 
 #: common/djangoapps/student/views/login.py
@@ -3104,8 +3104,7 @@ msgstr ""
 msgid "Specify the language of your course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py lms/envs/common.py
-#: cms/templates/settings.html
+#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
 msgid "Course Difficulty"
 msgstr ""
 

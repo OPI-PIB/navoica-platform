@@ -203,6 +203,8 @@ def _generate_not_activated_message(user):
         settings.SUPPORT_SITE_LINK
     )
 
+    contact_url = reverse('contact')
+
     platform_name = configuration_helpers.get_value(
         'PLATFORM_NAME',
         settings.PLATFORM_NAME
@@ -211,11 +213,11 @@ def _generate_not_activated_message(user):
     not_activated_msg_template = _('In order to sign in, you need to activate your account.<br /><br />'
                                    'We just sent an activation link to <strong>{email}</strong>.  If '
                                    'you do not receive an email, check your spam folders or '
-                                   '<a id="support_email"  href="{support_url}">contact {platform} Support</a>.')
+                                   '<a id="support_email"  href="{contact_url}">contact {platform} Technical Support</a>.')
 
     not_activated_message = not_activated_msg_template.format(
         email=user.email,
-        support_url=support_url,
+        contact_url=contact_url,
         platform=platform_name
     )
 
