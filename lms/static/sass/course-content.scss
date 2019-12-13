@@ -9750,6 +9750,15 @@ article .display-3::before {
 
 .discussion {
   
+  // TODO: move lover in the structure
+  .wmd-prompt-dialog {
+    background: #fff;
+    padding: 20px;
+  }
+  .wmd-prompt-background {
+    background-color: #161616;
+  }
+
   .inline-discussion-thread-container {
     
     .inline-threads {
@@ -9826,6 +9835,7 @@ article .display-3::before {
                   list-style: none;
                   margin: 2rem;
                   padding: 2rem;
+                  margin-bottom: 10px !important;
 
                   &::before {
                     background: darkcyan;
@@ -9960,7 +9970,7 @@ article .display-3::before {
 
     .forum-nav-thread-list {
       list-style: none;
-      padding: 0;
+      padding: 0 !important;
 
       > li {
         border-top: 1px solid map_get($grays, "300");
@@ -10473,4 +10483,19 @@ article .display-3::before {
 
 main.container {
   display: block;
+}
+
+.wmd-prompt-dialog {
+  background: #fff;
+  padding: 20px;
+  font-size: 0.875rem;
+  font-family: arial, helvetica, sans-serif;
+
+  .field-label {
+    display: block;
+  }
+}
+
+.wmd-prompt-background {
+  background-color: #161616;
 }
