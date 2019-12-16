@@ -27,7 +27,7 @@ from six import string_types
 </%block>
 
 <%block name="content">
-<% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+<% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
 
 <div class="course-view page-content-container" id="course-container">
 
