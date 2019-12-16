@@ -464,7 +464,7 @@ def _update_organization_context(context, course):
     context['accomplishment_copy_course_org'] = partner_short_name
     context['organization_logo'] = organization_logo
     if course.organizer:
-        context['organizer'] = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]
+        context['organizer'] = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]
     else:
         context['organizer'] = partner_short_name
 

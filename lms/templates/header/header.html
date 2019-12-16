@@ -50,7 +50,7 @@ HeaderFactory();
 
          <span id="provider_course">
               % if course.organizer:
-                          <span class="provider"><strong>${settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]}</strong></span><br>
+                          <span class="provider"><strong>${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</strong></span><br>
 
              % else:
                           <span class="provider"><strong>${course.display_org_with_default}</strong></span><br>
