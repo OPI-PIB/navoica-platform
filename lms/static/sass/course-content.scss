@@ -9749,7 +9749,10 @@ article .display-3::before {
 
 
 .discussion {
-  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
   // TODO: move lover in the structure
   .wmd-prompt-dialog {
     background: #fff;
@@ -9804,8 +9807,9 @@ article .display-3::before {
                   .reply-body {
                     .wmd-panel {
                       .wmd-button-row {
-
                       }
+                    }
+                    .wmd-preview {
                     }
                   }
                 }
@@ -9862,7 +9866,7 @@ article .display-3::before {
                     border-top: 1px solid map_get($grays, "300");
                     list-style: none;
                     margin: 1rem 0 0;
-                    // padding: 1rem 0 0;
+                    padding: 1rem 1rem 0 0;
 
                     &:first-child {
                       border: 0;
@@ -9886,10 +9890,6 @@ article .display-3::before {
 
                         p + p {
                           margin-top: (baseline/2);
-                        }
-                        img {
-                          max-width: 100%;
-                          max-height: 100%;
                         }
                       }
 
