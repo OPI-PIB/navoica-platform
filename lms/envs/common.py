@@ -2691,6 +2691,7 @@ ALL_COURSE_ORGANIZER = sorted([
     [u"41", u"Centrum Nauki Kopernik"]
 ], key=lambda x:x[1], reverse=False)
 
+ALL_COURSE_ORGANIZER_DICT = dict(ALL_COURSE_ORGANIZER)
 
 ALL_COURSE_CATEGORY = sorted([
     [u"language", u"Języki obce"],
@@ -2705,6 +2706,8 @@ ALL_COURSE_CATEGORY = sorted([
     ["medicine", u"Zdrowie i nauki medyczne"],
     [u"business", u"Nauki biznesowe"],
 ], key=lambda x:x[1], reverse=False)
+
+ALL_COURSE_CATEGORY_DICT = dict(ALL_COURSE_CATEGORY)
 
 ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % week, week)]
                         for week in range(1, 50)]

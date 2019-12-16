@@ -21,7 +21,7 @@ from six import text_type
 			<div>
 	 			 <h4 class="card-title">${course.display_name_with_default}</h4>
 	  				% if course.organizer:
-					<p class="card-text">${settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1]}</p>
+					<p class="card-text">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</p>
 	  				% endif
          		 </div>
 		</div>

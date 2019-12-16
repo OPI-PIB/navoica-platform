@@ -238,7 +238,7 @@ from six import string_types
                         <div class="organizer-logo">
                             <p class="mt-2 mx-auto text-center">
                                 % if course.organizer:
-        <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+        <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
         <img src="/static/images/org/${course_organize}.png" height="80">
       % endif
                             </p>
@@ -278,10 +278,7 @@ from six import string_types
                   <i class="icon fa fa-graduation-cap"></i>
                 </div>
                 <div class="course-details-content">
-          <% for a in settings.ALL_COURSE_CATEGORY:
-            if (a[0]==course.course_category):
-              course_c = a[1]
-          %>
+         <% course_c = settings.ALL_COURSE_CATEGORY_DICT[course.course_category] %>
                   <h6>Kategoria tematyczna:</h6>
       <div>${course_c}</div>
                 </div>
@@ -420,7 +417,7 @@ from six import string_types
                   <i class="fas fa-landmark"></i>
                 </div>
                 <div class="course-details-content">
-                  <% course_organize = settings.ALL_COURSE_ORGANIZER[int(course.organizer)-1][1] %>
+                  <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
                   <h6>Organizator:</h5>
       <div>${course_organize}</div>
                 </div>
