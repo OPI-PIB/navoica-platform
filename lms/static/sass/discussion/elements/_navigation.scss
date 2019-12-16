@@ -417,7 +417,7 @@
     }
 
     &.is-active {
-      background-color: $forum-color-reading-thread;
+      background-color: #f8f9fa;
     }
 
     .forum-nav-thread-unread-comments-count {
@@ -1002,7 +1002,8 @@
 
   .forum-nav-browse-filter,
   .forum-nav-refine-bar {
-    background-color: map_get($grays, "100");
+    // background-color: map_get($grays, "100");
+    background-color: #f8f9fa;
     // border: 1px solid map_get($grays, "300");
     padding: .5rem;
 
