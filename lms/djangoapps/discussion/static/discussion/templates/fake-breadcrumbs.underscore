@@ -3,13 +3,11 @@
         <button class="btn-link all-topics btn-fake-breadrumbs">
             <!--<span class="icon fa fa-bars" aria-hidden="true"></span>-->
             <span class="nav-item nav-item-course breadcrumb-item">
-            <%- gettext('All Topics') %>
+            <%- gettext('Discussion') %>
             </span>
         </button>
     </span>
     <% contents.forEach(function(content) { %>
-    	/
-        <!--<span class="fa fa-angle-right"></span>-->
-        <span class="nav-item"><%- content %></span>
+        <span class="nav-item" id="week"><%- content %></span>
     <% }); %>
 </div>

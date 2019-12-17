@@ -30,8 +30,7 @@
     background-color: transparent;
     font-size: 14px;
     font-weight: 600;
-    margin: 0 .5em 0 1em;
-    margin-top: -2rem !important;
+    margin-left: 0;
     padding: 0;
   }
 }
@@ -41,11 +40,22 @@
 }
 
 .breadcrumbs {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   padding: 0.5rem 0 1.5rem;
   overflow: hidden;
   position: static;
-
+  font-size: 14px;
+  .nav-item {
+    margin-left: 0;
+  }
+  #week {
+    color: #6c757d;
+    font-style: italic;
+  }
+  #week::before {
+    content: "/";
+    margin: 0 1em 0 1em;
+  }
 }
 
 @media (min-width: 960px) {
@@ -1222,10 +1232,9 @@ a {
 main.container nav,
 .jumbotronn > .container nav {
   margin-top: 0;
-    overflow: hidden;
-    padding-left: 1px;
-    position: relative;
-    top: 1px;
+  overflow: hidden;
+  position: relative;
+  top: 1px;
 }
 
 main.container nav .nav-tabs,
