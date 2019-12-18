@@ -157,7 +157,7 @@ from openedx.core.release import doc_version
 ############################ FEATURE CONFIGURATION #############################
 
 EDX_ROOT = path(__file__).abspath().dirname().dirname().dirname()  # /edx-platform/
-PLATFORM_VERSION = subprocess.check_output(["git -C %s tag" % EDX_ROOT],shell=True)
+PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
 
 # Dummy secret key for dev/test
 SECRET_KEY = 'dev key'
