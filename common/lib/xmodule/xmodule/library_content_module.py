@@ -67,7 +67,7 @@ class LibraryContentFields(object):
     display_name = String(
         display_name=_("Display Name"),
         help=_("The display name for this component."),
-        default="Zadanie losowane z puli pytań",  # temporary solution
+        default=_("Zadanie losowane z puli pytań"),  # temporary solution
         # default=_("Randomized Content Block"),
         scope=Scope.settings,
     )

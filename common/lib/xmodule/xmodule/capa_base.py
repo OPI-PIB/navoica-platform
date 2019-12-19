@@ -102,7 +102,7 @@ class CapaFields(object):
         # it'd be nice to have a useful default but it screws up other things; so,
         # use display_name_with_default for those
         # default=_("Blank Advanced Problem")
-        default=("Puste zadanie zaawansowane")  # temporary solution
+        default=_("Puste zadanie zaawansowane")  # temporary solution
     )
     attempts = Integer(
         help=_("Number of attempts taken by the student on this problem"),
