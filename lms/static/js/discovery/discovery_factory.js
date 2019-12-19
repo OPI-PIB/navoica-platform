@@ -7,7 +7,7 @@
         function(Backbone, SearchState, Filters, SearchForm, CoursesListing, FilterBar, RefineSidebar) {
             return function(meanings, searchQuery, userLanguage, userTimezone) {
                 var dispatcher = _.extend({}, Backbone.Events);
-                var search = new SearchState();
+                var search = new SearchState({ meanings: meanings});
                 var filters = new Filters();
                 var form = new SearchForm();
                 var filterBar = new FilterBar({collection: filters});

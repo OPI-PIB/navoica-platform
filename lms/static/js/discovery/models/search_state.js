@@ -16,8 +16,9 @@
             terms: {},
             jqhxr: null,
 
-            initialize: function() {
-                this.discovery = new CourseDiscovery();
+            initialize: function(options) {
+                this.meanings = options.meanings || {};
+                this.discovery = new CourseDiscovery({meanings: this.meanings});
                 this.listenTo(this.discovery, 'sync', this.onSync, this);
                 this.listenTo(this.discovery, 'error', this.onError, this);
             },

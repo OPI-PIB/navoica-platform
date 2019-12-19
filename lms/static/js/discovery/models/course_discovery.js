@@ -17,11 +17,27 @@
                 latestCount: 0
             },
 
-            initialize: function() {
+            initialize: function(options) {
+                var meanings = options.meanings || {};
+                var termName = function(facetKey, termKey) {
+                return meanings[facetKey] &&
+                meanings[facetKey].terms &&
+                meanings[facetKey].terms[termKey] || termKey;
+                };
                 this.courseCards = new Backbone.Collection([], {model: CourseCard});
-                this.facetOptions = new Backbone.Collection([], {model: FacetOption});
+                this.facetOptions = new Backbone.Collection([], {model: FacetOption, comparator: function(modelA,modelB){
+                    var modelA = _.clone(modelA.attributes);
+                    var modelB = _.clone(modelB.attributes);
+                    modelA.name = termName(modelA.facet, modelA.term);
+                    modelB.name = termName(modelB.facet, modelB.term);
+                    return modelA.name.localeCompare(modelB.name);
+                    } });
             },
-
+            termName: function(facetKey, termKey) {
+                return this.meanings[facetKey] &&
+                this.meanings[facetKey].terms &&
+                this.meanings[facetKey].terms[termKey] || termKey;
+            },
             parse: function(response) {
                 var courses = response.results || [];
                 var facets = response.facets || {};
