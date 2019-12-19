@@ -9753,7 +9753,241 @@ article .display-3::before {
     max-width: 100%;
     max-height: 100%;
   }
-  // TODO: move lover in the structure
+
+  // discussion action buttons
+  .post-actions-list,
+  .response-actions-list,
+  .comment-actions-list {
+    text-align: right;
+
+    .actions-item {
+      box-sizing: border-box;
+      display: block;
+      margin: (baseline/4) 0;
+
+      &.is-hidden {
+        display: none;
+      }
+
+      &.is-disabled {
+        a {
+          pointer-events: none;
+
+          .action-icon {
+            display: none;
+          }
+
+          .action-label {
+            padding-right: 0;
+          }
+
+          &:hover {
+            border-color: transparent;
+            // background-color: pink;
+
+            // .action-label {
+            //   color: pink;
+            // }
+          }
+        }
+      }
+    }
+    .more-wrapper {
+      position: relative;
+    }
+  }
+  .action-button {
+    // @include transition(border .5s linear 0s);
+
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 0;
+    color: theme-color("secondary");
+
+    .action-icon {
+      display: inline-block;
+      // font-size: $forum-small-font-size;
+      height: baseline;
+      width: baseline;
+      border: 1px solid map_get($grays, "200");;
+      border-radius: 0;
+      text-align: center;
+      color: theme-color("secondary");
+
+      .icon {
+        margin-right: 0;
+
+        vertical-align: middle;
+      }
+    }
+
+    .action-label {
+      display: none;
+      vertical-align: middle;
+      padding: 2px 8px;
+    }
+
+    &:hover, &:focus {
+      .action-label {
+        display: inline-block;
+      }
+      .action-icon {
+        border-radius: 0;
+      }
+    }
+    // specific button styles
+    &.action-follow {
+      .action-label {
+        color: #dee2e6;
+      }
+      &.is-checked, &:hover, &:focus {
+        .action-icon {
+          // background-color: map_get($grays, "200");;
+          border: 1px solid #dee2e6;
+          color: $white;
+        }
+      }
+
+      &:hover, &:focus {
+        border-color: map_get($grays, "200");;
+      }
+    }
+
+    &.action-vote {
+      .action-label {
+        opacity: 1;
+      }
+
+      &.is-checked, &:hover, &:focus {
+        .action-icon {
+          background-color: map_get($grays, "900");
+          border: 1px solid map_get($grays, "900");
+          color: $white;
+        }
+      }
+
+      &:hover, &:focus {
+        border-color: map_get($grays, "900");
+
+        .action-label {
+          color: map_get($grays, "900");
+        }
+      }
+    }
+
+    &.action-endorse {
+      &.is-checked, &:hover, &:focus {
+        .action-icon {
+          background-color: #dee2e6;
+          border: 1px solid #dee2e6;
+          color: $white;
+        }
+      }
+
+      &:hover, &:focus {
+        border-color: #dee2e6;
+        background-color: map_get($grays, "100");
+
+        .action-label {
+          color: #dee2e6;
+        }
+      }
+    }
+
+    &.action-answer {
+      &.is-checked, &:hover, &:focus {
+        .action-icon {
+          border: 1px solid map_get($grays, "900");
+          background-color: map_get($grays, "900");
+          color: $white;
+        }
+      }
+
+      &:hover, &:focus {
+        border-color: map_get($grays, "900");
+        background-color: map_get($grays, "100");
+
+        .action-label {
+          color: map_get($grays, "900");
+        }
+      }
+    }
+
+    // more drop-down menu
+    &.action-more {
+      position: relative;
+
+      &:hover, &:focus {
+        border-color: theme-color("dark");
+        background-color: map_get($grays, "100");;
+
+        .action-icon {
+          border: 1px solid theme-color("dark");
+          background-color: theme-color("dark");
+          color: theme-color("inverse");
+        }
+
+        .action-label {
+          opacity: 1;
+          color: black;
+        }
+      }
+    }
+  }
+  .actions-dropdown {
+    .action-list-item {
+      text-align: right;
+      display: block;
+      width: 100%;
+      padding: (baseline/10) 0;
+      white-space: nowrap;
+      color: theme-color("secondary");
+      &:hover, &:focus {
+        color: red
+      }
+      .action-icon {
+        margin-left: (baseline/4);
+        display: inline-block;
+        width: (baseline/2);
+        color: inherit;
+      }
+      .action-label {
+        display: inline-block;
+        color: inherit;
+      }
+      &.is-checked {
+        &.action-pin {
+          color: pink;
+        }
+        &.action-report {
+          color: pink;
+        }
+        &:hover, &:focus {
+          color: red;
+        }
+      }
+    }
+  }
+  .action-button, .action-list-item {
+    .action-label {
+      float: left;
+      .label-checked {
+        display: none;
+      }
+    }
+    &.is-checked {
+      .label-unchecked {
+        display: none;
+      }
+      .label-checked {
+        display: inline;
+      }
+    }
+  }
+  //TODO
+
+  // TODO: move lower in the structure
   .wmd-prompt-dialog {
     background: #fff;
     padding: 20px;
@@ -9795,19 +10029,46 @@ article .display-3::before {
                   .post-header {
                     .post-header-actions {
                       float: right;
+                      .post-actions-list {
+                        list-style: none;
+                        text-align: right;
+                        .actions-item {
+                          button {
+
+                          }
+                          .more-wrapper {
+                            position: relative;
+                          }
+                        }
+                      }
                     }
-                    .post-header-content {}
+                    .post-header-content {
+                      .posted-details {
+                        font-style: italic;
+                        .username {
+                          display: inline;
+                          font-weight: 600;
+                          color: #e41d37;
+                          text-decoration: none;
+                          background-color: transparent;
+                        }
+                      }
+                    }
                   }
                   .post-body{}
-                  .post-context{}
+                  .post-context{
+                    .group-visibility-label {
+                      font-weight: 300;
+                      font-size: 0.875rem !important;
+                    }
+                  }
                 }
               }
               .post-extended-content {
                 .discussion-reply-new {
                   .reply-body {
                     .wmd-panel {
-                      .wmd-button-row {
-                      }
+                      .wmd-button-row {}
                     }
                     .wmd-preview {
                     }
@@ -9830,7 +10091,6 @@ article .display-3::before {
               }
               .responses {
                 display: block !important;
-                // margin: 0;
                 padding: 0 !important;
 
                 .forum-response {
@@ -9851,6 +10111,23 @@ article .display-3::before {
                   }
                   .discussion-response {
                     padding: 0;
+                    .response-header {
+                      .response-header-content {
+                        .username {
+                          display: inline-block;
+                          font-size: 1.375rem;
+                          font-weight: 600;
+                          line-height: 1.6363;
+                          margin: 0 0 .8182em;
+                          color: #e41d37;
+                          text-decoration: none;
+                          background-color: transparent;
+                        }
+                        .posted-details {
+                          font-style: italic;
+                        }
+                      }
+                    }
                   }
                 }
 
