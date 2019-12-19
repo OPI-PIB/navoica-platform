@@ -30,7 +30,10 @@
                     var modelB = _.clone(modelB.attributes);
                     modelA.name = termName(modelA.facet, modelA.term);
                     modelB.name = termName(modelB.facet, modelB.term);
-                    return modelA.name.localeCompare(modelB.name);
+                    if(modelA.facet === modelB.facet){
+                        return modelA.name.localeCompare(modelB.name);
+                    }
+                    return modelA.facet.localeCompare(modelB.facet);
                     } });
             },
             termName: function(facetKey, termKey) {
