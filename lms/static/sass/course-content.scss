@@ -10015,6 +10015,10 @@ article .display-3::before {
       margin-top: 0;
     }
 
+    .btn-link.action-show-comments {
+      display: none;
+    }
+
     .inline-thread {
       .forum-content {
         padding: 1rem 1rem 1rem 0rem;
@@ -10076,7 +10080,8 @@ article .display-3::before {
                 }
               }
             }
-            .post-extended-content.thread-responses-wrapper {
+            // .post-extended-content.thread-responses-wrapper {
+            .post-extended-content {
               display: block;
 
               .response-btn-count-wrapper {
@@ -10092,6 +10097,10 @@ article .display-3::before {
               .responses {
                 display: block !important;
                 padding: 0 !important;
+
+                .js-marked-answer-list {
+                  margin-top: 10px;
+                }
 
                 .forum-response {
                   border: $card-border;

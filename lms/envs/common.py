@@ -63,7 +63,7 @@ PLATFORM_NAME = "Navoica.pl"
 PLATFORM_DESCRIPTION = _('Your Platform Description Here')
 CC_MERCHANT_NAME = PLATFORM_NAME
 
-PLATFORM_VERSION = subprocess.check_output(["git -C %s tag" % EDX_ROOT],shell=True)
+PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
 
 PLATFORM_FACEBOOK_ACCOUNT = "http://www.facebook.com/YourPlatformFacebookAccount"
 PLATFORM_TWITTER_ACCOUNT = "@YourPlatformTwitterAccount"
@@ -2691,6 +2691,7 @@ ALL_COURSE_ORGANIZER = sorted([
     [u"41", u"Centrum Nauki Kopernik"]
 ], key=lambda x:x[1], reverse=False)
 
+ALL_COURSE_ORGANIZER_DICT = dict(ALL_COURSE_ORGANIZER)
 
 ALL_COURSE_CATEGORY = sorted([
     [u"language", u"Języki obce"],
@@ -2705,6 +2706,8 @@ ALL_COURSE_CATEGORY = sorted([
     ["medicine", u"Zdrowie i nauki medyczne"],
     [u"business", u"Nauki biznesowe"],
 ], key=lambda x:x[1], reverse=False)
+
+ALL_COURSE_CATEGORY_DICT = dict(ALL_COURSE_CATEGORY)
 
 ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % week, week)]
                         for week in range(1, 50)]
