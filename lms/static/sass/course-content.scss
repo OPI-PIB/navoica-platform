@@ -9783,11 +9783,6 @@ article .display-3::before {
 
           &:hover {
             border-color: transparent;
-            // background-color: pink;
-
-            // .action-label {
-            //   color: pink;
-            // }
           }
         }
       }
@@ -9797,27 +9792,31 @@ article .display-3::before {
     }
   }
   .action-button {
-    // @include transition(border .5s linear 0s);
-
+    padding: 0;
+    -webkit-transition: border 0.5s linear 0s;
+    -moz-transition: border 0.5s linear 0s;
+    transition: border 0.5s linear 0s;
     box-sizing: border-box;
     display: inline-block;
     border: 1px solid transparent;
-    border-radius: 0;
-    color: theme-color("secondary");
-
+    border-radius: 3px;
+    background-color: transparent;
+    // TODO
+    // border-radius: 0;
+    color: #313131;
+    
     .action-icon {
       display: inline-block;
-      // font-size: $forum-small-font-size;
-      height: baseline;
-      width: baseline;
-      border: 1px solid map_get($grays, "200");;
-      border-radius: 0;
+      font-size: 0.75rem;
+      height: 20px;
+      width: 20px;
+      border: 1px solid #d9d9d9;
+      border-radius: 3px;
       text-align: center;
-      color: theme-color("secondary");
+      color: #313131;
 
       .icon {
         margin-right: 0;
-
         vertical-align: middle;
       }
     }
@@ -9825,7 +9824,8 @@ article .display-3::before {
     .action-label {
       display: none;
       vertical-align: middle;
-      padding: 2px 8px;
+      // padding: 2px 8px;
+      padding: 2px;
     }
 
     &:hover, &:focus {
@@ -9839,13 +9839,13 @@ article .display-3::before {
     // specific button styles
     &.action-follow {
       .action-label {
-        color: #dee2e6;
+        // color: #dee2e6;
       }
       &.is-checked, &:hover, &:focus {
         .action-icon {
           // background-color: map_get($grays, "200");;
           border: 1px solid #dee2e6;
-          color: $white;
+          // color: $white;
         }
       }
 
@@ -9936,6 +9936,64 @@ article .display-3::before {
     }
   }
   .actions-dropdown {
+    right: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    pointer-events: none;
+    min-width: 145px;
+
+    &.is-expanded {
+      display: block;
+      pointer-events: auto;
+    }
+
+    .actions-dropdown-list {
+      box-sizing: border-box;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      position: relative;
+      width: 100%;
+      border-radius: 3px;
+      margin: 5px 0 0 0;
+      border: 1px solid #d9d9d9;
+      padding: 10px 15px;
+      background: #fff;
+
+      &::after, &::before {
+        right: 6px;
+        bottom: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      &::after {
+        margin-right: 1px;
+        border-color: transparent;
+        border-bottom-color: #fff;
+        border-width: 6px;
+      }
+
+      &::before {
+        border-color: transparent;
+        border-bottom-color: #d9d9d9;
+        border-width: 7px;
+      }
+    }
+
+    .actions-item {
+      display: block;
+      margin: 0;
+
+      &.is-hidden {
+        display: none;
+      }
+    }
+
+
     .action-list-item {
       text-align: right;
       display: block;
