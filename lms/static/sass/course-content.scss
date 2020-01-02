@@ -10464,7 +10464,10 @@ article .display-3::before {
       > .fa, .fas, .far {
         margin-right: 8px;
       }
-
+      
+      &.is-hidden {
+        display: none;
+      }
     }
 
   }

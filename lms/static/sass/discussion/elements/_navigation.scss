@@ -911,9 +911,10 @@
     margin-bottom: 2rem;
 
     .post-label {
-      .is-hidden {
+      &.is-hidden {
         display:none;
       }
+      
       align-items: center;
       background: rgba(0, 139, 139, .65);
       border: 0;
