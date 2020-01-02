@@ -10846,3 +10846,198 @@ main.container {
 .wmd-prompt-background {
   background-color: #161616;
 }
+
+// new post in course content
+#seq_content .vert {
+  .discussion-module {
+
+    form {
+      background-color: map_get($grays, "100");
+      border: 1px solid map_get($grays, "200");
+      margin: 0;
+      padding: 1rem;
+
+      legend,
+      label.field-label {
+        display: block;
+        margin: 0;
+      }
+
+      .post-field {
+        margin: 0 0 2rem;
+      }
+
+      .field-label > .field-label-text,
+      legend > .field-label-text,
+      label.field-label-text,
+      span.field-label-text {
+        display: block;
+        font-size: 1.125rem;
+        font-weight: $font-weight-semibold;
+        margin: 0;
+        padding: 0 0 .25rem;
+      }
+
+      .field-help {
+        font-size: .875rem;
+        font-style: italic;
+        margin: 0;
+        padding: 0 0 1rem;
+      }
+
+      .post-type-label {
+        display: block;
+      }
+
+      input + .field-input-label {
+        font-size: 14px;
+      }
+
+      .action {
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .inline-discussion-topic-title {
+      font-weight: 600;
+    }
+  
+    .forum-nav-refine-bar {
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .forum-new-post-form {
+    .wmd-input {
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+    }
+    .post-errors {
+      color: #770f1d;
+      background-color: #fad2d7;
+      border-color: #f7c0c7 !important;
+      position: relative;
+      padding: 0.75rem 1.25rem;
+      border: 1px solid transparent;
+      border-radius: 0;
+      margin-bottom: 1rem !important;
+      .alert-message {
+        display: inline-block;
+      }
+      li {
+        list-style-type: none;
+      }
+      .alert-icon, .alert-message, .alert-copy {
+        color: #770f1d; 
+        margin: 0 !important;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .wmd-button-row {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 5px 5px 5px;
+    padding: 0;
+    height: 30px;
+}
+
+.wmd-spacer {
+    margin-left: 14px;
+    position: absolute;
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: Silver;
+    list-style: none;
+  }
+
+  .wmd-spacer1 {
+    // Note: the WMD toolbar does not support RTL so this is hard-coded to the left
+    left: 50px;
+  }
+
+  .wmd-spacer2 {
+    // Note: the WMD toolbar does not support RTL so this is hard-coded to the left
+    left: 175px;
+  }
+
+  .wmd-spacer3 {
+    // Note: the WMD toolbar does not support RTL so this is hard-coded to the left
+    left: 300px;
+  }
+
+  .wmd-button {
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    list-style: none;
+    cursor: pointer;
+    padding: 0;
+   }
+
+  .wmd-button:hover {
+    background: none;
+    box-shadow: none;
+  }
+
+  .wmd-button > span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/wmd-buttons-transparent.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .wmd-input {
+    margin-top: 0;
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    height: 125px;
+    position: relative;
+    z-index: 1;
+    font-size: 0.875rem;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.6;
+    box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+  }
+
+  .inline-threads header {
+    padding: 0 1rem 1rem;
+  }
+
+  .forum-nev-thread-title {
+    font-size: 14px;
+  }
+
+  .discussion-module {
+    .discussion-module-title {
+      font-size: 1.375rem !important;
+      font-weight: 600 !important;
+      line-height: 1.6363 !important;
+      margin: 0 0 .8182em !important;
+    }
+  }
+  .discussion-module-header {
+    display: inline-block;
+  }
+
+  .discussion-show {
+    float: right;
+    position: relative;
+    top: 3px;
+    text-align: center;
+  }
+}
