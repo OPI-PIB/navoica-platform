@@ -2056,8 +2056,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #D0353F;
-  border-color: #D0353F;
+  background-color: #E41D37;
+  border-color: #E41D37;
 }
 
 .btn-primary:hover {
@@ -2591,11 +2591,13 @@ fieldset:disabled a.btn {
 .btn-link:hover {
   color: #96232a;
   text-decoration: underline;
+  outline: none;
 }
 
 .btn-link:focus, .btn-link.focus {
   text-decoration: underline;
   box-shadow: none;
+  outline: none;
 }
 
 .btn-link:disabled, .btn-link.disabled {
@@ -10899,12 +10901,23 @@ main.container {
 
     .inline-discussion-topic-title {
       font-weight: 600;
+      &::after {
+        display: inline-block;
+        content: ":";
+      }
     }
-  
+ 
     .forum-nav-refine-bar {
       i {
         font-size: 1rem;
       }
+    }
+
+    .all-posts-btn {
+      color: #E41D37;
+      background-color: transparent;
+      border: none;
+      margin-top: 0.5rem
     }
   }
 
@@ -10934,6 +10947,9 @@ main.container {
         margin: 0 !important;
         font-weight: 600;
       }
+    }
+    .add-post-cancel {
+      float: right;
     }
   }
 
@@ -11037,5 +11053,61 @@ main.container {
     top: 3px;
     text-align: center;
   }
+
+  .responses .js-response-list {
+    matgi: 2rem 0;
+  }
+
+  .add-response {
+    display: inline-block;
+  }
+
+  .response-count {
+    float: right;
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+
+  .comment-form {
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .edit-post-body, .edit-post-title {
+    width: 100%;
+  }
+
+  .edit-post-title {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.875rem !important;
+    color: #212529 !important;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    height: calc(1.7143em + 0.5rem + 2px) !important;
+    border: 1px solid #ced4da !important;
+  }
+
+  .wmd-preview-label {
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+  }
+
+  .discussion-response {
+    margin-bottom: 1rem;
+  }
+
+  .form-row {
+    margin: 0;
+
+  }
+
+  .post-cancel {
+    float: right;
+  }
+
 }
 

@@ -10,7 +10,7 @@
             <div class="response-btn-count-wrapper">
                 <% if (!readOnly) { %>
                 <div class="add-response">
-                    <button class="btn btn-outline-primary btn-small add-response-btn">
+                    <button class="btn btn-outline-primary btn-sm add-response-btn">
                         <%- gettext("Add a Response") %>
                     </button>
                 </div>

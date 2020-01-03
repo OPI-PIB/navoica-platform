@@ -164,7 +164,15 @@ section.discussion {
   @include clearfix();
 }
 
-.new-post-article {
+.edit-post-body {
+  width: 100%;
+}
+
+.post-cancel {
+  float: right;
+}
+
+.new-post-article, .edit-post-form {
   .forum-new-post-form {
   //  padding: $baseline;
   }
@@ -183,7 +191,7 @@ section.discussion {
     display: inline-block !important;
   }
 
-  .form-control-sm {
+  .form-control-sm, .edit-post-title {
     padding: 0.25rem 0.5rem !important;
     font-size: 0.875rem !important;  
     color: #212529 !important;
@@ -196,7 +204,7 @@ section.discussion {
     border-radius: 0 !important;
   }
 
-  .js-post-title {
+  .js-post-title, .edit-post-title {
     width: 100% !important;
   }
 }
