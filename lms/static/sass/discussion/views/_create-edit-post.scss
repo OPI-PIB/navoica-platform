@@ -99,6 +99,8 @@
   box-sizing: border-box;
   width: 100%;
   padding-top: 0;
+  margin: 0;
+  margin-bottom: 1rem;
 
   h1 {
     font-size: $forum-large-font-size;
@@ -106,10 +108,14 @@
 
   .form-row {
     margin-top: $baseline;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    display: block;
   }
 
   .post-cancel {
-    @include float(left);
+    @include float(right);
     @include margin($baseline/2, 0, 0, $baseline*0.75);
   }
 
