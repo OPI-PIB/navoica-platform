@@ -392,11 +392,10 @@
     transition: none;
     align-items: center;
     justify-content: space-between;
-    // color: $forum-color-read-post;
 
     &:hover,
-    &:active,
-    &:focus {
+    &:focus,
+    &:active {
       text-decoration: none;
     }
 
@@ -405,7 +404,12 @@
     }
 
     &.is-active {
-      background-color: #f8f9fa;
+      // background-color: #f8f9fa;
+      font-style: italic;
+      font-weight: 600;
+      border-right: 6px solid #e41d37;
+      background-color: white;
+      text-decoration: none;
     }
 
     .forum-nav-thread-unread-comments-count {
@@ -527,8 +531,17 @@
 }
 
 .forum-nav-load-more {
+  font-weight: 600;
+  color: #e41d37;
+  text-decoration: none;
+  background-color: transparent;
   border-bottom: 1px solid $forum-color-border;
-  background-color: theme-color("light");
+  // background-color: theme-color("light");
+  &:hover {
+  color: #e41d37;
+  text-decoration: underline;
+  background-color: transparent;
+  }
 }
 
 %forum-nav-load-more-content {
@@ -539,17 +552,21 @@
 
 .forum-nav-load-more-link {
   @extend %forum-nav-load-more-content;
-
-  color: $link-color;
+  font-weight: 600;
+  color: #e41d37;
+  text-decoration: underline;
+  background-color: transparent;
+  // border-bottom: 1px solid $forum-color-border;
+  
   width: 100%;
 
-  &:hover,
-  &:focus {
-    color: $forum-color-active-text;
+  // &:hover,
+  // &:focus {
+    // color: $forum-color-active-text;
     // !important overrides the one set here:
     // https://github.com/edx/edx-platform/blob/master/lms/static/sass/elements/_controls.scss#L472
-    background-color: $forum-color-active-thread !important;
-  }
+    // background-color: $forum-color-active-thread !important;
+  // }
 }
 
 .forum-nav-loading {
@@ -765,22 +782,18 @@
                 white-space: nowrap;
                 word-break: break-all;
               }
-
             }
-
           }
         }
-
       }
-
     }
-
   }
 
   .discussion-column {
     flex: 1 1;
     padding: 0 2rem 1rem;
     margin-top: 0;
+    word-break: break-word;
 
     .discussion-post {
     //  border: $card-border;
@@ -1559,7 +1572,9 @@ input[type="button"].btn-block {
 .fa-close, 
 .fa-times,
 .fa-ellipsis-h,
-.fa-pencil-alt {
+.fa-check,
+.fa-pencil-alt,
+.fa-caret-down {
   &::before {
     font-weight: 900;
   }
