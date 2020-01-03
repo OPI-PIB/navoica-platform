@@ -9749,6 +9749,8 @@ article .display-3::before {
 
 
 .discussion {
+  word-break: break-all;
+
   img {
     max-width: 100%;
     max-height: 100%;
@@ -10207,6 +10209,7 @@ article .display-3::before {
                   box-shadow: none;
 
                   > li {
+                    position: relative;
                     border-top: 1px solid map_get($grays, "300");
                     list-style: none;
                     margin: 1rem 0 0;
@@ -10225,12 +10228,11 @@ article .display-3::before {
                     }
                     .discussion-comment {
                       .response-body {
-                        @extend %t-copy-sub2;
 
                         font-size: 1rem;
                         display: inline-block;
                         margin-bottom: (baseline/2);
-                        width: flex-grid(10,12);
+                        width: 80%;
 
                         p + p {
                           margin-top: (baseline/2);
@@ -10247,11 +10249,6 @@ article .display-3::before {
                   }
                 }
               }
-              //todo add rest of the classes and fix formating of the responses
-              // margin and padding
-              // time ago
-              // menu position
-              // how reporter and another flags works
             }
           }
         }
@@ -11041,3 +11038,4 @@ main.container {
     text-align: center;
   }
 }
+
