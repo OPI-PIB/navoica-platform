@@ -22,6 +22,9 @@ import os
 from path import Path as path
 from xmodule.modulestore.modulestore_settings import convert_module_store_setting_if_needed
 
+import sentry_sdk
+sentry_sdk.init("https://928ed9d34c004b3db77f81b34d541c13@sentry.navoica.pl/3")
+
 # SERVICE_VARIANT specifies name of the variant used, which decides what JSON
 # configuration files are read during startup.
 SERVICE_VARIANT = os.environ.get('SERVICE_VARIANT', None)
@@ -601,15 +604,3 @@ derive_settings(__name__)
 CMS_BASE = ENV_TOKENS.get('CMS_BASE', 'studio.navoica.pl')
 
 FEATURES['ENABLE_INSTRUCTOR_EMAIL'] = True;
-
-try:
-    import raven
-    INSTALLED_APPS += (
-        'raven.contrib.django.raven_compat',
-    )
-
-    RAVEN_CONFIG = {
-        'dsn': 'https://a342ede52f964fff8909b06024477edc@sentry.io/1355968',
-    }
-except:
-    pass
