@@ -9,8 +9,8 @@ LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
 
 LOGGING['loggers']['tracking']['handlers'] = ['console']
 
-LMS_BASE = 'draft.navoica.pl'
-CMS_BASE = 'studio-draft.navoica.pl'
+LMS_BASE = os.environ.get('LMS_BASE', 'draft.navoica.pl')
+CMS_BASE = os.environ.get('CMS_BASE', 'studio-'+LMS_BASE)
 LMS_ROOT_URL = 'http://{}'.format(LMS_BASE)
 
 FEATURES.update({
@@ -32,12 +32,7 @@ JWT_AUTH.update({
 TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'pl'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+DEFAULT_FROM_EMAIL = 'registration@'+LMS_BASE
+DEFAULT_FEEDBACK_EMAIL = 'feedback@'+LMS_BASE
+SERVER_EMAIL = 'devops@'+LMS_BASE
 
-DEFAULT_FROM_EMAIL = 'registration@navoica.pl'
-DEFAULT_FEEDBACK_EMAIL = 'feedback@navoica.pl'
-SERVER_EMAIL = 'devops@navoica.pl'

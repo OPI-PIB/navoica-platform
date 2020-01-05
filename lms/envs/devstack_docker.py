@@ -10,7 +10,8 @@ LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
 LOGGING['loggers']['tracking']['handlers'] = ['console']
 HOMEPAGE_COURSE_MAX = 4
 LMS_BASE = os.environ.get('LMS_BASE', 'draft.navoica.pl')
-CMS_BASE = 'studio.'+LMS_BASE
+CMS_BASE = os.environ.get('CMS_BASE', 'studio-'+LMS_BASE)
+
 SITE_NAME = LMS_BASE
 LMS_ROOT_URL = 'http://{}'.format(LMS_BASE)
 LMS_INTERNAL_ROOT_URL = LMS_ROOT_URL
@@ -77,12 +78,6 @@ CREDENTIALS_SERVICE_USERNAME = 'credentials_worker'
 COURSE_CATALOG_API_URL = 'http://edx.devstack.discovery:18381/api/v1/'
 
 LANGUAGE_CODE = 'pl'
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
 
 DEFAULT_FROM_EMAIL = 'registration@'+LMS_BASE
 DEFAULT_FEEDBACK_EMAIL = 'feedback@'+LMS_BASE

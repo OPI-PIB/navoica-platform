@@ -37,9 +37,7 @@ JWT_AUTH.update({
 TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'pl'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mailer1.opi.org.pl'
-EMAIL_PORT = 25
+
 
 DEFAULT_FROM_EMAIL = 'registration@draft.navoica.pl'
 DEFAULT_FEEDBACK_EMAIL = 'feedback@draft.navoica.pl'
