@@ -11154,5 +11154,28 @@ main.container {
     float: right;
   }
 
+  .search-alerts {
+    display: flex;
+  }
+
+  .search-alert {
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+
+  .search-alert-controls {
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .control-dismiss {
+    background: none;
+    border: none;
+    height: unset;
+  }
+
 }
 
