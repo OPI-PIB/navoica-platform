@@ -10311,3 +10311,32 @@ article .display-3::before {
   fornt-size: 1rem;
 }
 
+.choicegroup_correct {
+  color: #008100;
+}
+
+.choicegroup_correct .status-icon::after {
+    color: #008100;
+    font-size: 1.2em;
+    content: "";
+    font-family: FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    speak: none;
+}
+
+
+.problem .action {
+  display: block !important;
+  .notification-btn-wrapper .notification-btn {
+    white-space: nowrap;
+    padding-left: 1rem;
+  }
+  .submit-attempt-container {
+    display: inline-block !important;
+  }
+  .problem-action-buttons-wrapper {
+    display: inline-block !important;
+    float: right;
+  }
+}
