@@ -30,7 +30,7 @@ from openedx.core.djangolib.js_utils import js_escaped_string
               %endif
            </div>
     </div>
-    <button class="discussion-show btn"
+    <button class="discussion-show btn shown btn btn-sm btn-outline-primary "
         data-discussion-id="${discussion_id}"
         ${"disabled=disabled" if not user.is_authenticated() else ""}>
         <span class="button-text">${_("Show Discussion")}</span>

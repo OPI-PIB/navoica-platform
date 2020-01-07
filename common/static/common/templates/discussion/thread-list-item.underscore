@@ -8,7 +8,8 @@
           // Translators: This is a label for a Discussion forum thread
           sr_text = gettext("discussion");
       } else if (endorsed) {
-          icon_class = "fa-check-square-o";
+          // icon_class = "fa-check-square-o";
+          icon_class = "fa-check-square";
           // Translators: This is a label for a Question forum thread with a marked answer
           sr_text = gettext("answered question");
       } else {

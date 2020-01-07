@@ -8,7 +8,7 @@
 
   box-sizing: border-box;
   margin: 0;
-  border-radius: $forum-border-radius;
+  //border-radius: $forum-border-radius;
   max-width: map-get($container-max-widths, xl);
 
   label,
@@ -61,12 +61,12 @@
 
     // UI: support text for input fields
     .field-help {
-      margin: ($baseline / 4) 0 ($baseline / 4) 0;
-      font-size: $forum-small-font-size;
-      line-height: 1.5;
+      //margin: ($baseline / 4) 0 ($baseline / 4) 0;
+      //font-size: $forum-small-font-size;
+      //line-height: 1.5;
 
       &#field_help_post_type {
-        @include margin($baseline / 4, 0, $baseline * 0.75, 0);
+      //  @include margin($baseline / 4, 0, $baseline * 0.75, 0);
       }
 
       &#new-post-editor-description {
@@ -81,14 +81,14 @@
   }
 
   .post-options {
-    margin: $baseline 0;
+  //  margin: $baseline 0;
 
     .field-label {
-      @include margin-right($baseline);
+    //  @include margin-right($baseline);
     }
 
     .icon {
-      @include margin-right($baseline / 4);
+    //  @include margin-right($baseline / 4);
     }
   }
 }
@@ -99,6 +99,8 @@
   box-sizing: border-box;
   width: 100%;
   padding-top: 0;
+  margin: 0;
+  margin-bottom: 1rem;
 
   h1 {
     font-size: $forum-large-font-size;
@@ -106,10 +108,14 @@
 
   .form-row {
     margin-top: $baseline;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    display: block;
   }
 
   .post-cancel {
-    @include float(left);
+    @include float(right);
     @include margin($baseline/2, 0, 0, $baseline*0.75);
   }
 
@@ -166,12 +172,12 @@
   }
 
   select.field-input {
-    border: 1px solid $forum-color-border !important;  // !important required to override -webkit-appearance
-    height: 40px;
+  //  border: 1px solid $forum-color-border !important;  // !important required to override -webkit-appearance
+  //  height: 40px;
   }
 
   .post-topic.field-input {
-    width: 100%;
+  //  width: 100%;
   }
 
   .post-option {
@@ -192,4 +198,58 @@
       @include margin-right($baseline / 4);
     }
   }
+}
+
+ article .new-post-article {
+
+  form {
+    background-color: map_get($grays, "100");
+    border: 1px solid map_get($grays, "200");
+    margin: 0;
+    padding: 1rem;
+
+    legend,
+    label.field-label {
+      display: block;
+      margin: 0;
+    }
+
+    .post-field {
+      margin: 0 0 2rem;
+    }
+
+    .field-label > .field-label-text,
+    legend > .field-label-text,
+    label.field-label-text,
+    span.field-label-text {
+      display: block;
+      font-size: 1.125rem;
+      font-weight: $font-weight-semibold;
+      margin: 0;
+      padding: 0 0 .25rem;
+    }
+
+    .field-help {
+      font-size: .875rem;
+      font-style: italic;
+      margin: 0;
+      padding: 0 0 1rem;
+    }
+
+    .post-type-label {
+      display: block;
+    }
+
+    input + .field-input-label {
+      font-size: 14px;
+    }
+
+    .action {
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
 }
