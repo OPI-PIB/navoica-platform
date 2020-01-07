@@ -9843,19 +9843,19 @@ article .display-3::before {
     // specific button styles
     &.action-follow {
       .action-label {
-        // color: #dee2e6;
-        color: #B43F37;
+        color: #313131;
       }
+
       &.is-checked, &:hover, &:focus {
         .action-icon {
-          // background-color: map_get($grays, "200");;
+          background-color: #313131;
           border: 1px solid #313131;
-          // color: $white;
+          color: $white;
         }
       }
 
       &:hover, &:focus {
-        border-color: map_get($grays, "200");;
+        border-color: map_get($grays, "900");
       }
     }
 
@@ -9884,18 +9884,18 @@ article .display-3::before {
     &.action-endorse {
       &.is-checked, &:hover, &:focus {
         .action-icon {
-          background-color: #dee2e6;
-          border: 1px solid #dee2e6;
+          background-color: map_get($grays, "900");
+          border: 1px solid map_get($grays, "900");
           color: $white;
         }
       }
 
       &:hover, &:focus {
-        border-color: #dee2e6;
+        border-color: map_get($grays, "900");
         background-color: map_get($grays, "100");
 
         .action-label {
-          color: #dee2e6;
+          color: map_get($grays, "900");
         }
       }
     }
@@ -9905,7 +9905,7 @@ article .display-3::before {
         .action-icon {
           border: 1px solid map_get($grays, "900");
           background-color: map_get($grays, "900");
-          color: $white;
+          color: map_get($grays, "100");
         }
       }
 
@@ -9924,13 +9924,13 @@ article .display-3::before {
       position: relative;
 
       &:hover, &:focus {
-        border-color: theme-color("dark");
+        border-color: map_get($grays, "900");
         background-color: map_get($grays, "100");;
 
         .action-icon {
-          border: 1px solid theme-color("dark");
-          background-color: theme-color("dark");
-          color: theme-color("inverse");
+          border: 1px solid map_get($grays, "900");
+          background-color: map_get($grays, "900");
+          color: map_get($grays, "100");
         }
 
         .action-label {
@@ -10032,6 +10032,46 @@ article .display-3::before {
       }
     }
   }
+
+  .actions-dropdown .action-list-item {
+    text-align: right;
+    display: block;
+    width: 100%;
+    padding: 2px 0;
+    white-space: nowrap;
+    color: #313131;
+    border: none;
+    background-color: transparent;
+
+    &:hover, &:focus {
+      // color: map_get($grays, "900");
+      color: red;
+    }
+
+    .action-icon {
+      margin-left: 5px;
+      display: inline-block;
+      width: 10px;
+      color: inherit;
+    }
+
+    .action-label {
+      display: inline-block;
+      color: inherit;
+    }
+
+    &.is-checked {
+      &.action-pin, &.action-report {
+        color: map_get($grays, "900");
+      }
+
+      &:hover, &:focus {
+        color: map_get($grays, "900");
+      }
+    }
+  }
+
+
   .action-button, .action-list-item {
     .action-label {
       float: left;
@@ -10048,7 +10088,6 @@ article .display-3::before {
       }
     }
   }
-  //TODO
 
   // TODO: move lower in the structure
   .wmd-prompt-dialog {
@@ -11106,7 +11145,9 @@ main.container {
 
   .form-row {
     margin: 0;
-
+    .edit-comment-body {
+      width: 100%;
+    }
   }
 
   .post-cancel {
