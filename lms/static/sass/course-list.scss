@@ -13072,16 +13072,15 @@ justify-content: space-around;
 }
 
 #course-content .volume {
- transform: rotate(270deg);
- margin-top: 0;
- right:25%;
- position: absolute;
+ // transform: rotate(270deg);
+ margin: 0 20px;
+ margin-top: -50px;
 }
 
 
-#course-content .volume .control {
- transform: rotate(90deg);
-}
+// #course-content .volume .control {
+//  transform: rotate(90deg);
+// }
 
 #course-content .speeds.menu-container {
   display:flex;
@@ -13169,6 +13168,7 @@ span.complete-checkmark.fa.fa-check {
 #seq_content .vert .xblock h4 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight: 600; font-size: 1em !important;}
 #seq_content .vert .xblock h3 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight:400 !important; font-size: 1.1125em !important;}
 
+
 .dissmis-action::before {
   color: #E41D37;
   content: "\f00d";
@@ -13188,3 +13188,14 @@ span.complete-checkmark.fa.fa-check {
     padding: 0 !important;
   }
 }
+
+
+.tc-wrapper .subtitles ol li {list-style-type: none !important; font-size:13px !important;}
+.video-wrapper .video-controls .secondary-controls .video-speeds {list-style-type: none !important;margin-bottom:0 !important;} 
+.video-wrapper #course-content #seq_content .vert .xblock ol {display:flex; flex-wrap:wrap; margin-bottom: 0px !important; padding:0 !important;}
+.video-wrapper #course-content .speed-option, #course-content .control {background-color: #D0353F; color: #fff;}
+.video-wrapper #course-content .vcr {margin-top: 5px; margin-bottom:10px;}
+.video-wrapper .vidtime {margin-left:5px;}
+#course-content .ui-slider-vertical {margin-right: 0 !important; width: 0.7em}
+#course-content .speed-option {padding-left: 2px;}
+
