@@ -13161,8 +13161,29 @@ span.complete-checkmark.fa.fa-check {
     display: block;
   }
 }
+
 #seq_content .vert .xblock p {line-height: 1.6em !important;margin-top: 0 !important; margin-bottom: 1.416em !important; font-size: 1em !important;}
 #seq_content .vert .xblock h6 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight: 600; font-size: 0.75em !important;}
 #seq_content .vert .xblock h5 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight: 600; font-size: 0.83em !important;}
 #seq_content .vert .xblock h4 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight: 600; font-size: 1em !important;}
 #seq_content .vert .xblock h3 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight:400 !important; font-size: 1.1125em !important;}
+
+.dissmis-action::before {
+  color: #E41D37;
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  right: 0;
+  text-align: center;
+}
+
+.dismiss-message {
+  .btn-outline-primary, .btn-outline-primary:active:hover:focus{
+    color: unset !important;
+    border-color: transparent !important;
+    background-color: unset !important;
+    box-shadow: none !important;
+    min-width: unset !important;
+    padding: 0 !important;
+  }
+}
