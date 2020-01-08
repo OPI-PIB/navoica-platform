@@ -164,15 +164,48 @@ section.discussion {
   @include clearfix();
 }
 
-.new-post-article {
+.edit-post-body {
+  width: 100%;
+}
+
+.post-cancel {
+  float: right;
+}
+
+.new-post-article, .edit-post-form {
   .forum-new-post-form {
-    padding: $baseline;
+  //  padding: $baseline;
   }
 
   .inner-wrapper {
     max-width: map-get($container-max-widths, xl);
     min-width: 760px;
     margin: auto;
+  }
+
+  .post-field .field-input {
+    display: block !important;
+  }
+
+  .field-label .input-radio {
+    display: inline-block !important;
+  }
+
+  .form-control-sm, .edit-post-title {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.875rem !important;  
+    color: #212529 !important;
+    border-radius: 0;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    height: calc(1.7143em + 0.5rem + 2px) !important; 
+    border: 1px solid #ced4da  !important;
+    border-radius: 0 !important;
+  }
+
+  .js-post-title, .edit-post-title {
+    width: 100% !important;
   }
 }
 

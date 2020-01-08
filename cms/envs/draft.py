@@ -3,7 +3,7 @@
 from .devstack import *  # pylint: disable=wildcard-import, unused-wildcard-import
 
 import sentry_sdk
-sentry_sdk.init("https://a342ede52f964fff8909b06024477edc@sentry.io/1355968")
+sentry_sdk.init("https://9f86e1dd11cd49e28c670a5786f218bf@sentry.navoica.pl/7")
 
 # Docker does not support the syslog socket at /dev/log. Rely on the console.
 LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
@@ -37,9 +37,7 @@ JWT_AUTH.update({
 TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'pl'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mailer1.opi.org.pl'
-EMAIL_PORT = 25
+
 
 DEFAULT_FROM_EMAIL = 'registration@draft.navoica.pl'
 DEFAULT_FEEDBACK_EMAIL = 'feedback@draft.navoica.pl'

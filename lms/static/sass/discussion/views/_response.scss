@@ -24,7 +24,7 @@
     position: relative;
     margin: $baseline 0;
     border: 1px solid $forum-color-border;
-    border-radius: $forum-border-radius;
+    //border-radius: $forum-border-radius;
     box-shadow: 0 0 1px $shadow;
   }
 
@@ -143,9 +143,10 @@
 .discussion .comments {
   @extend %ui-no-list;
 
-  @include border-radius(0, 0, $forum-border-radius, $forum-border-radius);
+  //@include border-radius(0, 0, $forum-border-radius, $forum-border-radius);
 
-  background: theme-color("lightest");
+  background-color: map_get($grays, "100");
+  border: 1px solid map_get($grays, "200");
   box-shadow: 0 1px 3px -1px $shadow inset;
 
   > li {
@@ -163,6 +164,9 @@
 
   .comment-form {
     @include clearfix();
+
+    background-color: unset;
+    border: unset;
 
     padding: ($baseline/2) 0;
 
@@ -194,8 +198,9 @@
   @include float(right);
   @include margin-right($baseline / 2);
 
-  color: $forum-color-response-count;
+  //color: $forum-color-response-count;
   font-size: $forum-base-font-size;
+  margin-top: ($baseline / 2);
 }
 
 .response-pagination {
