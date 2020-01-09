@@ -4148,7 +4148,7 @@ input {
     border: 1px solid transparent;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    height: auto;
+    height: auto !important;
     padding: 15px;
     white-space: nowrap;
 
@@ -11451,7 +11451,7 @@ main.container > aside {
     background: #fff;
     border-bottom-color: #fff !important;
     box-shadow: 0 4px 8px #adb5bd;
-    height: auto;
+    height: auto !important;
     z-index: 10;
 }
 
