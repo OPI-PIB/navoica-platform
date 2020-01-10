@@ -19,7 +19,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
   <script src="${static.url('js/course_info.js')}">
 </script>
 
-% if request.path.endswith("course/"):
+
 
 % if show_preview_menu:
     <%
@@ -34,7 +34,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
     student_selected = selected(not staff_selected and not specific_student_selected and not masquerade_group_id)
     %>
 
-
+% if request.path.endswith("course/"):
 
 <header id="header-course" class="bg-light">
   <div class="jumbotron">
@@ -105,6 +105,52 @@ show_preview_menu = course and staff_access and supports_preview_menu
     </div>
   </div>
 </header>
+	% else:
+	
+	<header id="header-course" class="bg-light row justify-content-md-center">
+		<div class="col-md-6 pt-4">
+			<div class="wrapper-preview-menu">
+			  <div class="preview-menu">
+			   <div class="action-preview">
+				 <form action="#" class="action-preview-form d-flex" method="post">
+					<div class="action-preview-actions">
+					  <label>Zobacz ten kurs jako</label>
+				<select id="action-preview-select" class="custom-select action-preview-select">
+				<option value="staff" ${staff_selected}>${_("Staff")}</option>
+				<option value="student" ${student_selected}>${_("Learner")}</option>
+				<option value="specific student" ${specific_student_selected}>${_("Specific learner")}</option>
+				% if course_partitions:
+				  % for course_partition in course_partitions:
+					% for group in sorted(course_partition.groups, key=lambda group: group.name):
+					<option value="group.id" data-group-id="${group.id}" data-partition-id="${course_partition.id}" ${selected(masquerade_group_id== group.id)}>${_("Learner in {content_group}").format(content_group=group.name)}</option>
+					% endfor
+				  % endfor
+				% endif
+				  </select>
+					</div>
+			<div class="action-preview-username-container">
+				<label for="action-preview-username">${_("Username or email:")}</label>
+				<input type="text" class="form-control action-preview-username" id="action-preview-username">
+			</div>
+			<button type="submit" class="sr-only" name="submit" value="submit">${_("Set preview mode")}</button>
+			 </form>
+			</div>
+			% if specific_student_selected:
+			  <div class="preview-specific-student-notice">
+			<p>${Text(_("You are now viewing the course as {i_start}{user_name}{i_end}.")).format(
+									user_name=masquerade_user_name,
+									i_start=HTML(u'<i>'),
+									i_end=HTML(u'</i>'),
+								)}
+			</p>
+				  </div>
+			% endif
+		  </div>
+		</div>
+	</div>
+	</header>
+
+	% endif
 
 
     <%
@@ -153,11 +199,5 @@ show_preview_menu = course and staff_access and supports_preview_menu
 
 
 % endif
-
-% endif
-
-% else:
-
-<header id="header-course" class="bg-light"></header>
 
 % endif
