@@ -153,6 +153,9 @@ from openedx.core.djangoapps.theming.helpers_dirs import (
 from openedx.core.lib.license import LicenseMixin
 from openedx.core.lib.derived import derived, derived_collection_entry
 from openedx.core.release import doc_version
+from machina import get_apps as get_machina_apps
+from machina import MACHINA_MAIN_STATIC_DIR
+from machina import MACHINA_MAIN_TEMPLATE_DIR
 
 ############################ FEATURE CONFIGURATION #############################
 
@@ -354,6 +357,7 @@ MAKO_TEMPLATE_DIRS_BASE = [
     OPENEDX_ROOT / 'core' / 'djangoapps' / 'dark_lang' / 'templates',
     OPENEDX_ROOT / 'core' / 'lib' / 'license' / 'templates',
     CMS_ROOT / 'djangoapps' / 'pipeline_js' / 'templates',
+    MACHINA_MAIN_TEMPLATE_DIR,
 ]
 
 CONTEXT_PROCESSORS = (
@@ -364,6 +368,8 @@ CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',  # this is required for admin
     'django.template.context_processors.csrf',
     'help_tokens.context_processor',
+    # Machina
+    'machina.core.context_processors.metadata',
 )
 
 # Django templating
@@ -378,6 +384,7 @@ TEMPLATES = [
         # Options specific to this backend.
         'OPTIONS': {
             'loaders': (
+
                 # We have to use mako-aware template loaders to be able to include
                 # mako templates inside django templates (such as main_django.html).
                 'openedx.core.djangoapps.theming.template_loaders.ThemeTemplateLoader',
@@ -528,7 +535,28 @@ MIDDLEWARE_CLASSES = [
 
     # This must be last so that it runs first in the process_response chain
     'openedx.core.djangoapps.site_configuration.middleware.SessionCookieDomainOverrideMiddleware',
+    # Machina
+    'machina.apps.forum_permission.middleware.ForumPermissionMiddleware',
 ]
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    },
+    'machina_attachments': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/tmp',
+    },
+}
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(PROJECT_ROOT, 'whoosh_index'),
+    },
+}
+
+
 
 # Clickjacking protection can be enabled by setting this to 'DENY'
 X_FRAME_OPTIONS = 'ALLOW'
@@ -648,7 +676,7 @@ STATIC_ROOT = ENV_ROOT / "staticfiles" / 'studio'
 STATICFILES_DIRS = [
     COMMON_ROOT / "static",
     PROJECT_ROOT / "static",
-
+    MACHINA_MAIN_STATIC_DIR,
     # This is how you would use the textbook images locally
     # ("book", ENV_ROOT / "book_images"),
 ]
@@ -1142,7 +1170,11 @@ INSTALLED_APPS = [
 
     # Asset management for mako templates
     'pipeline_mako',
-]
+    # Machina related apps:
+    'mptt',
+    'haystack',
+    'widget_tweaks',
+] + get_machina_apps()
 
 ################# EDX MARKETING SITE ##################################
 
