@@ -13162,7 +13162,15 @@ span.complete-checkmark.fa.fa-check {
   }
 }
 
-#seq_content .vert .xblock p {line-height: 1.6em !important;margin-top: 0 !important; margin-bottom: 1.416em !important; font-size: 1em !important;}
+#seq_content .vert .xblock {
+  p, li {
+    line-height: 1.6em !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.416em !important;
+    font-size: 1em !important;
+  }
+}
+
 #seq_content .vert .xblock h6 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight: 600; font-size: 0.75em !important;}
 #seq_content .vert .xblock h5 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight: 600; font-size: 0.83em !important;}
 #seq_content .vert .xblock h4 {line-height: 1.6em !important;margin: 0 0 10px !important; font-weight: 600; font-size: 1em !important;}
