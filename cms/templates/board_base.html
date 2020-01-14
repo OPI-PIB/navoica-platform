@@ -4,7 +4,6 @@
 
 {% block css %}
   {{ block.super }}
- <link rel="icon" type="image/x-icon" href="${static.url(static.get_value('favicon_path', settings.FAVICON_PATH))}" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/studio-main-v1.css' %}" />
 {% endblock css %}
 {% block header %}
@@ -14,7 +13,7 @@
     <div class="wrapper wrapper-l">
       <h1 class="branding">
         <a class="brand-link" href="/">
-          <img class="brand-image" src="{% static 'images/logo-light-bg.svg' %}" alt="Navoica Studio" />
+          <img class="brand-image" src="{% static 'images/logo-light-bg.svg' %}" alt={{settings.STUDIO_NAME}} />
         </a>
       </h1>
        <nav class="nav-course nav-dd ui-left">
@@ -44,7 +43,7 @@
           <li class="nav-item nav-account-help">
             <h3 class="title"><span class="label"><a href="https://pomoc.navoica.pl" title="{% trans 'Contextual Online Help' %}" target="_blank">{% trans "Help" %}</a></span></h3>
           </li>
-            <h3 class="title"><span class="label"><a href="/forum/" title="Studio Forum">Forum</a></span></h3>
+            <h3 class="title"><span class="label"><a href="/forum/" title="{% trans 'Discussion forum' %}" >{% trans 'Forum' %}</a></span></h3>
           </li>
           <li class="nav-item nav-account-user">
                <div class="wrapper-user-menu dropdown-menu-container logged-in js-header-user-menu">
@@ -59,10 +58,7 @@
                       </span>
                   </button>
                   <ul class="dropdown-menu list-divided is-hidden" id="{% trans 'Usermenu' %}" tabindex="-1">
-                          <li class="dropdown-item item has-block-link">
-                            <a href="/">"aa"</a>
-                          </li>
-                      <li class="dropdown-item item has-block-link">
+                         <li class="dropdown-item item has-block-link">
                         <a class="action action-signout" href=href="/logout/">{% trans "Sign Out" %}</a>
                       </li>
                   </ul>
@@ -102,7 +98,7 @@
 
     <div class="footer-content-primary">
       <div class="colophon">
-        <p>&copy; 2020 <a data-rel="edx.org" href="${marketing_link('ROOT')}" rel="external">Navoica.pl</a>.</p>
+        <p>&copy; 2020 <a data-rel="edx.org" href="${marketing_link('ROOT')}" rel="external">{{settings.PLATFORM_NAME}}</a>.</p>
       </div>
 
         <nav class="nav-peripheral" aria-label="{% trans 'Policies' %}">

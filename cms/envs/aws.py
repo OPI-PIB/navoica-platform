@@ -609,3 +609,10 @@ derive_settings(__name__)
 CMS_BASE = ENV_TOKENS.get('CMS_BASE', 'studio.navoica.pl')
 
 FEATURES['ENABLE_INSTRUCTOR_EMAIL'] = True;
+
+SETTINGS_EXPORT = [
+    'PLATFORM_NAME',
+    'LMS_ROOT_URL',
+    'STUDIO_NAME',
+    'FAVICON_PATH',
+]

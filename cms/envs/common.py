@@ -370,6 +370,7 @@ CONTEXT_PROCESSORS = (
     'help_tokens.context_processor',
     # Machina
     'machina.core.context_processors.metadata',
+    'django_settings_export.settings_export',
 )
 
 # Django templating
