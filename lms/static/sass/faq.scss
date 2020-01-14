@@ -1,3 +1,18 @@
+//*[@id="page-header"]/div/div/h2
+.faq-page {
+    .no-bottom-distance {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+
+        h2 {
+            margin-bottom: 0;
+            margin-top: 0;
+
+        }
+    }
+}
 /**
    Begin of Accordion
  */
@@ -11,7 +26,7 @@
 .accordion {
   border: 1px solid #dee2e6;
   border-top: 0;
-  margin: 0 0 16px;
+  margin: 8px 0 16px;
 
   &:last-child {
     border-bottom: 1px solid #dee2e6;
@@ -78,17 +93,19 @@
 
   .card-body {
     font-size: 14px;
-    padding: 8px 8px;
+    padding: 16px 8px;
 
     > .accordion {
-      margin: -8px -8px;
+      margin: 0px 0px;
     }
 
+    // answer to faq-question
     p {
       font-size: 14px;
+      margin: 8px;
 
       &:last-child {
-        margin: 0;
+        margin-bottom: 20px;
       }
     }
 
@@ -110,6 +127,7 @@
       border: 0;
       border-top: 1px solid #dee2e6;
       padding: 8px 0;
+      margin-bottom: 20px !important;
 
       &:hover {
         background: transparent;
@@ -230,8 +248,7 @@
         font-size: 16px !important;
 
         &:last-child {
-          margin: 0;
-          padding: 12px;
+          margin-bottom: 10px;
         }
       }
 
@@ -314,7 +331,7 @@
     flex: 1;
     flex-direction: row;
     justify-content: flex-start;
-    margin: 0 0 8px;
+    margin: 0 0 20px;
 
     &:hover {
       cursor: pointer;
@@ -344,7 +361,6 @@
       h5 {
         font-size: 16px;
         line-height: 1.5;
-        margin: -4px 0 0;
       }
 
       p {
