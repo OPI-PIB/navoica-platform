@@ -9626,6 +9626,10 @@ article .display-3::before {
   font-size: 1.125rem;
   line-height: 1.7778;
   margin: 0;
+  span {
+    white-space: unset !important;
+  }
+
 }
 
 #seq_content .vert .xblock blockquote {
@@ -9727,7 +9731,7 @@ article .display-3::before {
 #content .vert .problem {
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
-  padding: 0 1rem;
+  padding: 1rem 1rem 0 1rem;
   margin: 1rem 0 1rem 0;
 }
 
