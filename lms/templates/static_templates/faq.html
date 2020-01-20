@@ -3,14 +3,110 @@
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("FAQ")}</%block>
+<div class="faq-page">
+    <header id="page-header" class="bg-light">
+        <div class="jumbotron">
+            <div class="container">
+                <h2 class="display-2">${_("FAQ")}</h2>
+            </div>
+        </div>
+    </header>
 
-<main id="main" aria-label="Content" tabindex="-1">
-    <section class="container about">
-        <h1>
-            <%block name="pageheader">${page_header or _("FAQ")}</%block>
-        </h1>
-        <p>
-            <%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
-        </p>
-    </section>
-</main>
+    <div id="content" class="bg-light">
+        <main class="container">
+
+            <section>
+                <%block name="pagecontent">
+                    <div id="faq-categories" class="list-group">
+
+                         % for i, category in enumerate(page_content, 1):
+                            <% category_identifier = "{:02d}".format(i) %>
+                            <a href="#accordion-anchor-${category_identifier}" class="list-group-item list-group-item-action">
+                                <i class="${_(category['icon_class'])}"></i>
+                                <div>
+                                    <h5>${_(category['name'])}</h5>
+                                </div>
+                            </a>
+                        % endfor
+
+                    </div>
+
+                    % for i, category in enumerate(page_content, 1):
+                        <% category_identifier = "{:02d}".format(i) %>
+                        <div class="accordion-wrapper">
+                            <!-- Category of questions -->
+                            <!-- show answers -->
+                            <div class="accordion-anchor" id="accordion-anchor-${category_identifier}">
+                            </div>
+
+                            <label class="accordion-switch">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input">
+                                    <span class="custom-control-label">${_("show answers")}</span>
+                                </div>
+                            </label>
+                            <!-- category -->
+                            <div class="accordion faq">
+                                <div class="card">
+                                    <div class="card-header" id="heading-${category_identifier}">
+                                        <button class="btn btn-link btn-cat" type="button"
+                                                data-toggle="collapse" data-target="#collapse-${category_identifier}" aria-expanded="false" aria-controls="collapse-${category_identifier}">
+                                                ${category['name']}:
+                                        </button>
+                                    </div>
+
+                                    <div class="collapse show" aria-labelledby="heading-01" id="collapse-${category_identifier}">
+                                        <div class="card-body">
+                                            <div class="accordion">
+                                            % for j, question_answer in enumerate(category['questions'], 1):
+                                            <% question_identifier = "{:02d}-{:02d}".format(i, j) %>
+                                                <div class="card">
+                                                    <div class="card-header" id="heading-${question_identifier}">
+                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-${question_identifier}" aria-expanded="false"
+                                                                aria-controls="collapse-${question_identifier}">
+                                                                ${question_answer[0]}
+                                                        </button>
+                                                    </div>
+                                                    <div id="collapse-${question_identifier}" class="collapse" aria-labelledby="heading-${question_identifier}">
+                                                        <div class="card-body">
+                                                            <p>${question_answer[1]}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            % endfor
+                                            </div>   <!-- accordion -->
+                                        </div>   <!-- card-body -->
+                                    </div>  <!-- collapse show -->
+                                </div> <!-- card -->
+                            </div>  <!-- accordion faq -->
+                        </div>  <!-- accordion-wrapper -->
+                        % endfor
+
+
+
+                <script src="js/jquery.min.js"></script>
+                <script src="js/popper.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+
+                <script type="text/javascript">
+
+                    $('.accordion-switch input').change(function () {
+                        var state = this.checked;
+                        var accordion = $(this).parents('.accordion-switch').siblings('.accordion');
+                        var collapseTarget = accordion.find('.accordion button[aria-expanded]');
+                        if (this.checked) {
+                            accordion.find('.collapse').collapse('show');
+                            collapseTarget.attr('aria-expanded', 'true');
+                        } else {
+                            accordion.find('.accordion .collapse').collapse('hide');
+                            collapseTarget.attr('aria-expanded', 'false');
+                        }
+                    });
+
+                </script>
+                </%block>
+            </section>
+        </main>
+    </div>
+</div>
