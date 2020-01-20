@@ -793,8 +793,11 @@
     flex: 1 1;
     padding: 0 2rem 1rem;
     margin-top: 0;
-    word-break: break-word;
+    word-break: break-all;
 
+    .home-helpgrid{
+      word-break: normal;
+    }
     .discussion-post {
     //  border: $card-border;
     //  box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
