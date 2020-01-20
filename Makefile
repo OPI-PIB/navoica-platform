@@ -33,7 +33,7 @@ pull_translations: ## pull translations from Transifex
 	i18n_tool generate --strict
 	git clean -fdX conf/locale/rtl
 	git clean -fdX conf/locale/eo
-	i18n_tool validate
+	#i18n_tool validate
 
 requirements: ## install development environment requirements
 	pip install -qr requirements/edx/development.txt --exists-action w
