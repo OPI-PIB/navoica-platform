@@ -51,7 +51,7 @@
                                     <div class="card-header" id="heading-${category_identifier}">
                                         <button class="btn btn-link btn-cat" type="button"
                                                 data-toggle="collapse" data-target="#collapse-${category_identifier}" aria-expanded="false" aria-controls="collapse-${category_identifier}">
-                                                ${_(category['name'])}:
+                                                ${category['name']}:
                                         </button>
                                     </div>
 
@@ -64,12 +64,12 @@
                                                     <div class="card-header" id="heading-${question_identifier}">
                                                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-${question_identifier}" aria-expanded="false"
                                                                 aria-controls="collapse-${question_identifier}">
-                                                                ${_(question_answer[0])}
+                                                                ${question_answer[0]}
                                                         </button>
                                                     </div>
                                                     <div id="collapse-${question_identifier}" class="collapse" aria-labelledby="heading-${question_identifier}">
                                                         <div class="card-body">
-                                                            <p>${_(question_answer[1])}</p>
+                                                            <p>${question_answer[1]}</p>
                                                         </div>
                                                     </div>
                                                 </div>
