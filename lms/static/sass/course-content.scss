@@ -9753,7 +9753,6 @@ article .display-3::before {
   border-bottom: 0;
 } 
 
-
 .discussion {
   word-break: break-all;
 
@@ -11203,6 +11202,9 @@ main.container {
     position: absolute;
     right: 10px;
     top: 10px;
+    .icon {
+      color: #e41d37;
+    }
     .control-dismiss {
       background: none;
       border: none;

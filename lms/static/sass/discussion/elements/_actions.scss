@@ -1,3 +1,4 @@
+@import "../utilities/variables-new_look";
 .discussion {
 
   // discussion - elements - actions
@@ -128,7 +129,7 @@
     display: inline-block;
     border: 1px solid transparent;
     border-radius: $forum-border-radius;
-    color: theme-color("secondary");
+    color: map_get($grays, "900");
 
     .action-icon {
       display: inline-block;
@@ -138,7 +139,7 @@
       border: 1px solid $forum-color-border;
       border-radius: $forum-border-radius;
       text-align: center;
-      color: theme-color("secondary");
+      color: map_get($grays, "900");
 
       .icon {
         @include margin-right(0);
@@ -168,19 +169,19 @@
     // specific button styles
     &.action-follow {
       .action-label {
-        color: $blue;
+        color: map_get($grays, "900");
       }
 
       &.is-checked, &:hover, &:focus {
         .action-icon {
-          background-color: $forum-color-following;
-          border: 1px solid $blue;
+          background-color: map_get($grays, "900");
+          border: 1px solid map_get($grays, "900");
           color: $white;
         }
       }
 
       &:hover, &:focus {
-        border-color: $forum-color-following;
+        border-color: map_get($grays, "900");
       }
     }
 
@@ -191,17 +192,17 @@
 
       &.is-checked, &:hover, &:focus {
         .action-icon {
-          background-color: $green;
-          border: 1px solid $green;
+          background-color: map_get($grays, "900");
+          border: 1px solid map_get($grays, "900");
           color: $white;
         }
       }
 
       &:hover, &:focus {
-        border-color: $green;
+        border-color: map_get($grays, "900");
 
         .action-label {
-          color: $green;
+          color: map_get($grays, "900");
         }
       }
     }
@@ -209,18 +210,18 @@
     &.action-endorse {
       &.is-checked, &:hover, &:focus {
         .action-icon {
-          background-color: $blue;
-          border: 1px solid $blue;
+          background-color: map_get($grays, "900");
+          border: 1px solid map_get($grays, "900");
           color: $white;
         }
       }
 
       &:hover, &:focus {
-        border-color: $blue;
+        border-color: map_get($grays, "900");
         background-color: $forum-color-background;
 
         .action-label {
-          color: $blue;
+          color: map_get($grays, "900");
         }
       }
     }
@@ -228,18 +229,18 @@
     &.action-answer {
       &.is-checked, &:hover, &:focus {
         .action-icon {
-          border: 1px solid $green;
-          background-color: $green;
+          border: 1px solid map_get($grays, "900");
+          background-color: map_get($grays, "900");
           color: $white;
         }
       }
 
       &:hover, &:focus {
-        border-color: $green;
+        border-color: map_get($grays, "900");
         background-color: $forum-color-background;
 
         .action-label {
-          color: $green;
+          color: map_get($grays, "900");
         }
       }
     }
@@ -260,7 +261,7 @@
 
         .action-label {
           opacity: 1;
-          color: $black;
+          color: map_get($grays, "900");
         }
       }
     }
@@ -303,12 +304,12 @@
       &.is-checked {
         // CASE: pin action
         &.action-pin {
-          color: $pink;
+          color: map_get($grays, "900");
         }
 
         // CASE: report action
         &.action-report {
-          color: $pink;
+          color: map_get($grays, "900");
         }
 
         // CASE: hover for any action
