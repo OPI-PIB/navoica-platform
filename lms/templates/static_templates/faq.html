@@ -22,9 +22,9 @@
                          % for i, category in enumerate(page_content, 1):
                             <% category_identifier = "{:02d}".format(i) %>
                             <a href="#accordion-anchor-${category_identifier}" class="list-group-item list-group-item-action">
-                                <i class="${_(category['icon_class'])}"></i>
+                                <i class="${category['icon_class']}"></i>
                                 <div>
-                                    <h5>${_(category['name'])}</h5>
+                                    <h5>${category['name']}</h5>
                                 </div>
                             </a>
                         % endfor
