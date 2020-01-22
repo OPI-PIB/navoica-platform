@@ -161,15 +161,17 @@
   }
 
   .helpgrid-row-navigation {
-    .fa-bars {color: theme-color("light");}
-    .fa-search {color: $gray-300;}
-    .fa-sort {color: $gray-300;}
+  //  .fa-bars {color: theme-color("light");}
+  //  .fa-search {color: $gray-300;}
+  //  .fa-sort {color: $gray-300;}
+    .icon {color:$gray-400;}
   }
 
   .helpgrid-row-participation {
-    .fa-plus {color: $green;}
-    .fa-flag {color: $pink;}
-    .fa-star {color: $blue;}
+  //  .fa-plus {color: $green;}
+  //  .fa-flag {color: $pink;}
+  //  .fa-star {color: $blue;}
+      .icon {color:$gray-400;}
   }
 
   .helpgrid-row-notification {

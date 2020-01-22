@@ -17,16 +17,16 @@
       <tr class="helpgrid-row helpgrid-row-navigation">
         <th scope="row" class="row-title"><%- gettext("Find discussions") %></td>
         <td class="row-item">
-          <span class="icon fa fa-reorder" aria-hidden="true"></span>
-          <span class="row-description"><%- gettext("Use the All Topics menu to find specific topics.") %></span>
-        </td>
-        <td class="row-item">
           <span class="icon fa fa-search" aria-hidden="true"></span>
-          <span class="row-description"><%- gettext("Search all posts") %></span>
+          <span class="row-description"><%- gettext("Search for topics") %></span>
         </td>
         <td class="row-item">
-          <span class="icon fa fa-sort" aria-hidden="true"></span>
-          <span class="row-description"><%- gettext("Filter and sort topics") %></span>
+          <span class="icon fa fa-filter" aria-hidden="true"></span>
+          <span class="row-description"><%- gettext("Filter all posts") %></span>
+        </td>
+        <td class="row-item">
+          <span class="icon fa fa-sort-amount-desc" aria-hidden="true"></span>
+          <span class="row-description"><%- gettext("Sort posts") %></span>
         </td>
       </tr>
       <tr class="helpgrid-row helpgrid-row-participation">

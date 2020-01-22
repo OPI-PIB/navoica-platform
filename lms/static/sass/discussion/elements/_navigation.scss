@@ -1580,7 +1580,9 @@ input[type="button"].btn-block {
 .fa-caret-down,
 .fa-spinner,
 .fa-spinn,
-.fa-warning {
+.fa-warning,
+.fa-filter,
+.fa-sort-amount-desc {
   &::before {
     font-weight: 900;
   }
@@ -1604,3 +1606,4 @@ input[type="button"].btn-block {
 .btn.btn-outline.dropdown-toggle:focus {
   border-color: transparent !important;
 }
+
