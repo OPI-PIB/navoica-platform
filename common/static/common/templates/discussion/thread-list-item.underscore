@@ -1,5 +1,5 @@
 <li data-id="<%- id %>" class="forum-nav-thread<% if (!hideReadState && neverRead) { %> never-read<% } %>">
-  <a href="<%- threadUrl %>" class="forum-nav-thread-link">
+  <a href="<%- threadUrl %>" class="forum-nav-thread-link" onclick="scrollTopFunction()">
     <div class="forum-nav-thread-wrapper-0">
       <%
       var icon_class, sr_text;

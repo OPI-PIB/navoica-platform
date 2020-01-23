@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 
 # Don't use S3 in devstack, fall back to filesystem
 # del DEFAULT_FILE_STORAGE
-MEDIA_ROOT = "/edx/var/edxapp/uploads"
+MEDIA_ROOT = '/edx/var/edxapp/media/'
 ORA2_FILEUPLOAD_BACKEND = 'django'
 
 DEBUG = True

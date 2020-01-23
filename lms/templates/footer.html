@@ -1,6 +1,7 @@
 ## mako
 <%page expression_filter="h"/>
 <%!
+from datetime import date
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from branding.api import get_footer
@@ -18,7 +19,7 @@ from django.conf import settings
                 <p align="justify">${_('Polish MOOC platform offering free of charge online courses for every registered user.')}</p>
                 <p class="display-none">czytaj: Nawojka lub Nawoika</p>
 
-		<a href="https://www.facebook.com/Polski-MOOC-295767534600329/" target="_blank"><img src="/static/images/polskimooc_facebook_s.png"alt="Facebook"></a>
+		<a href="https://www.facebook.com/Polski-MOOC-295767534600329/" target="_blank"><img src="/static/images/polskimooc_facebook_s.png" alt="Facebook"></a>
             </div>
 
             <div class="col-lg-3">
@@ -56,8 +57,8 @@ from django.conf import settings
                 <img style="max-width:181px" src="/static/images/patrons/logo_opi_pib.png" alt="OPI - PIB">
             </div>
         </div>
-        <p class="footer-copyright"><span>&copy; Copyright 2018-2019 Navoica.pl</span> — ${_('All rights reserved  ')} | ver. Nawojka ${ settings.PLATFORM_VERSION }</p>
-        </span>
+        <% current_year = date.today().year %>
+        <p class="footer-copyright"><span>&copy; Copyright 2018-${current_year} Navoica.pl</span> — ${_('All rights reserved  ')} | ver. Nawojka ${ settings.PLATFORM_VERSION }</p>
     </div>
 </footer>
 

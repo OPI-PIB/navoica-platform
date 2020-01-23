@@ -793,8 +793,11 @@
     flex: 1 1;
     padding: 0 2rem 1rem;
     margin-top: 0;
-    word-break: break-word;
+    word-break: break-all;
 
+    .home-helpgrid{
+      word-break: normal;
+    }
     .discussion-post {
     //  border: $card-border;
     //  box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
@@ -1197,10 +1200,10 @@ a {
   padding-left: .5*$font-size-base;
   padding-right: .5*$font-size-base;
 
-  > .container {
-    max-width: !important;
-    // max-width: map_get($container-max-widths, "xl") !important;
-  }
+  //> .container {
+  //  max-width: !important;
+  //  // max-width: map_get($container-max-widths, "xl") !important;
+  //}
 
   &-nav {
     .nav-item {
@@ -1576,7 +1579,8 @@ input[type="button"].btn-block {
 .fa-pencil-alt,
 .fa-caret-down,
 .fa-spinner,
-.fa-spinn {
+.fa-spinn,
+.fa-warning {
   &::before {
     font-weight: 900;
   }

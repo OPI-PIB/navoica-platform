@@ -26,14 +26,14 @@ push_translations: ## push source strings to Transifex for translation
 
 pull_translations: ## pull translations from Transifex
 	git clean -fdX conf/locale
-	i18n_tool transifex pull
+	i18n_tool transifex pull_all
 	i18n_tool extract
 	i18n_tool dummy
 	i18n_tool generate
 	i18n_tool generate --strict
 	git clean -fdX conf/locale/rtl
 	git clean -fdX conf/locale/eo
-	i18n_tool validate
+	#i18n_tool validate
 
 requirements: ## install development environment requirements
 	pip install -qr requirements/edx/development.txt --exists-action w

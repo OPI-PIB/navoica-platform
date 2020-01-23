@@ -172,6 +172,11 @@ if 'loc_cache' not in CACHES:
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
         'LOCATION': 'edx_location_mem_cache',
     }
+if 'machina_attachements' not in CACHES:
+    CACHES['machina_attachments'] = {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': 'edx_location_mem_cache',
+    }
 
 SESSION_COOKIE_DOMAIN = ENV_TOKENS.get('SESSION_COOKIE_DOMAIN')
 SESSION_COOKIE_HTTPONLY = ENV_TOKENS.get('SESSION_COOKIE_HTTPONLY', True)
@@ -604,3 +609,10 @@ derive_settings(__name__)
 CMS_BASE = ENV_TOKENS.get('CMS_BASE', 'studio.navoica.pl')
 
 FEATURES['ENABLE_INSTRUCTOR_EMAIL'] = True;
+
+SETTINGS_EXPORT = [
+    'PLATFORM_NAME',
+    'LMS_ROOT_URL',
+    'STUDIO_NAME',
+    'FAVICON_PATH',
+]

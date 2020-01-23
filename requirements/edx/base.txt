@@ -78,7 +78,9 @@ django-countries==4.6.1
 django-crum==0.7.2
 django-fernet-fields==0.5
 django-filter==1.0.4
+django-haystack==2.8.1
 django-ipware==1.1.0
+django-machina==0.7.1
 django-memcached-hashring==0.1.2
 django-method-override==0.1.0
 django-model-utils==3.0.0
@@ -90,6 +92,7 @@ django-pyfs==2.0
 django-ratelimit-backend==1.1.1
 django-ratelimit==1.1.0
 django-require==1.0.11
+django-settings-export==1.2.1
 django-sekizai==0.10.0
 django-ses==0.8.4
 django-simple-history==2.0
@@ -227,6 +230,7 @@ voluptuous==0.11.1
 watchdog==0.8.3
 web-fragments==0.2.2
 webob==1.8.1              # via xblock
+Whoosh==2.7.4
 wrapt==1.10.5
 xblock-review==1.1.5
 xblock==1.1.1
