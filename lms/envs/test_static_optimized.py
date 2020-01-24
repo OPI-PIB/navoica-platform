@@ -35,6 +35,8 @@ XQUEUE_INTERFACE = {
     "basic_auth": ('anant', 'agarwal'),
 }
 
+LMS_BASE = os.environ.get('LMS_BASE', 'localhost.navoica.pl')
+CMS_BASE = os.environ.get('CMS_BASE', 'studio-'+LMS_BASE)
 
 ######################### PIPELINE ####################################
 
