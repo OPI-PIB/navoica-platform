@@ -964,6 +964,10 @@ div#edit_textbook_error {
       border-radius: 3px;
     }
   }
+  .open>.dropdown-menu {
+    right: 0;
+    left: unset;
+  }
 
   .account-user &:hover &:active .dropdown-menu {
     display: block !important;

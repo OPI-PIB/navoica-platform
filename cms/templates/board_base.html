@@ -47,11 +47,19 @@
             <h3 class="title"><span><a href="/" title="{% trans 'Studio' %}" >{% trans 'Studio' %}</a></span></h3>
           </li>
           <li class="nav-item nav-account-user">
-            <button class="account-username">{{ request.user.username }}</button>
+            <h3 class="title" id="id_navbar_dropdown" data-toggle="dropdown" aria-expanded="false">{{ request.user.username }}</h3>
 
             <div class="dropdown-menu" aria-labelledby="id_navbar_dropdown">
-              <a class="dropdown-item" href="/logout">{% trans "Sign Out" %}</a>
-              <a class="dropdown-item" href="{% url 'forum_member:profile' request.user.id %}">{% trans "Profile"%}</a>
+              <div class="nav-sub">
+             <ul>
+               <li class="nav-item nav-account-signout">
+                <a class="action action-signout" href="{% url 'forum_member:profile' request.user.id %}">{% trans "Profile"%}</a>
+               </li>
+               <li class="nav-item nav-account-signout">
+                <a class="action action-signout" href="/logout">{% trans "Sign Out" %}</a>
+               </li>
+             </ul>
+          </div>
             </div>
 
             <!--
