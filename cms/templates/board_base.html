@@ -47,7 +47,9 @@
             <h3 class="title"><span><a href="/" title="{% trans 'Studio' %}" >{% trans 'Studio' %}</a></span></h3>
           </li>
           <li class="nav-item nav-account-user">
-            <h3 class="title" id="id_navbar_dropdown" data-toggle="dropdown" aria-expanded="false">{{ request.user.username }}</h3>
+            <h3 class="title" id="id_navbar_dropdown" data-toggle="dropdown" aria-expanded="false">{{ request.user.username }}
+            <span class="icon fa fa-caret-down ui-toggle-dd"></span>
+              </h3>
 
             <div class="dropdown-menu" aria-labelledby="id_navbar_dropdown">
               <div class="nav-sub">

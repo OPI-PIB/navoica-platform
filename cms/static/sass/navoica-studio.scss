@@ -954,6 +954,13 @@ div#edit_textbook_error {
 }
 
 .wrapper-r {
+
+  .open .icon {
+    transform: rotate(-180deg);
+    transform-origin: 50% 50%;
+    vertical-align: unset;
+  }
+
   .nav-not-signedin {
     .action-signup {
       background-color: #B43F37;
@@ -967,6 +974,17 @@ div#edit_textbook_error {
   .open>.dropdown-menu {
     right: 0;
     left: unset;
+    padding: 0;
+    border: none;
+    top: 50px;
+  }
+
+  .nav-account-user .title {
+    display: inline-block;
+    max-width: 84%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .account-user &:hover &:active .dropdown-menu {
