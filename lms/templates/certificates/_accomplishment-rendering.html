@@ -7,65 +7,78 @@ course_mode_class = course_mode if course_mode else ''
 %>
 
 
-<div id="container">
-    <div id="certificate">
-        <section>
-            <header>
-                <span class="left"><img src="${settings.LMS_ROOT_URL}/static/images/logo-light-bg.svg" width="150"></span>
-                <span class="right"><img src="${settings.LMS_ROOT_URL}/static/images/org/${organizer}.png" width="150"></span>
-            </header>
-            <div id="certificate-content">
-                <p class="fancy"><span>Zaświadczenie</span></p>
-                <h1 id="person-name">${accomplishment_copy_name}</h1>
-                <div id="course">
-                    <div id="course-details">
-                        <p class="label">Kurs:</p>
-                        <h3>${accomplishment_copy_course_name}</h3>
-                        <p class="label date">Data uzyskania zaświadczenia:</p>
-                        <h4>${certificate_date_issued}</h4>
-                    </div>
+<div id="content" class="bg-light">
+    <main class="container">
+        <aside id="filters" class="sidebar">
 
-                    % if certificate_data:
-                    <div id="course-instructors">
-                        <p class="label">Prowadzący:</p>
-                        <ul>
+        </aside>
+
+        <section>
+            <div id="authentication">
+                <header>
+                    <div>Zaświadczenie</div>
+                </header>
+                <div>
+                    <div id="logos">
+                        <div id="platform"><img src="${settings.LMS_ROOT_URL}/static/images/logo-light-bg.svg" alt="Navoica"></div>
+                        <div id="administrator"><img
+                                src="${settings.LMS_ROOT_URL}/static/images/org/${organizer}.png" alt="${organizer}"></div>
+                    </div>
+                    <div id="person">
+                        <div class="hr"></div>
+                        <h1>${accomplishment_copy_name}</h1>
+                    </div>
+                    <div id="course">
+                        <div class="label">
+                            <div>ukończył/a kurs</div>
+                        </div>
+                        <div id="title">
+                            <div class="hr"></div>
+                            <h2>${accomplishment_copy_course_name}</h2>
+                        </div>
+                    </div>
+                    <div id="authentication-info">
+                        <div id="authentication-date">
+                            <div id="date">
+                                <div class="hr"></div>
+                                <div class="label">data uzyskania zaświadczenia</div>
+                                <div class="value">${certificate_date_issued}</div>
+                            </div>
+                            <div id="authentication-note">
+                                <div class="hr"></div>
+                                <p>Dokument poświadcza ukończenie kursu <strong>${accomplishment_copy_course_name}</strong> na platformie Navoica, którego organizatorem jest ${organizer}.</p>
+                                <a href="">weryfikacja</a>
+                            </div>
+                        </div>
+                        % if certificate_data:
+                        <div id="experts">
+                            <div class="hr"></div>
+                            <div class="label">eksperci</div>
                             % for signatory in certificate_data.get('signatories', []):
                             % if loop.index < 2:
-                            <li>
-                                <div class="instructor">
-                                    <img style="max-width: 100px !important; max-height: 100px" class="signatory-signature"
-                                         src="${settings.LMS_ROOT_URL}${signatory['signature_image_path']}">
-                                    <p class="instructor-name">${signatory['name']}</p>
-                                    <p class="instructor-position">${signatory['title']}</p>
-                                </div>
-                            </li>
+                            <div id="expert-1">
+                                <div class="signature"><img style="max-width: 100px !important; max-height: 100px" class="signatory-signature"
+                                         src="${settings.LMS_ROOT_URL}${signatory['signature_image_path']}"></div>
+                                <div class="value">${signatory['title']}
+                                    ${signatory['name']}</div>
+                                <div class="institution">${organizer}</div>
+                            </div>
                             % endif
                             % endfor
-                        </ul>
+                        </div>
+                        % endif
                     </div>
-                    % endif
                 </div>
+                <footer></footer>
             </div>
-            <footer>
-                <div id="note">
-                    <p>
-                        Dokument poświadcza ukończenie kursu "${accomplishment_copy_course_name}" na platformie
-                        Navoica, którego organizatorem jest ${organizer}.
-                    </p>
-                </div>
-                <div id="link">
-                    <a href="${settings.LMS_ROOT_URL}${request.path}">link do zaświadczenia</a>
-                </div>
-            </footer>
+
+            <div class="mt-4 text-center">
+                <a class="btn btn-primary" href='${settings.LMS_ROOT_URL}${request.path}/pdf?preview=${request.GET.get('preview','')}' role="button"><i class="fas fa-download"></i> Pobierz zaświadczenie</a>
+            </div>
+
         </section>
 
-    </div>
+    </main>
 </div>
-<div class="print-footer">
-    <button onclick="window.location.href='${settings.LMS_ROOT_URL}${request.path}/pdf?preview=${request.GET.get('preview','')}'" class="action action-print btn-black btn-small" id="action-print-view">
-        <span class="icon fa fa-download" aria-hidden="true"></span>
-        Pobierz certyfikat [PDF]
-    </button>
-</div>
-<link rel="stylesheet" href="${settings.LMS_ROOT_URL}/static/css/polipedia.css" type="text/css" media="screen"/>
+
 <%include file="/footer.html" />
