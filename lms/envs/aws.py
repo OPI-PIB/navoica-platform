@@ -116,7 +116,6 @@ CELERYBEAT_SCHEDULE = {}  # For scheduling tasks, entries can be added to this d
 
 with open(CONFIG_ROOT / CONFIG_PREFIX + "env.json") as env_file:
     ENV_TOKENS = json.load(env_file)
-
 # STATIC_ROOT specifies the directory where static files are
 # collected
 STATIC_ROOT_BASE = ENV_TOKENS.get('STATIC_ROOT_BASE', None)
@@ -720,7 +719,7 @@ FEATURES['ENABLE_OAUTH2_PROVIDER'] = True
 
 ##### OAUTH2 Provider ##############
 if FEATURES.get('ENABLE_OAUTH2_PROVIDER'):
-    OAUTH_OIDC_ISSUER = ENV_TOKENS['OAUTH_OIDC_ISSUER']
+    OAUTH_OIDC_ISSUER = ENV_TOKENS.get('OAUTH_OIDC_ISSUER')  ## changed to get, for bokchoy tests
     OAUTH_ENFORCE_SECURE = ENV_TOKENS.get('OAUTH_ENFORCE_SECURE', True)
     OAUTH_ENFORCE_CLIENT_SECURE = ENV_TOKENS.get('OAUTH_ENFORCE_CLIENT_SECURE', True)
     # Defaults for the following are defined in lms.envs.common

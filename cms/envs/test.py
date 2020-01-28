@@ -132,7 +132,6 @@ LMS_BASE = "localhost:8000"
 LMS_ROOT_URL = "http://{}".format(LMS_BASE)
 FEATURES['PREVIEW_LMS_BASE'] = "preview.localhost"
 
-
 CACHES = {
     # This is the cache used for most things. Askbot will not work without a
     # functioning cache -- it relies on caching to load its settings in places.
@@ -168,6 +167,10 @@ CACHES = {
     'course_structure_cache': {
         'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
     },
+    'machina_attachments': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': 'edx_location_mem_cache',
+    },
 }
 
 ################################# CELERY ######################################
@@ -186,7 +189,6 @@ XQUEUE_PORT = 8040
 YOUTUBE_PORT = 8031
 LTI_PORT = 8765
 VIDEO_SOURCE_PORT = 8777
-
 
 ################### Make tests faster
 # http://slacy.com/blog/2012/04/make-your-tests-faster-in-django-1-4/
@@ -322,8 +324,8 @@ INSTALLED_APPS.append('openedx.core.djangoapps.api_admin')
 
 ########################## VIDEO IMAGE STORAGE ############################
 VIDEO_IMAGE_SETTINGS = dict(
-    VIDEO_IMAGE_MAX_BYTES=2 * 1024 * 1024,    # 2 MB
-    VIDEO_IMAGE_MIN_BYTES=2 * 1024,       # 2 KB
+    VIDEO_IMAGE_MAX_BYTES=2 * 1024 * 1024,  # 2 MB
+    VIDEO_IMAGE_MIN_BYTES=2 * 1024,  # 2 KB
     STORAGE_KWARGS=dict(
         location=MEDIA_ROOT,
         base_url=MEDIA_URL,
@@ -334,7 +336,7 @@ VIDEO_IMAGE_DEFAULT_FILENAME = 'default_video_image.png'
 
 ########################## VIDEO TRANSCRIPTS STORAGE ############################
 VIDEO_TRANSCRIPTS_SETTINGS = dict(
-    VIDEO_TRANSCRIPTS_MAX_BYTES=3 * 1024 * 1024,    # 3 MB
+    VIDEO_TRANSCRIPTS_MAX_BYTES=3 * 1024 * 1024,  # 3 MB
     STORAGE_KWARGS=dict(
         location=MEDIA_ROOT,
         base_url=MEDIA_URL,
@@ -345,6 +347,7 @@ VIDEO_TRANSCRIPTS_SETTINGS = dict(
 ####################### Plugin Settings ##########################
 
 from openedx.core.djangoapps.plugins import plugin_settings, constants as plugin_constants
+
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.CMS, plugin_constants.SettingsType.TEST)
 
 ########################## Derive Any Derived Settings  #######################

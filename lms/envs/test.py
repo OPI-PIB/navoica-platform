@@ -55,6 +55,9 @@ os.environ['DJANGO_LIVE_TEST_SERVER_ADDRESS'] = 'localhost:8000-9000'
 
 THIS_UUID = uuid4().hex[:5]
 
+LMS_BASE = os.environ.get('LMS_BASE', 'localhost.navoica.pl')
+CMS_BASE = os.environ.get('CMS_BASE', 'studio-'+LMS_BASE)
+
 # can't test start dates with this True, but on the other hand,
 # can test everything else :)
 FEATURES['DISABLE_START_DATES'] = True

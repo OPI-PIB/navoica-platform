@@ -7,7 +7,7 @@ define(['codemirror',
     'js/models/course_update',
     'common/js/components/views/feedback_prompt',
     'common/js/components/views/feedback_notification',
-    'js/vendor/summernote/summernote-lite',
+    'common/js/vendor/summernote-lite',
     ],
     function(CodeMirror, ModalUtils, DateUtils, HtmlUtils, CourseInfoHelper, ValidatingView, CourseUpdateModel,
              PromptView, NotificationView) {
