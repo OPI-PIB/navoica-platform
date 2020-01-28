@@ -56,12 +56,15 @@ course_mode_class = course_mode if course_mode else ''
                             <div class="label">eksperci</div>
                             % for signatory in certificate_data.get('signatories', []):
                             % if loop.index < 2:
-                            <div id="expert-1">
-                                <div class="signature"><img style="max-width: 100px !important; max-height: 100px" class="signatory-signature"
+                            <div id="expert-${loop.index+1}">
+                                % if signatory['signature_image_path']:
+                                <div class="signature"><img style="max-width:
+                                 100%; max-height: 100%"
+                                                            class="signatory-signature"
                                          src="${settings.LMS_ROOT_URL}${signatory['signature_image_path']}"></div>
-                                <div class="value">${signatory['title']}
-                                    ${signatory['name']}</div>
-                                <div class="institution">${organizer}</div>
+                                % endif
+                                <div class="value">${signatory['name']}</div>
+                                <div class="institution">${signatory['title']}</div>
                             </div>
                             % endif
                             % endfor
