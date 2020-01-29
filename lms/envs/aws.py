@@ -33,7 +33,7 @@ from xmodule.modulestore.modulestore_settings import convert_module_store_settin
 from django.utils.translation import ugettext_lazy as _
 
 import sentry_sdk
-sentry_sdk.init("https://b77f986fe17843e3a3456b51760b1c76@sentry.navoica.pl/2")
+sentry_sdk.init(os.environ.get('SENTRY_URL_LMS', None))
 
 # SERVICE_VARIANT specifies name of the variant used, which decides what JSON
 # configuration files are read during startup.

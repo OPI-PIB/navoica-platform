@@ -2,9 +2,6 @@
 
 from .devstack import *  # pylint: disable=wildcard-import, unused-wildcard-import
 
-import sentry_sdk
-sentry_sdk.init("https://9f86e1dd11cd49e28c670a5786f218bf@sentry.navoica.pl/7")
-
 # Docker does not support the syslog socket at /dev/log. Rely on the console.
 LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
     'class': 'logging.NullHandler',
