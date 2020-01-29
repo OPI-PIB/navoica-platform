@@ -216,4 +216,16 @@ show_preview_menu = course and staff_access and supports_preview_menu
 		</div>
 	</div>
 	</header>
+	
+	    <%
+    preview_options = {
+        "courseId": course.id,
+        "disableStudentAccess": disable_student_access if disable_student_access is not UNDEFINED else False,
+        "specificStudentSelected": specific_student_selected,
+        "masqueradeUsername" : masquerade_user_name if masquerade_user_name is not UNDEFINED else None,
+    }
+    %>
+    <%static:require_module_async module_name="lms/js/preview/preview_factory" class_name="PreviewFactory">
+        PreviewFactory(${preview_options | n, dump_js_escaped_json});
+    </%static:require_module_async>
 % endif
