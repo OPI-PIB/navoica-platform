@@ -23,7 +23,7 @@ from path import Path as path
 from xmodule.modulestore.modulestore_settings import convert_module_store_setting_if_needed
 
 import sentry_sdk
-sentry_sdk.init("https://928ed9d34c004b3db77f81b34d541c13@sentry.navoica.pl/3")
+sentry_sdk.init(os.environ.get('SENTRY_URL_CMS', None))
 
 # SERVICE_VARIANT specifies name of the variant used, which decides what JSON
 # configuration files are read during startup.
