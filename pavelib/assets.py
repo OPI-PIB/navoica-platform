@@ -68,7 +68,9 @@ NPM_INSTALLED_LIBRARIES = [
     'which-country/index.js',
     'summernote/dist/summernote-lite.js',
     'summernote/dist/summernote-lite.css',
-    'summernote/dist/font/'
+    'summernote/dist/font/',
+    '@fortawesome/fontawesome-free',
+
 
 ]
 
@@ -83,7 +85,9 @@ NPM_INSTALLED_DEVELOPER_LIBRARIES = [
 NPM_JS_VENDOR_DIRECTORY = path('common/static/common/js/vendor')
 NPM_CSS_VENDOR_DIRECTORY = path("common/static/common/css/vendor")
 NPM_FONT_VENDOR_DIRECTORY = path("common/static/common/css/vendor/font")
+NPM_LIBRARY_VENDOR_DIRECTORY = path("common/static/common")
 NPM_CSS_DIRECTORY = path("common/static/common/css")
+
 
 # system specific lookup path additions, add sass dirs if one system depends on the sass files for other systems
 SASS_LOOKUP_DEPENDENCIES = {
@@ -608,6 +612,8 @@ def process_npm_assets():
             vendor_dir = NPM_CSS_VENDOR_DIRECTORY
         elif library.endswith('.eot') or library.endswith('.ttf') or library.endswith('.woff') or library.endswith('.woff2'):
             vendor_dir = NPM_FONT_VENDOR_DIRECTORY
+        elif '.' not in library:    # to copy all library
+            vendor_dir = NPM_LIBRARY_VENDOR_DIRECTORY
         else:
             vendor_dir = NPM_JS_VENDOR_DIRECTORY
         if os.path.exists(library_path):
@@ -637,6 +643,7 @@ def process_npm_assets():
     # Ensure that the vendor directory exists
     NPM_JS_VENDOR_DIRECTORY.mkdir_p()
     NPM_CSS_DIRECTORY.mkdir_p()
+    NPM_LIBRARY_VENDOR_DIRECTORY.mkdir_p()
     NPM_CSS_VENDOR_DIRECTORY.mkdir_p()
     NPM_FONT_VENDOR_DIRECTORY.mkdir_p()
 
