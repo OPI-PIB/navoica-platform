@@ -407,6 +407,10 @@ def get_component_templates(courselike, library=False):
     }
 
     for category in ['video', 'videojs']:
+        # hide button to create new video but give ability to edit already
+        # existed
+        if category == 'video':
+            continue
         video_component_templates['templates'].append(
             create_template_dict(
                 component_display_names[category],
