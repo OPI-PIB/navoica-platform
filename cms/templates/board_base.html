@@ -47,7 +47,8 @@
             <h3 class="title"><span><a href="/" title="{% trans 'Studio' %}" >{% trans 'Studio' %}</a></span></h3>
           </li>
           <li class="nav-item nav-account-user">
-            <h3 class="title" id="id_navbar_dropdown" data-toggle="dropdown" aria-expanded="false">{{ request.user.username }}
+            <h3 class="title" id="id_navbar_dropdown" data-toggle="dropdown" aria-expanded="false">
+              <span class="account-user-name" title="{{ request.user.username }}">{{ request.user.username }}</span>
             <span class="icon fa fa-caret-down ui-toggle-dd"></span>
               </h3>
 
@@ -63,19 +64,6 @@
              </ul>
           </div>
             </div>
-
-            <!--
-                 <div class="wrapper wrapper-nav-sub">
-                    <div class="nav-sub">
-                      <ul>
-                       <li class="nav-item nav-account-signout">
-                         <a class="action action-signout" href=href="/logout/">{% trans "Sign Out" %}</a>
-                       </li>
-                     </ul>
-                   </div>
-                 </div>
-            -->
-
           </li>
         </ol>
       </nav>

@@ -955,6 +955,22 @@ div#edit_textbook_error {
 
 .wrapper-r {
 
+  ol {
+    max-height: 35.8863px;
+  }
+
+  .title, li {
+    max-height: inherit;
+  }
+
+  a:focus {
+    color: #872821;
+  }
+
+  #id_navbar_dropdown .ui-toggle-dd {
+    vertical-align: super;
+  }
+
   .open .icon {
     transform: rotate(-180deg);
     transform-origin: 50% 50%;
@@ -979,7 +995,7 @@ div#edit_textbook_error {
     top: 50px;
   }
 
-  .nav-account-user .title {
+  .account-user-name {
     display: inline-block;
     max-width: 84%;
     overflow: hidden;
@@ -994,10 +1010,19 @@ div#edit_textbook_error {
   .dropdown-menu .dropdown-item {
     display: block !important;
   }
+
+  .fa-caret-down::before {
+    content: "\f0d7";
+  }
 }
 
 
 #main_container {
+
+  a:focus {
+    color: #872821;
+  }
+
 
   .panel {
     margin-bottom: 6px !important;
@@ -1147,6 +1172,28 @@ div#edit_textbook_error {
       padding-top: 0.5rem !important;
     }
 
+    .forum-last-post {
+      a {
+        display: inline-block;
+        max-width: 50%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        vertical-align: bottom;
+
+      }
+    }
+
+    .username a, .topic-last-post a {
+      display: inline-block;
+      max-width: 50%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      vertical-align: bottom;
+      color: #B43F37
+    }
+
     .panel-body {
       .forum-icon {
         padding-left: 0 !important;
@@ -1179,6 +1226,12 @@ div#edit_textbook_error {
   }
   .panel-heading {
     background-color: #fff !important;
+  }
+
+  .poll-content-wrapper {
+    .progress-bar {
+        background-color: #B43F37;
+    }
   }
 
 
