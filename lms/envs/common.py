@@ -1451,12 +1451,14 @@ PIPELINE_CSS = {
         'source_filenames': [
             #'css/lms-main-v1.css',
             'css/vendor/font-awesome.css',
+            'common/fontawesome-free/css/all.css', # font-awesome from package.json
             'css/vendor/jquery.qtip.min.css',
-            'css/all.css',
+            # 'css/all.css',
             #'css/style.css',
             #'css/courses.css',
             #'css/course.css',
 	        #'css/course-toc.css',
+
             'css/course-list.css',
             'css/faq.css',
             #'css/course-content.css',
