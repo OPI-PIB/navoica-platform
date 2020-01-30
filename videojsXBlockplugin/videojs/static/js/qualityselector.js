@@ -5,21 +5,18 @@
  * @license MIT
  */
 (function (f) {
-    if (typeof exports === "object" && typeof module !== "undefined") {
-        module.exports = f()
+    var g;
+    if (typeof window !== "undefined") {
+        g = window
+    } else if (typeof global !== "undefined") {
+        g = global
+    } else if (typeof self !== "undefined") {
+        g = self
     } else {
-        var g;
-        if (typeof window !== "undefined") {
-            g = window
-        } else if (typeof global !== "undefined") {
-            g = global
-        } else if (typeof self !== "undefined") {
-            g = self
-        } else {
-            g = this
-        }
-        g.videojsQualityselector = f()
+        g = this
     }
+    g.videojsQualityselector = f()
+
 })(function () {
     var define, module, exports;
     return (function e(t, n, r) {

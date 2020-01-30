@@ -17,63 +17,45 @@
       cursor: pointer;
     }
 
+
     .vjs-quality-dropdown {
       position: absolute;
       bottom: 30px;
-      background: rgba(0, 0, 0, 0.48);
-
-      /** animation **/
-      transition: opacity 0.5s linear;
-
+      background: rgba(43, 51, 63, 0.7);
+      font-size: 12px;
       opacity: 0;
-
-      -webkit-transform: scaleY(0);
-      -o-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-      transform: scaleY(0);
-
-      -webkit-transform-origin: bottom;
-      -o-transform-origin: bottom;
-      -ms-transform-origin: bottom;
-      transform-origin: bottom;
-
-      -webkit-transition: -webkit-transform 0.26s ease-out;
-      -o-transition: -o-transform 0.26s ease;
-      -ms-transition: -ms-transform 0.26s ease;
-      transition: transform 0.26s ease;
     }
 
     .vjs-quality-dropdown.show {
       opacity: 1;
-
-      -webkit-transform: scaleY(1);
-      -o-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-      transform: scaleY(1);
     }
 
     .vjs-quality-dropdown ul {
-      margin: 0;
-      padding: 0;
+      margin: 0 !important;
+    padding: 0 !important;
     }
 
     .vjs-quality-dropdown ul li {
       list-style: none;
       margin: 0;
+      font-size: 12px !important;
+      font-weight: normal !important;
     }
 
     .vjs-quality-dropdown ul li a {
       color: #fff;
+      transition: none;
       text-decoration: none;
       padding: 5px 10px;
       display: table;
       width: 100%;
+      font-weight: normal;
     }
 
     .vjs-quality-dropdown ul li.current a,
     .vjs-quality-dropdown ul li a:hover {
-      background: #000;
-      color: rgb(255, 0, 0);
+      background: #fff;
+      color: #000;
     }
   }
 }
