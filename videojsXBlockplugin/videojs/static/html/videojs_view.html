@@ -1,13 +1,21 @@
 <div class="videojs_block">
-    <style scoped>.vjs-menu-item {
-        margin-bottom: 0 !important
-    }</style>
     <h2>{{ display_name }}</h2>
-    <video class="video-js vjs-default-skin" controls
-           src="https://objectstorage.eu-frankfurt-1.oraclecloud.com/n/opiopc/b/OPI_public_1/o/videos%2F{{ url }}"
-           preload="auto" width="100%" height="400" data-setup='{"language":"pl"}'>
-        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    <video id="navoica-video" controls class="video-js vjs-fluid"
+           preload="auto"
+           data-setup='{"language":"pl"}'>
+
+        {% if 'youtube' in url or 'youtu.be' in url %}
+        <source src="{{ url }}"
+                type="video/youtube"/>
+        {% else %}
+        <source
+                src="https://objectstorage.eu-frankfurt-1.oraclecloud.com/n/opiopc/b/OPI_public_1/o/videos%2F{{ url }}"
+                type="video/mp4"/>
+        {% endif %}
+        <p class="vjs-no-js">Aby obejrzeć ten film, włącz JavaScript i rozważ
+            uaktualnienie do przeglądarki internetowej która
+            <a href="http://videojs.com/html5-video-support/" target="_blank">obsługuje
+                wideo HTML5</a></p>
         {% if subtitle_url %}
         <track kind='captions' src='{{ subtitle_url }}'
                srclang='pl' label='Polski' default/>
