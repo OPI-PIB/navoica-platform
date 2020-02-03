@@ -2677,7 +2677,7 @@ ALL_COURSE_ORGANIZER = sorted([
     [u"25", u"Uniwersytet Śląski w Katowicach"],
     [u"26", u"Uniwersytet Technologiczno- Przyrodniczy w Bydgoszczy"],
     [u"27", u"Uniwersytet Technologiczno-Humanistyczny im. Kazimierza Pułaskiego"],
-    [u"28", u"Wojskowa Akademia Techniczna"],
+    [u"28", u"Wojskowa Akademia Techniczna im. Jarosława Dąbrowskiego"],
     [u"29", u"Wyższa Szkoła Biznesu i Przedsiębiorczości w Ostrowcu Św."],
     [u"30", u"Wyższa Szkoła Ekonomii, Prawa i Nauk Medycznych"],
     [u"31", u"Wyższa Szkoła Gospodarki w Bydgoszczy"],
