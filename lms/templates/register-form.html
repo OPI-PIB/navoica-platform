@@ -105,10 +105,9 @@ from student.models import UserProfile
             <input class="form-control" id="password" type="password" name="password" value="" required aria-required="true"/>
             <span class="tip tip-input" id="password-tip">
 				<%
-				min_length = 8
-				requirements = ungettext("{num} character", "{num} characters", min_length).format(num=min_length)
-				%>
-				${_("Enter a password with at least {requirements}.").format(requirements=requirements)}
+min_length = 8
+%>
+${_("Enter a password with at most {num} characters.").format(num=min_length)}
 			</span>
         </div>
         
