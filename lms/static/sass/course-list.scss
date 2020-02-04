@@ -13220,10 +13220,14 @@ span.complete-checkmark.fa.fa-check {
   margin-bottom: 2rem;
   p {
     text-align: justify;
+    text-indent: 40px;
   }
   .main-legend {
     display: flex;
     align-items: center;
+    p {
+      text-indent: unset;
+    }
     #legend-start {
       margin: 3rem;
       border: 1px solid rgba(0,0,0,0.125);
@@ -13232,7 +13236,7 @@ span.complete-checkmark.fa.fa-check {
     }
     #legend-author {
       font-size: 0.8rem;
-      padding-left: 25rem;
+      padding-left: 30rem;
       margin: 0;
     }
     img {
