@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^contact$', views.render, {'template': 'contact.html'}, name="contact"),
     url(r'^donate$', views.render, {'template': 'donate.html'}, name="donate"),
     url(r'^faq$', views.render, {'template': 'faq.html'}, name="faq"),
+    url(r'^legend', views.render, {'template': 'legend.html'}, name="legend"),
     url(r'^help$', views.render, {'template': 'help.html'}, name="help_edx"),
     url(r'^jobs$', views.render, {'template': 'jobs.html'}, name="jobs"),
     url(r'^news$', views.render, {'template': 'news.html'}, name="news"),

@@ -13212,3 +13212,36 @@ span.complete-checkmark.fa.fa-check {
 #course-content .ui-slider-vertical {margin-right: 0 !important; width: 0.7em}
 #course-content .speed-option {padding-left: 2px;}
 
+
+
+
+//Legend
+.legend {
+  margin-bottom: 2rem;
+  p {
+    text-align: justify;
+  }
+  .main-legend {
+    display: flex;
+    align-items: center;
+    #legend-start {
+      margin: 3rem;
+      border: 1px solid rgba(0,0,0,0.125);
+      padding: 2rem;
+      box-shadow: 0 4px 12px -2px #dee2e6, 0 -2px 4px -4px #dee2e6;
+    }
+    #legend-author {
+      font-size: 0.8rem;
+      padding-left: 25rem;
+      margin: 0;
+    }
+    img {
+      width: 300px;
+    }
+    blockquote {
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
+}
+//Legend-end
