@@ -628,6 +628,7 @@ def auto_auth(request):
             'username': username,
             'email': email,
             'password': password,
+            'confirm_password': password,
             'name': full_name,
         },
         tos_required=False

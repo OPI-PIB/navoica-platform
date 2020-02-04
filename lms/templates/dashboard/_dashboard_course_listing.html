@@ -7,6 +7,7 @@ import urllib
 from django.utils.translation import ugettext as _
 from django.utils.translation import ungettext
 from django.core.urlresolvers import reverse
+from django.conf import settings
 from course_modes.models import CourseMode
 from course_modes.helpers import enrollment_mode_display
 from openedx.core.djangolib.js_utils import dump_js_escaped_json, js_escaped_string
@@ -81,7 +82,11 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
            <div class="course-meta">
              <p>
                 <strong>${_("Course organizer")}</strong>
-                <span>${course_overview.display_org_with_default}</span>
+                 % if course_overview.organizer is not None:
+                    <span>${settings.ALL_COURSE_ORGANIZER_DICT[course_overview.organizer]}</span>
+                 % else:
+                    <span>${course_overview.display_name_with_default}</span>
+                 % endif
              </p>
              <p>
                 <strong>${_("Course edition")}</strong>

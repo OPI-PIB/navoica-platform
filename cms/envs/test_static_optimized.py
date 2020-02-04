@@ -51,3 +51,21 @@ os.environ['REQUIRE_BUILD_PROFILE_OPTIMIZE'] = 'none'
 ########################## Derive Any Derived Settings  #######################
 
 derive_settings(__name__)
+
+## CACHES for django-machina
+
+CACHES = {
+    # This is the cache used for most things. Django Machina will not work without a
+    # functioning cache -- it relies on caching to load its settings in places.
+    # In staging/prod envs, the sessions also live here.
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'edx_loc_mem_cache',
+        'KEY_FUNCTION': 'util.memcache.safe_key',
+    },
+
+    'machina_attachments': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': 'edx_location_mem_cache',
+    },
+}

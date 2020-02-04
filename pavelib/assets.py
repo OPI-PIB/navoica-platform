@@ -66,7 +66,12 @@ NPM_INSTALLED_LIBRARIES = [
     'underscore/underscore.js',
     '@edx/studio-frontend/dist/',
     'which-country/index.js',
-    'summernote/dist/'
+    'summernote/dist/summernote-lite.js',
+    'summernote/dist/summernote-lite.css',
+    'summernote/dist/font/',
+    '@fortawesome/fontawesome-free',
+
+
 ]
 
 # A list of NPM installed developer libraries that should be copied into the common
@@ -79,7 +84,10 @@ NPM_INSTALLED_DEVELOPER_LIBRARIES = [
 # Directory to install static vendor files
 NPM_JS_VENDOR_DIRECTORY = path('common/static/common/js/vendor')
 NPM_CSS_VENDOR_DIRECTORY = path("common/static/common/css/vendor")
+NPM_FONT_VENDOR_DIRECTORY = path("common/static/common/css/vendor/font")
+NPM_LIBRARY_VENDOR_DIRECTORY = path("common/static/common")
 NPM_CSS_DIRECTORY = path("common/static/common/css")
+
 
 # system specific lookup path additions, add sass dirs if one system depends on the sass files for other systems
 SASS_LOOKUP_DEPENDENCIES = {
@@ -602,6 +610,10 @@ def process_npm_assets():
 
         if library.endswith('.css') or library.endswith('.css.map'):
             vendor_dir = NPM_CSS_VENDOR_DIRECTORY
+        elif library.endswith('.eot') or library.endswith('.ttf') or library.endswith('.woff') or library.endswith('.woff2'):
+            vendor_dir = NPM_FONT_VENDOR_DIRECTORY
+        elif '.' not in library:    # to copy all library
+            vendor_dir = NPM_LIBRARY_VENDOR_DIRECTORY
         else:
             vendor_dir = NPM_JS_VENDOR_DIRECTORY
         if os.path.exists(library_path):
@@ -631,7 +643,9 @@ def process_npm_assets():
     # Ensure that the vendor directory exists
     NPM_JS_VENDOR_DIRECTORY.mkdir_p()
     NPM_CSS_DIRECTORY.mkdir_p()
+    NPM_LIBRARY_VENDOR_DIRECTORY.mkdir_p()
     NPM_CSS_VENDOR_DIRECTORY.mkdir_p()
+    NPM_FONT_VENDOR_DIRECTORY.mkdir_p()
 
     # Copy each file to the vendor directory, overwriting any existing file.
     print("Copying vendor files into static directory")

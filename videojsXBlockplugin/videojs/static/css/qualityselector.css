@@ -1,0 +1,48 @@
+.video-js.vjs-qualityselector {
+  display: block;
+}
+.video-js .vjs-quality-container {
+  padding: 8px;
+  position: relative;
+}
+.video-js .vjs-quality-container .vjs-brand-quality-link {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.video-js .vjs-quality-container .vjs-quality-dropdown {
+  position: absolute;
+  bottom: 30px;
+  background: rgba(43, 51, 63, 0.7);
+  font-size: 12px;
+  opacity: 0;
+}
+.video-js .vjs-quality-container .vjs-quality-dropdown.show {
+  opacity: 1;
+}
+.video-js .vjs-quality-container .vjs-quality-dropdown ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.video-js .vjs-quality-container .vjs-quality-dropdown ul li {
+  list-style: none;
+  margin: 0;
+  font-size: 12px !important;
+  font-weight: normal !important;
+}
+.video-js .vjs-quality-container .vjs-quality-dropdown ul li a {
+  color: #fff;
+  transition: none;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: table;
+  width: 100%;
+  font-weight: normal;
+}
+.video-js .vjs-quality-container .vjs-quality-dropdown ul li.current a,
+.video-js .vjs-quality-container .vjs-quality-dropdown ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/*# sourceMappingURL=qualityselector.css.map */

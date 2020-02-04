@@ -1451,12 +1451,14 @@ PIPELINE_CSS = {
         'source_filenames': [
             #'css/lms-main-v1.css',
             'css/vendor/font-awesome.css',
+            'common/fontawesome-free/css/all.css', # font-awesome from package.json
             'css/vendor/jquery.qtip.min.css',
-            'css/all.css',
+            # 'css/all.css',
             #'css/style.css',
             #'css/courses.css',
             #'css/course.css',
 	        #'css/course-toc.css',
+
             'css/course-list.css',
             'css/faq.css',
             #'css/course-content.css',
@@ -1556,7 +1558,6 @@ PIPELINE_CSS = {
         'source_filenames': [
             'css/vendor/ova/annotator.css',
             'css/vendor/ova/edx-annotator.css',
-            #'css/vendor/ova/video-js.min.css',
             'css/vendor/ova/rangeslider.css',
             'css/vendor/ova/share-annotator.css',
             'css/vendor/ova/richText-annotator.css',
@@ -2676,7 +2677,7 @@ ALL_COURSE_ORGANIZER = sorted([
     [u"25", u"Uniwersytet Śląski w Katowicach"],
     [u"26", u"Uniwersytet Technologiczno- Przyrodniczy w Bydgoszczy"],
     [u"27", u"Uniwersytet Technologiczno-Humanistyczny im. Kazimierza Pułaskiego"],
-    [u"28", u"Wojskowa Akademia Techniczna"],
+    [u"28", u"Wojskowa Akademia Techniczna im. Jarosława Dąbrowskiego"],
     [u"29", u"Wyższa Szkoła Biznesu i Przedsiębiorczości w Ostrowcu Św."],
     [u"30", u"Wyższa Szkoła Ekonomii, Prawa i Nauk Medycznych"],
     [u"31", u"Wyższa Szkoła Gospodarki w Bydgoszczy"],

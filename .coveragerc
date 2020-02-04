@@ -1,4 +1,4 @@
-# .coveragerc for edx-platform
+# .coveragerc for navoica-platform
 [run]
 data_file = reports/.coverage
 source =
@@ -50,4 +50,4 @@ jenkins_source =
     /home/jenkins/workspace/$SUBSET_JOB
 
 devstack_source =
-    /edx/app/edxapp/edx-platform
+    /edx/app/edxapp/navoica-platform

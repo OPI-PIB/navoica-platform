@@ -30,10 +30,10 @@ class videojsXBlock(XBlock):
         scope=Scope.settings,
         help="This name appears in the horizontal navigation at the top of the page.")
 
-    url = String(display_name="Video URL",
+    url = String(display_name="Youtube URL or Navoica movie ID",
         default="7b465d7b-6118-4b8a-80cd-3f40748fab74",
         scope=Scope.content,
-        help="The video ID")
+        help="Enter url from website youtube.com or use id number previously uploaded movie")
     
     allow_download = Boolean(display_name="Video Download Allowed",
         default=False,
@@ -114,11 +114,12 @@ class videojsXBlock(XBlock):
         html = self.render_template('static/html/videojs_view.html', context)
         
         frag = Fragment(html)
-        frag.add_css(self.load_resource("static/css/video-js.min.css"))
-        frag.add_css(self.load_resource("static/css/videojs.css"))
-        frag.add_css(self.load_resource("static/css/plugin.css"))
-        frag.add_javascript(self.load_resource("static/js/video-js.js"))
-        frag.add_javascript(self.load_resource("static/js/plugin.js"))
+        frag.add_css(self.load_resource("static/css/video-js.css"))
+        frag.add_css(self.load_resource("static/css/qualityselector.css"))
+        frag.add_javascript(self.load_resource("static/js/video.js"))
+        frag.add_javascript(self.load_resource("static/js/pl.js"))
+        frag.add_javascript(self.load_resource("static/js/qualityselector.js"))
+        frag.add_javascript(self.load_resource("static/js/youtube.js"))
         frag.add_javascript(self.load_resource("static/js/videojs_view.js"))
         frag.initialize_js('videojsXBlockInitView')
         return frag
@@ -142,11 +143,6 @@ class videojsXBlock(XBlock):
         html = self.render_template('static/html/videojs_edit.html', context)
         
         frag = Fragment(html)
-        frag.add_css(self.load_resource("static/css/video-js.min.css"))
-        frag.add_css(self.load_resource("static/css/videojs.css"))
-        frag.add_css(self.load_resource("static/css/plugin.css"))
-        frag.add_javascript(self.load_resource("static/js/video-js.js"))
-        frag.add_javascript(self.load_resource("static/js/plugin.js"))
         frag.add_javascript(self.load_resource("static/js/videojs_edit.js"))
         frag.initialize_js('videojsXBlockInitStudio')
         return frag
