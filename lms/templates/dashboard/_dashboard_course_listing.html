@@ -82,10 +82,10 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
            <div class="course-meta">
              <p>
                 <strong>${_("Course organizer")}</strong>
-                 % if course_overview.organizer is not None:
-                    <span>${settings.ALL_COURSE_ORGANIZER_DICT[course_overview.organizer]}</span>
-                 % else:
+                 % if course_overview.organizer in (None,'') :
                     <span>${course_overview.display_name_with_default}</span>
+                 % else:
+                    <span>${settings.ALL_COURSE_ORGANIZER_DICT[course_overview.organizer]}</span>
                  % endif
              </p>
              <p>
