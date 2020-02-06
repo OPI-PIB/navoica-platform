@@ -120,12 +120,8 @@
                                 % else:
                                 % for idx, item in enumerate(items):
                                 <li class="list-group-item">
-                                    <div class="course-details-icon">
-                                        <i class="fas fa-${item['type']}"></i>
-                                    </div>
-                                    <div class="course-details-content">
-                                        <h6>
-                                            <a href="javascript://" class="seq_${item['type']} inactive nav-item tab"
+                                    <div class="course-details">
+                                        <a href="javascript://" class="seq_${item['type']} inactive nav-item tab"
                                                role="tab"
                                                tabindex="-1"
                                                aria-selected="false"
@@ -138,9 +134,9 @@
                                                data-path="${item['path']}"
                                                id="tab_${idx}"
                                                ${"disabled=disabled" if disable_navigation else ""}>
-                                            ${item['page_title']}
-                                            </a>
-                                        </h6>
+                                            <i class="fas fa-${item['type']}"></i>
+                                             ${item['page_title']}
+                                        </a>
                                     </div>
                                 </li>
                                 % endfor
