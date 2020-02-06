@@ -47,6 +47,12 @@ from student.models import CourseEnrollment
         signInUser: "${reverse('signin_user') | n, js_escaped_string}",
         changeEmailSettings: "${reverse('change_email_settings') | n, js_escaped_string}"
       });
+
+      let MaxSignsNumber = 150;
+      $('.card-text').each(function(index, el) {
+          if ($(el).text().length > MaxSignsNumber) {
+            $(el).text($(el).text().substring(0, MaxSignsNumber) + "...")}
+              });
     });
   </script>
   <%static:webpack entry="UnenrollmentFactory">
@@ -96,7 +102,7 @@ from student.models import CourseEnrollment
 
 <div id="content" class="bg-light border-top" style="padding-top: 3rem; margin-bottom: 0;">
     <main class="container">
-    
+
 <div class="dashboard-notifications" tabindex="-1">
 
     %if banner_account_activation_message:
@@ -135,7 +141,7 @@ from student.models import CourseEnrollment
         <header id="header-login">
           <h2 id="h2">Lista kursów</h2>
         </header>
-         
+
 
           % if len(course_entitlements + course_enrollments) > 0:
             <div class="row">
@@ -357,5 +363,4 @@ from student.models import CourseEnrollment
     </form>
   </div>
 </div>
-
 <%include file="dashboard/_dashboard_entitlement_unenrollment_modal.html"/>
