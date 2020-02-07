@@ -9664,6 +9664,15 @@ main.container aside h6 {
     padding: 1rem 4rem;
   }
 
+  #seq_content .vert .xblock {
+    label, description, pre {
+      white-space: pre-wrap;
+    }
+    .field label {
+      white-space: unset;
+    }
+  }
+
   #seq_content .vert .xblock blockquote p, #seq_content .vert .xblock blockquote li {
     font-size: 1em;
   }
