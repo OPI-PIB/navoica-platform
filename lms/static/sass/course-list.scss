@@ -9751,10 +9751,6 @@ section .display-2 {
   min-height: 4rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-
-  > .container {
-    max-width: !important;
-  }
 }
 
 .navbar-nav .nav-item {
@@ -13216,12 +13212,54 @@ span.complete-checkmark.fa.fa-check {
 
 
 //Legend
+
+@media (max-width: 960px) {
+  .legend {
+    .main-legend {
+      display: block !important;
+      #legend-start {
+        margin: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        padding: 1rem 0 0 0 !important;
+      }
+      blockquote {
+        text-indent: 2.5rem !important;
+        margin: 0 !important;
+        p {
+          margin: 0 !important;
+        }
+
+      }
+      #legend-author {
+        padding-left: 0 !important;
+        margin-bottom: 1rem !important;
+        text-align: end;
+      }
+    }
+    .img-mobile {
+      display: block !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .img-desktop {
+      display: none;
+    }
+  }
+}
+
 .legend {
   margin-bottom: 2rem;
   p {
     text-align: justify;
-    text-indent: 40px;
+    text-indent: 2.5rem;
   }
+  img {
+     max-width: 20rem;
+  }
+   .img-mobile {
+     display: none;
+   }
   .main-legend {
     display: flex;
     align-items: center;
@@ -13230,17 +13268,14 @@ span.complete-checkmark.fa.fa-check {
     }
     #legend-start {
       margin: 3rem;
-      border: 1px solid rgba(0,0,0,0.125);
+      border: 0.0625rem solid rgba(0,0,0,0.125);
       padding: 2rem;
-      box-shadow: 0 4px 12px -2px #dee2e6, 0 -2px 4px -4px #dee2e6;
+      box-shadow: 0 0.25rem 0.75rem -0.125rem #dee2e6, 0 -0.125rem 0.25rem -0.25rem #dee2e6;
     }
     #legend-author {
       font-size: 0.8rem;
       padding-left: 30rem;
       margin: 0;
-    }
-    img {
-      width: 300px;
     }
     blockquote {
       font-weight: 600;
@@ -13248,4 +13283,5 @@ span.complete-checkmark.fa.fa-check {
     }
   }
 }
+
 //Legend-end
