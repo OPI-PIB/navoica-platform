@@ -28,7 +28,7 @@
     color: #e41d37;
     text-decoration: none;
     background-color: transparent;
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     margin-left: 0;
     padding: 0;
@@ -44,7 +44,7 @@
   padding: 0.5rem 0 1.5rem;
   overflow: hidden;
   position: static;
-  font-size: 14px;
+  font-size: .875rem;
   .nav-item {
     margin-left: 0;
   }
@@ -76,7 +76,7 @@
   position: static;
 
   .breadcrumb {
-    font-size: 14px;
+    font-size: .875rem;
     margin: 0 .5em 0 1em;
     padding: 0;
   }
@@ -176,14 +176,14 @@
 
   li {
     cursor: pointer;
-    font-size: 14px;
+    font-size: .875rem;
     list-style: none;
 
     &::before {
       color: map_get($grays, "600");
       content: "\f054";
       font-family: "Font Awesome 5 Free";
-      font-size: 10px;
+      font-size: 0.625rem;
       font-weight: 900;
       line-height: 2;
       margin-right: 4px;
@@ -197,7 +197,7 @@
     span {
       color: #e41d37;
       display: inline-block;
-      font-size: 14px;
+      font-size: .875rem;
       font-weight: 600;
     }
 
@@ -220,7 +220,7 @@
           content: "\f054";
           flex: 0 0 12px;
           font-family: "Font Awesome 5 Free";
-          font-size: 10px;
+          font-size: 0.625rem;
           font-weight: 900;
           line-height: 2;
           margin-right: 4px;
@@ -626,7 +626,7 @@
       // color: $red;
       color: #e41d37;
       display: flex;
-      font-size: 14px;
+      font-size: .875rem;
       font-weight: $font-weight-semibold;
 
       .custom-switch .custom-control-label::after {
@@ -671,14 +671,14 @@
 
       li {
         cursor: pointer;
-        font-size: 14px;
+        font-size: .875rem;
         list-style: none;
 
         &::before {
           color: map_get($grays, "600");
           content: "\f054";
           font-family: "Font Awesome 5 Free";
-          font-size: 10px;
+          font-size: 0.625rem;
           font-weight: 900;
           line-height: 2;
           margin-right: 4px;
@@ -692,7 +692,7 @@
         span {
           color: #e41d37;
           display: inline-block;
-          font-size: 14px;
+          font-size: .875rem;
           font-weight: 600;
 
         }
@@ -716,7 +716,7 @@
               content: "\f054";
               flex: 0 0 12px;
               font-family: "Font Awesome 5 Free";
-              font-size: 10px;
+              font-size: 0.625rem;
               font-weight: 900;
               line-height: 2;
               margin-right: 4px;
@@ -736,7 +736,7 @@
 
         > li {
           border-top: 1px solid map_get($grays, "300");
-          font-size: 14px;
+          font-size: .875rem;
           padding: .5rem 0;
 
           &:first-child {
@@ -780,7 +780,7 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                word-break: break-all;
+                word-break: normal;
               }
             }
           }
@@ -793,7 +793,7 @@
     flex: 1 1;
     padding: 0 2rem 1rem;
     margin-top: 0;
-    word-break: break-all;
+    word-break: normal;
 
     .home-helpgrid{
       word-break: normal;
@@ -938,7 +938,7 @@
       color: #fff;
       display: flex;
       flex: 0 0 auto;
-      font-size: 12px;
+      font-size: .75rem;
       font-weight: $font-weight-semibold;
       letter-spacing: .05em;
       line-height: 1;
@@ -1092,7 +1092,7 @@
     }
 
     input + .field-input-label {
-      font-size: 14px;
+      font-size: .875rem;
       color: unset !important;
       
       .form-control {
@@ -1144,7 +1144,7 @@ progress {
     top: 4px;
 
     .btn {
-      font-size: 13px;
+      font-size: .8125rem;
       padding: 0 .25rem;
     }
 
@@ -1254,7 +1254,7 @@ main.container nav .nav-tabs .nav-item,
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   height: 4rem;
   justify-content: center;
@@ -1288,7 +1288,7 @@ main.container nav .nav-tabs .nav-item.active,
     display: flex;
     flex: 1;
     flex-direction: column;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 700 !important;
     height: 4rem !important;
     justify-content: flex-end;

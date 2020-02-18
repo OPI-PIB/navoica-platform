@@ -134,8 +134,9 @@
     .action-icon {
       display: inline-block;
       font-size: $forum-small-font-size;
-      height: $baseline;
-      width: $baseline;
+      height: 1.5rem;
+      //width: $baseline;
+      width: 1.5rem;
       border: 1px solid $forum-color-border;
       border-radius: $forum-border-radius;
       text-align: center;
