@@ -75,6 +75,7 @@ export class CourseOutline {  // eslint-disable-line import/prefer-default-expor
     const toggleAllButton = document.querySelector('#expand-collapse-outline-all-button');
     const toggleAllSpan = document.querySelector('#expand-collapse-outline-all-span');
     const extraPaddingClass = 'expand-collapse-outline-all-extra-padding';
+    const caretIconClass = document.querySelector('#caret');
     toggleAllButton.addEventListener('click', (event) => {
       const toggleAllExpanded = toggleAllButton.getAttribute('aria-expanded') === 'true';
       let sectionAction;
@@ -83,11 +84,13 @@ export class CourseOutline {  // eslint-disable-line import/prefer-default-expor
         sectionAction = collapseSection;
         toggleAllSpan.classList.add(extraPaddingClass);
         toggleAllSpan.innerText = 'Rozwiń wszystko';
+        caretIconClass.classList.replace('fa-rotate-180', 'fa-rotate-0');
       } else {
         toggleAllButton.setAttribute('aria-expanded', 'true');
         sectionAction = expandSection;
         toggleAllSpan.classList.remove(extraPaddingClass);
         toggleAllSpan.innerText = 'Zwiń wszystko';
+        caretIconClass.classList.replace('fa-rotate-0', 'fa-rotate-180');
       }
       const sections = Array.prototype.slice.call(document.querySelectorAll('.accordion-trigger'));
       sections.forEach((sectionToggleButton) => {

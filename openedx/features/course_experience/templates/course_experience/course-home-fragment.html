@@ -133,18 +133,11 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                     </div>
                 % endif
             </div>
-            <header class="d-flex justify-content-between">
-                <h2 id="h2">Spis treści</h2>
-                % if resume_course_url:
-                    <a class="btn btn-sm btn-outline-primary red" href="${resume_course_url}">
-                    % if has_visited_course:
-                    <span data-action-type="resume">${_("Resume Course")}</span>
-                    % else:
-                     <span data-action-type="start">${_("Start Course")}</span>
-                    % endif
-                    </a>
-                % endif
-             </header>
+            <header id="courses-list-header">
+                <h2 id="h2">
+                    <span class="d-name d-md-block">Spis treści</span>
+                </h2>
+                </header>
             % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
                 <div id="discovery-form1" class="input-group my-3 p-2">
                     <form class="search-form input-group" role="search" action="${reverse('openedx.course_search.course_search_results', args=[course_key])}">
@@ -163,11 +156,21 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                 </div>
             % endif
             <div class="form-actions">
-                <button class="btn btn-primary action-resume-course"
+                % if resume_course_url:
+                    <a class="btn btn-primary action-resume-course" href="${resume_course_url}">
+                    % if has_visited_course:
+                    <span data-action-type="resume">${_("Resume Course")}</span>
+                    % else:
+                     <span data-action-type="start">${_("Start Course")}</span>
+                    % endif
+                    </a>
+                % endif
+                <button class="btn btn-link action-resume-course float-right"
                       id="expand-collapse-outline-all-button"
                       aria-expanded="false"
                       aria-controls="course-outline-block-tree">
-               <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
+                    <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
+                    <span class="icon fa fa-caret-down ui-toggle-dd fa-rotate-0" id="caret"></span>
                </button>
             </div>
             <section class="faq">

@@ -9751,10 +9751,6 @@ section .display-2 {
   min-height: 4rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-
-  > .container {
-    max-width: !important;
-  }
 }
 
 .navbar-nav .nav-item {
@@ -13212,3 +13208,103 @@ span.complete-checkmark.fa.fa-check {
 #course-content .ui-slider-vertical {margin-right: 0 !important; width: 0.7em}
 #course-content .speed-option {padding-left: 2px;}
 
+
+
+
+//Legend
+
+@media (max-width: 960px) {
+  .legend {
+    .main-legend {
+      display: block !important;
+      #legend-start {
+        margin: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        padding: 1rem 0 0 0 !important;
+      }
+      blockquote {
+        text-indent: 2.5rem !important;
+        margin: 0 !important;
+        p {
+          margin: 0 !important;
+        }
+
+      }
+      #legend-author {
+        padding-left: 0 !important;
+        margin-bottom: 1rem !important;
+        text-align: end;
+      }
+    }
+    .img-mobile {
+      display: block !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .img-desktop {
+      display: none;
+    }
+  }
+}
+
+.legend {
+  margin-bottom: 2rem;
+  p {
+    text-align: justify;
+    text-indent: 2.5rem;
+  }
+  img {
+     max-width: 20rem;
+  }
+   .img-mobile {
+     display: none;
+   }
+  .main-legend {
+    display: flex;
+    align-items: center;
+    p {
+      text-indent: unset;
+    }
+    #legend-start {
+      margin: 3rem;
+      border: 0.0625rem solid rgba(0,0,0,0.125);
+      padding: 2rem;
+      box-shadow: 0 0.25rem 0.75rem -0.125rem #dee2e6, 0 -0.125rem 0.25rem -0.25rem #dee2e6;
+    }
+    #legend-author {
+      font-size: 0.8rem;
+      padding-left: 30rem;
+      margin: 0;
+    }
+    blockquote {
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
+}
+
+//Legend-end
+
+//tos-start
+.tos_dictionary_definitions {
+  padding-left: 3.5rem;
+}
+.tos_main_list {
+  padding-left: 1.5rem;
+
+  .tos_main_list_element {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  .tos_main_list_sublist {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625;
+    padding-left: 3rem;
+    padding-top: 0.5rem;
+  }
+}
+//tos-end

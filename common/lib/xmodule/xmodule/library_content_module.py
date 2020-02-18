@@ -400,6 +400,7 @@ class LibraryContentModule(LibraryContentFields, XModule, StudioEditableModule):
 @XBlock.wants('user')
 @XBlock.wants('library_tools')  # Only needed in studio
 @XBlock.wants('studio_user_permissions')  # Only available in studio
+@XBlock.needs('i18n')
 class LibraryContentDescriptor(LibraryContentFields, MakoModuleDescriptor, XmlDescriptor, StudioEditableDescriptor):
     """
     Descriptor class for LibraryContentModule XBlock.
@@ -503,6 +504,7 @@ class LibraryContentDescriptor(LibraryContentFields, MakoModuleDescriptor, XmlDe
         """
         Validates library version
         """
+        _ = self.runtime.service(self, "i18n").ugettext
         latest_version = lib_tools.get_library_version(library_key)
         if latest_version is not None:
             if version is None or version != unicode(latest_version):
@@ -541,6 +543,7 @@ class LibraryContentDescriptor(LibraryContentFields, MakoModuleDescriptor, XmlDe
         is the override of the general XBlock method, and it will also ask
         its superclass to validate.
         """
+        _ = self.runtime.service(self, "i18n").ugettext
         validation = super(LibraryContentDescriptor, self).validate()
         if not isinstance(validation, StudioValidation):
             validation = StudioValidation.copy(validation)

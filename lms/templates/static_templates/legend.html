@@ -1,0 +1,25 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="title"><title>${_('Legend_title')}</title></%block>
+
+
+
+<section class="container legend">
+    <h2>${_('Legend_title')}</h2>
+    <div class="main-legend" >
+        <div id="legend-start">
+            <blockquote>
+                <p>${_('Legend_quotation')}</p>
+            </blockquote>
+            <p id="legend-author">${_('Legend_author')}</p>
+        </div>
+        <img class="img-desktop" src="/static/images/navoica_thick.png" alt="Navoica avatar">
+    </div>
+    <p>${_('Legend_paragraph_1')}</p>
+    <p>${_('Legend_paragraph_2')}</p>
+    <p>${_('Legend_paragraph_3')}</p>
+    <img class="img-mobile" src="/static/images/navoica_thick.png" alt="Navoica avatar">
+</section>
+
