@@ -312,7 +312,7 @@ FEATURES = {
     # Whether archived courses (courses with end dates in the past) should be
     # shown in Studio in a separate list.
     'ENABLE_SEPARATE_ARCHIVED_COURSES': True,
-    
+
     'ALLOW_HIDING_DISCUSSION_TAB': True,
 }
 
@@ -940,6 +940,19 @@ CELERY_QUEUES = {
     LOW_PRIORITY_QUEUE: {},
     DEFAULT_PRIORITY_QUEUE: {}
 }
+
+############################## Studio Forum ###################################
+
+MACHINA_DEFAULT_AUTHENTICATED_USER_FORUM_PERMISSIONS = [
+'can_see_forum',
+'can_read_forum',
+'can_start_new_topics',
+'can_reply_to_topics',
+'can_edit_own_posts',
+'can_post_without_approval',
+'can_create_polls',
+'can_vote_in_polls',
+'can_download_file', ]
 
 ############################## Video ##########################################
 
