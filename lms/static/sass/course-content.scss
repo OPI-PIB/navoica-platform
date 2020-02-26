@@ -11388,6 +11388,7 @@ code {color: black;}
 
     &.image-is-zoomed {
       display: block;
+      z-index: 100000;
 
       .image-content .image-wrapper {
         img {
