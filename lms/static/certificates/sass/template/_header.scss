@@ -1,0 +1,86 @@
+@include media-breakpoint-up(xs) {
+  #page-header {
+    background-image: url(https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80);
+    background-position: 50% 100%;
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 52px 0 0;
+  }
+
+  #page-header .jumbotron {
+    background: rgba(255, 255, 255, .9);
+    background: rgba(220, 20, 20, 0.8);
+    background: linear-gradient(135deg, #bf182cee 0%, #e41d37dd 100%);
+    color: #212529;
+    margin: 0;
+    padding: 12px 0 24px;
+
+    *, a:hover {
+      color: $white;
+    }
+
+    > .container {
+      margin: 0 auto;
+      padding: 0 8px;
+    }
+
+  }
+
+  #page-header a.goto {
+    display: block;
+    font-weight: 600;
+    height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &::before {
+      content: "\f060";
+      font-family: "Font Awesome 5 Free";
+      font-size: 11px;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+  }
+
+  #page-header h1 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 300;
+    margin: 12px 0 0;
+  }
+
+  #page-header p {
+    border-top: 1px solid rgba(255, 255, 255, .6);
+    display: inline-block;
+    margin: 12px 0 0;
+    padding: 8px 0 0;
+  }
+
+}
+
+@include media-breakpoint-up(md) {
+}
+
+@include media-breakpoint-up(lg) {
+  #page-header {
+    background-position: 50% 40%;
+    font-size: 16px;
+  }
+
+  #page-header .jumbotron {
+    padding: 24px 0 36px;
+  }
+
+  #page-header a.goto {
+    left: -16px;
+    position: relative;
+  }
+
+  #page-header h1 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+}

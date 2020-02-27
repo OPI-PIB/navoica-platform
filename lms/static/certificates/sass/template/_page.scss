@@ -1,0 +1,23 @@
+@include media-breakpoint-up(xs) {
+  html {
+    overflow-y: scroll;
+  }
+  body {
+    color: $black;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  body {
+  }
+}
+
+@include media-breakpoint-up(md) {
+  body {
+  }
+}
+
+@include media-breakpoint-up(lg) {
+}
