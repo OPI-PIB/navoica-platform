@@ -1,4 +1,3 @@
-<%page expression_filter="h"/>
 <%namespace name='static' file='/static_content.html'/>
 <%! from django.utils.translation import ugettext as _%>
 <%! from django.conf import settings %>
@@ -27,6 +26,7 @@ course_mode_class = course_mode if course_mode else ''
       data-view="valid-accomplishment">
 
 <div class="wrapper-view" dir="${dir_rtl}">
+    <p>test test test</p>
 
     <%include file="_accomplishment-header.html" />
 
@@ -36,7 +36,7 @@ course_mode_class = course_mode if course_mode else ''
 
     <hr class="divider sr-only">
 
-    <%include file="_accomplishment-footer.html" />
+    <%include file="/footer.html" />
 </div>
 
 <%include file="_assets-secondary.html" />

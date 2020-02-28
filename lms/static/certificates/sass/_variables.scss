@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400,600,700&display=swap&subset=latin-ext');
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -213,10 +215,10 @@ $spacers: map-merge(
 //) !default;
 $grid-breakpoints: (
         xs: 0,     //     0 -> 400   (smartphone portrait)
-        sm: 400px, //   400 -> 700   (smartphone landscape)
-        md: 650px, //   650 -> 1200  (tablet portrait)
-        lg: 1000px, //  1000 -> ~     (tablet landscape)
-        xl: 1200px //   1200 -> ~     (desktop)
+        sm: 480px, //   400 -> 700   (smartphone landscape)
+        md: 960px, //   650 -> 1200  (tablet portrait)
+        lg: 1280px, //  1000 -> ~     (tablet landscape)
+        xl: 1280px //   1200 -> ~     (desktop)
 ) !default;
 
 //@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -236,7 +238,7 @@ $grid-breakpoints: (
 $container-max-widths: (
 //        sm: 400px,
 //        md: 700px,
-        lg: 1000px
+        lg: 1280px
         //xl: 1200px
 ) !default;
 
