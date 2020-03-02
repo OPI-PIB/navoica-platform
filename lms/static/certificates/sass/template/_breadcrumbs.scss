@@ -1,0 +1,62 @@
+@include media-breakpoint-up(xs) {
+  #course-breadcrumbs {
+    font-size: 14px;
+  }
+
+  #course-breadcrumbs > ul,
+  #course-breadcrumbs > ol {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0 0 16px;
+  }
+
+  #course-breadcrumbs li {
+    align-items: center;
+    display: flex;
+    flex: 1 0 auto;
+    margin: 0 0 4px;
+    padding: 0;
+
+    &::before {
+      color: $black;
+      flex: 0 0 50px;
+    }
+
+  }
+
+  #course-breadcrumbs a {
+    font-weight: 400;
+    margin-left: 4px;
+  }
+
+}
+
+
+@include media-breakpoint-up(lg) {
+  #course-breadcrumbs li {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    padding: 0;
+
+    &::before {
+      color: $black;
+      content: "\f054";
+      display: inline;
+      font-family: "Font Awesome 5 Free";
+      font-size: 11px;
+      font-weight: 600;
+      margin: 0 8px;
+      padding: 0;
+      width: 6px;
+    }
+
+    &:first-child {
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+}
