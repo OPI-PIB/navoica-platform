@@ -396,7 +396,7 @@ footer li {
 */
 
 #content {
-  background: #faf9f8 !important;
+  background: #ced4da !important;
   //margin: $jumbotron-padding-y 0 0;
   //padding: 7*$font-size-base 0;
   padding: 24px 0;
@@ -2578,9 +2578,6 @@ footer {
     margin: 0px;
   }
 
-  .border-top {
-    border-top: 1px solid #dee2e6 !important;
-  }
 
   .mb-3 {
     margin-bottom: 0.5rem !important;
@@ -2597,4 +2594,8 @@ footer {
 
 #authentication {
   font-family: "Signika Negative", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.border-top {
+   font-size: 15.75px;
 }
