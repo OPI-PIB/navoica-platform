@@ -1599,6 +1599,7 @@ PIPELINE_CSS = {
         'source_filenames': [
             'certificates/css/main-ltr.css',
             'css/vendor/font-awesome.css',
+            'common/fontawesome-free/css/all.css'
         ],
         'output_filename': 'css/certificates-style.css'
     },

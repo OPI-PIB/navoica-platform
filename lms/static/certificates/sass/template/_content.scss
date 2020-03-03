@@ -1,0 +1,33 @@
+@include media-breakpoint-up(xs) {
+  #page-content {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #page-content #course-content {
+    background: map_get($grays, "100");
+    padding: 16px 0;
+
+    > .container {
+      margin: 0 auto;
+      padding: 0 8px;
+    }
+
+  }
+
+  #page-content .course-content-control {
+    margin: 0 0 16px;
+  }
+
+  #page-content h2 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    line-height: 18px;
+    margin: 0 0 16px;
+    text-transform: uppercase;
+    word-spacing: .04em;
+  }
+
+
+}
