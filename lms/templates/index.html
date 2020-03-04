@@ -13,7 +13,6 @@ from openedx.core.djangolib.markup import HTML, Text
     <div id="jumbotron">
         <div class="container">
             <h1 class="display-1 text-center text-uppercase">${_('ACCESSIBLE KNOWLEDGE')}</h1>
-            <h1 class="display-none">Platforma Navoica (czytaj Nawojka lub Nawoica)</h1>
             <p class="lead text-center my-3">${_('Free online courses offered by Polish universities and institutions')}</p>
 	      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
 				<form method="get" action="/courses">
