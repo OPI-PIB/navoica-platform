@@ -1,0 +1,417 @@
+@include media-breakpoint-up(xs) {
+  .accordion-wrapper {
+    background: $white;
+    border: 1px solid map_get($grays, "300");
+    box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
+    margin-bottom: 24px;
+    padding: 8px;
+  }
+
+  .accordion-anchor {
+    position: relative;
+    top: -56px;
+    visibility: hidden;
+  }
+
+  .accordion {
+    /*
+    border: 1px solid map_get($grays, "300");
+    */
+    border-top: 0;
+    //margin: 0 0 16px;
+
+    &:last-child {
+      /*
+      border-bottom: 1px solid map_get($grays, "300");
+      */
+    }
+
+    .card {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+
+      &:last-child {
+        border-bottom: 0 !important;
+      }
+
+      &-header {
+        background: transparent;
+        border-top: 1px solid map_get($grays, "300");
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        .btn {
+          align-items: flex-start;
+          border: 0;
+          cursor: default;
+          display: flex;
+          flex: 1;
+          flex-flow: row nowrap;
+          font-size: 14px;
+          font-weight: 700;
+          justify-content: space-between;
+          padding: 8px 0;
+          text-align: left;
+          width: 100%;
+
+          &-link {
+            color: map_get($grays, "900");
+
+            &:focus {
+              text-decoration: none;
+            }
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+
+          &[aria-expanded] {
+            cursor: pointer;
+          }
+
+          &::before {
+            align-self: flex-start;
+            display: flex;
+            font-family: "Font Awesome 5 Free";
+            font-size: 12px;
+            font-weight: 600;
+            flex: 0 0 24px;
+            justify-content: flex-end;
+            line-height: 21px;
+            order: 1;
+
+          }
+
+        }
+
+      }
+
+      &-body {
+        font-size: 14px;
+        padding: 8px 0;
+
+        > .accordion {
+          margin: -8px 0;
+
+          > .card:last-of-type {
+          }
+
+        }
+
+        p {
+          font-size: 14px;
+
+          &:last-child {
+            //margin: 0;
+            margin-bottom: 0;
+          }
+
+        }
+
+        .list-group {
+          margin: -8px 0;
+          padding: 0;
+
+          &:not(:first-child) {
+            margin-top: 8px;
+          }
+
+          &:not(:last-child) {
+            border-bottom: 1px solid map_get($grays, "300");
+            margin-bottom: 8px;
+          }
+
+          &-item {
+            border: 0;
+            border-top: 1px solid map_get($grays, "300");
+            padding: 8px 0;
+
+            &:hover {
+              background: transparent;
+            }
+
+            &-action {
+              color: $red;
+              display: block;
+              padding: 0;
+
+              &:hover {
+                background: transparent;
+                cursor: pointer;
+              }
+
+              + p {
+                margin-top: 8px;
+              }
+            }
+
+            p {
+              font-weight: $font-weight-normal;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &.faq {
+      .card {
+
+        &-header {
+
+          .btn {
+            justify-content: space-between;
+
+            &-cat {
+              font-size: 16px;
+              font-weight: 700;
+            }
+
+            &[aria-expanded="false"]::before {
+              content: "\f078";
+            }
+
+            &[aria-expanded="true"]::before {
+              content: "\f077";
+            }
+
+          }
+
+        }
+
+      }
+
+      .accordion {
+        .card {
+
+          &-header {
+
+            .btn {
+              font-weight: 600;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &.toc {
+      .card {
+
+        &-header {
+
+          .btn {
+            justify-content: flex-start;
+
+            &[aria-expanded="false"]::before {
+              content: "\f078";
+            }
+
+            &[aria-expanded="true"]::before {
+              content: "\f054";
+              left: 2px;
+              position: relative;
+            }
+
+            &::before {
+              flex: 0 0 20px;
+              justify-content: flex-start;
+              order: unset;
+            }
+
+          }
+
+        }
+
+        &-body {
+          padding: 8px 0 8px 20px;
+
+          > .accordion {
+            margin: -8px 0;
+          }
+
+          p {
+            font-size: 14px;
+          }
+
+        }
+
+      }
+
+      .accordion {
+
+        .card {
+
+          &.body {
+            padding-left: 20px;
+          }
+
+        }
+
+      }
+
+    }
+
+    .accordion {
+      border: 0;
+
+      .card {
+
+        &-header {
+
+          .btn {
+            font-weight: 400;
+          }
+
+        }
+
+      }
+
+    }
+
+    &-switch {
+
+      > div {
+        display: flex;
+      }
+
+    }
+
+  }
+
+}
+
+@include media-breakpoint-up(lg) {
+  .accordion-wrapper {
+    padding: 24px;
+  }
+
+  .accordion {
+    //margin: 0 0 16px;
+
+    .card {
+
+      &-header {
+        .btn {
+          font-size: 16px;
+          //padding: 12px 0;
+        }
+      }
+
+      &-body {
+        font-size: 16px;
+        //padding: 12px 0;
+
+        > .accordion {
+          //margin: -12px 0;
+
+        }
+
+        p {
+          font-size: 16px;
+
+          &:last-child {
+            //margin: 0;
+            //margin-bottom: 0;
+          }
+
+        }
+
+        .list-group {
+          //margin: -12px 0;
+          padding: 0;
+
+          &:not(:first-child) {
+            //margin-top: 12px;
+          }
+
+          &:not(:last-child) {
+            border-bottom: 1px solid map_get($grays, "300");
+            //margin-bottom: 12px;
+          }
+
+          &-item {
+            border: 0;
+            border-top: 1px solid map_get($grays, "300");
+            //padding: 12px 0;
+
+            &:hover {
+              background: transparent;
+            }
+
+            &-action {
+              &:hover {
+                background: transparent;
+                cursor: pointer;
+              }
+
+              + p {
+                //margin-top: 12px;
+              }
+            }
+
+            p {
+              font-weight: $font-weight-normal;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &.toc {
+      .card {
+
+        &-body {
+          font-size: 16px;
+          //padding: 12px 0 12px 20px;
+
+          > .accordion {
+            //margin: -12px 0;
+          }
+
+          p {
+            font-size: 16px;
+          }
+
+        }
+
+      }
+
+    }
+
+    &.faq {
+      .card {
+
+        &-header {
+
+          .btn {
+
+            &-cat {
+              font-size: 18px;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+

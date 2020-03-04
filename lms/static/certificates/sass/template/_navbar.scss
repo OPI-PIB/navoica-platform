@@ -1,0 +1,371 @@
+@include media-breakpoint-up(xs) {
+  .navbar {
+    align-items: center;
+    background-color: #FFF;
+    box-shadow: 0 2px 6px -1px rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    display: flex;
+    height: 52px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    position: fixed;
+    top: 0;
+
+    > .container {
+      height: 32px;
+      justify-content: flex-start;
+      margin: 0 auto;
+      padding: 0 8px;
+    }
+
+    &-brand {
+      display: flex;
+      margin: 0 16px 0 0;
+      padding: 0;
+
+      img {
+        height: 22px;
+        position: relative;
+        top: -2px;
+      }
+
+    }
+
+    form {
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+      margin-left: 0;
+      margin-right: 16px;
+
+      .input-group {
+        flex: 0 1 320px;
+
+        .form-control {
+          align-items: center;
+          background-color: #f8f9fa;
+          border-color: #adb5bd;
+          box-shadow: 0 2px 6px -3px #adb5bd inset;
+          display: flex;
+          font-size: 14px;
+          height: 32px;
+          justify-content: left;
+          line-height: normal;
+          padding: 0 4px;
+
+          &::placeholder {
+            color: #adb5bd;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          &::-moz-placeholder { /* Firefox 19+ */
+            line-height: 32px;
+          }
+
+        }
+
+      }
+
+    }
+
+    #discovery-form {
+      display: none;
+    }
+
+    .btn {
+      align-items: center;
+      background: #FFF;
+      border-color: #adb5bd;
+      color: $black;
+      display: flex;
+      font-size: 14px;
+      font-weight: 600;
+      height: 32px;
+      justify-content: center;
+      line-height: 1;
+      width: 36px;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem #dee2e6;
+        outline: none;
+      }
+
+    }
+
+    &-toggler {
+      align-items: center;
+      background: #FFF;
+      border-color: #adb5bd;
+      color: $black;
+      display: flex;
+      font-size: 14px;
+      height: 32px;
+      justify-content: center;
+      line-height: 1;
+      width: 36px;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem #dee2e6;
+        outline: none;
+      }
+
+      &-icon {
+        background-image: none;
+        height: 1em;
+        width: 1em;
+      }
+
+    }
+
+    .fa, .fas, .far {
+      color: #E41D37;
+    }
+
+    &-collapse {
+      display: flex;
+      flex-flow: column;
+      align-items: stretch;
+
+      &.show {
+        background: #FFF;
+        box-shadow: none;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 53px;
+
+        .navbar-nav {
+          background: #FFF;
+          flex: 1;
+
+          .nav-item {
+            padding: 8px;
+
+            &.dropdown {
+              order: 1;
+              margin-top: auto;
+            }
+
+            .dropdown-toggle {
+              display: none;
+            }
+
+            .dropdown-menu {
+              display: flex;
+              font-size: 14px;
+
+              &::before {
+                content: "Ustaw język platformy Navoica";
+                display: flex;
+                padding: 8px;
+              }
+            }
+
+          }
+
+        }
+
+      }
+
+      .navbar-nav {
+        margin: 0;
+        padding: 0;
+
+        .nav-item {
+          box-shadow: 0 -1px 0 #dee2e6;
+          font-size: 14px;
+          margin: 0;
+          padding: 0;
+
+          .nav-link {
+            padding: 8px;
+          }
+
+          .dropdown-menu {
+            border-width: 0;
+            flex-flow: column;
+          }
+
+          .dropdown-item {
+            padding: 8px;
+
+            img {
+              margin-right: 8px;
+            }
+
+          }
+
+          .btn {
+            align-items: center;
+            color: #E41D37;
+            font-size: 14px;
+            height: auto;
+            justify-content: flex-start;
+            padding: 16px 8px;
+            text-align: left;
+            width: 100%;
+
+            &::after {
+              content: '\f061';
+              flex: 0 0 auto;
+              font-family: "Font Awesome 5 Free";
+              font-size: 14px;
+              margin-left: auto;
+            }
+
+            &-primary {
+              background: #E41D37;
+              border-color: #E41D37;
+              color: #FFF;
+              margin-bottom: 8px;
+
+              .fa, .fas, .far {
+                color: #FFF !important;
+                font-size: 11px;
+                margin: -3px 8px 0 0;
+              }
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .collapsing {
+      display: none;
+      transition: none;
+      -webkit-transition: none;
+    }
+
+  }
+
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar {
+
+    form {
+      flex: 1 1 auto;
+      margin-left: auto;
+      margin-right: 4px;
+    }
+
+    &-toggler {
+      display: none;
+    }
+
+    &-collapse {
+      flex-grow: 1;
+
+      &.show {
+        background: transparent;
+        box-shadow: none;
+        position: static;
+
+        .navbar-nav {
+          background: #FFF;
+
+          .nav-item {
+
+            &.dropdown {
+              order: initial;
+              margin-top: 0;
+            }
+
+            .dropdown-toggle {
+              display: block;
+            }
+
+            .dropdown-menu {
+              display: none;
+
+              &::before {
+                content: none;
+              }
+            }
+
+          }
+
+        }
+
+      }
+
+      .navbar-nav {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+
+        .nav-item {
+          box-shadow: none;
+          display: flex;
+          flex: 0 0 auto;
+          flex-flow: row nowrap;
+          margin-left: 0;
+
+          &.dropdown {
+
+            .btn,
+            .nav-link {
+              margin-right: 16px;
+
+            }
+
+            .dropdown-menu {
+              border-width: 1px;
+              display: none;
+
+              &.show {
+                display: block;
+              }
+            }
+
+          }
+
+          .btn {
+            align-items: center;
+            background: #FFF;
+            border: 1px solid #adb5bd;
+            color: #E41D37;
+            display: flex;
+            font-size: 14px;
+            height: 32px;
+            justify-content: center;
+            line-height: 1;
+            margin-left: 4px;
+            padding: 8px;
+            width: auto;
+
+            &::after {
+              content: none;
+            }
+
+            &-primary {
+              background: #E41D37;
+              border-color: #E41D37;
+              color: #FFF;
+              margin-bottom: 0;
+            }
+
+            &.cat {
+              margin-right: 16px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+}

@@ -1,15 +1,10 @@
 <%page expression_filter="h"/>
 <%! from django.utils.translation import ugettext as _ %>
 
-<div style="display: none" class="wrapper-header">
-
-    <header class="header-app" role="banner">
-        <h1 class="header-app-title">
-            <a class="logo" href="${logo_url}">
-                <img class="logo-img" src="${logo_src}" alt="${_('{platform_name} Home').format(platform_name=platform_name)}" />
-            </a>
-            <span class="sr-only">${logo_subtitle}</span>
-        </h1>
-    </header>
-
-</div>
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="home.html">
+            <img src="https://navoica.pl/static/images/logo-light-bg.svg" alt="">
+        </a>
+    </div>
+</nav>

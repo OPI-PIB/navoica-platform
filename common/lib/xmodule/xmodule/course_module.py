@@ -280,6 +280,19 @@ class CourseFields(object):
         display_name=_("Course Display Name"),
         scope=Scope.settings
     )
+    external_enroll = Boolean(
+        help="",
+        default=False,
+        display_name=_("Enable external enroll"),
+        scope=Scope.settings
+    )
+    external_enroll_url = String(
+        help=_(
+            "Use format: https://enroll.navoica.pl/"),
+        default='',
+        display_name=_( "External enroll url"),
+        scope=Scope.settings
+    )
     course_edit_method = String(
         display_name=_("Course Editor"),
         help=_('Enter the method by which this course is edited ("XML" or "Studio").'),

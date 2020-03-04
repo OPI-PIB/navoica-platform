@@ -8,6 +8,8 @@ import logging
 import uuid
 import warnings
 from collections import namedtuple
+import urllib
+import urlparse
 
 import analytics
 import dogstats_wrapper as dog_stats_api
@@ -25,7 +27,7 @@ from django.core.validators import ValidationError, validate_email
 from django.db import transaction
 from django.db.models.signals import post_save
 from django.dispatch import Signal, receiver
-from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
+from django.http import Http404, HttpResponse, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseRedirect
 from django.shortcuts import redirect
 from django.template.context_processors import csrf
 from django.template.response import TemplateResponse
@@ -54,6 +56,8 @@ import track.views
 from course_modes.models import CourseMode
 from edxmako.shortcuts import render_to_response, render_to_string
 from entitlements.models import CourseEntitlement
+
+from lms.djangoapps.commerce.api.v1.models import Course
 from openedx.core.djangoapps import monitoring_utils
 from openedx.core.djangoapps.catalog.utils import (
     get_programs_with_type,
@@ -357,6 +361,14 @@ def change_enrollment(request, check_access=True):
         Response
 
     """
+
+    def build_url(baseurl, path, args_dict):
+        # Returns a list in the structure of urlparse.ParseResult
+        url_parts = list(urlparse.urlparse(baseurl))
+        url_parts[2] = path
+        url_parts[4] = urllib.urlencode(args_dict)
+        return urlparse.urlunparse(url_parts)
+
     # Get the user
     user = request.user
 
@@ -418,12 +430,26 @@ def change_enrollment(request, check_access=True):
         # Check that auto enrollment is allowed for this course
         # (= the course is NOT behind a paywall)
         if CourseMode.can_auto_enroll(course_id):
+            # Check if external enroll is active. If enabled than dont enroll user and redirect
+            course = modulestore().get_course(course_id)
+            if course.external_enroll:
+                url = build_url(course.external_enroll_url, "/registration_form/{}/course".format(course_id), {})
+                return HttpResponse(
+                    url
+                )
+
+
             # Enroll the user using the default mode (audit)
             # We're assuming that users of the course enrollment table
             # will NOT try to look up the course enrollment model
             # by its slug.  If they do, it's possible (based on the state of the database)
             # for no such model to exist, even though we've set the enrollment type
             # to "audit".
+
+
+
+
+
             try:
                 enroll_mode = CourseMode.auto_enroll_mode(course_id, available_modes)
                 if enroll_mode:
