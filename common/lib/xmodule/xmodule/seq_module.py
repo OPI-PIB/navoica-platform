@@ -165,6 +165,7 @@ class ProctoringFields(object):
 @XBlock.wants('completion')
 @XBlock.needs('user')
 @XBlock.needs('bookmarks')
+@XBlock.needs('i18n')
 class SequenceModule(SequenceFields, ProctoringFields, XModule):
     """
     Layout module which lays out content in a temporal sequence
@@ -253,6 +254,7 @@ class SequenceModule(SequenceFields, ProctoringFields, XModule):
         a banner_text or the fragment to display depending on whether
         staff is masquerading.
         """
+        _ = self.runtime.service(self, "i18n").ugettext
         if self.is_time_limited:
             special_exam_html = self._time_limited_student_view()
             if special_exam_html:
@@ -265,6 +267,7 @@ class SequenceModule(SequenceFields, ProctoringFields, XModule):
         runtime user. If so, returns a banner_text or the fragment to
         display depending on whether staff is masquerading.
         """
+        _ = self.runtime.service(self, "i18n").ugettext
         course = self._get_course()
         if not self._can_user_view_content(course):
             if course.self_paced:
@@ -307,6 +310,7 @@ class SequenceModule(SequenceFields, ProctoringFields, XModule):
         self._update_position(context, len(display_items))
         prereq_met = True
         prereq_meta_info = {}
+        _ = self.runtime.service(self, "i18n").ugettext
 
         if self._required_prereq():
             if self.runtime.user_is_staff:
@@ -426,6 +430,7 @@ class SequenceModule(SequenceFields, ProctoringFields, XModule):
         display_items.  Returns a list of dict objects with information about
         the given display_items.
         """
+        _ = self.runtime.service(self, "i18n").ugettext
         is_user_authenticated = self.is_user_authenticated(context)
         bookmarks_service = self.runtime.service(self, 'bookmarks')
         completion_service = self.runtime.service(self, 'completion')
