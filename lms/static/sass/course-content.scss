@@ -11414,5 +11414,14 @@ code {color: black;}
     table-layout:fixed;
     width:100%;
   }
+  label {
+    white-space: unset !important;
+    input {
+      vertical-align: top;
+    }
+    span {
+      width: unset !important;
+    }
+  }
 }
 
