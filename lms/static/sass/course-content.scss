@@ -9272,7 +9272,6 @@ main.container aside h6 {
     border-right: 1px solid #dee2e6;
     flex: 0 0 290px;
     margin-right: 2rem;
-    order: -1 !important;
     padding-right: 2rem;
     margin-left: 0;
     padding-left: 0;
@@ -11408,3 +11407,12 @@ code {color: black;}
   }
 }
 .course-wrapper main.container .d-flex { flex-flow:row; }
+
+
+.poll-block {
+  .survey-table {
+    table-layout:fixed;
+    width:100%;
+  }
+}
+
