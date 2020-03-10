@@ -42,3 +42,5 @@ SETTINGS_EXPORT = [
     'STUDIO_NAME',
     'FAVICON_PATH',
 ]
+
+WIKI_ENABLED = False
