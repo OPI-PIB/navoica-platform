@@ -20,13 +20,13 @@ course_mode_class = course_mode if course_mode else ''
     <title>${document_title}</title>
 
     <%static:css group='style-certificates'/>
+
 </head>
 
-<body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class} A4"
-      data-view="valid-accomplishment">
+<body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class} A4 "
+      data-view="valid-accomplishment" >
 
 <div class="wrapper-view" dir="${dir_rtl}">
-    <p>test test test</p>
 
     <%include file="_accomplishment-header.html" />
 
