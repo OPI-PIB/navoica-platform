@@ -8,10 +8,8 @@ course_mode_class = course_mode if course_mode else ''
 
 
 <div id="content" class="bg-light">
-    <main class="container">
-        <aside id="filters" class="sidebar">
+    <main class="container d-print-margin">
 
-        </aside>
 
         <section>
             <div id="authentication">
@@ -80,7 +78,7 @@ course_mode_class = course_mode if course_mode else ''
                 <footer></footer>
             </div>
 
-            <div class="mt-4 text-center">
+            <div class="mt-4 text-center d-print-none">
                 <a class="btn btn-primary" href='${settings.LMS_ROOT_URL}${request.path}/pdf?preview=${request.GET.get('preview','')}' role="button"><i class="fas fa-download"></i> Pobierz zaświadczenie</a>
             </div>
 
