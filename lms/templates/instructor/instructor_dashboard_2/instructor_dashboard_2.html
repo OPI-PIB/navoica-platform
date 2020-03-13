@@ -25,69 +25,71 @@ from openedx.core.djangolib.markup import HTML
 <%block name="pagetitle">${_("Instructor Dashboard")}</%block>
 
 <%block name="headextra">
-  <%static:css group='style-course-vendor'/>
-  <%static:css group='style-vendor-tinymce-content'/>
-  <%static:css group='style-vendor-tinymce-skin'/>
-  <%static:css group='style-course'/>
-  <script type="text/javascript">
+<%static:css group='style-course-vendor'/>
+<%static:css group='style-vendor-tinymce-content'/>
+<%static:css group='style-vendor-tinymce-skin'/>
+<%static:css group='style-course'/>
+<script type="text/javascript">
     // This is a hack to get tinymce to work correctly in Firefox until the annotator tool is refactored to not include
     // tinymce globally.
-    if(typeof window.Range.prototype === "undefined") {
-        window.Range.prototype = { };
+    if (typeof window.Range.prototype === "undefined") {
+        window.Range.prototype = {};
     }
-  </script>
-  <script type="text/javascript" src="${static.url('js/instructor_dashboard/proctoring.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/date.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/flot/jquery.flot.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/flot/jquery.flot.axislabels.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/jquery-jvectormap-1.1.1/jquery-jvectormap-1.1.1.min.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/jquery-jvectormap-1.1.1/jquery-jvectormap-world-mill-en.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/jquery.event.drag-2.2.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/jquery.event.drop-2.2.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/slick.core.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/slick.grid.js')}"></script>
-  <link rel="stylesheet" href="${static.url('css/vendor/slickgrid/smoothness/jquery-ui-1.8.16.custom.css')}">
-  <link rel="stylesheet" href="${static.url('css/vendor/slickgrid/slick.grid.css')}">
-  <script type="text/javascript" src="${static.url('js/vendor/codemirror-compressed.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/tinymce/js/tinymce/tinymce.full.min.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/tinymce/js/tinymce/jquery.tinymce.min.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/jQuery-File-Upload/js/jquery.fileupload.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/vendor/jquery.qubit.js')}"></script>
+</script>
+<script type="text/javascript" src="${static.url('js/instructor_dashboard/proctoring.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/date.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/flot/jquery.flot.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/flot/jquery.flot.axislabels.js')}"></script>
+<script type="text/javascript"
+        src="${static.url('js/vendor/jquery-jvectormap-1.1.1/jquery-jvectormap-1.1.1.min.js')}"></script>
+<script type="text/javascript"
+        src="${static.url('js/vendor/jquery-jvectormap-1.1.1/jquery-jvectormap-world-mill-en.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/jquery.event.drag-2.2.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/jquery.event.drop-2.2.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/slick.core.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/slick.grid.js')}"></script>
+<link rel="stylesheet" href="${static.url('css/vendor/slickgrid/smoothness/jquery-ui-1.8.16.custom.css')}">
+<link rel="stylesheet" href="${static.url('css/vendor/slickgrid/slick.grid.css')}">
+<script type="text/javascript" src="${static.url('js/vendor/codemirror-compressed.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/tinymce/js/tinymce/tinymce.full.min.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/tinymce/js/tinymce/jquery.tinymce.min.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/jQuery-File-Upload/js/jquery.fileupload.js')}"></script>
+<script type="text/javascript" src="${static.url('js/vendor/jquery.qubit.js')}"></script>
 
-  <%static:js group='module-descriptor-js'/>
-  <%static:js group='instructor_dash'/>
-  <%static:js group='application'/>
+<%static:js group='module-descriptor-js'/>
+<%static:js group='instructor_dash'/>
+<%static:js group='application'/>
 
-  ## Backbone classes declared explicitly until RequireJS is supported
-  <script type="text/javascript" src="${static.url('js/models/notification.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/views/notification.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/views/file_uploader.js')}"></script>
-  <script type="text/javascript" src="${static.url('js/utils/animation.js')}"></script>
-  % for section_data in sections:
-    % if 'fragment' in section_data:
-      ${HTML(section_data['fragment'].head_html())}
-    % endif
-  % endfor
+## Backbone classes declared explicitly until RequireJS is supported
+<script type="text/javascript" src="${static.url('js/models/notification.js')}"></script>
+<script type="text/javascript" src="${static.url('js/views/notification.js')}"></script>
+<script type="text/javascript" src="${static.url('js/views/file_uploader.js')}"></script>
+<script type="text/javascript" src="${static.url('js/utils/animation.js')}"></script>
+% for section_data in sections:
+% if 'fragment' in section_data:
+${HTML(section_data['fragment'].head_html())}
+% endif
+% endfor
 </%block>
 
 <%block name="js_extra">
-  % for section_data in sections:
-    % if 'fragment' in section_data:
-      ${HTML(section_data['fragment'].foot_html())}
-    % endif
-  % endfor
+% for section_data in sections:
+% if 'fragment' in section_data:
+${HTML(section_data['fragment'].foot_html())}
+% endif
+% endfor
 </%block>
 
 ## Include Underscore templates
 <%block name="header_extras">
 % for template_name in ["cohorts", "discussions", "enrollment-code-lookup-links", "cohort-editor", "cohort-group-header", "cohort-selector", "cohort-form", "notification", "cohort-state", "divided-discussions-inline", "divided-discussions-course-wide", "cohort-discussions-category", "cohort-discussions-subcategory", "certificate-white-list", "certificate-white-list-editor", "certificate-bulk-white-list", "certificate-invalidation", "membership-list-widget"]:
 <script type="text/template" id="${template_name}-tpl">
-  <%static:include path="instructor/instructor_dashboard_2/${template_name}.underscore" />
+    <%static:include path="instructor/instructor_dashboard_2/${template_name}.underscore" />
 </script>
 % endfor
 
 <script type="text/template" id="file-upload-tpl">
-  <%static:include path="file-upload.underscore" />
+    <%static:include path="file-upload.underscore" />
 </script>
 </%block>
 
@@ -99,57 +101,65 @@ from openedx.core.djangolib.markup import HTML
 <script language="JavaScript" type="text/javascript"></script>
 
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('.dropdown-toggle').on('click', function(e) {
-			$(this).parent().toggleClass('show');
-			$('.dropdown-menu').toggleClass('show');
-		});
-	});
+    $(document).ready(function () {
+        $('.dropdown-toggle').on('click', function (e) {
+            $(this).parent().toggleClass('show');
+            $('.dropdown-menu').toggleClass('show');
+        });
+    });
 </script>
 
 <div class="container">
-  <div class="instructor-dashboard-wrapper-2">
+    <div class="instructor-dashboard-wrapper-2">
         <main id="main" aria-label="Content" tabindex="-1">
-        <section class="instructor-dashboard-content-2" id="instructor-dashboard-content">
-          <h2 class="hd hd-2 instructor-dashboard-title">${_("Instructor Dashboard")}</h2>
-          
-            <div class="wrap-instructor-info studio-view">
-            %if studio_url:
-              <a class="instructor-info-action  btn btn-sm btn-outline-light" href="${studio_url}">
-                <i class="fas fa-desktop"></i>${_("View Course in Studio")}</a>
-            %endif
-            </div>
-        
+            <section class="instructor-dashboard-content-2" id="instructor-dashboard-content">
+                <h2 class="hd hd-2 instructor-dashboard-title">${_("Instructor Dashboard")}</h2>
 
-        ## links which are tied to idash-sections below.
-        ## the links are activated and handled in instructor_dashboard.js
-        ## when the javascript loads, it clicks on the first section
-        <ul class="instructor-nav">
-          % for section_data in sections:
-            <% is_hidden = section_data.get('is_hidden', False) %>
-            ## This is necessary so we don't scrape 'section_display_name' as a string.
-            <% dname = section_data['section_display_name'] %>
-            % if not is_hidden:
-              <li class="nav-item"><button type="button" class="btn-link ${ section_data['section_key'] }${' hidden' if is_hidden else ''}" data-section="${ section_data['section_key'] }">${_(dname)}</button></li>
-            % endif
-          % endfor
-        </ul>
+                <div class="wrap-instructor-info studio-view">
+                    %if studio_url:
+                    <a class="instructor-info-action  btn btn-sm btn-outline-light" href="${studio_url}">
+                        <i class="fas fa-desktop"></i>${_("View Course in Studio")}</a>
+                    %endif
+                </div>
 
-        ## each section corresponds to a section_data sub-dictionary provided by the view
-        ## to keep this short, sections can be pulled out into their own files
 
-        % for section_data in sections:
-          <% is_hidden = section_data.get('is_hidden', False) %>
-          <section id="${ section_data['section_key'] }" class="idash-section${' hidden' if hidden else ''}" aria-labelledby="header-${section_data['section_key']}">
-              <h3 class="hd hd-3" id="header-${ section_data['section_key'] }">${ section_data['section_display_name'] }</h3>
-              <%include file="${ section_data['section_key'] }.html" args="section_data=section_data" />
-          </section>
-          % endfor
-        </section>
+                ## links which are tied to idash-sections below.
+                ## the links are activated and handled in instructor_dashboard.js
+                ## when the javascript loads, it clicks on the first select option
+
+                <select class="form-control" id="select-link">
+                    % for section_data in sections:
+                    <% is_hidden = section_data.get('is_hidden', False) %>
+                    ## This is necessary so we don't scrape 'section_display_name' as a string.
+                    <% dname = section_data['section_display_name'] %>
+                    % if not is_hidden:
+                    <option data-target="${ section_data['section_key'] }"
+                            data-section="${ section_data['section_key'] }">${_(dname)}
+                    </option>
+                    % endif
+                    % endfor
+
+                </select>
+                <div class="tab-content">
+
+                </div>
+                ## each section corresponds to a section_data sub-dictionary provided by the view
+                ## to keep this short, sections can be pulled out into their own files
+
+                % for section_data in sections:
+                <% is_hidden = section_data.get('is_hidden', False) %>
+                <section id="${ section_data['section_key'] }" class="idash-section${' hidden' if hidden else ''}"
+                         aria-labelledby="header-${section_data['section_key']}">
+                    <h3 class="hd hd-3" id="header-${ section_data['section_key'] }">${
+                        section_data['section_display_name'] }</h3>
+                    <%include file="${ section_data['section_key'] }.html" args="section_data=section_data" />
+                </section>
+                % endfor
+            </section>
         </main>
-  </div>
+    </div>
 </div>
 
 <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
-    DateUtilFactory.transform(iterationKey=".localized-datetime");
+DateUtilFactory.transform(iterationKey=".localized-datetime");
 </%static:require_module_async>

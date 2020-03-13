@@ -102,48 +102,43 @@ such that the value can be defined later than this assignment (file load order).
     });
 
     setupInstructorDashboard = function(idashContent) {
-        var $links, clickFirstLink, link, rmatch, sectionName;
-        $links = idashContent.find('.' + CSS_INSTRUCTOR_NAV).find('.btn-link');
-        $links.each(function(i, linkItem) {
-            return $(linkItem).click(function(e) {
-                var $section, itemSectionName, ref;
-                e.preventDefault();
-                idashContent.find('.' + CSS_INSTRUCTOR_NAV + ' li').children().removeClass(CSS_ACTIVE_SECTION);
-                idashContent.find('.' + CSS_INSTRUCTOR_NAV + ' li').children().attr('aria-pressed', 'false');
-                idashContent.find('.' + CSS_IDASH_SECTION).removeClass(CSS_ACTIVE_SECTION);
-                itemSectionName = $(this).data('section');
-                $section = idashContent.find('#' + itemSectionName);
-                $(this).addClass(CSS_ACTIVE_SECTION);
-                $(this).attr('aria-pressed', 'true');
-                $section.addClass(CSS_ACTIVE_SECTION);
-                window.analytics.pageview('instructor_section:' + itemSectionName);
-                location.hash = '' + HASH_LINK_PREFIX + itemSectionName;
-                sectionsHaveLoaded.afterFor(function() {
-                    return $section.data('wrapper').onClickTitle();
-                });
-                if (!$section.is($activeSection)) {
-                    if ($activeSection != null) {
-                        ref = $activeSection.data('wrapper') != null;
-                        if (ref) {
-                            if (typeof ref.onExit === 'function') {
-                                ref.onExit();
-                            }
+        var clickFirstLink, link, rmatch, sectionName, $selectLink;
+        $selectLink = idashContent.find('#select-link');
+        $selectLink.change(function(e) {
+            var $section, itemSectionName, ref;
+            e.preventDefault();
+            idashContent.find('.' + CSS_IDASH_SECTION).removeClass(CSS_ACTIVE_SECTION);
+            itemSectionName = $(this).children('option:selected').data('section');
+            $section = idashContent.find('#' + itemSectionName);
+            $(this).attr('aria-pressed', 'true');
+            $section.addClass(CSS_ACTIVE_SECTION);
+            window.analytics.pageview('instructor_section:' + itemSectionName);
+            location.hash = '' + HASH_LINK_PREFIX + itemSectionName;
+            sectionsHaveLoaded.afterFor(function() {
+                return $section.data('wrapper').onClickTitle();
+            });
+            if (!$section.is($activeSection)) {
+                if ($activeSection != null) {
+                    ref = $activeSection.data('wrapper') != null;
+                    if (ref) {
+                        if (typeof ref.onExit === 'function') {
+                            ref.onExit();
                         }
                     }
                 }
-                $activeSection = $section;
-                return $activeSection;
-            });
+            }
+            $activeSection = $section;
+            return $activeSection;
         });
         clickFirstLink = function() {
             var firstLink;
-            firstLink = $links.eq(0);
-            return firstLink.click();
+            firstLink = $selectLink;
+            return firstLink.change();
         };
         if ((new RegExp('^' + HASH_LINK_PREFIX)).test(location.hash)) {
             rmatch = (new RegExp('^' + HASH_LINK_PREFIX + '(.*)')).exec(location.hash);
             sectionName = rmatch[1];
-            link = $links.filter("[data-section='" + sectionName + "']");
+            link = $selectLink.filter("[data-section='" + sectionName + "']");
             if (link.length === 1) {
                 return link.click();
             } else {
