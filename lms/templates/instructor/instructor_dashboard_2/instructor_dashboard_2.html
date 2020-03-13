@@ -140,9 +140,7 @@ ${HTML(section_data['fragment'].foot_html())}
                     % endfor
 
                 </select>
-                <div class="tab-content">
 
-                </div>
                 ## each section corresponds to a section_data sub-dictionary provided by the view
                 ## to keep this short, sections can be pulled out into their own files
 
@@ -150,8 +148,6 @@ ${HTML(section_data['fragment'].foot_html())}
                 <% is_hidden = section_data.get('is_hidden', False) %>
                 <section id="${ section_data['section_key'] }" class="idash-section${' hidden' if hidden else ''}"
                          aria-labelledby="header-${section_data['section_key']}">
-                    <h3 class="hd hd-3" id="header-${ section_data['section_key'] }">${
-                        section_data['section_display_name'] }</h3>
                     <%include file="${ section_data['section_key'] }.html" args="section_data=section_data" />
                 </section>
                 % endfor

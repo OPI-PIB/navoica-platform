@@ -5,13 +5,14 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 
 %if settings.FEATURES.get('DISPLAY_ANALYTICS_ENROLLMENTS') or section_data.get('enrollment_message'):
-  <h4 class="hd hd-4">${_("Enrollment Information")}</h4>
   <div class="enrollment-wrapper">
+    <h4 class="hd hd-3">${_("Enrollment Information")}</h4>
     %if settings.FEATURES.get('DISPLAY_ANALYTICS_ENROLLMENTS'):
       ## Translators: 'track' refers to the enrollment type ('honor', 'verified', or 'audit')
       <% modes = section_data['enrollment_count'] %>
-        <table>
-            <caption class="tip">${_("Number of enrollees (admins, staff, and students) by track")}</caption>
+    <table>
+        <caption class="tip">${_("Number of enrollees (admins, staff, and students) by track")}</caption>
+        <tbody>
             <tr>
                 <th scope="row">${_("Verified")}</th><td>${modes['verified']}</td>
             </tr>
@@ -32,16 +33,16 @@ from openedx.core.djangolib.markup import HTML, Text
                     <strong>${modes['total']}</strong>
                 </td>
             </tr>
-        </table>
-      %elif section_data.get('enrollment_message'):
-        <p>${section_data['enrollment_message']}</p>
-      %endif
+        </tbody>
+    </table>
+    %elif section_data.get('enrollment_message'):
+    <p>${section_data['enrollment_message']}</p>
+    %endif
   </div>
-  <hr>
 %endif
 
 <div class="basic-wrapper">
-  <h4 class="hd hd-4">${_("Basic Course Information")}</h4>
+  <h3 class="hd hd-4">${_("Basic Course Information")}</h3>
 
   <ul class="list-input">
     <li class="field text is-not-editable" id="field-course-display-name">
@@ -118,8 +119,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
 %if settings.FEATURES.get('ENABLE_INSTRUCTOR_BACKGROUND_TASKS'):
   <div class="running-tasks-container action-type-container">
-    <hr>
-    <h4 class="hd hd-4"> ${_("Pending Tasks")} </h4>
+    <h4 class="hd hd-3"> ${_("Pending Tasks")} </h4>
     <div class="running-tasks-section">
       <p>${_("The status for any active tasks appears in a table below.")} </p>
       <br />
