@@ -1,0 +1,479 @@
+@include media-breakpoint-up(xs) {
+  .form-control {
+    background-color: map_get($grays, "100");
+    background-position: calc(100% - 8px);
+    border: 1px solid map_get($grays, "500");
+    box-shadow: 0 2px 6px -3px #adb5bd inset;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 1;
+    padding: 0 8px;
+    width: 100%;
+  }
+
+  #course_info{
+    margin: 0 0 16px;
+    padding-top: 16px;
+    word-break: break-word;
+
+   .membership-section, .action-type-container, .enrollment-wrapper, .basic-wrapper {
+      background-color: #f8f9fa;
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      box-shadow: 0 4px 12px -2px #dee2e6, 0 -2px 4px -4px #dee2e6;
+      margin: 0 0 16px;
+      padding: 8px;
+  }
+
+  h3 {
+    border-bottom: 1px solid #dee2e6;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    margin: -8px -8px 16px;
+    padding: 8px;
+  }
+
+  .enrollment-wrapper {
+    overflow-x: auto;
+
+    table {
+      border-collapse: collapse;
+      border-top: 1px solid map_get($grays, "300");
+      margin: 16px 0;
+      table-layout: auto;
+      width: 100%;
+
+      td, th {
+        border-bottom: 1px solid map_get($grays, "300");
+        padding: 4px 8px 4px 0 !important;
+      }
+
+      td {
+        text-align: right;
+      }
+    }
+  }
+
+  ul.list-input {
+    border-top: 1px solid map_get($grays, "300");
+    margin: 16px 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      border-bottom: 1px solid map_get($grays, "300");
+      line-height: 1.5;
+      padding: 4px 8px 4px 0 !important;
+
+      label {
+        flex: 0 0 40%;
+        margin: 0 8px 0 0;
+      }
+
+    }
+
+  }
+
+    &.form-control {
+      background-color: map_get($grays, "100");
+      background-position: calc(100% - 8px);
+      border: 1px solid map_get($grays, "500");
+      box-shadow: 0 2px 6px -3px #adb5bd inset;
+      box-sizing: border-box;
+      font-size: 14px;
+      font-weight: 400;
+      height: 32px;
+      line-height: 1;
+      padding: 0 8px;
+      width: 100%;
+    }
+  }
+
+  #course_info + .tab-content {
+//    padding-top: 16px;
+//    word-break: break-word;
+
+    .btn {
+      align-items: center;
+      border-radius: 0;
+      box-sizing: border-box;
+      display: inline-flex;
+      flex: 1 0 100px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      margin: 0 0 8px;
+      min-height: 32px;
+      justify-content: center;
+      line-height: 18px;
+      width: 100%;
+      min-width: 100px;
+      padding: 4px 8px;
+      text-align: center;
+      white-space: normal;
+    }
+
+    .dropdown-menu {
+      padding: 0;
+    }
+
+    .dropdown-item {
+      border-top: 1px solid map_get($grays, "300");
+      font-size: 14px;
+      line-height: 18px;
+      padding: 6px 8px;
+    }
+
+    .dropdown-item:first-child {
+      border: 0;
+    }
+
+    .form-control {
+      background-color: map_get($grays, "100");
+      background-position: calc(100% - 8px);
+      border: 1px solid map_get($grays, "500");
+      box-shadow: 0 2px 6px -3px #adb5bd inset;
+      box-sizing: border-box;
+      font-size: 14px;
+      line-height: 1;
+      margin: 8px 0;
+      padding: 8px;
+      width: 100%;
+      /*
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      */
+    }
+
+    select.form-control,
+    input.form-control {
+      font-weight: 400;
+      height: 32px;
+      padding: 0 8px;
+
+      option:checked {
+        font-weight: 400;
+      }
+
+    }
+
+    label {
+      &.list-group-item {
+        border-color: map_get($grays, "300");
+        background: transparent;
+        padding: 0;
+
+        .field {
+          &.custom-control {
+            align-items: flex-start;
+            display: flex;
+            padding: 8px 0px 8px 24px;
+          }
+        }
+
+      }
+    }
+
+    h3 {
+      /*
+      background: linear-gradient(135deg, #495057ff 0%, #495057dd 100%);
+      color: $white;
+      */
+//      border-bottom: 1px solid map_get($grays, "300");
+//      font-size: 18px;
+//      font-weight: 700;
+//      line-height: 21px;
+//      margin: -8px -8px 16px;
+//      padding: 8px;
+
+      &:first-of-type {
+        /*
+        margin-top: 0;
+        */
+      }
+
+      &::before {
+        /*
+        content: "";
+        display: block;
+        width: 33%;
+        height: 2px;
+        background: darkcyan;
+        margin-bottom: 4px;
+        */
+      }
+
+    }
+
+    .tab-pane > h3 {
+      margin: 0 0 8px;
+      padding: 0 0 0px;
+    }
+
+    .membership-section,
+    .action-type-container,
+    .enrollment-wrapper,
+    .basic-wrapper {
+//      background-color: map_get($grays, "100");
+//      background-color: $white;
+//      border: 1px solid map_get($grays, "300");
+//      box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
+//      margin: 0 0 16px;
+//      padding: 8px;
+    }
+
+    legend {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21px;
+      margin: 0 -8px;
+      padding: 0 8px;
+      width: auto;
+    }
+
+    label {
+      display: block;
+    }
+
+    .auth-list-container {
+      //border-top: 3px double #ccc;
+      margin: 16px 0;
+      padding-top: 16px;
+
+      .title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        margin: 0 0 8px;
+
+        &::before {
+          background: darkcyan;
+          content: "";
+          display: block;
+          height: 4px;
+          margin-bottom: 8px;
+          width: 50px;
+        }
+
+      }
+    }
+
+    .member-list {
+      margin: 16px 0;
+      overflow-x: auto;
+
+      table {
+        border-collapse: collapse;
+        border-top: 1px solid map_get($grays, "300");
+        min-width: 600px;
+        table-layout: auto;
+
+        td, th {
+          border-bottom: 1px solid map_get($grays, "300");
+          padding: 4px 8px 4px 0 !important;
+        }
+      }
+    }
+
+    .enrollment-wrapper {
+//      overflow-x: auto;
+
+      table {
+//        border-collapse: collapse;
+//        border-top: 1px solid map_get($grays, "300");
+//        margin: 16px 0;
+//        table-layout: auto;
+//        width: 100%;
+
+        td, th {
+//          border-bottom: 1px solid map_get($grays, "300");
+//          padding: 4px 8px 4px 0 !important;
+        }
+
+        td {
+//          text-align: right;
+        }
+      }
+    }
+
+    h4.hd-4 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 21px;
+      margin: 16px 0 8px;
+
+      &::before {
+        background: darkcyan;
+        content: "";
+        display: block;
+        height: 4px;
+        margin-bottom: 8px;
+        width: 50px;
+      }
+
+    }
+
+    h5, .h5 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 21px;
+      margin: 16px 0 8px;
+
+    }
+
+    .hint {
+      color: map_get($grays, "700");
+      font-size: 13px;
+    }
+
+    .bottom-bar .btn {
+      margin: 8px 0;
+    }
+
+    hr {
+      visibility: hidden;
+    }
+
+    br + br {
+      display: none;
+    }
+
+    ul.list-input {
+//      border-top: 1px solid map_get($grays, "300");
+//      margin: 16px 0;
+//      padding: 0;
+
+      li {
+//        display: flex;
+//        border-bottom: 1px solid map_get($grays, "300");
+//        line-height: 1.5;
+//        padding: 4px 8px 4px 0 !important;
+
+        label {
+//          flex: 0 0 40%;
+//          margin: 0 8px 0 0;
+        }
+
+      }
+
+    }
+
+    .list-group {
+      margin: 16px 0;
+    }
+
+    .list-group-flush {
+      .list-group-item:first-child {
+        border-top: 1px solid map_get($grays, "300");
+      }
+
+    }
+
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  #course_info {
+    &.form-control {
+      font-size: 16px;
+      height: 36px;
+    }
+  }
+
+  #course_info + .tab-content {
+    font-size: 16px;
+
+    .btn {
+      width: auto;
+    }
+
+    .form-control {
+      font-size: 16px;
+      height: 36px;
+    }
+
+    .membership-section,
+    .action-type-container,
+    .enrollment-wrapper,
+    .basic-wrapper {
+      padding: 24px;
+    }
+
+    h3 {
+      margin: -24px -24px 24px;
+      padding: 16px 24px;
+    }
+
+    .tab-pane > h3 {
+      margin: 0 0 24px;
+      padding: 0 0 16px;
+    }
+
+    .auth-list-container {
+      .title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0 0 8px;
+
+      }
+    }
+
+    .member-list {
+      margin: 16px 0;
+      overflow-x: auto;
+
+      table {
+        width: 100%;
+
+        td, th {
+          padding: 8px 8px 8px 0 !important
+        }
+
+      }
+
+    }
+
+    .enrollment-wrapper {
+
+      table {
+
+        td, th {
+          padding: 8px 8px 8px 0 !important
+        }
+
+      }
+
+    }
+
+    label {
+      &.list-group-item {
+
+        .field {
+          &.custom-control {
+            padding: 8px 8px 8px 24px;
+          }
+        }
+
+      }
+    }
+
+    ul.list-input {
+
+      li {
+        padding: 8px 8px 8px 0 !important;
+
+        label {
+          flex: 0 0 40%;
+          margin: 0 8px 0 0;
+        }
+
+      }
+
+    }
+
+  }
+
+}

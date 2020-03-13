@@ -1468,6 +1468,12 @@ PIPELINE_CSS = {
 	  ],
         'output_filename': 'css/lms-style-vendor.css',
     },
+    'style-instructor-dash' : {
+        'source_filenames' : [
+            'css/instructor/course-leader.css',
+        ],
+        'output_filename': 'css/instructor_dash.css'
+    },
     'style-vendor-tinymce-content': {
         'source_filenames': [
             'js/vendor/tinymce/js/tinymce/skins/studio-tmce4/content.min.css'
