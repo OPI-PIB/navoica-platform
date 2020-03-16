@@ -10,13 +10,13 @@ from openedx.core.djangolib.markup import HTML, Text
     <label>
         ${_("Enter email addresses and/or usernames separated by new lines or commas.")}
         ${_("You will not get notification for emails that bounce, so please double-check spelling.")}
-        <textarea rows="6" name="student-ids" placeholder="${_("Email Addresses/Usernames")}" spellcheck="false"></textarea>
+        <textarea rows="6" name="student-ids" placeholder="${_("Email Addresses/Usernames")}" spellcheck="false" class="form-control"></textarea>
     </label>
 
     <div class="role">
         <label>
             ${_("Role of the users being enrolled.")}
-            <select name="role">
+            <select name="role" class="form-control">
                 % for role in section_data['enrollment_role_choices']:
                   <option value="${role}">${role}</option>
                 % endfor
@@ -28,7 +28,7 @@ from openedx.core.djangolib.markup import HTML, Text
         ${_("Enter the reason why the students are to be manually enrolled or unenrolled.")}
         ${_("This cannot be left blank and will be recorded and presented in Enrollment Reports.")}
         ${_("Therefore, please give enough detail to account for this action.")}
-        <textarea rows="2" id="reason-field-id" name="reason-field" placeholder="${_('Reason')}" spellcheck="false"></textarea>
+        <textarea rows="2" id="reason-field-id" name="reason-field" placeholder="${_('Reason')}" spellcheck="false" class="form-control"></textarea>
     </label>
     <div class="enroll-option">
         <label class="has-hint">
@@ -59,10 +59,10 @@ from openedx.core.djangolib.markup import HTML, Text
         </label>
     </div>
     <div>
-        <input type="button" name="enrollment-button" class="enrollment-button" value="${pgettext('someone','Enroll')}" data-endpoint="${ section_data['enroll_button_url'] }" data-action="enroll" >
-        <input type="button" name="enrollment-button" class="enrollment-button" value="${_("Unenroll")}" data-endpoint="${ section_data['unenroll_button_url'] }" data-action="unenroll" >
+        <input type="button" name="enrollment-button" class="enrollment-button btn btn-outline-primary btn-sm" value="${pgettext('someone','Enroll')}" data-endpoint="${ section_data['enroll_button_url'] }" data-action="enroll" >
+        <input type="button" name="enrollment-button" class="enrollment-button btn btn-outline-primary btn-sm" value="${_("Unenroll")}" data-endpoint="${ section_data['unenroll_button_url'] }" data-action="unenroll" >
     </div>
-    <div class="request-response"></div>
+    <div class="request-response" ></div>
     <div class="request-response-error"></div>
 </fieldset>
 
@@ -92,11 +92,11 @@ from openedx.core.djangolib.markup import HTML, Text
 
 %if section_data['access']['instructor']:
 <fieldset class="batch-beta-testers membership-section">
-    <legend id="heading-batch-beta-testers" class="hd hd-3">${_("Batch Beta Tester Addition")}</legend>
+    <h3 id="heading-batch-beta-testers" class="hd hd-3">${_("Batch Beta Tester Addition")}</h3>
     <label>
         ${_("Enter email addresses and/or usernames separated by new lines or commas.")}<br/>
         ${_("Note: Users must have an activated {platform_name} account before they can be enrolled as beta testers.").format(platform_name=settings.PLATFORM_NAME)}
-        <textarea rows="6" cols="50" name="student-ids-for-beta" placeholder="${_("Email Addresses/Usernames")}" spellcheck="false"></textarea>
+        <textarea rows="6" cols="50" name="student-ids-for-beta" placeholder="${_("Email Addresses/Usernames")}" spellcheck="false" class="form-control"></textarea>
     </label>
     <div class="enroll-option">
         <label class="has-hint">
@@ -125,8 +125,8 @@ from openedx.core.djangolib.markup import HTML, Text
         </label>
     </div>
     <div>
-        <input type="button" name="beta-testers" class="enrollment-button" value="${_("Add beta testers")}" data-endpoint="${ section_data['modify_beta_testers_button_url'] }" data-action="add" >
-        <input type="button" name="beta-testers" class="enrollment-button" value="${_("Remove beta testers")}" data-endpoint="${ section_data['modify_beta_testers_button_url'] }" data-action="remove" >
+        <input type="button" name="beta-testers" class="enrollment-button btn btn-outline-primary btn-sm" value="${_("Add beta testers")}" data-endpoint="${ section_data['modify_beta_testers_button_url'] }" data-action="add" >
+        <input type="button" name="beta-testers" class="enrollment-button btn btn-outline-primary btn-sm" value="${_("Remove beta testers")}" data-endpoint="${ section_data['modify_beta_testers_button_url'] }" data-action="remove" >
     </div>
     <div class="request-response"></div>
     <div class="request-response-error"></div>
@@ -144,7 +144,7 @@ from openedx.core.djangolib.markup import HTML, Text
   <div class="wrapper-member-select">
     ## Translators: an "Administrator Group" is a group, such as Course Staff, that users can be added to.
     <label>${_("Select a course team role:")}
-        <select id="member-lists-selector" class="member-lists-selector">
+        <select id="member-lists-selector" class="member-lists-selector form-control">
           <option> ${_("Getting available lists...")} </option>
         </select>
     </label>

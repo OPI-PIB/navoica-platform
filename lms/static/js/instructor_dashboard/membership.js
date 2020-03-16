@@ -497,7 +497,7 @@ such that the value can be defined later than this assignment (file load order).
                 $taskResSection = $('<div/>', {
                     class: 'request-res-section'
                 });
-                $taskResSection.append($('<h3/>', {
+                $taskResSection.append($('<h4/>', {
                     text: label
                 }));
                 $idsList = $('<ul/>');
@@ -695,7 +695,7 @@ such that the value can be defined later than this assignment (file load order).
                 $taskResSection = $('<div/>', {
                     class: 'request-res-section'
                 });
-                $taskResSection.append($('<h3/>', {
+                $taskResSection.append($('<h4/>', {
                     text: label
                 }));
                 $idsList = $('<ul/>');
