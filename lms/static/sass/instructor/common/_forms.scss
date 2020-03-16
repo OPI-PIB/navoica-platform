@@ -1,5 +1,5 @@
 @include media-breakpoint-up(xs) {
-  .form-control {
+  #select-link {
     background-color: map_get($grays, "100");
     background-position: calc(100% - 8px);
     border: 1px solid map_get($grays, "500");
@@ -13,88 +13,13 @@
     width: 100%;
   }
 
-  #course_info{
-    margin: 0 0 16px;
+  #course_info, #membership {
+    word-break: break-word;
+  }
+
+  #course_info, #membership{
     padding-top: 16px;
     word-break: break-word;
-
-   .membership-section, .action-type-container, .enrollment-wrapper, .basic-wrapper {
-      background-color: #f8f9fa;
-      background-color: #fff;
-      border: 1px solid #dee2e6;
-      box-shadow: 0 4px 12px -2px #dee2e6, 0 -2px 4px -4px #dee2e6;
-      margin: 0 0 16px;
-      padding: 8px;
-  }
-
-  h3 {
-    border-bottom: 1px solid #dee2e6;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21px;
-    margin: -8px -8px 16px;
-    padding: 8px;
-  }
-
-  .enrollment-wrapper {
-    overflow-x: auto;
-
-    table {
-      border-collapse: collapse;
-      border-top: 1px solid map_get($grays, "300");
-      margin: 16px 0;
-      table-layout: auto;
-      width: 100%;
-
-      td, th {
-        border-bottom: 1px solid map_get($grays, "300");
-        padding: 4px 8px 4px 0 !important;
-      }
-
-      td {
-        text-align: right;
-      }
-    }
-  }
-
-  ul.list-input {
-    border-top: 1px solid map_get($grays, "300");
-    margin: 16px 0;
-    padding: 0;
-
-    li {
-      display: flex;
-      border-bottom: 1px solid map_get($grays, "300");
-      line-height: 1.5;
-      padding: 4px 8px 4px 0 !important;
-
-      label {
-        flex: 0 0 40%;
-        margin: 0 8px 0 0;
-      }
-
-    }
-
-  }
-
-    &.form-control {
-      background-color: map_get($grays, "100");
-      background-position: calc(100% - 8px);
-      border: 1px solid map_get($grays, "500");
-      box-shadow: 0 2px 6px -3px #adb5bd inset;
-      box-sizing: border-box;
-      font-size: 14px;
-      font-weight: 400;
-      height: 32px;
-      line-height: 1;
-      padding: 0 8px;
-      width: 100%;
-    }
-  }
-
-  #course_info + .tab-content {
-//    padding-top: 16px;
-//    word-break: break-word;
 
     .btn {
       align-items: center;
@@ -181,12 +106,12 @@
       background: linear-gradient(135deg, #495057ff 0%, #495057dd 100%);
       color: $white;
       */
-//      border-bottom: 1px solid map_get($grays, "300");
-//      font-size: 18px;
-//      font-weight: 700;
-//      line-height: 21px;
-//      margin: -8px -8px 16px;
-//      padding: 8px;
+      border-bottom: 1px solid map_get($grays, "300");
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21px;
+      margin: -8px -8px 16px;
+      padding: 8px;
 
       &:first-of-type {
         /*
@@ -216,12 +141,12 @@
     .action-type-container,
     .enrollment-wrapper,
     .basic-wrapper {
-//      background-color: map_get($grays, "100");
-//      background-color: $white;
-//      border: 1px solid map_get($grays, "300");
-//      box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
-//      margin: 0 0 16px;
-//      padding: 8px;
+      background-color: map_get($grays, "100");
+      background-color: $white;
+      border: 1px solid map_get($grays, "300");
+      box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
+      margin: 0 0 16px;
+      padding: 8px;
     }
 
     legend {
@@ -278,22 +203,22 @@
     }
 
     .enrollment-wrapper {
-//      overflow-x: auto;
+      overflow-x: auto;
 
       table {
-//        border-collapse: collapse;
-//        border-top: 1px solid map_get($grays, "300");
-//        margin: 16px 0;
-//        table-layout: auto;
-//        width: 100%;
+        border-collapse: collapse;
+        border-top: 1px solid map_get($grays, "300");
+        margin: 16px 0;
+        table-layout: auto;
+        width: 100%;
 
         td, th {
-//          border-bottom: 1px solid map_get($grays, "300");
-//          padding: 4px 8px 4px 0 !important;
+          border-bottom: 1px solid map_get($grays, "300");
+          padding: 4px 8px 4px 0 !important;
         }
 
         td {
-//          text-align: right;
+          text-align: right;
         }
       }
     }
@@ -341,19 +266,19 @@
     }
 
     ul.list-input {
-//      border-top: 1px solid map_get($grays, "300");
-//      margin: 16px 0;
-//      padding: 0;
+      border-top: 1px solid map_get($grays, "300");
+      margin: 16px 0;
+      padding: 0;
 
       li {
-//        display: flex;
-//        border-bottom: 1px solid map_get($grays, "300");
-//        line-height: 1.5;
-//        padding: 4px 8px 4px 0 !important;
+        display: flex;
+        border-bottom: 1px solid map_get($grays, "300");
+        line-height: 1.5;
+        padding: 4px 8px 4px 0 !important;
 
         label {
-//          flex: 0 0 40%;
-//          margin: 0 8px 0 0;
+          flex: 0 0 40%;
+          margin: 0 8px 0 0;
         }
 
       }
