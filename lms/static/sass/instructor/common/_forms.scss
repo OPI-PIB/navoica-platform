@@ -17,7 +17,7 @@
     word-break: break-word;
   }
 
-  #course_info, #membership{
+  #course_info, #membership, #student_admin{
     padding-top: 16px;
     word-break: break-word;
 
@@ -324,6 +324,10 @@
     }
   }
 
+   .task-history-single-table {
+    font-size: 0.7rem;
+  }
+
 }
 
 @include media-breakpoint-up(xl) {
@@ -334,7 +338,7 @@
     }
   }
 
-  #course_info {
+  #course_info, #membership, #student_admin {
     font-size: 16px;
 
     .btn {
@@ -446,6 +450,10 @@
       border-top: 1px solid #dee2e6;
       padding: 4px 8px 4px 0 !important
     }
+  }
+
+  .task-history-single-table {
+    font-size: 0.7rem;
   }
 
 }
