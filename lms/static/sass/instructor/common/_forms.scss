@@ -13,11 +13,11 @@
   }
 
 @include media-breakpoint-up(xs) {
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download {
     word-break: break-word;
   }
 
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download {
     padding-top: 16px;
     word-break: break-word;
 
@@ -331,14 +331,14 @@
 }
 
 @include media-breakpoint-up(xl) {
-  #course_info, #membership, #student_admin, #discussions_management {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download {
     &.form-control {
       font-size: 16px;
       height: 36px;
     }
   }
 
-  #course_info, #membership, #student_admin, #discussions_management {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download {
     font-size: 16px;
 
     .btn {
