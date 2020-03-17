@@ -13,11 +13,11 @@
   }
 
 @include media-breakpoint-up(xs) {
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management{
     word-break: break-word;
   }
 
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management {
     padding-top: 16px;
     word-break: break-word;
 
@@ -142,7 +142,8 @@
     .membership-section,
     .action-type-container,
     .enrollment-wrapper,
-    .basic-wrapper {
+    .basic-wrapper,
+    .discussions-management {
       background-color: map_get($grays, "100");
       background-color: $white;
       border: 1px solid map_get($grays, "300");
@@ -205,7 +206,8 @@
       }
     }
 
-    .enrollment-wrapper {
+    .enrollment-wrapper,
+    .discussions-wrapper {
       overflow-x: auto;
 
       table {
@@ -331,14 +333,14 @@
 }
 
 @include media-breakpoint-up(xl) {
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management {
     &.form-control {
       font-size: 16px;
       height: 36px;
     }
   }
 
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management {
     font-size: 16px;
 
     .btn {
@@ -353,7 +355,8 @@
     .membership-section,
     .action-type-container,
     .enrollment-wrapper,
-    .basic-wrapper {
+    .basic-wrapper,
+    .discussions-management {
       padding: 24px;
     }
 
@@ -458,4 +461,25 @@
 
 
 }
+
+.discussions-management {
+  .division-scheme-items {
+    display: flex;
+    .field-message {
+      font-size: xx-small;
+    }
+  }
+  .message-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    margin: 16px 0 8px;
+    color: darkcyan;
+  }  
+  ul, li {
+    list-style: none;
+  }
+}
+
+
 
