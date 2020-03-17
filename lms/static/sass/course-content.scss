@@ -11435,4 +11435,42 @@ code {color: black;}
   }
 }
 
+//GRADEBOOK
+
+.gradebook-wrapper {
+
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 4px 12px -2px #dee2e6,0 -2px 4px -4px #dee2e6;
+  margin: 16px 0;
+  padding: 24px;
+
+  h1 {
+    border-bottom: 1px solid #dee2e6;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+  }
+
+  .gradebook-content {
+    .student-table {
+      float: left;
+    }
+    .student-search-field, .grades thead {
+      background-color: #f8f9fa;
+      background-position: calc(100% - 8px);
+      border: 1px solid #adb5bd;
+      box-shadow: 0 2px 6px -3px #adb5bd inset;
+      box-sizing: border-box;
+      line-height: 1;
+      padding: 8px;
+      font-size: 16px;
+      height: 36px;
+    }
+    .grades {
+      display: grid;
+    }
+  }   
+}  
+
 

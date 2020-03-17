@@ -13,11 +13,11 @@
   }
 
 @include media-breakpoint-up(xs) {
-  #course_info, #membership {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content {
     word-break: break-word;
   }
 
-  #course_info, #membership, #student_admin{
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content {
     padding-top: 16px;
     word-break: break-word;
 
@@ -331,14 +331,14 @@
 }
 
 @include media-breakpoint-up(xl) {
-  #course_info {
+  #course_info, #membership, #student_admin, #discussions_management {
     &.form-control {
       font-size: 16px;
       height: 36px;
     }
   }
 
-  #course_info, #membership, #student_admin {
+  #course_info, #membership, #student_admin, #discussions_management {
     font-size: 16px;
 
     .btn {
@@ -456,4 +456,6 @@
     font-size: 0.7rem;
   }
 
+
 }
+
