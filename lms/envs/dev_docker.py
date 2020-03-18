@@ -9,11 +9,11 @@ LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
 
 LOGGING['loggers']['tracking']['handlers'] = ['console']
 HOMEPAGE_COURSE_MAX = 4
-LMS_BASE = os.environ.get('LMS_BASE', 'localhost:18000')
-CMS_BASE = os.environ.get('CMS_BASE', 'localhost:18010')
+LMS_BASE = os.environ.get('LMS_BASE', 'dev.navoica.pl')
+CMS_BASE = os.environ.get('CMS_BASE', 'studio-'+LMS_BASE)
 
 SITE_NAME = LMS_BASE
-LMS_ROOT_URL = 'http://{}'.format(LMS_BASE)
+LMS_ROOT_URL = 'https://{}'.format(LMS_BASE)
 LMS_INTERNAL_ROOT_URL = LMS_ROOT_URL
 
 ECOMMERCE_PUBLIC_URL_ROOT = 'http://localhost:18130'

@@ -351,7 +351,7 @@ FEATURES = {
     'ENABLE_LTI_PROVIDER': False,
 
     # Show the language selector in the header
-    'SHOW_HEADER_LANGUAGE_SELECTOR': False,
+    'SHOW_HEADER_LANGUAGE_SELECTOR': True,
 
     # At edX it's safe to assume that English transcripts are always available
     # This is not the case for all installations.
@@ -977,9 +977,9 @@ LANGUAGE_COOKIE = "openedx-language-preference"
 
 # Sourced from http://www.localeplanet.com/icu/ and wikipedia
 LANGUAGES = [
-    ('en', u'English'),
+    ('en', u'source'),
     ('pl', u'Polski'),  # Polish
-    ('en-US', u'English_US'),  # English_US
+    ('en-us', u'English'),  # English_US
 ]
 
 LANGUAGE_DICT = dict(LANGUAGES)
