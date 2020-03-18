@@ -13,11 +13,11 @@
   }
 
 @include media-breakpoint-up(xs) {
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management{
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management, #open_response_assessment{
     word-break: break-word;
   }
 
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management, #open_response_assessment {
     padding-top: 16px;
     word-break: break-word;
 
@@ -143,7 +143,8 @@
     .action-type-container,
     .enrollment-wrapper,
     .basic-wrapper,
-    .discussions-management {
+    .discussions-management,
+    .open-response-assessment {
       background-color: map_get($grays, "100");
       background-color: $white;
       border: 1px solid map_get($grays, "300");
@@ -333,14 +334,14 @@
 }
 
 @include media-breakpoint-up(xl) {
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management, #open_response_assessment {
     &.form-control {
       font-size: 16px;
       height: 36px;
     }
   }
 
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management {
+  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management, #open_response_assessment {
     font-size: 16px;
 
     .btn {
@@ -356,7 +357,8 @@
     .action-type-container,
     .enrollment-wrapper,
     .basic-wrapper,
-    .discussions-management {
+    .discussions-management, 
+    .open-response-assessment{
       padding: 24px;
     }
 
@@ -485,5 +487,27 @@
   }
 }
 
-
+.open-response-assessment-block {
+  table{
+//    table-layout: unset !important;
+    .ora-summary-title {
+      white-space: break-spaces;
+      color: #E41D37 !important;
+    }
+  }
+  .backgrid {
+    .peer, .self, .waiting, .training, .name, .parent_name, .total, .staff, .done, .renderable {
+      width: unset !important;
+      white-space: break-spaces;
+      vertical-align: bottom;
+    }
+    thead {
+      th {
+        button {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
 
