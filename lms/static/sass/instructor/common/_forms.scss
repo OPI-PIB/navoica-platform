@@ -466,7 +466,11 @@
   .division-scheme-items {
     display: flex;
     .field-message {
-      font-size: xx-small;
+      font-size: 0.8rem;
+    }
+    .three-column-layout {
+      width: 33.33%;
+      padding-right: 1rem;
     }
   }
   .message-title {
