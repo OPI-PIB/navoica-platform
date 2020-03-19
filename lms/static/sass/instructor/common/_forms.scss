@@ -12,6 +12,11 @@
     width: 100%;
   }
 
+
+.d-none {
+  display: none !important;
+}
+
 @include media-breakpoint-up(xs) {
   #course_info, 
   #membership, 
@@ -24,7 +29,7 @@
     padding-top: 16px;
     word-break: break-word;
 
-    .btn {
+    .btn, .action-create {
       align-items: center;
       border-radius: 0 !important;
       box-sizing: border-box;
@@ -501,7 +506,7 @@
     font-size: 14px !important;
     font-weight: 700 !important;
     line-height: 21px !important;
-    margin: 16px 0 8px !important;
+    margin: 8px 0 8px !important;
     color: darkcyan;
   }  
   ul, li {
@@ -549,6 +554,7 @@
     padding: 0 !important;
     margin: 0 !important;
     border-bottom: 0 !important;
+    color: #770f1d !important;
   }
 }
 
@@ -559,7 +565,7 @@
 
 .cohort-management {
   .cohort-management-nav {
-    display: flex !important;
+    display: flex;
     justify-content: space-between;
     .cohort-management-nav-form {
       width: 50%;
@@ -600,6 +606,13 @@
   .cohort-management-file-upload {
     .field-file {
       margin-bottom: 0.5rem;
+    }
+  }
+  .cohort-management-details-association-course {
+    .input-group-other {
+      .input-cohort-group-association {
+        margin: 0 0 0 1rem !important;
+      }
     }
   }
 }  

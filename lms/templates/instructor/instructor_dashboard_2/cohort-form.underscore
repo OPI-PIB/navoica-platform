@@ -65,7 +65,7 @@
                         <% if (hasContentGroups) { %>
                             <div class="input-group-other">
                                 <label class="sr" for="cohort-group-association"><%- gettext("Choose a content group to associate") %></label>
-                                <select name="cohort-group-association" class="input input-lg has-option-unavailable input-cohort-group-association" <%- !hasSelectedContentGroup ? 'disabled="disabled"' : '' %>>
+                                <select name="cohort-group-association" class="form-control input input-lg has-option-unavailable input-cohort-group-association" <%- !hasSelectedContentGroup ? 'disabled="disabled"' : '' %>>
                                     <option value="None" <%- !hasSelectedContentGroup ? 'selected="selected"' : '' %> disabled="disabled"><%- gettext("Not selected") %></option>
 
                                     <%
