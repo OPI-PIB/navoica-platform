@@ -2,14 +2,14 @@
     <header class="cohort-management-group-header"></header>
 
     <ul class="wrapper-tabs">
-        <li class="tab tab-manage_students is-selected" data-tab="manage_students"><button type="button" class="toggle-button"><span class="sr"><%- gettext('Selected tab') %> </span><%- gettext("Manage Learners") %></button></li>
-        <li class="tab tab-settings" data-tab="settings"><button type="button" class="toggle-button"><%- gettext("Settings") %></button></li>
+        <li class="tab tab-manage_students is-selected" data-tab="manage_students"><button type="button" class="btn btn-outline-primary btn-sm toggle-button"><span class="sr"><%- gettext('Selected tab') %> </span><%- gettext("Manage Learners") %></button></li>
+        <li class="tab tab-settings" data-tab="settings"><button type="button" class="btn btn-outline-primary btn-sm toggle-button"><%- gettext("Settings") %></button></li>
     </ul>
 
     <div class="cohort-management-group-add tab-content tab-content-manage_students" tabindex="-1">
         <form action="" method="post" id="cohort-management-group-add-form" class="cohort-management-group-add-form">
 
-            <h4 class="hd hd-3 form-title"><%- gettext('Add learners to this cohort') %></h4>
+            <h4 class="hd hd-4 form-title"><%- gettext('Add learners to this cohort') %></h4>
 
             <div class="form-introduction">
                 <p><%- gettext('Note: Learners can be in only one cohort. Adding learners to this group overrides any previous group assignment.') %></p>
@@ -26,7 +26,7 @@
                         <span class="sr"><%- gettext('(Required Field)') %></span>
                     </label>
                     <textarea name="cohort-management-group-add-students" id="cohort-management-group-add-students"
-                              class="input cohort-management-group-add-students"
+                              class="form-control input cohort-management-group-add-students"
                               placeholder="<%- gettext('e.g. johndoe@example.com, JaneDoe, joeydoe@example.com') %>"
                               aria-describedby="email-notification-tip"></textarea>
 
@@ -35,7 +35,7 @@
             </div>
 
             <div class="form-actions">
-                <button class="form-submit button action-primary action-view">
+                <button class="btn btn-outline-primary btn-sm form-submit button action-primary action-view">
                     <span class="button-icon icon fa fa-plus" aria-hidden="true"></span> <%- gettext('Add Learners') %>
                 </button>
             </div>

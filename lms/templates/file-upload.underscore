@@ -1,5 +1,5 @@
 <div class="wrapper-form">
-  <h3 class="hd hd-3 form-title subsection-title"><%- title %></h3>
+  <h4 class="hd hd-4 form-title subsection-title"><%- title %></h4>
 
   <div class="file-upload-form-result result"></div>
 
@@ -18,7 +18,7 @@
       </div>
 
       <div class="form-actions">
-        <button id="file-upload-form-submit" type="submit" class="submit-file-button action action-submit is-disabled" aria-disabled="true"><%- submitButtonText %></button>
+        <button id="file-upload-form-submit" type="submit" class="btn btn-outline-primary btn-sm submit-file-button action action-submit is-disabled" aria-disabled="true"><%- submitButtonText %></button>
       </div>
   </form>
 </div>

@@ -13,11 +13,14 @@
   }
 
 @include media-breakpoint-up(xs) {
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management, #open_response_assessment{
-    word-break: break-word;
-  }
-
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management, #open_response_assessment {
+  #course_info, 
+  #membership, 
+  #student_admin, 
+  #discussions_management, .gradebook-content, 
+  #data_download, 
+  #discussion_management, 
+  #open_response_assessment,
+  #cohort_management {
     padding-top: 16px;
     word-break: break-word;
 
@@ -144,7 +147,8 @@
     .enrollment-wrapper,
     .basic-wrapper,
     .discussions-management,
-    .open-response-assessment {
+    .open-response-assessment,
+    .cohort-management {
       background-color: map_get($grays, "100");
       background-color: $white;
       border: 1px solid map_get($grays, "300");
@@ -334,14 +338,30 @@
 }
 
 @include media-breakpoint-up(xl) {
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management, #open_response_assessment {
+  #course_info,
+  #membership, 
+  #student_admin, 
+  #discussions_management, 
+  .gradebook-content, 
+  #data_download, 
+  #discussion_management, 
+  #open_response_assessment,
+  #cohort_management {
     &.form-control {
       font-size: 16px;
       height: 36px;
     }
   }
 
-  #course_info, #membership, #student_admin, #discussions_management, .gradebook-content, #data_download, #discussion_management, #open_response_assessment {
+  #course_info, 
+  #membership, 
+  #student_admin, 
+  #discussions_management, 
+  .gradebook-content, 
+  #data_download, 
+  #discussion_management, 
+  #open_response_assessment,
+  #cohort_management {
     font-size: 16px;
 
     .btn {
@@ -358,7 +378,8 @@
     .enrollment-wrapper,
     .basic-wrapper,
     .discussions-management, 
-    .open-response-assessment{
+    .open-response-assessment,
+    .cohort-management{
       padding: 24px;
     }
 
@@ -464,7 +485,8 @@
 
 }
 
-.discussions-management {
+.discussions-management,
+.cohort-management {
   .division-scheme-items {
     display: flex;
     .field-message {
@@ -476,10 +498,10 @@
     }
   }
   .message-title {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 21px;
-    margin: 16px 0 8px;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 21px !important;
+    margin: 16px 0 8px !important;
     color: darkcyan;
   }  
   ul, li {
@@ -511,3 +533,73 @@
   }
 }
 
+.message-error {
+  color: #770f1d;
+  background-color: #fad2d7;
+  border-color: #f7c0c7 !important;
+  position: relative;
+  padding: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0;
+  margin-bottom: 0.5rem;
+  .message-copy {
+    margin: 0!important;
+  }
+  h3 {
+    padding: 0 !important;
+    margin: 0 !important;
+    border-bottom: 0 !important;
+  }
+}
+
+.fa {
+  margin-right: 0.5rem;
+}
+
+
+.cohort-management {
+  .cohort-management-nav {
+    display: flex !important;
+    justify-content: space-between;
+    .cohort-management-nav-form {
+      width: 50%;
+    }
+    .action-create {
+      width: 20% !important;
+      align-self: end !important;
+      flex: unset !important;
+     justify-content: space-between !important;
+    }
+  }
+
+  .cohort-management-add-form {  
+    .copy-error {
+      padding-left: 1rem;
+      .icon {
+        color: #770f1d;
+      }
+   }
+  }
+
+  .cohort-management-supplemental {
+    .icon {
+      color: #770f1d;
+    }
+    .btn-link {
+      color: #E41D37;
+      text-decoration: none;
+      background-color: transparent;
+      border:none !important;
+    }
+    .btn-link:hover {
+      color: #96232a;
+      text-decoration: underline;
+    }
+  }
+
+  .cohort-management-file-upload {
+    .field-file {
+      margin-bottom: 0.5rem;
+    }
+  }
+}  
