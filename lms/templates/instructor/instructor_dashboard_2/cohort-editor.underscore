@@ -1,10 +1,10 @@
 <section class="cohort-management-settings has-tabs">
     <header class="cohort-management-group-header"></header>
 
-    <ul class="wrapper-tabs">
-        <li class="tab tab-manage_students is-selected" data-tab="manage_students"><button type="button" class="btn btn-outline-primary btn-sm toggle-button"><span class="sr"><%- gettext('Selected tab') %> </span><%- gettext("Manage Learners") %></button></li>
-        <li class="tab tab-settings" data-tab="settings"><button type="button" class="btn btn-outline-primary btn-sm toggle-button"><%- gettext("Settings") %></button></li>
-    </ul>
+    <div class="nav nav-tabs wrapper-tabs">
+        <li class="tab tab-manage_students is-selected" data-tab="manage_students"><div type="button" class="nav-link"><span class="sr"><%- gettext('Selected tab') %> </span><%- gettext("Manage Learners") %></div></li>
+        <li class="tab tab-settings" data-tab="settings"><div type="button" class="nav-link"><%- gettext("Settings") %></div></li>
+    </div>
 
     <div class="cohort-management-group-add tab-content tab-content-manage_students" tabindex="-1">
         <form action="" method="post" id="cohort-management-group-add-form" class="cohort-management-group-add-form">

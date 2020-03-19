@@ -51,18 +51,18 @@
     }
 
     .dropdown-menu {
-      padding: 0;
+    //  padding: 0;
     }
 
     .dropdown-item {
-      border-top: 1px solid map_get($grays, "300");
-      font-size: 14px;
-      line-height: 18px;
-      padding: 6px 8px;
+    //  border-top: 1px solid map_get($grays, "300");
+    //  font-size: 14px;
+    //  line-height: 18px;
+    //  padding: 6px 8px;
     }
 
     .dropdown-item:first-child {
-      border: 0;
+    //  border: 0;
     }
 
     .form-control {
@@ -153,7 +153,9 @@
     .basic-wrapper,
     .discussions-management,
     .open-response-assessment,
-    .cohort-management {
+    .cohort-management,
+    .cohort-management-group-add,
+    .cohort-management-details {
       background-color: map_get($grays, "100");
       background-color: $white;
       border: 1px solid map_get($grays, "300");
@@ -612,6 +614,23 @@
     .input-group-other {
       .input-cohort-group-association {
         margin: 0 0 0 1rem !important;
+      }
+    }
+  }
+
+  .cohort-management-settings {
+    .nav-tabs {
+      flex: unset !important;
+      border-bottom: unset !important;
+      border: 1px solid transparent;
+      box-shadow: 0 4px 12px -2px #dee2e6,0 -2px 4px -4px #dee2e6;
+    }
+    .nav-link {
+      color: map_get($grays, "500") !important;
+    }
+    .is-selected {
+      .nav-link {
+        color: #D0353F !important;
       }
     }
   }
