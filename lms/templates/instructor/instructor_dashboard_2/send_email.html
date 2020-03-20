@@ -4,6 +4,8 @@ from django.utils.translation import ugettext as _
 from openedx.core.djangolib.markup import HTML
 %>
 
+
+
 <div class="vert-left send-email" id="section-send-email">
     <div class="request-response msg msg-confirm copy" id="request-response"></div>
     <ul class="list-fields">
@@ -60,28 +62,27 @@ from openedx.core.djangolib.markup import HTML
             %endif
         </fieldset>
         </li>
-        <li class="field">
-            <label>
-                ${_("Subject: ")}
-                <br/>
-                %if subject:
-                <input type="text" id="id_subject" name="subject" maxlength="128" size="75" value="${subject}">
-                %else:
-                <input type="text" id="id_subject" name="subject" maxlength="128" size="75">
-                %endif
-                <span class="tip">${_("(Maximum 128 characters)")}</span>
-            </label>
-        </li>
-        <li>
-            <label>
-                ${_("Message:")}
-                <div class="email-editor">
-                    ${ HTML(section_data['editor']) }
-                </div>
-                <input type="hidden" name="message" value="">
-            </label>
-        </li>
+
+        <h4 class="hd hd-4">${_("Subject: ")}</h4>
+        <div>
+            %if subject:
+            <input type="text" class="form-control" id="id_subject" name="subject" maxlength="128" size="75" value="${subject}">
+            %else:
+            <input type="text" class="form-control" id="id_subject" name="subject" maxlength="128" size="75">
+            %endif
+            <p class="tip">${_("(Maximum 128 characters)")}</p>
+            <div>    
+        <hr>        
+
+        <h4 class="hd hd-4">${_("Message:")}</h4>
+        <div>
+            <div class="email-editor">
+                 ${ HTML(section_data['editor']) }
+            </div>
+            <input type="hidden" name="message" value="">
+        </div>
     </ul>
+
     <div class="submit-email-action">
         <p class="copy">${_("We recommend sending learners no more than one email message per week. Before you send your email, review the text carefully and send it to yourself first, so that you can preview the formatting and make sure embedded images and links work correctly.")}</p>
     </div>
@@ -93,14 +94,15 @@ from openedx.core.djangolib.markup import HTML
     <br />
     <input type="button" name="send" value="${_("Send Email")}" data-endpoint="${ section_data['send_email'] }" >
     <div class="request-response-error"></div>
+</div>
 
     %if settings.FEATURES.get('ENABLE_INSTRUCTOR_BACKGROUND_TASKS'):
     <div class="running-tasks-container action-type-container">
-        <hr>
+        
         <h3 class="hd hd-3">${_("Pending Tasks")}</h3>
         <div class="running-tasks-section">
             <p>${_("Email actions run in the background. The status for any active tasks - including email tasks - appears in a table below.")} </p>
-            <br />
+            
 
             <div class="running-tasks-table" data-endpoint="${ section_data['list_instructor_tasks_url'] }"></div>
         </div>
@@ -108,31 +110,29 @@ from openedx.core.djangolib.markup import HTML
     </div>
 
 
-    <hr>
-
     <div class="vert-left email-background" id="section-task-history">
         <h3 class="hd hd-3">${_("Email Task History")}</h3>
         <div>
             <p>${_("To see the content of previously sent emails, click this button:")}</p>
-            <br/>
-            <input type="button" name="task-history-email-content" value="${_("Show Sent Email History")}" data-endpoint="${ section_data['email_content_history_url'] }" >
+            
+            <input type="button" class="btn btn-outline-primary btn-sm" name="task-history-email-content" value="${_("Show Sent Email History")}" data-endpoint="${ section_data['email_content_history_url'] }" >
             <div class="content-request-response-error msg msg-warning copy"></div>
             <p>
             <div class="content-history-email-table">
                 <p><em>${_("To read a sent email message, click its subject.")}</em></p>
-                <br/>
+               
                 <div class="content-history-table-inner"></div>
             </div>
             <div class="email-messages-wrapper"></div>
         </div>
         <div>
             <p>${_("To see the status for all email tasks submitted for this course, click this button:")}</p>
-            <br/>
-            <input type="button" name="task-history-email" value="${_("Show Email Task History")}" data-endpoint="${ section_data['email_background_tasks_url'] }" >
+            
+            <input type="button" class="btn btn-outline-primary btn-sm" name="task-history-email" value="${_("Show Email Task History")}" data-endpoint="${ section_data['email_background_tasks_url'] }" >
             <div class="history-request-response-error msg msg-warning copy"></div>
             <div class="task-history-email-table"></div>
         </div>
     </div>
     %endif
 
-</div> <!-- end section send-email -->
+ <!-- end section send-email -->
