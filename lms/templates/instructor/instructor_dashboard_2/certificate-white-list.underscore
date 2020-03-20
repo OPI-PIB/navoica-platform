@@ -1,16 +1,16 @@
-<h3 class="hd hd-3"><%- gettext("Generate Exception Certificates") %></h3>
+<h4 class="hd hd-4"><%- gettext("Generate Exception Certificates") %></h4>
 <fieldset class="under-heading">
-    <legend>Certificate exceptions group selection</legend>
-    <label>
-        <input type='radio' name='generate-exception-certificates-radio' checked="checked" value='new'>
-        <%- gettext('All users on the Exception list who do not yet have a certificate') %>
-    </label><br />
-    <label>
-        <input type='radio' name='generate-exception-certificates-radio' value='all'>
+    <p>Certificate exceptions group selection</p>
+      <label class="response-label field-label label-inline">
+           <input type='radio' class="field custom-control custom-radio" name='generate-exception-certificates-radio' checked="checked" value='new'>
+            <%- gettext('All users on the Exception list who do not yet have a certificate') %>
+      </label>
+      <label class="response-label field-label label-inline">
+        <input type='radio' class="field custom-control custom-radio" name='generate-exception-certificates-radio' value='all'>
         <%- gettext('All users on the Exception list') %>
-    </label>
+     </label>
 </fieldset>
-<button id="generate-exception-certificates" class="btn-blue" type="button"><%- gettext('Generate Exception Certificates') %></button>
+<button id="generate-exception-certificates" class="btn-blue btn btn-outline-primary btn-sm" type="button"><%- gettext('Generate Exception Certificates') %></button>
 <br/>
 <% if (certificates.length === 0) { %>
     <p><%- gettext("No results") %></p>
@@ -34,7 +34,7 @@
             <td><%- cert.get("created") %></td>
             <td><%- cert.get("certificate_generated") %></td>
             <td><%- cert.get("notes") %></td>
-            <td><button class='delete-exception' data-user_id='<%- cert.get("user_id") %>'><%- gettext("Remove from List") %></button></td>
+            <td><button class='delete-exception btn btn-outline-primary btn-sm' data-user_id='<%- cert.get("user_id") %>'><%- gettext("Remove from List") %></button></td>
         </tr>
         <% } %>
         </tbody>

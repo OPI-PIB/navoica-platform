@@ -25,7 +25,8 @@
   #data_download, 
   #discussion_management, 
   #open_response_assessment,
-  #cohort_management {
+  #cohort_management,
+  #certificates {
     padding-top: 16px;
     word-break: break-word;
 
@@ -46,8 +47,11 @@
       padding: 4px 8px !important;
       text-align: center !important;
       white-space: normal !important;
-      background-color: unset !important;
-      color: #D0353F !important ;
+    }
+    .btn-primary {
+      color: #fff;
+      background-color: #E41D37;
+      border-color: #E41D37
     }
 
     .dropdown-menu {
@@ -155,7 +159,13 @@
     .open-response-assessment,
     .cohort-management,
     .cohort-management-group-add,
-    .cohort-management-details {
+    .cohort-management-details,
+    .example-certificates,
+    .enable-certificates,
+    .start-certificate-regeneration,
+    .certificate-generation-history,
+    .certificate-exception-container,
+    .certificate-invalidation-container {
       background-color: map_get($grays, "100");
       background-color: $white;
       border: 1px solid map_get($grays, "300");
@@ -200,7 +210,9 @@
       }
     }
 
-    .member-list {
+    .member-list, 
+    .certificate-generation-history-content,
+    .white-listed-students {
       margin: 16px 0;
       overflow-x: auto;
 
@@ -219,7 +231,9 @@
     }
 
     .enrollment-wrapper,
-    .discussions-wrapper {
+    .discussions-wrapper,
+    .white-listed-students, 
+    .invalidation-history {
       overflow-x: auto;
 
       table {
@@ -235,7 +249,7 @@
         }
 
         td {
-          text-align: right;
+          text-align: left;
         }
       }
     }
@@ -307,41 +321,43 @@
       margin: 16px 0;
     }
 
-    .list-group-flush {
+    .list-group-flush, {
       .list-group-item:first-child {
-        border-top: 1px solid map_get($grays, "300");
+    //    border-top: 1px solid map_get($grays, "300");
       }
 
     }
 
-  }
+    .request-response-error {
+      color: #D0353F;
+      font-weight: 700;
+    }
+
+    .member-list,
+    .ertificate-generation-history-content, 
+    .white-listed-students,
+    .invalidation-history  {
+      tr {
+        display: table-row !important;
+      }
+    }
 
 
-  .request-response-error {
-    color: #D0353F;
-    font-weight: 700;
-  }
+    .hint::before, .hint::after {
+      content: none !important;
+    }
 
-  .member-list tr {
-    display: table-row !important;
-  }
+    .request-res-section {
+      h3 ul {
+        border-top: 1px solid #dee2e6;
+        padding: 4px 8px 4px 0 !important
+      }
+    }
 
-
-  .hint::before, .hint::after {
-    content: none !important;
-  }
-
-  .request-res-section {
-    h3 ul {
-      border-top: 1px solid #dee2e6;
-      padding: 4px 8px 4px 0 !important
+    .task-history-single-table {
+      font-size: 0.7rem;
     }
   }
-
-   .task-history-single-table {
-    font-size: 0.7rem;
-  }
-
 }
 
 @include media-breakpoint-up(xl) {
@@ -353,7 +369,8 @@
   #data_download, 
   #discussion_management, 
   #open_response_assessment,
-  #cohort_management {
+  #cohort_management,
+  #certificates {
     &.form-control {
       font-size: 16px;
       height: 36px;
@@ -368,7 +385,8 @@
   #data_download, 
   #discussion_management, 
   #open_response_assessment,
-  #cohort_management {
+  #cohort_management,
+  #certificates {
     font-size: 16px;
 
     .btn {
@@ -386,7 +404,14 @@
     .basic-wrapper,
     .discussions-management, 
     .open-response-assessment,
-    .cohort-management{
+    .cohort-management, 
+    .example-certificates,
+    .enable-certificates,
+    .start-certificate-regeneration,
+    .certificate-generation-history,
+    .certificate-exception-container,
+    .certificate-invalidation-container,
+    .certificate-invalidation-container  {
       padding: 24px;
     }
 
@@ -410,7 +435,10 @@
       }
     }
 
-    .member-list {
+    .member-list, 
+    .white-listed-students,
+    .certificate-generation-history-content,
+    .invalidation-history  {
       margin: 16px 0;
       overflow-x: auto;
 
@@ -425,7 +453,9 @@
 
     }
 
-    .enrollment-wrapper {
+    .enrollment-wrapper,
+    .white-listed-students, 
+    .invalidation-history  {
 
       table {
 
@@ -464,33 +494,35 @@
     }
 
   }
+}  
 
-  .request-response-error {
-    color: #D0353F;
-    font-weight: 700;
-  }
+.request-response-error {
+  color: #D0353F;
+  font-weight: 700;
+}
 
-  .member-list tr {
+.member-list, .white-listed-students {
+  tr {
     display: table-row !important;
   }
-
-  .hint::before {
-    content: none;
-  }
-
-  .request-res-section {
-    ul {
-      border-top: 1px solid #dee2e6;
-      padding: 4px 8px 4px 0 !important
-    }
-  }
-
-  .task-history-single-table {
-    font-size: 0.7rem;
-  }
-
-
 }
+
+.hint::before {
+  content: none;
+}
+
+.request-res-section {
+  ul {
+    border-top: 1px solid #dee2e6;
+    padding: 4px 8px 4px 0 !important
+  }
+}
+
+.task-history-single-table {
+  font-size: 0.7rem;
+}
+
+
 
 .discussions-management,
 .cohort-management {
@@ -610,6 +642,7 @@
       margin-bottom: 0.5rem;
     }
   }
+
   .cohort-management-details-association-course {
     .input-group-other {
       .input-cohort-group-association {
@@ -635,3 +668,35 @@
     }
   }
 }  
+
+#certificates {
+  .file-browse {
+    .browse {
+      padding-right: 0.5rem;
+    }
+  }
+  .under-heading {
+  //  padding-bottom: 1rem;
+    label {
+      display: flex !important;
+      font-size: inherit !important;
+      border-top: 1px solid map_get($grays, "300");
+      padding: 0.5rem 0;
+    }
+  }
+  .white-listed-students {
+    td {
+      text-align: left;
+    }  
+  }
+  .arrow {
+    width: unset;
+    height: unset;
+    min-width: unset;
+    min-height: unset;
+    margin-right: 1rem !important;
+  }
+}  
+
+
+

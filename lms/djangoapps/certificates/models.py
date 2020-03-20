@@ -180,8 +180,8 @@ class CertificateWhitelist(models.Model):
                 'user_name': unicode(item.user.username),
                 'user_email': unicode(item.user.email),
                 'course_id': unicode(item.course_id),
-                'created': item.created.strftime("%B %d, %Y"),
-                'certificate_generated': certificate_generated and certificate_generated.strftime("%B %d, %Y"),
+                'created': item.created.strftime('%Y-%m-%d'),
+                'certificate_generated': certificate_generated and certificate_generated.strftime('%Y-%m-%d'),
                 'notes': unicode(item.notes or ''),
             })
         return result

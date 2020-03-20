@@ -5,15 +5,15 @@
 <div class="add-certificate-invalidation">
     <div>
         <label for="certificate-invalidation-user"><%- gettext('Username or email address') %></label>
-        <input class="student-username-or-email" id="certificate-invalidation-user" type="text">
+        <input class="form-control student-username-or-email" id="certificate-invalidation-user" type="text">
     </div>
     <div>
         <label for="certificate-invalidation-notes"><%- gettext('Add notes about this learner') %></label>
-        <textarea class="notes-field" id="certificate-invalidation-notes" rows="10"></textarea>
+        <textarea class="notes-field form-control" id="certificate-invalidation-notes" rows="10"></textarea>
     </div>
     <br/>
     
-    <button type="button" class="btn-blue" id="invalidate-certificate"><%- gettext('Invalidate Certificate') %></button>
+    <button type="button" class="btn-blue btn btn-outline-primary bnt-sm" id="invalidate-certificate"><%- gettext('Invalidate Certificate') %></button>
 </div>
 
 <div class="message hidden"></div>
@@ -41,7 +41,7 @@
                     <td><%- certificate_invalidation.get("invalidated_by") %></td>
                     <td><%- certificate_invalidation.get("created") %></td>
                     <td><%- certificate_invalidation.get("notes") %></td>
-                    <td><button class='re-validate-certificate' data-cid='<%- certificate_invalidation.cid %>'><%- gettext("Remove from Invalidation Table") %></button></td>
+                    <td><button class='btn btn-outline-primary btn-sm re-validate-certificate' data-cid='<%- certificate_invalidation.cid %>'><%- gettext("Remove from Invalidation Table") %></button></td>
                 </tr>
                 <% } %>
             </tbody>
