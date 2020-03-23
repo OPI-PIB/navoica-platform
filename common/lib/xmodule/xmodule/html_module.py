@@ -26,6 +26,7 @@ from xmodule.x_module import DEPRECATION_VSCOMPAT_EVENT, XModule
 from xmodule.xml_module import XmlDescriptor, name_to_pathname
 
 from .fields import Boolean2
+from .xblock_html_bleach import SanitizedText
 
 log = logging.getLogger("edx.courseware")
 
@@ -99,9 +100,12 @@ class HtmlBlock(object):
         # When we switch this to an XBlock, we can merge this with student_view,
         # but for now the XModule mixin requires that this method be defined.
         # pylint: disable=no-member
+
         if self.data is not None and getattr(self.system, 'anonymous_student_id', None) is not None:
-            return self.data.replace("%%USER_ID%%", self.system.anonymous_student_id)
-        return self.data
+            self.data = self.data.replace("%%USER_ID%%", self.system.anonymous_student_id)
+
+        html = SanitizedText(self.data)
+        return unicode(html)
 
 
 class HtmlModuleMixin(HtmlBlock, XModule):

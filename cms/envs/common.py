@@ -476,6 +476,8 @@ else:
     _csrf_middleware = 'django.middleware.csrf.CsrfViewMiddleware'
 
 MIDDLEWARE_CLASSES = [
+    'common.middleware.ProfileMiddleware',
+
     'crum.CurrentRequestUserMiddleware',
     'openedx.core.djangoapps.request_cache.middleware.RequestCache',
 
