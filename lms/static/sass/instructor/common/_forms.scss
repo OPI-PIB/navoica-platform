@@ -161,7 +161,6 @@
     .cohort-management,
     .cohort-management-group-add,
     .cohort-management-details,
-    .example-certificates,
     .enable-certificates,
     .start-certificate-regeneration,
     .certificate-generation-history,
@@ -362,6 +361,26 @@
       font-size: 0.7rem;
     }
   }
+
+  .open-response-assessment-summary, .open-response-assessment-main-table {
+    overflow-x: scroll;
+    padding-bottom: 0.7rem;
+    .backgrid {
+      min-width: 70rem;
+    }
+  }
+
+  .cohort-management {
+    .cohort-management-nav {
+      display: block;
+      .cohort-management-nav-form {
+        width: 100%;
+      }
+
+    }  
+  }
+
+
 }
 
 @include media-breakpoint-up(xl) {
@@ -411,7 +430,6 @@
     .discussions-management, 
     .open-response-assessment,
     .cohort-management, 
-    .example-certificates,
     .enable-certificates,
     .start-certificate-regeneration,
     .certificate-generation-history,
@@ -503,6 +521,23 @@
     }
 
   }
+
+  .cohort-management {
+    .cohort-management-nav {
+      display: flex;
+      justify-content: space-between;
+      .cohort-management-nav-form {
+        width: 50%;
+      }
+      .action-create {
+        width: 20% !important;
+        align-self: end !important;
+        flex: unset !important;
+       justify-content: space-between !important;
+      }
+    }
+  }  
+
 }  
 
 .request-response-error {
@@ -606,20 +641,7 @@
 }
 
 
-.cohort-management {
-  .cohort-management-nav {
-    display: flex;
-    justify-content: space-between;
-    .cohort-management-nav-form {
-      width: 50%;
-    }
-    .action-create {
-      width: 20% !important;
-      align-self: end !important;
-      flex: unset !important;
-     justify-content: space-between !important;
-    }
-  }
+
 
   .cohort-management-add-form {  
     .copy-error {
@@ -676,7 +698,7 @@
       }
     }
   }
-}  
+
 
 #certificates {
   .file-browse {
