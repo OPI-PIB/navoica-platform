@@ -794,29 +794,60 @@
   }
 }  
 
-  .editor-tabs {
-    position: absolute;
-    top: 10px;
+.editor-tabs {
+  position: absolute;
+  top: 10px;
+
+  .tab {
+    display: block;
+    height: 24px;
+    padding: 7px 20px 3px;
+    border: 1px solid #a5aaaf;
+    border-radius: 3px 3px 0 0;
+    background-color: #e5ecf3;
+    font-size: 13px;
+    color: #3c3c3c;
+    box-shadow: 1px -1px 1px rgba(0, 0, 0, .05);
+
+    &.current {
+      background: $white;
+      border-bottom-color: $white;
+    }
+  }
+}
 
 
+.xmodule_edit.xmodule_HtmlDescriptor .html-editor .is-inactive {
+  display: none;
+}
 
-    .tab {
-      display: block;
-      height: 24px;
-      padding: 7px 20px 3px;
-      border: 1px solid #a5aaaf;
-      border-radius: 3px 3px 0 0;
+.html-editor {
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+    .mce-toolbar-grp {
+      background-color: #f8f9fa;
+    }
+  }
+}
 
+.send-email {
+  fieldset {
+    ul{
+      border-top: 1px solid #dee2e6;
+    }
+    li {
+      display: flex !important;
 
-
-      background-color: #e5ecf3;
-      font-size: 13px;
-      color: #3c3c3c;
-      box-shadow: 1px -1px 1px rgba(0, 0, 0, .05);
-
-      &.current {
-        background: $white;
-        border-bottom-color: $white;
+      padding: 0.5rem 0;
+      label {
+        font-size: inherit !important;
+        padding-left: 0.5rem;
+        display: flex !important;
+        .subheading {
+          padding-left: 0.5rem;
+        }
       }
     }
   }
+}
