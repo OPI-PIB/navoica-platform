@@ -497,7 +497,7 @@ such that the value can be defined later than this assignment (file load order).
                 $taskResSection = $('<div/>', {
                     class: 'request-res-section'
                 });
-                $taskResSection.append($('<h3/>', {
+                $taskResSection.append($('<h4/>', {
                     text: label
                 }));
                 $idsList = $('<ul/>');
@@ -695,7 +695,7 @@ such that the value can be defined later than this assignment (file load order).
                 $taskResSection = $('<div/>', {
                     class: 'request-res-section'
                 });
-                $taskResSection.append($('<h3/>', {
+                $taskResSection.append($('<h4/>', {
                     text: label
                 }));
                 $idsList = $('<ul/>');
@@ -1018,10 +1018,10 @@ such that the value can be defined later than this assignment (file load order).
                 ref1 = thismembership.auth_lists;
                 for (j = 0, len1 = ref1.length; j < len1; j++) {
                     authList = ref1[j];
-                    authList.$container.removeClass('active');
+                    authList.$container.addClass('d-none');
                 }
                 authList = $opt.data('auth_list');
-                authList.$container.addClass('active');
+                authList.$container.removeClass('d-none');
                 authList.re_view();
 
                 // On Change update the Group Moderation list

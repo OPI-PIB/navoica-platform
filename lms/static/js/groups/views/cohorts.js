@@ -14,7 +14,7 @@
                  CohortEditorView, CohortFormView,
                 CourseCohortSettingsNotificationView,
                  VerifiedTrackSettingsNotificationView, HtmlUtils, BaseDashboardView) {
-            var hiddenClass = 'hidden',
+            var hiddenClass = 'd-none',
                 disabledClass = 'is-disabled',
                 enableCohortsSelector = '.cohorts-state';
 
@@ -276,7 +276,14 @@
                 showSection: function(event) {
                     event.preventDefault();
                     var section = $(event.currentTarget).data('section');
-                    $(this.getSectionCss(section)).click();
+                    var optionName;
+                    $('#select-link').children().each(function() {
+                        var actualSection = $(this).data('section');
+                        if (actualSection === section) {
+                            optionName = $(this).val();
+                        }
+                    });
+                    $('#select-link').val(optionName).change();
                     $(window).scrollTop(0);
                 },
 
@@ -310,7 +317,9 @@
 
                 getSectionCss: function(section) {
                     return ".instructor-nav .nav-item [data-section='" + section + "']";
-                }
+                },
+
+
             });
             return CohortsView;
         });

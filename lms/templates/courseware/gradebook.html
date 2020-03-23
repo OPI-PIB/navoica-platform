@@ -16,6 +16,7 @@ from six import text_type
 <%block name="headextra">
 <%static:css group='style-course-vendor'/>
 <%static:css group='style-course'/>
+<%static:css group='style-instructor-dash'/>
 
   <style type="text/css">
   % for (grade, _), color in zip(ordered_grades, ['green', 'Chocolate']):
@@ -41,14 +42,14 @@ from six import text_type
 <section class="container">
 <div class="gradebook-wrapper">
   <section class="gradebook-content">
-    <h1>${_("Gradebook")}</h1>
+    <h3 class="hd hd-3">${_("Gradebook")}</h3>
 
     <table class="student-table">
       <thead>
         <tr>
           <th>
             <form class="student-search">
-              <input type="search" class="student-search-field" placeholder="${_('Search students')}" />
+              <input type="search" class="student-search-field form-control" placeholder="${_('Search students')}" />
             </form>
           </th>
         </tr>
@@ -119,7 +120,7 @@ from six import text_type
         </tbody>
       </table>
     </div>
-    <span class="grade-book-footer">
+    <div class="grade-book-footer">
         %if page["previous_offset"] is not None:
           <a href="${page_url}?offset=${page['previous_offset']}"
              class="sequence-nav-button button-previous">
@@ -135,7 +136,7 @@ from six import text_type
             <span class="icon fa fa-chevron-right" aria-hidden="true"></span><span class="sr">${_('next page')}</span>
           </a>
         %endif
-    </span>
+    </div>
     %endif
   </section>
 </div>

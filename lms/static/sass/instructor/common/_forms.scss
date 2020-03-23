@@ -1,0 +1,875 @@
+  #select-link {
+    background-color: map_get($grays, "100");
+    background-position: calc(100% - 8px);
+    border: 1px solid map_get($grays, "500");
+    box-shadow: 0 2px 6px -3px #adb5bd inset;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 1;
+    padding: 0 8px;
+    width: 100%;
+  }
+
+
+.d-none {
+  display: none !important;
+}
+
+@include media-breakpoint-up(xs) {
+  #course_info, 
+  #membership, 
+  #student_admin, 
+  #discussions_management, .gradebook-content, 
+  #data_download, 
+  #discussion_management, 
+  #open_response_assessment,
+  #cohort_management,
+  #certificates,
+  #send_email {
+    padding-top: 16px;
+    word-break: break-word;
+
+    .btn, .action-create {
+      align-items: center;
+      border-radius: 0 !important;
+      box-sizing: border-box;
+      display: inline-flex;
+      flex: 1 0 100px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      margin: 0 0 8px !important;
+      min-height: 32px;
+      justify-content: center;
+      line-height: 18px;
+      width: 100%;
+      min-width: 100px;
+      padding: 4px 8px !important;
+      text-align: center !important;
+      white-space: normal !important;
+    }
+    .btn-primary {
+      color: #fff;
+      background-color: #E41D37;
+      border-color: #E41D37
+    }
+
+    .dropdown-menu {
+    //  padding: 0;
+    }
+
+    .dropdown-item {
+    //  border-top: 1px solid map_get($grays, "300");
+    //  font-size: 14px;
+    //  line-height: 18px;
+    //  padding: 6px 8px;
+    }
+
+    .dropdown-item:first-child {
+    //  border: 0;
+    }
+
+    .form-control {
+      background-color: map_get($grays, "100");
+      background-position: calc(100% - 8px);
+      border: 1px solid map_get($grays, "500");
+      box-shadow: 0 2px 6px -3px #adb5bd inset;
+      box-sizing: border-box;
+      font-size: 14px;
+      line-height: 1;
+      margin: 8px 0;
+      padding: 8px;
+      width: 100%;
+      /*
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      */
+    }
+
+    select.form-control,
+    input.form-control {
+      font-weight: 400;
+      height: 32px;
+      padding: 0 8px;
+
+      option:checked {
+        font-weight: 400;
+      }
+
+    }
+
+    label {
+      &.list-group-item {
+        border-color: map_get($grays, "300");
+        background: transparent;
+        padding: 0;
+
+        .field {
+          &.custom-control {
+            align-items: flex-start;
+            display: flex;
+            padding: 8px 0px 8px 24px;
+          }
+        }
+
+      }
+    }
+
+    h3 {
+      /*
+      background: linear-gradient(135deg, #495057ff 0%, #495057dd 100%);
+      color: $white;
+      */
+      border-bottom: 1px solid map_get($grays, "300");
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21px;
+      margin: -8px -8px 16px;
+      padding: 8px;
+
+      &:first-of-type {
+        /*
+        margin-top: 0;
+        */
+      }
+
+      &::before {
+        /*
+        content: "";
+        display: block;
+        width: 33%;
+        height: 2px;
+        background: darkcyan;
+        margin-bottom: 4px;
+        */
+      }
+
+    }
+
+    .tab-pane > h3 {
+      margin: 0 0 8px;
+      padding: 0 0 0px;
+    }
+
+    .membership-section,
+    .action-type-container,
+    .enrollment-wrapper,
+    .basic-wrapper,
+    .discussions-management,
+    .open-response-assessment,
+    .cohort-management,
+    .cohort-management-group-add,
+    .cohort-management-details,
+    .enable-certificates,
+    .start-certificate-regeneration,
+    .certificate-generation-history,
+    .certificate-exception-container,
+    .certificate-invalidation-container,
+    .send-email,
+    .email-background,
+    .running-tasks-container {
+      background-color: map_get($grays, "100");
+      background-color: $white;
+      border: 1px solid map_get($grays, "300");
+      box-shadow: 0 4px 12px -2px map_get($grays, "300"), 0 -2px 4px -4px map_get($grays, "300");
+      margin: 0 0 16px;
+      padding: 8px;
+    }
+
+    legend {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21px;
+      margin: 0 -8px;
+      padding: 0 8px;
+      width: auto;
+    }
+
+    label {
+      display: block;
+    }
+
+    .auth-list-container {
+      //border-top: 3px double #ccc;
+      margin: 16px 0;
+      padding-top: 16px;
+
+      .title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        margin: 0 0 8px;
+
+        &::before {
+          background: darkcyan;
+          content: "";
+          display: block;
+          height: 4px;
+          margin-bottom: 8px;
+          width: 50px;
+        }
+
+      }
+    }
+
+    .member-list, 
+    .certificate-generation-history-content,
+    .white-listed-students {
+      margin: 16px 0;
+      overflow-x: auto;
+
+      table {
+        border-collapse: collapse;
+        border-top: 1px solid map_get($grays, "300");
+        min-width: 600px;
+        table-layout: auto;
+        width: 100%;
+
+        td, th {
+          border-bottom: 1px solid map_get($grays, "300");
+          padding: 4px 8px 4px 0 !important;
+        }
+      }
+    }
+
+    .enrollment-wrapper,
+    .discussions-wrapper,
+    .white-listed-students, 
+    .invalidation-history {
+      overflow-x: auto;
+
+      table {
+        border-collapse: collapse;
+        border-top: 1px solid map_get($grays, "300");
+        margin: 16px 0;
+        table-layout: auto;
+        width: 100%;
+
+        td, th {
+          border-bottom: 1px solid map_get($grays, "300");
+          padding: 4px 8px 4px 0 !important;
+        }
+
+        td {
+          text-align: right;
+        }
+      }
+    }
+
+    h4.hd-4 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 21px;
+      margin: 16px 0 8px;
+
+      &::before {
+        background: darkcyan;
+        content: "";
+        display: block;
+        height: 4px;
+        margin-bottom: 8px;
+        width: 50px;
+      }
+
+    }
+
+    h5, .h5 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 21px;
+      margin: 16px 0 8px;
+
+    }
+
+    .hint {
+      color: map_get($grays, "700");
+      font-size: 13px;
+    }
+
+    .bottom-bar .btn {
+      margin: 8px 0;
+      width: auto;
+    }
+
+    hr {
+      visibility: hidden;
+    }
+
+    br + br {
+      display: none;
+    }
+
+    ul.list-input {
+      border-top: 1px solid map_get($grays, "300");
+      margin: 16px 0;
+      padding: 0;
+
+      li {
+        display: flex;
+        border-bottom: 1px solid map_get($grays, "300");
+        line-height: 1.5;
+        padding: 4px 8px 4px 0 !important;
+
+        label {
+          flex: 0 0 40%;
+          margin: 0 8px 0 0;
+        }
+
+      }
+
+    }
+
+    .list-group {
+      margin: 16px 0;
+    }
+
+    .list-group-flush, {
+      .list-group-item:first-child {
+    //    border-top: 1px solid map_get($grays, "300");
+      }
+
+    }
+
+    .request-response-error {
+      color: #D0353F;
+      font-weight: 700;
+    }
+
+    .member-list,
+    .ertificate-generation-history-content, 
+    .white-listed-students,
+    .invalidation-history  {
+      tr {
+        display: table-row !important;
+      }
+    }
+
+
+    .hint::before, .hint::after {
+      content: none !important;
+    }
+
+    .request-res-section {
+      h3 ul {
+        border-top: 1px solid #dee2e6;
+        padding: 4px 8px 4px 0 !important
+      }
+    }
+
+    .task-history-single-table {
+      font-size: 0.7rem;
+    }
+  }
+
+  .open-response-assessment-summary, .open-response-assessment-main-table {
+    overflow-x: scroll;
+    padding-bottom: 0.7rem;
+    .backgrid {
+      min-width: 70rem;
+    }
+  }
+
+  .cohort-management {
+    .cohort-management-nav {
+      display: block;
+      .cohort-management-nav-form {
+        width: 100%;
+      }
+
+    }  
+  }
+
+
+}
+
+@include media-breakpoint-up(xl) {
+  #course_info,
+  #membership, 
+  #student_admin, 
+  #discussions_management, 
+  .gradebook-content, 
+  #data_download, 
+  #discussion_management, 
+  #open_response_assessment,
+  #cohort_management,
+  #certificates,
+  #send_email {
+    &.form-control {
+      font-size: 16px;
+      height: 36px;
+    }
+  }
+
+  #course_info, 
+  #membership, 
+  #student_admin, 
+  #discussions_management, 
+  .gradebook-content, 
+  #data_download, 
+  #discussion_management, 
+  #open_response_assessment,
+  #cohort_management,
+  #certificates,
+  #send_email {
+    font-size: 16px;
+
+    .btn {
+      width: auto;
+    }
+
+    .form-control {
+      font-size: 16px;
+      height: 36px;
+    }
+
+    .membership-section,
+    .action-type-container,
+    .enrollment-wrapper,
+    .basic-wrapper,
+    .discussions-management, 
+    .open-response-assessment,
+    .cohort-management, 
+    .enable-certificates,
+    .start-certificate-regeneration,
+    .certificate-generation-history,
+    .certificate-exception-container,
+    .certificate-invalidation-container,
+    .certificate-invalidation-container,
+    .send-email,
+    .email-background,
+    .running-tasks-container  {
+      padding: 24px;
+    }
+
+    h3 {
+      margin: -24px -24px 24px;
+      padding: 16px 24px;
+    }
+
+    .tab-pane > h3 {
+      margin: 0 0 24px;
+      padding: 0 0 16px;
+    }
+
+    .auth-list-container {
+      .title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0 0 8px;
+
+      }
+    }
+
+    .member-list, 
+    .white-listed-students,
+    .certificate-generation-history-content,
+    .invalidation-history  {
+      margin: 16px 0;
+      overflow-x: auto;
+
+      table {
+        width: 100%;
+
+        td, th {
+          padding: 8px 8px 8px 0 !important
+        }
+
+      }
+
+    }
+
+    .enrollment-wrapper,
+    .white-listed-students, 
+    .invalidation-history  {
+
+      table {
+
+        td, th {
+          padding: 8px 8px 8px 0 !important
+        }
+
+      }
+
+    }
+
+    label {
+      &.list-group-item {
+
+        .field {
+          &.custom-control {
+            padding: 8px 8px 8px 24px;
+          }
+        }
+
+      }
+    }
+
+    ul.list-input {
+
+      li {
+        padding: 8px 8px 8px 0 !important;
+
+        label {
+          flex: 0 0 40%;
+          margin: 0 8px 0 0;
+        }
+
+      }
+
+    }
+
+  }
+
+  .cohort-management {
+    .cohort-management-nav {
+      display: flex;
+      justify-content: space-between;
+      .cohort-management-nav-form {
+        width: 50%;
+      }
+      .action-create {
+        width: 20% !important;
+        align-self: end !important;
+        flex: unset !important;
+       justify-content: space-between !important;
+      }
+    }
+  }  
+
+}  
+
+.request-response-error {
+  color: #D0353F;
+  font-weight: 700;
+}
+
+.member-list, .white-listed-students {
+  tr {
+    display: table-row !important;
+  }
+}
+
+.hint::before {
+  content: none;
+}
+
+.request-res-section {
+  ul {
+    border-top: 1px solid #dee2e6;
+    padding: 4px 8px 4px 0 !important
+  }
+}
+
+.task-history-single-table {
+  font-size: 0.7rem;
+}
+
+
+
+.discussions-management,
+.cohort-management {
+  .division-scheme-items {
+    display: flex;
+    .field-message {
+      font-size: 0.8rem;
+    }
+    .three-column-layout {
+      width: 33.33%;
+      padding-right: 1rem;
+    }
+  }
+  .message-title {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 21px !important;
+    margin: 8px 0 8px !important;
+    color: darkcyan;
+  }  
+  ul, li {
+    list-style: none;
+  }
+}
+
+.open-response-assessment-block {
+  table{
+//    table-layout: unset !important;
+    .ora-summary-title {
+      white-space: break-spaces;
+      color: #E41D37 !important;
+    }
+  }
+  .backgrid {
+    .peer, .self, .waiting, .training, .name, .parent_name, .total, .staff, .done, .renderable {
+      width: unset !important;
+      white-space: break-spaces;
+      vertical-align: bottom;
+    }
+    thead {
+      th {
+        button {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.message-error {
+  color: #770f1d;
+  background-color: #fad2d7;
+  border-color: #f7c0c7 !important;
+  position: relative;
+  padding: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0;
+  margin-bottom: 0.5rem;
+  .message-copy {
+    margin: 0!important;
+  }
+  h3 {
+    padding: 0 !important;
+    margin: 0 !important;
+    border-bottom: 0 !important;
+    color: #770f1d !important;
+  }
+}
+
+.fa {
+  margin-right: 0.5rem;
+}
+
+
+
+
+  .cohort-management-add-form {  
+    .copy-error {
+      padding-left: 1rem;
+      .icon {
+        color: #770f1d;
+      }
+   }
+  }
+
+  .cohort-management-supplemental {
+    .icon {
+      color: #770f1d;
+    }
+    .btn-link {
+      color: #E41D37;
+      text-decoration: none;
+      background-color: transparent;
+      border:none !important;
+    }
+    .btn-link:hover {
+      color: #96232a;
+      text-decoration: underline;
+    }
+  }
+
+  .cohort-management-file-upload {
+    .field-file {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .cohort-management-details-association-course {
+    .input-group-other {
+      .input-cohort-group-association {
+        margin: 0 0 0 1rem !important;
+      }
+    }
+  }
+
+  .cohort-management-settings {
+    .nav-tabs {
+      flex: unset !important;
+      border-bottom: unset !important;
+      border: 1px solid transparent;
+      box-shadow: 0 4px 12px -2px #dee2e6,0 -2px 4px -4px #dee2e6;
+    }
+    .nav-link {
+      color: map_get($grays, "500") !important;
+    }
+    .is-selected {
+      .nav-link {
+        color: #D0353F !important;
+      }
+    }
+  }
+
+
+#certificates {
+  .file-browse {
+    .browse {
+      padding-right: 0.5rem;
+    }
+  }
+  .under-heading {
+  //  padding-bottom: 1rem;
+    label {
+      display: flex !important;
+      font-size: inherit !important;
+      border-top: 1px solid map_get($grays, "300");
+      padding: 0.5rem 0;
+    }
+  }
+  .white-listed-students {
+    td {
+      text-align: left;
+    }  
+  }
+  .arrow {
+    width: unset;
+    height: unset;
+    min-width: unset;
+    min-height: unset;
+    margin-right: 1rem !important;
+  }
+}  
+
+
+.list-fields {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.editor-tabs {
+      list-style: none;
+      right: 0;
+      top: 5px;
+      position: absolute;
+      padding: 12px 15px;
+
+      .inner_tab_wrap {
+        display: inline-block;
+        margin-left: 8px;
+
+        a.tab {
+
+
+  
+          border-radius: 3px;
+          padding: 5px 20px;
+     
+          font-weight: bold;
+          color: $white;
+
+          &.current {
+          
+
+    
+            cursor: default;
+          }
+
+          &:hover,
+          &:focus {
+        
+            background-image: linear-gradient(#009fe6, #009fe6) !important;
+          }
+        }
+      }
+    }
+
+
+  .editor {
+  position: relative;
+
+  .row {
+    position: relative;
+  }
+
+  .editor-bar {
+
+
+    position: relative;
+    padding: 5px;
+    border-bottom-color: #a5aaaf;
+
+    button {
+      display: inline-block;
+
+ 
+      padding: 3px 15px 5px;
+      margin-left: 7px;
+      border: 0;
+      border-radius: 2px;
+      background: transparent;
+
+      .icon {
+        height: 21px;
+      }
+
+      &:hover,
+      &:focus {
+        background: rgba(255, 255, 255, .5);
+      }
+    }
+  }
+}  
+
+.editor-tabs {
+  position: absolute;
+  top: 10px;
+
+  .tab {
+    display: block;
+    height: 24px;
+    padding: 7px 20px 3px;
+    border: 1px solid #a5aaaf;
+    border-radius: 3px 3px 0 0;
+    background-color: #e5ecf3;
+    font-size: 13px;
+    color: #3c3c3c;
+    box-shadow: 1px -1px 1px rgba(0, 0, 0, .05);
+
+    &.current {
+      background: $white;
+      border-bottom-color: $white;
+    }
+  }
+}
+
+
+.xmodule_edit.xmodule_HtmlDescriptor .html-editor .is-inactive {
+  display: none;
+}
+
+.html-editor {
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+    .mce-toolbar-grp {
+      background-color: #f8f9fa;
+    }
+  }
+}
+
+.send-email {
+  fieldset {
+    ul{
+      border-top: 1px solid #dee2e6;
+    }
+    li {
+      display: flex !important;
+
+      padding: 0.5rem 0;
+      label {
+        font-size: inherit !important;
+        padding-left: 0.5rem;
+        display: flex !important;
+        .subheading {
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+}

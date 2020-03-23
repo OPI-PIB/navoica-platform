@@ -2,7 +2,7 @@
 <div class="cohort-management-settings">
     <form action="" method="post" name="" id="cohort-management-settings-form" class="cohort-management-settings-form">
         <% if (isNewCohort) { %>
-            <h3 class="hd hd-3 form-title"><%- gettext('Add a New Cohort') %></h3>
+            <h4 class="hd hd-4 form-title"><%- gettext('Add a New Cohort') %></h4>
             <div class="tab-content is-visible new-cohort-form">
         <% } %>
         <div class="form-fields">
@@ -24,7 +24,7 @@
                             <%- gettext('Cohort Name') %> *
                             <span class="sr"><%- gettext('(Required Field)')%></span>
                     </label>
-                    <input name="cohort-name" value="<%- cohort_name_value %>" class="input cohort-name
+                    <input name="cohort-name" value="<%- cohort_name_value %>" class="form-control input cohort-name
                         <% if (cohort.disableEditingName) { %>
                            readonly" readonly
                         <% } else { %>
@@ -65,7 +65,7 @@
                         <% if (hasContentGroups) { %>
                             <div class="input-group-other">
                                 <label class="sr" for="cohort-group-association"><%- gettext("Choose a content group to associate") %></label>
-                                <select name="cohort-group-association" class="input input-lg has-option-unavailable input-cohort-group-association" <%- !hasSelectedContentGroup ? 'disabled="disabled"' : '' %>>
+                                <select name="cohort-group-association" class="form-control input input-lg has-option-unavailable input-cohort-group-association" <%- !hasSelectedContentGroup ? 'disabled="disabled"' : '' %>>
                                     <option value="None" <%- !hasSelectedContentGroup ? 'selected="selected"' : '' %> disabled="disabled"><%- gettext("Not selected") %></option>
 
                                     <%
@@ -143,10 +143,10 @@
         <% } %>
 
         <div class="form-actions <% if (isNewCohort) { %>new-cohort-form<% } %>">
-            <button class="form-submit button action-primary action-save">
+            <button class="btn btn-outline-primary btn-sm form-submit button action-primary action-save">
                 <%- gettext('Save') %>
             </button>
-            <a href="" class="form-cancel action-secondary action-cancel"><%- gettext('Cancel') %></a>
+            <a href="" class="btn btn-outline-primary btn-sm form-cancel action-secondary action-cancel"><%- gettext('Cancel') %></a>
         </div>
     </form>
 </div>
