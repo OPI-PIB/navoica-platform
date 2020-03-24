@@ -4,12 +4,12 @@
 
 <% if (cohortsEnabled) { %>
     <div class="cohort-management-nav">
-        <hr class="divider divider-lv1" />
+
         <form action="" method="post" name="" id="cohort-management-nav-form" class="cohort-management-nav-form">
 
             <div class="cohort-management-nav-form-select field field-select">
                 <label for="cohort-select" class="label sr"><%- gettext("Select a cohort to manage") %></label>
-                <select class="input cohort-select" name="cohort-select" id="cohort-select"></select>
+                <select class="form-control input cohort-select" name="cohort-select" id="cohort-select"></select>
             </div>
 
             <div class="form-actions">
@@ -17,7 +17,7 @@
             </div>
         </form>
 
-        <button class="button action-primary action-create">
+        <button class="btn btn-outline-primary btn-sm action-primary action-create">
             <span class="icon fa fa-plus" aria-hidden="true"></span>
             <%- gettext('Add Cohort') %>
         </button>
@@ -34,7 +34,7 @@
         <hr class="divider divider-lv1" />
 
         <!-- Uploading a CSV file of cohort assignments. -->
-        <button class="toggle-cohort-management-secondary" data-href="#cohort-management-file-upload"><%- gettext('Assign learners to cohorts by uploading a CSV file') %></button>
+        <button class="btn btn-outline-primary btn-sm toggle-cohort-management-secondary" data-href="#cohort-management-file-upload"><%- gettext('Assign learners to cohorts by uploading a CSV file') %></button>
         <div class="cohort-management-file-upload csv-upload hidden" id="cohort-management-file-upload" tabindex="-1"></div>
 
         <div class="cohort-management-supplemental">

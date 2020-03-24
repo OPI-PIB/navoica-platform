@@ -138,7 +138,7 @@
                         $('<div/>', {
                             class: 'message ' + group
                         }).appendTo('.bulk-exception-results').prepend(
-                                "<button type='button' id= '" + group + "' class='arrow'> + </button>" + heading
+                                "<button type='button' id= '" + group + "' class='arrow btn btn-outline-primary btn-sm'> + </button>" + heading
                         ).append($('<ul/>', {
                             class: group
                         }));

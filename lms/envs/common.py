@@ -1159,6 +1159,8 @@ else:
     _csrf_middleware = 'django.middleware.csrf.CsrfViewMiddleware'
 
 MIDDLEWARE_CLASSES = [
+    'common.middleware.ProfileMiddleware',
+
     'crum.CurrentRequestUserMiddleware',
 
     'openedx.core.djangoapps.request_cache.middleware.RequestCache',
@@ -1467,6 +1469,12 @@ PIPELINE_CSS = {
             #'css/navoica.custom.css'
 	  ],
         'output_filename': 'css/lms-style-vendor.css',
+    },
+    'style-instructor-dash' : {
+        'source_filenames' : [
+            'css/instructor/course-leader.css',
+        ],
+        'output_filename': 'css/instructor_dash.css'
     },
     'style-vendor-tinymce-content': {
         'source_filenames': [

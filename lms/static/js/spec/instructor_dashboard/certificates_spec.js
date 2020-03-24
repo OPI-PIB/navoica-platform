@@ -51,7 +51,7 @@ define([
                     '<label style="display: inline" for="certificate_status_error"> ' +
                     '   Regenerate for learners in an error state. (0)' +
                     '</label><br>' +
-                    '<input type="button" class="btn-blue" id="btn-start-regenerating-certificates" ' +
+                    '<input type="button" class="btn-blue btn btn-outline-primary bt-sm" id="btn-start-regenerating-certificates" ' +
                     '   value="Regenerate Certificates" data-endpoint="' + expected.url + '">' +
                     '</form>' +
                     '<div class="message certificate-regeneration-status"></div>' +

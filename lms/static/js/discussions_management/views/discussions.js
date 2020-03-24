@@ -15,7 +15,7 @@
                  HtmlUtils, StringUtils, BaseDashboardView) {
             /* global NotificationModel, NotificationView */
 
-            var HIDDEN_CLASS = 'hidden';
+            var HIDDEN_CLASS = 'd-none';
             var TWO_COLUMN_CLASS = 'two-column-layout';
             var THREE_COLUMN_CLASS = 'three-column-layout';
             var COHORT = 'cohort';
