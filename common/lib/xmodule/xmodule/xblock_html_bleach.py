@@ -18,12 +18,14 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
         :param strict: Whether to strictly process the given text or not.
         """
         self.strict = strict
-        self.adulterated_value = value
         self.sanitized_value = bleach.clean(value,
                                             tags=self._get_allowed_tags(),
                                             attributes=self._get_allowed_attributes(),
-                                            styles=self._get_allowed_styles())
-        self.value = self.sanitized_value if self.strict else self.adulterated_value
+                                            styles=self._get_allowed_styles(),
+                                            strip=True,
+                                            strip_comments=True
+                                            )
+        self.value = self.sanitized_value
 
     def _get_allowed_tags(self):
         """
@@ -56,7 +58,9 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
 
         if not self.strict:
             tags += ['h1', 'h2', 'script', 'sub', 'sup', 'div', 'abbr',
-                     'iframe']
+                     'iframe', 'table', 'thead', 'tr', 'th', 'tbody', 'tfoot',
+                     'td', 'colgroup', 'col', 'caption', 'math', 'mrow', 'mn',
+                     'mo', 'msup', 'mfenced', 'mi', 'nobr', 'br']
 
         return tags
 
@@ -74,12 +78,13 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
             'pre': ['class'],
             'span': ['style'],
             'ul': [],
+            'th': ['scope'],
+            'col': ['span'],
+            'iframe': ['src', 'style']
         }
 
         if not self.strict:
             attributes.update({'abbr': ['title']})
-            attributes['ul'].append('style')
-            attributes['img'].append('style')
 
         return attributes
 
@@ -94,30 +99,10 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
                   'padding-left', 'padding-right']
 
         if not self.strict:
-            styles += ['list-style-type', 'font-size', 'border-width', 'margin']
+            styles += ['list-style-type', 'font-size', 'border-width', 'margin',
+                       'background-color', 'width', 'height']
 
         return styles
-
-    def _determine_values(self, other):
-        """
-        Return the values to be compared, if `other` is an instance of `str` then we will compare `other`'s value with
-        this instance's clean value. Else if `other` is an instance of this class we will compare the `other`'s
-        adulterate value (The original value) with the instance adulterate value as well.
-        :param other:
-        :return: A tuple of values to be compared.
-        """
-        if isinstance(other, str):
-            self_value = self.sanitized_value
-            other_value = other
-        elif isinstance(other, type(self)):
-            self_value = self.adulterated_value
-            other_value = other.adulterated_value
-        else:
-            raise TypeError(
-                'Unsupported operation between instances of \'{}\' and \'{}\''.format(
-                    type(self).__name__, type(other).__name__))
-
-        return self_value, other_value
 
     def __str__(self):
         """
@@ -130,69 +115,3 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
         :return: The value of the text depending on the strictness level.
         """
         return self.value
-
-    def __eq__(self, other):
-        """
-        :param other:
-        :return: If the other is an instance of str, then this will
-                 be compared to the clean value, otherwise, it'll
-                 compare both objects regarding the original value.
-        """
-        other_value, self_value = self._determine_values(other)
-        return self_value == other_value
-
-    def __ne__(self, other):
-        """
-        :param other:
-        :return: If the other is an instance of str, then this will
-                 be compared to the clean value, otherwise, it'll
-                 compare both objects regarding the original value.
-        """
-        other_value, self_value = self._determine_values(other)
-        return self_value != other_value
-
-    def __lt__(self, other):
-        """
-        :param other:
-        :return: If the other is an instance of str, then this will
-                 be compared to the clean value, otherwise, it'll
-                 compare both objects regarding the original value.
-        """
-        other_value, self_value = self._determine_values(other)
-        return self_value < other_value
-
-    def __le__(self, other):
-        """
-        :param other:
-        :return: If the other is an instance of str, then this will
-                 be compared to the clean value, otherwise, it'll
-                 compare both objects regarding the original value.
-        """
-        other_value, self_value = self._determine_values(other)
-        return self_value <= other_value
-
-    def __gt__(self, other):
-        """
-        :param other:
-        :return: If the other is an instance of str, then this will
-                 be compared to the clean value, otherwise, it'll
-                 compare both objects regarding the original value.
-        """
-        other_value, self_value = self._determine_values(other)
-        return self_value > other_value
-
-    def __ge__(self, other):
-        """
-        :param other:
-        :return: If the other is an instance of str, then this will
-                 be compared to the clean value, otherwise, it'll
-                 compare both objects regarding the original value.
-        """
-        other_value, self_value = self._determine_values(other)
-        return self_value >= other_value
-
-    def __nonzero__(self):
-        """
-        :return: True if the adulterated_value contains a value, False otherwise.
-        """
-        return bool(self.adulterated_value)
