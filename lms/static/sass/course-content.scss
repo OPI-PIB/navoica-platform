@@ -9643,6 +9643,10 @@ main.container aside h6 {
     font-size: 1.125rem;
     line-height: 1.7778;
     margin: 1em 0;
+    a {
+      word-break: break-word;
+      word-wrap: break-word;
+    }
   }
 
   #seq_content .vert .xblock ul, #seq_content .vert .xblock ol {
@@ -11406,7 +11410,8 @@ code {color: black;}
     }
   }
 }
-main.container .course-wrapper .d-flex { flex-flow:row; }
+
+.course-wrapper main.container .d-flex { flex-flow:row; }
 
 
 .sequence {
