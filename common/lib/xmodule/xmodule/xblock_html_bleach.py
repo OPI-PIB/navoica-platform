@@ -59,7 +59,8 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
         if not self.strict:
             tags += ['h1', 'h2', 'script', 'sub', 'sup', 'div', 'abbr',
                      'iframe', 'table', 'thead', 'tr', 'th', 'tbody', 'tfoot',
-                     'td', 'colgroup', 'col','caption','math','mrow','mn','mo','msup','mfenced','mi','nobr','br']
+                     'td', 'colgroup', 'col', 'caption', 'math', 'mrow', 'mn',
+                     'mo', 'msup', 'mfenced', 'mi', 'nobr', 'br']
 
         return tags
 
@@ -79,6 +80,7 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
             'ul': [],
             'th': ['scope'],
             'col': ['span'],
+            'iframe': ['src', 'style']
         }
 
         if not self.strict:
@@ -98,7 +100,7 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
 
         if not self.strict:
             styles += ['list-style-type', 'font-size', 'border-width', 'margin',
-                       'background-color']
+                       'background-color', 'width', 'height']
 
         return styles
 
