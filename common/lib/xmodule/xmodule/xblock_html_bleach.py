@@ -59,7 +59,7 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
         if not self.strict:
             tags += ['h1', 'h2', 'script', 'sub', 'sup', 'div', 'abbr',
                      'iframe', 'table', 'thead', 'tr', 'th', 'tbody', 'tfoot',
-                     'td', 'colgroup', 'col','caption','math','mrow','mn','mo']
+                     'td', 'colgroup', 'col','caption','math','mrow','mn','mo','msup','mfenced','mi','nobr','br']
 
         return tags
 
