@@ -84,3 +84,9 @@ DEFAULT_FEEDBACK_EMAIL = 'feedback@'+LMS_BASE
 SERVER_EMAIL = 'devops@'+LMS_BASE
 
 WIKI_ENABLED = False
+
+GRADES_DOWNLOAD = {
+    'STORAGE_TYPE': 'localfs',
+    'BUCKET': 'edx-grades',
+    'ROOT_PATH': '/edx/var/edxapp/media',
+}
