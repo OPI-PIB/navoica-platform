@@ -104,7 +104,7 @@ class HtmlBlock(object):
         if self.data is not None and getattr(self.system, 'anonymous_student_id', None) is not None:
             self.data = self.data.replace("%%USER_ID%%", self.system.anonymous_student_id)
 
-        html = SanitizedText(self.data,strict=False)
+        html = SanitizedText(self.data)
         return unicode(html)
 
 
