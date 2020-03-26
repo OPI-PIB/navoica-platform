@@ -1212,7 +1212,7 @@ MIDDLEWARE_CLASSES = [
     'openedx.core.djangoapps.lang_pref.middleware.LanguagePreferenceMiddleware',
 
     # Allows us to dark-launch particular languages.
-    # Must be after LangPrefMiddleware, so ?preview-lang query params can override
+    # Must be after LangPrefMiddleware, so ?previewPREVIEW_LMS_BASE-lang query params can override
     # user's language preference. ?clear-lang resets to user's language preference.
     'openedx.core.djangoapps.dark_lang.middleware.DarkLangMiddleware',
 
@@ -2279,6 +2279,9 @@ INSTALLED_APPS = [
 
     # DRF filters
     'django_filters',
+
+    # register Xblock-poll
+    'poll',
 ]
 
 ######################### CSRF #########################################
