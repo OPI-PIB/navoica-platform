@@ -580,6 +580,8 @@ class CourseAboutSearchIndexer(object):
         AboutInfo("main_page", AboutInfo.PROPERTY, AboutInfo.FROM_COURSE_PROPERTY),
         
         AboutInfo("availability", AboutInfo.PROPERTY, AboutInfo.FROM_COURSE_PROPERTY),
+        AboutInfo("catalog_visibility", AboutInfo.PROPERTY,
+                  AboutInfo.FROM_COURSE_PROPERTY),
     ]
 
     @classmethod
