@@ -28,9 +28,9 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
                                             )
         self.value = self.sanitized_value"""
 
-        soup = BeautifulSoup(value)
+        soup = BeautifulSoup(value, "html.parser")
         [s.extract() for s in soup('style')]
-        self.value = unicode(soup)
+        self.value = unicode(soup).strip()
 
     def _get_allowed_tags(self):
         """
