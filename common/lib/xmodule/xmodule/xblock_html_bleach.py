@@ -1,7 +1,7 @@
 """
 A new HTML XBlock that is designed with security and embedding in mind.
 """
-import bleach
+from bs4 import BeautifulSoup
 
 
 class SanitizedText(object):  # pylint: disable=too-few-public-methods
@@ -10,14 +10,15 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
     a safe value of the passed text and an unsafe value if requested.
     """
 
-    def __init__(self, value, strict=True):
+    def __init__(self, value):
         """
         This initializer takes a raw value that may contain unsafe content and produce a cleaned version of it. It's
         very helpful to maintain both versions of the content if we need to use it later as a Database field or so.
         :param value: The original string value that came from DB.
         :param strict: Whether to strictly process the given text or not.
         """
-        self.strict = strict
+
+        """self.strict = strict
         self.sanitized_value = bleach.clean(value,
                                             tags=self._get_allowed_tags(),
                                             attributes=self._get_allowed_attributes(),
@@ -25,7 +26,11 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
                                             strip=True,
                                             strip_comments=True
                                             )
-        self.value = self.sanitized_value
+        self.value = self.sanitized_value"""
+
+        soup = BeautifulSoup(value)
+        [s.extract() for s in soup('style')]
+        self.value = unicode(soup)
 
     def _get_allowed_tags(self):
         """
@@ -57,7 +62,7 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
         ]
 
         if not self.strict:
-            tags += ['h1', 'h2', 'script', 'sub', 'sup', 'div', 'abbr',
+            tags += ['h1', 'h2', 'script', 'sub', 'sup', 'div', 'abbr', 'hr',
                      'iframe', 'table', 'thead', 'tr', 'th', 'tbody', 'tfoot',
                      'td', 'colgroup', 'col', 'caption', 'math', 'mrow', 'mn',
                      'mo', 'msup', 'mfenced', 'mi', 'nobr', 'br']
@@ -73,14 +78,19 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
         """
         attributes = {
             'a': ['href', 'title', 'target', 'rel'],
-            'img': ['src', 'alt', 'width', 'height'],
+            'img': ['src', 'alt', 'width', 'height', 'style'],
             'p': ['style'],
             'pre': ['class'],
             'span': ['style'],
             'ul': [],
             'th': ['scope'],
             'col': ['span'],
-            'iframe': ['src', 'style']
+            'iframe': ['src', 'style'],
+            'div': ['style'],
+            'hr': ['style'],
+            'table': ['style', 'height', 'width', 'border'],
+            'td': ['style'],
+            'tr': ['style']
         }
 
         if not self.strict:
@@ -96,11 +106,13 @@ class SanitizedText(object):  # pylint: disable=too-few-public-methods
         :return: Allowed styles depending on the bleaching mode
         """
         styles = ['font-family', 'text-align', 'color', 'text-decoration',
-                  'padding-left', 'padding-right']
+                  'padding-left', 'padding-right', ]
 
         if not self.strict:
-            styles += ['list-style-type', 'font-size', 'border-width', 'margin',
-                       'background-color', 'width', 'height']
+            styles += ['list-style-type', 'font-size', 'border-width',
+                       'border-color', 'margin', 'border-style',
+                       'background-color', 'width', 'height', 'padding',
+                       'border', 'float', ]
 
         return styles
 
