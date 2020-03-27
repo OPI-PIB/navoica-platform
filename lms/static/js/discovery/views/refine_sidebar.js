@@ -56,7 +56,7 @@
 
             renderFacet: function(facetKey, options) {
 				var rederwhat = '';
-				if (options.length > 5) {
+				if (options.length > 9) {
 					rederwhat = this.renderSelect(options);
 				}
 				else {
@@ -66,7 +66,7 @@
                     name: facetKey,
                     displayName: this.facetName(facetKey),
                     optionsHtml: rederwhat,
-                    listIsHuge: (options.length > 5)
+                    listIsHuge: (options.length > 9)
                 });
             },
 

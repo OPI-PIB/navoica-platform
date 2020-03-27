@@ -2704,7 +2704,9 @@ ALL_COURSE_ORGANIZER = sorted([
     [u"38", u"Wyższa Szkoła Techniczna w Katowicach"],
     [u"39", u"Zachodniopomorska Szkoła Biznesu w Szczecinie"],
     [u"40", u"Zachodniopomorski Uniwersytet Technologiczny w Szczecinie"],
-    [u"41", u"Centrum Nauki Kopernik"]
+    [u"41", u"Centrum Nauki Kopernik"],
+    [u"42", u"Akademia Pomorska w Słupsku"],
+    [u"43", u"Collegium Humanum w Warszawie"]
 ], key=lambda x:x[1], reverse=False)
 
 ALL_COURSE_ORGANIZER_DICT = dict(ALL_COURSE_ORGANIZER)
