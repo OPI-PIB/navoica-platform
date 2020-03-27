@@ -66,7 +66,7 @@
                     name: facetKey,
                     displayName: this.facetName(facetKey),
                     optionsHtml: rederwhat,
-                    listIsHuge: (options.length > 5)
+                    listIsHuge: (options.length > 9)
                 });
             },
 
