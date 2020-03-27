@@ -2282,6 +2282,8 @@ INSTALLED_APPS = [
 
     # register Xblock-poll
     'poll',
+
+    'xblock_jupyter_graded',
 ]
 
 ######################### CSRF #########################################

@@ -682,6 +682,11 @@ urlpatterns += [
     ),
 ]
 
+# Jupyter Graded XBlock Endpoints
+urlpatterns += (
+    url(r'^api/jupyter_graded/', include('xblock_jupyter_graded.rest.urls', namespace='xblock_jupyter_graded')),
+)
+
 if settings.FEATURES.get('ENABLE_TEAMS'):
     # Teams endpoints
     urlpatterns += [
