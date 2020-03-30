@@ -9544,6 +9544,14 @@ main.container aside h6 {
   display: none;
     }
 
+#seq_content table.survey-table .survey-row td p,
+#seq_content table.survey-table .survey-row th p,
+#seq_content .poll-answers .poll-answer .poll-answer p,
+#seq_content ul.poll-results li.poll-result .poll-answer-label p {
+    margin-bottom: 0 !important;
+}
+
+
   #seq_content .btn-outline-light, .instructor-info-action {
     background: #f8f9fa;
     border-color: #dee2e6;
