@@ -198,6 +198,7 @@
                 }
             }
             this.toggleDiscussionBtn.focus();
+            window.scrollTo(0,0);
         },
 
         hideDiscussion: function() {
