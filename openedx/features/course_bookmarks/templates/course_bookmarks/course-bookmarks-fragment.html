@@ -4,8 +4,12 @@
 
 <%namespace name='static' file='../static_content.html'/>
 
-<div class="course-bookmarks courseware-results-wrapper" id="main" tabindex="-1">
+<%static:css group='style-bookmarks'/>
+
+
+<main class="container course-bookmarks courseware-results-wrapper" id="main" tabindex="-1">
     <div id="loading-message" aria-live="polite" aria-relevant="all"></div>
     <div id="error-message" aria-live="polite"></div>
-    <div class="courseware-results search-results" data-course-id="${course.id}" data-lang-code="${language_preference}"></div>
-</div>
+    <section id="results" class="courseware-results search-results" data-course-id="${course.id}" data-lang-code="${language_preference}"></section>
+
+</main>

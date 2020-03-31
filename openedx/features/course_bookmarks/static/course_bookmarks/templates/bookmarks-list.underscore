@@ -2,36 +2,52 @@
 
 <% if (bookmarksCollection.length) { %>
 
-    <div class="paging-header"></div>
+    <header class="paging-header"></header>
 
-    <div class='bookmarks-results-list'>
+    <div class='_container bookmarks-results-list'>
+        <div class="row">
         <% bookmarksCollection.each(function(bookmark, index) { %>
-             <a class="bookmarks-results-list-item"
-                href="<%- bookmark.blockUrl() %>"
-                aria-labelledby="bookmark-link-<%- index %>"
-                data-bookmark-id="<%- bookmark.get('id') %>"
-                data-component-type="<%- bookmark.get('block_type') %>"
-                data-usage-id="<%- bookmark.get('usage_id') %>"
-                aria-describedby="bookmark-type-<%- index %> bookmark-date-<%- index %>">
-                <div class="list-item-content">
-                    <div class="list-item-left-section">
-                        <h3 id="bookmark-link-<%- index %>" class="list-item-breadcrumbtrail">
+            <div class="col-lg-3 mb-4">
+                 <a class="card h-100 bookmarks-results-list-item"
+                    href="<%- bookmark.blockUrl() %>"
+                    aria-labelledby="bookmark-link-<%- index %>"
+                    data-bookmark-id="<%- bookmark.get('id') %>"
+                    data-component-type="<%- bookmark.get('block_type') %>"
+                    data-usage-id="<%- bookmark.get('usage_id') %>"
+                    aria-describedby="bookmark-type-<%- index %> bookmark-date-<%- index %>">
+                    <div class="card-body list-item-content">
+                        <h4 class="card-title">
                             <%=
-                                HtmlUtils.HTML(_.map(_.pluck(bookmark.get('path'), 'display_name'), _.escape)
+                                HtmlUtils.HTML(_.map(_.pluck('display_name'), _.escape)
                                     .concat([_.escape(bookmark.get('display_name'))])
-                                    .join(' <span class="icon fa fa-caret-right" aria-hidden="true"></span><span class="sr">-</span> '))
+                                    .join(''))
                             %>
-                        </h3>
-                        <p id="bookmark-date-<%- index %>" class="list-item-date"> <%- gettext("Bookmarked on") %> <%- humanFriendlyDate(bookmark.get('created')) %> </p>
-                    </div>
+                        </h4>
+                        <div class="card-meta list-item-left-section">
+                            <ul id="bookmark-link-<%- index %>" class=" meta list-item-breadcrumbtrail">
+                                <%=
+                                    HtmlUtils.HTML(_.map(_.pluck(bookmark.get('path'), 'display_name'), _.escape)
+                                        .concat([_.escape(bookmark.get('display_name'))])
+                                        .join(' <span class="icon fa fa-chevron-right" aria-hidden="true"></span><span class="sr">-</span> '))
+                                %>
+                           
+                            </ul>
 
-                    <p id="bookmark-type-<%- index %>" class="list-item-right-section">
-                        <span aria-hidden="true"><%- gettext("View") %></span>
-                        <span class="icon fa fa-arrow-right" aria-hidden="true"></span>
-                    </p>
-                </div>
-            </a>
+                        </div>
+                        <div class="card-desc">
+                            <p id="bookmark-date-<%- index %>" class="card-text list-item-date"> <%- gettext("Bookmarked on") %> <strong><%- humanFriendlyDate(bookmark.get('created')) %> </strong></p>
+                            <div>
+                                <p id="bookmark-type-<%- index %>" class="goto list-item-right-section">
+                                    <span aria-hidden="true"><%- gettext("View") %></span>
+                                    <span class="icon fa fa-arrow-right" aria-hidden="true"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>    
         <% }); %>
+        </div>
     </div>
 
 <% } else {%>
