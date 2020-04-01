@@ -5,7 +5,7 @@
 		</div>
 	</div>
 <% if (listIsHuge) { %>
-	<select data-facet="<%- name %>" class="facet-list collapse select_list">
+	<select data-facet="<%- name %>" class="facet-list select_list custom-select mr-sm-2">
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
 	</select>
 <% } else { %>
@@ -14,7 +14,7 @@
 	</div>
 <% } %>
 <% if (listIsHuge) { %>
-    <div class="toggle ">
+    <div class="toggle collapse">
         <button class="show-more discovery-button">
             <%- gettext("More") %>
         </button>
