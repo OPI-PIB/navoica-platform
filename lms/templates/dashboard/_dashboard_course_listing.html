@@ -159,7 +159,15 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                         % endif
                 </div>
             % endif
+            <ul class="list-unstyled" style="float:right">
+              <li class="dropdown">
+                <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-cog"></i>
+                </a>
 
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                
                       % if can_unenroll:
                           <% course_refund_url = reverse('course_run_refund_status', args=[unicode(course_overview.id)]) %>
                               % if not is_course_blocked:
@@ -190,7 +198,6 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                               </a>)
                             % endif
                     % endif
-                     % if false:
                         % if show_email_settings:
                           % if not is_course_blocked:
                             <a href="#email-settings-modal" class="dropdown-item action-email-settings" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
@@ -198,8 +205,9 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                             <a class="dropdown-item action-email-settings" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
                           % endif
                         % endif
-                      % endif
-
+                    </div>
+                  </li>
+                </ul>
                 </div>
 
 
