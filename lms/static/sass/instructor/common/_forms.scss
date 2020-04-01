@@ -853,16 +853,17 @@
   }
 }
 
-.send-email {
+#send_email {
   fieldset {
     li {
-      display: flex !important;
-
+      list-style: none;
       padding: 0.5rem 0;
       label {
         font-size: inherit !important;
         padding-left: 0.5rem;
-        display: flex !important;
+        input {
+          vertical-align: middle;
+        }
         .subheading {
           padding-left: 0.5rem;
         }
@@ -870,3 +871,4 @@
     }
   }
 }
+
