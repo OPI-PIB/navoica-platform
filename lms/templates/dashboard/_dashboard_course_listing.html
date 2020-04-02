@@ -159,12 +159,20 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                         % endif
                 </div>
             % endif
+            <ul class="list-unstyled" style="float:right">
+              <li class="dropdown">
+                <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-cog"></i>
+                </a>
 
+                <div class="dropdown-menu dropdown-newstyle" aria-labelledby="dropdownMenuLink">
+
+                
                       % if can_unenroll:
                           <% course_refund_url = reverse('course_run_refund_status', args=[unicode(course_overview.id)]) %>
                               % if not is_course_blocked:
 
-                              (<a href="#unenroll-modal" id="unenroll-0" class="action-unenroll" rel="leanModal"
+                              <a href="#unenroll-modal" id="unenroll-0" class="dropdown-item action-unenroll" rel="leanModal"
                                  data-course-id="${course_overview.id}"
                                  course-id="${course_overview.id}"
                                  data-course-number="${course_overview.number}"
@@ -175,7 +183,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                                  data-course-cert-name-long="${cert_name_long}"
                                  data-course-enrollment-mode="${enrollment.mode}">
                                 ${_('Unenroll')}
-                              </a>)
+                              </a>
                               % else:
                               <a class="dropdown-item action-unenroll"  id="unenroll-0"
                                  data-course-id="${course_overview.id}"
@@ -187,19 +195,19 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                                  data-course-cert-name-long="${cert_name_long}"
                                  data-course-enrollment-mode="${enrollment.mode}">
                                 ${_('Unenroll')}
-                              </a>)
+                              </a>
                             % endif
                     % endif
-                     % if false:
-                        % if show_email_settings:
+                        <!-- % if show_email_settings: -->
                           % if not is_course_blocked:
                             <a href="#email-settings-modal" class="dropdown-item action-email-settings" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
                           % else:
                             <a class="dropdown-item action-email-settings" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
                           % endif
-                        % endif
-                      % endif
-
+                        <!-- % endif -->
+                    </div>
+                  </li>
+                </ul>
                 </div>
 
 
