@@ -11256,6 +11256,14 @@ main.container {
   flex-direction: column-reverse;
 }
 
+@media (max-width: 960px) {
+  #content1 {
+    main.container {
+      flex-direction: column;
+   }
+ }  
+}
+
 @media (min-width: 960px) {
   #filters {
     flex: 0 0 304px;
@@ -13385,3 +13393,10 @@ span.complete-checkmark.fa.fa-check {
   display: none
 }
 
+.search-facets-lists {
+  .custom-select{
+    font-size: 87.5%;
+    text-align: inherit;
+    color: #495057;
+  }  
+}

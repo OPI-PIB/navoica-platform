@@ -5,11 +5,13 @@
 		</div>
 	</div>
 <% if (listIsHuge) { %>
-	<select data-facet="<%- name %>" class="facet-list select_list custom-select mr-sm-2">
+	<div data-facet="<%- name %>" class="facet-group">
+	<select class="custom-select list-group-item"data-text=<%- gettext('Wybierz') %>>
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
-	</select>
+	</select>	
+	</div>
 <% } else { %>
-	<div data-facet= class="facet-list">
+	<div data-facet="<%- name %>" class="facet-list">
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
 	</div>
 <% } %>
