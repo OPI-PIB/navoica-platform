@@ -10683,6 +10683,7 @@ article .display-3 {
   > div {
     flex: 0 0 49%;
     font-size: 14px;
+    display: inline-block;
   }
 }
 
@@ -11489,7 +11490,7 @@ main.container > aside {
     font-size: 0.875rem;
     line-height: 1.7143;
     border-radius: 0;
-    background: white !important;
+    //background: white !important;
     border: 1px solid #ced4da !important;
 }
 
@@ -12983,9 +12984,39 @@ img.message-author {
 }
 
 @media (max-width: 960px) {
+  #header-course {
+    margin: 0;
+    padding-top: 2rem;
+    .action-preview-actions {
+      padding-top:  4rem;
+    }
+    .jumbotron {
+      .container {
+        .action-preview-actions {
+          padding-top: 0rem !important;
+          display: inline-block;
+        }  
+      }
+    }
+  }
+
+  .discussion, 
+  .view-instructordash,
+  .view-progress,
+  .view-courseware {
+    .jumbotronn {
+      .container {
+        padding-top: 8rem;
+      }
+    }
+  }
+
+  #header {
+    margin: 0;
+  }  
   #action-tab-select {
     display: block;
-    margin: 4rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
   }
   #action-tab-select:focus {
     box-shadow: unset;
@@ -13109,10 +13140,11 @@ span.complete-checkmark.fa.fa-check {
   margin-right: 5px;
 }
 
-#header-course {
-  margin: 4rem 0 0 0;
+@media (min-width: 960px) {
+  #header-course {
+//    margin: 0;
+  }
 }
-
 
 #register-form .new-vp::after {
   color: #E41D37;
@@ -13135,7 +13167,7 @@ span.complete-checkmark.fa.fa-check {
     width: 960px;
   }
   header .jumbotron {
-    padding-top: 5rem;
+    padding-top: 8rem;
   }
 }
 
@@ -13143,9 +13175,11 @@ span.complete-checkmark.fa.fa-check {
   padding-top: 1rem;
 }
 
-.jumbotronn {
-  padding-top: 2rem;
-}
+@media (min-width: 960px) {
+  .jumbotronn {
+    padding-top: 2rem;
+  }
+}  
 
 #results #h2 {
 //  display: flex;
@@ -13344,4 +13378,10 @@ span.complete-checkmark.fa.fa-check {
   white-space: nowrap;
 }
 
-.dropdown a.btn { padding:0}
+.dropdown a.btn { padding:0; }
+
+//language
+#language-settings-form {
+  display: none
+}
+
