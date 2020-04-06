@@ -5,16 +5,18 @@
 		</div>
 	</div>
 <% if (listIsHuge) { %>
-	<select data-facet="<%- name %>" class="facet-list collapse select_list">
+	<div data-facet="<%- name %>" class="facet-group">
+	<select class="custom-select list-group-item"data-text=<%- gettext('Wybierz') %>>
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
-	</select>
+	</select>	
+	</div>
 <% } else { %>
-	<div data-facet= class="facet-list">
+	<div data-facet="<%- name %>" class="facet-list">
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
 	</div>
 <% } %>
 <% if (listIsHuge) { %>
-    <div class="toggle ">
+    <div class="toggle collapse">
         <button class="show-more discovery-button">
             <%- gettext("More") %>
         </button>

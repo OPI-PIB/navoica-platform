@@ -165,6 +165,11 @@ urlpatterns = [
     url(r'^forum/', include(board.urls)),
 ]
 
+# Jupyter Graded XBlock Endpoints
+urlpatterns += (
+    url(r'^api/jupyter_graded/', include('xblock_jupyter_graded.rest.urls', namespace='xblock_jupyter_graded')),
+)
+
 robots = TemplateView.as_view(template_name='robots.txt', content_type='text/plain')
 urlpatterns += [
     url(r'^robots\.txt$', robots, name='robots')

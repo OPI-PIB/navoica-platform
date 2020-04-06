@@ -1177,6 +1177,8 @@ INSTALLED_APPS = [
     'mptt',
     'haystack',
     'widget_tweaks',
+
+    'xblock_jupyter_graded'
 ] + get_machina_apps()
 
 ################# EDX MARKETING SITE ##################################
