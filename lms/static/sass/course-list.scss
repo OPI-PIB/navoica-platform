@@ -12989,6 +12989,11 @@ img.message-author {
   #action-tab-select {
     display: none;
   }
+
+    .legend,
+  .about {
+    padding-top: 4rem;
+  }
 }
 
 @media (max-width: 960px) {
@@ -13006,6 +13011,15 @@ img.message-author {
         }  
       }
     }
+  }
+
+     .faq-page {
+    padding-top: 2rem;
+  }
+
+  .legend,
+  .about {
+    padding-top: 4rem;
   }
 
   .discussion, 
@@ -13399,4 +13413,14 @@ span.complete-checkmark.fa.fa-check {
     text-align: inherit;
     color: #495057;
   }  
+}
+
+#content1 {
+  #filters {
+    .facet-group {
+      .custom-select:focus {
+        box-shadow: none !important;
+      }  
+    }
+  }
 }
