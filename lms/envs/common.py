@@ -2008,6 +2008,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'djcelery',
 
     # Common Initialization
@@ -2333,7 +2334,7 @@ MKTG_URL_LINK_MAP = {
     'PRESS': 'press',
     'BLOG': 'blog',
     'DONATE': 'donate',
-    'SITEMAP.XML': 'sitemap_xml',
+    #'SITEMAP.XML': 'sitemap_xml',
     'PARTNERS': 'partners',
     'COOPERATION': 'cooperation',
     'HONOR': 'honor',
