@@ -24,6 +24,7 @@
                 return Sequence.prototype.selectNext.apply(self, [event]);
             };
             this.goto = function(event) {
+                $.scrollTo(0, 0);
                 return Sequence.prototype.goto.apply(self, [event]);
             };
             this.toggleArrows = function() {
@@ -78,26 +79,26 @@
 
         Sequence.prototype.previousNav = function(focused, index) {
             var $navItemList,
-                $sequenceList = $(focused).parent().parent();
+                $sequenceList = $(focused).parent().parent().parent();
             if (index === 0) {
                 $navItemList = $sequenceList.find('li').last();
             } else {
                 $navItemList = $sequenceList.find('li:eq(' + index + ')').prev();
             }
-            $sequenceList.find('.tab').removeClass('visited').removeClass('focused');
-            $navItemList.find('.tab').addClass('focused').focus();
+            $sequenceList.find('.tab').removeClass('active');
+            $navItemList.find('.tab').addClass('active').focus();
         };
 
         Sequence.prototype.nextNav = function(focused, index, total) {
             var $navItemList,
-                $sequenceList = $(focused).parent().parent();
+                $sequenceList = $(focused).parent().parent().parent();
             if (index === total) {
                 $navItemList = $sequenceList.find('li').first();
             } else {
                 $navItemList = $sequenceList.find('li:eq(' + index + ')').next();
             }
-            $sequenceList.find('.tab').removeClass('visited').removeClass('focused');
-            $navItemList.find('.tab').addClass('focused').focus();
+            $sequenceList.find('.tab').removeClass('active');
+            $navItemList.find('.tab').addClass('active').focus();
         };
 
         Sequence.prototype.keydownHandler = function(element) {
@@ -105,9 +106,9 @@
             element.keydown(function(event) {
                 var key = event.keyCode,
                     $focused = $(event.currentTarget),
-                    $sequenceList = $focused.parent().parent(),
+                    $sequenceList = $focused.parent().parent().parent(),
                     index = $sequenceList.find('li')
-                        .index($focused.parent()),
+                        .index($focused.parent().parent()),
                     total = $sequenceList.find('li')
                         .size() - 1;
                 switch (key) {
