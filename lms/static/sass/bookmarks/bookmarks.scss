@@ -1647,3 +1647,20 @@
   content: "Lekcja: ";
   font-weight: normal;
 }  
+
+.list-item-breadcrumbtrail:nth-child(1)::before {
+  content: "Moduł: ";
+  font-weight: normal;
+}  
+
+.list-item-breadcrumbtrail:nth-child(1) {
+  font-weight: bold;
+}
+
+.list-item-breadcrumbtrail{
+  .bookcrumbs:nth-child(1)::after {
+    content: " Lekcja: ";
+    font-family: Open Sans;
+    font-weight: normal;
+  }  
+} 

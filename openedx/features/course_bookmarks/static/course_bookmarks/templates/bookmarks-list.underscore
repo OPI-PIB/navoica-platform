@@ -28,7 +28,7 @@
                                 <%=
                                     HtmlUtils.HTML(_.map(_.pluck(bookmark.get('path'), 'display_name'), _.escape)
                                         .concat([_.escape()])
-                                        .join(' <span class="fas fa-chevron-right" aria-hidden="true"></span><span class="sr">-</span> '))
+                                        .join(' <span class="fas fa-chevron-right bookcrumbs" aria-hidden="true"></span><span class="sr">-</span> '))
                                 %>
                                                            </ul>
 
