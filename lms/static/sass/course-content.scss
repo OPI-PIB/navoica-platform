@@ -9546,14 +9546,25 @@ main.container aside h6 {
   display: none;
     }
 
-#seq_content table.survey-table .survey-row td p,
-#seq_content table.survey-table .survey-row th p,
-#seq_content .poll-answers .poll-answer .poll-answer p,
-#seq_content ul.poll-results li.poll-result .poll-answer-label p {
-    margin-bottom: 0 !important;
-    font-size: 0.8em !important;
-}
 
+ @media (max-width: 480px) {
+  #seq_content table.survey-table .survey-row td p,
+  #seq_content table.survey-table .survey-row th p,
+  #seq_content .poll-answers .poll-answer .poll-answer p,
+  #seq_content ul.poll-results li.poll-result .poll-answer-label p {
+    font-size: 1rem;
+  }
+}   
+
+@media (min-width: 480px) {
+  #seq_content table.survey-table .survey-row td p,
+  #seq_content table.survey-table .survey-row th p,
+  #seq_content .poll-answers .poll-answer .poll-answer p,
+  #seq_content ul.poll-results li.poll-result .poll-answer-label p {
+      margin-bottom: 0 !important;
+      font-size: 0.8em;
+  }    
+}
 
   #seq_content .btn-outline-light, .instructor-info-action {
     background: #f8f9fa;
@@ -9651,7 +9662,7 @@ main.container aside h6 {
 
   #seq_content .vert .xblock p {
     color: #343a40;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.7778;
     margin: 1em 0;
     a {
@@ -9661,13 +9672,13 @@ main.container aside h6 {
   }
 
   #seq_content .vert .xblock ul, #seq_content .vert .xblock ol {
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-bottom: 1em;
   }
 
   #seq_content .vert .xblock li {
     color: #343a40;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.7778;
     margin: 0;
     span {
