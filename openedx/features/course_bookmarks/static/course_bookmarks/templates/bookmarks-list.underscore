@@ -27,15 +27,14 @@
                             <ul id="bookmark-link-<%- index %>" class=" meta list-item-breadcrumbtrail">
                                 <%=
                                     HtmlUtils.HTML(_.map(_.pluck(bookmark.get('path'), 'display_name'), _.escape)
-                                        .concat([_.escape(bookmark.get('display_name'))])
-                                        .join(' <span class="icon fa fa-chevron-right" aria-hidden="true"></span><span class="sr">-</span> '))
+                                        .concat([_.escape()])
+                                        .join(' <span class="fas fa-chevron-right" aria-hidden="true"></span><span class="sr">-</span> '))
                                 %>
-                           
-                            </ul>
+                                                           </ul>
 
                         </div>
                         <div class="card-desc">
-                            <p id="bookmark-date-<%- index %>" class="card-text list-item-date"> <%- gettext("Bookmarked on") %> <strong><%- humanFriendlyDate(bookmark.get('created')) %> </strong></p>
+                            <p id="bookmark-date-<%- index %>" class="card-text list-item-date"> <%- gettext("Bookmarked on") %>: <strong><%- humanFriendlyDate(bookmark.get('created')) %> </strong></p>
                             <div>
                                 <p id="bookmark-type-<%- index %>" class="goto list-item-right-section">
                                     <span aria-hidden="true"><%- gettext("View") %></span>

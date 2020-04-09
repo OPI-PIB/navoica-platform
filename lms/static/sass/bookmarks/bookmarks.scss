@@ -1622,3 +1622,28 @@
 .card {
   border: 1px solid #dee2e6;
 }
+
+.bookmarks-results-list {
+  .card-title {
+    color: #E41D37;
+  }
+  .card-title:hover {
+    color: #a11326;
+    text-decoration: underline;
+  }
+  .card-meta {
+    color: #343a40;
+    font-size: 14px;
+  }
+}
+
+
+.list-item-breadcrumbtrail:nth-child(1)::before {
+  content: "Moduł: ";
+  font-weight: normal;
+}  
+
+.list-item-breadcrumbtrail:nth-child(+2)::before {
+  content: "Lekcja: ";
+  font-weight: normal;
+}  
