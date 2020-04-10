@@ -48,12 +48,14 @@
         <% }); %>
         </div>
     </div>
+    
+    <div class="paging-footer"></div>
 
 <% } else {%>
 
     <div class="bookmarks-empty">
         <h3 class="hd-4 bookmarks-empty-header">
-            <span class="icon fa fa-bookmark-o bookmarks-empty-header-icon" aria-hidden="true"></span>
+            <span class="fas fa-bookmark" aria-hidden="true"></span>
             <%- gettext("You have not bookmarked any courseware pages yet") %>
             <br>
         </h3>

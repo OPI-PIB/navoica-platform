@@ -1664,3 +1664,160 @@
     font-weight: normal;
   }  
 } 
+
+.bookmarks-empty-header {
+  color: #E41D37;
+}
+
+.fa-bookmark {
+  color: #E41D37;
+}
+
+.course-bookmarks .pagination.pagination-full {
+    width: 100%;
+    text-align: center;
+}
+
+.pagination {
+
+  &.pagination-full {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .nav-label, 
+  .sr {
+    background: #161616 !important;
+    color: #fff !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+    margin: -1px;
+    height: 1px;
+    width: 1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    word-wrap: normal;
+  }
+
+  .nav-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .nav-link {
+    transition: all 0.25s ease-in-out 0s;
+    display: block;
+    border: 0 !important;
+    background-image: none;
+    background-color: transparent;
+    padding: 10px 15x;
+
+    &.previous {
+      margin-right: 10px;
+    }
+
+    &.next {
+      margin-left: 10px;
+    }
+
+    &:hover {
+//      background-color: $blue;
+      background-image: none;
+      border-radius: 3px;
+//      color: $white;
+    }
+
+    &.is-disabled {
+      background-color: transparent;
+      color: map_get($grays, "400");
+      pointer-events: none;
+    }
+  }
+
+  .pagination-form,
+  .current-page,
+  .page-divider,
+  .total-pages {
+    display: inline-block;
+  }
+
+  .current-page,
+  .page-number-input,
+  .total-pages {
+    width: 50px;
+    vertical-align: middle;
+    margin: 0 15px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .current-page {
+    position: absolute;
+    left: -5px;
+  }
+
+  .page-divider {
+    vertical-align: middle;
+  }
+
+  .pagination-form {
+    position: relative;
+    z-index: 100;
+
+    .page-number-label {
+      background: #161616 !important;
+      color: #fff !important;
+      clip: rect(1px, 1px, 1px, 1px);
+      position: absolute;
+      margin: -1px;
+      height: 1px;
+      width: 1px;
+      border: 0;
+      padding: 0;
+      overflow: hidden;
+      word-wrap: normal;
+    }
+
+    .page-number-input {
+      transition: all 0.25s ease-in-out 0s;
+      border: 1px solid transparent;
+      border-bottom: 1px dotted map_get($grays, "100");
+      border-radius: 0;
+      box-shadow: none;
+      background: none;
+
+      &:hover {
+//        background-color: $white;
+        opacity: 0.6;
+      }
+
+      &:focus {
+
+        opacity: 1;
+//        box-shadow: 0 0 3px $shadow-d1 inset;
+//        background-color: $white;
+        border: 1px solid transparent;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+// styles for search/pagination metadata and sorting
+.listing-tools {
+
+//  color: $gray-d1;
+
+  label { // override
+    color: inherit;
+    font-size: inherit;
+    cursor: auto;
+  }
+
+  .listing-sort-select {
+
+    border: 0;
+  }
+}
