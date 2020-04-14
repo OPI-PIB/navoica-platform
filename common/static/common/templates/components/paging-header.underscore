@@ -1,10 +1,10 @@
 <% if (!_.isUndefined(srInfo)) { %>
   <h3 class="sr" id="<%- srInfo.id %>"><%- srInfo.text %></h3>
 <% } %>
-<div class="search-tools listing-tools">
-    <span class="search-count listing-count">
+
+    <h2 class="search-count listing-count">
         <%- message %>
-    </span>
+    </h2>
     <% if (showSortControls) { %>
       |
       <span class="field listing-sort">
@@ -18,4 +18,4 @@
           </select>
       </span>
     <% } %>
-</div>
+

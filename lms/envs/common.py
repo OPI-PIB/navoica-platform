@@ -1476,6 +1476,12 @@ PIPELINE_CSS = {
         ],
         'output_filename': 'css/instructor_dash.css'
     },
+    'style-bookmarks' : {
+        'source_filenames' : [
+            'css/bookmarks/bookmarks.css',
+        ],
+        'output_filename' : 'css/bookmarks.css'
+    },
     'style-vendor-tinymce-content': {
         'source_filenames': [
             'js/vendor/tinymce/js/tinymce/skins/studio-tmce4/content.min.css'
