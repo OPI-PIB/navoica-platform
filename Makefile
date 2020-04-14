@@ -8,6 +8,11 @@ help: ## display this help message
 	@echo "Please use \`make <target>' where <target> is one of"
 	@grep '^[a-zA-Z]' $(MAKEFILE_LIST) | sort | awk -F ':.*?## ' 'NF==2 {printf "\033[36m  %-25s\033[0m %s\n", $$1, $$2}'
 
+init: ## install correct version of base python libs
+	pip install --upgrade pip==9.0.3
+	pip install --upgrade setuptools==39.0.1
+	pip install --upgrade virtualenv==15.2.0
+
 clean: ## archive and delete most git-ignored files
 	# Remove all the git-ignored stuff, but save and restore things marked
 	# by start-noclean/end-noclean. Include Makefile in the tarball so that
@@ -35,8 +40,8 @@ pull_translations: ## pull translations from Transifex
 	git clean -fdX conf/locale/eo
 	#i18n_tool validate
 
-requirements: ## install development environment requirements
-	pip install -qr requirements/edx/development.txt --exists-action w
+requirements: ## install production environment requirements
+	CFLAGS=-DXMLSEC_NO_SIZE_T pip install --no-cache-dir --exists-action w -r requirements/edx/base.txt
 
 upgrade: ## update the pip requirements files to use the latest releases satisfying our constraints
 	pip install -qr requirements/edx/pip-tools.txt
