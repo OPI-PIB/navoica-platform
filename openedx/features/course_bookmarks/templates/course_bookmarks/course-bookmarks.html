@@ -26,7 +26,7 @@ from openedx.features.course_experience import course_home_page_title
 <%block name="pagetitle">${course_name()}</%block>
 
 <style>#main,.page-header-main,.paging-header{margin-top:10px}</style>
-<header>
+<header id="header-course">
 	  <div class="jumbotron" id="header_jumbotron">
 	    <div class="container">
 	      <h2 class="display-2 text-center">${_('Bookmarks')}</h2>
@@ -46,10 +46,11 @@ ${HTML(bookmarks_fragment.foot_html())}
 
 <%block name="content">
 
-
-<div class="course-view page-content-container container" id="course-container">
-        <div id="content" class="page-content">
-        ${HTML(bookmarks_fragment.body_html())}
-    </div>
-</div>
+<div id="content" class="border-top">
+	<div class="course-view page-content-container container" id="course-container">
+	        <div id="content" class="page-content">
+	        ${HTML(bookmarks_fragment.body_html())}
+	    </div>
+	</div>
+</div>	
 </%block>
