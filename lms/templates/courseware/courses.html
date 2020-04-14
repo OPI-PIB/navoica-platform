@@ -1,4 +1,3 @@
-
 <%!
   import json
   from django.utils.translation import ugettext as _
@@ -58,6 +57,13 @@
               <div id="discovery-form" role="search" aria-label="course" class="m-0">
 				<h2 id="discovery-message" class="search-status-label"></h2>
 	      </div>
+
+               <div id="sorting-form">Sortuj według: <select>
+                   <option value="name">Alfabetycznie A-Z</option>
+                   <option value="-name">Alfabetycznie Z-A</option>
+                   <option value="startDate">Daty rozpoczęcia rosnąco</option>
+                   <option value="-startDate">Daty rozpoczęcia malejąco</option>
+               </select></div>
             </header>
 
             <div class="courses-row courses-listing courses" role="region" aria-label="${_('List of Courses')}">

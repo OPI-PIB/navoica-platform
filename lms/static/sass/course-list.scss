@@ -11229,7 +11229,7 @@ li.list-group-item {
   border: none !important;
 }
 
-#organizator, #discovery-message, #h2 {
+#organizator, #discovery-message, #h2, #sorting-form {
   color: darkcyan;
   display: block;
   font-size: 1rem;
@@ -11243,7 +11243,7 @@ li.list-group-item {
 }
 
 @media (min-width: 960px) {
-  #h2, #discovery-message, {
+  #h2, #discovery-message, #sorting-form {
     font-size: 0.875rem;
     text-align: left;
     margin: 0;
