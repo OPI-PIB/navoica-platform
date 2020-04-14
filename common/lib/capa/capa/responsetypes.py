@@ -1053,7 +1053,7 @@ class MultipleChoiceResponse(LoncapaResponse):
                 hint_node = choice.find('./choicehint')
                 new_cmap[self.answer_id]['msg'] += self.make_hint_div(
                     hint_node,
-                    choice.get('correct').upper() == 'TRUE',
+                    contextualize_text(choice.get('correct'), self.context).upper() == 'TRUE',
                     [student_answer],
                     self.tags[0]
                 )
@@ -1349,7 +1349,7 @@ class MultipleChoiceResponse(LoncapaResponse):
         incorrect_choices = []
 
         for choice in choices:
-            if choice.get('correct').upper() == 'TRUE':
+            if contextualize_text(choice.get('correct'), self.context).upper() == 'TRUE':
                 correct_choices.append(choice)
             else:
                 incorrect_choices.append(choice)
