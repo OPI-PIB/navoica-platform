@@ -16,7 +16,7 @@
   }
 
   body {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   body > header {
@@ -77,7 +77,7 @@
 
     &-body {
       color: map_get($grays, "800");
-      font-size: 14px;
+      font-size: 0.875rem;
       padding: 8px;
     }
 
@@ -324,7 +324,7 @@
           border-color: map_get($grays, "500");
           box-shadow: 0 2px 6px -3px map_get($grays, "500") inset;
           display: flex;
-          font-size: 14px;
+          font-size: 0.875rem;
           height: 32px;
           justify-content: left;
           line-height: normal;
@@ -356,7 +356,7 @@
       border-color: map_get($grays, "500");
       color: $dark;
       display: flex;
-      font-size: 14px;
+      font-size: 0.875rem;
       height: 32px;
       justify-content: center;
       line-height: 1;
@@ -375,7 +375,7 @@
       border-color: map_get($grays, "500");
       color: $dark;
       display: flex;
-      font-size: 14px;
+      font-size: 0.875rem;
       height: 32px;
       justify-content: center;
       line-height: 1;
@@ -449,7 +449,7 @@
 
         .nav-item {
           box-shadow: 0 -1px 0 map_get($grays, "300");
-          font-size: 14px;
+          font-size: 0.875rem;
           margin: 0;
           padding: 0;
 
@@ -486,7 +486,7 @@
               content: '\f061';
               flex: 0 0 auto;
               font-family: "Font Awesome 5 Free";
-              font-size: 14px;
+              font-size: 0.875rem;
             }
 
             &-primary {
@@ -598,7 +598,7 @@
               border: 1px solid map_get($grays, "500");
               color: $red;
               display: flex;
-              font-size: 14px;
+              font-size: 0.875rem;
               height: 32px;
               justify-content: center;
               line-height: 1;
@@ -645,7 +645,7 @@
         padding: 0 0 12px;
 
         h2 {
-          font-size: 14px;
+          font-size: 0.875rem;
           font-weight: 700;
           line-height: 1;
           margin: 0;
@@ -657,7 +657,7 @@
         }
 
         a {
-          font-size: 14px;
+          font-size: 0.875rem;
           font-weight: 400;
           line-height: 1;
           margin: 0;
@@ -688,7 +688,7 @@
           padding: 12px 0 12px;
 
           h2, a {
-            font-size: 14px;
+            font-size: 0.875rem;
             font-weight: 400;
             line-height: 1.5;
             margin: 0;
@@ -728,7 +728,7 @@
               color: map_get($grays, "900");
               display: flex;
               flex: 0 0 auto;
-              font-size: 14px;
+              font-size: 0.875rem;
               font-weight: $font-weight-bold;
               right: -16px;
               line-height: 1;
@@ -757,7 +757,7 @@
 
             .card-title {
               border: 0;
-              font-size: 18px;
+              font-size: 1.125rem;
               font-weight: 700;
               line-height: 21px;
               margin: 0 0 8px;
@@ -858,7 +858,7 @@
                 margin: 0;
 
                 + p {
-                  font-size: 14px;
+                  font-size: 0.875rem;
                   font-weight: 600;
                   line-height: 1.5;
                 }
@@ -868,7 +868,7 @@
             }
 
             > div > p {
-              font-size: 14px;
+              font-size: 0.875rem;
               font-weight: 400;
 
               time {
@@ -1146,7 +1146,7 @@
   }
   .card-meta {
     color: #343a40;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
