@@ -343,13 +343,18 @@ class CoursewareSearchIndexer(SearchIndexerBase):
     """
     Class to perform indexing for courseware search from different modulestores
     """
-    INDEX_NAME = "courseware_index"
+
+    if settings.ENABLE_ES_INDEX_PREFIX:
+        INDEX_NAME = settings.ES_INDEX_PREFIX  + "courseware_index"
+    else:
+        INDEX_NAME = "courseware_index"
+
     DOCUMENT_TYPE = "courseware_content"
     ENABLE_INDEXING_KEY = 'ENABLE_COURSEWARE_INDEX'
 
     INDEX_EVENT = {
         'name': 'edx.course.index.reindexed',
-        'category': 'courseware_index'
+        'category': INDEX_NAME
     }
 
     UNNAMED_MODULE_NAME = ugettext_lazy("(Unnamed)")
@@ -433,13 +438,18 @@ class LibrarySearchIndexer(SearchIndexerBase):
     """
     Base class to perform indexing for library search from different modulestores
     """
-    INDEX_NAME = "library_index"
+
+    if settings.ENABLE_ES_INDEX_PREFIX:
+        INDEX_NAME = settings.ES_INDEX_PREFIX  + "library_index"
+    else:
+        INDEX_NAME = "library_index"
+
     DOCUMENT_TYPE = "library_content"
     ENABLE_INDEXING_KEY = 'ENABLE_LIBRARY_INDEX'
 
     INDEX_EVENT = {
         'name': 'edx.library.index.reindexed',
-        'category': 'library_index'
+        'category': INDEX_NAME
     }
 
     @classmethod
