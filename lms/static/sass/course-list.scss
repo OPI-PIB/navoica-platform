@@ -11254,6 +11254,16 @@ li.list-group-item {
   }
 }
 
+@media (max-width: 1280px) {
+  #sorting-form {
+    display: block;
+    .custom-select {
+      margin: 0.5rem 0 0 0;
+
+    }
+  }
+}
+
 #results, #filters{
   #h2 {
     line-height: 2.5;
@@ -13433,7 +13443,7 @@ span.complete-checkmark.fa.fa-check {
   #filters, #results {
     .custom-select:focus {
       box-shadow: none ;
-      border-color: unset;
+      border: 1px solid #ced4da;
     }  
   }
 }
