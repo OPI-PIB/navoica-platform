@@ -11242,6 +11242,34 @@ li.list-group-item {
   margin: 1rem 0 0;
 }
 
+#sorting-form {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  .custom-select {
+    align-items: center;
+    display: flex;
+    white-space: nowrap;
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  #sorting-form {
+    display: block;
+    .custom-select {
+      margin: 0.5rem 0 0 0;
+
+    }
+  }
+}
+
+#results, #filters{
+  #h2 {
+    line-height: 2.5;
+  }
+}  
+
 @media (min-width: 960px) {
   #h2, #discovery-message, #sorting-form {
     font-size: 0.875rem;
@@ -11557,6 +11585,7 @@ main.container > aside {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   font-size: 0.875rem !important;
+  align-items: center;
 }
 
 #content1 {
@@ -13411,11 +13440,10 @@ span.complete-checkmark.fa.fa-check {
 }
 
 #content1 {
-  #filters {
-    .facet-group {
-      .custom-select:focus {
-        box-shadow: none !important;
-      }  
-    }
+  #filters, #results {
+    .custom-select:focus {
+      box-shadow: none ;
+      border: 1px solid #ced4da;
+    }  
   }
 }
