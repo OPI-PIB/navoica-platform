@@ -70,7 +70,7 @@ div.gradebook-wrapper {
 //        border-bottom: 1px solid #f8f9fa;
 //        border-left: 1px solid #f8f9fa;
         background: #f8f9fa;
-        font-size: 13px;
+        font-size: 0.875rem;
         line-height: 50px;
       }
 
@@ -117,7 +117,7 @@ div.gradebook-wrapper {
       position: absolute;
       top: 0;
       left: 0;
-      width: 1000px;
+      width: auto;
       cursor: move;
       border: unset !important;
       box-shadow: unset !important;
@@ -125,7 +125,7 @@ div.gradebook-wrapper {
 
       td,
       th {
-        width: 50px;
+      //  width: 50px;
         text-align: center;
       }
 
@@ -133,7 +133,7 @@ div.gradebook-wrapper {
         position: relative;
         height: 50px;
 
-        font-size: 10px;
+        font-size: 0.875rem;
         line-height: 10px;
         font-weight: bold;
         text-align: center;
@@ -187,7 +187,7 @@ div.gradebook-wrapper {
         height: 50px;
 //        border-bottom: 1px solid #f8f9fa;
         background: #f8f9fa;
-        font-size: 13px;
+        font-size: 0.875rem;
         line-height: 50px;
 //        border-left: 1px solid #f8f9fa;
       }
@@ -220,3 +220,10 @@ div.gradebook-wrapper {
   border: unset !important;
   box-shadow: unset !important;
 }  
+
+.assignment-label {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  white-space: nowrap;
+
+}
