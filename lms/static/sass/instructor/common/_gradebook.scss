@@ -117,7 +117,7 @@ div.gradebook-wrapper {
       position: absolute;
       top: 0;
       left: 0;
-      width: auto;
+      width: 929px;
       cursor: move;
       border: unset !important;
       box-shadow: unset !important;
@@ -226,4 +226,8 @@ div.gradebook-wrapper {
   padding-left: 0.5rem;
   white-space: nowrap;
 
+}
+
+.gradebook-content .form-control {
+  margin: 0;
 }
