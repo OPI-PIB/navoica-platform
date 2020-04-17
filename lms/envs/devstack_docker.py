@@ -90,3 +90,8 @@ GRADES_DOWNLOAD = {
     'BUCKET': 'edx-grades',
     'ROOT_PATH': '/edx/var/edxapp/media',
 }
+
+ENABLE_ES_INDEX_PREFIX = True
+ES_INDEX_PREFIX = "lh__"
+if ENABLE_ES_INDEX_PREFIX:
+    COURSEWARE_INDEX_NAME = ES_INDEX_PREFIX + "courseware_index"
