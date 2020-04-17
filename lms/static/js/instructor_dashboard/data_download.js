@@ -106,7 +106,7 @@
             this.$grade_config_btn = this.$section.find("input[name='dump-gradeconf']");
             this.$calculate_grades_csv_btn = this.$section.find("input[name='calculate-grades-csv']");
             this.$problem_grade_report_csv_btn = this.$section.find("input[name='problem-grade-report']");
-            this.$async_report_btn = this.$section.find("input[class='async-report-btn']");
+            this.$async_report_btn = this.$section.find('.async-report-btn');
             this.$download = this.$section.find('.data-download-container');
             this.$download_display_text = this.$download.find('.data-display-text');
             this.$download_request_response_error = this.$download.find('.request-response-error');
@@ -320,6 +320,7 @@
                 });
             });
             this.$async_report_btn.click(function(e) {
+                console.log('aaaaaaaaauuuuuuuuuuuuuuuuuuuu')
                 var url = $(e.target).data('endpoint');
                 var errorMessage = '';
                 dataDownloadObj.clear_display();
