@@ -1,11 +1,11 @@
-(function(define) {
+(function (define) {
     define([
         'underscore',
         'backbone',
         'js/discovery/models/course_card',
         'js/discovery/models/facet_option',
         'js/discovery/models/facet_select'
-    ], function(_, Backbone, CourseCard, FacetOption) {
+    ], function (_, Backbone, CourseCard, FacetOption) {
         'use strict';
 
         return Backbone.Model.extend({
@@ -17,32 +17,65 @@
                 latestCount: 0
             },
 
-            initialize: function(options) {
+            initialize: function (options) {
                 var meanings = options.meanings || {};
-                var termName = function(facetKey, termKey) {
-                return meanings[facetKey] &&
-                meanings[facetKey].terms &&
-                meanings[facetKey].terms[termKey] || termKey;
+                var termName = function (facetKey, termKey) {
+                    return meanings[facetKey] &&
+                        meanings[facetKey].terms &&
+                        meanings[facetKey].terms[termKey] || termKey;
                 };
                 this.courseCards = new Backbone.Collection([], {model: CourseCard});
-                this.facetOptions = new Backbone.Collection([], {model: FacetOption, comparator: function(modelA,modelB){
-                    var modelA = _.clone(modelA.attributes);
-                    var modelB = _.clone(modelB.attributes);
-                    modelA.name = termName(modelA.facet, modelA.term);
-                    modelB.name = termName(modelB.facet, modelB.term);
-                    if(modelA.facet === modelB.facet){
-                        return modelA.name.localeCompare(modelB.name);
+                this.facetOptions = new Backbone.Collection([], {
+                    model: FacetOption, comparator: function (modelA, modelB) {
+                        var modelA = _.clone(modelA.attributes);
+                        var modelB = _.clone(modelB.attributes);
+                        modelA.name = termName(modelA.facet, modelA.term);
+                        modelB.name = termName(modelB.facet, modelB.term);
+                        if (modelA.facet === modelB.facet) {
+                            return modelA.name.localeCompare(modelB.name);
+                        }
+                        return modelA.facet.localeCompare(modelB.facet);
                     }
-                    return modelA.facet.localeCompare(modelB.facet);
-                    } });
+                });
             },
-            termName: function(facetKey, termKey) {
+            termName: function (facetKey, termKey) {
                 return this.meanings[facetKey] &&
-                this.meanings[facetKey].terms &&
-                this.meanings[facetKey].terms[termKey] || termKey;
+                    this.meanings[facetKey].terms &&
+                    this.meanings[facetKey].terms[termKey] || termKey;
             },
-            parse: function(response) {
+            parse: function (response) {
                 var courses = response.results || [];
+
+                courses.reverse();
+                var $target = $("#sorting-form");
+                $target = $target.find('option:selected');
+                var sort = $target.val();
+
+                if(sort === '-name') {
+                    courses.sort(
+                        (a, b) => (a.data['content'].display_name[0] < b.data['content'].display_name[0]) ? 1 : -1
+                    );
+                }
+
+                if(sort === 'name') {
+                    courses.sort(
+                        (a, b) => (a.data['content'].display_name[0] > b.data['content'].display_name[0]) ? 1 : -1
+                    );
+                }
+
+                if(sort === '-startDate') {
+                    courses.sort(
+                        (a, b) => (a.data.start < b.data.start) ? 1 : -1
+                    );
+                }
+
+                if(sort === 'startDate') {
+                    courses.sort(
+                        (a, b) => (a.data.start > b.data.start) ? 1 : -1
+                    );
+                }
+
+
                 var facets = response.facets || {};
                 this.courseCards.add(_.pluck(courses, 'data'));
 
@@ -52,8 +85,8 @@
                 });
 
                 var options = this.facetOptions;
-                _(facets).each(function(obj, key) {
-                    _(obj.terms).each(function(count, term) {
+                _(facets).each(function (obj, key) {
+                    _(obj.terms).each(function (count, term) {
                         options.add({
                             facet: key,
                             term: term,
@@ -63,7 +96,7 @@
                 });
             },
 
-            reset: function() {
+            reset: function () {
                 this.set({
                     totalCount: 0,
                     latestCount: 0
@@ -72,7 +105,7 @@
                 this.facetOptions.reset();
             },
 
-            latest: function() {
+            latest: function () {
                 return this.courseCards.last(this.get('latestCount'));
             }
 

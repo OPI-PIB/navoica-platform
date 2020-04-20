@@ -11229,7 +11229,7 @@ li.list-group-item {
   border: none !important;
 }
 
-#organizator, #discovery-message, #h2 {
+#organizator, #discovery-message, #h2, #sorting-form {
   color: darkcyan;
   display: block;
   font-size: 1rem;
@@ -11242,8 +11242,36 @@ li.list-group-item {
   margin: 1rem 0 0;
 }
 
+#sorting-form {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  .custom-select {
+    align-items: center;
+    display: flex;
+    white-space: nowrap;
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 960px) {
+  #sorting-form {
+    display: block;
+    .custom-select {
+      margin: 0.5rem 0 0 0;
+
+    }
+  }
+}
+
+#results, #filters{
+  #h2 {
+    line-height: 2.5;
+  }
+}  
+
 @media (min-width: 960px) {
-  #h2, #discovery-message, {
+  #h2, #discovery-message, #sorting-form {
     font-size: 0.875rem;
     text-align: left;
     margin: 0;
@@ -11557,6 +11585,7 @@ main.container > aside {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   font-size: 0.875rem !important;
+  align-items: center;
 }
 
 #content1 {
@@ -12914,10 +12943,6 @@ img.message-author {
   margin-left: 5px;
 }
 
-.fa-angle-right::before {
-  content: "/";
- }
-
 .has-breadcrumbs {
   font-size: 14px;
   overflow: hidden;
@@ -13088,8 +13113,7 @@ justify-content: space-around;
 
 #course-content #seq_content .vert .xblock li {
   line-height:1.4;
-   font-size:16px;
-
+  font-size: 1rem;
 }
 
 #course-content .spacing {
@@ -13232,7 +13256,7 @@ span.complete-checkmark.fa.fa-check {
     line-height: 1.6em;
     margin-top: 0 !important;
     margin-bottom: 1.416em !important;
-    font-size: 1em !important;
+  //  font-size: 1rem;
   }
 
 }
@@ -13416,11 +13440,10 @@ span.complete-checkmark.fa.fa-check {
 }
 
 #content1 {
-  #filters {
-    .facet-group {
-      .custom-select:focus {
-        box-shadow: none !important;
-      }  
-    }
+  #filters, #results {
+    .custom-select:focus {
+      box-shadow: none ;
+      border: 1px solid #ced4da;
+    }  
   }
 }

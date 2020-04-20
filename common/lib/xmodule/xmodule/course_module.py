@@ -45,7 +45,7 @@ DEFAULT_COURSE_VISIBILITY_IN_CATALOG = getattr(
 )
 
 DEFAULT_MOBILE_AVAILABLE = getattr(settings, 'DEFAULT_MOBILE_AVAILABLE', False)
-
+DEFAULT_MAIN_PAGE_COURSE = getattr(settings, 'DEFAULT_MAIN_PAGE_COURSE', True)
 
 class StringOrDate(Date):
     def from_json(self, value):
@@ -363,10 +363,11 @@ class CourseFields(object):
         scope=Scope.settings
     )
     main_page = Boolean(
-        display_name=_("Show curse on main page."),
+        display_name=_("Show course on main page."),
         help=_(
             "Enter true or false. If true, the course appears on the section 'New Courses' on main page."
         ),
+        default=DEFAULT_MAIN_PAGE_COURSE,
         scope=Scope.settings
     )
     mobile_available = Boolean(

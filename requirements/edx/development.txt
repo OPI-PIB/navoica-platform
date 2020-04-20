@@ -32,7 +32,7 @@ ipykernel==4.10.1
 ipython==5.9.0
 zipp==1.2.0
 jsonschema==2.5.1
--e git+https://github.com/ibleducation/jupyter-edx-grader-xblock.git#egg=xblock_jupyter_graded
+-e git+https://github.com/OPI-PIB/jupyter-edx-grader-xblock.git#egg=xblock_jupyter_graded
 git+https://github.com/mitodl/edx-sga.git@6b2f7aa2a18206023c8407e2c46f86d4b4c3ac96#egg=edx-sga==0.8.0
 git+https://github.com/edx/lettuce.git@31b0dfd865766243e9b563ec65fae9122edf7975#egg=lettuce==0.2.23+edx.1
 git+https://github.com/edx/xblock-lti-consumer.git@v1.1.7#egg=lti_consumer-xblock==1.1.7

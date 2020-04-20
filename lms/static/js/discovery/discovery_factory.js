@@ -3,8 +3,8 @@
 
     define(['backbone', 'js/discovery/models/search_state', 'js/discovery/collections/filters',
         'js/discovery/views/search_form', 'js/discovery/views/courses_listing',
-        'js/discovery/views/filter_bar', 'js/discovery/views/refine_sidebar'],
-        function(Backbone, SearchState, Filters, SearchForm, CoursesListing, FilterBar, RefineSidebar) {
+        'js/discovery/views/filter_bar', 'js/discovery/views/refine_sidebar', 'js/discovery/views/sorting_form'],
+        function(Backbone, SearchState, Filters, SearchForm, CoursesListing, FilterBar, RefineSidebar, SortState) {
             return function(meanings, searchQuery, userLanguage, userTimezone) {
                 var dispatcher = _.extend({}, Backbone.Events);
                 var search = new SearchState({ meanings: meanings});
@@ -15,6 +15,7 @@
                     collection: search.discovery.facetOptions,
                     meanings: meanings
                 });
+                var sort = new SortState();
                 var listing;
                 var courseListingModel = search.discovery;
                 courseListingModel.userPreferences = {
@@ -27,6 +28,10 @@
                     filters.reset();
                     form.showLoadingIndicator();
                     search.performSearch(query, filters.getTerms());
+                });
+
+                dispatcher.listenTo(sort, 'sortListOption', function(query) {
+                    search.refineSearch(filters.getTerms());
                 });
 
                 dispatcher.listenTo(refineSidebar, 'selectOption', function(type, query, name) {

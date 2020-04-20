@@ -1476,6 +1476,12 @@ PIPELINE_CSS = {
         ],
         'output_filename': 'css/instructor_dash.css'
     },
+    'style-bookmarks' : {
+        'source_filenames' : [
+            'css/bookmarks/bookmarks.css',
+        ],
+        'output_filename' : 'css/bookmarks.css'
+    },
     'style-vendor-tinymce-content': {
         'source_filenames': [
             'js/vendor/tinymce/js/tinymce/skins/studio-tmce4/content.min.css'
@@ -2002,6 +2008,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'djcelery',
 
     # Common Initialization
@@ -2327,7 +2334,7 @@ MKTG_URL_LINK_MAP = {
     'PRESS': 'press',
     'BLOG': 'blog',
     'DONATE': 'donate',
-    'SITEMAP.XML': 'sitemap_xml',
+    #'SITEMAP.XML': 'sitemap_xml',
     'PARTNERS': 'partners',
     'COOPERATION': 'cooperation',
     'HONOR': 'honor',

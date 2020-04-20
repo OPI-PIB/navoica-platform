@@ -30,7 +30,7 @@ ipykernel==4.10.1
 ipython==5.9.0
 zipp==1.2.0
 jsonschema==2.5.1
--e git+https://github.com/ibleducation/jupyter-edx-grader-xblock.git#egg=xblock_jupyter_graded
+-e git+https://github.com/OPI-PIB/jupyter-edx-grader-xblock.git#egg=xblock_jupyter_graded
 git+https://github.com/mitodl/edx-sga.git@6b2f7aa2a18206023c8407e2c46f86d4b4c3ac96#egg=edx-sga==0.8.0
 git+https://github.com/edx/xblock-lti-consumer.git@v1.1.7#egg=lti_consumer-xblock==1.1.7
 git+https://github.com/edx/MongoDBProxy.git@25b99097615bda06bd7cdfe5669ed80dc2a7fed0#egg=MongoDBProxy==0.1.0
@@ -246,4 +246,4 @@ xblock==1.1.1
 zendesk==1.1.1
 pycaption==0.7.3
 sentry-sdk==0.13.5
-rfc6266
+git+https://github.com/g2p/rfc6266#egg=rfc6266
