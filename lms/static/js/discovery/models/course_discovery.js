@@ -51,20 +51,20 @@
                 $target = $target.find('option:selected');
                 var sort = $target.val();
 
-                if (sort === '-name') {
-                    courses.sort(
-                        function
-                            (a, b) {
-                            return b.data['content'].display_name.localeCompare(a.data['content'].display_name, 'pl', {sensitivity: 'base'});
-                        }
-                    );
-                }
-
                 if (sort === 'name') {
                     courses.sort(
                         function
                             (a, b) {
                             return a.data['content'].display_name.localeCompare(b.data['content'].display_name, 'pl', {sensitivity: 'base'});
+                        }
+                    );
+                }
+
+                if (sort === '-name') {
+                    courses.sort(
+                        function
+                            (a, b) {
+                            return b.data['content'].display_name.localeCompare(a.data['content'].display_name, 'pl', {sensitivity: 'base'});
                         }
                     );
                 }
