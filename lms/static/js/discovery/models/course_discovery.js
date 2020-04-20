@@ -51,27 +51,37 @@
                 $target = $target.find('option:selected');
                 var sort = $target.val();
 
-                if(sort === '-name') {
+                if (sort === 'name') {
                     courses.sort(
-                        (a, b) => (a.data['content'].display_name[0] < b.data['content'].display_name[0]) ? 1 : -1
+                        function
+                            (a, b) {
+                            return a.data['content'].display_name.localeCompare(b.data['content'].display_name, 'pl', {sensitivity: 'base'});
+                        }
                     );
                 }
 
-                if(sort === 'name') {
+                if (sort === '-name') {
                     courses.sort(
-                        (a, b) => (a.data['content'].display_name[0] > b.data['content'].display_name[0]) ? 1 : -1
+                        function
+                            (a, b) {
+                            return b.data['content'].display_name.localeCompare(a.data['content'].display_name, 'pl', {sensitivity: 'base'});
+                        }
                     );
                 }
 
-                if(sort === '-startDate') {
+                if (sort === '-startDate') {
                     courses.sort(
-                        (a, b) => (a.data.start < b.data.start) ? 1 : -1
+                        function (a, b) {
+                            return (a.data.start < b.data.start) ? 1 : -1
+                        }
                     );
                 }
 
-                if(sort === 'startDate') {
+                if (sort === 'startDate') {
                     courses.sort(
-                        (a, b) => (a.data.start > b.data.start) ? 1 : -1
+                        function (a, b) {
+                            return (a.data.start > b.data.start) ? 1 : -1
+                        }
                     );
                 }
 

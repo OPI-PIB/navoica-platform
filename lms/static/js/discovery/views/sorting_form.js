@@ -1,5 +1,5 @@
-(function(define) {
-    define(['jquery', 'backbone', 'gettext'], function($, Backbone, gettext) {
+(function (define) {
+    define(['jquery', 'backbone', 'gettext'], function ($, Backbone, gettext) {
         'use strict';
 
         return Backbone.View.extend({
@@ -9,24 +9,23 @@
                 'change select': 'sortListOption',
             },
 
-            initialize: function() {
+            initialize: function () {
                 this.$searchField = this.$el.find('input');
                 this.$searchButton = this.$el.find('button');
                 this.$message = this.$el.find('#discovery-message');
                 this.$loadingIndicator = this.$el.find('#loading-indicator');
             },
 
-            sortListOption: function(event) {
+            sortListOption: function (event) {
                 var $target = $(event.currentTarget);
                 $target = $target.find('option:selected');
                 this.trigger(
-                'sortListOption',
-                $target.val(),
-            );
+                    'sortListOption',
+                    $target.val()
+                );
             },
 
-            doSort: function() {
-                this.trigger('search', $.trim(term));
+            doSort: function () {
             },
 
         });
