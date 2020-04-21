@@ -9373,25 +9373,22 @@ main.container aside h6 {
     .fas {
       border: 1px solid darkcyan;
     }
-    .fa-check.active, .fa-bookmark.active {
+    .fa-check.checkmarked, .fa-bookmark.bookmarked {
       color: darkcyan;
     }
   }
 
-  .tab.inactive {
+  .tab.inactive, .tab.visited {
     background: #ffffff;
     border: 1px solid #DEE2E6;
     .fas {
       border: 1px solid #DEE2E6;
     }
-    .fa-check.active, .fa-bookmark.active {
+    .fa-check, .fa-bookmark.bookmarked {
       color: #DEE2E6;
     }
   }
 
-  .fa-check.inactive, .fa-bookmark.inactive {
-      display: none;
-  }
 
   }
 

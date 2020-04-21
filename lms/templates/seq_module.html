@@ -55,9 +55,9 @@
                                             <i class="fas fa-${item['type']}"></i>
                                              ${item['page_title']}
                                             % if 'complete' in item:
-                                                <i class="complete-checkmark fa fa-check ${'active' if item['complete'] else 'inactive'}" aria-hidden="true"></i>
+                                                <i class="complete-checkmark fa fa-check check-circle ${'checkmarked' if item['complete'] else 'd-none'}" aria-hidden="true"></i>
                                             % endif
-                                            <i class="fa fa-bookmark ${'active' if item['bookmarked'] else 'inactive'}"></i>
+                                            <i class="fa fa-bookmark bookmark-icon ${'bookmarked' if item['bookmarked'] else 'd-none'}"></i>
                                         </a>
                                     </div>
                                 </li>

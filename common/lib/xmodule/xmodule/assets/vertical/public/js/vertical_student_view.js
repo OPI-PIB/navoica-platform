@@ -21,7 +21,7 @@ window.VerticalStudentView = function(runtime, element) {
             el: $bookmarkButtonElement,
             bookmarkId: $bookmarkButtonElement.data('bookmarkId'),
             usageId: $element.data('usageId'),
-            bookmarked: $element.parent('#seq_content').data('bookmarked'),
+            bookmarked: $element.closest('div.d-flex').find('.nav-item.active .bookmark-icon').hasClass('bookmarked'),
             apiUrl: $bookmarkButtonElement.data('bookmarksApiUrl')
         });
     });
