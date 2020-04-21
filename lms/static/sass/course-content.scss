@@ -9351,14 +9351,49 @@ main.container aside h6 {
     outline-color: darkcyan;
   }
 
-  .active {
+  .fa-check {
+     border: 0px;
+      background: transparent;
+      position: absolute;
+      bottom:  -2px;
+      right: -8px;
+  }
+
+  .fa-bookmark {
+      border: 0px;
+      background: transparent;
+      position: absolute;
+      top: -4px;
+      right: -6px;
+  }
+
+  .tab.active {
     background: #f8f9fa;
     border: 1px solid darkcyan;
-    i {
+    .fas {
       border: 1px solid darkcyan;
     }
+    .fa-check.active, .fa-bookmark.active {
+      color: darkcyan;
+    }
   }
-}
+
+  .tab.inactive {
+    background: #ffffff;
+    border: 1px solid #DEE2E6;
+    .fas {
+      border: 1px solid #DEE2E6;
+    }
+    .fa-check.active, .fa-bookmark.active {
+      color: #DEE2E6;
+    }
+  }
+
+  .fa-check.inactive, .fa-bookmark.inactive {
+      display: none;
+  }
+
+  }
 
   /*
    *  Course page styles
@@ -9554,7 +9589,7 @@ main.container aside h6 {
   #seq_content ul.poll-results li.poll-result .poll-answer-label p {
     font-size: 1rem;
   }
-}   
+}
 
 @media (min-width: 480px) {
   #seq_content table.survey-table .survey-row td p,
@@ -9563,7 +9598,7 @@ main.container aside h6 {
   #seq_content ul.poll-results li.poll-result .poll-answer-label p {
       margin-bottom: 0 !important;
       font-size: 0.8em;
-  }    
+  }
 }
 
   #seq_content .btn-outline-light, .instructor-info-action {
@@ -11497,8 +11532,8 @@ code {color: black;}
     .grades {
       display: grid;
     }
-  }   
-}  
+  }
+}
 
 
 @import 'elements/_creative-commons';
