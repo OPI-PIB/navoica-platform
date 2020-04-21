@@ -320,7 +320,6 @@
                 });
             });
             this.$async_report_btn.click(function(e) {
-                console.log('aaaaaaaaauuuuuuuuuuuuuuuuuuuu')
                 var url = $(e.target).data('endpoint');
                 var errorMessage = '';
                 dataDownloadObj.clear_display();
