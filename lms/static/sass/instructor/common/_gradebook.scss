@@ -40,7 +40,7 @@ div.gradebook-wrapper {
       }
 
       &:focus {
-        border-color: #1d9dd9;
+//        border-color: #1d9dd9;
       }
     }
 
@@ -66,12 +66,12 @@ div.gradebook-wrapper {
 
       td {
         height: 50px;
-        padding-left: 20px;
+        padding-left: 5px;
 //        border-bottom: 1px solid #f8f9fa;
 //        border-left: 1px solid #f8f9fa;
         background: #f8f9fa;
         font-size: 0.875rem;
-        line-height: 50px;
+//        line-height: 50px;
       }
 
       tr:nth-child(odd) td {
@@ -188,7 +188,7 @@ div.gradebook-wrapper {
 //        border-bottom: 1px solid #f8f9fa;
         background: #f8f9fa;
         font-size: 0.875rem;
-        line-height: 50px;
+//        line-height: 50px;
 //        border-left: 1px solid #f8f9fa;
       }
 
@@ -230,4 +230,18 @@ div.gradebook-wrapper {
 
 .gradebook-content .form-control {
   margin: 0;
+}
+
+@media (max-width: 960px) {
+  div.gradebook-wrapper section.gradebook-content {
+    .student-table, .grades {
+      width: 50%;
+      a {
+        white-space: normal;
+      }  
+    }
+    .student-search-field {
+      font-size: 11px;
+    }  
+  }  
 }
