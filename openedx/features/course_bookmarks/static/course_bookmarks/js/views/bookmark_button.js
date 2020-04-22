@@ -87,10 +87,12 @@
                 setBookmarkState: function(bookmarked) {
                     if (bookmarked) {
                         this.$el.addClass('bookmarked');
+                        this.$el.find('.fa-bookmark').addClass('fa').removeClass('far');
                         this.$el.attr('aria-pressed', 'true');
                         this.$el.find('.bookmark-text').text(this.bookmarkedText);
                     } else {
                         this.$el.removeClass('bookmarked');
+                        this.$el.find('.fa-bookmark').addClass('far').removeClass('fa');
                         this.$el.attr('aria-pressed', 'false');
                         this.$el.find('.bookmark-text').text(this.bookmarkText);
                     }

@@ -95,12 +95,6 @@
                 <div id="seq_content" role="tabpanel" aria-labelledby="tab_2">
 
                     <div class="xblock xblock-student_view xblock-student_view-vertical xblock-initialized">
-                        <div class="bookmark-button-wrapper">
-                            <button class="btn btn-sm btn-outline-light bookmark-button" aria-pressed="false">
-                                <i class="far fa-bookmark"></i>
-                                <span class="bookmark-text">${_('Bookmark this page')}</span>
-                            </button>
-                        </div>
                         <div class="vert-mod" data-completion-delay-ms="5000">
                             % if gated_content['gated']:
                             <%include file="_gated_content.html" args="prereq_url=gated_content['prereq_url'],
@@ -126,6 +120,8 @@
 
                 </div>
             </section>
+
+
 
             <div>
 				<nav class="sequence-bottom" aria-label="${_('Section')}">
