@@ -331,11 +331,6 @@
 
     }
 
-    .request-response-error {
-      color: #D0353F;
-      font-weight: 700;
-    }
-
     .member-list,
     .ertificate-generation-history-content, 
     .white-listed-students,
@@ -540,10 +535,6 @@
 
 }  
 
-.request-response-error {
-  color: #D0353F;
-  font-weight: 700;
-}
 
 .member-list, .white-listed-students {
   tr {
@@ -872,3 +863,29 @@
   }
 }
 
+#report-request-response {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 21px !important;
+  margin: 8px 0 8px !important;
+  color: darkcyan;
+  padding: 16px 24px;
+  background-color: lightcyan;
+  border-top: 2px solid darkcyan;
+}
+
+#report-request-response-error {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 21px !important;
+  margin: 8px 0 8px !important;
+  color: #770f1d;
+  padding: 16px 24px;
+  background-color: #fad2d7;;
+  border-top: 2px solid #770f1d
+}
+
+:target{
+  padding-top:300px;
+  margin-top:-300px;
+}
