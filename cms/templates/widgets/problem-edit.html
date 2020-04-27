@@ -1,12 +1,16 @@
-<%! from django.utils.translation import ugettext as _ %>
+<%!
+from django.utils.translation import ugettext as _
+from cms.djangoapps.contentstore.config.waffle import ENABLE_IN_CONTEXT_IMAGE_SELECTION
+%>
+
 <%namespace name='static' file='../static_content.html'/>
 
 <% isLaTexProblem='source_code' in editable_metadata_fields and editable_metadata_fields['source_code']['explicitly_set'] and enable_latex_compiler %>
 
 % if isLaTexProblem:
-<div class="wrapper-comp-editor latex-problem" id="editor-tab">
+<div class="wrapper-comp-editor latex-problem" id="editor-tab" >
 % else:
-<div class="wrapper-comp-editor" id="editor-tab">
+<div class="wrapper-comp-editor" id="editor-tab" data-base-asset-url="${base_asset_url}">
 % endif
 <section class="problem-editor editor">
     <div class="row">
@@ -62,6 +66,15 @@
                         </span>
                     </button>
                 </li>
+                % if ENABLE_IN_CONTEXT_IMAGE_SELECTION.is_enabled(course_key):
+                <li>
+                    <button type="button" class="image-button" data-tooltip="${_("Explanation")}">
+                        <span class="problem-editor-icon image">
+                            <i class="fas fa-image"></i>
+                        </span>
+                    </button>
+                </li>
+                % endif
             </ul>
             <ul class="editor-tabs">
                 <li><button type="button" class="xml-tab advanced-toggle" data-tab="xml">${_("Advanced Editor")}</button></li>

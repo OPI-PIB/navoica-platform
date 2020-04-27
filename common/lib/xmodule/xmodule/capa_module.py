@@ -9,6 +9,7 @@ from pkg_resources import resource_string
 
 import dogstats_wrapper as dog_stats_api
 from capa import responsetypes
+from xmodule.contentstore.content import StaticContent
 from xmodule.exceptions import NotFoundError, ProcessingError
 from xmodule.raw_module import RawDescriptor
 from xmodule.util.misc import escape_html_characters
@@ -147,8 +148,8 @@ class CapaDescriptor(CapaFields, RawDescriptor):
     INDEX_CONTENT_TYPE = 'CAPA'
 
     module_class = CapaModule
+    location=module_class.location
     resources_dir = None
-
     has_score = True
     show_in_read_only_mode = True
     template_dir_name = 'problem'
@@ -184,6 +185,8 @@ class CapaDescriptor(CapaFields, RawDescriptor):
             'markdown': self.markdown,
             'enable_markdown': self.markdown is not None,
             'enable_latex_compiler': self.use_latex_compiler,
+            'base_asset_url': StaticContent.get_base_url_path_for_course_assets(self.location.course_key),
+            'course_key': self.location.course_key,
         })
         return _context
 
