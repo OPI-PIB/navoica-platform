@@ -38,6 +38,7 @@ from .course_sock import CourseSockFragmentView
 from .course_home_updates import UpdatesFragmentView
 from .welcome_message import WelcomeMessageFragmentView
 from openedx.core.djangoapps.user_api.course_tag.api import get_course_tag
+from bulk_email.models import BulkEmailFlag, Optout  # pylint: disable=import-error
 
 EMPTY_HANDOUTS_HTML = u'<ol></ol>'
 
@@ -175,6 +176,8 @@ class CourseHomeFragmentView(EdxFragmentView):
             upgrade_url = EcommerceService().upgrade_url(request.user, course_key)
             upgrade_price = get_cosmetic_verified_display_price(course)
 
+        course_optouts = Optout.objects.filter(user=request.user).values_list('course_id', flat=True)
+
         # Render the course home fragment
         context = {
             'request': request,
@@ -199,6 +202,7 @@ class CourseHomeFragmentView(EdxFragmentView):
             'uses_pattern_library': True,
             'upgrade_price': upgrade_price,
             'upgrade_url': upgrade_url,
+            'course_optouts': course_optouts,
         }
         html = render_to_string('course_experience/course-home-fragment.html', context)
         return Fragment(html)
