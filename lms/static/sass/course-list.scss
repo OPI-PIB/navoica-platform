@@ -10352,7 +10352,7 @@ main.container aside {
 
 @media (min-width: 960px) {
   #content {
-    margin: 0 0 4rem;
+    margin: 0!important;
     padding: 3rem 0;
   }
 
@@ -10532,7 +10532,7 @@ main.container aside {
 
 .card {
   .course-meta {
-    margin: 0 0 1rem;
+    margin-bottom: 1rem;
     min-height: 4.875em;
 
     p {
@@ -11644,7 +11644,7 @@ main.container > aside {
    }
 }
 
-.bg-light {
+#page-header, #content, #courses, #header-course, #password-reset-complete-container, #password-reset-confirm-container {
   background-image: none;
   background-position: center center;
   background-size: cover;
@@ -12713,15 +12713,20 @@ main.container .d-flex {
 }
 
 @media (min-width: 480px) and (max-width: 1280px) {
-  .card-title {
+  .card-title, .card-text, .course-meta {
     margin-left: 5px;
     margin-right: 5px;
   }
+  .card-title {
+    flex: auto;
+  }
+  .view-dashboard .card-title {
+    flex: 0 0 10rem;
+  }
   main.container > aside {
-    flex: 0 0 345px;
+  //  flex: 0 0 345px;
   }
 }
-
 
 .accordion .card-body .list-group-flush {
   padding: 0;
