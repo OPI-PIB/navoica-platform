@@ -53,6 +53,9 @@
 
         function MarkdownEditingDescriptor(element) {
             var that = this;
+            this.base_asset_url = element.find("#editor-tab").data('base-asset-url');
+            this.imageModal = $('#edit-image-modal .modal');
+
             this.toggleCheatsheetVisibility = function() {
                 return MarkdownEditingDescriptor.prototype.toggleCheatsheetVisibility.apply(that, arguments);
             };
@@ -65,6 +68,9 @@
             this.onShowXMLButton = function() {
                 return MarkdownEditingDescriptor.prototype.onShowXMLButton.apply(that, arguments);
             };
+            this.editImageSubmit = function() {
+                return MarkdownEditingDescriptor.prototype.editImageSubmit.apply(that, arguments);
+            };
             this.element = element;
             if ($('.markdown-box', this.element).length !== 0) {
                 this.markdown_editor = CodeMirror.fromTextArea($('.markdown-box', element)[0], {
@@ -76,6 +82,7 @@
                 this.element.on('click', '.xml-tab', this.onShowXMLButton);
                 this.element.on('click', '.format-buttons button', this.onToolbarButton);
                 this.element.on('click', '.cheatsheet-toggle', this.toggleCheatsheet);
+                this.imageModal.on('submitFormMarkDown', this.editImageSubmit);
                 // Hide the XML text area
                 $(this.element.find('.xml-box')).hide();
             } else {
@@ -133,9 +140,40 @@
         /*
          Event listener for toolbar buttons (only possible when markdown editor is visible).
          */
+
+        MarkdownEditingDescriptor.prototype.editImageSubmit = function(e) {
+            var revisedSelection, selection, editImage, data;
+            e.preventDefault();
+            selection = this.markdown_editor.getSelection();
+            revisedSelection = null;
+
+            if (e.detail) {
+
+                data = e.detail;
+
+                if (data['src']) {
+                    data['src'] = rewriteStaticLinks(data['src'], '/static/', this.base_asset_url);
+                  }
+
+                editImage = $('<img>');
+                editImage.attr('width', data.width);
+                editImage.attr('height', data.height);
+                editImage.attr('alt', data.alt);
+                editImage.attr('src', data.src);
+
+                revisedSelection = editImage.prop('outerHTML') + '</img>'
+
+                if (revisedSelection !== null) {
+                    this.markdown_editor.replaceSelection(revisedSelection);
+                    this.markdown_editor.focus();
+                }
+              }
+        };
+
         MarkdownEditingDescriptor.prototype.onToolbarButton = function(e) {
             var revisedSelection, selection;
             e.preventDefault();
+
             selection = this.markdown_editor.getSelection();
             revisedSelection = null;
             switch ($(e.currentTarget).attr('class')) {
@@ -159,6 +197,9 @@
                 break;
             case 'explanation-button':
                 revisedSelection = MarkdownEditingDescriptor.insertExplanation(selection);
+                break;
+            case 'image-button':
+                revisedSelection = MarkdownEditingDescriptor.openModal(selection, this.base_asset_url, this.imageModal );
                 break;
             default:
                 break;
@@ -228,6 +269,8 @@
             }
         };
 
+
+
         MarkdownEditingDescriptor.insertMultipleChoice = function(selectedText) {
             return MarkdownEditingDescriptor.insertGenericChoice(selectedText, '(', ')',
                 MarkdownEditingDescriptor.multipleChoiceTemplate
@@ -294,6 +337,28 @@
             return MarkdownEditingDescriptor.insertGenericInput(selectedText, '[explanation]\n', '\n[explanation]',
                 MarkdownEditingDescriptor.explanationTemplate
             );
+        };
+
+        MarkdownEditingDescriptor.openModal = function(selectedText, base_asset_url, imageModal ) {
+            var imgAttrs = {
+                baseAssetUrl: base_asset_url,
+                editor: 'markdown'
+              };
+              var img = $(selectedText);
+              if (img && img.is('img')) {
+                imgAttrs['src'] = rewriteStaticLinks(img.attr('src'), base_asset_url, '/static/');
+                imgAttrs['alt'] = img.attr('alt');
+                imgAttrs['width'] = parseInt(img.attr('width'), 10) || img[0].naturalWidth;
+                imgAttrs['height'] = parseInt(img.attr('height'), 10) || img[0].naturalHeight;
+                imgAttrs['style'] = img.attr('style');
+              }
+
+              imageModal[0].dispatchEvent(new CustomEvent('openModal', {
+                bubbles: true,
+                detail: imgAttrs
+              }));
+
+            return ' '
         };
 
         MarkdownEditingDescriptor.insertGenericInput = function(selectedText, lineStart, lineEnd, template) {
