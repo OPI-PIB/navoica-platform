@@ -30,20 +30,20 @@ from openedx.core.djangolib.markup import HTML, Text
 
     <p>${_("Click to generate a CSV file of all students enrolled in this course, along with profile information such as email address and username:")}</p>
 
-    <p><input type="button" class="btn btn-outline-primary btn-sm" name="list-profiles-csv" value="${_("Download profile information as a CSV")}" data-endpoint="${ section_data['get_students_features_url'] }" data-csv="true"></p>
+    <a href="#response_msg"><input type="button" class="btn btn-outline-primary btn-sm" name="list-profiles-csv" value="${_("Download profile information as a CSV")}" data-endpoint="${ section_data['get_students_features_url'] }" data-csv="true"></a>
 
     <p>${_("Click to generate a CSV file that lists learners who can enroll in the course but have not yet done so.")}</p>
 
-    <p><input type="button" class="btn btn-outline-primary btn-sm" name="list-may-enroll-csv" value="${_("Download a CSV of learners who can enroll")}" data-endpoint="${ section_data['get_students_who_may_enroll_url'] }" data-csv="true"></p>
+    <a href="#response_msg"><input type="button" class="btn btn-outline-primary btn-sm" name="list-may-enroll-csv" value="${_("Download a CSV of learners who can enroll")}" data-endpoint="${ section_data['get_students_who_may_enroll_url'] }" data-csv="true"></a>
 
     %if section_data['show_generate_proctored_exam_report_button']:
       <p>${_("Click to generate a CSV file of all proctored exam results in this course.")}</p>
-      <p><input type="button" class="btn btn-outline-primary btn-sm" name="proctored-exam-results-report" value="${_("Generate Proctored Exam Results Report")}" data-endpoint="${ section_data['list_proctored_results_url'] }"/></p>
+      <a href="#response_msg"><input type="button" class="btn btn-outline-primary btn-sm" name="proctored-exam-results-report" value="${_("Generate Proctored Exam Results Report")}" data-endpoint="${ section_data['list_proctored_results_url'] }"/></a>
     %endif
 
     %if section_data['course_has_survey']:
       <p>${_("Click to generate a CSV file of survey results for this course.")}</p>
-      <p><input type="button" class="btn btn-outline-primary btn-sm" name="survey-results-report" value="${_("Generate Survey Results Report")}" data-endpoint="${ section_data['course_survey_results_url'] }"/></p>
+      <a href="#response_msg"><input type="button" class="btn btn-outline-primary btn-sm" name="survey-results-report" value="${_("Generate Survey Results Report")}" data-endpoint="${ section_data['course_survey_results_url'] }"/></a>
     %endif
 
     <p>${_("To generate a CSV file that lists all student answers to a given problem, enter the location of the problem (from its Staff Debug Info).")}</p>
@@ -54,41 +54,43 @@ from openedx.core.djangolib.markup import HTML, Text
         <input type="text" class="form-control" name="problem-location" />
       </label>
     </p>
-    <p>
+    <a href="#response_msg">
       <input type="button" class="btn btn-outline-primary btn-sm" name="list-problem-responses-csv" value="${_("Download a CSV of problem responses")}" data-endpoint="${ section_data['get_problem_responses_url'] }" data-csv="true">
-    </p>
+    </a>
 
     <div class="issued_certificates">
       <p>${_("Click to list certificates that are issued for this course:")}</p>
-      <p>
+      <a href="#response_msg">
         <input type="button" class="btn btn-outline-primary btn-sm" name="issued-certificates-list" value="${_("View Certificates Issued")}" data-csv="false" data-endpoint="${ section_data['get_issued_certificates_url'] }">
         <input type="button" class="btn btn-outline-primary" name="issued-certificates-csv" value="${_("Download CSV of Certificates Issued")}" data-csv="true" data-endpoint="${ section_data['get_issued_certificates_url'] }">
-      </p>
+      </a>
       <div class="data-display-table certificate-data-display-table" id="data-issued-certificates-table"></div>
-      <div class="issued-certificates-error request-response-error msg msg-error copy"></div>
     </div>
 
   % if not disable_buttons:
     <p>${_("For smaller courses, click to list profile information for enrolled students directly on this page:")}</p>
-    <p><input type="button" class="btn btn-outline-primary btn-sm" name="list-profiles" value="${_("List enrolled students' profile information")}" data-endpoint="${ section_data['get_students_features_url'] }"></p>
+    <a href="#response_msg"><input type="button" class="btn btn-outline-primary btn-sm" name="list-profiles" value="${_("List enrolled students' profile information")}" data-endpoint="${ section_data['get_students_features_url'] }"></a>
   %endif
   <div class="data-display-table profile-data-display-table" id="data-student-profiles-table"></div>
 
   %if settings.FEATURES.get('ALLOW_COURSE_STAFF_GRADE_DOWNLOADS') or section_data['access']['admin']:
     <p>${_("Click to generate a CSV grade report for all currently enrolled students.")}</p>
-    <p>
+    <a href="#response_msg">
 
       <input type="button" name="calculate-grades-csv" class="btn btn-outline-primary btn-sm async-report-btn" value="${_("Generate Grade Report")}" data-endpoint="${ section_data['calculate_grades_csv_url'] }"/>
       <input type="button" name="problem-grade-report" class="btn btn-outline-primary btn-sm async-report-btn" value="${_("Generate Problem Grade Report")}" data-endpoint="${ section_data['problem_grade_report_url'] }"/>
       <input type="button" name="export-ora2-data" class="btn btn-outline-primary btn-sm async-report-btn" value="${_("Generate ORA Data Report")}" data-endpoint="${ section_data['export_ora2_data_url'] }"/>
-    </p>
+    </a>
   %endif
 
+  <div id="response_msg">
     <div class="request-response msg msg-confirm copy" id="report-request-response"></div>
     <div class="request-response-error msg msg-error copy" id="report-request-response-error"></div>
+  </div>  
     <br>
 
     <h3 class="hd hd-3">${_("Reports Available for Download")}</h3>
+
     <p>
       ${_("The reports listed below are available for download. A link to every report remains available on this page, identified by the UTC date and time of generation. Reports are not deleted, so you will always be able to access previously generated reports from this page.")}
     </p>
@@ -122,3 +124,5 @@ from openedx.core.djangolib.markup import HTML, Text
     <div class="no-pending-tasks-message"></div>
   </div>
 %endif
+
+
