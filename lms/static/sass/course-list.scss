@@ -4579,6 +4579,11 @@ input {
 
 .card-title {
   margin-bottom: 1rem;
+  flex: 0 0 10rem;
+}
+.about-us .card-title {
+  margin-bottom: 1rem;
+  flex: auto;
 }
 
 .card-subtitle {
@@ -9950,7 +9955,7 @@ footer {
   }
 
   .card-title {
-    min-height: 3rem;
+  //  min-height: 3rem;
   }
 }
 
