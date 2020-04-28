@@ -64,7 +64,7 @@ NPM_INSTALLED_LIBRARIES = [
     'requirejs/require.js',
     'underscore.string/dist/underscore.string.js',
     'underscore/underscore.js',
-    '@edx/studio-frontend/dist/',
+    '@opipib/studio-frontend/dist/',
     'which-country/index.js',
     'summernote/dist/summernote-lite.js',
     'summernote/dist/summernote-lite.css',
