@@ -185,9 +185,8 @@ from pipeline_mako import render_require_js_path_overrides
         <%include file="/preview_menu.html" />
     % endif
 
-    % if request.path.endswith("course/"):
-        <%include file="/page_banner.html" />
-    % endif   
+    <%include file="/page_banner.html" />
+
 
     <div class="marketing-hero"><%block name="marketing_hero"></%block></div>
 % if request.path == '/':
