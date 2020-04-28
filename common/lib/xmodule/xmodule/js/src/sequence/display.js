@@ -45,7 +45,7 @@
                 RIGHT: 39,
                 DOWN: 40
             };
-
+            this.$('#sequence-list .tab').eq(0).focus();
             this.updatedProblems = {};
             this.requestToken = $(element).data('request-token');
             this.el = $(element).find('.sequence');
@@ -87,6 +87,7 @@
             }
             $sequenceList.find('.tab').removeClass('active');
             $navItemList.find('.tab').addClass('active').focus();
+            $navItemList.find('.tab').addClass('active').click();
         };
 
         Sequence.prototype.nextNav = function(focused, index, total) {
@@ -99,6 +100,7 @@
             }
             $sequenceList.find('.tab').removeClass('active');
             $navItemList.find('.tab').addClass('active').focus();
+            $navItemList.find('.tab').addClass('active').click();
         };
 
         Sequence.prototype.keydownHandler = function(element) {
