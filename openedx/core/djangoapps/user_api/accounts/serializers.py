@@ -90,6 +90,7 @@ class UserReadOnlySerializer(serializers.Serializer):
         accomplishments_shared = badges_enabled()
 
         data = {
+            "id": user.id,
             "username": user.username,
             "url": self.context.get('request').build_absolute_uri(
                 reverse('accounts_api', kwargs={'username': user.username})
@@ -176,8 +177,8 @@ class AccountUserSerializer(serializers.HyperlinkedModelSerializer, ReadOnlyFiel
     """
     class Meta(object):
         model = User
-        fields = ("username", "email", "date_joined", "is_active")
-        read_only_fields = ("username", "email", "date_joined", "is_active")
+        fields = ("id", "username", "email", "date_joined", "is_active")
+        read_only_fields = ("id", "username", "email", "date_joined", "is_active")
         explicit_read_only_fields = ()
 
 
@@ -193,11 +194,11 @@ class AccountLegacyProfileSerializer(serializers.HyperlinkedModelSerializer, Rea
     class Meta(object):
         model = UserProfile
         fields = (
-            "name", "gender", "goals", "year_of_birth", "level_of_education", "country", "social_links",
-            "mailing_address", "bio", "profile_image", "requires_parental_consent", "language_proficiencies"
+            "id", "name", "gender", "goals", "year_of_birth", "level_of_education", "country", "social_links",
+            "mailing_address", "bio", "profile_image", "requires_parental_consent", "language_proficiencies", "user_id"
         )
         # Currently no read-only field, but keep this so view code doesn't need to know.
-        read_only_fields = ()
+        read_only_fields = ("user_id","id")
         explicit_read_only_fields = ("profile_image", "requires_parental_consent")
 
     def validate_name(self, new_name):

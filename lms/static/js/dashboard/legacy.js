@@ -200,7 +200,7 @@
                  data: $(this).serializeArray(),
                  success: function(data) {
                      if (data.success) {
-                         location.href = urls.dashboard;
+                         location.href = window.location.href;
                      }
                  },
                  error: function(xhr) {

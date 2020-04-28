@@ -122,7 +122,7 @@ from six import string_types
               href_class = "register"
           %>
 <style>#header-course {display: none}</style>
-      <header class="bg-light">
+      <header id="page-header" class="bg-light">
         <div class="jumbotron">
           <div class="container" id="container-flex">
           <article id="article">
@@ -135,7 +135,7 @@ from six import string_types
 			<a href="${course_target}" class="btn btn-lg btn-primary btn-icon">${_("View Course")}</a>
 		  %else:
               %if course.external_enroll:
-                <a href="${course.external_enroll_url}" class="btn btn-lg btn-primary btn-icon ${href_class} disabled external_enroll">${_("Register for the course")}</a>
+                <a href="${course.external_enroll_url}registration_form/${course.id}/course" class="btn btn-lg btn-primary btn-icon ${href_class} disabled external_enroll">${_("Register for the course")}</a>
               %else:
                 <a href="${reg_href}" class="btn btn-lg btn-primary btn-icon ${href_class} ">${_("Take the course")}</a>
               %endif
