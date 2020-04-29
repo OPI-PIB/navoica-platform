@@ -11929,7 +11929,7 @@ label {
     line-height: 1.625;
 }
 
-#exampleModalLabel {
+#exampleModalLabel, #email-settings-title {
     color: darkcyan;
     font-size: 0.875rem;
     font-weight: 700;
@@ -13462,4 +13462,21 @@ span.complete-checkmark.fa.fa-check {
 .location-info, .location-example {
     font-size: small;
     font-style: italic;
+}
+
+#lean_overlay {
+    background-image: radial-gradient(circle at 50% 30%, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#email_settings_form {
+  hr {
+     margin: 0;
+  }
 }
