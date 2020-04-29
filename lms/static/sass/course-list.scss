@@ -10871,6 +10871,7 @@ article .display-3 {
         font-weight: 600;
         margin: 0;
         padding: 0 0 1rem;
+        display: block;
       }
 
       .question-description {
@@ -11273,7 +11274,7 @@ li.list-group-item {
   #h2 {
     line-height: 2.5;
   }
-}  
+}
 
 @media (min-width: 960px) {
   #h2, #discovery-message, #sorting-form {
@@ -11294,7 +11295,7 @@ main.container {
     main.container {
       flex-direction: column;
    }
- }  
+ }
 }
 
 @media (min-width: 960px) {
@@ -13043,7 +13044,7 @@ img.message-author {
         .action-preview-actions {
           padding-top: 0rem !important;
           display: inline-block;
-        }  
+        }
       }
     }
   }
@@ -13057,7 +13058,7 @@ img.message-author {
     padding-top: 4rem;
   }
 
-  .discussion, 
+  .discussion,
   .view-instructordash,
   .view-progress,
   .view-courseware {
@@ -13070,7 +13071,7 @@ img.message-author {
 
   #header {
     margin: 0;
-  }  
+  }
   #action-tab-select {
     display: block;
     margin: 1rem 0 1rem 0;
@@ -13235,7 +13236,7 @@ span.complete-checkmark.fa.fa-check {
   .jumbotronn {
     padding-top: 2rem;
   }
-}  
+}
 
 #results #h2 {
 //  display: flex;
@@ -13299,7 +13300,7 @@ span.complete-checkmark.fa.fa-check {
 
 
 .tc-wrapper .subtitles ol li {list-style-type: none !important; font-size:13px !important;}
-.video-wrapper .video-controls .secondary-controls .video-speeds {list-style-type: none !important;margin-bottom:0 !important;} 
+.video-wrapper .video-controls .secondary-controls .video-speeds {list-style-type: none !important;margin-bottom:0 !important;}
 .video-wrapper #course-content #seq_content .vert .xblock ol {display:flex; flex-wrap:wrap; margin-bottom: 0px !important; padding:0 !important;}
 .video-wrapper #course-content .speed-option, #course-content .control {background-color: #D0353F; color: #fff;}
 .video-wrapper #course-content .vcr {margin-top: 5px; margin-bottom:10px;}
@@ -13446,7 +13447,7 @@ span.complete-checkmark.fa.fa-check {
     font-size: 87.5%;
     text-align: inherit;
     color: #495057;
-  }  
+  }
 }
 
 #content1 {
@@ -13454,6 +13455,6 @@ span.complete-checkmark.fa.fa-check {
     .custom-select:focus {
       box-shadow: none ;
       border: 1px solid #ced4da;
-    }  
+    }
   }
 }
