@@ -49,9 +49,11 @@ from openedx.core.djangolib.markup import HTML, Text
     <p>${_("To generate a CSV file that lists all student answers to a given problem, enter the location of the problem (from its Staff Debug Info).")}</p>
 
     <p>
-      <label>
+      <label for="problem-select-single">
         <span>${_("Problem location: ")}</span>
         <input type="text" class="form-control" name="problem-location" />
+        <span class="location-info">${_("Staff Debug Info' button under a problem, copy the block code that starts from 'block-v1' and paste it in the 'Problem location' field.")}</span><br>
+        <span class="location-example">${_("Example")}: block-v1:edX+DemoX+2015+type@problem+block@618c5933b8b544e4a4cc103d3e508378</span>
       </label>
     </p>
     <a href="#response_msg">
