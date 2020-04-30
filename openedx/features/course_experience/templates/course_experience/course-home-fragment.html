@@ -104,8 +104,13 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                         </li>
                     % endfor
 
-                    <li>
-                        <a href="#email-settings-modal" class="dropdown-item action-email-settings" rel="leanModal" data-course-id="${course.id}" data-course-number="${course.number}" data-optout="${course.id in course_optouts}">${_('Email Settings')}</a>      
+                    <li class="list-group-item">
+                        <div class="course-details-icon">
+                            <i class="icon fas fa-envelope"></i>
+                        </div>
+                        <div class="course-details-content">
+                            <a href="#email-settings-modal" class="action-email-settings" rel="leanModal" data-course-id="${course.id}" data-course-number="${course.number}" data-optout="${course.id in course_optouts}">${_('Email Settings')}</a>   
+                        </div>       
                     </li>
                 </ul>
             % endif
@@ -208,33 +213,41 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
 
 <section id="email-settings-modal" class="modal" aria-hidden="true">
     <div class="inner-wrapper" role="dialog" aria-labelledby="email-settings-title">
-      <button class="close-modal">
-        <span class="icon fa fa-remove" aria-hidden="true"></span>
-        <span class="sr">
+        <div class="modal-header">
+            <h5 id="email-settings-title" class="modal-title">
+                ${Text(_("Email Settings for {course_number}")).format(course_number=HTML('<span id="email_settings_course_number"></span>'))}
+                <span class="sr">,
+                ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
+                    ${_("window open")}
+                </span>
+            </h5>
+   
+   
+        <button class="close-modal">
+          <span class="icon fa fa-remove" aria-hidden="true"></span>
+          <span class="sr">
           ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
           ${_("Close")}
-        </span>
-      </button>
-  
-      <header>
-        <h2 id="email-settings-title">
-          ${Text(_("Email Settings for {course_number}")).format(course_number=HTML('<span id="email_settings_course_number"></span>'))}
-          <span class="sr">,
-            ## Translators: this text gives status on if the modal interface (a menu or piece of UI that takes the full focus of the screen) is open or not
-            ${_("window open")}
           </span>
-        </h2>
+        </button>
         <hr/>
-      </header>
-  
+    </div> 
+
+    <div>        
       <form id="email_settings_form" method="post">
-        <input name="course_id" id="email_settings_course_id" type="hidden" />
-        <label>${_("Receive course emails")} <input type="checkbox" id="receive_emails" name="receive_emails" /></label>
-        <div class="submit">
-          <input type="submit" id="submit" value="${_("Save Settings")}" />
+        <div class="modal-body">
+            <div id="track-info"> 
+                <input name="course_id" id="email_settings_course_id" type="hidden" />
+                ${_("Receive course emails")} <input type="checkbox" id="receive_emails" name="receive_emails" /></label>
+            </div>
+        </div>
+        <hr/>
+        <div class="submit modal-body">
+          <input class="btn btn-primary btn-sm form-actions d-flex w-100" type="submit" id="submit" value="${_("Save Settings")}" />
         </div>
       </form>
     </div>
+</div>d
   </section>
 
 </%block>

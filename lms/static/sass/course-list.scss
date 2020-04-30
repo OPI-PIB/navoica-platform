@@ -227,8 +227,8 @@ button {
   border-radius: 0;
 
   &:focus {
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+  //  outline: 1px dotted;
+  //  outline: 5px auto -webkit-focus-ring-color;
   }
 }
 
@@ -11228,7 +11228,7 @@ button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-butto
 #courses-list-header {
   margin: 0 0 1rem !important;
   border-bottom: 1px solid #dee2e6 !important;
-  padding-bottom: 1rem;
+  padding-bottom: 0;
 }
 
 li.list-group-item {
@@ -11270,7 +11270,7 @@ li.list-group-item {
   }
 }
 
-#results, #filters{
+#results, #filters, #filter{
   #h2 {
     line-height: 2.5;
   }
@@ -11929,7 +11929,7 @@ label {
     line-height: 1.625;
 }
 
-#exampleModalLabel {
+#exampleModalLabel, #email-settings-title {
     color: darkcyan;
     font-size: 0.875rem;
     font-weight: 700;
@@ -13462,4 +13462,32 @@ span.complete-checkmark.fa.fa-check {
 .location-info, .location-example {
     font-size: small;
     font-style: italic;
+}
+
+#lean_overlay {
+    background-image: radial-gradient(circle at 50% 30%, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#email_settings_form {
+  hr {
+     margin: 0;
+  }
+}
+
+#email-settings-modal {
+  #receive_emails {
+    vertical-align: sub;
+    margin-left: 1rem;
+  }
+}
+
+#email-settings-title {
+  width: 100%;
 }
