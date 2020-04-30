@@ -13491,3 +13491,15 @@ span.complete-checkmark.fa.fa-check {
 #email-settings-title {
   width: 100%;
 }
+
+.authorization-confirmation {
+  font-size: 1rem
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .login {
+    margin: 0;
+    max-width: unset;
+    padding: 0;
+    width: unset; 
+  }
+}
