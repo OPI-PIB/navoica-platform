@@ -48,8 +48,9 @@ git+https://github.com/edx/RecommenderXBlock.git@1.3#egg=recommender-xblock==1.3
 -e git+https://github.com/OPI-PIB/xblock-drag-and-drop-v2#egg=xblock-drag-and-drop-v2
 -e git+https://github.com/OPI-PIB/xblock-google-drive.git#egg=xblock-google-drive
 -e git+https://github.com/OPI-PIB/xblock-poll.git@v2Navoica#egg=xblock-poll
+-e git+https://github.com/OPI-PIB/xblock-inline-dropdown.git#egg=xblock-inline-dropdown
 git+https://github.com/edx/xblock-utils.git@v1.1.1#egg=xblock-utils==1.1.1
--e videojsXBlockplugin/
+-e git+https://github.com/OPI-PIB/videojsXBlock.git#egg=videojs-xblock
 -e common/lib/xmodule
 amqp==1.4.9               # via kombu
 analytics-python==1.1.0

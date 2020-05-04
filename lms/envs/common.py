@@ -958,6 +958,7 @@ STATICFILES_DIRS = [
     COMMON_ROOT / "static",
     PROJECT_ROOT / "static",
     NODE_MODULES_ROOT / "@edx",
+    NODE_MODULES_ROOT / "@opipib",
 ]
 
 FAVICON_PATH = 'images/favicon.ico'

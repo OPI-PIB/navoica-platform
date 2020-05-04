@@ -59,6 +59,7 @@
         this.base_asset_url = null;
       }
 
+      $('#edit-image-modal #modalWrapper').off('submitForm');
       /*
       We always create the "raw editor" so we can get the text out of it if necessary on save.
        */
@@ -1215,7 +1216,7 @@
         onclick: this.openImageModal
       });
       this.visualEditor = ed;
-      this.imageModal = $('#edit-image-modal .modal');
+      this.imageModal = $('#edit-image-modal #modalWrapper');
 
       /*
       These events were added to the plugin code as the TinyMCE PluginManager
@@ -1227,6 +1228,8 @@
       ed.on('EditLink', this.editLink);
       ed.on('ShowCodeEditor', this.showCodeEditor);
       ed.on('SaveCodeEditor', this.saveCodeEditor);
+
+      this.imageModal.on('closeModal', this.closeImageModal);
       return this.imageModal.on('submitForm', this.editImageSubmit);
     };
 
@@ -1263,6 +1266,7 @@
         imgAttrs['height'] = parseInt(img.attr('height'), 10) || img[0].naturalHeight;
         imgAttrs['style'] = img.attr('style');
       }
+      $('body').addClass('modal-open'); // prevents background from scrolling while modal is open
       return this.imageModal[0].dispatchEvent(new CustomEvent('openModal', {
         bubbles: true,
         detail: imgAttrs
@@ -1270,9 +1274,7 @@
     };
 
     HTMLEditingDescriptor.prototype.closeImageModal = function() {
-      return this.imageModal[0].dispatchEvent(new CustomEvent('closeModal', {
-        bubbles: true
-      }));
+      $('body').removeClass('modal-open');
     };
 
     HTMLEditingDescriptor.prototype.saveImageFromModal = function(data) {
@@ -1283,13 +1285,15 @@
       if (data['src']) {
         data['src'] = rewriteStaticLinks(data['src'], '/static/', this.base_asset_url);
       }
+
       return this.visualEditor.insertContent(this.visualEditor.dom.createHTML('img', data));
     };
 
     HTMLEditingDescriptor.prototype.editImageSubmit = function(event) {
       if (event.detail) {
-        return this.saveImageFromModal(event.detail);
+        this.saveImageFromModal(event.detail);
       }
+      return this.closeImageModal();
     };
 
     HTMLEditingDescriptor.prototype.editLink = function(data) {
@@ -1329,6 +1333,7 @@
       Called when the CodeMirror Editor is saved to convert links back to the full form.
       The input argument is a dict with the text content.
        */
+
       var content;
       content = rewriteStaticLinks(source.content, '/static/', this.base_asset_url);
       return source.content = content;
@@ -1361,6 +1366,7 @@
     HTMLEditingDescriptor.prototype.save = function() {
       var raw_content, text, visualEditor;
       text = void 0;
+
       if (this.editor_choice === 'visual') {
         visualEditor = this.getVisualEditor();
         raw_content = visualEditor.getContent({

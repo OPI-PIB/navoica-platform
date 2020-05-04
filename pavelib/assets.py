@@ -43,6 +43,7 @@ COMMON_LOOKUP_PATHS = [
     path("common/static"),
     path("common/static/sass"),
     path('node_modules/@edx'),
+    path('node_modules/@opipib'),
     path('node_modules'),
     path('node_modules/edx-pattern-library/node_modules'),
 ]
@@ -64,7 +65,7 @@ NPM_INSTALLED_LIBRARIES = [
     'requirejs/require.js',
     'underscore.string/dist/underscore.string.js',
     'underscore/underscore.js',
-    '@edx/studio-frontend/dist/',
+    '@opipib/studio-frontend/dist/',
     'which-country/index.js',
     'summernote/dist/summernote-lite.js',
     'summernote/dist/summernote-lite.css',

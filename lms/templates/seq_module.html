@@ -54,6 +54,10 @@
                                                ${"disabled=disabled" if disable_navigation else ""}>
                                             <i class="fas fa-${item['type']}"></i>
                                              ${item['page_title']}
+                                            % if 'complete' in item:
+                                                <i class="complete-checkmark fa fa-check check-circle ${'checkmarked' if item['complete'] else 'd-none'}" aria-hidden="true"></i>
+                                            % endif
+                                            <i class="fa fa-bookmark bookmark-icon ${'bookmarked' if item['bookmarked'] else 'd-none'}"></i>
                                         </a>
                                     </div>
                                 </li>
@@ -90,21 +94,7 @@
 
                 <div id="seq_content" role="tabpanel" aria-labelledby="tab_2">
 
-
-                    <div class="wrap-instructor-info studio-view">
-                        <a class="instructor-info-action btn btn-sm btn-outline-light"
-                           href="//studio.navoica.pl/container/block-v1:PLodzka+IT101+2018_1+type@vertical+block@89a2f7844ca14fd08d2a34342ef81eec">
-                            <i class="fas fa-code"></i>
-                            ${_('View Unit in Studio')}
-                        </a>
-                    </div>
                     <div class="xblock xblock-student_view xblock-student_view-vertical xblock-initialized">
-                        <div class="bookmark-button-wrapper">
-                            <button class="btn btn-sm btn-outline-light bookmark-button" aria-pressed="false">
-                                <i class="far fa-bookmark"></i>
-                                <span class="bookmark-text">${_('Bookmark this page')}</span>
-                            </button>
-                        </div>
                         <div class="vert-mod" data-completion-delay-ms="5000">
                             % if gated_content['gated']:
                             <%include file="_gated_content.html" args="prereq_url=gated_content['prereq_url'],
@@ -131,6 +121,8 @@
                 </div>
             </section>
 
+
+
             <div>
 				<nav class="sequence-bottom" aria-label="${_('Section')}">
 					<button class="btn btn-sm btn-outline-primary sequence-nav-button button-previous">
@@ -146,6 +138,6 @@
 
         </article>
 
-        
+
     </div>
 </div>

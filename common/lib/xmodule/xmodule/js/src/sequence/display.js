@@ -45,7 +45,7 @@
                 RIGHT: 39,
                 DOWN: 40
             };
-
+            this.$('#sequence-list .tab').eq(0).focus();
             this.updatedProblems = {};
             this.requestToken = $(element).data('request-token');
             this.el = $(element).find('.sequence');
@@ -87,6 +87,7 @@
             }
             $sequenceList.find('.tab').removeClass('active');
             $navItemList.find('.tab').addClass('active').focus();
+            $navItemList.find('.tab').addClass('active').click();
         };
 
         Sequence.prototype.nextNav = function(focused, index, total) {
@@ -99,6 +100,7 @@
             }
             $sequenceList.find('.tab').removeClass('active');
             $navItemList.find('.tab').addClass('active').focus();
+            $navItemList.find('.tab').addClass('active').click();
         };
 
         Sequence.prototype.keydownHandler = function(element) {
@@ -406,13 +408,14 @@
             var element = this.link_for(position);
             var completionUrl = this.ajaxUrl + '/get_completion';
             var usageKey = element[0].attributes['data-id'].value;
-            var completionIndicators = element.find('.check-circle');
+            var completionIndicators = element.find('.complete-checkmark');
             if (completionIndicators.length) {
                 $.postWithPrefix(completionUrl, {
                     usage_key: usageKey
                 }, function(data) {
                     if (data.complete === true) {
-                        completionIndicators.removeClass('is-hidden');
+                        completionIndicators.removeClass('d-none');
+                        completionIndicators.addClass('checkmarked');
                     }
                 });
             }
@@ -431,14 +434,14 @@
 
         Sequence.prototype.addBookmarkIconToActiveNavItem = function(event) {
             event.preventDefault();
-            this.el.find('.nav-item.active .bookmark-icon').removeClass('is-hidden').addClass('bookmarked');
-            this.el.find('.nav-item.active .bookmark-icon-sr').text(gettext('Bookmarked'));
+            this.el.find('.nav-item.active .bookmark-icon').removeClass('d-none').addClass('bookmarked');
+            // this.el.find('.nav-item.active .bookmark-icon-sr').text(gettext('Bookmarked'));
         };
 
         Sequence.prototype.removeBookmarkIconFromActiveNavItem = function(event) {
             event.preventDefault();
-            this.el.find('.nav-item.active .bookmark-icon').removeClass('bookmarked').addClass('is-hidden');
-            this.el.find('.nav-item.active .bookmark-icon-sr').text('');
+            this.el.find('.nav-item.active .bookmark-icon').removeClass('bookmarked').addClass('d-none');
+            // this.el.find('.nav-item.active .bookmark-icon-sr').text('');
         };
 
         return Sequence;
