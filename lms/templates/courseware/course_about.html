@@ -20,6 +20,13 @@ from six import string_types
   ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
   <meta property="og:title" content="${course.display_name_with_default_escaped}" />
   <meta property="og:description" content="${get_course_about_section(request, course, 'short_description')}" />
+
+  % if get_course_about_section(request, course, "video"):
+      <meta property="og:video" content="${course_video_url}" />
+	%else:
+      <meta property="og:image" content="${settings.LMS_ROOT_URL + course_image_urls['large']}" />
+
+	% endif
 </%block>
 
 <%block name="js_extra">
@@ -454,7 +461,7 @@ from six import string_types
 
 
 
-          
+
 
         </main>
       </div>

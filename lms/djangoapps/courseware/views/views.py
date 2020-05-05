@@ -961,6 +961,7 @@ def course_about(request, course_id):
             'cart_link': reverse('shoppingcart.views.show_cart'),
             'pre_requisite_courses': pre_requisite_courses,
             'course_image_urls': overview.image_urls,
+            'course_video_url': overview.video_url,
             'reviews_fragment_view': reviews_fragment_view,
         }
 
