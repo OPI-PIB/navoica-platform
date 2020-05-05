@@ -2286,8 +2286,6 @@ INSTALLED_APPS = [
     'openedx.features.learner_analytics',
     'openedx.features.portfolio_project',
 
-    'openedx.core.djangoapps.bookmarks',
-
     'experiments',
 
     # DRF filters
