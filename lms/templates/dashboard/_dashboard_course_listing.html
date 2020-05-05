@@ -79,6 +79,12 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
             <h4 class="card-title"><span>${course_overview.display_name_with_default}</span></h4>
           % endif
 
+           </div>
+          </div>
+
+
+           <div class="card-footer" id="border_top">
+
            <div class="course-meta">
              <p>
                 <strong>${_("Course organizer")}</strong>
@@ -94,11 +100,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
              </p>
            </div>
            <p class="card-text" id="border_top">${course_overview.short_description}</p>
-           </div>
-          </div>
-
-
-           <div class="card-footer" id="border_top">
+            
              <div class="course-meta">
 
                 <%
