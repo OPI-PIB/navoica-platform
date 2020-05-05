@@ -355,6 +355,8 @@ def get_component_templates(courselike, library=False):
     # are the names of the modules in ADVANCED_COMPONENT_TYPES that should be
     # enabled for the course.
     course_advanced_keys = courselike.advanced_modules
+    course_advanced_keys += ['inline-dropdown',]
+
     advanced_component_templates = {
         "type": "advanced",
         "templates": [],
