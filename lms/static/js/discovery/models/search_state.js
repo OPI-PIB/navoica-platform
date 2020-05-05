@@ -123,7 +123,7 @@
                 if (this.cached) {
                     deferred.resolveWith(this, [this.cached]);
                 } else {
-                    this.cached = new CourseDiscovery();
+                    this.cached = new CourseDiscovery({meanings: this.meanings});
                     this.cached.fetch({
                         type: 'POST',
                         data: {
