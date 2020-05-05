@@ -63,7 +63,10 @@ PLATFORM_NAME = "Navoica.pl"
 PLATFORM_DESCRIPTION = _('Your Platform Description Here')
 CC_MERCHANT_NAME = PLATFORM_NAME
 
-PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
+try:
+    PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
+except subprocess.CalledProcessError as e:
+    PLATFORM_VERSION = "HEAD"
 
 PLATFORM_FACEBOOK_ACCOUNT = "http://www.facebook.com/YourPlatformFacebookAccount"
 PLATFORM_TWITTER_ACCOUNT = "@YourPlatformTwitterAccount"

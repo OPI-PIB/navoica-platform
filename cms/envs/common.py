@@ -162,7 +162,10 @@ from machina import MACHINA_MAIN_TEMPLATE_DIR
 ############################ FEATURE CONFIGURATION #############################
 
 EDX_ROOT = path(__file__).abspath().dirname().dirname().dirname()  # /edx-platform/
-PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
+try:
+    PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
+except subprocess.CalledProcessError as e:
+    PLATFORM_VERSION = "HEAD"
 
 # Dummy secret key for dev/test
 SECRET_KEY = 'dev key'
