@@ -63,7 +63,10 @@ PLATFORM_NAME = "Navoica.pl"
 PLATFORM_DESCRIPTION = _('Your Platform Description Here')
 CC_MERCHANT_NAME = PLATFORM_NAME
 
-PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
+try:
+    PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
+except subprocess.CalledProcessError as e:
+    PLATFORM_VERSION = "HEAD"
 
 PLATFORM_FACEBOOK_ACCOUNT = "http://www.facebook.com/YourPlatformFacebookAccount"
 PLATFORM_TWITTER_ACCOUNT = "@YourPlatformTwitterAccount"
@@ -2282,6 +2285,8 @@ INSTALLED_APPS = [
     'openedx.features.learner_profile',
     'openedx.features.learner_analytics',
     'openedx.features.portfolio_project',
+
+    'openedx.core.djangoapps.bookmarks',
 
     'experiments',
 
