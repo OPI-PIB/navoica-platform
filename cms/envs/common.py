@@ -1354,6 +1354,11 @@ ADVANCED_PROBLEM_TYPES = [
     {
         'component': 'drag-and-drop-v2',
         'boilerplate_name': None
+    },
+    {
+        'component': 'inline-dropdown',
+        'boilerplate_name': None
+        #'boilerplate_name': _('Inline Dropdown')
     }
 ]
 
