@@ -123,7 +123,7 @@
           Disable visual aid on borderless table.
            */
           visual: false,
-          plugins: "textcolor, link, image, codemirror, paste",
+          plugins: "textcolor, link, image, codemirror, paste, table",
           codemirror: {
             path: baseUrl + "/js/vendor"
           },
@@ -134,7 +134,7 @@
            */
           toolbar: "formatselect | bold italic underline forecolor wrapAsCode | " +
             "alignleft aligncenter alignright alignjustify | " +
-            "bullist numlist outdent indent blockquote | link unlink " +
+            "bullist numlist outdent indent blockquote | link unlink | " + "table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol | " +
             ((this.new_image_modal ? 'insertImage' : 'image') + " | code"),
           block_formats: interpolate("%(paragraph)s=p;%(preformatted)s=pre;%(heading3)s=h3;%(heading4)s=h4;%(heading5)s=h5;%(heading6)s=h6", {
             paragraph: gettext("Paragraph"),
