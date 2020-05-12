@@ -99,9 +99,9 @@
           script_url: baseUrl + "/js/vendor/tinymce/js/tinymce/tinymce.full.min.js",
           font_formats: _getFonts(),
           theme: "modern",
-          skin: 'studio-tmce4',
+          skin: 'lightgray',
           schema: "html5",
-
+          language: document.documentElement.lang,
           /*
           Necessary to preserve relative URLs to our images.
            */
@@ -123,19 +123,16 @@
           Disable visual aid on borderless table.
            */
           visual: false,
-          plugins: "textcolor, link, image, codemirror, paste, table",
-          codemirror: {
-            path: baseUrl + "/js/vendor"
-          },
+          plugins: "textcolor link image code paste table preview importcss searchreplace autolink directionality visualblocks visualchars fullscreen media codesample charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap",
           image_advtab: true,
 
           /*
           We may want to add "styleselect" when we collect all styles used throughout the LMS
            */
-          toolbar: "formatselect | bold italic underline forecolor wrapAsCode | " +
-            "alignleft aligncenter alignright alignjustify | " +
-            "bullist numlist outdent indent blockquote | link unlink | " + "table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol | " +
+          toolbar: "undo redo | formatselect | bold italic underline strikethrough | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor removeformat wrapAsCode | " +
+            " blockquote | link unlink | table | charmap | fullscreen  preview | codesample | " +
             ((this.new_image_modal ? 'insertImage' : 'image') + " | code"),
+          toolbar_sticky: true,
           block_formats: interpolate("%(paragraph)s=p;%(preformatted)s=pre;%(heading3)s=h3;%(heading4)s=h4;%(heading5)s=h5;%(heading6)s=h6", {
             paragraph: gettext("Paragraph"),
             preformatted: gettext("Preformatted"),
@@ -144,11 +141,12 @@
             heading5: gettext("Heading 5"),
             heading6: gettext("Heading 6")
           }, true),
+          importcss_append: true,
           width: '100%',
           height: '400px',
           menubar: false,
           statusbar: false,
-          paste_as_text: true,
+          paste_as_text: false,
           /*
           Necessary to avoid stripping of style tags.
            */
@@ -159,7 +157,10 @@
            */
           valid_elements: "*[*]",
           extended_valid_elements: "*[*]",
-          invalid_elements: "",
+          paste_preprocess: function(plugin, args) {
+              args.content=args.content.replace(/(((\w+)|((\w+)-(\w+)))="([^']*?)")/gm, "");
+              args.content=args.content.replace(/<table/gm, `<table border="1" style="border-collapse: collapse; width: 100%;"`)
+          },
           setup: this.setupTinyMCE,
 
           /*
