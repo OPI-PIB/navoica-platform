@@ -48,6 +48,7 @@ from openedx.core.djangoapps.monitoring_utils import function_trace
 from student.models import CourseEnrollment
 from util.json_request import JsonResponse, expect_json
 from xmodule.modulestore.django import modulestore
+from collections import OrderedDict
 
 from .config import USE_BOOTSTRAP_FLAG
 
@@ -726,7 +727,7 @@ class DiscussionBoardFragmentView(EdxFragmentView):
         works in conjunction with the Django pipeline to ensure that in development mode
         the files are loaded individually, but in production just the single bundle is loaded.
         """
-        return list(set(self.get_js_dependencies('discussion_vendor')))
+        return list(OrderedDict.fromkeys(self.get_js_dependencies('discussion_vendor')))
 
     def js_dependencies(self):
         """
