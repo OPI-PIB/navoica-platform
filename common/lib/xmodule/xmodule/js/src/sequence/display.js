@@ -27,6 +27,9 @@
                 $.scrollTo(0, 0);
                 return Sequence.prototype.goto.apply(self, [event]);
             };
+            this.keyDownHandler = function(event) {
+                return Sequence.prototype.keyDownHandler.apply(self, [event]);
+            };
             this.toggleArrows = function() {
                 return Sequence.prototype.toggleArrows.apply(self);
             };
@@ -45,7 +48,7 @@
                 RIGHT: 39,
                 DOWN: 40
             };
-            this.$('#sequence-list .tab').eq(0).focus();
+
             this.updatedProblems = {};
             this.requestToken = $(element).data('request-token');
             this.el = $(element).find('.sequence');
@@ -58,7 +61,8 @@
             this.ajaxUrl = this.el.data('ajax-url');
             this.nextUrl = this.el.data('next-url');
             this.prevUrl = this.el.data('prev-url');
-            this.keydownHandler($(element).find('#sequence-list .tab'));
+            this.previousButtonClass = '.sequence-nav-button.button-previous';
+            this.nextButtonClass = '.sequence-nav-button.button-next';
             this.base_page_title = ($('title').data('base-title') || '').trim();
             this.bind();
             this.render(parseInt(this.el.data('position'), 10));
@@ -70,63 +74,30 @@
 
         Sequence.prototype.bind = function() {
             this.$('#sequence-list .nav-item').click(this.goto);
-            this.$('#sequence-list .nav-item').keypress(this.keyDownHandler);
+            $('body').keydown(this.keyDownHandler);
             this.el.on('bookmark:add', this.addBookmarkIconToActiveNavItem);
             this.el.on('bookmark:remove', this.removeBookmarkIconFromActiveNavItem);
             this.$('#sequence-list .nav-item').on('focus mouseenter', this.displayTabTooltip);
             this.$('#sequence-list .nav-item').on('blur mouseleave', this.hideTabTooltip);
         };
 
-        Sequence.prototype.previousNav = function(focused, index) {
-            var $navItemList,
-                $sequenceList = $(focused).parent().parent().parent();
-            if (index === 0) {
-                $navItemList = $sequenceList.find('li').last();
-            } else {
-                $navItemList = $sequenceList.find('li:eq(' + index + ')').prev();
-            }
-            $sequenceList.find('.tab').removeClass('active');
-            $navItemList.find('.tab').addClass('active').focus();
-            $navItemList.find('.tab').addClass('active').click();
-        };
+        Sequence.prototype.keyDownHandler = function(event) {
 
-        Sequence.prototype.nextNav = function(focused, index, total) {
-            var $navItemList,
-                $sequenceList = $(focused).parent().parent().parent();
-            if (index === total) {
-                $navItemList = $sequenceList.find('li').first();
-            } else {
-                $navItemList = $sequenceList.find('li:eq(' + index + ')').next();
-            }
-            $sequenceList.find('.tab').removeClass('active');
-            $navItemList.find('.tab').addClass('active').focus();
-            $navItemList.find('.tab').addClass('active').click();
-        };
-
-        Sequence.prototype.keydownHandler = function(element) {
-            var self = this;
-            element.keydown(function(event) {
-                var key = event.keyCode,
-                    $focused = $(event.currentTarget),
-                    $sequenceList = $focused.parent().parent().parent(),
-                    index = $sequenceList.find('li')
-                        .index($focused.parent().parent()),
-                    total = $sequenceList.find('li')
-                        .size() - 1;
-                switch (key) {
-                case self.arrowKeys.LEFT:
+            var key = event.keyCode;
+            switch (key) {
+                case this.arrowKeys.LEFT:
                     event.preventDefault();
-                    self.previousNav($focused, index);
+                    if (!$(this.previousButtonClass).hasClass('disabled')){
+                        this._change_sequential('previous', event);
+                    }
                     break;
-
-                case self.arrowKeys.RIGHT:
+                case this.arrowKeys.RIGHT:
                     event.preventDefault();
-                    self.nextNav($focused, index, total);
+                    if (!$(this.nextButtonClass).hasClass('disabled')){
+                        this._change_sequential('next', event);
+                    }
                     break;
-
-                // no default
                 }
-            });
         };
 
         Sequence.prototype.displayTabTooltip = function(event) {

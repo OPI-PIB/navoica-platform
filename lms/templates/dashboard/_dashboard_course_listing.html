@@ -65,7 +65,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
               <figure>
                 <img src="${course_overview.image_urls['small']}" class="card-img-top">
               </figure>
-              <div>
+            
 
                 % if show_courseware_link and not is_unfulfilled_entitlement:
             % if not is_course_blocked:
@@ -93,12 +93,13 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                 <span>${course_overview.id.run}</span>
              </p>
            </div>
-           <p class="card-text" id="border_top">${course_overview.short_description}</p>
+           <p class="course-text" id="border_top">${course_overview.short_description}</p>
            </div>
-          </div>
+          
 
 
            <div class="card-footer" id="border_top">
+            
              <div class="course-meta">
 
                 <%

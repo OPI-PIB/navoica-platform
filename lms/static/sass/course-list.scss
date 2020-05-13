@@ -4579,7 +4579,7 @@ input {
 
 .card-title {
   margin-bottom: 1rem;
-  flex: 0 0 10rem;
+  flex: 1 1 auto;
 }
 .about-us .card-title {
   margin-bottom: 1rem;
@@ -10531,10 +10531,12 @@ main.container aside {
 }
 
 .card {
+  .course-text {
+    min-height: 7.5rem;
+  }
   .course-meta {
     margin-bottom: 1rem;
-    min-height: 4.875em;
-
+    min-height: 6.25rem;
     p {
       margin: 0;
 
@@ -10552,7 +10554,8 @@ main.container aside {
 .card-text {
     border-top: none;
     padding: .5rem 0;
-  }
+    min-height: 3.75rem;
+}
 
 .course-details .course-details-icon {
   align-items: center;
