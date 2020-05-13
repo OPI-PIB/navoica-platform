@@ -11529,4 +11529,50 @@ code {color: black;}
   }
 }
 
+.openassessment {
+  .step__header, .staff__grade__header, .action, .staff-assessment__display__header {
+    display: unset !important;
+  }
+  .staff__grade__header {
+    border: unset !important;
+    padding: 0 !important;
+  }
+  .openassessment__steps .openassessment__steps__step {
+    margin-bottom: 20px !important;
+  }
+  .submission__save {
+    display: inline-block !important;
+  }
+  .step__deadline {
+    vertical-align: middle;
+  }
+  .openassessment_student_info_form .label {
+    white-space: unset !important;
+    display: unset !important;
+    input {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .student__answer__display__content, .staff-info__final__grade__score {
+    p {
+      color: unset !important;
+    }
+  }  
+  .staff-info__cancel-submission__content {
+    label {
+      display: unset !important;
+      white-space: unset !important;
+    }
+  }
+  .question__title {
+    display: block;
+  }
+  h4, h3 {
+    font-size: unset !important;
+    font-weight: unset !important;
+    line-height: unset !important;
+    margin: unset !important;
+  }
+}
+
 @import 'elements/_creative-commons';
