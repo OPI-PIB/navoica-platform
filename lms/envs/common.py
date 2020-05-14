@@ -417,7 +417,7 @@ FEATURES = {
 
     'UNSUPPORTED_BROWSER_ALERT_VERSIONS': "{e:0,f:-3,o:0,s:-3,c:-3,i:20}",
     
-    'THIRD_PARTY_AUTH_HINT': null,
+    'THIRD_PARTY_AUTH_HINT': None,
 }
 
 COURSE_DISCOVERY_FILTERS = ['course_category', 'availability', 'organizer', 'difficulty']
