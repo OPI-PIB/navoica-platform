@@ -19,11 +19,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <div class="authorization-confirmation container">
   % if not error:
   <p>
-  ${Text(_("{start_strong}{application_name}{end_strong} would like to access your data with the following permissions:")).format(
-    start_strong=HTML("<strong>"),
-    application_name=client.name,
-    end_strong=HTML("</strong>")
-  )}
+  ${_("Application would like to access your data with the following permissions:")}
   </p>
   <ul>
     % for permission in scopes(oauth_data['scope']):
