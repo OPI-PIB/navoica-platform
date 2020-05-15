@@ -51,6 +51,7 @@ git+https://github.com/edx/RecommenderXBlock.git@1.3#egg=recommender-xblock==1.3
 -e git+https://github.com/OPI-PIB/xblock-inline-dropdown.git#egg=xblock-inline-dropdown
 git+https://github.com/edx/xblock-utils.git@v1.1.1#egg=xblock-utils==1.1.1
 -e git+https://github.com/OPI-PIB/videojsXBlock.git#egg=videojs-xblock
+-e git+https://github.com/OPI-PIB/xblock-audioplayer.git@v0.1#egg=audioplayer-xblock==0.1
 -e common/lib/xmodule
 amqp==1.4.9               # via kombu
 analytics-python==1.1.0
