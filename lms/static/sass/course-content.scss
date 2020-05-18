@@ -11573,6 +11573,45 @@ code {color: black;}
     line-height: unset !important;
     margin: unset !important;
   }
+
+  .message--error {
+    margin: 8px 0 !important;
+    color: #770f1d !important;
+    padding: 16px 16px 0 16px !important;
+    background-color: #fad2d7 !important;
+    border-top: 2px solid #770f1d !important;
+    div {
+      display: flex;
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+    .message__content {
+      p {
+        font-weight: unset !important;
+      }
+    }
+    p {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      line-height: 21px !important;
+      color: #770f1d !important;
+    }
+  }
+  .tip {
+    padding-left: 15px;
+  }
+  button:focus {
+    outline: unset !important;
+  }
+  .step__label {
+    color: #343a40;
+  }
+  .step--staff-assessment {
+    button {
+      padding: 0 !important;
+    }
+  }
 }
 
 @import 'elements/_creative-commons';

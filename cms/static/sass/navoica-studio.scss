@@ -1305,4 +1305,35 @@ div#edit_textbook_error {
     line-height: unset !important;
     margin: unset !important;
   }
+
+  .message--error {
+    margin: 8px 0 8px !important;
+    color: #770f1d !important;
+    padding: 16px !important;
+    background-color: #fad2d7 !important;
+    border-top: 2px solid #770f1d !important;
+    .message__content {
+      p {
+        font-weight: unset !important;
+      }
+    }
+    p {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      line-height: 21px !important;
+      color: #770f1d !important;
+      margin-bottom: 1em;
+    }
+  }
+    button:focus {
+    outline: unset !important;
+  }
+  .step__label {
+    color: #343a40;
+  }
+  .step--staff-assessment {
+    button {
+      padding: 0 !important;
+    }
+  }
 }
