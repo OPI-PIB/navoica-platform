@@ -10524,11 +10524,11 @@ main.container aside {
 
 .card {
   .course-text {
-    min-height: 7.5rem;
+    min-height: 6rem;
   }
   .course-meta {
-    margin-bottom: 1rem;
-    min-height: 6.25rem;
+    margin-bottom: 0.5rem;
+    min-height: 5rem;
     p {
       margin: 0;
 
@@ -11187,6 +11187,9 @@ input.form-control.form-control {
 
 #results {
    padding: 0 !important;
+   img {
+    width: 100%;
+   }
 }
 
 #result {
@@ -11264,7 +11267,7 @@ li.list-group-item {
   }
 }
 
-#results, #filters, #filter{
+#results, #filters, #filter, .sidebar, #courses-list-header{
   #h2 {
     line-height: 2.5;
   }
@@ -11773,6 +11776,9 @@ aside {
     overflow: hidden;
     position: relative;
     margin-bottom: 2rem;
+    img {
+      width: 100%;
+    }
   }
 }
 
