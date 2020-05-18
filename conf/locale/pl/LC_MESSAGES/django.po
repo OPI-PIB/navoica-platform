@@ -20,6 +20,7 @@
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
+# krystianlygas <krystian.lygas@gmail.com>, 2020
 #
 # #-#-#-#-#  mako.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -63,7 +64,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-13 14:04+0000\n"
+"POT-Creation-Date: 2020-05-14 07:59+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -12715,6 +12716,10 @@ msgid "{platform_name} Support Levels:"
 msgstr "Poziomy wsparcia {platform_name}:"
 
 #: cms/djangoapps/contentstore/views/component.py
+msgid "Embedded Answers"
+msgstr "Zagnieżdżone z luką"
+
+#: cms/djangoapps/contentstore/views/component.py
 msgid "HTML"
 msgstr "HTML"
 
@@ -13244,84 +13249,9 @@ msgstr "Nieprawidłowy format pola '{name}'. {detailed_message}"
 msgid "Navoica.pl Studio"
 msgstr "Navoica.pl Studio"
 
-#: cms/envs/common.py cms/templates/board_base.html
-msgid "Studio"
-msgstr "Studio"
-
 #: cms/lib/xblock/tagging/tagging.py
 msgid "Dictionary with the available tags"
 msgstr "Dziennik dostępnych tagów"
-
-#: wiki/templates/wiki/base.html
-msgid "Search..."
-msgstr "Szukaj..."
-
-#: cms/templates/board_base.html
-msgid "Advanced search"
-msgstr ""
-
-#: cms/templates/widgets/header.html lms/templates/user_dropdown.html
-#: lms/templates/header/user_dropdown.html
-msgid "Account"
-msgstr "Konto"
-
-#: cms/templates/widgets/header.html
-msgid "Account Navigation"
-msgstr "Zarządzanie kontem"
-
-#: cms/templates/widgets/header.html
-msgid "Contextual Online Help"
-msgstr "Kontekstowa pomoc online"
-
-#: cms/templates/widgets/header.html
-#: lms/templates/navigation/navbar-authenticated.html
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: lms/templates/static_templates/help.html
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html
-#: wiki/plugins/help/wiki_plugin.py
-msgid "Help"
-msgstr "Pomoc"
-
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/header/user_dropdown.html
-#: lms/templates/navigation/navbar-authenticated.html
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html
-msgid "Profile"
-msgstr "Profil"
-
-#: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
-#: lms/templates/header/user_dropdown.html
-msgid "Sign Out"
-msgstr "Wyloguj się"
-
-#: cms/templates/register.html cms/templates/widgets/header.html
-msgid "Sign Up"
-msgstr "Zarejestruj się"
-
-#: cms/templates/widgets/footer.html
-msgid "Policies"
-msgstr "Zasady"
-
-#: cms/templates/widgets/footer.html
-msgid "LMS"
-msgstr "LMS"
-
-#: cms/templates/widgets/footer.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "Legal"
-msgstr "Informacje prawne"
-
-#: cms/templates/board_base.html
-msgid ""
-" EdX, Open edX, Studio, and the edX and Open edX logos are registered "
-"trademarks or trademarks of <a data-rel='edx.org' "
-"href='https://www.edx.org/'> edX Inc.</a> "
-msgstr ""
-
-#: cms/templates/board_base.html
-msgid "Powered by: "
-msgstr ""
 
 #: cms/urls.py
 msgid "Studio Administration"
@@ -13490,11 +13420,30 @@ msgstr "Wyświetl"
 msgid "Reset"
 msgstr "Zresetuj"
 
+#: cms/templates/widgets/footer.html
+#: themes/red-theme/lms/templates/footer.html
+msgid "Legal"
+msgstr "Informacje prawne"
+
 #: cms/templates/widgets/header.html lms/templates/header/header.html
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
 msgstr "Wybierz język"
+
+#: cms/templates/widgets/header.html lms/templates/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
+msgid "Account"
+msgstr "Konto"
+
+#: cms/templates/widgets/header.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: lms/templates/static_templates/help.html
+#: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: wiki/plugins/help/wiki_plugin.py
+msgid "Help"
+msgstr "Pomoc"
 
 #: cms/templates/widgets/sock.html
 #: themes/edx.org/cms/templates/widgets/sock.html
@@ -13561,6 +13510,11 @@ msgstr "Menu użytkownika"
 #: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
 msgid "Usermenu dropdown"
 msgstr "Rozwijane menu"
+
+#: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
+msgid "Sign Out"
+msgstr "Wyloguj się"
 
 #: common/lib/capa/capa/templates/codeinput.html
 msgid "Code Editor"
@@ -18752,6 +18706,14 @@ msgstr ""
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
 msgid "Programs"
 msgstr "Programy"
+
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/user_dropdown.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header/navbar-authenticated.html
+msgid "Profile"
+msgstr "Profil"
 
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
@@ -26080,6 +26042,10 @@ msgstr ""
 "każdej biblioteki musi istnieć co najmniej jeden użytkownik o statusie "
 "administratora."
 
+#: cms/templates/register.html cms/templates/widgets/header.html
+msgid "Sign Up"
+msgstr "Zarejestruj się"
+
 #: cms/templates/register.html
 msgid "Sign Up for {studio_name}"
 msgstr "Zarejestruj się w {studio_name}"
@@ -27159,8 +27125,16 @@ msgstr ""
 "konta."
 
 #: cms/templates/widgets/footer.html
+msgid "Policies"
+msgstr "Zasady"
+
+#: cms/templates/widgets/footer.html
 msgid "Accessibility Accommodation Request"
 msgstr "Prośba o przystosowanie i ułatwienie dostępu"
+
+#: cms/templates/widgets/footer.html
+msgid "LMS"
+msgstr "LMS"
 
 #. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
 #. Inc.'. Please do not translate any of these trademarks and company names.
@@ -27199,6 +27173,14 @@ msgstr "Obecna biblioteka:"
 #: cms/templates/widgets/header.html
 msgid "Language preference"
 msgstr "Preferencje językowe"
+
+#: cms/templates/widgets/header.html
+msgid "Account Navigation"
+msgstr "Zarządzanie kontem"
+
+#: cms/templates/widgets/header.html
+msgid "Contextual Online Help"
+msgstr "Kontekstowa pomoc online"
 
 #: cms/templates/widgets/header.html
 msgid "Forum"
@@ -28158,6 +28140,10 @@ msgstr "Brak powiadomień "
 #: wiki/plugins/notifications/templates/wiki/plugins/notifications/menubaritem.html
 msgid "Clear notifications list"
 msgstr "Clear notifications list"
+
+#: wiki/templates/wiki/base.html
+msgid "Search..."
+msgstr "Szukaj..."
 
 #: wiki/templates/wiki/base.html
 msgid "Log out"
