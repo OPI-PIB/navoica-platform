@@ -11533,6 +11533,12 @@ code {color: black;}
   .step__header, .staff__grade__header, .action, .staff-assessment__display__header {
     display: unset !important;
   }
+  .step__header {
+    cursor: pointer;
+  }
+  .step__header:focus {
+    outline-color: white;
+  }
   .staff__grade__header {
     border: unset !important;
     padding: 0 !important;
