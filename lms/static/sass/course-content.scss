@@ -11529,5 +11529,95 @@ code {color: black;}
   }
 }
 
+.openassessment {
+  .step__header, .staff__grade__header, .action, .staff-assessment__display__header {
+    display: unset !important;
+  }
+  .step__header {
+    cursor: pointer;
+  }
+  .step__header:focus {
+    outline-color: white;
+  }
+  .staff__grade__header {
+    border: unset !important;
+    padding: 0 !important;
+  }
+  .openassessment__steps .openassessment__steps__step {
+    margin-bottom: 20px !important;
+  }
+  .submission__save {
+    display: inline-block !important;
+  }
+  .step__deadline {
+    vertical-align: middle;
+  }
+  .openassessment_student_info_form .label {
+    white-space: unset !important;
+    display: unset !important;
+    input {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .student__answer__display__content, .staff-info__final__grade__score {
+    p {
+      color: unset !important;
+    }
+  }  
+  .staff-info__cancel-submission__content {
+    label {
+      display: unset !important;
+      white-space: unset !important;
+    }
+  }
+  .question__title {
+    display: block;
+  }
+  h4, h3 {
+    font-size: unset !important;
+    font-weight: unset !important;
+    line-height: unset !important;
+    margin: unset !important;
+  }
+
+  .message--error {
+    margin: 8px 0 !important;
+    color: #770f1d !important;
+    padding: 16px 16px 0 16px !important;
+    background-color: #fad2d7 !important;
+    border-top: 2px solid #770f1d !important;
+    div {
+      display: flex;
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+    .message__content {
+      p {
+        font-weight: unset !important;
+      }
+    }
+    p {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      line-height: 21px !important;
+      color: #770f1d !important;
+    }
+  }
+  .tip {
+    padding-left: 15px;
+  }
+  button:focus {
+    outline: unset !important;
+  }
+  .step__label {
+    color: #343a40;
+  }
+  .step--staff-assessment {
+    button {
+      padding: 0 !important;
+    }
+  }
+}
 
 @import 'elements/_creative-commons';

@@ -9,14 +9,12 @@
 		<% } %>
 	    </figure>
 	      <div>
-		<h4 class="card-title"><%- content.display_name %></h4>
-		<p class="card-text">
-		<%- gettext(org_text) %>
-		</p>
+		  	<h4 class="card-title"><%- content.display_name %></h4>
 	      </div>
 	  </div>
 
 	  <div class="card-footer small">
+	  	<p class="card-text"><%- gettext(org_text) %></p>
 		<p><time class="course-card-start"><i class="icon-calendar"></i> <%- interpolate(gettext("Starts: %(start_date)s"),{ start_date: start }, true) %></time></p>
 	  </div>
 	</a>

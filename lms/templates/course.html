@@ -19,12 +19,12 @@ from six import text_type
 	  			<img class="card-img-top" src="${course.course_image_url}" alt="">
 			</figure>
 	   	    <h4 class="card-title">${course.display_name_with_default}</h4>
-	  		% if course.organizer:
-				<p class="card-text">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</p>
-	  		% endif
          </div>
 
 		<div class="card-footer small">
+			% if course.organizer:
+				<p class="card-text">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</p>
+	  		% endif
 			% if course_start_date is not None:
                 ${_('Starts')}:  <span class="localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="shortDate" data-datetime="${course_start_date}"></span>
             % endif
