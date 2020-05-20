@@ -158,8 +158,7 @@
           valid_elements: "*[*]",
           extended_valid_elements: "*[*]",
           paste_preprocess: function(plugin, args) {
-              args.content=args.content.replace(/(((\w+)|((\w+)-(\w+)))="([^']*?)")/gm, "");
-              args.content=args.content.replace(/<table/gm, '<table border="1" style="border-collapse: collapse; width: 100%;"')
+            args.content=args.content.replace(/(font-family(\:.*?\;))|(face=(\".*?\"))/gm, "");
           },
           setup: this.setupTinyMCE,
 
