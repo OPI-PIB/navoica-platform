@@ -11534,10 +11534,27 @@ code {color: black;}
     display: unset !important;
   }
   .step__header {
-    cursor: pointer;
+    cursor: default;
+    .step__title button {
+        opacity: 1;
+    }
   }
   .step__header:focus {
     outline-color: white;
+  }
+  .staff__grade__control:focus,
+  .staff__grade__header:focus,
+  .staff__grade__content:focus {
+      outline-color: #dee2e6;
+  }
+  
+  .wrapper--input, .field--textarea {
+    textarea:focus {
+      outline-color: #dee2e6;
+    } 
+    input:focus {
+      outline-color: #dee2e6;
+    } 
   }
   .staff__grade__header {
     border: unset !important;
