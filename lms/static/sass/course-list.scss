@@ -4574,11 +4574,11 @@ input {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1rem;
 }
 
 .card-title {
   flex: 1 1 auto;
+  min-height: 3rem;
 }
 .about-us .card-title {
   margin-bottom: 1rem;
@@ -9801,7 +9801,7 @@ section .display-2 {
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.5rem;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .card-footer {
@@ -9902,11 +9902,13 @@ footer {
     }
   }
 
+
   .about-us .card-body > figure {
     flex: 0 0 8rem;
     margin: 0;
   }
 }
+
 
 @media (max-width: 1279.98px) {
   .navbar-nav .nav-item {
@@ -10525,10 +10527,17 @@ main.container aside {
 .card {
   .course-text {
     min-height: 6rem;
+    width: 100%;
+  }
+  .card-footer {
+    .course-meta {
+      height: unset;
+    }
   }
   .course-meta {
     margin-bottom: 0.5rem;
-    min-height: 5rem;
+    height: 5.5rem;
+    width: 100%;
     p {
       margin: 0;
 
@@ -11159,7 +11168,7 @@ p.lead.text-center.my-3 {
     object-fit: cover;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
    .card-img-top {
      height: auto;
    }
@@ -12539,6 +12548,14 @@ fieldset {
   display: none !important;
 }
 
+
+
+@media (min-width: 960px) and (max-width: 1280px) {
+  .card-body > figure {
+     min-height: 5rem;
+  }  
+} 
+
 .card-body > figure {
     flex: 0 0 10rem;
     margin: 0 1rem 0 0;
@@ -12710,7 +12727,7 @@ main.container .d-flex {
 .page-header-search .input-text {width: 15rem;}
 }
 
-@media (min-width: 480px) and (max-width: 1280px) {
+@media (min-width: 480px) and (max-width: 1024px) {
   .card-title, .card-text, .course-meta {
     margin-left: 5px;
     margin-right: 5px;
@@ -12719,12 +12736,13 @@ main.container .d-flex {
     flex: auto;
   }
   .view-dashboard .card-title {
-    flex: 0 0 10rem;
+    flex: 0 0 21rem;
   }
   main.container > aside {
   //  flex: 0 0 345px;
   }
 }
+
 
 .accordion .card-body .list-group-flush {
   padding: 0;
