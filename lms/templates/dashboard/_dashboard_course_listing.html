@@ -62,6 +62,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
     <% course_target = reverse(course_home_url_name(course_overview.id), args=[unicode(course_overview.id)]) %>
           <div href="${course_target}" class="card h-100">
             <div class="card-body d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+              
               <figure>
                 <img src="${course_overview.image_urls['small']}" class="card-img-top">
               </figure>
@@ -93,7 +94,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                 <span>${course_overview.id.run}</span>
              </p>
            </div>
-           <p class="course-text" id="border_top">${course_overview.short_description}</p>
+           <div class="course-text" id="border_top">${course_overview.short_description}</div>
            </div>
           
 
@@ -160,7 +161,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                         % endif
                 </div>
             % endif
-
+                <div>
                       % if can_unenroll:
                           <% course_refund_url = reverse('course_run_refund_status', args=[unicode(course_overview.id)]) %>
                               % if not is_course_blocked:
@@ -191,6 +192,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                               </a>)
                             % endif
                     % endif
+                  </div>  
                      % if false:
                         % if show_email_settings:
                           % if not is_course_blocked:
