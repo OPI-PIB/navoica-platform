@@ -9797,10 +9797,6 @@ main.container aside h6 {
     color: initial !important;
   }
 
-  .submit-attempt-container {
-    padding-bottom: 1rem !important;
-  }
-
   #content .vert .notification {
     margin-top: unset;
     line-height: unset;
@@ -10984,7 +10980,7 @@ main.container aside h6 {
 
 
   .problem .action {
-    display: block !important;
+  //  display: block !important;
     .notification-btn-wrapper .notification-btn {
       white-space: nowrap;
       padding-left: 1rem;
@@ -11635,6 +11631,10 @@ code {color: black;}
       padding: 0 !important;
     }
   }
+}
+
+#seq_content .vert .xblock .wrapper-problem-response select {
+  max-width: 14.57rem;
 }
 
 @import 'elements/_creative-commons';
