@@ -10929,18 +10929,17 @@ article .display-3 {
 
       .action {
         margin-top: 0;
-        align-items: center;
         background-color: #f8f9fa;
         border: 1px solid #e9ecef;
-        border-top: 0;
-        display: flex;
         margin-bottom: 1rem;
         padding: 1rem 1rem 0 1rem;
+        overflow: auto;
+
+        button {
+          margin-bottom: 1rem;
+        }
 
         .submit-attempt-container {
-          align-items: center;
-          display: flex;
-          flex-grow: 1;
 
           .submission-feedback {
             font-size: .875rem;
