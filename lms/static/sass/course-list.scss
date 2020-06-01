@@ -10272,7 +10272,7 @@ aside {
 }
 
 #discovery-form {
-  background: rgba(200, 200, 200, 0.25);
+//  background: rgba(200, 200, 200, 0.25);
 
   button, input {
     color: #212529;
@@ -11298,6 +11298,14 @@ main.container {
       flex-direction: column;
    }
  }
+}
+
+@media (min-width: 960px) {
+  #content1 {
+   #discovery-message{
+    margin-bottom: -1rem;
+   }
+  } 
 }
 
 @media (min-width: 960px) {
