@@ -10929,18 +10929,17 @@ article .display-3 {
 
       .action {
         margin-top: 0;
-        align-items: center;
         background-color: #f8f9fa;
         border: 1px solid #e9ecef;
-        border-top: 0;
-        display: flex;
         margin-bottom: 1rem;
         padding: 1rem 1rem 0 1rem;
+        overflow: auto;
+
+        button {
+          margin-bottom: 1rem;
+        }
 
         .submit-attempt-container {
-          align-items: center;
-          display: flex;
-          flex-grow: 1;
 
           .submission-feedback {
             font-size: .875rem;
@@ -13516,5 +13515,28 @@ span.complete-checkmark.fa.fa-check {
     max-width: unset;
     padding: 0;
     width: unset; 
+  }
+}
+
+// Footer Facebook Icon Link
+
+.fb-link-icon {
+  background: #E41D37;
+  border: 1px solid #E41D37;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #f3f5f7;
+  display: flex;
+  flex: 0 0 36px;
+  font-size: 18px;
+  height: 36px;
+  width: 36px;
+  justify-content: center;
+  margin-right: 12px;
+  text-align: center;
+  align-content: normal;
+
+  i {
+    margin: auto;
   }
 }

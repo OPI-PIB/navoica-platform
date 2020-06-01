@@ -244,7 +244,8 @@ def get_component_templates(courselike, library=False):
         'problem': _("Problem"),
         'video': _("Video from Youtube"),
         'videojs': _("Video from cloud"),
-        'inline_dropdown': _('Inline Dropdown')
+        'inline_dropdown': _('Inline Dropdown'),
+        'embedded_answers': _('Embedded Answers'),
     }
 
     component_templates = []

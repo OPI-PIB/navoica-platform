@@ -39,7 +39,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-02-13 14:04+0000\n"
+"POT-Creation-Date: 2020-05-14 07:59+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
@@ -11270,6 +11270,10 @@ msgid "{platform_name} Support Levels:"
 msgstr ""
 
 #: cms/djangoapps/contentstore/views/component.py
+msgid "Embedded Answers"
+msgstr ""
+
+#: cms/djangoapps/contentstore/views/component.py
 msgid "HTML"
 msgstr ""
 
@@ -11761,85 +11765,8 @@ msgstr ""
 msgid "Navoica.pl Studio"
 msgstr ""
 
-#: cms/envs/common.py cms/templates/board_base.html
-msgid "Studio"
-msgstr ""
-
 #: cms/lib/xblock/tagging/tagging.py
 msgid "Dictionary with the available tags"
-msgstr ""
-
-#: cms/templates/board_base.html wiki/templates/wiki/base.html
-msgid "Search..."
-msgstr ""
-
-#: cms/templates/board_base.html
-msgid "Advanced search"
-msgstr ""
-
-#: cms/templates/board_base.html cms/templates/widgets/header.html
-#: lms/templates/user_dropdown.html lms/templates/header/user_dropdown.html
-msgid "Account"
-msgstr ""
-
-#: cms/templates/board_base.html cms/templates/widgets/header.html
-msgid "Account Navigation"
-msgstr ""
-
-#: cms/templates/board_base.html cms/templates/widgets/header.html
-msgid "Contextual Online Help"
-msgstr ""
-
-#: cms/templates/board_base.html cms/templates/widgets/header.html
-#: lms/templates/navigation/navbar-authenticated.html
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: lms/templates/static_templates/help.html
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html
-#: wiki/plugins/help/wiki_plugin.py
-msgid "Help"
-msgstr ""
-
-#: cms/templates/board_base.html
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/header/user_dropdown.html
-#: lms/templates/navigation/navbar-authenticated.html
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html
-msgid "Profile"
-msgstr ""
-
-#: cms/templates/board_base.html cms/templates/widgets/user_dropdown.html
-#: lms/templates/user_dropdown.html lms/templates/header/user_dropdown.html
-msgid "Sign Out"
-msgstr ""
-
-#: cms/templates/board_base.html cms/templates/register.html
-#: cms/templates/widgets/header.html
-msgid "Sign Up"
-msgstr ""
-
-#: cms/templates/board_base.html cms/templates/widgets/footer.html
-msgid "Policies"
-msgstr ""
-
-#: cms/templates/board_base.html cms/templates/widgets/footer.html
-msgid "LMS"
-msgstr ""
-
-#: cms/templates/board_base.html cms/templates/widgets/footer.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "Legal"
-msgstr ""
-
-#: cms/templates/board_base.html
-msgid ""
-" EdX, Open edX, Studio, and the edX and Open edX logos are registered "
-"trademarks or trademarks of <a data-rel='edx.org' "
-"href='https://www.edx.org/'> edX Inc.</a> "
-msgstr ""
-
-#: cms/templates/board_base.html
-msgid "Powered by: "
 msgstr ""
 
 #: cms/urls.py
@@ -12007,10 +11934,29 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
+#: cms/templates/widgets/footer.html
+#: themes/red-theme/lms/templates/footer.html
+msgid "Legal"
+msgstr ""
+
 #: cms/templates/widgets/header.html lms/templates/header/header.html
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
+msgstr ""
+
+#: cms/templates/widgets/header.html lms/templates/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
+msgid "Account"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: lms/templates/static_templates/help.html
+#: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: wiki/plugins/help/wiki_plugin.py
+msgid "Help"
 msgstr ""
 
 #: cms/templates/widgets/sock.html
@@ -12076,6 +12022,11 @@ msgstr ""
 
 #: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
 msgid "Usermenu dropdown"
+msgstr ""
+
+#: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
+msgid "Sign Out"
 msgstr ""
 
 #: common/lib/capa/capa/templates/codeinput.html
@@ -16767,6 +16718,14 @@ msgstr ""
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
 msgid "Programs"
+msgstr ""
+
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/user_dropdown.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header/navbar-authenticated.html
+msgid "Profile"
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html
@@ -22853,6 +22812,10 @@ msgid ""
 " library."
 msgstr ""
 
+#: cms/templates/register.html cms/templates/widgets/header.html
+msgid "Sign Up"
+msgstr ""
+
 #: cms/templates/register.html
 msgid "Sign Up for {studio_name}"
 msgstr ""
@@ -23787,7 +23750,15 @@ msgid ""
 msgstr ""
 
 #: cms/templates/widgets/footer.html
+msgid "Policies"
+msgstr ""
+
+#: cms/templates/widgets/footer.html
 msgid "Accessibility Accommodation Request"
+msgstr ""
+
+#: cms/templates/widgets/footer.html
+msgid "LMS"
 msgstr ""
 
 #. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
@@ -23824,6 +23795,14 @@ msgstr ""
 
 #: cms/templates/widgets/header.html
 msgid "Language preference"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+msgid "Account Navigation"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+msgid "Contextual Online Help"
 msgstr ""
 
 #: cms/templates/widgets/header.html
@@ -24715,6 +24694,10 @@ msgstr ""
 
 #: wiki/plugins/notifications/templates/wiki/plugins/notifications/menubaritem.html
 msgid "Clear notifications list"
+msgstr ""
+
+#: wiki/templates/wiki/base.html
+msgid "Search..."
 msgstr ""
 
 #: wiki/templates/wiki/base.html

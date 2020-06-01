@@ -123,7 +123,7 @@
           Disable visual aid on borderless table.
            */
           visual: false,
-          plugins: "textcolor link image code paste table preview importcss searchreplace autolink directionality visualblocks visualchars fullscreen media codesample charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap",
+          plugins: "textcolor link image codemirror paste table preview importcss searchreplace autolink directionality visualblocks visualchars fullscreen media codesample charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap",
           image_advtab: true,
 
           /*
@@ -147,6 +147,9 @@
           menubar: false,
           statusbar: false,
           paste_as_text: false,
+          codemirror: {
+            path: baseUrl + "/js/vendor"
+          },
           /*
           Necessary to avoid stripping of style tags.
            */
