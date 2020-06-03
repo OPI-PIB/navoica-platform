@@ -11543,14 +11543,14 @@ code {color: black;}
   .staff__grade__content:focus {
       outline-color: #dee2e6;
   }
-  
+
   .wrapper--input, .field--textarea {
     textarea:focus {
       outline-color: #dee2e6;
-    } 
+    }
     input:focus {
       outline-color: #dee2e6;
-    } 
+    }
   }
   .staff__grade__header {
     border: unset !important;
@@ -11576,7 +11576,7 @@ code {color: black;}
     p {
       color: unset !important;
     }
-  }  
+  }
   .staff-info__cancel-submission__content {
     label {
       display: unset !important;
@@ -11635,6 +11635,160 @@ code {color: black;}
 
 #seq_content .vert .xblock .wrapper-problem-response select {
   max-width: 14.57rem;
+}
+
+// CAPA PROBLEM
+
+$checkmark-icon: '\f00c'; // .fa-check
+$cross-icon: '\f00d'; // .fa-close
+$asterisk-icon: '\f069'; // .fa-asterisk
+
+// +Mixins - Status Icon - Capa
+// ====================
+@mixin status-icon($color: $gray, $fontAwesomeIcon: "\f00d") {
+  .status-icon {
+    &::after {
+      @extend %use-font-awesome;
+
+      color: $color;
+      font-size: 1.2em;
+      content: $fontAwesomeIcon;
+    }
+  }
+}
+
+// +Extends - Capa
+// ====================
+// Duplicated from _mixins.scss due to xmodule compilation, inheritance issues
+%use-font-awesome {
+  font-family: FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  speak: none;
+}
+
+// +Problem - Text Input, Numerical Input
+// ====================
+.problem {
+  .capa_inputtype.textline, .inputtype.formulaequationinput {
+    input {
+      border: 2px solid gray;
+      border-radius: 3px;
+      min-width: 160px;
+      height: 46px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: (baseline/2);
+      background: none;
+    }
+
+    // CASE: incorrect answer
+    > .incorrect {
+      input {
+        border: 2px solid red;
+      }
+
+      .status {
+        @include status-icon(red, $cross-icon);
+      }
+    }
+
+    // CASE: partially correct answer
+    > .partially-correct {
+      input {
+        border: 2px solid orange;
+      }
+
+      .status {
+        @include status-icon(orange, $asterisk-icon);
+      }
+    }
+
+    // CASE: correct answer
+    > .correct {
+      input {
+        border: 2px solid green;
+        display: inline-block !important;
+      }
+
+      .status {
+        @include status-icon(green, $checkmark-icon);
+      }
+    }
+
+    // CASE: submitted, correctness withheld
+    > .submitted {
+      input {
+        border: 2px solid green;
+      }
+
+      .status {
+        content: '';
+      }
+    }
+
+    // CASE: unanswered and unsubmitted
+    > .unanswered, > .unsubmitted {
+      input {
+        border: 2px solid gray;
+      }
+
+      .status {
+        .status-icon {
+          &::after {
+            content: '';
+          }
+        }
+      }
+    }
+
+  }
+
+  .trailing_text {
+        display: inline-block;
+  }
+}
+
+
+// +Problem - Option Input (Dropdown)
+// ====================
+.problem {
+  .inputtype.option-input {
+    margin: (-baseline/2) 0 baseline;
+
+    .indicator-container {
+      display: inline-block;
+    }
+  }
+}
+
+div.equation {
+  clear: both;
+  margin-top: 3px;
+
+  .MathJax_Display {
+    width: auto;
+  }
+
+  img.loading {
+     display: inline-block;
+  }
+
+  span {
+    margin-bottom: 0;
+    display: inline-block;
+
+    &.MathJax_CHTML, &.MathJax, &.MathJax_SVG {
+      padding: 6px;
+      min-width: 30px;
+      border: 1px solid var(--dark);
+      border-radius: 4px;
+      background: #f1f1f1;
+      margin-bottom: 1em;
+    }
+  }
 }
 
 @import 'elements/_creative-commons';
