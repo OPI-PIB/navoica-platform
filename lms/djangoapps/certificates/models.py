@@ -350,6 +350,17 @@ class GeneratedCertificate(models.Model):
                 status=self.status,
             )
 
+class CertificateGenerationMergeHistory(TimeStampedModel):
+    course_id = CourseKeyField(max_length=255)
+    generated_by = models.ForeignKey(User)
+    pdf = models.FileField(upload_to="merge_certificates")
+    instructor_task = models.ForeignKey(InstructorTask)
+
+    def get_task_name(self):
+        if self.pdf.name:
+            return _("generated")
+        return _("generating")
+
 
 class CertificateGenerationHistory(TimeStampedModel):
     """

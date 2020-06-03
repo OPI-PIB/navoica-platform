@@ -28,7 +28,7 @@ from lms.djangoapps.certificates import api as certs_api
 from lms.djangoapps.certificates.models import (
     CertificateGenerationConfiguration,
     CertificateGenerationHistory,
-    CertificateInvalidation,
+    CertificateGenerationMergeHistory, CertificateInvalidation,
     CertificateStatuses,
     CertificateWhitelist,
     GeneratedCertificate
@@ -371,6 +371,9 @@ def _section_certificates(course):
         'status': CertificateStatuses,
         'certificate_generation_history':
             CertificateGenerationHistory.objects.filter(course_id=course.id).order_by("-created"),
+        'certificate_merge_history':
+            CertificateGenerationMergeHistory.objects.filter(
+                course_id=course.id).order_by("-created"),
         'urls': {
             'generate_example_certificates': reverse(
                 'generate_example_certificates',
@@ -386,6 +389,10 @@ def _section_certificates(course):
             ),
             'start_certificate_regeneration': reverse(
                 'start_certificate_regeneration',
+                kwargs={'course_id': course.id}
+            ),
+            'start_merge_certificates': reverse(
+                'start_merge_certificates',
                 kwargs={'course_id': course.id}
             ),
             'list_instructor_tasks_url': reverse(

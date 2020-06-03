@@ -174,6 +174,31 @@ from openedx.core.djangolib.js_utils import dump_js_escaped_json, js_escaped_str
             </table>
         </div>
     </div>
+    <div class="certificate-generation-history">
+        <h3 class="hd hd-3 title">${_("Multiple Certificate Download History")}</h3>
+        <div class="certificate-generation-history-content">
+            <table>
+                <thead>
+                <tr>
+                    <th class="task-name" scope="col">${_('Task name')}</th>
+                    <th class="task-date" scope="col">${_('Date')}</th>
+                    <th class="task-details" scope="col">${_('Details')}</th>
+                </tr>
+                </thead>
+                <tbody>
+                % for history in section_data['certificate_merge_history']:
+                    <tr>
+                        <td>${history.get_task_name().title()}</td>
+                        <td>${history.created.strftime('%Y-%m-%d')}</td>
+                        <td>${history.pdf}</td>
+                    </tr>
+                % endfor
+                </tbody>
+            </table><br/>
+            <input type="button" class="btn btn-outline-primary btn-sm btn-blue" id="btn-start-merge-certificates" value="${_('Start Merge All Certificates')}" data-endpoint="${section_data['urls']['start_merge_certificates']}"/>
+            <div id="certificate-merge-status"></div>
+        </div>
+    </div>
     <div class="certificate-exception-container">
          <h3 class="hd hd-3"> ${_("SET CERTIFICATE EXCEPTIONS")} </h3>
          <p class="under-heading info">

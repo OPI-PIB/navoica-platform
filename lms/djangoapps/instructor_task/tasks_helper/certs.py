@@ -5,6 +5,7 @@ from time import time
 
 from django.contrib.auth.models import User
 from django.db.models import Q
+import requests
 
 from lms.djangoapps.certificates.api import generate_user_certificates
 from lms.djangoapps.certificates.models import CertificateStatuses, GeneratedCertificate
@@ -16,10 +17,7 @@ from .runner import TaskProgress
 
 def generate_students_certificates(
         _xmodule_instance_args, _entry_id, course_id, task_input, action_name):
-    """
-    For a given `course_id`, generate certificates for only students present in 'students' key in task_input
-    json column, otherwise generate certificates for all enrolled students.
-    """
+
     start_time = time()
     students_to_generate_certs_for = CourseEnrollment.objects.users_enrolled_in(course_id)
 
@@ -87,6 +85,57 @@ def generate_students_certificates(
 
     return task_progress.update_task_state(extra_meta=current_step)
 
+def merging_all_course_certificates(
+        _xmodule_instance_args, _entry_id, course_id, task_input, action_name):
+    from lms.djangoapps.certificates.views import render_cert_by_uuid
+
+    """
+    For a given `course_id`, generate certificates for only students present in 'students' key in task_input
+    json column, otherwise generate certificates for all enrolled students.
+    """
+    start_time = time()
+    students_to_generate_certs_for = CourseEnrollment.objects.users_enrolled_in(course_id)
+
+    certificates = GeneratedCertificate.eligible_certificates.filter(
+        status=CertificateStatuses.downloadable,
+        course_id=course_id
+    )
+
+    task_progress = TaskProgress(action_name, certificates.count(), start_time)
+
+    current_step = {'step': 'Generating Certificates'}
+    task_progress.update_task_state(extra_meta=current_step)
+
+    # Generate certificate for each student
+    for certificate in certificates:
+        task_progress.attempted += 1
+
+        output = render_cert_by_uuid(None, certificate.verify_uuid)
+
+        multipart_form_data = {
+            'file': ('index.html', output.content),
+            'marginTop': (None, '0',),
+            'marginBottom': (None, '0',),
+            'marginLeft': (None, '0',),
+            'marginRight': (None, '0',),
+            'landscape': (None, 'true',),
+        }
+
+        # $ docker run --rm -p 3000:3000 thecodingmachine/gotenberg:5
+        r = requests.post('http://gotenberg:3000/convert/html',
+                          files=multipart_form_data)
+
+        with open("/tmp/certificate_tmp/"+certificate.verify_uuid+".pdf", 'wb') as f:
+            f.write(r.content)
+
+
+        current_step = {'step': certificate.verify_uuid}
+        task_progress.update_task_state(extra_meta=current_step)
+
+        task_progress.succeeded += 1
+        #task_progress.failed += 1
+
+    return task_progress.update_task_state(extra_meta=current_step)
 
 def students_require_certificate(course_id, enrolled_students, statuses_to_regenerate=None):
     """

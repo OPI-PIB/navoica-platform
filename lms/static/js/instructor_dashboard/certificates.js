@@ -99,6 +99,36 @@ var onCertificatesReady = null;
                 }
             });
         });
+
+        $section.on('click', '#btn-start-merge-certificates', function(event) {
+            if (!confirm(gettext('Prepare merged pdf contains all certificates in this course?'))) {
+                event.preventDefault();
+                return;
+            }
+
+            var btn_merge_certs = $(this);
+            var certificate_merge_status = $('.certificate-merge-status');
+            var url = $(btn_merge_certs).data('endpoint');
+
+            $.ajax({
+                type: 'POST',
+                url: url,
+                success: function(data) {
+                    //$(btn_merge_certs).attr('disabled', 'disabled');
+                    $(certificate_merge_status).text(data.message).addClass('message');
+                },
+                error: function(jqXHR) {
+                    try {
+                        var response = JSON.parse(jqXHR.responseText);
+                        $(certificate_merge_status).text(gettext(response.message)).addClass('message');
+                    } catch (error) {
+                        $(certificate_merge_status).
+                            text(gettext('Error while regenerating certificates. Please try again.')).
+                            addClass('message');
+                    }
+                }
+            });
+        });
     };
 
     // Call onCertificatesReady on document.ready event
@@ -111,11 +141,11 @@ var onCertificatesReady = null;
         }
 
         Certificates.prototype.onClickTitle = function() {
-            return this.instructor_tasks.task_poller.start();
+            //return this.instructor_tasks.task_poller.start();
         };
 
         Certificates.prototype.onExit = function() {
-            return this.instructor_tasks.task_poller.stop();
+            //return this.instructor_tasks.task_poller.stop();
         };
         return Certificates;
     }());
