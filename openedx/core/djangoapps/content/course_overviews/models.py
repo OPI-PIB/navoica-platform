@@ -172,7 +172,7 @@ class CourseOverview(TimeStampedModel):
         course_overview.end = end
         course_overview.advertised_start = course.advertised_start
         course_overview.announcement = course.announcement
-
+        course_overview.course_image_url = course_image_url(course)
         course_overview.social_sharing_url = course.social_sharing_url
 
         course_overview.certificates_display_behavior = course.certificates_display_behavior
