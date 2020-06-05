@@ -13,6 +13,7 @@
     box-sizing: border-box;
     position: relative;
     z-index: 1;
+    max-width: 36.5rem;
   }
 }
 
@@ -37,6 +38,10 @@ margin-top: unset !important;
 
 .wmd-preview {
 //  @include discussion-wmd-preview;
+max-width: 36.5rem;
+a {
+  word-wrap: anywhere;
+}
 }
 
 .wmd-button {
