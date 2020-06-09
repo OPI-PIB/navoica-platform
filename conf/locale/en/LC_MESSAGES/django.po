@@ -32,8 +32,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-05-18 10:03+0000\n"
-"PO-Revision-Date: 2020-05-18 10:03:29.367877\n"
+"POT-Creation-Date: 2020-06-09 11:59+0000\n"
+"PO-Revision-Date: 2020-06-09 11:59:41.533602\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -2451,6 +2451,11 @@ msgstr ""
 msgid ""
 "You must wait at least {wait_secs} between submissions. {remaining_secs} "
 "remaining."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
+msgid "Staff debug info: {tb}"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
@@ -11355,10 +11360,6 @@ msgid "{platform_name} Support Levels:"
 msgstr ""
 
 #: cms/djangoapps/contentstore/views/component.py
-msgid "Embedded Answers"
-msgstr ""
-
-#: cms/djangoapps/contentstore/views/component.py
 msgid "HTML"
 msgstr ""
 
@@ -11372,6 +11373,10 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Inline Dropdown"
+msgstr ""
+
+#: cms/djangoapps/contentstore/views/component.py
+msgid "Embedded Answers"
 msgstr ""
 
 #: cms/djangoapps/contentstore/views/component.py
