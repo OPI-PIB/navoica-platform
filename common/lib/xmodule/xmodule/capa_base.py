@@ -37,6 +37,10 @@ from openedx.core.djangolib.markup import HTML, Text
 
 log = logging.getLogger("edx.courseware")
 
+# set limit of traceback message
+sys.tracebacklimit = 0
+
+
 # Make '_' a no-op so we can scrape strings. Using lambda instead of
 #  `django.utils.translation.ugettext_noop` because Django cannot be imported in this file
 _ = lambda text: text
@@ -1240,7 +1244,7 @@ class CapaMixin(ScorableXBlockMixin, CapaFields):
             # the full exception, including traceback,
             # in the response
             if self.runtime.user_is_staff:
-                msg = u"Staff debug info: {tb}".format(tb=traceback.format_exc())
+                msg = _(u"Staff debug info: {tb}").format(tb=traceback.format_exc())
 
             # Otherwise, display just an error message,
             # without a stack trace
