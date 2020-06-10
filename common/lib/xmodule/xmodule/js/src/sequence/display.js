@@ -82,23 +82,24 @@
         };
 
         Sequence.prototype.keyDownHandler = function(event) {
-
-            var key = event.keyCode;
-            switch (key) {
-                case this.arrowKeys.LEFT:
-                    event.preventDefault();
-                    if (!$(this.previousButtonClass).hasClass('disabled')){
-                        this._change_sequential('previous', event);
+            if (!($(event.target).is("input") || $(event.target).is("textarea"))){
+                var key = event.keyCode;
+                switch (key) {
+                    case this.arrowKeys.LEFT:
+                        event.preventDefault();
+                        if (!$(this.previousButtonClass).hasClass('disabled')){
+                            this._change_sequential('previous', event);
+                        }
+                        break;
+                    case this.arrowKeys.RIGHT:
+                        event.preventDefault();
+                        if (!$(this.nextButtonClass).hasClass('disabled')){
+                            this._change_sequential('next', event);
+                        }
+                        break;
                     }
-                    break;
-                case this.arrowKeys.RIGHT:
-                    event.preventDefault();
-                    if (!$(this.nextButtonClass).hasClass('disabled')){
-                        this._change_sequential('next', event);
-                    }
-                    break;
-                }
-        };
+                };
+            };
 
         Sequence.prototype.displayTabTooltip = function(event) {
             $(event.currentTarget).find('.sequence-tooltip').removeClass('sr');
