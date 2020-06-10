@@ -129,7 +129,7 @@
           /*
           We may want to add "styleselect" when we collect all styles used throughout the LMS
            */
-          toolbar: "undo redo | formatselect | bold italic underline strikethrough | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor removeformat wrapAsCode | " +
+          toolbar: "undo redo | formatselect | bold italic underline strikethrough subscript superscript | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor removeformat wrapAsCode | " +
             " blockquote | link unlink | table | charmap | fullscreen  preview | codesample | " +
             ((this.new_image_modal ? 'insertImage' : 'image') + " | code"),
           toolbar_sticky: true,
