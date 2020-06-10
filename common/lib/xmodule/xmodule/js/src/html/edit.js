@@ -129,10 +129,11 @@
           /*
           We may want to add "styleselect" when we collect all styles used throughout the LMS
            */
-          toolbar: "undo redo | formatselect | bold italic underline strikethrough subscript superscript | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor removeformat wrapAsCode | " +
+          toolbar: "undo redo | formatselect | bold italic underline strikethrough subscript superscript | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor nonbreaking removeformat wrapAsCode | " +
             " blockquote | link unlink | table | charmap | fullscreen  preview | codesample | " +
             ((this.new_image_modal ? 'insertImage' : 'image') + " | code"),
           toolbar_sticky: true,
+          nonbreaking_force_tab: true,
           block_formats: interpolate("%(paragraph)s=p;%(preformatted)s=pre;%(heading3)s=h3;%(heading4)s=h4;%(heading5)s=h5;%(heading6)s=h6", {
             paragraph: gettext("Paragraph"),
             preformatted: gettext("Preformatted"),
