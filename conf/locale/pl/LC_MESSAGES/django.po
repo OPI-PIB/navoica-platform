@@ -33,9 +33,10 @@
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
 # Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
-# Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
+# Navoica Navoica <navoica@opi.org.pl>, 2020
+# Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -44,7 +45,6 @@
 # EdX Team <info@edx.org>, 2020.
 #
 # Translators:
-# krystianlygas <krystian.lygas@gmail.com>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
@@ -64,7 +64,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-05-14 07:59+0000\n"
+"POT-Creation-Date: 2020-06-15 13:41+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -97,7 +97,7 @@ msgid "Advanced"
 msgstr "Zaawansowane"
 
 #: cms/djangoapps/contentstore/views/entrance_exam.py
-#: lms/djangoapps/courseware/tabs.py cms/templates/settings.html
+#: lms/djangoapps/courseware/tabs.py
 msgid "Entrance Exam"
 msgstr "Egzamin wstępny"
 
@@ -1968,12 +1968,10 @@ msgid "See XML source line {sourcenum}."
 msgstr "Zobacz linię źródłową XML: {sourcenum}."
 
 #: common/lib/capa/capa/responsetypes.py
-#: cms/templates/widgets/problem-edit.html
 msgid "Checkboxes"
 msgstr "Pola wyboru"
 
 #: common/lib/capa/capa/responsetypes.py
-#: cms/templates/widgets/problem-edit.html
 msgid "Multiple Choice"
 msgstr "Wielokrotnego wyboru"
 
@@ -2001,12 +1999,10 @@ msgid "True/False Choice"
 msgstr "Wybór Prawda/Fałsz"
 
 #: common/lib/capa/capa/responsetypes.py
-#: cms/templates/widgets/problem-edit.html
 msgid "Dropdown"
 msgstr "Z rozwijaną listą"
 
 #: common/lib/capa/capa/responsetypes.py
-#: cms/templates/widgets/problem-edit.html
 msgid "Numerical Input"
 msgstr "Odpowiedź numeryczna"
 
@@ -2076,7 +2072,6 @@ msgid "or"
 msgstr "lub"
 
 #: common/lib/capa/capa/responsetypes.py
-#: cms/templates/widgets/problem-edit.html
 msgid "Text Input"
 msgstr "Pole tekstowe"
 
@@ -3267,7 +3262,7 @@ msgstr ""
 "\"Przesyłanie plików\". Grafikę możesz ustawić z poziomu strony \"Ustawienia"
 " i szczegóły\"."
 
-#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Banner Image"
 msgstr "Grafika kursu"
 
@@ -3279,7 +3274,7 @@ msgstr ""
 "Edytuj nazwę grafiki kursu. Możesz przypisać grafikę z poziomu \"Ustawienia "
 "i szczegóły\"."
 
-#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Video Thumbnail Image"
 msgstr "Obrazek - miniatura filmu promującego kurs"
 
@@ -3523,7 +3518,7 @@ msgstr "Obie"
 msgid "About"
 msgstr "O nas"
 
-#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "None"
 msgstr "Żaden"
 
@@ -3580,7 +3575,7 @@ msgstr ""
 " kursie\"), do którego będą się odwoływać media społecznościowe. Przykładowy"
 " odnośnik: http://www.edx.org/course/Introduction-to-MOOCs-ITM001"
 
-#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Language"
 msgstr "Język kursu"
 
@@ -3588,7 +3583,7 @@ msgstr "Język kursu"
 msgid "Specify the language of your course."
 msgstr "Określ język swojego kursu."
 
-#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Difficulty"
 msgstr "Poziom trudności"
 
@@ -3596,7 +3591,7 @@ msgstr "Poziom trudności"
 msgid "Specify the difficulty of your course."
 msgstr "Określ poziom trudności swojego kursu. "
 
-#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Organizer"
 msgstr "Organizator"
 
@@ -3604,7 +3599,7 @@ msgstr "Organizator"
 msgid "Specify the organizer of your course."
 msgstr "Określ organizatora swojego kursu."
 
-#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Category"
 msgstr "Kategoria kursu"
 
@@ -3612,7 +3607,7 @@ msgstr "Kategoria kursu"
 msgid "Specify the Category of your course."
 msgstr "Określ kategorię kursu. "
 
-#: common/lib/xmodule/xmodule/course_module.py cms/templates/settings.html
+#: common/lib/xmodule/xmodule/course_module.py
 msgid "Course Timetable"
 msgstr "Czas trwania kursu"
 
@@ -4022,7 +4017,6 @@ msgid "Zadanie losowane z puli pytań"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/library_content_module.py
-#: cms/templates/widgets/header.html
 msgid "Library"
 msgstr "Biblioteka"
 
@@ -4516,9 +4510,6 @@ msgstr ""
 "moocsupport@mathworks.com"
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
-#: cms/templates/certificates.html cms/templates/group_configurations.html
-#: cms/templates/settings.html cms/templates/settings_advanced.html
-#: cms/templates/settings_graders.html cms/templates/widgets/header.html
 msgid "Group Configurations"
 msgstr "Konfiguracje grupy"
 
@@ -5617,18 +5608,22 @@ msgstr ""
 msgid "created"
 msgstr "utworzony"
 
-#. Translators: This is a past-tense verb that is used for task action
-#. messages.
-#: lms/djangoapps/certificates/models.py
-msgid "regenerated"
-msgstr "odtworzony"
-
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
 #: lms/djangoapps/certificates/models.py
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "generated"
 msgstr "wygenerowany"
+
+#: lms/djangoapps/certificates/models.py
+msgid "generating"
+msgstr ""
+
+#. Translators: This is a past-tense verb that is used for task action
+#. messages.
+#: lms/djangoapps/certificates/models.py
+msgid "regenerated"
+msgstr "odtworzony"
 
 #. Translators: This string represents task was executed for all learners.
 #: lms/djangoapps/certificates/models.py
@@ -6514,11 +6509,9 @@ msgstr "Konspekt"
 msgid "Progress"
 msgstr "Postęp"
 
-#. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 #. Translators: 'Textbooks' refers to the tab in the course that leads to the
 #. course' textbooks
-#: lms/djangoapps/courseware/tabs.py cms/templates/textbooks.html
-#: cms/templates/widgets/header.html
+#: lms/djangoapps/courseware/tabs.py
 msgid "Textbooks"
 msgstr "Podręczniki"
 
@@ -7613,6 +7606,12 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
+"Merging certificates task has been started. You can view the status of the "
+"generation task in the \"Pending Tasks\" section."
+msgstr ""
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
 "Please select one or more certificate statuses that require certificate "
 "regeneration."
 msgstr ""
@@ -7831,8 +7830,7 @@ msgid "Special Exams"
 msgstr "Egzaminy specjalne"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
-#: lms/djangoapps/support/views/index.py cms/templates/certificates.html
-#: cms/templates/export.html cms/templates/widgets/header.html
+#: lms/djangoapps/support/views/index.py
 msgid "Certificates"
 msgstr "Zaświadczenia o ukończeniu kursu"
 
@@ -7881,6 +7879,7 @@ msgid "Extensions"
 msgstr "Rozszerzenia"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Data Download"
 msgstr "Pobieranie danych"
 
@@ -8106,6 +8105,12 @@ msgstr "generating_enrollment_report"
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "certificates generated"
 msgstr "wygenerowanych zaświadczeń o ukończeniu kursu"
+
+#. Translators: This is a past-tense verb that is inserted into task progress
+#. messages as {action}.
+#: lms/djangoapps/instructor_task/tasks.py
+msgid "merge all certificates"
+msgstr ""
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -10511,6 +10516,9 @@ msgstr ""
 "aplikacji. Z kolei aby zrezygnować z uprawnień, proszę kliknąć 'Anuluj'."
 
 #: lms/templates/oauth2_provider/authorize.html
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+#: cms/templates/manage_users.html cms/templates/manage_users_lib.html
+#: lms/templates/provider/authorize.html
 msgid "Cancel"
 msgstr "Anuluj"
 
@@ -12716,10 +12724,6 @@ msgid "{platform_name} Support Levels:"
 msgstr "Poziomy wsparcia {platform_name}:"
 
 #: cms/djangoapps/contentstore/views/component.py
-msgid "Embedded Answers"
-msgstr "Zagnieżdżone z luką"
-
-#: cms/djangoapps/contentstore/views/component.py
 msgid "HTML"
 msgstr "HTML"
 
@@ -12734,6 +12738,10 @@ msgstr "Film z chmury"
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Inline Dropdown"
 msgstr "Zagnieżdżone z rozwijaną listą wyboru"
+
+#: cms/djangoapps/contentstore/views/component.py
+msgid "Embedded Answers"
+msgstr "Zagnieżdżone z luką"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Blank"
@@ -13249,9 +13257,85 @@ msgstr "Nieprawidłowy format pola '{name}'. {detailed_message}"
 msgid "Navoica.pl Studio"
 msgstr "Navoica.pl Studio"
 
+#: cms/envs/common.py cms/templates/board_base.html
+msgid "Studio"
+msgstr ""
+
 #: cms/lib/xblock/tagging/tagging.py
 msgid "Dictionary with the available tags"
 msgstr "Dziennik dostępnych tagów"
+
+#: wiki/templates/wiki/base.html
+msgid "Search..."
+msgstr "Szukaj..."
+
+#: cms/templates/board_base.html
+msgid "Advanced search"
+msgstr ""
+
+#: cms/templates/widgets/header.html lms/templates/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
+msgid "Account"
+msgstr "Konto"
+
+#: cms/templates/board_base.html cms/templates/widgets/header.html
+msgid "Account Navigation"
+msgstr ""
+
+#: cms/templates/board_base.html cms/templates/widgets/header.html
+msgid "Contextual Online Help"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: lms/templates/static_templates/help.html
+#: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: wiki/plugins/help/wiki_plugin.py
+msgid "Help"
+msgstr "Pomoc"
+
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/user_dropdown.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header/navbar-authenticated.html
+msgid "Profile"
+msgstr "Profil"
+
+#: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
+msgid "Sign Out"
+msgstr "Wyloguj się"
+
+#: cms/templates/board_base.html cms/templates/register.html
+#: cms/templates/widgets/header.html
+msgid "Sign Up"
+msgstr ""
+
+#: cms/templates/board_base.html cms/templates/widgets/footer.html
+msgid "Policies"
+msgstr ""
+
+#: cms/templates/board_base.html cms/templates/widgets/footer.html
+msgid "LMS"
+msgstr ""
+
+#: cms/templates/widgets/footer.html
+#: themes/red-theme/lms/templates/footer.html
+msgid "Legal"
+msgstr "Informacje prawne"
+
+#: cms/templates/board_base.html
+msgid ""
+" EdX, Open edX, Studio, and the edX and Open edX logos are registered "
+"trademarks or trademarks of <a data-rel='edx.org' "
+"href='https://www.edx.org/'> edX Inc.</a> "
+msgstr ""
+
+#: cms/templates/board_base.html
+msgid "Powered by: "
+msgstr ""
 
 #: cms/urls.py
 msgid "Studio Administration"
@@ -13420,30 +13504,11 @@ msgstr "Wyświetl"
 msgid "Reset"
 msgstr "Zresetuj"
 
-#: cms/templates/widgets/footer.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "Legal"
-msgstr "Informacje prawne"
-
 #: cms/templates/widgets/header.html lms/templates/header/header.html
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
 msgstr "Wybierz język"
-
-#: cms/templates/widgets/header.html lms/templates/user_dropdown.html
-#: lms/templates/header/user_dropdown.html
-msgid "Account"
-msgstr "Konto"
-
-#: cms/templates/widgets/header.html
-#: lms/templates/navigation/navbar-authenticated.html
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: lms/templates/static_templates/help.html
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html
-#: wiki/plugins/help/wiki_plugin.py
-msgid "Help"
-msgstr "Pomoc"
 
 #: cms/templates/widgets/sock.html
 #: themes/edx.org/cms/templates/widgets/sock.html
@@ -13510,11 +13575,6 @@ msgstr "Menu użytkownika"
 #: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
 msgid "Usermenu dropdown"
 msgstr "Rozwijane menu"
-
-#: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
-#: lms/templates/header/user_dropdown.html
-msgid "Sign Out"
-msgstr "Wyloguj się"
 
 #: common/lib/capa/capa/templates/codeinput.html
 msgid "Code Editor"
@@ -14080,7 +14140,7 @@ msgstr "Bezpłatne kursy online oferowane przez polskie uczelnie i instytucje"
 
 #: lms/templates/index.html lms/templates/header/header.html
 msgid "What do you want to learn?"
-msgstr "Nazwa kursu"
+msgstr "Szukaj..."
 
 #: lms/templates/index.html
 msgid "About Navoica"
@@ -18708,14 +18768,6 @@ msgid "Programs"
 msgstr "Programy"
 
 #: lms/templates/header/navbar-authenticated.html
-#: lms/templates/header/user_dropdown.html
-#: lms/templates/navigation/navbar-authenticated.html
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html
-msgid "Profile"
-msgstr "Profil"
-
-#: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 msgid "Discover New"
 msgstr "Katalog kursów"
@@ -18920,6 +18972,20 @@ msgstr "Historia generowania zaświadczeń o ukończeniu kursu"
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Task name"
 msgstr "Nazwa czynności"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificates.html
+msgid "Multiple Certificate Download History"
+msgstr "Masowe pobieranie certyfikatów"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificates.html
+#: wiki/plugins/attachments/templates/wiki/plugins/attachments/history.html
+#: wiki/plugins/attachments/templates/wiki/plugins/attachments/search.html
+msgid "Download"
+msgstr "Pobierz"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificates.html
+msgid "Start Merge All Certificates"
+msgstr "Rozpocznij proces zbierania certyfikatów"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "SET CERTIFICATE EXCEPTIONS"
@@ -23727,7 +23793,7 @@ msgstr ""
 
 #: cms/templates/asset_index.html cms/templates/widgets/header.html
 msgid "Files & Uploads"
-msgstr "Przesyłanie plików"
+msgstr ""
 
 #: cms/templates/certificates.html
 msgid "Course Certificates"
@@ -23810,7 +23876,7 @@ msgstr "Dowiedz się więcej na temat zaświadczeń o ukończeniu kursu"
 #: cms/templates/settings.html cms/templates/settings_advanced.html
 #: cms/templates/settings_graders.html
 msgid "Other Course Settings"
-msgstr "Pozostałe ustawienia kursu"
+msgstr ""
 
 #: cms/templates/certificates.html cms/templates/settings_graders.html
 msgid "Details &amp; Schedule"
@@ -23820,20 +23886,20 @@ msgstr "Szczegóły i harmonogram"
 #: cms/templates/settings.html cms/templates/settings_advanced.html
 #: cms/templates/settings_graders.html cms/templates/widgets/header.html
 msgid "Grading"
-msgstr "Ocenianie"
+msgstr ""
 
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/manage_users.html cms/templates/settings.html
 #: cms/templates/settings_advanced.html cms/templates/settings_graders.html
 #: cms/templates/widgets/header.html
 msgid "Course Team"
-msgstr "Kadra kursu"
+msgstr ""
 
 #: cms/templates/certificates.html cms/templates/group_configurations.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
 #: cms/templates/settings_graders.html cms/templates/widgets/header.html
 msgid "Advanced Settings"
-msgstr "Ustawienia zaawansowane"
+msgstr ""
 
 #: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
 msgid "Duplicate"
@@ -24007,7 +24073,7 @@ msgstr ""
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html
 msgid "Organization"
-msgstr "Organizacja"
+msgstr ""
 
 #. Translators: This is an example for the name of the organization sponsoring
 #. a course, seen when filling out the form to create a new course. The
@@ -24033,7 +24099,7 @@ msgstr "Uwaga: Nie można używać spacji ani znaków specjalnych."
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html
 msgid "Course Number"
-msgstr "Numer kursu"
+msgstr ""
 
 #. Translators: This is an example for the number used to identify a course,
 #. seen when filling out the form to create a new course. The number here is
@@ -24056,7 +24122,7 @@ msgstr ""
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/settings.html
 msgid "Course Run"
-msgstr "Edycja kursu"
+msgstr ""
 
 #. Translators: This is an example for the "run" used to identify different
 #. instances of a course, seen when filling out the form to create a new
@@ -24233,15 +24299,15 @@ msgstr "Edytuj datę rozpoczęcia"
 
 #: cms/templates/course_outline.html cms/templates/settings.html
 msgid "Course Pacing"
-msgstr "Forma tempa kursu"
+msgstr ""
 
 #: cms/templates/course_outline.html cms/templates/settings.html
 msgid "Self-Paced"
-msgstr "W tempie własnym"
+msgstr ""
 
 #: cms/templates/course_outline.html cms/templates/settings.html
 msgid "Instructor-Paced"
-msgstr "Z harmonogramem prowadzącego"
+msgstr ""
 
 #: cms/templates/course_outline.html
 msgid "Creating your course organization"
@@ -24337,7 +24403,7 @@ msgstr "Dowiedz się więcej na temat ustawień widoczności treści"
 #: cms/templates/edit-tabs.html cms/templates/export.html
 #: cms/templates/widgets/header.html
 msgid "Pages"
-msgstr "Strony"
+msgstr ""
 
 #: cms/templates/edit-tabs.html
 msgid "New Page"
@@ -24489,7 +24555,7 @@ msgstr "Eksport kursu"
 #: cms/templates/export.html cms/templates/export_git.html
 #: cms/templates/import.html cms/templates/widgets/header.html
 msgid "Tools"
-msgstr "Narzędzia"
+msgstr ""
 
 #: cms/templates/export.html
 msgid "About Exporting Libraries"
@@ -24741,7 +24807,7 @@ msgstr "Wyeksportuj kurs do Git"
 
 #: cms/templates/export_git.html cms/templates/widgets/header.html
 msgid "Export to Git"
-msgstr "Wyeksportuj do Git"
+msgstr ""
 
 #: cms/templates/export_git.html
 msgid "About Export to Git"
@@ -25428,7 +25494,7 @@ msgstr "Dowiedz się więcej na temat importowania kursu"
 
 #: cms/templates/index.html cms/templates/widgets/user_dropdown.html
 msgid "{studio_name} Home"
-msgstr "Strona główna {studio_name}"
+msgstr ""
 
 #: cms/templates/index.html
 msgid "New Course"
@@ -25978,7 +26044,7 @@ msgstr "Dostęp do biblioteki"
 
 #: cms/templates/manage_users_lib.html cms/templates/widgets/header.html
 msgid "User Access"
-msgstr "Dostęp użytkownika"
+msgstr ""
 
 #: cms/templates/manage_users_lib.html
 msgid "Grant Access to This Library"
@@ -26041,10 +26107,6 @@ msgstr ""
 " także mogą nadawać i usuwać do niej dostęp poszczególnym użytkownikom. Dla "
 "każdej biblioteki musi istnieć co najmniej jeden użytkownik o statusie "
 "administratora."
-
-#: cms/templates/register.html cms/templates/widgets/header.html
-msgid "Sign Up"
-msgstr "Zarejestruj się"
 
 #: cms/templates/register.html
 msgid "Sign Up for {studio_name}"
@@ -26148,35 +26210,35 @@ msgstr ""
 
 #: cms/templates/settings.html
 msgid "Schedule & Details Settings"
-msgstr "Ustawienia szczegółów i harmonogramu"
+msgstr ""
 
 #: cms/templates/settings.html cms/templates/widgets/header.html
 msgid "Schedule & Details"
-msgstr "Szczegóły i harmonogram"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Basic Information"
-msgstr "Podstawowe informacje"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "The nuts and bolts of your course"
-msgstr "Podstawowe informacje dotyczące twojego kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "This field is disabled: this information cannot be changed."
-msgstr "To pole jest wyłączone: informacji nie można zmienić."
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Summary Page"
-msgstr "Strona podsumowująca kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "(for student enrollment and access)"
-msgstr "(dla potrzeb rejestracji i dostępu studentów)"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Enroll in {course_display_name}"
-msgstr "Zapisz się na kurs \"{course_display_name}\""
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
@@ -26184,21 +26246,18 @@ msgid ""
 "for enrollment. Please navigate to this course at {link_for_about_page} to "
 "enroll."
 msgstr ""
-"Właśnie rozpoczęły się zapisy na kurs \"{course_display_name}\" dostępny na "
-"platformie {platform_name}. W celu zapisania się na kurs proszę przejść na "
-"stronę {link_for_about_page} ."
 
 #: cms/templates/settings.html
 msgid "Send a note to students via email"
-msgstr "Wyślij powiadomienie do studentów przez e-mail"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Invite your students"
-msgstr "Zaproś swoich studentów"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Promoting Your Course with {platform_name}"
-msgstr "Promowanie twoich kursów z {platform_name}"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
@@ -26206,107 +26265,102 @@ msgid ""
 "announced. To provide content for the page and preview it, follow the "
 "instructions provided by your Program Manager."
 msgstr ""
-"Strona podsumowująca twojego kursu nie będzie widoczna publicznie do czasu "
-"opublikowania oficjalnej zapowiedzi kursu. Aby przygotować taką stronę i "
-"sprawdzić ją na podglądzie, postępuj zgodnie z instrukcjami otrzymanymi od "
-"swojego Opiekuna Projektu."
 
 #: cms/templates/settings.html
 msgid "Course Credit Requirements"
-msgstr "Wymagania do uzyskania zaświadczenia o ukończeniu kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Steps required to earn course credit"
-msgstr "Kroki wymagane do uzyskania zaświadczenia o ukończeniu kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Minimum Grade"
-msgstr "Minimalna ocena"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Successful Proctored Exam"
-msgstr "Zdanie egzaminu nadzorowanego"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Proctored Exam {number}"
-msgstr "Egzamin nadzorowany {number}"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "ID Verification"
-msgstr "Weryfikacja tożsamości"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "In-Course Reverification {number}"
-msgstr "Ponowna weryfikacja wewnątrz kursu {number}"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Schedule"
-msgstr "Harmonogram kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Dates that control when your course can be viewed"
-msgstr "Daty określające, kiedy twój kurs będzie widoczny"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "First day the course begins"
-msgstr "Pierwszy dzień trwania kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Start Time"
-msgstr "Godzina rozpoczęcia kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "(UTC)"
-msgstr "(UTC)"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Last day your course is active"
-msgstr "Ostatni dzień trwania kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course End Time"
-msgstr "Godzina zakończenia kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Certificates Available Date"
-msgstr "Data dostępności zaświadczeń"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "By default, 48 hours after course end date"
-msgstr "Domyślnie 48 godzin po ukończeniu kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Enrollment Start Date"
-msgstr "Data rozpoczęcia zapisów"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "First day students can enroll"
-msgstr "Pierwszy dzień trwania zapisów"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Enrollment Start Time"
-msgstr "Godzina rozpoczęcia zapisów"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Enrollment End Date"
-msgstr "Data zakończenia zapisów"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Last day students can enroll."
-msgstr "Ostatni dzień trwania zapisów"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Contact your edX partner manager to update these settings."
 msgstr ""
-"Skontaktuj się ze swoim Opiekunem Partnera, aby zmienić te ustawienia."
 
 #: cms/templates/settings.html
 msgid "Enrollment End Time"
-msgstr "Godzina zakończenia zapisów"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "These Dates Are Not Used When Promoting Your Course"
-msgstr "Te terminy nie obowiązują w trakcie promocji kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
@@ -26316,19 +26370,14 @@ msgid ""
 "registration dates as shown on your course summary page, follow the "
 "instructions provided by your Program Manager."
 msgstr ""
-"Te daty określają {strong_start}, kiedy twoje materiały kursowe są widoczne "
-"dla studentów{strong_end} i {strong_start}nie są datami wyświetlanymi na "
-"stronie podsumowującej twojego kursu{strong_end}. Aby określić daty startu i"
-" rozpoczęcia zapisów, które będą również widoczne na stronie podsumowującej,"
-" postępuj zgodnie z instrukcjami otrzymanymi od swojego Opiekuna Projektu."
 
 #: cms/templates/settings.html
 msgid "Course Details"
-msgstr "Szczegóły kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Provide useful information about your course"
-msgstr "Zamieść ważne informacje dotyczące twojego kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
@@ -26336,151 +26385,129 @@ msgid ""
 " that are taught in a specific language. It is also used to localize the "
 "'From:' field in bulk emails."
 msgstr ""
-"W tym miejscu wskaż język kursu. Pomoże to studentom w odnalezieniu kursu w "
-"określonym języku, a także w przetłumaczeniu pola nadawcy przy wysyłce "
-"wiadomości e-mail."
 
 #: cms/templates/settings.html
 msgid "Introducing Your Course"
-msgstr "Opis twojego kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Information for prospective students"
-msgstr "Informacje dla przyszłych studentów"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Title"
-msgstr "Nazwa kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Displayed as title on the course details page. Limit to 50 characters."
 msgstr ""
-"Wyświetlana jako nazwa kursu w katalogu i na stronie podsumowującej. Limit "
-"50 znaków."
 
 #: cms/templates/settings.html
 msgid "Course Subtitle"
-msgstr "Podtytuł"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
 "Displayed as subtitle on the course details page. Limit to 150 characters."
 msgstr ""
-"Jednozdaniowy podtytuł wyświetlany na stronie podsumowującej kursu. Limit "
-"150 znaków."
 
 #: cms/templates/settings.html
 msgid "Course Duration"
-msgstr "Czas trwania kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Displayed on the course details page. Limit to 50 characters."
-msgstr "Wyświetlany na stronie podsumowującej kursu. Limit 50 znaków."
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Description"
-msgstr "Opis kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Displayed on the course details page. Limit to 1000 characters."
-msgstr "Wyświetlany na stronie podsumowującej kursu. Limit 1000 znaków."
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Short Description"
-msgstr "Krótki opis kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
 "Appears on the course catalog page when students roll over the course name. "
 "Limit to ~150 characters"
 msgstr ""
-"Wyświetlany w katalogu kursów po najechaniu kursorem myszy na nazwę kursu. "
-"Limit 150 znaków."
 
 #: cms/templates/settings.html
 msgid "Course Overview"
-msgstr "Przegląd kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "HTML Code Editor"
-msgstr "Edytor kodu HTML"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
 "Introductions, prerequisites, FAQs that are used on {a_link_start}your "
 "course summary page{a_link_end} (formatted in HTML)"
 msgstr ""
-"Informacje wprowadzające, wymagania wstępne, konspekt, często zadawane "
-"pytania lub inne przydatne informacje wyświetlane {a_link_start}na stronie "
-"podsumowującej kursu{a_link_end} (sformatowane w HTML)."
 
 #: cms/templates/settings.html
 msgid "Course Card Image"
-msgstr "Zdjęcie / grafika podsumowania kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
 "You can manage this image along with all of your other {a_link_start}files "
 "and uploads{a_link_end}"
 msgstr ""
-"Plikami graficznymi możesz zarządzać na stronie {a_link_start}zarządzania "
-"plikami{a_link_end}."
 
 #: cms/templates/settings.html
 msgid ""
 "Your course currently does not have an image. Please upload one (JPEG or PNG"
 " format, and minimum suggested dimensions are 375px wide by 200px tall)"
 msgstr ""
-"Twój kurs obecnie nie posiada zdjęcia / grafiki. Proszę wgrać plik graficzny"
-" (w formacie JPEG lub PNG) o minimalnych wymiarach 375px na 200px."
 
 #. Translators: This is the placeholder text for a field that requests the URL
 #. for a course image
 #: cms/templates/settings.html
 msgid "Your course image URL"
-msgstr "Adres URL zdjęcia / grafiki twojego kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
 "Please provide a valid path and name to your course image (Note: only JPEG "
 "or PNG format supported)"
 msgstr ""
-"Wpisz odnośnik do grafiki (uwaga: dozwolone są wyłącznie formaty JPEG lub "
-"PNG)."
 
 #: cms/templates/settings.html
 msgid "Upload Course Card Image"
-msgstr "Prześlij zdjęcie / grafikę do podsumowania kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
 "Your course currently does not have an image. Please upload one (JPEG or PNG"
 " format, and minimum suggested dimensions are 1440px wide by 400px tall)"
 msgstr ""
-"Twój kurs obecnie nie posiada bannera. Proszę wgrać plik graficzny (w "
-"formacie JPEG lub PNG) o minimalnych wymiarach 1440px na 400px."
 
 #. Translators: This is the placeholder text for a field that requests the URL
 #. for a course banner image
 #: cms/templates/settings.html
 msgid "Your banner image URL"
-msgstr "Adres URL twojego bannera"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
 "Please provide a valid path and name to your banner image (Note: only JPEG "
 "or PNG format supported)"
 msgstr ""
-"Proszę podać działający odnośnik i nazwę twojego bannera (uwaga: dozwolone "
-"są wyłącznie formaty JPEG lub PNG)."
 
 #: cms/templates/settings.html
 msgid "Upload Course Banner Image"
-msgstr "Prześlij grafikę kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Video Thumbnail Image"
-msgstr "Obrazek - miniatura filmu promocyjnego"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
@@ -26488,126 +26515,116 @@ msgid ""
 "one (JPEG or PNG format, and minimum suggested dimensions are 375px wide by "
 "200px tall)"
 msgstr ""
-"Twój kurs obecnie nie posiada obrazka - miniatury filmu promocyjnego. Proszę"
-" wgrać plik graficzny (w formacie JPEG lub PNG) o minimalnych wymiarach "
-"375px na 200px."
 
 #. Translators: This is the placeholder text for a field that requests the URL
 #. for a course video thumbnail image
 #: cms/templates/settings.html
 msgid "Your video thumbnail image URL"
-msgstr "Adres URL twojego obrazka - miniatury filmu promocyjnego"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
 "Please provide a valid path and name to your video thumbnail image (Note: "
 "only JPEG or PNG format supported)"
 msgstr ""
-"Proszę podać działający odnośnik i nazwę twojego obrazka - miniatury filmu "
-"promocyjnego (uwaga: dozwolone są wyłącznie formaty JPEG lub PNG)."
 
 #: cms/templates/settings.html
 msgid "Upload Video Thumbnail Image"
-msgstr "Prześlij obrazek - miniaturę filmu promocyjnego"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course Introduction Video"
-msgstr "Film promocyjny kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Delete Current Video"
-msgstr "Usuń obecny film"
+msgstr ""
 
 #. Translators: This is the placeholder text for a field that requests a
 #. YouTube video ID for a course video
 #: cms/templates/settings.html
 msgid "your YouTube video's ID"
-msgstr "Identyfikator twojego filmu z YouTube"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Enter your YouTube video's ID (along with any restriction parameters)"
 msgstr ""
-"Wprowadź identyfikator twojego filmu z YouTube (wraz z ewentualnymi "
-"parametrami ograniczeń)"
 
 #: cms/templates/settings.html
 msgid "Learning Outcomes"
-msgstr "Efekty kształcenia"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Add the learning outcomes for this course"
-msgstr "Opisz efekty kształcenia tego kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Add Learning Outcome"
-msgstr "Opisz efekty kształcenia"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Add details about the instructors for this course"
-msgstr "Podaj szczegóły dotyczące prowadzących kurs"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Add Instructor"
-msgstr "Dodaj prowadzącego"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Requirements"
-msgstr "Wymagania"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Expectations of the students taking this course"
-msgstr "Oczekiwania wobec studentów biorących udział w kursie"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Hours of Effort per Week"
-msgstr "Godziny nauki w tygodniu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Time spent on all course work"
-msgstr "Czas przewidziany na przerobienie wszystkich materiałów w kursie"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Prerequisite Course"
-msgstr "Kurs poprzedzający"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Course that students must complete before beginning this course"
-msgstr "Kurs, który student musi ukończyć przed rozpoczęciem tego kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "set pre-requisite course"
-msgstr "Określ kurs poprzedzający"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Require students to pass an exam before beginning the course."
 msgstr ""
-"Udział w kursie będzie wymagał zdania poprzedzającego go egzaminu wstępnego."
 
 #: cms/templates/settings.html
 msgid ""
 "You can now view and author your course entrance exam from the "
 "{link_start}Course Outline{link_end}."
 msgstr ""
-"Możesz zobaczyć i opracować egzamin wstępny kursu z poziomu strony "
-"{link_start}programu kursu{link_end}."
 
 #: cms/templates/settings.html
 msgid "Grade Requirements"
-msgstr "Wymagana ocena"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid " %"
-msgstr "%"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
 "The score student must meet in order to successfully complete the entrance "
 "exam. "
-msgstr "Wynik, który student musi uzyskać, aby zdać egzamin wstępny."
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "Set the pacing for this course"
-msgstr "Wybierz formę tempa kursu"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
@@ -26615,9 +26632,6 @@ msgid ""
 "You can configure release dates for course content and due dates for "
 "assignments."
 msgstr ""
-"Kursy z harmonogramem prowadzącego przebiegają w tempie ustalonym przez "
-"kadrę kursu. Pozwalają one na konfigurowanie dat udostępnień kolejnych "
-"lekcji oraz ostatecznych terminów na wykonanie poszczególnych ćwiczeń."
 
 #: cms/templates/settings.html
 msgid ""
@@ -26625,14 +26639,10 @@ msgid ""
 " for assignments. Learners can complete course material at any time before "
 "the course end date."
 msgstr ""
-"Kursy w tempie własnym nie posiadają skonfigurowanych dat udostępnień "
-"kolejnych lekcji ani ostatecznych terminów na wykonanie poszczególnych "
-"ćwiczeń. Studenci mogą pracować z materiałami kursowymi według własnego "
-"uznania i ukończyć kurs w dowolnym czasie przed datą jego zamknięcia."
 
 #: cms/templates/settings.html
 msgid "Course Content License"
-msgstr "Licencja materiałów kursowych"
+msgstr ""
 
 #. Translators: At the course settings, the editor is able to select the
 #. default course content license.
@@ -26642,19 +26652,17 @@ msgstr "Licencja materiałów kursowych"
 #. following string:
 #: cms/templates/settings.html
 msgid "Select the default license for course content"
-msgstr "Wybierz domyślną licencję materiałów kursowych"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid "How are these settings used?"
-msgstr "W jaki sposób używać tych ustawień?"
+msgstr ""
 
 #: cms/templates/settings.html
 msgid ""
 "Your course's schedule determines when students can enroll in and begin a "
 "course."
 msgstr ""
-"W harmonogramie kursu określ terminy: kiedy kurs się rozpoczyna, kiedy "
-"kończy, od kiedy do kiedy trwają zapisy."
 
 #: cms/templates/settings.html
 msgid ""
@@ -26663,9 +26671,6 @@ msgid ""
 "video, and estimated time requirements. Students use About pages to choose "
 "new courses to take."
 msgstr ""
-"Tu wpisujesz informacje, które będą widoczne na stronie \"O kursie\" (język,"
-" poziom zaawansowania, organizator, kategoria kursu, czas trwania kursu). W "
-"tym miejscu możesz dodać krótki opis kursu oraz grafikę."
 
 #: cms/templates/settings_advanced.html
 msgid "Your policy changes have been saved."
@@ -26870,7 +26875,7 @@ msgstr "Dowiedz się więcej na temat podręczników"
 
 #: cms/templates/videos_index.html cms/templates/widgets/header.html
 msgid "Video Uploads"
-msgstr "Przesyłanie filmów"
+msgstr ""
 
 #: cms/templates/videos_index.html
 msgid "Course Video Settings"
@@ -27125,16 +27130,8 @@ msgstr ""
 "konta."
 
 #: cms/templates/widgets/footer.html
-msgid "Policies"
-msgstr "Zasady"
-
-#: cms/templates/widgets/footer.html
 msgid "Accessibility Accommodation Request"
-msgstr "Prośba o przystosowanie i ułatwienie dostępu"
-
-#: cms/templates/widgets/footer.html
-msgid "LMS"
-msgstr "LMS"
+msgstr ""
 
 #. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
 #. Inc.'. Please do not translate any of these trademarks and company names.
@@ -27143,44 +27140,34 @@ msgid ""
 "EdX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
-"Logo EdX, Open edX, Studio oraz edX są zastrzeżonymi znakami handlowymi "
-"należącymi do {link_start}edX Inc.{link_end}"
 
 #: cms/templates/widgets/header.html
 msgid "Current Course:"
-msgstr "Obecny kurs:"
+msgstr ""
 
 #: cms/templates/widgets/header.html
 msgid "Course Navigation"
-msgstr "Nawigacja po kursie"
+msgstr ""
 
 #: cms/templates/widgets/header.html
 msgid "Outline"
-msgstr "Program"
+msgstr ""
 
 #: cms/templates/widgets/header.html
 msgid "Import"
-msgstr "Import"
+msgstr ""
 
 #: cms/templates/widgets/header.html
 msgid "Export"
-msgstr "Eksport"
+msgstr ""
 
 #: cms/templates/widgets/header.html
 msgid "Current Library:"
-msgstr "Obecna biblioteka:"
+msgstr ""
 
 #: cms/templates/widgets/header.html
 msgid "Language preference"
-msgstr "Preferencje językowe"
-
-#: cms/templates/widgets/header.html
-msgid "Account Navigation"
-msgstr "Zarządzanie kontem"
-
-#: cms/templates/widgets/header.html
-msgid "Contextual Online Help"
-msgstr "Kontekstowa pomoc online"
+msgstr ""
 
 #: cms/templates/widgets/header.html
 msgid "Forum"
@@ -27188,71 +27175,71 @@ msgstr ""
 
 #: cms/templates/widgets/metadata-edit.html
 msgid "Launch Latex Source Compiler"
-msgstr "Uruchom źródłowy kompilator Latex "
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Heading"
-msgstr "Nagłówek"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Insert a heading"
-msgstr "Umieść nagłówek"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Add a multiple choice question"
-msgstr "Dodaj pytanie wielokrotnego wyboru"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Add a question with checkboxes"
-msgstr "Dodaj pytanie z polami wyboru"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Insert a text response"
-msgstr "Dodaj pytanie z odpowiedzią tekstową"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Insert a numerical response"
-msgstr "Dodaj pytanie z odpowiedzią numeryczną"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Insert a dropdown response"
-msgstr "Dodaj pytanie rozwijane"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Explanation"
-msgstr "Wyjaśnienie"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Add an explanation for this question"
-msgstr "Dodaj wyjaśnienie do tego pytania"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Advanced Editor"
-msgstr "Zaawansowany edytor"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Toggle Cheatsheet"
-msgstr "Włącz podpowiedź"
+msgstr ""
 
 #: cms/templates/widgets/problem-edit.html
 msgid "Label"
-msgstr "Etykieta"
+msgstr ""
 
 #: cms/templates/widgets/sock_links.html
 msgid "Access the Open edX Portal"
-msgstr "Przejdź do portalu Open edX"
+msgstr ""
 
 #: cms/templates/widgets/sock_links.html
 msgid "Open edX Portal"
-msgstr "Portal Open edX"
+msgstr ""
 
 #: cms/templates/widgets/user_dropdown.html
 msgid "Currently signed in as:"
-msgstr "Obecnie zalogowany jako:"
+msgstr ""
 
 #: cms/templates/widgets/user_dropdown.html
 msgid "Maintenance"
-msgstr "Przerwa techniczna"
+msgstr ""
 
 #: wiki/apps.py
 msgid "Wiki notifications"
@@ -27787,11 +27774,6 @@ msgid "<em>No description</em>"
 msgstr "<em>Brak opisu</em>"
 
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/history.html
-#: wiki/plugins/attachments/templates/wiki/plugins/attachments/search.html
-msgid "Download"
-msgstr "Pobierz"
-
-#: wiki/plugins/attachments/templates/wiki/plugins/attachments/history.html
 msgid "Use this!"
 msgstr "Użyj tego! "
 
@@ -28140,10 +28122,6 @@ msgstr "Brak powiadomień "
 #: wiki/plugins/notifications/templates/wiki/plugins/notifications/menubaritem.html
 msgid "Clear notifications list"
 msgstr "Clear notifications list"
-
-#: wiki/templates/wiki/base.html
-msgid "Search..."
-msgstr "Szukaj..."
 
 #: wiki/templates/wiki/base.html
 msgid "Log out"

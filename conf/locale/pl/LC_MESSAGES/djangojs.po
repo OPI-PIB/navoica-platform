@@ -48,7 +48,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-05-14 07:59+0000\n"
+"POT-Creation-Date: 2020-06-15 13:41+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -4451,6 +4451,10 @@ msgid "Error while regenerating certificates. Please try again."
 msgstr ""
 "Błąd w trakcie ponownego generowania certyfikatów. Proszę spróbować później."
 
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Prepare merged pdf contains all certificates in this course?"
+msgstr ""
+
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Loading data..."
 msgstr "Wczytywanie danych..."
@@ -5661,7 +5665,7 @@ msgstr "Błąd walidacji"
 #: lms/static/js/views/fields.js
 #: lms/templates/learner_dashboard/program_card.underscore
 msgid "In Progress"
-msgstr "W trakcie"
+msgstr "Dostępny"
 
 #: lms/static/js/views/fields.js
 msgid "Placeholder"
@@ -6410,7 +6414,7 @@ msgstr "Prześlij zdjęcie prowadzącego"
 
 #: cms/static/js/views/instructor_info.js cms/static/js/views/settings/main.js
 msgid "Files must be in JPEG or PNG format."
-msgstr "Pliki muszą być w formacie JPEG lub PNG."
+msgstr ""
 
 #: cms/static/js/views/license.js cms/templates/js/license-selector.underscore
 msgid "All Rights Reserved"
@@ -6844,32 +6848,31 @@ msgstr ""
 
 #: cms/static/js/views/settings/main.js
 msgid "Course Credit Requirements"
-msgstr "Wymagania do uzyskania certyfikatu"
+msgstr ""
 
 #: cms/static/js/views/settings/main.js
 msgid "The minimum grade for course credit is not set."
 msgstr ""
-"Nie ustalono minimalnej oceny potrzebnej do uzyskania punktów edukacyjnych."
 
 #: cms/static/js/views/settings/main.js
 msgid "Course pacing cannot be changed once a course has started."
-msgstr "Nie można zmienić trybu kursu po dacie rozpoczęcia kursu."
+msgstr ""
 
 #: cms/static/js/views/settings/main.js
 msgid "{hours}:{minutes} (current UTC time)"
-msgstr "{hours}:{minutes} (aktualny czas UTC)"
+msgstr ""
 
 #: cms/static/js/views/settings/main.js
 msgid "Upload your course image."
-msgstr "Prześlij zdjęcie/grafikę swojego kursu."
+msgstr ""
 
 #: cms/static/js/views/settings/main.js
 msgid "Upload your banner image."
-msgstr "Prześlij banner"
+msgstr ""
 
 #: cms/static/js/views/settings/main.js
 msgid "Upload your video thumbnail image."
-msgstr "Prześlij grafikę - miniaturę filmu promocyjnego"
+msgstr ""
 
 #: cms/static/js/views/tabs.js
 msgid "Delete Page Confirmation"
