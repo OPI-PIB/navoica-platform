@@ -6,13 +6,22 @@ from time import time
 from django.contrib.auth.models import User
 from django.db.models import Q
 import requests
+import os
 
 from lms.djangoapps.certificates.api import generate_user_certificates
-from lms.djangoapps.certificates.models import CertificateStatuses, GeneratedCertificate
+from lms.djangoapps.certificates.models import \
+    CertificateGenerationMergeHistory, CertificateStatuses, GeneratedCertificate
 from student.models import CourseEnrollment
 from xmodule.modulestore.django import modulestore
+from django.contrib.auth.models import AnonymousUser
+from shutil import make_archive
+from django.core.files.base import ContentFile
 
+from openedx.core.djangoapps.certificates.api import \
+    certificates_viewable_for_course
 from .runner import TaskProgress
+from ..models import InstructorTask
+from ... import instructor_task
 
 
 def generate_students_certificates(
@@ -88,13 +97,9 @@ def generate_students_certificates(
 def merging_all_course_certificates(
         _xmodule_instance_args, _entry_id, course_id, task_input, action_name):
     from lms.djangoapps.certificates.views import render_cert_by_uuid
+    from django.test.client import RequestFactory
 
-    """
-    For a given `course_id`, generate certificates for only students present in 'students' key in task_input
-    json column, otherwise generate certificates for all enrolled students.
-    """
     start_time = time()
-    students_to_generate_certs_for = CourseEnrollment.objects.users_enrolled_in(course_id)
 
     certificates = GeneratedCertificate.eligible_certificates.filter(
         status=CertificateStatuses.downloadable,
@@ -106,11 +111,23 @@ def merging_all_course_certificates(
     current_step = {'step': 'Generating Certificates'}
     task_progress.update_task_state(extra_meta=current_step)
 
+    base_tmp = "/tmp/certificates/"
+    path_tmp = base_tmp+str(course_id)+"/"
+    try:
+        os.makedirs(path_tmp)
+    except OSError:
+        pass
+
+    factory = RequestFactory()
+    fake_request = factory.get("")
+    fake_request.user = AnonymousUser()
+    fake_request.session = {}
+
     # Generate certificate for each student
     for certificate in certificates:
         task_progress.attempted += 1
 
-        output = render_cert_by_uuid(None, certificate.verify_uuid)
+        output = render_cert_by_uuid(fake_request, certificate.verify_uuid)
 
         multipart_form_data = {
             'file': ('index.html', output.content),
@@ -125,15 +142,28 @@ def merging_all_course_certificates(
         r = requests.post('http://gotenberg:3000/convert/html',
                           files=multipart_form_data)
 
-        with open("/tmp/certificate_tmp/"+certificate.verify_uuid+".pdf", 'wb') as f:
+        with open(path_tmp+certificate.verify_uuid+".pdf", 'wb') as f:
             f.write(r.content)
-
 
         current_step = {'step': certificate.verify_uuid}
         task_progress.update_task_state(extra_meta=current_step)
 
         task_progress.succeeded += 1
         #task_progress.failed += 1
+
+    cert_genereted_history, created = CertificateGenerationMergeHistory.objects.get_or_create(
+        instructor_task=InstructorTask.objects.get(task_id=_xmodule_instance_args['task_id']),
+    )
+    cert_genereted_history.course_id = str(course_id)
+    cert_genereted_history.save()
+
+    make_archive(base_tmp+str(course_id),'zip', root_dir=path_tmp,base_dir=None)
+
+    fh = open(base_tmp+str(course_id)+'.zip', "r")
+    if fh:
+        file_content = ContentFile(fh.read())
+        cert_genereted_history.pdf.save(str(course_id)+'.zip', file_content)
+        cert_genereted_history.save()
 
     return task_progress.update_task_state(extra_meta=current_step)
 

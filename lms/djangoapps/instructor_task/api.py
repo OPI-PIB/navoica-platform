@@ -590,10 +590,11 @@ def merge_certificates(request, course_key):
     instructor_task = submit_task(request, task_type, task_class, course_key,
                                   task_input, task_key)
 
-    CertificateGenerationMergeHistory.objects.create(
-        course_id=course_key,
-        generated_by=request.user,
+    obj, created = CertificateGenerationMergeHistory.objects.get_or_create(
         instructor_task=instructor_task,
     )
+    obj.course_id = course_key
+    obj.generated_by = request.user
+    obj.save()
 
     return instructor_task
