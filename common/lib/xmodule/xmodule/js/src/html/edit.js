@@ -124,13 +124,16 @@
            */
           visual: false,
           plugins: "textcolor link image codemirror paste table preview importcss searchreplace autolink directionality visualblocks visualchars fullscreen media codesample charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap",
+          external_plugins: {
+            'tiny_mce_wiris' : baseUrl + "js/vendor/tinymce/js/tinymce/plugins/mathtype-tinymce4/plugin.min.js"
+          },
           image_advtab: true,
 
           /*
           We may want to add "styleselect" when we collect all styles used throughout the LMS
            */
           toolbar: "undo redo | formatselect | bold italic underline strikethrough subscript superscript | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor nonbreaking removeformat wrapAsCode | " +
-            " blockquote | link unlink | table | charmap | fullscreen  preview | codesample | " +
+            " blockquote | link unlink | table | charmap | tiny_mce_wiris_formulaEditor tiny_mce_wiris_formulaEditorChemistry | fullscreen  preview | codesample | " +
             ((this.new_image_modal ? 'insertImage' : 'image') + " | code"),
           toolbar_sticky: true,
           nonbreaking_force_tab: true,
@@ -164,6 +167,13 @@
           paste_preprocess: function(plugin, args) {
             args.content=args.content.replace(/(font-family(\:.*?\;))|(face=(\".*?\"))/gm, "");
           },
+          wirisimagebgcolor: '#FFFFFF',
+          wirisimagesymbolcolor: '#000000',
+          wiristransparency: 'true',
+          wirisimagefontsize: '16',
+          wirisimagenumbercolor: '#000000',
+          wirisimageidentcolor: '#000000',
+          // wirisformulaeditorlang:  'pl',
           setup: this.setupTinyMCE,
 
           /*

@@ -415,5 +415,8 @@ tinymce.addI18n('pl',{
 "Whole words": "Ca\u0142e s\u0142owa",
 "Spellcheck": "Sprawdzanie pisowni",
 "Caption": "Tytu\u0142",
-"Insert template": "Wstaw szablon"
+"Insert template": "Wstaw szablon",
+"Edit HTML": "Edytuj HTML",
+"Insert a math equation - MathType": "Wstaw równanie matematyczne - MathType",
+"Insert a chemistry formula - ChemType": "Wstaw formułę chemiczną - ChemType",
 });
