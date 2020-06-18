@@ -25,6 +25,8 @@ from xmodule.modulestore.modulestore_settings import convert_module_store_settin
 import sentry_sdk
 sentry_sdk.init(os.environ.get('SENTRY_URL_CMS', None))
 
+INTERNAL_HOST_IP = os.environ.get('INTERNAL_HOST_IP', None)
+
 # SERVICE_VARIANT specifies name of the variant used, which decides what JSON
 # configuration files are read during startup.
 SERVICE_VARIANT = os.environ.get('SERVICE_VARIANT', None)
