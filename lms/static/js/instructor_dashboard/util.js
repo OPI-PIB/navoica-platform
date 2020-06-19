@@ -460,10 +460,7 @@
                 url: endpoint,
                 success: function(data) {
                     if (data.downloads.length) {
-                        // added 15 sec delay, - problems with ssynchronization, error 404
-                        setTimeout(function() {
-                            return ths.create_report_downloads_table(data.downloads);
-                        }, 15000);
+                        return ths.create_report_downloads_table(data.downloads);
                     } else {
                         return false;
                     }
