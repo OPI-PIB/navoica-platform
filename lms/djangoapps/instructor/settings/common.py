@@ -22,11 +22,11 @@ def plugin_settings(settings):
 
         # Grade calculation started from the instructor dashboard will write grades
         # CSV files to the configured storage backend and give links for downloads.
-        'ENABLE_GRADE_DOWNLOADS': False,
+        'ENABLE_GRADE_DOWNLOADS': True,
 
         # Give course staff unrestricted access to grade downloads (if set to False,
         # only edX superusers can perform the downloads)
-        'ALLOW_COURSE_STAFF_GRADE_DOWNLOADS': False,
+        'ALLOW_COURSE_STAFF_GRADE_DOWNLOADS': True,
 
         # Show a section in the membership tab of the instructor dashboard
         # to allow an upload of a CSV file that contains a list of new accounts to create
