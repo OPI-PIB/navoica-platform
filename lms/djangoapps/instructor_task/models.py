@@ -19,6 +19,8 @@ import json
 import logging
 import os.path
 from uuid import uuid4
+import os
+from datetime import datetime
 
 from boto.exception import BotoServerError
 from django.conf import settings
@@ -299,8 +301,15 @@ class DjangoStorageReportStore(ReportStore):
                 ex.reason
             )
             return []
-        files = [(filename, os.path.join(course_dir, filename)) for filename in filenames]
+
+        # added 15 sec delay in accessibility new report links
+        files = []
+        for filename in filenames:
+            if (datetime.now() - self.storage.modified_time(os.path.join(course_dir, filename))).seconds > 15:
+                files.append((filename, os.path.join(course_dir, filename)))
+
         files.sort(key=lambda f: self.storage.modified_time(f[1]), reverse=True)
+
         return [
             (filename, self.storage.url(full_path))
             for filename, full_path in files
