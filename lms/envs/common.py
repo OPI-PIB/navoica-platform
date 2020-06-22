@@ -2698,7 +2698,7 @@ ALL_COURSE_ORGANIZER = sorted([
     [u"19", u"Uniwersytet im. Adama Mickiewicza w Poznaniu"],
     [u"20", u"Uniwersytet Jagielloński"],
     [u"21", u"Uniwersytet Kardynała Stefana Wyszyńskiego w Warszawie"],
-    [u"22", u"Uniwersytet Mikołaja Kopernika"],
+    [u"22", u"Uniwersytet Mikołaja Kopernika w Toruniu"],
     [u"23", u"Uniwersytet Pedagogiczny im. KEN w Krakowie"],
     [u"24", u"Uniwersytet Szczeciński"],
     [u"25", u"Uniwersytet Śląski w Katowicach"],

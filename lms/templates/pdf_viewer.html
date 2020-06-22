@@ -43,7 +43,7 @@ http://sourceforge.net/adobe/cmap/wiki/License/
 
     <script type="text/javascript">
         PDFJS.imageResourcesPath = "${static.url('css/vendor/pdfjs/images/') | n, js_escaped_string}";
-        PDFJS.workerSrc = "${static.url('js/vendor/pdfjs/pdf.worker.js') | n, js_escaped_string}";
+        PDFJS.workerSrc = "/static/js/vendor/pdfjs/pdf.worker.js";
         PDFJS.cMapUrl = "${static.url('css/vendor/pdfjs/cmaps/') | n, js_escaped_string}";
         PDF_URL = '${current_url | n, js_escaped_string}';
     </script>
