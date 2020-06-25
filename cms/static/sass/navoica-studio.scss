@@ -1370,3 +1370,17 @@ div#edit_textbook_error {
 .studio-xblock-wrapper .xblock .wrapper-problem-response select {
   max-width: 16.65rem;
 }
+
+.embedded_answers, .inline_dropdown {
+  .problem_progress {
+    display: inline-block;
+    color: #666;
+    font-size: .875em;
+  }
+  .action {
+    display: flex;
+    .submit-attempt-container {
+      flex-grow: 1;
+    }
+  }
+}

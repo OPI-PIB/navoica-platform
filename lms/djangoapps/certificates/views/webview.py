@@ -5,6 +5,7 @@ Certificate HTML webview.
 import logging
 import urllib
 from datetime import datetime
+from urlparse import urlparse
 from uuid import uuid4
 
 import pytz
@@ -50,6 +51,7 @@ from util.date_utils import strftime_localized
 from util.views import handle_500
 import requests
 from django.contrib.auth.decorators import login_required
+from bs4 import BeautifulSoup
 
 log = logging.getLogger(__name__)
 _ = translation.ugettext
@@ -485,8 +487,22 @@ def render_cert_by_uuid(request, certificate_uuid):
 def render_pdf_cert_by_uuid(request, certificate_uuid):
     output =  render_cert_by_uuid(request, certificate_uuid)
 
+    soup = BeautifulSoup(output.content, "html.parser")
+
+    if settings.INTERNAL_HOST_IP:
+        for img in soup.find_all(['img', 'script']):
+            if img.get("src", None):
+                img_src = img['src']
+                o = urlparse(img_src)
+                img['src'] = o._replace(netloc=settings.INTERNAL_HOST_IP,scheme="http").geturl()
+
+        for href in soup.find_all('link'):
+            link_href = href['href']
+            o = urlparse(link_href)
+            href['href'] = o._replace(netloc=settings.INTERNAL_HOST_IP,scheme="http").geturl()
+
     multipart_form_data = {
-        'file': ('index.html', output.content),
+        'file': ('index.html', unicode(soup)),
         'marginTop': (None, '0',),
         'marginBottom': (None, '0',),
         'marginLeft': (None, '0',),
