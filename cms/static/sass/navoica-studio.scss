@@ -1234,7 +1234,16 @@ div#edit_textbook_error {
         background-color: #B43F37;
     }
   }
-
+  
+  .post-content {
+    ol {
+      margin-left: 2rem;
+      list-style: normal;
+    }
+    ul {
+      list-style: inside;
+    }
+  }
 }
 
 .xblock blockquote {
