@@ -166,7 +166,7 @@
     .certificate-generation-history,
     .certificate-exception-container,
     .certificate-invalidation-container,
-    .send-email,
+    .send-email #send,
     .email-background,
     .running-tasks-container {
       background-color: map_get($grays, "100");
@@ -431,7 +431,7 @@
     .certificate-exception-container,
     .certificate-invalidation-container,
     .certificate-invalidation-container,
-    .send-email,
+    .send-email #send,
     .email-background,
     .running-tasks-container  {
       padding: 24px;
