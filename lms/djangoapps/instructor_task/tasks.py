@@ -28,7 +28,7 @@ from django.utils.translation import ugettext_noop
 
 from bulk_email.tasks import perform_delegate_email_batches
 from lms.djangoapps.instructor_task.tasks_base import BaseInstructorTask
-from lms.djangoapps.instructor_task.tasks_helper.certs import generate_students_certificates
+from lms.djangoapps.instructor_task.tasks_helper.certs import generate_students_certificates, merging_all_course_certificates
 from lms.djangoapps.instructor_task.tasks_helper.enrollments import (
     upload_enrollment_report,
     upload_exec_summary_report,
@@ -291,6 +291,20 @@ def generate_certificates(entry_id, xmodule_instance_args):
     task_fn = partial(generate_students_certificates, xmodule_instance_args)
     return run_main_task(entry_id, task_fn, action_name)
 
+@task(base=BaseInstructorTask, routing_key=settings.GRADES_DOWNLOAD_ROUTING_KEY)  # pylint: disable=not-callable
+def merge_all_certificates(entry_id, xmodule_instance_args):
+    """
+    Grade students and generate certificates.
+    """
+    # Translators: This is a past-tense verb that is inserted into task progress messages as {action}.
+    action_name = ugettext_noop('merge all certificates')
+    TASK_LOG.info(
+        u"Task: %s, InstructorTask ID: %s, Task type: %s, Preparing for task execution",
+        xmodule_instance_args.get('task_id'), entry_id, action_name
+    )
+
+    task_fn = partial(merging_all_course_certificates, xmodule_instance_args)
+    return run_main_task(entry_id, task_fn, action_name)
 
 @task(base=BaseInstructorTask)  # pylint: disable=not-callable
 def cohort_students(entry_id, xmodule_instance_args):

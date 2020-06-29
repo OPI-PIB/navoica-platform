@@ -5,10 +5,10 @@
 # EdX Team <info@edx.org>, 2020.
 #
 # Translators:
+# krystianlygas <krystian.lygas@gmail.com>, 2019
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
-# krystianlygas <krystian.lygas@gmail.com>, 2020
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
@@ -33,10 +33,10 @@
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
 # Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
-# Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
 # Navoica Navoica <navoica@opi.org.pl>, 2020
+# Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -64,7 +64,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-05-14 07:59+0000\n"
+"POT-Creation-Date: 2020-06-15 13:41+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -155,113 +155,13 @@ msgstr "Stan"
 msgid "Pending"
 msgstr "Oczekuje"
 
-#: cms/envs/common.py cms/templates/board_base.html
-#: themes/navoica-theme/cms/templates/board_base.html
-msgid "Studio"
-msgstr ""
-
-#: wiki/templates/wiki/base.html
-msgid "Search..."
-msgstr "Szukaj..."
-
-#: cms/templates/board_base.html
-#: themes/navoica-theme/cms/templates/board_base.html
-msgid "Advanced search"
-msgstr ""
-
-#: cms/templates/widgets/header.html lms/templates/user_dropdown.html
-#: lms/templates/header/user_dropdown.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-#: themes/navoica-theme/lms/templates/header/user_dropdown.html
-msgid "Account"
-msgstr "Konto"
-
-#: cms/templates/board_base.html
-#: themes/navoica-theme/cms/templates/board_base.html
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Account Navigation"
-msgstr ""
-
-#: cms/templates/board_base.html
-#: themes/navoica-theme/cms/templates/board_base.html
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Contextual Online Help"
-msgstr ""
-
-#: cms/templates/widgets/header.html
-#: lms/templates/navigation/navbar-authenticated.html
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: lms/templates/static_templates/help.html
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-#: themes/navoica-theme/lms/templates/static_templates/help.html
-#: wiki/plugins/help/wiki_plugin.py
-msgid "Help"
-msgstr "Pomoc"
-
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/header/user_dropdown.html
-#: lms/templates/navigation/navbar-authenticated.html
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/header/user_dropdown.html
-msgid "Profile"
-msgstr "Profil"
-
-#: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
-#: lms/templates/header/user_dropdown.html
-#: themes/navoica-theme/cms/templates/widgets/user_dropdown.html
-#: themes/navoica-theme/lms/templates/header/user_dropdown.html
-msgid "Sign Out"
-msgstr "Wyloguj się"
-
-#: cms/templates/board_base.html
-#: themes/navoica-theme/cms/templates/board_base.html
-#: cms/templates/register.html cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Sign Up"
-msgstr ""
-
 #: cms/templates/board_base.html
 #: openedx/core/djangoapps/ace_common/templates/ace_common/edx_ace/common/base_body.html
-#: themes/navoica-theme/cms/templates/board_base.html
 #: themes/red-theme/lms/templates/ace_common/edx_ace/common/base_body.html
 #: cms/templates/login.html cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
 #: themes/red-theme/cms/templates/login.html
 msgid "Sign In"
 msgstr "Zaloguj się"
-
-#: cms/templates/board_base.html
-#: themes/navoica-theme/cms/templates/board_base.html
-#: cms/templates/widgets/footer.html
-#: themes/navoica-theme/cms/templates/widgets/footer.html
-msgid "Policies"
-msgstr ""
-
-#: cms/templates/board_base.html
-#: themes/navoica-theme/cms/templates/board_base.html
-#: cms/templates/widgets/footer.html
-#: themes/navoica-theme/cms/templates/widgets/footer.html
-msgid "LMS"
-msgstr ""
-
-#: cms/templates/widgets/footer.html
-#: themes/navoica-theme/cms/templates/widgets/footer.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "Legal"
-msgstr "Informacje prawne"
-
-#: cms/templates/board_base.html
-#: themes/navoica-theme/cms/templates/board_base.html
-msgid ""
-" EdX, Open edX, Studio, and the edX and Open edX logos are registered "
-"trademarks or trademarks of <a data-rel='edx.org' "
-"href='https://www.edx.org/'> edX Inc.</a> "
-msgstr ""
 
 #. #-#-#-#-#  django-partial.po (0.1a)  #-#-#-#-#
 #. Translators: 'Open edX' is a brand, please keep this untranslated.
@@ -270,18 +170,11 @@ msgstr ""
 #. Translators: 'Open edX' is a brand, please keep this untranslated. See
 #. http://openedx.org for more information.
 #: cms/templates/board_base.html lms/djangoapps/branding/api.py
-#: themes/navoica-theme/cms/templates/board_base.html
 #: cms/templates/widgets/footer.html
 #: themes/edx.org/lms/templates/certificates/_accomplishment-footer.html
-#: themes/navoica-theme/cms/templates/widgets/footer.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "Powered by Open edX"
 msgstr "Platforma oparta na systemie Open edX"
-
-#: cms/templates/board_base.html
-#: themes/navoica-theme/cms/templates/board_base.html
-msgid "Powered by: "
-msgstr ""
 
 #: common/djangoapps/course_modes/admin.py
 #: common/djangoapps/course_modes/models.py
@@ -336,7 +229,6 @@ msgstr "Uczestniczysz jako student ścieżki honorowej"
 #: common/djangoapps/course_modes/helpers.py lms/djangoapps/branding/api.py
 #: openedx/core/djangoapps/user_api/api.py
 #: lms/templates/static_templates/honor.html
-#: themes/navoica-theme/lms/templates/static_templates/honor.html
 #: themes/stanford-style/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Honor Code"
@@ -573,7 +465,6 @@ msgid "You are missing one or more required fields"
 msgstr "Opuszczono co najmniej jedno wymagane pole"
 
 #: common/djangoapps/student/forms.py lms/templates/register.html
-#: themes/navoica-theme/lms/templates/register.html
 msgid "Passwords Don't Match"
 msgstr "Podane hasła nie pasują do siebie"
 
@@ -1249,7 +1140,6 @@ msgstr "Pomoc techniczna {platform_name}"
 
 #: common/djangoapps/third_party_auth/templates/third_party_auth/post_custom_auth_entry.html
 #: lms/templates/student_account/finish_auth.html
-#: themes/navoica-theme/lms/templates/student_account/finish_auth.html
 msgid "Please wait"
 msgstr "Proszę czekać"
 
@@ -2177,8 +2067,6 @@ msgstr "Wystąpił problem z odpowiedzią kadry na to ćwiczenie.: pusta granica
 #: common/lib/capa/capa/responsetypes.py lms/templates/login.html
 #: lms/templates/register-form.html lms/templates/course_modes/choose.html
 #: themes/edx.org/lms/templates/course_modes/choose.html
-#: themes/navoica-theme/lms/templates/login.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "or"
 msgstr "lub"
@@ -2596,7 +2484,6 @@ msgstr ""
 #: lms/templates/survey/survey.html
 #: openedx/core/djangoapps/dark_lang/templates/dark_lang/preview-language-fragment.html
 #: openedx/core/djangoapps/theming/templates/theming/theming-admin-fragment.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Submit"
 msgstr "Prześlij"
@@ -2706,11 +2593,6 @@ msgid ""
 msgstr ""
 "Należy odczekać co najmniej {wait_secs} pomiędzy kolejnymi próbami. "
 "Pozostało {remaining_secs}."
-
-#: common/lib/xmodule/xmodule/capa_base.py
-#, python-brace-format
-msgid "Staff debug info: {tb}"
-msgstr "Komunikat błędu: {tb}"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 #, python-brace-format
@@ -3292,7 +3174,6 @@ msgstr ""
 #: common/lib/xmodule/xmodule/course_module.py
 #: lms/templates/courseware/info.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Course Handouts"
 msgstr "Notatki z kursu"
 
@@ -3631,9 +3512,6 @@ msgstr "Obie"
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/static_templates/about.html
-#: themes/navoica-theme/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-not-authenticated.html
-#: themes/navoica-theme/lms/templates/static_templates/about.html
 #: themes/red-theme/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/static_templates/about.html
@@ -3941,7 +3819,6 @@ msgstr "Dostępny"
 
 #: common/lib/xmodule/xmodule/course_module.py
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Upcoming"
 msgstr "Zaplanowany"
 
@@ -4996,8 +4873,6 @@ msgstr "Strona główna"
 #: cms/templates/widgets/header.html lms/templates/help_modal.html
 #: lms/templates/courseware/courseware.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-#: themes/navoica-theme/lms/templates/courseware/courseware.html
 msgid "Course"
 msgstr "Kurs"
 
@@ -5566,13 +5441,11 @@ msgstr ""
 "należącymi do edX Inc."
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/blog.html
-#: themes/navoica-theme/lms/templates/static_templates/blog.html
 msgid "Blog"
 msgstr "Blog"
 
 #: lms/djangoapps/branding/api.py cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock_links.html
 #: themes/stanford-style/lms/templates/static_templates/about.html
 msgid "Contact Us"
 msgstr "Kontakt"
@@ -5583,12 +5456,10 @@ msgstr "Centrum pomocy"
 
 #: lms/djangoapps/branding/api.py
 #: lms/templates/static_templates/media-kit.html
-#: themes/navoica-theme/lms/templates/static_templates/media-kit.html
 msgid "Media Kit"
 msgstr "Dla mediów"
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/donate.html
-#: themes/navoica-theme/lms/templates/static_templates/donate.html
 msgid "Donate"
 msgstr "Darowizna"
 
@@ -5597,21 +5468,17 @@ msgid "About the project"
 msgstr "O projekcie"
 
 #: lms/templates/static_templates/faq.html
-#: themes/navoica-theme/lms/templates/static_templates/faq.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "FAQ"
 msgstr "Najczęściej zadawane pytania"
 
 #: lms/templates/static_templates/legend.html
-#: themes/navoica-theme/lms/templates/static_templates/legend.html
 msgid "Legend_title"
 msgstr "Legenda o Nawojce"
 
 #: lms/djangoapps/branding/api.py
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-not-authenticated.html
 #: themes/red-theme/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/static_templates/about.html
@@ -5630,9 +5497,6 @@ msgstr "Warunki korzystania z Serwisu | Kodeks Honorowy"
 #: cms/templates/widgets/footer.html lms/templates/footer.html
 #: lms/templates/static_templates/privacy.html
 #: themes/edx.org/lms/templates/certificates/_accomplishment-footer.html
-#: themes/navoica-theme/cms/templates/widgets/footer.html
-#: themes/navoica-theme/lms/templates/footer.html
-#: themes/navoica-theme/lms/templates/static_templates/privacy.html
 #: themes/red-theme/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/static_templates/tos.html
@@ -5652,8 +5516,6 @@ msgstr "Mapa strony"
 #. in order to register a new account.
 #: lms/djangoapps/branding/api.py openedx/core/djangoapps/user_api/api.py
 #: cms/templates/widgets/footer.html lms/templates/static_templates/tos.html
-#: themes/navoica-theme/cms/templates/widgets/footer.html
-#: themes/navoica-theme/lms/templates/static_templates/tos.html
 #: themes/red-theme/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/static_templates/tos.html
@@ -5682,8 +5544,6 @@ msgstr "Praca"
 #: lms/djangoapps/branding/api.py
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-not-authenticated.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "News"
 msgstr "Aktualności"
@@ -5748,18 +5608,22 @@ msgstr ""
 msgid "created"
 msgstr "utworzony"
 
-#. Translators: This is a past-tense verb that is used for task action
-#. messages.
-#: lms/djangoapps/certificates/models.py
-msgid "regenerated"
-msgstr "odtworzony"
-
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
 #: lms/djangoapps/certificates/models.py
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "generated"
 msgstr "wygenerowany"
+
+#: lms/djangoapps/certificates/models.py
+msgid "generating"
+msgstr ""
+
+#. Translators: This is a past-tense verb that is used for task action
+#. messages.
+#: lms/djangoapps/certificates/models.py
+msgid "regenerated"
+msgstr "odtworzony"
 
 #. Translators: This string represents task was executed for all learners.
 #: lms/djangoapps/certificates/models.py
@@ -6187,7 +6051,6 @@ msgstr "Więcej o dokonaniach studenta {fullname}"
 #: lms/templates/api_admin/catalogs/search.html
 #: lms/templates/ccx/enrollment.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Username"
 msgstr "Nazwa użytkownika"
 
@@ -6402,7 +6265,6 @@ msgstr "Nie posiadasz dostępu do tego kursu na urządzeniu mobilnym."
 
 #: lms/djangoapps/courseware/course_tools.py
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Upgrade to Verified"
 msgstr "Zmień tryb kursu do poziomu zweryfikowanego"
 
@@ -6498,7 +6360,6 @@ msgstr ""
 
 #: lms/djangoapps/courseware/date_summary.py
 #: openedx/features/learner_profile/templates/learner_profile/learner_profile.html
-#: themes/navoica-theme/lms/templates/learner_profile/learner_profile.html
 msgid "Learner Profile"
 msgstr "Profil studenta"
 
@@ -6577,7 +6438,6 @@ msgstr "Konto premium ({upgrade_price})"
 #: cms/templates/group_configurations.html
 #: lms/templates/courseware/program_marketing.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Learn More"
 msgstr "Dowiedz się więcej"
 
@@ -7288,7 +7148,6 @@ msgstr "Kadra kursu"
 #: lms/djangoapps/instructor/paidcourse_enrollment_report.py
 #: lms/templates/preview_menu.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
-#: themes/navoica-theme/lms/templates/preview_menu.html
 msgid "Staff"
 msgstr "Kadra"
 
@@ -7499,7 +7358,6 @@ msgstr "Rok urodzenia"
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: openedx/core/djangoapps/user_api/api.py lms/templates/register-form.html
 #: lms/templates/signup_modal.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Gender"
 msgstr "Płeć"
@@ -7512,7 +7370,6 @@ msgstr "Poziom wykształcenia"
 #: lms/djangoapps/instructor/views/api.py
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Mailing Address"
 msgstr "Adres do korespondencji"
@@ -7547,7 +7404,6 @@ msgstr "Zespół"
 #: openedx/core/djangoapps/user_api/api.py lms/templates/register-form.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/shoppingcart/receipt.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "City"
 msgstr "Miejscowość"
@@ -7557,7 +7413,6 @@ msgstr "Miejscowość"
 #: lms/templates/register-form.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/shoppingcart/receipt.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Country"
 msgstr "Kraj"
@@ -7748,6 +7603,12 @@ msgid ""
 msgstr ""
 "Czynność generowania zaświadczeń dla wszystkich studentów tego kursu została"
 " rozpoczęta. Możesz sprawdzać status czynności w sekcji czynności w toku."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"Merging certificates task has been started. You can view the status of the "
+"generation task in the \"Pending Tasks\" section."
+msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
@@ -8018,6 +7879,7 @@ msgid "Extensions"
 msgstr "Rozszerzenia"
 
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Data Download"
 msgstr "Pobieranie danych"
 
@@ -8129,8 +7991,6 @@ msgstr ""
 #: openedx/core/djangoapps/user_api/api.py cms/templates/register.html
 #: lms/templates/register-form.html lms/templates/register-shib.html
 #: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Full Name"
@@ -8248,6 +8108,12 @@ msgstr "wygenerowanych zaświadczeń o ukończeniu kursu"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
+#: lms/djangoapps/instructor_task/tasks.py
+msgid "merge all certificates"
+msgstr ""
+
+#. Translators: This is a past-tense verb that is inserted into task progress
+#. messages as {action}.
 #. An example of such a message is: "Progress: {action} {succeeded} of
 #. {attempted} so far"
 #: lms/djangoapps/instructor_task/tasks.py
@@ -8288,7 +8154,6 @@ msgstr "Tytuł"
 
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Year of Birth"
 msgstr "Rok urodzenia"
@@ -9612,7 +9477,6 @@ msgstr "Data ogłoszenia kursu"
 #: lms/djangoapps/shoppingcart/reports.py cms/templates/course_outline.html
 #: cms/templates/settings.html
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html
-#: themes/navoica-theme/cms/templates/settings.html
 msgid "Course Start Date"
 msgstr "Data rozpoczęcia kursu"
 
@@ -10610,15 +10474,15 @@ msgstr ""
 msgid "Password reset on %(platform_name)s"
 msgstr "Resetowanie hasła na platformie %(platform_name)s"
 
-#: lms/templates/logout.html themes/navoica-theme/lms/templates/logout.html
+#: lms/templates/logout.html
 msgid "Signed Out"
 msgstr "Wylogowano"
 
-#: lms/templates/logout.html themes/navoica-theme/lms/templates/logout.html
+#: lms/templates/logout.html
 msgid "You have signed out."
 msgstr "Zostałeś wylogowany"
 
-#: lms/templates/logout.html themes/navoica-theme/lms/templates/logout.html
+#: lms/templates/logout.html
 #, python-format
 msgid ""
 "\n"
@@ -10629,7 +10493,7 @@ msgstr ""
 "Jeśli nie zostaniesz przekierowany w ciągu 5 sekund, kliknij <a href=\"%(target)s\">kliknij, aby przejść do strony głównej</a>"
 
 #: lms/templates/main_django.html cms/templates/base.html
-#: lms/templates/main.html themes/navoica-theme/lms/templates/main.html
+#: lms/templates/main.html
 msgid "Skip to main content"
 msgstr "Pomiń i przejdź do zawartości głównej"
 
@@ -10652,6 +10516,9 @@ msgstr ""
 "aplikacji. Z kolei aby zrezygnować z uprawnień, proszę kliknąć 'Anuluj'."
 
 #: lms/templates/oauth2_provider/authorize.html
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+#: cms/templates/manage_users.html cms/templates/manage_users_lib.html
+#: lms/templates/provider/authorize.html
 msgid "Cancel"
 msgstr "Anuluj"
 
@@ -10823,8 +10690,6 @@ msgstr "Podgląd wersji roboczej"
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
 #: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
-#: themes/navoica-theme/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/forgot_password_modal.html
 msgid "Close"
 msgstr "Zamknij"
 
@@ -10842,7 +10707,6 @@ msgstr "Podgląd Wiki"
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
 #: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "window open"
 msgstr "pełne okno"
 
@@ -11107,10 +10971,6 @@ msgstr ""
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/index.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/courseware/courseware.html
 #: themes/stanford-style/lms/templates/index.html
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/index.html
 msgid "Search"
@@ -11381,8 +11241,6 @@ msgstr ""
 #: openedx/features/course_bookmarks/views/course_bookmarks.py
 #: lms/templates/courseware/courseware.html
 #: openedx/features/course_bookmarks/templates/course_bookmarks/course-bookmarks.html
-#: themes/navoica-theme/lms/templates/course_bookmarks/course-bookmarks.html
-#: themes/navoica-theme/lms/templates/courseware/courseware.html
 msgid "Bookmarks"
 msgstr "Zakładki"
 
@@ -12260,14 +12118,12 @@ msgstr "Adres e-mail, którego użyłeś podczas rejestracji w {platform_name}"
 #: cms/templates/register.html lms/templates/provider_login.html
 #: lms/templates/register-form.html lms/templates/signup_modal.html
 #: lms/templates/sysadmin_dashboard.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Password"
 msgstr "Hasło"
 
 #: openedx/core/djangoapps/user_api/api.py lms/templates/login.html
-#: themes/navoica-theme/lms/templates/login.html
 msgid "Remember me"
 msgstr "Zapamiętaj mnie"
 
@@ -12299,8 +12155,6 @@ msgstr ""
 #: openedx/core/djangoapps/user_api/api.py cms/templates/register.html
 #: lms/templates/register-form.html lms/templates/register-shib.html
 #: lms/templates/signup_modal.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Public Username"
@@ -12458,7 +12312,6 @@ msgstr "{header_open}{title}{header_close}"
 #: openedx/core/djangoapps/util/user_messages.py
 #: cms/templates/course_outline.html cms/templates/index.html
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/latest-update-fragment.html
 msgid "Dismiss"
 msgstr "Odrzuć"
 
@@ -12558,14 +12411,11 @@ msgstr ""
 #: openedx/features/course_experience/plugins.py
 #: cms/templates/widgets/header.html
 #: openedx/features/course_experience/templates/course_experience/course-updates-fragment.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-#: themes/navoica-theme/lms/templates/course_experience/course-updates-fragment.html
 msgid "Updates"
 msgstr "Aktualności"
 
 #: openedx/features/course_experience/plugins.py
 #: openedx/features/course_experience/templates/course_experience/course-reviews-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-reviews-fragment.html
 msgid "Reviews"
 msgstr "Opinie"
 
@@ -12579,8 +12429,6 @@ msgstr ""
 #: lms/templates/login.html lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
-#: themes/navoica-theme/lms/templates/login.html
-#: themes/navoica-theme/lms/templates/header/navbar-not-authenticated.html
 msgid "Sign in"
 msgstr "Zaloguj się"
 
@@ -12876,10 +12724,6 @@ msgid "{platform_name} Support Levels:"
 msgstr "Poziomy wsparcia {platform_name}:"
 
 #: cms/djangoapps/contentstore/views/component.py
-msgid "Embedded Answers"
-msgstr "Zagnieżdżone z luką"
-
-#: cms/djangoapps/contentstore/views/component.py
 msgid "HTML"
 msgstr "HTML"
 
@@ -12894,6 +12738,10 @@ msgstr "Film z chmury"
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Inline Dropdown"
 msgstr "Zagnieżdżone z rozwijaną listą wyboru"
+
+#: cms/djangoapps/contentstore/views/component.py
+msgid "Embedded Answers"
+msgstr "Zagnieżdżone z luką"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Blank"
@@ -13409,9 +13257,85 @@ msgstr "Nieprawidłowy format pola '{name}'. {detailed_message}"
 msgid "Navoica.pl Studio"
 msgstr "Navoica.pl Studio"
 
+#: cms/envs/common.py cms/templates/board_base.html
+msgid "Studio"
+msgstr ""
+
 #: cms/lib/xblock/tagging/tagging.py
 msgid "Dictionary with the available tags"
 msgstr "Dziennik dostępnych tagów"
+
+#: wiki/templates/wiki/base.html
+msgid "Search..."
+msgstr "Szukaj..."
+
+#: cms/templates/board_base.html
+msgid "Advanced search"
+msgstr ""
+
+#: cms/templates/widgets/header.html lms/templates/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
+msgid "Account"
+msgstr "Konto"
+
+#: cms/templates/board_base.html cms/templates/widgets/header.html
+msgid "Account Navigation"
+msgstr ""
+
+#: cms/templates/board_base.html cms/templates/widgets/header.html
+msgid "Contextual Online Help"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: lms/templates/static_templates/help.html
+#: themes/edx.org/lms/templates/header/navbar-authenticated.html
+#: wiki/plugins/help/wiki_plugin.py
+msgid "Help"
+msgstr "Pomoc"
+
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/user_dropdown.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header/navbar-authenticated.html
+msgid "Profile"
+msgstr "Profil"
+
+#: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
+msgid "Sign Out"
+msgstr "Wyloguj się"
+
+#: cms/templates/board_base.html cms/templates/register.html
+#: cms/templates/widgets/header.html
+msgid "Sign Up"
+msgstr ""
+
+#: cms/templates/board_base.html cms/templates/widgets/footer.html
+msgid "Policies"
+msgstr ""
+
+#: cms/templates/board_base.html cms/templates/widgets/footer.html
+msgid "LMS"
+msgstr ""
+
+#: cms/templates/widgets/footer.html
+#: themes/red-theme/lms/templates/footer.html
+msgid "Legal"
+msgstr "Informacje prawne"
+
+#: cms/templates/board_base.html
+msgid ""
+" EdX, Open edX, Studio, and the edX and Open edX logos are registered "
+"trademarks or trademarks of <a data-rel='edx.org' "
+"href='https://www.edx.org/'> edX Inc.</a> "
+msgstr ""
+
+#: cms/templates/board_base.html
+msgid "Powered by: "
+msgstr ""
 
 #: cms/urls.py
 msgid "Studio Administration"
@@ -13419,29 +13343,18 @@ msgstr "Administracja Studio"
 
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
-#: themes/navoica-theme/lms/templates/static_templates/404.html
 msgid "Page Not Found"
 msgstr "Nie odnaleziono strony"
 
 #: cms/templates/404.html lms/templates/static_templates/404.html
-#: themes/navoica-theme/lms/templates/static_templates/404.html
 msgid "Page not found"
 msgstr "Nie znaleziono strony"
-
-#: cms/templates/asset_index.html cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Files & Uploads"
-msgstr ""
 
 #: cms/templates/asset_index.html cms/templates/course_info.html
 #: cms/templates/course_outline.html cms/templates/edit-tabs.html
 #: cms/templates/textbooks.html cms/templates/videos_index.html
 #: cms/templates/widgets/header.html lms/templates/static_htmlbook.html
 #: lms/templates/static_pdfbook.html lms/templates/staticbook.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-#: themes/navoica-theme/lms/templates/static_htmlbook.html
-#: themes/navoica-theme/lms/templates/static_pdfbook.html
-#: themes/navoica-theme/lms/templates/staticbook.html
 msgid "Content"
 msgstr "Treść"
 
@@ -13450,8 +13363,6 @@ msgstr "Treść"
 #: cms/templates/settings.html cms/templates/settings_advanced.html
 #: cms/templates/settings_graders.html cms/templates/widgets/header.html
 #: lms/templates/wiki/includes/article_menu.html
-#: themes/navoica-theme/cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
 #: wiki/templates/wiki/settings.html
 #: wiki/templates/wiki/includes/article_menu.html
 msgid "Settings"
@@ -13464,102 +13375,12 @@ msgstr "Ustawienia"
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: openedx/features/learner_profile/templates/learner_profile/learner_profile.html
-#: themes/navoica-theme/lms/templates/learner_profile/learner_profile.html
 msgid "Loading"
 msgstr "Wczytywanie"
-
-#: cms/templates/certificates.html cms/templates/group_configurations.html
-#: cms/templates/settings.html cms/templates/settings_advanced.html
-#: cms/templates/settings_graders.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Other Course Settings"
-msgstr ""
-
-#: cms/templates/certificates.html cms/templates/group_configurations.html
-#: cms/templates/settings.html cms/templates/settings_advanced.html
-#: cms/templates/settings_graders.html cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Grading"
-msgstr ""
-
-#: cms/templates/certificates.html cms/templates/group_configurations.html
-#: cms/templates/manage_users.html cms/templates/settings.html
-#: cms/templates/settings_advanced.html cms/templates/settings_graders.html
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Course Team"
-msgstr ""
-
-#: cms/templates/certificates.html cms/templates/group_configurations.html
-#: cms/templates/settings.html cms/templates/settings_advanced.html
-#: cms/templates/settings_graders.html cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Advanced Settings"
-msgstr ""
-
-#: cms/templates/course-create-rerun.html cms/templates/index.html
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Organization"
-msgstr ""
-
-#: cms/templates/course-create-rerun.html cms/templates/index.html
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Number"
-msgstr ""
-
-#: cms/templates/course-create-rerun.html cms/templates/index.html
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Run"
-msgstr ""
-
-#: cms/templates/course_outline.html cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Pacing"
-msgstr ""
-
-#: cms/templates/course_outline.html cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Self-Paced"
-msgstr ""
-
-#: cms/templates/course_outline.html cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Instructor-Paced"
-msgstr ""
-
-#. Translators: Pages refer to the tabs that appear in the top navigation of
-#. each course.
-#: cms/templates/edit-tabs.html cms/templates/export.html
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Pages"
-msgstr ""
-
-#: cms/templates/export.html cms/templates/export_git.html
-#: cms/templates/import.html cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Tools"
-msgstr ""
-
-#: cms/templates/export_git.html cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Export to Git"
-msgstr ""
 
 #: cms/templates/html_error.html lms/templates/module-error.html
 msgid "Error:"
 msgstr "Błąd:"
-
-#: cms/templates/index.html cms/templates/widgets/user_dropdown.html
-#: themes/navoica-theme/cms/templates/widgets/user_dropdown.html
-msgid "{studio_name} Home"
-msgstr ""
 
 #: cms/templates/index.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
@@ -13583,7 +13404,6 @@ msgstr "Edycja kursu:"
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/courseware/courses.html
 msgid "Courses"
 msgstr "Kursy"
 
@@ -13602,10 +13422,7 @@ msgstr "Informacje wymagane do zalogowania się do {studio_name}"
 #: cms/templates/login.html cms/templates/register.html
 #: lms/templates/help_modal.html lms/templates/provider_login.html
 #: lms/templates/register-form.html lms/templates/register-shib.html
-#: lms/templates/signup_modal.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
-#: themes/red-theme/cms/templates/login.html
+#: lms/templates/signup_modal.html themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "E-mail"
@@ -13618,10 +13435,6 @@ msgstr "E-mail"
 #: cms/templates/manage_users_lib.html cms/templates/register.html
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
 #: lms/templates/register-form.html lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/forgot_password_modal.html
-#: themes/navoica-theme/lms/templates/login.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
@@ -13629,20 +13442,13 @@ msgid "example: username@domain.com"
 msgstr "przykład: uzytkownik@domena.com"
 
 #: cms/templates/login.html lms/templates/login.html
-#: themes/navoica-theme/lms/templates/login.html
 #: themes/red-theme/cms/templates/login.html
 msgid "Forgot password?"
 msgstr "Nie pamiętasz hasła?"
 
-#: cms/templates/manage_users_lib.html cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "User Access"
-msgstr ""
-
 #. Translators: This is the placeholder text for a field that requests the
 #. user's full name.
 #: cms/templates/register.html lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "example: Jane Doe"
 msgstr "przykład: Jan Nowak"
@@ -13651,247 +13457,21 @@ msgstr "przykład: Jan Nowak"
 #. pick a username
 #: cms/templates/register.html lms/templates/register-form.html
 #: lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "example: JaneDoe"
 msgstr "przykład: JanNowak"
 
 #: cms/templates/register.html lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 msgid "Confirm Password"
 msgstr "Potwierdź hasło"
 
 #: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Schedule & Details Settings"
-msgstr ""
-
-#: cms/templates/settings.html cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Schedule & Details"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Basic Information"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "The nuts and bolts of your course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "This field is disabled: this information cannot be changed."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Summary Page"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "(for student enrollment and access)"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Enroll in {course_display_name}"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"The course \"{course_display_name}\", provided by {platform_name}, is open "
-"for enrollment. Please navigate to this course at {link_for_about_page} to "
-"enroll."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Send a note to students via email"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Invite your students"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Promoting Your Course with {platform_name}"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Your course summary page will not be viewable until your course has been "
-"announced. To provide content for the page and preview it, follow the "
-"instructions provided by your Program Manager."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Credit Requirements"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Steps required to earn course credit"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Minimum Grade"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Successful Proctored Exam"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Proctored Exam {number}"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "ID Verification"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "In-Course Reverification {number}"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Schedule"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Dates that control when your course can be viewed"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "First day the course begins"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Start Time"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "(UTC)"
-msgstr ""
-
-#: cms/templates/settings.html
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html
-#: themes/navoica-theme/cms/templates/settings.html
 msgid "Course End Date"
 msgstr "Data zakończenia kursu"
 
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Last day your course is active"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course End Time"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Certificates Available Date"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "By default, 48 hours after course end date"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Enrollment Start Date"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "First day students can enroll"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Enrollment Start Time"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Enrollment End Date"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Last day students can enroll."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Contact your edX partner manager to update these settings."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Enrollment End Time"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "These Dates Are Not Used When Promoting Your Course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"These dates impact {strong_start}when your courseware can be "
-"viewed{strong_end}, but they are {strong_start}not the dates shown on your "
-"course summary page{strong_end}. To provide the course start and "
-"registration dates as shown on your course summary page, follow the "
-"instructions provided by your Program Manager."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Details"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Provide useful information about your course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Identify the course language here. This is used to assist users find courses"
-" that are taught in a specific language. It is also used to localize the "
-"'From:' field in bulk emails."
-msgstr ""
-
 #: cms/templates/settings.html lms/templates/courseware/course_about.html
-#: themes/navoica-theme/cms/templates/settings.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "{week} week"
 msgid_plural "{week} weeks"
 msgstr[0] "{week} tydzień"
@@ -13899,355 +13479,9 @@ msgstr[1] "{week} tygodnie"
 msgstr[2] "{week} tygodni"
 msgstr[3] "{week} tygodni"
 
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Introducing Your Course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Information for prospective students"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Title"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Displayed as title on the course details page. Limit to 50 characters."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Subtitle"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Displayed as subtitle on the course details page. Limit to 150 characters."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Duration"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Displayed on the course details page. Limit to 50 characters."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Description"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Displayed on the course details page. Limit to 1000 characters."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Short Description"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Appears on the course catalog page when students roll over the course name. "
-"Limit to ~150 characters"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Overview"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "HTML Code Editor"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Introductions, prerequisites, FAQs that are used on {a_link_start}your "
-"course summary page{a_link_end} (formatted in HTML)"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Card Image"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"You can manage this image along with all of your other {a_link_start}files "
-"and uploads{a_link_end}"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Your course currently does not have an image. Please upload one (JPEG or PNG"
-" format, and minimum suggested dimensions are 375px wide by 200px tall)"
-msgstr ""
-
-#. Translators: This is the placeholder text for a field that requests the URL
-#. for a course image
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Your course image URL"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Please provide a valid path and name to your course image (Note: only JPEG "
-"or PNG format supported)"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Upload Course Card Image"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Your course currently does not have an image. Please upload one (JPEG or PNG"
-" format, and minimum suggested dimensions are 1440px wide by 400px tall)"
-msgstr ""
-
-#. Translators: This is the placeholder text for a field that requests the URL
-#. for a course banner image
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Your banner image URL"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Please provide a valid path and name to your banner image (Note: only JPEG "
-"or PNG format supported)"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Upload Course Banner Image"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Video Thumbnail Image"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Your course currently does not have a video thumbnail image. Please upload "
-"one (JPEG or PNG format, and minimum suggested dimensions are 375px wide by "
-"200px tall)"
-msgstr ""
-
-#. Translators: This is the placeholder text for a field that requests the URL
-#. for a course video thumbnail image
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Your video thumbnail image URL"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Please provide a valid path and name to your video thumbnail image (Note: "
-"only JPEG or PNG format supported)"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Upload Video Thumbnail Image"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Introduction Video"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Delete Current Video"
-msgstr ""
-
-#. Translators: This is the placeholder text for a field that requests a
-#. YouTube video ID for a course video
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "your YouTube video's ID"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Enter your YouTube video's ID (along with any restriction parameters)"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Learning Outcomes"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Add the learning outcomes for this course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Add Learning Outcome"
-msgstr ""
-
 #: cms/templates/settings.html lms/templates/courseware/program_marketing.html
-#: themes/navoica-theme/cms/templates/settings.html
 msgid "Instructors"
 msgstr "Prowadzący"
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Add details about the instructors for this course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Add Instructor"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Requirements"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Expectations of the students taking this course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Hours of Effort per Week"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Time spent on all course work"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Prerequisite Course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course that students must complete before beginning this course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "set pre-requisite course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Require students to pass an exam before beginning the course."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"You can now view and author your course entrance exam from the "
-"{link_start}Course Outline{link_end}."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Grade Requirements"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid " %"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"The score student must meet in order to successfully complete the entrance "
-"exam. "
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Set the pacing for this course"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Instructor-paced courses progress at the pace that the course author sets. "
-"You can configure release dates for course content and due dates for "
-"assignments."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Self-paced courses do not have release dates for course content or due dates"
-" for assignments. Learners can complete course material at any time before "
-"the course end date."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course Content License"
-msgstr ""
-
-#. Translators: At the course settings, the editor is able to select the
-#. default course content license.
-#. The course content will have this license set, some assets can override the
-#. license with their own.
-#. In the form, the license selector for course content is described using the
-#. following string:
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Select the default license for course content"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "How are these settings used?"
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Your course's schedule determines when students can enroll in and begin a "
-"course."
-msgstr ""
-
-#: cms/templates/settings.html
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Other information from this page appears on the About page for your course. "
-"This information includes the course overview, course image, introduction "
-"video, and estimated time requirements. Students use About pages to choose "
-"new courses to take."
-msgstr ""
 
 #: cms/templates/studio_xblock_wrapper.html lms/templates/help_modal.html
 #: lms/templates/module-error.html
@@ -14263,11 +13497,6 @@ msgstr "Szczegóły"
 msgid "View"
 msgstr "Wyświetl"
 
-#: cms/templates/videos_index.html cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Video Uploads"
-msgstr ""
-
 #: cms/templates/maintenance/_force_publish_course.html
 #: lms/templates/problem.html lms/templates/shoppingcart/shopping_cart.html
 #: openedx/core/djangoapps/dark_lang/templates/dark_lang/preview-language-fragment.html
@@ -14275,200 +13504,60 @@ msgstr ""
 msgid "Reset"
 msgstr "Zresetuj"
 
-#: cms/templates/widgets/footer.html
-#: themes/navoica-theme/cms/templates/widgets/footer.html
-msgid "Accessibility Accommodation Request"
-msgstr ""
-
-#. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
-#. Inc.'. Please do not translate any of these trademarks and company names.
-#: cms/templates/widgets/footer.html
-#: themes/navoica-theme/cms/templates/widgets/footer.html
-msgid ""
-"EdX, Open edX, Studio, and the edX and Open edX logos are registered "
-"trademarks or trademarks of {link_start}edX Inc.{link_end}"
-msgstr ""
-
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Current Course:"
-msgstr ""
-
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Course Navigation"
-msgstr ""
-
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Outline"
-msgstr ""
-
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Import"
-msgstr ""
-
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Export"
-msgstr ""
-
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Current Library:"
-msgstr ""
-
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Language preference"
-msgstr ""
-
 #: cms/templates/widgets/header.html lms/templates/header/header.html
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
 msgid "Choose Language"
 msgstr "Wybierz język"
 
-#: cms/templates/widgets/header.html
-#: themes/navoica-theme/cms/templates/widgets/header.html
-msgid "Forum"
-msgstr ""
-
-#: cms/templates/widgets/metadata-edit.html
-#: themes/navoica-theme/cms/templates/widgets/metadata-edit.html
-msgid "Launch Latex Source Compiler"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Heading"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Insert a heading"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Add a multiple choice question"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Add a question with checkboxes"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Insert a text response"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Insert a numerical response"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Insert a dropdown response"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Explanation"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Add an explanation for this question"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Advanced Editor"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Toggle Cheatsheet"
-msgstr ""
-
-#: cms/templates/widgets/problem-edit.html
-#: themes/navoica-theme/cms/templates/widgets/problem-edit.html
-msgid "Label"
-msgstr ""
-
 #: cms/templates/widgets/sock.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock.html
 msgid "Looking for help with {studio_name}?"
 msgstr "Szukasz pomocy przy {studio_name}?"
 
 #: cms/templates/widgets/sock.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock.html
 msgid "Hide {studio_name} Help"
 msgstr "Ukryj pomoc {studio_name}"
 
 #: cms/templates/widgets/sock.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock.html
 msgid "{studio_name} Documentation"
 msgstr "Dokumentacja {studio_name}"
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock_links.html
 msgid "Access documentation on http://docs.edx.org"
 msgstr "Przejdź do dokumentacji na http://docs.edx.org"
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock_links.html
 msgid "edX Documentation"
 msgstr "Dokumentacja"
 
 #: cms/templates/widgets/sock_links.html
-#: themes/navoica-theme/cms/templates/widgets/sock_links.html
-msgid "Access the Open edX Portal"
-msgstr ""
-
-#: cms/templates/widgets/sock_links.html
-#: themes/navoica-theme/cms/templates/widgets/sock_links.html
-msgid "Open edX Portal"
-msgstr ""
-
-#: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock_links.html
 msgid "Enroll in edX101: Overview of Creating an edX Course"
 msgstr "Weź udział w kursie edX101: Podstawy tworzenia kursów edX"
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock_links.html
 msgid "Enroll in edX101"
 msgstr "Zapisz się na edX101"
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock_links.html
 msgid "Enroll in StudioX: Creating a Course with edX Studio"
 msgstr ""
 "Weź udział w kursie StudioX: Podstawy projektowania kursów w edX Studio"
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock_links.html
 msgid "Enroll in StudioX"
 msgstr "Zapisz się na StudioX"
 
 #: cms/templates/widgets/sock_links.html
 #: themes/edx.org/cms/templates/widgets/sock.html
-#: themes/navoica-theme/cms/templates/widgets/sock_links.html
 msgid "Send an email to {email}"
 msgstr "Wyślij e-mail na {email}"
 
@@ -14476,31 +13565,16 @@ msgstr "Wyślij e-mail na {email}"
 #: lms/templates/courseware/static_tab.html
 #: lms/templates/courseware/tab-view-v2.html
 #: lms/templates/courseware/tab-view.html
-#: themes/navoica-theme/cms/templates/widgets/tabs-aggregator.html
-#: themes/navoica-theme/lms/templates/courseware/static_tab.html
-#: themes/navoica-theme/lms/templates/courseware/tab-view.html
 msgid "name"
 msgstr "nazwa"
 
-#: cms/templates/widgets/user_dropdown.html
-#: themes/navoica-theme/cms/templates/widgets/user_dropdown.html
-msgid "Currently signed in as:"
-msgstr ""
-
 #: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
-#: themes/navoica-theme/cms/templates/widgets/user_dropdown.html
 msgid "Usermenu"
 msgstr "Menu użytkownika"
 
 #: cms/templates/widgets/user_dropdown.html lms/templates/user_dropdown.html
-#: themes/navoica-theme/cms/templates/widgets/user_dropdown.html
 msgid "Usermenu dropdown"
 msgstr "Rozwijane menu"
-
-#: cms/templates/widgets/user_dropdown.html
-#: themes/navoica-theme/cms/templates/widgets/user_dropdown.html
-msgid "Maintenance"
-msgstr ""
 
 #: common/lib/capa/capa/templates/codeinput.html
 msgid "Code Editor"
@@ -14611,7 +13685,6 @@ msgstr ""
 "Jej działanie zostanie wkrótce wznowione."
 
 #: lms/templates/_gated_content.html lms/templates/seq_module.html
-#: themes/navoica-theme/lms/templates/seq_module.html
 msgid "Content Locked"
 msgstr "Treść zamknięta"
 
@@ -14641,13 +13714,10 @@ msgid "Hide Annotations"
 msgstr "Ukryj notatki"
 
 #: lms/templates/bookmark_button.html
-#: themes/navoica-theme/lms/templates/bookmark_button.html
 msgid "Bookmarked"
 msgstr "Dodano do zakładek"
 
 #: lms/templates/bookmark_button.html
-#: themes/navoica-theme/lms/templates/bookmark_button.html
-#: themes/navoica-theme/lms/templates/seq_module.html
 msgid "Bookmark this page"
 msgstr "Dodaj tę stronę do zakładek"
 
@@ -14656,7 +13726,6 @@ msgid "You do not have access to this dependency module."
 msgstr "Nie posiadasz dostępu do tego modułu."
 
 #: lms/templates/course.html lms/templates/course2.html
-#: themes/navoica-theme/lms/templates/course.html
 msgid "Starts"
 msgstr "Rozpoczęcie"
 
@@ -14669,28 +13738,23 @@ msgid "Read more"
 msgstr "Czytaj więcej"
 
 #: lms/templates/courses_list.html
-#: themes/navoica-theme/lms/templates/courses_list.html
 msgid "New courses"
 msgstr "Nowe kursy"
 
 #: lms/templates/courses_list.html
-#: themes/navoica-theme/lms/templates/courses_list.html
 msgid "Popular courses"
 msgstr "Popularne kursy"
 
 #: lms/templates/courses_list.html
-#: themes/navoica-theme/lms/templates/courses_list.html
 msgid "View all Courses"
 msgstr "Wyświetl wszystkie kursy"
 
 #: lms/templates/dashboard.html lms/templates/user_dropdown.html
 #: themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "Dashboard"
 msgstr "Pulpit"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "You are not enrolled in any courses yet."
 msgstr "Nie uczestniczysz jeszcze w żadnym kursie..."
 
@@ -14698,61 +13762,49 @@ msgstr "Nie uczestniczysz jeszcze w żadnym kursie..."
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "Explore courses"
 msgstr "Przeglądaj kursy"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "Course-loading errors"
 msgstr "Błędy wczytywania kursu"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "Search Your Courses"
 msgstr "Przeszukaj swoje kursy"
 
 #: lms/templates/dashboard.html lms/templates/courseware/courseware.html
 #: themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/courseware/courseware.html
 msgid "Clear search"
 msgstr "Wyczyść wyszukiwanie"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "Account Status Info"
 msgstr "Informacja o statusie konta"
 
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "Order History"
 msgstr "Historia zamówień"
 
 #: lms/templates/dashboard.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "Email Settings for {course_number}"
 msgstr "Ustawienia e-mail dla kursu {course_number}"
 
 #: lms/templates/dashboard.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "Receive course emails"
 msgstr "Chcę otrzymywać powiadomienia e-mail z kursu"
 
 #: lms/templates/dashboard.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/dashboard.html
 msgid "Save Settings"
 msgstr "Zapisz ustawienia"
 
 #: lms/templates/edit_unit_link.html
-#: themes/navoica-theme/lms/templates/edit_unit_link.html
-#: themes/navoica-theme/lms/templates/seq_module.html
 msgid "View Unit in Studio"
 msgstr "Wyświetl ekran w Studio"
 
@@ -14789,7 +13841,6 @@ msgid "You should Register before trying to access the Unit"
 msgstr "Przed przystąpieniem do lekcji musisz się zarejestrować"
 
 #: lms/templates/enroll_staff.html lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgctxt "self"
 msgid "Enroll"
 msgstr "Zapisz się"
@@ -14830,11 +13881,11 @@ msgstr "Debug: "
 msgid "External Authentication failed"
 msgstr "Zewnętrzna autoryzacja nie powiodła się"
 
-#: lms/templates/footer.html themes/navoica-theme/lms/templates/footer.html
+#: lms/templates/footer.html
 msgid "Navoica.pl"
 msgstr "Navoica.pl"
 
-#: lms/templates/footer.html themes/navoica-theme/lms/templates/footer.html
+#: lms/templates/footer.html
 msgid ""
 "Polish MOOC platform offering free of charge online courses for every "
 "registered user."
@@ -14842,33 +13893,31 @@ msgstr ""
 "Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat"
 " i dla każdego zarejestrowanego użytkownika."
 
-#: lms/templates/footer.html themes/navoica-theme/lms/templates/footer.html
+#: lms/templates/footer.html
 msgid "About us"
 msgstr "O nas"
 
-#: lms/templates/footer.html themes/navoica-theme/lms/templates/footer.html
+#: lms/templates/footer.html
 msgid "Legal information"
 msgstr "Informacje prawne"
 
-#: lms/templates/footer.html themes/navoica-theme/lms/templates/footer.html
+#: lms/templates/footer.html
 msgid "Terms of use"
 msgstr "Warunki Korzystania z Serwisu"
 
-#: lms/templates/footer.html themes/navoica-theme/lms/templates/footer.html
+#: lms/templates/footer.html
 msgid "Honor code "
 msgstr "Kodeks honorowy"
 
-#: lms/templates/footer.html themes/navoica-theme/lms/templates/footer.html
+#: lms/templates/footer.html
 msgid "All rights reserved  "
 msgstr "Wszelkie prawa zastrzeżone"
 
 #: lms/templates/forgot_password_modal.html
-#: themes/navoica-theme/lms/templates/forgot_password_modal.html
 msgid "Password Reset"
 msgstr "Zresetuj hasło"
 
 #: lms/templates/forgot_password_modal.html
-#: themes/navoica-theme/lms/templates/forgot_password_modal.html
 msgid ""
 "Please enter your e-mail address below, and we will e-mail instructions for "
 "setting a new password."
@@ -14883,34 +13932,25 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/invalidate_registration_code_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
-#: themes/navoica-theme/lms/templates/forgot_password_modal.html
-#: themes/navoica-theme/lms/templates/login.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Required Information"
 msgstr "Informacja wymagana"
 
 #: lms/templates/forgot_password_modal.html
-#: themes/navoica-theme/lms/templates/forgot_password_modal.html
 msgid "Your E-mail Address"
 msgstr "Twój adres e-mail"
 
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
-#: themes/navoica-theme/lms/templates/forgot_password_modal.html
-#: themes/navoica-theme/lms/templates/login.html
 msgid "This is the e-mail address you used to register with {platform}"
 msgstr ""
 "Adres e-mail, którego użyto do zarejestrowania się na platformie {platform}"
 
 #: lms/templates/forgot_password_modal.html
-#: themes/navoica-theme/lms/templates/forgot_password_modal.html
 msgid "Reset My Password"
 msgstr "Zresetuj moje hasło"
 
 #: lms/templates/forgot_password_modal.html
-#: themes/navoica-theme/lms/templates/forgot_password_modal.html
 msgid "Email is incorrect."
 msgstr "Nieprawidłowy adres e-mail"
 
@@ -15090,29 +14130,27 @@ msgstr ""
 msgid "Note: only instructors may annotate."
 msgstr "Uwaga: tylko prowadzący mogą tworzyć notatki."
 
-#: lms/templates/index.html themes/navoica-theme/lms/templates/index.html
+#: lms/templates/index.html
 msgid "ACCESSIBLE KNOWLEDGE"
 msgstr "NAUKA DOSTĘPNA"
 
-#: lms/templates/index.html themes/navoica-theme/lms/templates/index.html
+#: lms/templates/index.html
 msgid "Free online courses offered by Polish universities and institutions"
 msgstr "Bezpłatne kursy online oferowane przez polskie uczelnie i instytucje"
 
 #: lms/templates/index.html lms/templates/header/header.html
-#: themes/navoica-theme/lms/templates/index.html
-#: themes/navoica-theme/lms/templates/header/header.html
 msgid "What do you want to learn?"
 msgstr "Szukaj..."
 
-#: lms/templates/index.html themes/navoica-theme/lms/templates/index.html
+#: lms/templates/index.html
 msgid "About Navoica"
 msgstr "O platformie Navoica"
 
-#: lms/templates/index.html themes/navoica-theme/lms/templates/index.html
+#: lms/templates/index.html
 msgid "Wide range of online courses "
 msgstr "Bogata oferta wirtualnych kursów"
 
-#: lms/templates/index.html themes/navoica-theme/lms/templates/index.html
+#: lms/templates/index.html
 msgid ""
 "A broad spectrum of courses with varying levels of expertise. Everyone can "
 "find an interesting course for themselves."
@@ -15120,11 +14158,11 @@ msgstr ""
 "Szeroki zakres tematyczny kursów o zróżnicowanym poziomie trudności. Każdy "
 "kursant znajdzie dla siebie interesujący kurs."
 
-#: lms/templates/index.html themes/navoica-theme/lms/templates/index.html
+#: lms/templates/index.html
 msgid "Publicly available learning platform"
 msgstr "Ogólnodostępna platforma kształcenia"
 
-#: lms/templates/index.html themes/navoica-theme/lms/templates/index.html
+#: lms/templates/index.html
 msgid ""
 "We reach anyone who wants to learn \\u2013 regardless of their age or place "
 "of residence."
@@ -15132,11 +14170,11 @@ msgstr ""
 "Dzięki platformie internetowej Navoica dotrzemy do każdego, kto chce się "
 "uczyć – bez względu na wiek i miejsce zamieszkania."
 
-#: lms/templates/index.html themes/navoica-theme/lms/templates/index.html
+#: lms/templates/index.html
 msgid "Network of universities and institutions "
 msgstr "Sieć współpracy uczelni i instytucji"
 
-#: lms/templates/index.html themes/navoica-theme/lms/templates/index.html
+#: lms/templates/index.html
 msgid ""
 "New online learning ecosystem brings together: universities, research "
 "institutes, businesses and NGOs. Find out more about Navoica"
@@ -15144,7 +14182,7 @@ msgstr ""
 "Nowy ekosystem kształcenia online skupia: uczelnie, instytucje naukowe, "
 "biznes i organizacje pozarządowe."
 
-#: lms/templates/index.html themes/navoica-theme/lms/templates/index.html
+#: lms/templates/index.html
 msgid "Find out more about Navoica"
 msgstr "Dowiedz się więcej o Navoice"
 
@@ -15209,17 +14247,14 @@ msgstr[3] ""
 "uzyska dostęp do {max_count} elementów wybranych losowo z tej listy."
 
 #: lms/templates/login-sidebar.html
-#: themes/navoica-theme/lms/templates/login-sidebar.html
 msgid "Helpful Information"
 msgstr "Przydatne informacje"
 
 #: lms/templates/login-sidebar.html
-#: themes/navoica-theme/lms/templates/login-sidebar.html
 msgid "Login via OpenID"
 msgstr "Zaloguj się za pomocą OpenID"
 
 #: lms/templates/login-sidebar.html
-#: themes/navoica-theme/lms/templates/login-sidebar.html
 msgid ""
 "You can now start learning with {platform_name} by logging in with your <a "
 "rel=\"external\" href=\"http://openid.net/\">OpenID account</a>."
@@ -15228,72 +14263,63 @@ msgstr ""
 "rel=\"external\" href=\"http://openid.net/\">konto OpenID</a>."
 
 #: lms/templates/login-sidebar.html
-#: themes/navoica-theme/lms/templates/login-sidebar.html
 msgid "Not Enrolled?"
 msgstr "Niezarejestrowany?"
 
 #: lms/templates/login-sidebar.html
-#: themes/navoica-theme/lms/templates/login-sidebar.html
 msgid "Sign up for {platform_name} today!"
 msgstr "Zarejestruj się w {platform_name} już dziś!"
 
 #: lms/templates/login-sidebar.html lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/login-sidebar.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid "Need Help?"
 msgstr "Potrzebujesz pomocy?"
 
 #: lms/templates/login-sidebar.html
-#: themes/navoica-theme/lms/templates/login-sidebar.html
 msgid "Looking for help signing in or with your {platform_name} account?"
 msgstr "Szukasz pomocy przy logowaniu na swoim koncie {platform_name}?"
 
-#: lms/templates/login.html themes/navoica-theme/lms/templates/login.html
+#: lms/templates/login.html
 msgid "Log into your {platform_name} Account"
 msgstr "Zaloguj się na swoje konto {platform_name} "
 
 #: lms/templates/login.html lms/templates/register-shib.html
-#: lms/templates/register.html themes/navoica-theme/lms/templates/login.html
-#: themes/navoica-theme/lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register.html
+#: lms/templates/register.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Processing your account information"
 msgstr "Przetwarzanie informacji o twoim koncie"
 
 #: lms/templates/login.html
 #: lms/templates/registration/activate_account_notice.html
-#: themes/navoica-theme/lms/templates/login.html
 msgid "You're almost there!"
 msgstr "Już prawie koniec!"
 
-#: lms/templates/login.html themes/navoica-theme/lms/templates/login.html
-#: wiki/templates/wiki/accounts/login.html
+#: lms/templates/login.html wiki/templates/wiki/accounts/login.html
 msgid "Please log in"
 msgstr "Proszę się zalogować,"
 
-#: lms/templates/login.html themes/navoica-theme/lms/templates/login.html
+#: lms/templates/login.html
 msgid "to access your account and courses"
 msgstr "aby uzyskać dostęp do swojego konta i kursów"
 
-#: lms/templates/login.html themes/navoica-theme/lms/templates/login.html
+#: lms/templates/login.html
 msgid "We're Sorry, {platform_name} accounts are unavailable currently"
 msgstr ""
 "Przepraszamy, konta na platformie {platform_name} są obecnie niedostępne"
 
-#: lms/templates/login.html themes/navoica-theme/lms/templates/login.html
+#: lms/templates/login.html
 msgid "We couldn't log you in."
 msgstr "Logowanie nie powiodło się."
 
-#: lms/templates/login.html themes/navoica-theme/lms/templates/login.html
+#: lms/templates/login.html
 msgid "Your email or password is incorrect"
 msgstr "Nieprawidłowy adres e-mail lub hasło"
 
-#: lms/templates/login.html themes/navoica-theme/lms/templates/login.html
+#: lms/templates/login.html
 msgid "An error occurred when signing you in to {platform_name}."
 msgstr "Wystąpił błąd w trakcie logowania do {platform_name}."
 
-#: lms/templates/login.html themes/navoica-theme/lms/templates/login.html
+#: lms/templates/login.html
 msgid ""
 "Please provide the following information to log into your {platform_name} "
 "account. Required fields are noted by <strong class=\"indicator\">bold text "
@@ -15303,7 +14329,7 @@ msgstr ""
 "{platform_name}. Wymagane pola oznaczone są <strong "
 "class=\"indicator\">pogrubioną czcionką oraz symbolem gwiazdki (*)</strong>."
 
-#: lms/templates/login.html themes/navoica-theme/lms/templates/login.html
+#: lms/templates/login.html
 msgid "Sign in with {provider_name}"
 msgstr "Zaloguj się przez {provider_name}"
 
@@ -15343,11 +14369,11 @@ msgstr "Komentarz oceniającego do twojej pracy:"
 msgid "Press to Launch"
 msgstr "Naciśnij, aby uruchomić"
 
-#: lms/templates/main.html themes/navoica-theme/lms/templates/main.html
+#: lms/templates/main.html
 msgid "Navoica.pl - Polish MOOC platform"
 msgstr "Navoica.pl – Platforma edukacyjna"
 
-#: lms/templates/main.html themes/navoica-theme/lms/templates/main.html
+#: lms/templates/main.html
 msgid ""
 "Polish MOOC platform offering free of charge online courses for every "
 "registered user. "
@@ -15435,38 +14461,30 @@ msgstr "Nie posiadasz żadnych notatek."
 
 #: lms/templates/preview_menu.html
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/courseware/course_navigation_course_site.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course edition"
 msgstr "Edycja kursu"
 
 #: lms/templates/preview_menu.html
-#: themes/navoica-theme/lms/templates/preview_menu.html
 msgid "Learner"
 msgstr "Student"
 
 #: lms/templates/preview_menu.html
-#: themes/navoica-theme/lms/templates/preview_menu.html
 msgid "Specific learner"
 msgstr "Określony student"
 
 #: lms/templates/preview_menu.html
-#: themes/navoica-theme/lms/templates/preview_menu.html
 msgid "Learner in {content_group}"
 msgstr "Student w grupie {content_group}"
 
 #: lms/templates/preview_menu.html
-#: themes/navoica-theme/lms/templates/preview_menu.html
 msgid "Username or email:"
 msgstr "Nazwa użytkownika lub adres e-mail:"
 
 #: lms/templates/preview_menu.html
-#: themes/navoica-theme/lms/templates/preview_menu.html
 msgid "Set preview mode"
 msgstr "Ustaw tryb podglądu"
 
 #: lms/templates/preview_menu.html
-#: themes/navoica-theme/lms/templates/preview_menu.html
 msgid "You are now viewing the course as {i_start}{user_name}{i_end}."
 msgstr "Przeglądasz teraz kurs jako {i_start}{user_name}{i_end}."
 
@@ -15531,8 +14549,6 @@ msgid "Return To %s"
 msgstr "Wróć do %s"
 
 #: lms/templates/register-form.html lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid ""
@@ -15543,28 +14559,22 @@ msgstr ""
 "ponownie, używając innej przeglądarki lub zaktualizuj obecną."
 
 #: lms/templates/register-form.html lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "The following errors occurred while processing your registration:"
 msgstr "Podczas przetwarzania rejestracji pojawiły się następujące błędy:"
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Sign up with {provider_name}"
 msgstr "Zarejestruj się za pomocą {provider_name}"
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Create your own {platform_name} account below"
 msgstr "Utwórz konto na platformie {platform_name}"
 
 #: lms/templates/register-form.html lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid ""
@@ -15577,13 +14587,11 @@ msgstr ""
 #. Translators: selected_provider is the name of an external, third-party user
 #. authentication service (like Google or LinkedIn).
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "You've successfully signed in with {selected_provider}."
 msgstr "Pomyślnie zalogowałeś się za pomocą {selected_provider}."
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid ""
 "We just need a little more information before you start learning with "
@@ -15591,13 +14599,11 @@ msgid ""
 msgstr "Zanim rozpoczniesz naukę, podaj dodatkowe informacje {platform_name}."
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Please complete the following fields to register for an account. "
 msgstr "Proszę wypełnić poniższe pola w celu zarejestrowania konta."
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Your legal name, used for any certificates you earn."
 msgstr ""
@@ -15605,8 +14611,6 @@ msgstr ""
 "ukończeniu kursu."
 
 #: lms/templates/register-form.html lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Will be shown in any discussions or forums you participate in"
@@ -15614,61 +14618,50 @@ msgstr ""
 "Będzie widoczna w dyskusjach i na forach, w których będziesz uczestniczyć"
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "cannot be changed later"
 msgstr "nie może zostać później zmieniona"
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 msgid "Enter a password with at most {num} characters."
 msgstr "Hasło musi się składać z co najmniej {num} znaków. "
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Welcome {username}"
 msgstr "Witaj, {username}"
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Enter a Public Display Name:"
 msgstr "Podaj nazwę użytkownika, która będzie widoczna publicznie"
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Public Display Name"
 msgstr "Nazwa użytkownika widoczna publicznie"
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Additional Personal Information"
 msgstr "Dodatkowe informacje osobiste"
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "example: New York"
 msgstr "przykład: Łódź"
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Highest Level of Education Completed"
 msgstr "Poziom wykształcenia"
 
 #: lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Please share with us your reasons for registering with {platform_name}"
 msgstr "Napisz, dlaczego chcesz się zarejestrować w {platform_name}"
 
 #: lms/templates/register-form.html lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Account Acknowledgements"
@@ -15676,8 +14669,6 @@ msgstr "Zaakceptowanie regulaminów platformy"
 
 #: lms/templates/register-form.html lms/templates/register-shib.html
 #: lms/templates/signup_modal.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "I agree to the {link_start}Terms of Service{link_end}"
@@ -15685,8 +14676,6 @@ msgstr "Akceptuję {link_start}Warunki korzystania z Serwisu{link_end}"
 
 #: lms/templates/register-form.html lms/templates/register-shib.html
 #: lms/templates/signup_modal.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "I agree to the {link_start}Honor Code{link_end}"
@@ -15696,53 +14685,42 @@ msgstr "Zgadzam się z {link_start}Kodeksem Honorowym{link_end}"
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
-#: themes/navoica-theme/lms/templates/register-form.html
-#: themes/navoica-theme/lms/templates/register.html
-#: themes/navoica-theme/lms/templates/header/navbar-not-authenticated.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Register"
 msgstr "Zarejestruj się "
 
 #: lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Preferences for {platform_name}"
 msgstr "Preferencje w {platform_name}"
 
 #: lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Update my {platform_name} Account"
 msgstr "Uaktualnij moje konto w {platform_name}"
 
 #: lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Welcome {username}!  Please set your preferences below"
 msgstr "Witaj {username}! Ustaw swoje preferencje"
 
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Enter a public username:"
 msgstr "Podaj publiczną nazwę użytkownika:"
 
 #: lms/templates/register-shib.html
-#: themes/navoica-theme/lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Update My Account"
 msgstr "Uaktualnij moje konto"
 
 #: lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid "Already registered?"
 msgstr "Jesteś już zarejestrowany/a?"
 
 #: lms/templates/register-sidebar.html
 #: lms/templates/header/navbar-not-authenticated.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/header/navbar-not-authenticated.html
 #: themes/stanford-style/lms/templates/register-sidebar.html
 #: wiki/templates/wiki/base.html wiki/templates/wiki/accounts/login.html
 #: wiki/templates/wiki/accounts/signup.html
@@ -15750,12 +14728,10 @@ msgid "Log in"
 msgstr "Zaloguj się"
 
 #: lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
 msgid "Welcome to {platform_name}"
 msgstr "Witamy w {platform_name}"
 
 #: lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
 msgid ""
 "Registering with {platform_name} gives you access to all of our current and "
 "future free courses. Not ready to take a course just yet? Registering puts "
@@ -15767,13 +14743,11 @@ msgstr ""
 " cię o nowych kursach."
 
 #: lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid "Next Steps"
 msgstr "Kolejne kroki"
 
 #: lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
 msgid ""
 "As part of joining {platform_name}, you will receive an email message with "
 "instructions for activating your account. Don't see the email? Check your "
@@ -15787,25 +14761,21 @@ msgstr ""
 "elektronicznej."
 
 #: lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
 msgid "Need help registering with {platform_name}?"
 msgstr ""
 "Potrzebujesz pomocy przy rejestracji konta na platformie {platform_name}? "
 
 #: lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
 msgid ""
 "Skontaktuj si\\u0119 z naszym dzia\\u0142em pomocy technicznej dostepnym pod"
 " adresem "
 msgstr ""
 
 #: lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
 msgid "mooc_help@opi.org.pl."
 msgstr "mooc_help@opi.org.pl."
 
 #: lms/templates/register-sidebar.html
-#: themes/navoica-theme/lms/templates/register-sidebar.html
 msgid ""
 "You can find the answers to most of your questions in our list of FAQs. "
 "After you enroll in a course, you can also find answers in the course "
@@ -15815,17 +14785,14 @@ msgstr ""
 "forach dyskusyjnych."
 
 #: lms/templates/register.html
-#: themes/navoica-theme/lms/templates/register.html
 msgid "Register for {platform_name}"
 msgstr "Zarejestruj się w {platform_name}"
 
 #: lms/templates/register.html
-#: themes/navoica-theme/lms/templates/register.html
 msgid "Welcome!"
 msgstr "Witamy!"
 
 #: lms/templates/register.html
-#: themes/navoica-theme/lms/templates/register.html
 msgid "Register below to create your {platform_name} account"
 msgstr "Zarejestruj się poniżej, aby utworzyć swoje konto w {platform_name}"
 
@@ -15842,17 +14809,14 @@ msgstr ""
 "{dashboard_link_start}wrócić do pulpitu{link_end}."
 
 #: lms/templates/seq_module.html
-#: themes/navoica-theme/lms/templates/seq_module.html
 msgid "Important!"
 msgstr "Ważne!"
 
 #: lms/templates/seq_module.html
-#: themes/navoica-theme/lms/templates/seq_module.html
 msgid "Previous"
 msgstr "Poprzedni"
 
 #: lms/templates/seq_module.html
-#: themes/navoica-theme/lms/templates/seq_module.html
 msgid "Next"
 msgstr "Następny"
 
@@ -15919,147 +14883,116 @@ msgid "Inactive Groups"
 msgstr "Grupy nieaktywne"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Staff Debug Info"
 msgstr "Informacje o elemencie"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Submission history"
 msgstr "Historia odpowiedzi"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "{platform_name} Content Quality Assessment"
 msgstr "Ocena jakości treści {platform_name}"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Comment"
 msgstr "Komentarz"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "comment"
 msgstr "komentarz"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Tag"
 msgstr "Tag"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Optional tag (eg \"done\" or \"broken\"):"
 msgstr "Opcjonalny tag (np. \"zrobione\" albo \"zepsute\"):"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "tag"
 msgstr "tag"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Add comment"
 msgstr "Dodaj komentarz"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Staff Debug:"
 msgstr "Element:"
 
 #: lms/templates/staff_problem_info.html
 #: lms/templates/instructor/instructor_dashboard_2/e-commerce.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Actions"
 msgstr "Czynności"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Score (for override only)"
 msgstr "Wynik (tylko do zastąpienia)"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Reset Learner's Attempts to Zero"
 msgstr "Zresetuj do zera próby studenta"
 
 #: lms/templates/staff_problem_info.html
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Delete Learner's State"
 msgstr "Usuń stan studenta"
 
 #: lms/templates/staff_problem_info.html
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Rescore Learner's Submission"
 msgstr "Oceń ponownie pracę studenta"
 
 #: lms/templates/staff_problem_info.html
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Rescore Only If Score Improves"
 msgstr "Oceń ponownie tylko w przypadku poprawy oceny"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Override Score"
 msgstr "Zastąpienie wyniku"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Module Fields"
 msgstr "Pola modułu"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "XML attributes"
 msgstr "Atrybuty XML"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "Submission History Viewer"
 msgstr "Podgląd historii zgłoszeń"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "User:"
 msgstr "Użytkownik:"
 
 #: lms/templates/staff_problem_info.html
-#: themes/navoica-theme/lms/templates/staff_problem_info.html
 msgid "View History"
 msgstr "Wyświetl historię "
 
 #: lms/templates/static_htmlbook.html lms/templates/static_pdfbook.html
 #: lms/templates/staticbook.html
-#: themes/navoica-theme/lms/templates/static_htmlbook.html
-#: themes/navoica-theme/lms/templates/static_pdfbook.html
-#: themes/navoica-theme/lms/templates/staticbook.html
 msgid "{course_number} Textbook"
 msgstr "Podręcznik kursu {course_number}"
 
 #: lms/templates/static_htmlbook.html lms/templates/static_pdfbook.html
 #: lms/templates/staticbook.html
-#: themes/navoica-theme/lms/templates/static_htmlbook.html
-#: themes/navoica-theme/lms/templates/static_pdfbook.html
-#: themes/navoica-theme/lms/templates/staticbook.html
 msgid "Textbook Navigation"
 msgstr "Poruszanie się po podręczniku"
 
 #: lms/templates/staticbook.html lms/templates/courseware/gradebook.html
-#: themes/navoica-theme/lms/templates/staticbook.html
 msgid "Page"
 msgstr "Strona"
 
 #: lms/templates/staticbook.html
-#: themes/navoica-theme/lms/templates/staticbook.html
 msgid "Previous page"
 msgstr "Poprzednia strona"
 
 #: lms/templates/staticbook.html
-#: themes/navoica-theme/lms/templates/staticbook.html
 msgid "Next page"
 msgstr "Następna strona"
 
@@ -17219,7 +16152,6 @@ msgstr "Zapisz się"
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
 #: themes/edx.org/lms/templates/dashboard.html
 #: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Unenroll"
 msgstr "Wypisz się "
 
@@ -17620,43 +16552,33 @@ msgstr ""
 "uzyskania dobrych ocen.{b_end}"
 
 #: lms/templates/courseware/accordion.html
-#: themes/navoica-theme/lms/templates/courseware/accordion.html
 msgid "{chapter} current chapter"
 msgstr "{chapter} - obecny rozdział"
 
 #: lms/templates/courseware/accordion.html
-#: themes/navoica-theme/lms/templates/courseware/accordion.html
 msgid "{span_start}current section{span_end}"
 msgstr "{span_start}obecny rozdział{span_end}"
 
 #: lms/templates/courseware/accordion.html
 #: lms/templates/courseware/progress.html
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-outline-fragment.html
-#: themes/navoica-theme/lms/templates/courseware/accordion.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "due {date}"
 msgstr "termin końcowy: {date}"
 
 #: lms/templates/courseware/accordion.html
-#: themes/navoica-theme/lms/templates/courseware/accordion.html
 msgid "{section_format} due {{date}}"
 msgstr "{section_format} - termin końcowy: {{date}}"
 
 #: lms/templates/courseware/accordion.html
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-outline-fragment.html
-#: themes/navoica-theme/lms/templates/courseware/accordion.html
 msgid "This content is graded"
 msgstr "Ta zawartość podlega ocenie"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "An error occurred. Please try again later."
 msgstr "Wystąpił błąd. Spróbuj ponownie później."
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid ""
 "The currently logged-in user account does not have permission to enroll in "
 "this course. You may need to {start_logout_tag}log out{end_tag} then try the"
@@ -17668,13 +16590,11 @@ msgstr ""
 "{start_help_tag}stronę pomocy{end_tag}, aby odnaleźć możliwe rozwiązanie."
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "You are enrolled in this course"
 msgstr "Jesteś zapisany na ten kurs"
 
 #: lms/templates/courseware/course_about.html
 #: lms/templates/shoppingcart/registration_code_receipt.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "View Course"
 msgstr "Wyświetl kurs"
 
@@ -17687,57 +16607,46 @@ msgid "Take the course"
 msgstr "Zapisz się"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "This course is in your <a href=\"{cart_link}\">cart</a>."
 msgstr "Ten kurs znajduje się w twoim <a href=\"{cart_link}\">koszyku</a>."
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "Course is full"
 msgstr "Lista uczestników jest już pełna"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "Enrollment in this course is by invitation only"
 msgstr "Zapisy na ten kurs są możliwe wyłącznie na zaproszenie"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "Enrollment is Closed"
 msgstr "Zapisy zostały zamknięte"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "Add {course_name} to Cart <span>({price} USD)</span>"
 msgstr "Dodaj {course_name} do koszyka <span>({price} USD)</span>"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
 msgstr "Zapisz się na kurs {course_name}"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "Classes Start"
 msgstr "Rozpoczęcie kursu"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "Classes End"
 msgstr "Zakończenie kursu"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "Enrollment start"
 msgstr "Data rozpoczęcia zapisów"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "Enrollment end"
 msgstr "Data zakończenia zapisów"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "{effort} hour"
 msgid_plural "{effort} hours"
 msgstr[0] "{effort} godzina"
@@ -17746,12 +16655,10 @@ msgstr[2] "{effort} godzin"
 msgstr[3] "{effort} godzin"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgid "Additional Resources"
 msgstr "Materiały dodatkowe"
 
 #: lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
 msgctxt "self"
 msgid "enroll"
 msgstr "zapisz się"
@@ -17791,7 +16698,6 @@ msgid "Email someone to say you've enrolled in this course"
 msgstr "Wyślij e-mail i pochwal się, że zapisałeś się na ten kurs."
 
 #: lms/templates/courseware/course_navigation.html
-#: themes/navoica-theme/lms/templates/courseware/course_navigation_template.html
 msgid "current location"
 msgstr "obecna lokalizacja"
 
@@ -17799,7 +16705,6 @@ msgstr "obecna lokalizacja"
 #. notification image that indicates the tab "needs attention".
 #: lms/templates/courseware/course_navigation.html
 #: lms/templates/courseware/tabs.html
-#: themes/navoica-theme/lms/templates/courseware/course_navigation_template.html
 msgid "needs attention"
 msgstr "wymaga uwagi"
 
@@ -17816,7 +16721,6 @@ msgid "Show Earlier Course Updates"
 msgstr "Pokaż wcześniejsze aktualizacje kursu"
 
 #: lms/templates/courseware/courses.html
-#: themes/navoica-theme/lms/templates/courseware/courses.html
 msgid "List of Courses"
 msgstr "Lista kursów"
 
@@ -17824,14 +16728,11 @@ msgstr "Lista kursów"
 #: lms/templates/courseware/courseware.html
 #: openedx/features/course_bookmarks/templates/course_bookmarks/course-bookmarks.html
 #: openedx/features/learner_analytics/templates/learner_analytics/dashboard.html
-#: themes/navoica-theme/lms/templates/course_bookmarks/course-bookmarks.html
-#: themes/navoica-theme/lms/templates/courseware/courseware.html
 msgid "{course_number} Courseware"
 msgstr "Treści szkoleniowe kursu {course_number}"
 
 #: lms/templates/courseware/courseware-chromeless.html
 #: lms/templates/courseware/courseware.html
-#: themes/navoica-theme/lms/templates/courseware/courseware.html
 msgid "Course Utilities"
 msgstr "Narzędzia kursu"
 
@@ -17840,17 +16741,14 @@ msgid "Courseware"
 msgstr "Treści szkoleniowe"
 
 #: lms/templates/courseware/courseware.html
-#: themes/navoica-theme/lms/templates/courseware/courseware.html
 msgid "Course Search"
 msgstr "Przeszukaj kurs"
 
 #: lms/templates/courseware/courseware.html
-#: themes/navoica-theme/lms/templates/courseware/courseware.html
 msgid "No content has been added to this course"
 msgstr "Ten kurs nie zawiera żadnej treści"
 
 #: lms/templates/courseware/courseware.html
-#: themes/navoica-theme/lms/templates/courseware/courseware.html
 #, python-format
 msgid ""
 "To access course materials, you must score {required_score}% or higher on "
@@ -17860,7 +16758,6 @@ msgstr ""
 "{required_score}% na egzaminie. Twój obecny wynik to {current_score}%."
 
 #: lms/templates/courseware/courseware.html
-#: themes/navoica-theme/lms/templates/courseware/courseware.html
 msgid "Your score is {current_score}%. You have passed the entrance exam."
 msgstr "Twój wynik to {current_score}%. Zdałeś egzamin wstępny."
 
@@ -17909,7 +16806,6 @@ msgstr "Witamy na kursie \"{course_title}\""
 
 #: lms/templates/courseware/info.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Resume Course"
 msgstr "Wznów kurs"
 
@@ -17927,7 +16823,6 @@ msgstr "Zarządzaj notatkami z kursu"
 
 #: lms/templates/courseware/info.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Course Tools"
 msgstr "Narzędzia kursu"
 
@@ -18054,54 +16949,44 @@ msgid "Starts on {}"
 msgstr "Rozpocznie się {}"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "{course_number} Progress"
 msgstr "Twój postęp w kursie {course_number}"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "View Grading in studio"
 msgstr "Wyświetl system oceniania w Studio"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Course Progress for Student '{username}' ({email})"
 msgstr "Postęp w kursie studenta '{username}' ({email})"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "View Certificate"
 msgstr "Wyświetl zaświadczenie o ukończeniu kursu"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Opens in a new browser window"
 msgstr "Otworzy się w nowym oknie przeglądarki"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Download Your Certificate"
 msgstr "Pobierz swoje zaświadczenie o ukończeniu kursu"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Request Certificate"
 msgstr "Zażądaj zaświadczenia o ukończeniu kursuu"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Requirements for Course Credit"
 msgstr "Wymagania dotyczące punktów edukacyjnych"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "{student_name}, you are no longer eligible for credit in this course."
 msgstr ""
 "{student_name}, nie kwalifikujesz się już dłużej do uzyskania punktów "
 "edukacyjnych za ten kurs"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid ""
 "{student_name}, you have met the requirements for credit in this course. "
 "{a_start}Go to your dashboard{a_end} to purchase course credit."
@@ -18111,60 +16996,49 @@ msgstr ""
 "punkty edukacyjne."
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "{student_name}, you have not yet met the requirements for credit."
 msgstr ""
 "{student_name}, nie spełniłeś jeszcze wymagań niezbędnych do uzyskania "
 "punktów edukacyjnych."
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Information about course credit requirements"
 msgstr ""
 "Informacje dotyczące wymagań niezbędnych do uzyskania punktów edukacyjnych"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "display_name"
 msgstr "display_name"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Verification Submitted"
 msgstr "Potwierdzenie tożsamości w toku"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Verification Failed"
 msgstr "Potwierdzenie tożsamości nie powiodło się"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Verification Declined"
 msgstr "Potwierdzenie tożsamości odrzucone"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Completed by {date}"
 msgstr "Ukończona przed datą {date}"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Less"
 msgstr "Mniej"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Details for each chapter"
 msgstr "Szczegóły dla każdego rozdziału"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "{earned} of {total} possible points"
 msgstr "{earned} z {total} możliwych punktów"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid ""
 "Suspicious activity detected during proctored exam review. Exam score 0."
 msgstr ""
@@ -18172,42 +17046,34 @@ msgstr ""
 "0. "
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Section grade has been overridden."
 msgstr "Ocena sekcji została zastąpiona."
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Problem Scores: "
 msgstr "Wyniki ćwiczenia:"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Practice Scores: "
 msgstr "Wyniki podejść próbnych:"
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Problem scores are hidden until the due date."
 msgstr "Wyniki ćwiczenia są ukryte do czasu zakończenia ćwiczenia."
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Practice scores are hidden until the due date."
 msgstr "Wyniki próbnego podejścia są ukryte przed terminem końcowym."
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Problem scores are hidden."
 msgstr "Wyniki ćwiczenia są ukryte."
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "Practice scores are hidden."
 msgstr "Wyniki próbnego podejścia są ukryte."
 
 #: lms/templates/courseware/progress.html
-#: themes/navoica-theme/lms/templates/courseware/progress.html
 msgid "No problem scores in this section"
 msgstr "Ta lekcja nie zawiera ćwiczeń"
 
@@ -18422,70 +17288,57 @@ msgstr ""
 "Zaświadczeniem Honorowym."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course organizer"
 msgstr "Organizator"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Coming Soon"
 msgstr "Wkrótce"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Ended - {date}"
 msgstr "Zakończony - {date}"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Started - {date}"
 msgstr "Rozpoczęty - {date}"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Starts - {date}"
 msgstr "Rozpocznie się - {date}"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You must select a session by {expiration_date} to access the course."
 msgstr ""
 "Musisz wybrać sesję do {expiration_date}, aby uzyskać dostęp do kursu."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You must select a session to access the course."
 msgstr "Musisz wybrać sesję, aby uzyskać dostęp do kursu."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Change or Leave Session"
 msgstr "Zmień lub opuść sesję"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You can no longer change sessions."
 msgstr "Nie możesz już zmieniać sesji."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You can change sessions until {entitlement_expiration_date}."
 msgstr "Możesz zmieniać sesje do {entitlement_expiration_date}."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Email Settings"
 msgstr "Ustawienia wiadomości e-mail"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Related Programs"
 msgstr "Powiązane programy"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You can no longer access this course because payment has not yet been "
 "received. You can contact the account holder to request payment, or you can "
@@ -18496,7 +17349,6 @@ msgstr ""
 "poprosić o płatność lub wypisać się z tego kursu"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You can no longer access this course because payment has not yet been "
 "received. You can {contact_link_start}contact the account "
@@ -18509,12 +17361,10 @@ msgstr ""
 "{unenroll_link_start}wypisać się{unenroll_link_end} z kursu."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Verification not yet complete."
 msgstr "Nie dokonano potwierdzenia tożsamości."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You only have {days} day left to verify for this course."
 msgid_plural "You only have {days} days left to verify for this course."
 msgstr[0] ""
@@ -18531,29 +17381,24 @@ msgstr[3] ""
 "uczestnictwa w tym kursie. "
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Almost there!"
 msgstr "Już prawie koniec!"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You still need to verify for this course."
 msgstr ""
 "Wciąż musisz przejść weryfikację tożsamości na potrzeby uczestnictwa w tym "
 "kursie."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Verify Now"
 msgstr "Potwierdź teraz"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You have submitted your verification information."
 msgstr "Dane do weryfikacji zostały przez ciebie przesłane."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You will see a message on your dashboard when the verification process is "
 "complete (usually within 1-2 days)."
@@ -18562,12 +17407,10 @@ msgstr ""
 "studenta (zwykle w ciągu 1-2 dni)."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Your current verification will expire soon!"
 msgstr "Twoja aktualna weryfikacja tożsamości wkrótce wygaśnie!"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You have submitted your reverification information. You will see a message "
 "on your dashboard when the verification process is complete (usually within "
@@ -18578,24 +17421,20 @@ msgstr ""
 " 1-2 dni)."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You have successfully verified your ID with edX"
 msgstr "Twoja tożsamość została potwierdzona"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Your current verification is effective until {date}."
 msgstr "Obecna weryfikacja tożsamości jest ważna do dnia {date}."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Your current verification will expire soon."
 msgstr "Twoja obecna weryfikacja tożsamości wkrótce wygaśnie."
 
 #. Translators: start_link and end_link will be replaced with HTML tags;
 #. please do not translate these.
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "Your current verification will expire in {days} days. {start_link}Re-verify "
 "your identity now{end_link} using a webcam and a government-issued photo ID."
@@ -18605,7 +17444,6 @@ msgstr ""
 "internetowej i dokumentu tożsamości."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
 "this course."
@@ -18614,7 +17452,6 @@ msgstr ""
 "trakcie kursu."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "It's official. It's easily shareable. It's a proven motivator to complete "
 "the course. {line_break}{link_start}Learn more about the verified "
@@ -18625,7 +17462,6 @@ msgstr ""
 "na temat zaświadczenia o ukończeniu kursu {cert_name_long}{link_end}."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
-#: themes/navoica-theme/lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You must successfully complete {link_start}{prc_display}{link_end} before "
 "you begin this course."
@@ -19774,7 +18610,6 @@ msgstr "Zostałeś wykluczony z kursu {course_name}"
 #: lms/templates/embargo/default_courseware.html
 #: lms/templates/embargo/default_enrollment.html
 #: lms/templates/static_templates/embargo.html
-#: themes/navoica-theme/lms/templates/static_templates/embargo.html
 #: themes/stanford-style/lms/templates/embargo/default_courseware.html
 #: themes/stanford-style/lms/templates/embargo/default_enrollment.html
 #: themes/stanford-style/lms/templates/static_templates/embargo.html
@@ -19917,7 +18752,6 @@ msgid "{platform_name} Home Page"
 msgstr "Strona główna {platform_name}"
 
 #: lms/templates/header/header.html lms/templates/navigation/navigation.html
-#: themes/navoica-theme/lms/templates/header/header.html
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
 "strongly recommend using {chrome_link} or {ff_link}."
@@ -19930,14 +18764,11 @@ msgstr ""
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-authenticated.html
 msgid "Programs"
 msgstr "Programy"
 
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-not-authenticated.html
 msgid "Discover New"
 msgstr "Katalog kursów"
 
@@ -19945,7 +18776,6 @@ msgstr "Katalog kursów"
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-authenticated.html
 msgid "Sysadmin"
 msgstr "Sysadmin"
 
@@ -19954,28 +18784,23 @@ msgstr "Sysadmin"
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/shoppingcart/shopping_cart.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-authenticated.html
 msgid "Shopping Cart"
 msgstr "Koszyk"
 
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-not-authenticated.html
 msgid "How it Works"
 msgstr "Jak to działa"
 
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
-#: themes/navoica-theme/lms/templates/header/navbar-not-authenticated.html
 msgid "Schools"
 msgstr "Uczelnie"
 
 #: lms/templates/header/user_dropdown.html
 #: lms/templates/learner_dashboard/_dashboard_navigation_courses.html
 #: themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/header/user_dropdown.html
-#: themes/navoica-theme/lms/templates/learner_dashboard/_dashboard_navigation_courses.html
 msgid "My Courses"
 msgstr "Moje kursy"
 
@@ -20147,6 +18972,20 @@ msgstr "Historia generowania zaświadczeń o ukończeniu kursu"
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Task name"
 msgstr "Nazwa czynności"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificates.html
+msgid "Multiple Certificate Download History"
+msgstr "Masowe pobieranie certyfikatów"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificates.html
+#: wiki/plugins/attachments/templates/wiki/plugins/attachments/history.html
+#: wiki/plugins/attachments/templates/wiki/plugins/attachments/search.html
+msgid "Download"
+msgstr "Pobierz"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificates.html
+msgid "Start Merge All Certificates"
+msgstr "Rozpocznij proces zbierania certyfikatów"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "SET CERTIFICATE EXCEPTIONS"
@@ -21029,12 +19868,10 @@ msgstr ""
 "{link_start}{analytics_dashboard_name}{link_end}."
 
 #: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html
-#: themes/navoica-theme/lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html
 msgid "Instructor Dashboard"
 msgstr "Panel prowadzącego"
 
 #: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html
-#: themes/navoica-theme/lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html
 msgid "View Course in Studio"
 msgstr "Wyświetl materiały kursowe w Studio"
 
@@ -22494,7 +21331,6 @@ msgid "Confirmation"
 msgstr "Potwierdzenie"
 
 #: lms/templates/static_templates/404.html
-#: themes/navoica-theme/lms/templates/static_templates/404.html
 msgid ""
 "The page that you were looking for was not found. Go back to the "
 "{link_start}homepage{link_end} or let us know about any pages that may have "
@@ -22511,20 +21347,12 @@ msgstr ""
 #: lms/templates/static_templates/media-kit.html
 #: lms/templates/static_templates/news.html
 #: lms/templates/static_templates/press.html
-#: themes/navoica-theme/lms/templates/static_templates/blog.html
-#: themes/navoica-theme/lms/templates/static_templates/donate.html
-#: themes/navoica-theme/lms/templates/static_templates/help.html
-#: themes/navoica-theme/lms/templates/static_templates/jobs.html
-#: themes/navoica-theme/lms/templates/static_templates/media-kit.html
-#: themes/navoica-theme/lms/templates/static_templates/news.html
-#: themes/navoica-theme/lms/templates/static_templates/press.html
 msgid "This page left intentionally blank. Feel free to add your own content."
 msgstr ""
 "Ta strona celowo pozostała pusta. Jeśli chcesz, możesz dodać na nią własną "
 "treść."
 
 #: lms/templates/static_templates/embargo.html
-#: themes/navoica-theme/lms/templates/static_templates/embargo.html
 msgid ""
 "Our system indicates that you are trying to access this {platform_name} "
 "course from a country or region currently subject to U.S. economic and trade"
@@ -22537,18 +21365,15 @@ msgstr ""
 "nie możemy dać ci dostępu do tego kursu."
 
 #: lms/templates/static_templates/faq.html
-#: themes/navoica-theme/lms/templates/static_templates/faq.html
 msgid "show answers"
 msgstr "pokaż odpowiedzi"
 
 #: lms/templates/static_templates/jobs.html
-#: themes/navoica-theme/lms/templates/static_templates/jobs.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "Jobs"
 msgstr "Oferty pracy"
 
 #: lms/templates/static_templates/legend.html
-#: themes/navoica-theme/lms/templates/static_templates/legend.html
 msgid "Legend_quotation"
 msgstr ""
 "Jesienią 1414 r. na studia w Akademii Krakowskiej zapisał się piętnastoletni"
@@ -22557,12 +21382,10 @@ msgstr ""
 " – była pierwszą polską studentką."
 
 #: lms/templates/static_templates/legend.html
-#: themes/navoica-theme/lms/templates/static_templates/legend.html
 msgid "Legend_author"
 msgstr "Leszek Mazan i Mieczysław Czuma „Pępek świata nazywa się Kraków”"
 
 #: lms/templates/static_templates/legend.html
-#: themes/navoica-theme/lms/templates/static_templates/legend.html
 msgid "Legend_paragraph_1"
 msgstr ""
 "Legenda głosi, że Nawojka otrzymała podstawowe wykształcenie w domu, gdzie "
@@ -22578,7 +21401,6 @@ msgstr ""
 "odpokutować swój postępek, została wysłana do klasztoru."
 
 #: lms/templates/static_templates/legend.html
-#: themes/navoica-theme/lms/templates/static_templates/legend.html
 msgid "Legend_paragraph_2"
 msgstr ""
 "Według innej wersji legendy, Nawojka pochodziła z Płomian koło Dobrzynia nad"
@@ -22591,7 +21413,6 @@ msgstr ""
 " przeciwko, aby siostra się pod niego podszywała."
 
 #: lms/templates/static_templates/legend.html
-#: themes/navoica-theme/lms/templates/static_templates/legend.html
 msgid "Legend_paragraph_3"
 msgstr ""
 "Okrzyknięta przez „Słowo Polskie” z 1900 roku „pierwszą polską "
@@ -22601,20 +21422,15 @@ msgstr ""
 
 #: lms/templates/static_templates/news.html
 #: lms/templates/static_templates/press.html
-#: themes/navoica-theme/lms/templates/static_templates/news.html
-#: themes/navoica-theme/lms/templates/static_templates/press.html
 msgid "In the Press"
 msgstr "O nas w mediach"
 
 #: lms/templates/static_templates/server-down.html
-#: themes/navoica-theme/lms/templates/static_templates/server-down.html
 msgid "Currently the {platform_name} servers are down"
 msgstr "Przepraszamy, chwilowo serwery {platform_name} nie działają"
 
 #: lms/templates/static_templates/server-down.html
 #: lms/templates/static_templates/server-overloaded.html
-#: themes/navoica-theme/lms/templates/static_templates/server-down.html
-#: themes/navoica-theme/lms/templates/static_templates/server-overloaded.html
 msgid ""
 "Our staff is currently working to get the site back up as soon as possible. "
 "Please email us at {tech_support_email} to report any problems or downtime."
@@ -22624,12 +21440,10 @@ msgstr ""
 "e-mail na adres {tech_support_email}."
 
 #: lms/templates/static_templates/server-error.html
-#: themes/navoica-theme/lms/templates/static_templates/server-error.html
 msgid "There has been a 500 error on the {platform_name} servers"
 msgstr "Wystąpił błąd 500 na serwerach {platform_name}"
 
 #: lms/templates/static_templates/server-error.html
-#: themes/navoica-theme/lms/templates/static_templates/server-error.html
 msgid ""
 "Please wait a few seconds and then reload the page. If the problem persists,"
 " please email us at {tech_support_email}."
@@ -22638,7 +21452,6 @@ msgstr ""
 " wyślij e-mail na {tech_support_email}."
 
 #: lms/templates/static_templates/server-overloaded.html
-#: themes/navoica-theme/lms/templates/static_templates/server-overloaded.html
 msgid "Currently the {platform_name} servers are overloaded"
 msgstr "Przepraszamy, obecnie serwery {platform_name} są przeciążone."
 
@@ -24101,17 +22914,14 @@ msgid "tos_final_provisions_paragraph_12"
 msgstr "Regulamin obowiązuje od 25.02.2020r."
 
 #: lms/templates/student_account/account_settings.html
-#: themes/navoica-theme/lms/templates/student_account/account_settings.html
 msgid "Account Settings"
 msgstr "Ustawienia konta"
 
 #: lms/templates/student_account/finish_auth.html
-#: themes/navoica-theme/lms/templates/student_account/finish_auth.html
 msgid "Please Wait"
 msgstr "Proszę czekać"
 
 #: lms/templates/student_account/login_and_register.html
-#: themes/navoica-theme/lms/templates/student_account/login_and_register.html
 msgid "Sign in or Register"
 msgstr "Zaloguj się lub zarejestruj"
 
@@ -24236,13 +23046,11 @@ msgstr "Szablon strony"
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Search the course"
 msgstr "Przeszukaj kurs"
 
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Start Course"
 msgstr "Rozpocznij kurs"
 
@@ -24433,83 +23241,67 @@ msgid "Some Rights Reserved"
 msgstr "Część praw zastrzeżonych"
 
 #: openedx/features/course_experience/templates/course_experience/course-dates-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-dates-fragment.html
 msgid "Important Course Dates"
 msgstr "Ważne terminy kursu"
 
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Goal: "
 msgstr "Cel:"
 
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Edit your course goal:"
 msgstr "Edytuj cel kursu:"
 
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Pursue a verified certificate"
 msgstr "Uzyskaj zaświadczenie o ukończeniu kursu"
 
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Upgrade ({price})"
 msgstr "Premium ({price})"
 
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-fragment.html
 msgid "Expand All"
 msgstr "Rozwiń wszystko"
 
 #: openedx/features/course_experience/templates/course_experience/course-home-updates-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-home-updates-fragment.html
 msgid "Update,"
 msgstr "Aktualność, "
 
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-outline-fragment.html
 msgid "Prerequisite: "
 msgstr "Warunek wstępny:"
 
 #: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-outline-fragment.html
 msgid "{subsection_format} due {{date}}"
 msgstr "{subsection_format} termin {{date}}"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "Learn About Verified Certificates"
 msgstr "Dowiedz się więcej o zaświadczeniach"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "{platform_name} Verified Certificate"
 msgstr "Zaświadczenie o ukończeniu kursu na {platform_name}"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "Why upgrade?"
 msgstr "Premium - dlaczego warto?"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "Official proof of completion"
 msgstr "Oficjalny dowód ukończenia"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "Easily shareable certificate"
 msgstr "Zaświadczenie o ukończeniu kursu, które łatwo udostępnić"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "Proven motivator to complete the course"
 msgstr "Sprawdzona motywacja do ukończenia kursu"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid ""
 "Certificate purchases help {platform_name} continue to offer free courses"
 msgstr ""
@@ -24517,37 +23309,30 @@ msgstr ""
 "kursy"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "How it works"
 msgstr "Jak to działa"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "Pay the Verified Certificate upgrade fee"
 msgstr "Zapłać za zaświadczenie premium"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "Verify your identity with a webcam and government-issued ID"
 msgstr ""
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "Study hard and pass the course"
 msgstr "Ucz się ciężko i zalicz kurs"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "Share your certificate with friends, employers, and others"
 msgstr "Udostępnij zaświadczenie swoim przyjaciołom, pracodawcom, etc."
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "edX Learner Stories"
 msgstr "Historie studentów"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid ""
 "My certificate has helped me showcase my knowledge on my"
 "                             resume - I feel like this certificate could "
@@ -24557,12 +23342,10 @@ msgstr ""
 "zaświadczenie mogłoby mi naprawdę pomóc zdobyć moją wymarzoną pracę!"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "{learner_name}, edX Learner"
 msgstr "{learner_name}, student"
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid ""
 "I wanted to include a verified certificate on my resume and my profile to"
 "                             illustrate that I am working towards this goal "
@@ -24574,22 +23357,18 @@ msgstr ""
 " byłem/am bezrobotny/a."
 
 #: openedx/features/course_experience/templates/course_experience/course-sock-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-sock-fragment.html
 msgid "Upgrade ({course_price})"
 msgstr "Wersja premium ({course_price})"
 
 #: openedx/features/course_experience/templates/course_experience/course-updates-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/course-updates-fragment.html
 msgid "This course does not have any updates."
 msgstr "Ten kurs nie ma żadnych opublikowanych aktualności."
 
 #: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/latest-update-fragment.html
 msgid "Latest Update"
 msgstr "Najnowsza aktualizacja"
 
 #: openedx/features/course_experience/templates/course_experience/welcome-message-fragment.html
-#: themes/navoica-theme/lms/templates/course_experience/welcome-message-fragment.html
 msgid "Welcome Message"
 msgstr "Wiadomość powitalna"
 
@@ -24632,29 +23411,24 @@ msgid "Link"
 msgstr "Połącz"
 
 #: openedx/features/learner_profile/templates/learner_profile/learner-achievements-fragment.html
-#: themes/navoica-theme/lms/templates/learner_profile/learner-achievements-fragment.html
 msgid "Completed {completion_date_html}"
 msgstr "Ukończono {completion_date_html}"
 
 #: openedx/features/learner_profile/templates/learner_profile/learner-achievements-fragment.html
-#: themes/navoica-theme/lms/templates/learner_profile/learner-achievements-fragment.html
 msgid "{course_mode} certificate"
 msgstr "{course_mode} zaświadczenie o ukończeniu kursu"
 
 #: openedx/features/learner_profile/templates/learner_profile/learner-achievements-fragment.html
-#: themes/navoica-theme/lms/templates/learner_profile/learner-achievements-fragment.html
 msgid "You haven't earned any certificates yet."
 msgstr ""
 "Jeszcze nie posiadasz żadnych zaświadczeń o ukończeniu kursu i poświadczeń."
 
 #: openedx/features/learner_profile/templates/learner_profile/learner-achievements-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
-#: themes/navoica-theme/lms/templates/learner_profile/learner-achievements-fragment.html
 msgid "Explore New Courses"
 msgstr "Odkryj nowe kursy"
 
 #: openedx/features/learner_profile/templates/learner_profile/learner_profile.html
-#: themes/navoica-theme/lms/templates/learner_profile/learner_profile.html
 msgid "An error occurred. Try loading the page again."
 msgstr "Wystąpił błąd. Spróbuj odświeżyć stronę."
 
@@ -24787,25 +23561,6 @@ msgstr "Przeglądaj kursy"
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
 msgid "Schools & Partners"
 msgstr "Uczelnie i partnerzy"
-
-#: themes/navoica-theme/cms/templates/settings.html
-msgid "Course About Sidebar HTML"
-msgstr ""
-
-#: themes/navoica-theme/cms/templates/settings.html
-msgid ""
-"Custom sidebar content for {a_link_start}your course summary "
-"page{a_link_end} (formatted in HTML)"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/courseware/course_about.html
-#: themes/navoica-theme/lms/templates/courseware/course_navigation_course_site.html
-msgid "Organizer"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/courseware/courses.html
-msgid "FILTERS"
-msgstr ""
 
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
@@ -25036,6 +23791,10 @@ msgstr ""
 "{platform_name}. W międzyczasie możesz wrócić do {link_start}strony głównej "
 "{studio_name}.{link_end}"
 
+#: cms/templates/asset_index.html cms/templates/widgets/header.html
+msgid "Files & Uploads"
+msgstr ""
+
 #: cms/templates/certificates.html
 msgid "Course Certificates"
 msgstr "Zaświadczenia o ukończeniu kursu"
@@ -25113,9 +23872,34 @@ msgstr ""
 msgid "Learn more about certificates"
 msgstr "Dowiedz się więcej na temat zaświadczeń o ukończeniu kursu"
 
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/settings.html cms/templates/settings_advanced.html
+#: cms/templates/settings_graders.html
+msgid "Other Course Settings"
+msgstr ""
+
 #: cms/templates/certificates.html cms/templates/settings_graders.html
 msgid "Details &amp; Schedule"
 msgstr "Szczegóły i harmonogram"
+
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/settings.html cms/templates/settings_advanced.html
+#: cms/templates/settings_graders.html cms/templates/widgets/header.html
+msgid "Grading"
+msgstr ""
+
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/manage_users.html cms/templates/settings.html
+#: cms/templates/settings_advanced.html cms/templates/settings_graders.html
+#: cms/templates/widgets/header.html
+msgid "Course Team"
+msgstr ""
+
+#: cms/templates/certificates.html cms/templates/group_configurations.html
+#: cms/templates/settings.html cms/templates/settings_advanced.html
+#: cms/templates/settings_graders.html cms/templates/widgets/header.html
+msgid "Advanced Settings"
+msgstr ""
 
 #: cms/templates/component.html cms/templates/studio_xblock_wrapper.html
 msgid "Duplicate"
@@ -25286,6 +24070,11 @@ msgstr ""
 "Publicznie wyświetlana nazwa nowego kursu (jest zazwyczaj taka sama jak "
 "nazwa poprzedniej edycji kursu)."
 
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+#: cms/templates/settings.html
+msgid "Organization"
+msgstr ""
+
 #. Translators: This is an example for the name of the organization sponsoring
 #. a course, seen when filling out the form to create a new course. The
 #. organization name cannot contain spaces.
@@ -25307,6 +24096,11 @@ msgstr ""
 msgid "Note: No spaces or special characters are allowed."
 msgstr "Uwaga: Nie można używać spacji ani znaków specjalnych."
 
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+#: cms/templates/settings.html
+msgid "Course Number"
+msgstr ""
+
 #. Translators: This is an example for the number used to identify a course,
 #. seen when filling out the form to create a new course. The number here is
 #. short for "Computer Science 101". It can contain letters but cannot contain
@@ -25324,6 +24118,11 @@ msgstr ""
 "Unikalny numer, który identyfikuje nową edycję kursu wewnątrz twojej "
 "organizacji (jest zazwyczaj taki sam, jak numer pierwotnej edycji kursu i "
 "nie może zostać zmieniony)."
+
+#: cms/templates/course-create-rerun.html cms/templates/index.html
+#: cms/templates/settings.html
+msgid "Course Run"
+msgstr ""
 
 #. Translators: This is an example for the "run" used to identify different
 #. instances of a course, seen when filling out the form to create a new
@@ -25498,6 +24297,18 @@ msgstr "Zobacz wersję próbną"
 msgid "Edit Start Date"
 msgstr "Edytuj datę rozpoczęcia"
 
+#: cms/templates/course_outline.html cms/templates/settings.html
+msgid "Course Pacing"
+msgstr ""
+
+#: cms/templates/course_outline.html cms/templates/settings.html
+msgid "Self-Paced"
+msgstr ""
+
+#: cms/templates/course_outline.html cms/templates/settings.html
+msgid "Instructor-Paced"
+msgstr ""
+
 #: cms/templates/course_outline.html
 msgid "Creating your course organization"
 msgstr "Struktura kursu"
@@ -25586,6 +24397,13 @@ msgstr ""
 #: cms/templates/course_outline.html
 msgid "Learn more about content visibility settings"
 msgstr "Dowiedz się więcej na temat ustawień widoczności treści"
+
+#. Translators: Pages refer to the tabs that appear in the top navigation of
+#. each course.
+#: cms/templates/edit-tabs.html cms/templates/export.html
+#: cms/templates/widgets/header.html
+msgid "Pages"
+msgstr ""
 
 #: cms/templates/edit-tabs.html
 msgid "New Page"
@@ -25733,6 +24551,11 @@ msgstr "Eksport biblioteki"
 #: cms/templates/export.html
 msgid "Course Export"
 msgstr "Eksport kursu"
+
+#: cms/templates/export.html cms/templates/export_git.html
+#: cms/templates/import.html cms/templates/widgets/header.html
+msgid "Tools"
+msgstr ""
 
 #: cms/templates/export.html
 msgid "About Exporting Libraries"
@@ -25981,6 +24804,10 @@ msgstr "Dowiedz się więcej na temat eksportowania kursów"
 #: cms/templates/export_git.html
 msgid "Export Course to Git"
 msgstr "Wyeksportuj kurs do Git"
+
+#: cms/templates/export_git.html cms/templates/widgets/header.html
+msgid "Export to Git"
+msgstr ""
 
 #: cms/templates/export_git.html
 msgid "About Export to Git"
@@ -26665,6 +25492,10 @@ msgstr ""
 msgid "Learn more about importing a course"
 msgstr "Dowiedz się więcej na temat importowania kursu"
 
+#: cms/templates/index.html cms/templates/widgets/user_dropdown.html
+msgid "{studio_name} Home"
+msgstr ""
+
 #: cms/templates/index.html
 msgid "New Course"
 msgstr "Nowy kurs"
@@ -27211,6 +26042,10 @@ msgstr ""
 msgid "Library User Access"
 msgstr "Dostęp do biblioteki"
 
+#: cms/templates/manage_users_lib.html cms/templates/widgets/header.html
+msgid "User Access"
+msgstr ""
+
 #: cms/templates/manage_users_lib.html
 msgid "Grant Access to This Library"
 msgstr "Przyznaj dostęp do tej biblioteki"
@@ -27372,6 +26207,470 @@ msgstr ""
 " osadzić filmy, utworzyć ćwiczenia oraz jak tym kursem potem zarządzać. "
 "Jeśli masz dodatkowe pytania, skontaktuj się z pomocą techniczną platformy "
 "wysyłając maila na adres mooc_help@opi.org.pl"
+
+#: cms/templates/settings.html
+msgid "Schedule & Details Settings"
+msgstr ""
+
+#: cms/templates/settings.html cms/templates/widgets/header.html
+msgid "Schedule & Details"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Basic Information"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "The nuts and bolts of your course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "This field is disabled: this information cannot be changed."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Summary Page"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "(for student enrollment and access)"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Enroll in {course_display_name}"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"The course \"{course_display_name}\", provided by {platform_name}, is open "
+"for enrollment. Please navigate to this course at {link_for_about_page} to "
+"enroll."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Send a note to students via email"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Invite your students"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Promoting Your Course with {platform_name}"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Your course summary page will not be viewable until your course has been "
+"announced. To provide content for the page and preview it, follow the "
+"instructions provided by your Program Manager."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Credit Requirements"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Steps required to earn course credit"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Minimum Grade"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Successful Proctored Exam"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Proctored Exam {number}"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "ID Verification"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "In-Course Reverification {number}"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Schedule"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Dates that control when your course can be viewed"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "First day the course begins"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Start Time"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "(UTC)"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Last day your course is active"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course End Time"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Certificates Available Date"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "By default, 48 hours after course end date"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Enrollment Start Date"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "First day students can enroll"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Enrollment Start Time"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Enrollment End Date"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Last day students can enroll."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Contact your edX partner manager to update these settings."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Enrollment End Time"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "These Dates Are Not Used When Promoting Your Course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"These dates impact {strong_start}when your courseware can be "
+"viewed{strong_end}, but they are {strong_start}not the dates shown on your "
+"course summary page{strong_end}. To provide the course start and "
+"registration dates as shown on your course summary page, follow the "
+"instructions provided by your Program Manager."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Details"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Provide useful information about your course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Identify the course language here. This is used to assist users find courses"
+" that are taught in a specific language. It is also used to localize the "
+"'From:' field in bulk emails."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Introducing Your Course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Information for prospective students"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Title"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Displayed as title on the course details page. Limit to 50 characters."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Subtitle"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Displayed as subtitle on the course details page. Limit to 150 characters."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Duration"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Displayed on the course details page. Limit to 50 characters."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Description"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Displayed on the course details page. Limit to 1000 characters."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Short Description"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Appears on the course catalog page when students roll over the course name. "
+"Limit to ~150 characters"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Overview"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "HTML Code Editor"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Introductions, prerequisites, FAQs that are used on {a_link_start}your "
+"course summary page{a_link_end} (formatted in HTML)"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Card Image"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"You can manage this image along with all of your other {a_link_start}files "
+"and uploads{a_link_end}"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Your course currently does not have an image. Please upload one (JPEG or PNG"
+" format, and minimum suggested dimensions are 375px wide by 200px tall)"
+msgstr ""
+
+#. Translators: This is the placeholder text for a field that requests the URL
+#. for a course image
+#: cms/templates/settings.html
+msgid "Your course image URL"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Please provide a valid path and name to your course image (Note: only JPEG "
+"or PNG format supported)"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Upload Course Card Image"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Your course currently does not have an image. Please upload one (JPEG or PNG"
+" format, and minimum suggested dimensions are 1440px wide by 400px tall)"
+msgstr ""
+
+#. Translators: This is the placeholder text for a field that requests the URL
+#. for a course banner image
+#: cms/templates/settings.html
+msgid "Your banner image URL"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Please provide a valid path and name to your banner image (Note: only JPEG "
+"or PNG format supported)"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Upload Course Banner Image"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Video Thumbnail Image"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Your course currently does not have a video thumbnail image. Please upload "
+"one (JPEG or PNG format, and minimum suggested dimensions are 375px wide by "
+"200px tall)"
+msgstr ""
+
+#. Translators: This is the placeholder text for a field that requests the URL
+#. for a course video thumbnail image
+#: cms/templates/settings.html
+msgid "Your video thumbnail image URL"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Please provide a valid path and name to your video thumbnail image (Note: "
+"only JPEG or PNG format supported)"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Upload Video Thumbnail Image"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Introduction Video"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Delete Current Video"
+msgstr ""
+
+#. Translators: This is the placeholder text for a field that requests a
+#. YouTube video ID for a course video
+#: cms/templates/settings.html
+msgid "your YouTube video's ID"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Enter your YouTube video's ID (along with any restriction parameters)"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Learning Outcomes"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Add the learning outcomes for this course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Add Learning Outcome"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Add details about the instructors for this course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Add Instructor"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Requirements"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Expectations of the students taking this course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Hours of Effort per Week"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Time spent on all course work"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Prerequisite Course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course that students must complete before beginning this course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "set pre-requisite course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Require students to pass an exam before beginning the course."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"You can now view and author your course entrance exam from the "
+"{link_start}Course Outline{link_end}."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Grade Requirements"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid " %"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"The score student must meet in order to successfully complete the entrance "
+"exam. "
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Set the pacing for this course"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Instructor-paced courses progress at the pace that the course author sets. "
+"You can configure release dates for course content and due dates for "
+"assignments."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Self-paced courses do not have release dates for course content or due dates"
+" for assignments. Learners can complete course material at any time before "
+"the course end date."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "Course Content License"
+msgstr ""
+
+#. Translators: At the course settings, the editor is able to select the
+#. default course content license.
+#. The course content will have this license set, some assets can override the
+#. license with their own.
+#. In the form, the license selector for course content is described using the
+#. following string:
+#: cms/templates/settings.html
+msgid "Select the default license for course content"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid "How are these settings used?"
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Your course's schedule determines when students can enroll in and begin a "
+"course."
+msgstr ""
+
+#: cms/templates/settings.html
+msgid ""
+"Other information from this page appears on the About page for your course. "
+"This information includes the course overview, course image, introduction "
+"video, and estimated time requirements. Students use About pages to choose "
+"new courses to take."
+msgstr ""
 
 #: cms/templates/settings_advanced.html
 msgid "Your policy changes have been saved."
@@ -27573,6 +26872,10 @@ msgstr ""
 #: cms/templates/textbooks.html
 msgid "Learn more about textbooks"
 msgstr "Dowiedz się więcej na temat podręczników"
+
+#: cms/templates/videos_index.html cms/templates/widgets/header.html
+msgid "Video Uploads"
+msgstr ""
 
 #: cms/templates/videos_index.html
 msgid "Course Video Settings"
@@ -27825,6 +27128,118 @@ msgid ""
 msgstr ""
 "Na adres {email} została wysłana wiadomość e-mail z instrukcją aktywacji "
 "konta."
+
+#: cms/templates/widgets/footer.html
+msgid "Accessibility Accommodation Request"
+msgstr ""
+
+#. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
+#. Inc.'. Please do not translate any of these trademarks and company names.
+#: cms/templates/widgets/footer.html
+msgid ""
+"EdX, Open edX, Studio, and the edX and Open edX logos are registered "
+"trademarks or trademarks of {link_start}edX Inc.{link_end}"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+msgid "Current Course:"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+msgid "Course Navigation"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+msgid "Outline"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+msgid "Import"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+msgid "Export"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+msgid "Current Library:"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+msgid "Language preference"
+msgstr ""
+
+#: cms/templates/widgets/header.html
+msgid "Forum"
+msgstr ""
+
+#: cms/templates/widgets/metadata-edit.html
+msgid "Launch Latex Source Compiler"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Heading"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Insert a heading"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Add a multiple choice question"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Add a question with checkboxes"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Insert a text response"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Insert a numerical response"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Insert a dropdown response"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Explanation"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Add an explanation for this question"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Advanced Editor"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Toggle Cheatsheet"
+msgstr ""
+
+#: cms/templates/widgets/problem-edit.html
+msgid "Label"
+msgstr ""
+
+#: cms/templates/widgets/sock_links.html
+msgid "Access the Open edX Portal"
+msgstr ""
+
+#: cms/templates/widgets/sock_links.html
+msgid "Open edX Portal"
+msgstr ""
+
+#: cms/templates/widgets/user_dropdown.html
+msgid "Currently signed in as:"
+msgstr ""
+
+#: cms/templates/widgets/user_dropdown.html
+msgid "Maintenance"
+msgstr ""
 
 #: wiki/apps.py
 msgid "Wiki notifications"
@@ -28357,11 +27772,6 @@ msgstr "Action"
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/search.html
 msgid "<em>No description</em>"
 msgstr "<em>Brak opisu</em>"
-
-#: wiki/plugins/attachments/templates/wiki/plugins/attachments/history.html
-#: wiki/plugins/attachments/templates/wiki/plugins/attachments/search.html
-msgid "Download"
-msgstr "Pobierz"
 
 #: wiki/plugins/attachments/templates/wiki/plugins/attachments/history.html
 msgid "Use this!"
