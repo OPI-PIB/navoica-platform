@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-06-09 11:58+0000\n"
-"PO-Revision-Date: 2020-06-09 11:59:41.073734\n"
+"POT-Creation-Date: 2020-06-15 13:49+0000\n"
+"PO-Revision-Date: 2020-06-15 13:49:32.450391\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -60,7 +60,6 @@ msgstr ""
 #: cms/static/js/views/utils/xblock_utils.js
 #: common/static/bundles/js/pages/textbooks.js lms/static/js/ccx/schedule.js
 #: lms/static/js/views/fields.js
-#: themes/navoica-theme/lms/static/js/views/fields.js
 msgid "Saving"
 msgstr ""
 
@@ -126,7 +125,6 @@ msgstr ""
 #: common/static/common/js/components/utils/view_utils.js
 #: lms/static/js/Markdown.Editor.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: cms/templates/js/add-xblock-component-menu.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -245,7 +243,6 @@ msgstr ""
 #. Translators: This is the status of an active video upload
 #: cms/static/js/models/active_video_upload.js cms/static/js/views/assets.js
 #: cms/static/js/views/video_thumbnail.js lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "Uploading"
 msgstr ""
 
@@ -292,9 +289,6 @@ msgstr ""
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
-#: themes/navoica-theme/lms/templates/student_account/hinted_login.underscore
-#: themes/navoica-theme/lms/templates/student_account/institution_login.underscore
-#: themes/navoica-theme/lms/templates/student_account/institution_register.underscore
 msgid "or"
 msgstr ""
 
@@ -306,7 +300,6 @@ msgstr ""
 #: cms/static/js/views/video_transcripts.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: lms/static/js/student_account/tos_modal.js
-#: themes/navoica-theme/lms/static/js/student_account/tos_modal.js
 #: cms/templates/js/course-video-settings.underscore
 #: common/static/common/templates/image-modal.underscore
 #: common/static/common/templates/discussion/alert-popup.underscore
@@ -359,7 +352,6 @@ msgstr ""
 #: cms/static/js/views/video_transcripts.js
 #: lms/djangoapps/teams/static/teams/js/views/edit_team_members.js
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 #: cms/templates/js/video/metadata-translations-item.underscore
 #: lms/djangoapps/teams/static/teams/templates/edit-team-member.underscore
 msgid "Remove"
@@ -375,11 +367,6 @@ msgstr ""
 msgid "Please select a PDF file to upload."
 msgstr ""
 
-#: cms/static/js/views/instructor_info.js cms/static/js/views/settings/main.js
-#: themes/navoica-theme/cms/static/js/views/settings/main.js
-msgid "Files must be in JPEG or PNG format."
-msgstr ""
-
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: cms/static/js/views/manage_users_and_roles.js
@@ -389,7 +376,6 @@ msgstr ""
 
 #: cms/static/js/views/manage_users_and_roles.js
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Unknown"
 msgstr ""
 
@@ -397,12 +383,10 @@ msgstr ""
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Are you sure?"
 msgstr ""
 
 #: cms/static/js/views/metadata.js lms/static/js/views/file_uploader.js
-#: themes/navoica-theme/lms/static/js/views/file_uploader.js
 msgid "Upload File"
 msgstr ""
 
@@ -425,7 +409,6 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 #: lms/templates/instructor/instructor_dashboard_2/divided-discussions-course-wide.underscore
 #: lms/templates/instructor/instructor_dashboard_2/divided-discussions-inline.underscore
-#: themes/navoica-theme/lms/templates/fields/field_dropdown.underscore
 msgid "Save"
 msgstr ""
 
@@ -438,43 +421,7 @@ msgstr ""
 
 #: cms/static/js/views/previous_video_upload.js
 #: cms/static/js/views/video_transcripts.js lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "Removing"
-msgstr ""
-
-#: cms/static/js/views/settings/main.js
-#: themes/navoica-theme/cms/static/js/views/settings/main.js
-msgid "Course Credit Requirements"
-msgstr ""
-
-#: cms/static/js/views/settings/main.js
-#: themes/navoica-theme/cms/static/js/views/settings/main.js
-msgid "The minimum grade for course credit is not set."
-msgstr ""
-
-#: cms/static/js/views/settings/main.js
-#: themes/navoica-theme/cms/static/js/views/settings/main.js
-msgid "Course pacing cannot be changed once a course has started."
-msgstr ""
-
-#: cms/static/js/views/settings/main.js
-#: themes/navoica-theme/cms/static/js/views/settings/main.js
-msgid "{hours}:{minutes} (current UTC time)"
-msgstr ""
-
-#: cms/static/js/views/settings/main.js
-#: themes/navoica-theme/cms/static/js/views/settings/main.js
-msgid "Upload your course image."
-msgstr ""
-
-#: cms/static/js/views/settings/main.js
-#: themes/navoica-theme/cms/static/js/views/settings/main.js
-msgid "Upload your banner image."
-msgstr ""
-
-#: cms/static/js/views/settings/main.js
-#: themes/navoica-theme/cms/static/js/views/settings/main.js
-msgid "Upload your video thumbnail image."
 msgstr ""
 
 #: cms/static/js/views/show_textbook.js
@@ -503,7 +450,6 @@ msgstr ""
 #: lms/static/js/discussions_management/views/divided_discussions_course_wide.js
 #: lms/static/js/discussions_management/views/divided_discussions_inline.js
 #: lms/static/js/views/fields.js
-#: themes/navoica-theme/lms/static/js/views/fields.js
 msgid "Your changes have been saved."
 msgstr ""
 
@@ -520,8 +466,6 @@ msgstr ""
 #: lms/static/js/verify_student/views/payment_confirmation_step_view.js
 #: lms/static/js/verify_student/views/step_view.js
 #: lms/static/js/views/fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/FinishAuthView.js
-#: themes/navoica-theme/lms/static/js/views/fields.js
 msgid "Error"
 msgstr ""
 
@@ -1445,7 +1389,6 @@ msgstr ""
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
 #: common/static/common/templates/discussion/pagination.underscore
-#: themes/navoica-theme/lms/templates/components/paging-footer.underscore
 msgid "Next"
 msgstr ""
 
@@ -2307,44 +2250,36 @@ msgstr ""
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Reset Your Password"
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Enter and confirm your new password."
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "New Password"
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Confirm Password"
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Passwords do not match."
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Reset My Password"
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetInput.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/PasswordResetInput.jsx
 msgid "Error: "
 msgstr ""
 
@@ -2418,7 +2353,6 @@ msgstr ""
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Subject"
 msgstr ""
 
@@ -2448,8 +2382,6 @@ msgstr ""
 #: common/static/bundles/SingleSupportForm.js
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/hinted_login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid "Sign in"
 msgstr ""
 
@@ -2517,8 +2449,6 @@ msgstr ""
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletion.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "You may also lose access to verified certificates and other program "
 "credentials like MicroMasters certificates. If you want to make a copy of "
@@ -2529,14 +2459,12 @@ msgstr ""
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid "We’re sorry to see you go!"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid ""
 "Please note: Deletion of your account and personal data is permanent and "
 "cannot be undone. EdX will not be able to recover your account or the data "
@@ -2546,7 +2474,6 @@ msgstr ""
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletion.jsx
 msgid ""
 "Once your account is deleted, you cannot use it to take courses on the edX "
 "app, edx.org, or any other site hosted by edX. This includes access to "
@@ -2559,36 +2486,30 @@ msgstr ""
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletion.jsx
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletion.jsx
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Delete My Account"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Password is incorrect"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Unable to delete account"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Please re-enter your password."
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "Sorry, there was an error trying to process your request. Please try again "
 "later."
@@ -2597,14 +2518,12 @@ msgstr ""
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "A Password is required"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "You have selected “Delete my account.” Deletion of your account and personal"
 " data is permanent and cannot be undone. EdX will not be able to recover "
@@ -2614,7 +2533,6 @@ msgstr ""
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "If you proceed, you will be unable to use this account to take courses on "
 "the edX app, edx.org, or any other site hosted by edX. This includes access "
@@ -2626,7 +2544,6 @@ msgstr ""
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "If you still wish to continue and delete your account, please enter your "
 "account password:"
@@ -2635,21 +2552,18 @@ msgstr ""
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "Yes, Delete"
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid "We're sorry to see you go! Your account will be deleted shortly."
 msgstr ""
 
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
 #: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
-#: themes/navoica-theme/lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 msgid ""
 "Account deletion, including removal from email lists, may take a few weeks "
 "to fully process through our system. If you want to opt-out of emails before"
@@ -3076,7 +2990,6 @@ msgstr ""
 #: common/static/common/templates/discussion/forum-actions.underscore
 #: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
-#: themes/navoica-theme/lms/templates/discovery/facet.underscore
 msgid "More"
 msgstr ""
 
@@ -3098,8 +3011,6 @@ msgstr ""
 #: lms/djangoapps/support/static/support/templates/certificates.underscore
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/search.underscore
-#: themes/navoica-theme/lms/templates/components/search-field.underscore
 msgid "Search"
 msgstr ""
 
@@ -3144,7 +3055,6 @@ msgstr ""
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "Image"
 msgstr ""
 
@@ -3296,7 +3206,6 @@ msgstr ""
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
 #: lms/static/js/views/fields.js
-#: themes/navoica-theme/lms/static/js/views/fields.js
 msgid "An error occurred. Please try again."
 msgstr ""
 
@@ -3868,7 +3777,6 @@ msgstr ""
 #: lms/static/js/courseware/credit_progress.js
 #: lms/templates/discovery/facet.underscore
 #: lms/templates/edxnotes/note-item.underscore
-#: themes/navoica-theme/lms/templates/discovery/facet.underscore
 msgid "Less"
 msgstr ""
 
@@ -3927,7 +3835,6 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/discovery/views/search_form.js
-#: themes/navoica-theme/lms/static/js/discovery/views/search_form.js
 #, javascript-format
 msgid "Viewing %s course"
 msgid_plural "Viewing %s courses"
@@ -3935,13 +3842,11 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: lms/static/js/discovery/views/search_form.js
-#: themes/navoica-theme/lms/static/js/discovery/views/search_form.js
 #, javascript-format
 msgid "We couldn't find any results for \"%s\"."
 msgstr ""
 
 #: lms/static/js/discovery/views/search_form.js
-#: themes/navoica-theme/lms/static/js/discovery/views/search_form.js
 #: openedx/features/course_search/static/course_search/templates/search_error.underscore
 msgid "There was an error, try searching again."
 msgstr ""
@@ -4070,7 +3975,6 @@ msgstr ""
 
 #: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
 #: lms/static/js/student_account/views/LoginView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/LoginView.js
 msgid "An error has occurred. Check your Internet connection and try again."
 msgstr ""
 
@@ -4231,131 +4135,109 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/certificates.js
 msgid "Allow students to generate certificates for this course?"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/certificates.js
 msgid "Prevent students from generating certificates in this course?"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/certificates.js
 msgid "Start generating certificates for all students in this course?"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/certificates.js
 msgid "Error while generating certificates. Please try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/certificates.js
 msgid "Start regenerating certificates for students in this course?"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/certificates.js
 msgid "Error while regenerating certificates. Please try again."
 msgstr ""
 
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Prepare merged pdf contains all certificates in this course?"
+msgstr ""
+
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Loading data..."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Error getting issued certificates list."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating proctored exam results. Please try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating survey results. Please try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating student profile information. Please try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmarks_list.js
-#: themes/navoica-theme/lms/static/course_bookmarks/js/views/bookmarks_list.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 #: cms/templates/js/move-xblock-modal.underscore
 #: openedx/features/course_search/static/course_search/templates/search_loading.underscore
 msgid "Loading"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Error getting student list."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating list of students who may enroll. Please try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Error retrieving grading configuration."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating grades. Please try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating problem grade report. Please try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/data_download.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/data_download.js
 msgid "Error generating ORA data report. Please try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/ecommerce.js
 msgid ""
 "There was a problem creating the report. Select \"Create Executive Summary\""
 " to try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/ecommerce.js
 msgid "Enter the enrollment code."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/ecommerce.js
 msgid "Cancel enrollment code"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/ecommerce.js
 msgid "Restore enrollment code"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/ecommerce.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/ecommerce.js
 msgid "Mark enrollment code as unused"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 #: cms/templates/js/transcript-organization-credentials.underscore
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
 #: lms/templates/financial-assistance/financial_assessment_form.underscore
@@ -4363,104 +4245,84 @@ msgid "Username"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 #: lms/djangoapps/support/static/support/templates/manage_user.underscore
 msgid "Email"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Revoke access"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Group"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Enter username or email"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Please enter a username or email."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "This role requires a divided discussions scheme."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Error changing user's permissions."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "Could not find a user with username or email address '<%- identifier %>'."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "Error: User '<%- username %>' has not yet activated their account. Users "
 "must create and activate their accounts before they can be assigned a role."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Error: You cannot remove yourself from the Instructor group!"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Errors"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "The following errors were generated:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Warnings"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "The following warnings were generated:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
 #: lms/static/js/views/fields.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/views/fields.js
 msgid "Success"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "All accounts were created successfully."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Error adding/removing users as beta testers."
 msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "These users were successfully added as beta testers:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "These users could not be added as beta testers because their accounts are "
 "not yet activated:"
@@ -4468,68 +4330,56 @@ msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "These users were successfully removed as beta testers:"
 msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "These users were not added as beta testers:"
 msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "These users were not removed as beta testers:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "Users must create and activate their account before they can be promoted to "
 "beta tester."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Could not find users associated with the following identifiers:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Reason field should not be left blank."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Role field should not be left unselected."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Error enrolling/unenrolling users."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "The following email addresses and/or usernames are invalid:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Successfully enrolled and sent email to the following users:"
 msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "Successfully enrolled the following users:"
 msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "Successfully sent enrollment emails to the following users. They will be "
 "allowed to enroll once they register:"
@@ -4537,13 +4387,11 @@ msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "These users will be allowed to enroll once they register:"
 msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "Successfully sent enrollment emails to the following users. They will be "
 "enrolled once they register:"
@@ -4551,13 +4399,11 @@ msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "These users will be enrolled once they register:"
 msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "Emails successfully sent. The following users are no longer enrolled in the "
 "course:"
@@ -4565,65 +4411,53 @@ msgstr ""
 
 #. Translators: A list of users appears after this sentence;
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid "The following users are no longer enrolled in the course:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/membership.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/membership.js
 msgid ""
 "These users were not affiliated with the course so could not be unenrolled:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "Your message must have a subject."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "Your message cannot be blank."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "Your message must have at least one target."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid ""
 "There are invalid keywords in your email. Check the following keywords and "
 "try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "Yourself"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "Everyone who has staff privileges in this course"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "All learners who are enrolled in this course"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "All learners in the {cohort_name} cohort"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "All learners in the {track_name} track"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid ""
 "Your email message was successfully queued for sending. In courses with a "
 "large number of learners, email messages to learners might take up to an "
@@ -4631,68 +4465,56 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid ""
 "You are sending an email message with the subject {subject} to the following"
 " recipients."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "Is this OK?"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "Error sending email."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "There is no email history for this course."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "There was an error obtaining email task history for this course."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "There was an error obtaining email content history for this course."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/send_email.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/send_email.js
 msgid "Send to:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid "Please enter a student email address or username."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error getting student progress url for '<%- student_id %>'. Make sure that "
 "the student identifier is spelled correctly."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid "Please enter a problem location."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Success! Problem attempts reset for problem '<%- problem_id %>' and student "
 "'<%- student_id %>'."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error resetting problem attempts for problem '<%= problem_id %>' and student"
 " '<%- student_id %>'. Make sure that the problem and student identifiers are"
@@ -4700,13 +4522,11 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Delete student '<%- student_id %>'s state on problem '<%- problem_id %>'?"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error deleting student '<%- student_id %>'s state on problem '<%- problem_id"
 " %>'. Make sure that the problem and student identifiers are complete and "
@@ -4714,12 +4534,10 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid "Module state successfully deleted."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error getting task history for problem '<%- problem_id %>' and student '<%- "
 "student_id %>'. Make sure that the problem and student identifiers are "
@@ -4727,69 +4545,58 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid "Entrance exam attempts is being reset for student '{student_id}'."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error resetting entrance exam attempts for student '{student_id}'. Make sure"
 " student identifier is correct."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid "Enter a student's username or email address."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Do you want to allow this student ('{student_id}') to skip the entrance "
 "exam?"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "An error occurred. Make sure that the student's username or email address is"
 " correct and try again."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid "Entrance exam state is being deleted for student '{student_id}'."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error deleting entrance exam state for student '{student_id}'. Make sure "
 "student identifier is correct."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error getting entrance exam task history for student '{student_id}'. Make "
 "sure student identifier is correct."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid "Reset attempts for all students on problem '<%- problem_id %>'?"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Successfully started task to reset attempts for problem '<%- problem_id %>'."
 " Click the 'Show Task Status' button to see the status of the task."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error starting a task to reset attempts for all students on problem '<%- "
 "problem_id %>'. Make sure that the problem identifier is complete and "
@@ -4797,12 +4604,10 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid "Error listing task history for this student and problem."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Started rescore problem task for problem '<%- problem_id %>' and student "
 "'<%- student_id %>'. Click the 'Show Task Status' button to see the status "
@@ -4810,7 +4615,6 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error starting a task to rescore problem '<%- problem_id %>' for student "
 "'<%- student_id %>'. Make sure that the the problem and student identifiers "
@@ -4818,12 +4622,10 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid "Please enter a score."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Started task to override the score for problem '<%- problem_id %>' and "
 "student '<%- student_id %>'. Click the 'Show Task Status' button to see the "
@@ -4831,7 +4633,6 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error starting a task to override score for problem '<%- problem_id %>' for "
 "student '<%- student_id %>'. Make sure that the the score and the problem "
@@ -4839,14 +4640,12 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Started entrance exam rescore task for student '{student_id}'. Click the "
 "'Show Task Status' button to see the status of the task."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error starting a task to rescore entrance exam for student '{student_id}'. "
 "Make sure that entrance exam has problems in it and student identifier is "
@@ -4854,19 +4653,16 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid "Rescore problem '<%- problem_id %>' for all students?"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Successfully started task to rescore problem '<%- problem_id %>' for all "
 "students. Click the 'Show Task Status' button to see the status of the task."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/student_admin.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/student_admin.js
 msgid ""
 "Error starting a task to rescore problem '<%- problem_id %>'. Make sure that"
 " the problem identifier is complete and correct."
@@ -4875,136 +4671,113 @@ msgstr ""
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Task Type"
 msgstr ""
 
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Task inputs"
 msgstr ""
 
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Task ID"
 msgstr ""
 
 #. Translators: a "Requester" is a username that requested a task such as
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Requester"
 msgstr ""
 
 #. Translators: A timestamp of when a task (eg, sending email) was submitted
 #. appears after this
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Submitted"
 msgstr ""
 
 #. Translators: The length of a task (eg, sending email) in seconds appears
 #. this
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Duration (sec)"
 msgstr ""
 
 #. Translators: The state (eg, "In progress") of a task (eg, sending email)
 #. appears after this.
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "State"
 msgstr ""
 
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Task Status"
 msgstr ""
 
 #. Translators: a "Task" is a background process such as grading students or
 #. sending email
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Task Progress"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid ""
 "An error occurred retrieving your email. Please try again later, and contact"
 " technical support if the problem persists."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Sent By"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Sent To"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Time Sent"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Number Sent"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Copy Email To Editor"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Subject:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Sent By:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Time Sent:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Sent To:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "Message:"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid "No tasks currently running."
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "File Name"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-#: themes/navoica-theme/lms/static/js/instructor_dashboard/util.js
 msgid ""
 "Links are generated on demand and expire within 5 minutes due to the "
 "sensitive nature of student information."
@@ -5051,34 +4824,27 @@ msgid "Could not override problem score for {user}."
 msgstr ""
 
 #: lms/static/js/student_account/tos_modal.js
-#: themes/navoica-theme/lms/static/js/student_account/tos_modal.js
 msgid "Terms of Service and Honor Code"
 msgstr ""
 
 #: lms/static/js/student_account/views/FinishAuthView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/FinishAuthView.js
 msgid "Saving your email preference"
 msgstr ""
 
 #: lms/static/js/student_account/views/FinishAuthView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/FinishAuthView.js
 msgid "Enrolling you in the selected course"
 msgstr ""
 
 #: lms/static/js/student_account/views/FinishAuthView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/FinishAuthView.js
 msgid "Adding the selected course to your cart"
 msgstr ""
 
 #: lms/static/js/student_account/views/FinishAuthView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/FinishAuthView.js
 msgid "Loading your courses"
 msgstr ""
 
 #: lms/static/js/student_account/views/FormView.js
 #: lms/static/js/student_account/views/RegisterView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/FormView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/RegisterView.js
 msgid "An error occurred."
 msgstr ""
 
@@ -5086,29 +4852,24 @@ msgstr ""
 #. student login, registration, and
 #. profile forms.
 #: lms/static/js/student_account/views/FormView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/FormView.js
 msgid "(optional)"
 msgstr ""
 
 #: lms/static/js/student_account/views/LoginView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/LoginView.js
 msgid "We couldn't sign you in."
 msgstr ""
 
 #: lms/static/js/student_account/views/LoginView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/LoginView.js
 #, javascript-format
 msgid "An error occurred when signing you in to %s."
 msgstr ""
 
 #: lms/static/js/student_account/views/LoginView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/LoginView.js
 #: lms/templates/verify_student/intro_step.underscore
 msgid "Check Your Email"
 msgstr ""
 
 #: lms/static/js/student_account/views/LoginView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/LoginView.js
 msgid ""
 "{paragraphStart}You entered {boldStart}{email}{boldEnd}. If this email "
 "address is associated with your {platform_name} account, we will send a "
@@ -5120,14 +4881,12 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/student_account/views/LoginView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/LoginView.js
 msgid ""
 "An error has occurred. Try refreshing the page, or check your Internet "
 "connection."
 msgstr ""
 
 #: lms/static/js/student_account/views/LoginView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/LoginView.js
 msgid ""
 "You have successfully signed into %(currentProvider)s, but your "
 "%(currentProvider)s account does not have a linked %(platformName)s account."
@@ -5135,179 +4894,146 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/student_account/views/RegisterView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/RegisterView.js
 msgid "We couldn't create your account."
 msgstr ""
 
 #: lms/static/js/student_account/views/RegisterView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/RegisterView.js
 #: lms/templates/student_account/register.underscore
-#: themes/navoica-theme/lms/templates/student_account/register.underscore
 msgid "Create Account"
 msgstr ""
 
 #: lms/static/js/student_account/views/RegisterView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/RegisterView.js
 msgid "(required)"
 msgstr ""
 
 #: lms/static/js/student_account/views/RegisterView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/RegisterView.js
 msgid "You've successfully signed into %(currentProvider)s."
 msgstr ""
 
 #: lms/static/js/student_account/views/RegisterView.js
-#: themes/navoica-theme/lms/static/js/student_account/views/RegisterView.js
 msgid ""
 "We just need a little more information before you start learning with "
 "%(platformName)s."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
 "Your profile settings are managed by {enterprise_name}. Contact your "
 "administrator or {link_start}edX Support{link_end} for help."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Email Address (Sign In)"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
 "You receive messages from {platform_name} and course teams at this address."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Full Name"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
 "The name that is used for ID verification and that appears on your "
 "certificates."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Country or Region of Residence"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "The country or region where you live."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Basic Account Information"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
 "These settings include basic information about your account. {platform_name}"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
 "The name that identifies you on {platform_name}. You cannot change your "
 "username."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 #: lms/templates/student_account/account.underscore
-#: themes/navoica-theme/lms/templates/student_account/account.underscore
 msgid "Password"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Additional Information"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Education Completed"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Gender"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Year of Birth"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "Linked Accounts"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
 "You can link your social media accounts to simplify signing in to "
 "{platform_name}."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "ORDER NAME"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "ORDER PLACED"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "TOTAL"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "ORDER NUMBER"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid "My Orders"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
 "This page contains information about orders that you have placed with "
 "{platform_name}."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid ""
 "We've sent a confirmation message to {new_email_address}. Click the link in "
 "the message to update your email address."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid ""
 "You must sign out and sign back in before your language changes take effect."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid ""
 "We've sent a message to {email}. Click the link in the message to reset your"
 " password. Didn't receive the message? Contact {anchorStart}technical "
@@ -5315,56 +5041,46 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid "Link your {accountName} account"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid "Unlink This Account"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid ""
 "You can use your {accountName} account to sign in to your {platformName} "
 "account."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid "Unlink your {accountName} account"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid "Link Your Account"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid ""
 "Link your {accountName} account to your {platformName} account and use "
 "{accountName} to sign in to {platformName}."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid "Unlinking"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid "Linking"
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_fields.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_fields.js
 msgid "Successfully unlinked."
 msgstr ""
 
 #: lms/static/js/student_account/views/account_settings_view.js
-#: themes/navoica-theme/lms/static/js/student_account/views/account_settings_view.js
 msgid "Account Information"
 msgstr ""
 
@@ -5427,8 +5143,6 @@ msgstr ""
 #: lms/static/js/verify_student/views/make_payment_step_view.js
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmark_button.js
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmarks_list.js
-#: themes/navoica-theme/lms/static/course_bookmarks/js/views/bookmark_button.js
-#: themes/navoica-theme/lms/static/course_bookmarks/js/views/bookmarks_list.js
 msgid "An error has occurred. Please try again."
 msgstr ""
 
@@ -5489,87 +5203,71 @@ msgid ""
 msgstr ""
 
 #: lms/static/js/views/fields.js
-#: themes/navoica-theme/lms/static/js/views/fields.js
 msgid "Editable"
 msgstr ""
 
 #: lms/static/js/views/fields.js
-#: themes/navoica-theme/lms/static/js/views/fields.js
 msgid "Validation Error"
 msgstr ""
 
 #: lms/static/js/views/fields.js
-#: themes/navoica-theme/lms/static/js/views/fields.js
 #: lms/templates/learner_dashboard/program_card.underscore
 msgid "In Progress"
 msgstr ""
 
 #: lms/static/js/views/fields.js
-#: themes/navoica-theme/lms/static/js/views/fields.js
 msgid "Placeholder"
 msgstr ""
 
 #: lms/static/js/views/file_uploader.js
-#: themes/navoica-theme/lms/static/js/views/file_uploader.js
 msgid "Your upload of '{file}' succeeded."
 msgstr ""
 
 #: lms/static/js/views/file_uploader.js
-#: themes/navoica-theme/lms/static/js/views/file_uploader.js
 msgid "Your upload of '{file}' failed."
 msgstr ""
 
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "Upload an image"
 msgstr ""
 
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "Change image"
 msgstr ""
 
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "An error has occurred. Refresh the page, and then try again."
 msgstr ""
 
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "The file must be at least {size} in size."
 msgstr ""
 
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "The file must be smaller than {size} in size."
 msgstr ""
 
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid ""
 "Upload is in progress. To avoid errors, stay on this page until the process "
 "is complete."
 msgstr ""
 
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid ""
 "Removal is in progress. To avoid errors, stay on this page until the process"
 " is complete."
 msgstr ""
 
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "bytes"
 msgstr ""
 
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "KB"
 msgstr ""
 
 #: lms/static/js/views/image_field.js
-#: themes/navoica-theme/lms/static/js/views/image_field.js
 msgid "MB"
 msgstr ""
 
@@ -5606,17 +5304,14 @@ msgid "Number of Students"
 msgstr ""
 
 #: lms/templates/courseware/progress_graph.js
-#: themes/navoica-theme/lms/templates/courseware/progress_graph.js
 msgid "Overall Score"
 msgstr ""
 
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmark_button.js
-#: themes/navoica-theme/lms/static/course_bookmarks/js/views/bookmark_button.js
 msgid "Bookmark this page"
 msgstr ""
 
 #: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmark_button.js
-#: themes/navoica-theme/lms/static/course_bookmarks/js/views/bookmark_button.js
 msgid "Bookmarked"
 msgstr ""
 
@@ -6208,6 +5903,10 @@ msgstr ""
 msgid "Upload instructor image."
 msgstr ""
 
+#: cms/static/js/views/instructor_info.js cms/static/js/views/settings/main.js
+msgid "Files must be in JPEG or PNG format."
+msgstr ""
+
 #: cms/static/js/views/license.js cms/templates/js/license-selector.underscore
 msgid "All Rights Reserved"
 msgstr ""
@@ -6598,6 +6297,34 @@ msgid ""
 "For grading to work, you must change all {oldName} subsections to {newName}."
 msgstr ""
 
+#: cms/static/js/views/settings/main.js
+msgid "Course Credit Requirements"
+msgstr ""
+
+#: cms/static/js/views/settings/main.js
+msgid "The minimum grade for course credit is not set."
+msgstr ""
+
+#: cms/static/js/views/settings/main.js
+msgid "Course pacing cannot be changed once a course has started."
+msgstr ""
+
+#: cms/static/js/views/settings/main.js
+msgid "{hours}:{minutes} (current UTC time)"
+msgstr ""
+
+#: cms/static/js/views/settings/main.js
+msgid "Upload your course image."
+msgstr ""
+
+#: cms/static/js/views/settings/main.js
+msgid "Upload your banner image."
+msgstr ""
+
+#: cms/static/js/views/settings/main.js
+msgid "Upload your video thumbnail image."
+msgstr ""
+
 #: cms/static/js/views/tabs.js
 msgid "Delete Page Confirmation"
 msgstr ""
@@ -6958,7 +6685,6 @@ msgstr ""
 #: cms/templates/js/paging-header.underscore
 #: common/static/common/templates/components/paging-footer.underscore
 #: common/static/common/templates/discussion/pagination.underscore
-#: themes/navoica-theme/lms/templates/components/paging-footer.underscore
 msgid "Previous"
 msgstr ""
 
@@ -6987,23 +6713,19 @@ msgid "Zoom Out"
 msgstr ""
 
 #: common/static/common/templates/components/paging-footer.underscore
-#: themes/navoica-theme/lms/templates/components/paging-footer.underscore
 #, python-format
 msgid "Page number out of %(total_pages)s"
 msgstr ""
 
 #: common/static/common/templates/components/paging-footer.underscore
-#: themes/navoica-theme/lms/templates/components/paging-footer.underscore
 msgid "Enter the page number you'd like to quickly navigate to."
 msgstr ""
 
 #: common/static/common/templates/components/paging-header.underscore
-#: themes/navoica-theme/lms/templates/components/paging-header.underscore
 msgid "Sorted by"
 msgstr ""
 
 #: common/static/common/templates/components/search-field.underscore
-#: themes/navoica-theme/lms/templates/components/search-field.underscore
 msgid "Clear search"
 msgstr ""
 
@@ -7293,7 +7015,6 @@ msgstr ""
 
 #: common/static/common/templates/discussion/thread-type.underscore
 #: lms/djangoapps/discussion/static/discussion/templates/fake-breadcrumbs.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/fake-breadcrumbs.underscore
 msgid "Discussion"
 msgstr ""
 
@@ -7314,75 +7035,61 @@ msgid "Add your post to a relevant topic to help others find it. (Required)"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Discussion Home"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 #, python-format
 msgid "How to use %(platform_name)s discussions"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Find discussions"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Search for topics"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Filter all posts"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Sort posts"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Engage with posts"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Vote for good posts and responses"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Report abuse, topics, and responses"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Follow or unfollow posts"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Receive updates"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid "Toggle Notifications Setting"
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/discussion-home.underscore
 msgid ""
 "Check this box to receive an email digest once a day notifying you about "
 "new, unread activity from posts you are following."
 msgstr ""
 
 #: lms/djangoapps/discussion/static/discussion/templates/search.underscore
-#: themes/navoica-theme/lms/static/discussion/templates/search.underscore
 msgid "Search all posts"
 msgstr ""
 
@@ -7826,44 +7533,34 @@ msgstr ""
 #: lms/templates/fields/field_dropdown.underscore
 #: lms/templates/fields/field_dropdown_account.underscore
 #: lms/templates/fields/field_textarea.underscore
-#: themes/navoica-theme/lms/templates/fields/field_dropdown.underscore
-#: themes/navoica-theme/lms/templates/fields/field_dropdown_account.underscore
-#: themes/navoica-theme/lms/templates/fields/field_textarea.underscore
 msgid "Click to edit"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
-#: themes/navoica-theme/lms/templates/fields/field_order_history.underscore
 msgid "Order Number"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
-#: themes/navoica-theme/lms/templates/fields/field_order_history.underscore
 msgid "Date Placed"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
-#: themes/navoica-theme/lms/templates/fields/field_order_history.underscore
 msgid "Cost"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
-#: themes/navoica-theme/lms/templates/fields/field_order_history.underscore
 msgid "Order Details"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
-#: themes/navoica-theme/lms/templates/fields/field_order_history.underscore
 msgid "for"
 msgstr ""
 
 #: lms/templates/fields/field_order_history.underscore
-#: themes/navoica-theme/lms/templates/fields/field_order_history.underscore
 msgid "Product Name"
 msgstr ""
 
 #: lms/templates/fields/field_textarea.underscore
-#: themes/navoica-theme/lms/templates/fields/field_textarea.underscore
 msgid ""
 "{currentCountOpeningTag}{currentCharacterCount}{currentCountClosingTag} of "
 "{maxCharacters}"
@@ -8417,209 +8114,169 @@ msgid "Upgrade to Verified"
 msgstr ""
 
 #: lms/templates/student_account/account.underscore
-#: themes/navoica-theme/lms/templates/student_account/account.underscore
 msgid "New Address"
 msgstr ""
 
 #: lms/templates/student_account/account.underscore
-#: themes/navoica-theme/lms/templates/student_account/account.underscore
 msgid "Change My Email Address"
 msgstr ""
 
 #: lms/templates/student_account/account.underscore
-#: themes/navoica-theme/lms/templates/student_account/account.underscore
 msgid "Reset Password"
 msgstr ""
 
 #: lms/templates/student_account/account_settings_section.underscore
-#: themes/navoica-theme/lms/templates/student_account/account_settings_section.underscore
 msgid "An error occurred. Please reload the page."
 msgstr ""
 
 #: lms/templates/student_account/form_field.underscore
-#: themes/navoica-theme/lms/templates/student_account/form_field.underscore
 msgid "Forgot password?"
 msgstr ""
 
 #: lms/templates/student_account/hinted_login.underscore
-#: themes/navoica-theme/lms/templates/student_account/hinted_login.underscore
 #, python-format
 msgid "Would you like to sign in using your %(providerName)s credentials?"
 msgstr ""
 
 #: lms/templates/student_account/hinted_login.underscore
-#: themes/navoica-theme/lms/templates/student_account/hinted_login.underscore
 #, python-format
 msgid "Sign in using %(providerName)s"
 msgstr ""
 
 #: lms/templates/student_account/hinted_login.underscore
-#: themes/navoica-theme/lms/templates/student_account/hinted_login.underscore
 msgid "Show me other ways to sign in or register"
 msgstr ""
 
 #: lms/templates/student_account/institution_login.underscore
-#: themes/navoica-theme/lms/templates/student_account/institution_login.underscore
 msgid "Sign in with Institution/Campus Credentials"
 msgstr ""
 
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
-#: themes/navoica-theme/lms/templates/student_account/institution_login.underscore
-#: themes/navoica-theme/lms/templates/student_account/institution_register.underscore
 msgid "Choose your institution from the list below:"
 msgstr ""
 
 #: lms/templates/student_account/institution_login.underscore
-#: themes/navoica-theme/lms/templates/student_account/institution_login.underscore
 msgid "Back to sign in"
 msgstr ""
 
 #: lms/templates/student_account/institution_register.underscore
-#: themes/navoica-theme/lms/templates/student_account/institution_register.underscore
 msgid "Register with Institution/Campus Credentials"
 msgstr ""
 
 #: lms/templates/student_account/institution_register.underscore
-#: themes/navoica-theme/lms/templates/student_account/institution_register.underscore
 msgid "Register through edX"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid "First time here?"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid "Create an Account."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid "Sign in to continue learning as {email}"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid "Sign in to continue learning"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid ""
 "You already have an edX account with your {enterprise_name} email address."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid ""
 "Going forward, your account information will be updated and maintained by "
 "{enterprise_name}."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid ""
 "You can view your information or unlink from {enterprise_name} anytime in "
 "your Account Settings."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid "To continue learning with this account, sign in below."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid "Sign In"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid ""
 "Sign in here using your email address and password, or use one of the "
 "providers listed below."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid "Sign in here using your email address and password."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid "If you do not yet have an account, use the button below to register."
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 msgid "or sign in with"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
 #, python-format
 msgid "Sign in with %(providerName)s"
 msgstr ""
 
 #: lms/templates/student_account/login.underscore
 #: lms/templates/student_account/register.underscore
-#: themes/navoica-theme/lms/templates/student_account/login.underscore
-#: themes/navoica-theme/lms/templates/student_account/register.underscore
 msgid "Use my institution/campus credentials"
 msgstr ""
 
 #: lms/templates/student_account/password_reset.underscore
-#: themes/navoica-theme/lms/templates/student_account/password_reset.underscore
 msgid "Password assistance"
 msgstr ""
 
 #: lms/templates/student_account/password_reset.underscore
-#: themes/navoica-theme/lms/templates/student_account/password_reset.underscore
 msgid ""
 "Please enter your email address below and we will send you instructions for "
 "setting a new password."
 msgstr ""
 
 #: lms/templates/student_account/password_reset.underscore
-#: themes/navoica-theme/lms/templates/student_account/password_reset.underscore
 msgid "Reset my password"
 msgstr ""
 
 #: lms/templates/student_account/register.underscore
-#: themes/navoica-theme/lms/templates/student_account/register.underscore
 msgid "Already have an {platformName} account?"
 msgstr ""
 
 #: lms/templates/student_account/register.underscore
-#: themes/navoica-theme/lms/templates/student_account/register.underscore
 msgid "Sign in."
 msgstr ""
 
 #: lms/templates/student_account/register.underscore
-#: themes/navoica-theme/lms/templates/student_account/register.underscore
 msgid "Create an account using"
 msgstr ""
 
 #: lms/templates/student_account/register.underscore
-#: themes/navoica-theme/lms/templates/student_account/register.underscore
 #, python-format
 msgid "Create account using %(providerName)s."
 msgstr ""
 
 #: lms/templates/student_account/register.underscore
-#: themes/navoica-theme/lms/templates/student_account/register.underscore
 msgid "or create a new one here"
 msgstr ""
 
 #: lms/templates/student_account/register.underscore
-#: themes/navoica-theme/lms/templates/student_account/register.underscore
 msgid "Create an Account"
 msgstr ""
 
 #: lms/templates/student_account/register.underscore
-#: themes/navoica-theme/lms/templates/student_account/register.underscore
 msgid "Support education research by providing additional information"
 msgstr ""
 
@@ -9119,14 +8776,10 @@ msgid "Bookmarked on"
 msgstr ""
 
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
-#: themes/navoica-theme/lms/static/course_bookmarks/templates/bookmarks-list.underscore
-#: themes/navoica-theme/lms/templates/course_bookmarks/bookmarks-list.underscore
 msgid "You have not bookmarked any courseware pages yet"
 msgstr ""
 
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
-#: themes/navoica-theme/lms/static/course_bookmarks/templates/bookmarks-list.underscore
-#: themes/navoica-theme/lms/templates/course_bookmarks/bookmarks-list.underscore
 msgid ""
 "Use bookmarks to help you easily return to courseware pages. To bookmark a "
 "page, click \"Bookmark this page\" under the page title."
@@ -9202,70 +8855,6 @@ msgid ""
 "%(download_link_start)sDownload this image (right-click or option-click, "
 "save as)%(link_end)s and then %(upload_link_start)supload%(link_end)s it to "
 "your backpack.</li>"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "New"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "category:"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "difficulty:"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "type:"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "Self-Paced"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "Instructor-Paced"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "Enroll"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "until"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "Course starts:"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "Enrollement time finished. Finish:"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "Course finish:"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/course_card.underscore
-msgid "Course finished:"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/facet_select.underscore
-msgid "Choose"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/filter_bar.underscore
-msgid "Filters"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/filter_bar.underscore
-msgid "Show filters"
-msgstr ""
-
-#: themes/navoica-theme/lms/templates/discovery/filter_bar.underscore
-msgid "Clean filters"
 msgstr ""
 
 #: cms/templates/js/access-editor.underscore

@@ -1,0 +1,85 @@
+{
+  "_from": "@wiris/mathtype-tinymce4",
+  "_id": "@wiris/mathtype-tinymce4@7.20.0",
+  "_inBundle": false,
+  "_integrity": "sha512-pLv3fAn4KCJFeoulR2t3gBDiqeh9SALhvKw8/Gzfl5AKgyXsoC3jyd4eWvVWlrohKj9M/gBHxPh5xt8bslKAzg==",
+  "_location": "/@wiris/mathtype-tinymce4",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@wiris/mathtype-tinymce4",
+    "name": "@wiris/mathtype-tinymce4",
+    "escapedName": "@wiris%2fmathtype-tinymce4",
+    "scope": "@wiris",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@wiris/mathtype-tinymce4/-/mathtype-tinymce4-7.20.0.tgz",
+  "_shasum": "eab78cf7fa1fe01a0e076358735db6b038a0eff9",
+  "_spec": "@wiris/mathtype-tinymce4",
+  "_where": "/Users/krystian/Documents/coding/test",
+  "author": {
+    "name": "WIRIS Team",
+    "url": "http://www.wiris.com"
+  },
+  "bugs": {
+    "email": "support@wiris.com"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "MathType Web for TinyMCE4 editor",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@wiris/mathtype-html-integration-devkit": "1.1.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "esdoc": "^1.1.0",
+    "esdoc-inject-script-plugin": "^1.0.0",
+    "esdoc-inject-style-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "jsdoc-export-default-interop": "^0.3.1",
+    "mini-css-extract-plugin": "^0.4.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "raw-loader": "^3.1.0",
+    "style-loader": "^0.23.0",
+    "uglifyjs-webpack-plugin": "^1.2.8",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  },
+  "gitHead": "4d29de717ad63e6828f393b7a8de2ce7a578d13f",
+  "homepage": "http://www.wiris.com/",
+  "keywords": [
+    "chem",
+    "chemistry",
+    "chemtype",
+    "editor",
+    "equation",
+    "latex",
+    "math",
+    "mathml",
+    "maths",
+    "mathtype",
+    "tinymce",
+    "tinymce4",
+    "wiris"
+  ],
+  "license": "MIT",
+  "main": "plugin.min.js",
+  "name": "@wiris/mathtype-tinymce4",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build-dev": "webpack --mode development",
+    "clean": "npx rimraf plugin.min.js",
+    "compile": "node ../../scripts/services/compile editor_plugin.src.js .",
+    "prepack": "npm install && npm run compile -- npm # We use compile for TinyMCE plugins because we need to copy the source first"
+  },
+  "version": "7.20.0"
+}
