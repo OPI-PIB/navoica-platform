@@ -11305,7 +11305,7 @@ main.container {
    #discovery-message{
     margin-bottom: -1rem;
    }
-  } 
+  }
 }
 
 @media (min-width: 960px) {
@@ -12493,7 +12493,7 @@ fieldset {
   display: none !important;
 }
 
-.u-field-value.field {
+.u-field-value-display {
   .u-field-value-readonly {
      display: none;
   }
@@ -12561,8 +12561,8 @@ fieldset {
 @media (min-width: 960px) and (max-width: 1280px) {
   .card-body > figure {
      min-height: 5rem;
-  }  
-} 
+  }
+}
 
 .card-body > figure {
     flex: 0 0 10rem;
@@ -13523,7 +13523,7 @@ span.complete-checkmark.fa.fa-check {
     margin: 0;
     max-width: unset;
     padding: 0;
-    width: unset; 
+    width: unset;
   }
 }
 
@@ -13539,7 +13539,7 @@ span.complete-checkmark.fa.fa-check {
   font-size: 1rem;
   height: 2.5rem;
   width: 2.5rem;
-  
+
   i {
     margin: auto;
   }
@@ -13555,7 +13555,7 @@ span.complete-checkmark.fa.fa-check {
   font-size: 2rem;
   height: 4rem;
   width: 4rem;
-  
+
   i {
     margin: auto;
   }
