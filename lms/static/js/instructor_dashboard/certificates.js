@@ -107,14 +107,13 @@ var onCertificatesReady = null;
             }
 
             var btn_merge_certs = $(this);
-            var certificate_merge_status = $('.certificate-merge-status');
+            var certificate_merge_status = $('#certificate-merge-status');
             var url = $(btn_merge_certs).data('endpoint');
 
             $.ajax({
                 type: 'POST',
                 url: url,
                 success: function(data) {
-                    //$(btn_merge_certs).attr('disabled', 'disabled');
                     $(certificate_merge_status).text(data.message).addClass('message');
                 },
                 error: function(jqXHR) {

@@ -22,7 +22,9 @@ from openedx.core.djangoapps.certificates.api import \
 from .runner import TaskProgress
 from ..models import InstructorTask
 from ... import instructor_task
-
+from urlparse import urlparse
+from bs4 import BeautifulSoup
+from django.conf import settings
 
 def generate_students_certificates(
         _xmodule_instance_args, _entry_id, course_id, task_input, action_name):
@@ -108,7 +110,7 @@ def merging_all_course_certificates(
 
     task_progress = TaskProgress(action_name, certificates.count(), start_time)
 
-    current_step = {'step': 'Generating Certificates'}
+    current_step = {'step': 'Merging Certificates'}
     task_progress.update_task_state(extra_meta=current_step)
 
     base_tmp = "/tmp/certificates/"
@@ -129,8 +131,24 @@ def merging_all_course_certificates(
 
         output = render_cert_by_uuid(fake_request, certificate.verify_uuid)
 
+        soup = BeautifulSoup(output.content, "html.parser")
+
+        if settings.INTERNAL_HOST_IP:
+            for img in soup.find_all(['img', 'script']):
+                if img.get("src", None):
+                    img_src = img['src']
+                    o = urlparse(img_src)
+                    img['src'] = o._replace(netloc=settings.INTERNAL_HOST_IP,
+                                            scheme="http").geturl()
+
+            for href in soup.find_all('link'):
+                link_href = href['href']
+                o = urlparse(link_href)
+                href['href'] = o._replace(netloc=settings.INTERNAL_HOST_IP,
+                                          scheme="http").geturl()
+
         multipart_form_data = {
-            'file': ('index.html', output.content),
+            'file': ('index.html', unicode(soup)),
             'marginTop': (None, '0',),
             'marginBottom': (None, '0',),
             'marginLeft': (None, '0',),
@@ -149,7 +167,6 @@ def merging_all_course_certificates(
         task_progress.update_task_state(extra_meta=current_step)
 
         task_progress.succeeded += 1
-        #task_progress.failed += 1
 
     cert_genereted_history, created = CertificateGenerationMergeHistory.objects.get_or_create(
         instructor_task=InstructorTask.objects.get(task_id=_xmodule_instance_args['task_id']),
@@ -157,7 +174,10 @@ def merging_all_course_certificates(
     cert_genereted_history.course_id = str(course_id)
     cert_genereted_history.save()
 
-    make_archive(base_tmp+str(course_id),'zip', root_dir=path_tmp,base_dir=None)
+    current_step = {'step': 'Compressing all certificates to ZIP archive'}
+    task_progress.update_task_state(extra_meta=current_step)
+
+    make_archive(base_tmp+str(course_id), 'zip', root_dir=path_tmp, base_dir=None)
 
     fh = open(base_tmp+str(course_id)+'.zip', "r")
     if fh:
