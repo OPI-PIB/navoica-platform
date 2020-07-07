@@ -32,7 +32,7 @@ HeaderFactory();
 % endif
 
 <!-- Navigation -->
-<nav class="navbar fixed-top navbar-expand-md fixed-top navbar-light">
+<nav class="navbar navbar-expand-md fixed-top navbar-light">
     % if use_cookie_banner and ENABLE_GDPR_COMPAT_FLAG.is_enabled_without_course_context():
     ${static.renderReact(
     component="CookiePolicyBanner",
