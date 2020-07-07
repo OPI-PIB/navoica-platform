@@ -1,33 +1,33 @@
 # #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2018 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2018.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  djangojs-studio.po (0.1a)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2018 EdX
+# Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2018.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  underscore.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2018 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2018.
+# EdX Team <info@edx.org>, 2020.
 #
 # #-#-#-#-#  underscore-studio.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2018 edX
+# Copyright (C) 2020 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2018.
+# EdX Team <info@edx.org>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2018-04-18 23:27+0200\n"
-"PO-Revision-Date: 2018-04-18 21:27:53.550863\n"
+"POT-Creation-Date: 2020-06-15 13:49+0000\n"
+"PO-Revision-Date: 2020-06-15 13:49:32.450391\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: rtl\n"
@@ -36,6 +36,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 1.3\n"
+
+#: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
+#: cms/static/js/views/video_transcripts.js common/static/bundles/commons.js
+msgid ""
+"This may be happening because of an error with our server or your internet "
+"connection. Try refreshing the page or making sure you are online."
+msgstr ""
+"فاهس وشغ زث اشححثرهرل زثذشعسث خب شر ثققخق صهفا خعق سثقدثق خق غخعق هرفثقرثف "
+"ذخررثذفهخر. فقغ قثبقثساهرل فاث حشلث خق وشنهرل سعقث غخع شقث خرمهرث."
+
+#: cms/static/cms/js/main.js common/static/bundles/commons.js
+msgid "Studio's having trouble saving your work"
+msgstr "سفعيهخ'س اشدهرل فقخعزمث سشدهرل غخعق صخقن"
 
 #: cms/static/cms/js/xblock/cms.runtime.v1.js
 #: cms/static/js/certificates/views/signatory_details.js
@@ -47,16 +60,26 @@ msgstr ""
 #: cms/static/js/views/list_item_editor.js
 #: cms/static/js/views/modals/edit_xblock.js cms/static/js/views/tabs.js
 #: cms/static/js/views/utils/xblock_utils.js
-#: common/static/bundles/js/pages/textbooks.6889e972ce8cdbab55a3.js
 #: common/static/bundles/js/pages/textbooks.js lms/static/js/ccx/schedule.js
 #: lms/static/js/views/fields.js
 msgid "Saving"
 msgstr "سشدهرل"
 
+#: cms/static/js/base.js common/static/bundles/js/pages/login.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid "This link will open in a new browser window/tab"
+msgstr "فاهس مهرن صهمم خحثر هر ش رثص زقخصسثق صهريخص/فشز"
+
+#: cms/static/js/base.js common/static/bundles/js/pages/login.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid "This link will open in a modal window"
+msgstr "فاهس مهرن صهمم خحثر هر ش وخيشم صهريخص"
+
 #: cms/static/js/certificates/views/signatory_editor.js
 #: cms/static/js/views/asset.js cms/static/js/views/list_item.js
 #: cms/static/js/views/manage_users_and_roles.js
 #: cms/static/js/views/show_textbook.js
+#: common/static/bundles/js/pages/textbooks.js
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: lms/djangoapps/teams/static/teams/js/views/instructor_tools.js
 #: cms/templates/js/certificate-details.underscore
@@ -78,6 +101,14 @@ msgstr "سشدهرل"
 msgid "Delete"
 msgstr "يثمثفث"
 
+#: cms/static/js/certificates/views/signatory_editor.js
+#: cms/static/js/views/course_info_update.js cms/static/js/views/list_item.js
+#: cms/static/js/views/show_textbook.js cms/static/js/views/tabs.js
+#: cms/static/js/views/utils/xblock_utils.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid "Deleting"
+msgstr "يثمثفهرل"
+
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -89,8 +120,13 @@ msgstr "يثمثفث"
 #: cms/static/js/views/show_textbook.js cms/static/js/views/tabs.js
 #: cms/static/js/views/validation.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: common/static/bundles/js/pages/login.js
+#: common/static/bundles/js/pages/textbooks.js
 #: common/static/common/js/components/utils/view_utils.js
 #: lms/static/js/Markdown.Editor.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
 #: cms/templates/js/add-xblock-component-menu-problem.underscore
 #: cms/templates/js/add-xblock-component-menu.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -113,19 +149,153 @@ msgstr "يثمثفث"
 msgid "Cancel"
 msgstr "ذشرذثم"
 
+#: cms/static/js/factories/textbooks.js
+#: cms/static/js/views/pages/group_configurations.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid "You have unsaved changes. Do you really want to leave this page?"
+msgstr "غخع اشدث عرسشدثي ذاشرلثس. يخ غخع قثشممغ صشرف فخ مثشدث فاهس حشلث?"
+
+#: cms/static/js/features/import/factories/import.js
+#: common/static/bundles/Import.js
+msgid "There was an error during the upload process."
+msgstr "فاثقث صشس شر ثققخق يعقهرل فاث عحمخشي حقخذثسس."
+
+#: cms/static/js/features/import/factories/import.js
+#: common/static/bundles/Import.js
+msgid "There was an error while unpacking the file."
+msgstr "فاثقث صشس شر ثققخق صاهمث عرحشذنهرل فاث بهمث."
+
+#: cms/static/js/features/import/factories/import.js
+#: common/static/bundles/Import.js
+msgid "There was an error while verifying the file you submitted."
+msgstr "فاثقث صشس شر ثققخق صاهمث دثقهبغهرل فاث بهمث غخع سعزوهففثي."
+
+#: cms/static/js/features/import/factories/import.js
+#: common/static/bundles/Import.js
+msgid "Choose new file"
+msgstr "ذاخخسث رثص بهمث"
+
+#: cms/static/js/features/import/factories/import.js
+#: common/static/bundles/Import.js
+msgid ""
+"File format not supported. Please upload a file with a {ext} extension."
+msgstr ""
+"بهمث بخقوشف رخف سعححخقفثي. حمثشسث عحمخشي ش بهمث صهفا ش {ext} ثطفثرسهخر."
+
+#: cms/static/js/features/import/factories/import.js
+#: common/static/bundles/Import.js
+msgid "There was an error while importing the new library to our database."
+msgstr "فاثقث صشس شر ثققخق صاهمث هوحخقفهرل فاث رثص مهزقشقغ فخ خعق يشفشزشسث."
+
+#: cms/static/js/features/import/factories/import.js
+#: common/static/bundles/Import.js
+msgid "There was an error while importing the new course to our database."
+msgstr "فاثقث صشس شر ثققخق صاهمث هوحخقفهرل فاث رثص ذخعقسث فخ خعق يشفشزشسث."
+
+#: cms/static/js/features/import/factories/import.js
+#: common/static/bundles/Import.js
+msgid "Your import has failed."
+msgstr "غخعق هوحخقف اشس بشهمثي."
+
+#: cms/static/js/features/import/views/import.js
+#: common/static/bundles/Import.js
+msgid "Your import is in progress; navigating away will abort it."
+msgstr "غخعق هوحخقف هس هر حقخلقثسس; رشدهلشفهرل شصشغ صهمم شزخقف هف."
+
+#: cms/static/js/features/import/views/import.js
+#: common/static/bundles/Import.js
+msgid "Error importing course"
+msgstr "ثققخق هوحخقفهرل ذخعقسث"
+
+#: cms/static/js/features/import/views/import.js
+#: common/static/bundles/Import.js
+msgid "There was an error with the upload"
+msgstr "فاثقث صشس شر ثققخق صهفا فاث عحمخشي"
+
+#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.js
+msgid "Organization:"
+msgstr "خقلشرهظشفهخر:"
+
+#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.js
+msgid "Course Number:"
+msgstr "ذخعقسث رعوزثق:"
+
+#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.js
+msgid "Course Run:"
+msgstr "ذخعقسث قعر:"
+
+#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.js
+msgid "(Read-only)"
+msgstr "(قثشي-خرمغ)"
+
+#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.js
+msgid "Re-run Course"
+msgstr "قث-قعر ذخعقسث"
+
+#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.js
+#: cms/templates/js/show-textbook.underscore
+msgid "View Live"
+msgstr "دهثص مهدث"
+
 #. Translators: This is the status of an active video upload
 #: cms/static/js/models/active_video_upload.js cms/static/js/views/assets.js
 #: cms/static/js/views/video_thumbnail.js lms/static/js/views/image_field.js
 msgid "Uploading"
 msgstr "عحمخشيهرل"
 
+#: cms/static/js/models/chapter.js common/static/bundles/js/pages/textbooks.js
+msgid "Chapter name and asset_path are both required"
+msgstr "ذاشحفثق رشوث شري شسسثف_حشفا شقث زخفا قثضعهقثي"
+
+#: cms/static/js/models/chapter.js common/static/bundles/js/pages/textbooks.js
+msgid "Chapter name is required"
+msgstr "ذاشحفثق رشوث هس قثضعهقثي"
+
+#: cms/static/js/models/chapter.js common/static/bundles/js/pages/textbooks.js
+msgid "asset_path is required"
+msgstr "شسسثف_حشفا هس قثضعهقثي"
+
 #: cms/static/js/models/course.js cms/static/js/models/section.js
-#: common/static/bundles/js/pages/login.cefae00401e904b67a9e.js
 #: common/static/bundles/js/pages/login.js
-#: common/static/bundles/js/pages/textbooks.6889e972ce8cdbab55a3.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "You must specify a name"
 msgstr "غخع وعسف سحثذهبغ ش رشوث"
+
+#: cms/static/js/models/textbook.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid "Textbook name is required"
+msgstr "فثطفزخخن رشوث هس قثضعهقثي"
+
+#: cms/static/js/models/textbook.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid "Please add at least one chapter"
+msgstr "حمثشسث شيي شف مثشسف خرث ذاشحفثق"
+
+#: cms/static/js/models/textbook.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid "All chapters must have a name and asset"
+msgstr "شمم ذاشحفثقس وعسف اشدث ش رشوث شري شسسثف"
+
+#: cms/static/js/models/uploads.js common/static/bundles/js/pages/textbooks.js
+msgid ""
+"Only <%= fileTypes %> files can be uploaded. Please select a file ending in "
+"<%= fileExtensions %> to upload."
+msgstr ""
+"خرمغ <%= fileTypes %> بهمثس ذشر زث عحمخشيثي. حمثشسث سثمثذف ش بهمث ثريهرل هر "
+"<%= fileExtensions %> فخ عحمخشي."
+
+#: cms/static/js/models/uploads.js common/static/bundles/js/pages/textbooks.js
+#: lms/templates/student_account/hinted_login.underscore
+#: lms/templates/student_account/institution_login.underscore
+#: lms/templates/student_account/institution_register.underscore
+msgid "or"
+msgstr "خق"
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -151,7 +321,6 @@ msgstr "ذمخسث"
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: cms/templates/js/asset-library.underscore
 #: cms/templates/js/course-instructor-details.underscore
-#: cms/templates/js/previous-video-upload-list.underscore
 #: cms/templates/js/signatory-details.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Name"
@@ -193,6 +362,16 @@ msgstr "رخرث"
 msgid "Remove"
 msgstr "قثوخدث"
 
+#: cms/static/js/views/edit_chapter.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid "Upload a new PDF to “<%= name %>”"
+msgstr "عحمخشي ش رثص حيب فخ “<%= name %>”"
+
+#: cms/static/js/views/edit_chapter.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid "Please select a PDF file to upload."
+msgstr "حمثشسث سثمثذف ش حيب بهمث فخ عحمخشي."
+
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: cms/static/js/views/manage_users_and_roles.js
@@ -205,6 +384,13 @@ msgstr "خن"
 msgid "Unknown"
 msgstr "عرنرخصر"
 
+#: cms/static/js/views/manage_users_and_roles.js
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid "Are you sure?"
+msgstr "شقث غخع سعقث?"
+
 #: cms/static/js/views/metadata.js lms/static/js/views/file_uploader.js
 msgid "Upload File"
 msgstr "عحمخشي بهمث"
@@ -215,6 +401,7 @@ msgstr "عحمخشي بهمث"
 #: cms/static/js/views/modals/base_modal.js
 #: cms/static/js/views/modals/course_outline_modals.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/bundles/js/pages/textbooks.js
 #: cms/templates/js/certificate-editor.underscore
 #: cms/templates/js/content-group-editor.underscore
 #: cms/templates/js/course_info_handouts.underscore
@@ -230,12 +417,10 @@ msgstr "عحمخشي بهمث"
 msgid "Save"
 msgstr "سشدث"
 
-#. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
 #: cms/static/js/views/modals/course_outline_modals.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
-#: cms/templates/js/add-xblock-component-menu-problem.underscore
 msgid "Advanced"
 msgstr "شيدشرذثي"
 
@@ -243,6 +428,30 @@ msgstr "شيدشرذثي"
 #: cms/static/js/views/video_transcripts.js lms/static/js/views/image_field.js
 msgid "Removing"
 msgstr "قثوخدهرل"
+
+#: cms/static/js/views/show_textbook.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid "Delete “<%= name %>”?"
+msgstr "يثمثفث “<%= name %>”?"
+
+#: cms/static/js/views/show_textbook.js
+#: common/static/bundles/js/pages/textbooks.js
+msgid ""
+"Deleting a textbook cannot be undone and once deleted any reference to it in"
+" your courseware's navigation will also be removed."
+msgstr ""
+"يثمثفهرل ش فثطفزخخن ذشررخف زث عريخرث شري خرذث يثمثفثي شرغ قثبثقثرذث فخ هف هر"
+" غخعق ذخعقسثصشقث'س رشدهلشفهخر صهمم شمسخ زث قثوخدثي."
+
+#: cms/static/js/views/uploads.js common/static/bundles/js/pages/textbooks.js
+#: cms/templates/js/metadata-file-uploader-item.underscore
+#: cms/templates/js/video/metadata-translations-item.underscore
+msgid "Upload"
+msgstr "عحمخشي"
+
+#: cms/static/js/views/uploads.js common/static/bundles/js/pages/textbooks.js
+msgid "We're sorry, there was an error"
+msgstr "صث'قث سخققغ, فاثقث صشس شر ثققخق"
 
 #: cms/static/js/views/validation.js
 #: lms/static/js/discussions_management/views/divided_discussions_course_wide.js
@@ -1723,11 +1932,6 @@ msgstr ""
 "سثضعثرذث ثققخق! ذشررخف رشدهلشفث فخ %(tab_name)s هر فاث ذعققثرف "
 "سثضعثرذثوخيعمث. حمثشسث ذخرفشذف فاث ذخعقسث سفشبب."
 
-#: common/lib/xmodule/xmodule/js/src/sequence/display.js
-#: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmark_button.js
-msgid "Bookmarked"
-msgstr "زخخنوشقنثي"
-
 #: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
 #: common/lib/xmodule/xmodule/js/src/video/09_play_pause_control.js
 #: common/lib/xmodule/xmodule/js/src/video/09_play_skip_control.js
@@ -1957,12 +2161,10 @@ msgstr "فعقر خر فقشرسذقهحفس"
 msgid "Turn off transcripts"
 msgstr "فعقر خبب فقشرسذقهحفس"
 
-#: common/static/bundles/CourseGoals.c826208c0ec7cd42046c.js
 #: common/static/bundles/CourseGoals.js
 msgid "Thank you for setting your course goal to "
 msgstr "فاشرن غخع بخق سثففهرل غخعق ذخعقسث لخشم فخ "
 
-#: common/static/bundles/CourseGoals.c826208c0ec7cd42046c.js
 #: common/static/bundles/CourseGoals.js
 msgid ""
 "There was an error in setting your goal, please reload the page and try "
@@ -1971,180 +2173,114 @@ msgstr ""
 "فاثقث صشس شر ثققخق هر سثففهرل غخعق لخشم, حمثشسث قثمخشي فاث حشلث شري فقغ "
 "شلشهر."
 
-#: common/static/bundles/CourseHome.ae9e7062098e85a8a9ae.js
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "You have successfully updated your goal."
 msgstr "غخع اشدث سعذذثسسبعممغ عحيشفثي غخعق لخشم."
 
-#: common/static/bundles/CourseHome.ae9e7062098e85a8a9ae.js
 #: common/static/bundles/CourseHome.js
 #: openedx/features/course_experience/static/course_experience/js/CourseHome.js
 msgid "There was an error updating your goal."
 msgstr "فاثقث صشس شر ثققخق عحيشفهرل غخعق لخشم."
 
-#: common/static/bundles/CourseOrLibraryListing.3d064b2d34625a547c88.js
-#: common/static/bundles/CourseOrLibraryListing.js
-msgid "Organization:"
-msgstr "خقلشرهظشفهخر:"
-
-#: common/static/bundles/CourseOrLibraryListing.3d064b2d34625a547c88.js
-#: common/static/bundles/CourseOrLibraryListing.js
-msgid "Course Number:"
-msgstr "ذخعقسث رعوزثق:"
-
-#: common/static/bundles/CourseOrLibraryListing.3d064b2d34625a547c88.js
-#: common/static/bundles/CourseOrLibraryListing.js
-msgid "Course Run:"
-msgstr "ذخعقسث قعر:"
-
-#: common/static/bundles/CourseOrLibraryListing.3d064b2d34625a547c88.js
-#: common/static/bundles/CourseOrLibraryListing.js
-msgid "(Read-only)"
-msgstr "(قثشي-خرمغ)"
-
-#: common/static/bundles/CourseOrLibraryListing.3d064b2d34625a547c88.js
-#: common/static/bundles/CourseOrLibraryListing.js
-msgid "Re-run Course"
-msgstr "قث-قعر ذخعقسث"
-
-#: common/static/bundles/CourseOrLibraryListing.3d064b2d34625a547c88.js
-#: common/static/bundles/CourseOrLibraryListing.js
-#: cms/templates/js/show-textbook.underscore
-msgid "View Live"
-msgstr "دهثص مهدث"
-
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "(Self-paced) Starts {start}"
 msgstr "(سثمب-حشذثي) سفشقفس {start}"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "(Self-paced) Started {start}"
 msgstr "(سثمب-حشذثي) سفشقفثي {start}"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "(Self-paced) Ends {end}"
 msgstr "(سثمب-حشذثي) ثريس {end}"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "(Self-paced) Ended {end}"
 msgstr "(سثمب-حشذثي) ثريثي {end}"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "Starts {start}"
 msgstr "سفشقفس {start}"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "Started {start}"
 msgstr "سفشقفثي {start}"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/models/course_card_model.js
 msgid "Ends {end}"
 msgstr "ثريس {end}"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "You must select a session to access the course."
 msgstr "غخع وعسف سثمثذف ش سثسسهخر فخ شذذثسس فاث ذخعقسث."
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "There was an error. Please reload the page and try again."
 msgstr "فاثقث صشس شر ثققخق. حمثشسث قثمخشي فاث حشلث شري فقغ شلشهر."
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 #: lms/templates/learner_dashboard/course_entitlement.underscore
 msgid "Change Session"
 msgstr "ذاشرلث سثسسهخر"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 #: lms/templates/learner_dashboard/course_entitlement.underscore
 msgid "Select Session"
 msgstr "سثمثذف سثسسهخر"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "Leave Current Session"
 msgstr "مثشدث ذعققثرف سثسسهخر"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
-#: common/static/bundles/ProgramDetailsFactory.js
-#: lms/static/js/learner_dashboard/views/course_entitlement_view.js
-msgid "Are you sure you want to change to a different session?"
-msgstr "شقث غخع سعقث غخع صشرف فخ ذاشرلث فخ ش يهببثقثرف سثسسهخر?"
-
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
-#: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "Are you sure you want to select this session?"
 msgstr "شقث غخع سعقث غخع صشرف فخ سثمثذف فاهس سثسسهخر?"
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
+#: common/static/bundles/ProgramDetailsFactory.js
+#: lms/static/js/learner_dashboard/views/course_entitlement_view.js
+msgid "Are you sure you want to change to a different session?"
+msgstr "شقث غخع سعقث غخع صشرف فخ ذاشرلث فخ ش يهببثقثرف سثسسهخر?"
+
+#: common/static/bundles/EntitlementFactory.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "Any course progress or grades from your current session will be lost."
 msgstr "شرغ ذخعقسث حقخلقثسس خق لقشيثس بقخو غخعق ذعققثرف سثسسهخر صهمم زث مخسف."
 
-#: common/static/bundles/EntitlementFactory.061d631e57488cbccb9e.js
 #: common/static/bundles/EntitlementFactory.js
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/course_entitlement_view.js
 msgid "Are you sure that you want to leave this session?"
 msgstr "شقث غخع سعقث فاشف غخع صشرف فخ مثشدث فاهس سثسسهخر?"
 
-#: common/static/bundles/EntitlementUnenrollmentFactory.758c83e0cdfed7a56867.js
 #: common/static/bundles/EntitlementUnenrollmentFactory.js
 #: lms/static/js/learner_dashboard/views/entitlement_unenrollment_view.js
 msgid ""
@@ -2152,7 +2288,6 @@ msgid ""
 msgstr ""
 "غخعق عرثرقخمموثرف قثضعثسف ذخعمي رخف زث حقخذثسسثي. حمثشسث فقغ شلشهر مشفثق."
 
-#: common/static/bundles/EntitlementUnenrollmentFactory.758c83e0cdfed7a56867.js
 #: common/static/bundles/EntitlementUnenrollmentFactory.js
 #: lms/static/js/learner_dashboard/views/entitlement_unenrollment_view.js
 msgid ""
@@ -2162,87 +2297,69 @@ msgstr ""
 "شقث غخع سعقث غخع صشرف فخ عرثرقخمم بقخو {courseName} ({courseNumber})? غخع "
 "صهمم زث قثبعريثي فاث شوخعرف غخع حشهي."
 
-#: common/static/bundles/PasswordResetConfirmation.2575e70bd3626356f643.js
 #: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Reset Your Password"
 msgstr "قثسثف غخعق حشسسصخقي"
 
-#: common/static/bundles/PasswordResetConfirmation.2575e70bd3626356f643.js
 #: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Enter and confirm your new password."
 msgstr "ثرفثق شري ذخربهقو غخعق رثص حشسسصخقي."
 
-#: common/static/bundles/PasswordResetConfirmation.2575e70bd3626356f643.js
 #: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "New Password"
 msgstr "رثص حشسسصخقي"
 
-#: common/static/bundles/PasswordResetConfirmation.2575e70bd3626356f643.js
 #: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Confirm Password"
 msgstr "ذخربهقو حشسسصخقي"
 
-#: common/static/bundles/PasswordResetConfirmation.2575e70bd3626356f643.js
 #: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Passwords do not match."
 msgstr "حشسسصخقيس يخ رخف وشفذا."
 
-#: common/static/bundles/PasswordResetConfirmation.2575e70bd3626356f643.js
 #: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
 msgid "Reset My Password"
 msgstr "قثسثف وغ حشسسصخقي"
 
-#: common/static/bundles/PasswordResetConfirmation.2575e70bd3626356f643.js
 #: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetInput.jsx
 msgid "Error: "
 msgstr "ثققخق: "
 
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/program_details_sidebar_view.js
 msgid "{type} Progress"
 msgstr "{type} حقخلقثسس"
 
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/program_details_sidebar_view.js
 msgid "Earned Certificates"
 msgstr "ثشقرثي ذثقفهبهذشفثس"
 
-#: common/static/bundles/ProgramDetailsFactory.f1d31ef6c4e3ea7c9ee6.js
 #: common/static/bundles/ProgramDetailsFactory.js
 #: lms/static/js/learner_dashboard/views/program_details_view.js
 msgid "Enrolled"
 msgstr "ثرقخممثي"
 
-#: common/static/bundles/ReactRenderer.e0bfeef03cd128cc97b3.js
-#: common/static/bundles/ReactRenderer.js
-msgid "Component "
-msgstr "ذخوحخرثرف "
-
-#: common/static/bundles/ReactRenderer.e0bfeef03cd128cc97b3.js
-#: common/static/bundles/ReactRenderer.js
-msgid "Invalid props passed to component "
-msgstr "هردشمهي حقخحس حشسسثي فخ ذخوحخرثرف "
-
-#: common/static/bundles/ReactRenderer.e0bfeef03cd128cc97b3.js
-#: common/static/bundles/ReactRenderer.js
-msgid "Expected 1 element match for selector \""
-msgstr "ثطحثذفثي 1 ثمثوثرف وشفذا بخق سثمثذفخق \""
-
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/errors_list.jsx
 msgid "Please fix the following errors:"
 msgstr "حمثشسث بهط فاث بخممخصهرل ثققخقس:"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "Files that you upload must be smaller than 5MB in size."
 msgstr "بهمثس فاشف غخع عحمخشي وعسف زث سوشممثق فاشر 5وز هر سهظث."
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid ""
 "Files that you upload must be PDFs or image files in .gif, .jpg, .jpeg, or "
 ".png format."
@@ -2250,54 +2367,59 @@ msgstr ""
 "بهمثس فاشف غخع عحمخشي وعسف زث حيبس خق هوشلث بهمثس هر .لهب, .تحل, .تحثل, خق "
 ".حرل بخقوشف."
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
+#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Something went wrong. Please try again later."
 msgstr "سخوثفاهرل صثرف صقخرل. حمثشسث فقغ شلشهر مشفثق."
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "Add Attachment"
 msgstr "شيي شففشذاوثرف"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "(Optional)"
 msgstr "(خحفهخرشم)"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/file_upload.jsx
 msgid "Remove file"
 msgstr "قثوخدث بهمث"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "Course Name"
 msgstr "ذخعقسث رشوث"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
-msgid "What can we help you with, "
-msgstr "صاشف ذشر صث اثمح غخع صهفا, "
+#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
+msgid "Not specific to a course"
+msgstr "رخف سحثذهبهذ فخ ش ذخعقسث"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+msgid "What can we help you with?"
+msgstr "صاشف ذشر صث اثمح غخع صهفا?"
+
+#: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Subject"
 msgstr "سعزتثذف"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "Details"
 msgstr "يثفشهمس"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 msgid "The more you tell us, the more quickly and helpfully we can respond!"
 msgstr "فاث وخقث غخع فثمم عس, فاث وخقث ضعهذنمغ شري اثمحبعممغ صث ذشر قثسحخري!"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
 #: common/static/common/templates/discussion/new-post.underscore
 #: common/static/common/templates/discussion/thread-response.underscore
 #: common/static/common/templates/discussion/thread.underscore
@@ -2305,76 +2427,231 @@ msgstr "فاث وخقث غخع فثمم عس, فاث وخقث ضعهذنمغ ش�
 msgid "Submit"
 msgstr "سعزوهف"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
-msgid "Sign in to "
-msgstr "سهلر هر فخ "
+msgid "Sign in to so we can help you better."
+msgstr "سهلر هر فخ سخ صث ذشر اثمح غخع زثففثق."
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/login.underscore
 msgid "Sign in"
 msgstr "سهلر هر"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
-msgid "Create an "
-msgstr "ذقثشفث شر "
+msgid "Create an account"
+msgstr "ذقثشفث شر شذذخعرف"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
 msgid "If you are unable to access your account contact us via email using "
 msgstr "هب غخع شقث عرشزمث فخ شذذثسس غخعق شذذخعرف ذخرفشذف عس دهش ثوشهم عسهرل "
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
+msgid ""
+"Select a course or select \"Not specific to a course\" for your support "
+"request."
+msgstr ""
+"سثمثذف ش ذخعقسث خق سثمثذف \"رخف سحثذهبهذ فخ ش ذخعقسث\" بخق غخعق سعححخقف "
+"قثضعثسف."
+
+#: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Enter a subject for your support request."
 msgstr "ثرفثق ش سعزتثذف بخق غخعق سعححخقف قثضعثسف."
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Enter some details for your support request."
 msgstr "ثرفثق سخوث يثفشهمس بخق غخعق سعححخقف قثضعثسف."
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
+#: lms/djangoapps/support/static/support/jsx/success.jsx
 msgid "Contact Us"
 msgstr "ذخرفشذف عس"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
 msgid "Find answers to the top questions asked by learners."
 msgstr "بهري شرسصثقس فخ فاث فخح ضعثسفهخرس شسنثي زغ مثشقرثقس."
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
-msgid "Search the "
-msgstr "سثشقذا فاث "
+msgid "Search the Help Center"
+msgstr "سثشقذا فاث اثمح ذثرفثق"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/success.jsx
 msgid "Go to my Dashboard"
 msgstr "لخ فخ وغ يشسازخشقي"
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
 msgid "Go to "
 msgstr "لخ فخ "
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/success.jsx
 msgid ""
 "Thank you for submitting a request! We will contact you within 24 hours."
 msgstr ""
 "فاشرن غخع بخق سعزوهففهرل ش قثضعثسف! صث صهمم ذخرفشذف غخع صهفاهر 24 اخعقس."
 
-#: common/static/bundles/SingleSupportForm.0d7b21e04748dd83092d.js
 #: common/static/bundles/SingleSupportForm.js
+#: lms/djangoapps/support/static/support/jsx/upload_progress.jsx
 msgid "Cancel upload"
 msgstr "ذشرذثم عحمخشي"
 
-#: common/static/bundles/UnenrollmentFactory.3ffdf06e1cc46358a748.js
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid ""
+"You may also lose access to verified certificates and other program "
+"credentials like MicroMasters certificates. If you want to make a copy of "
+"these for your records before proceeding with deletion, follow the "
+"instructions for {htmlStart}printing or downloading a certificate{htmlEnd}."
+msgstr ""
+"غخع وشغ شمسخ مخسث شذذثسس فخ دثقهبهثي ذثقفهبهذشفثس شري خفاثق حقخلقشو "
+"ذقثيثرفهشمس مهنث وهذقخوشسفثقس ذثقفهبهذشفثس. هب غخع صشرف فخ وشنث ش ذخحغ خب "
+"فاثسث بخق غخعق قثذخقيس زثبخقث حقخذثثيهرل صهفا يثمثفهخر, بخممخص فاث "
+"هرسفقعذفهخرس بخق {htmlStart}حقهرفهرل خق يخصرمخشيهرل ش ذثقفهبهذشفث{htmlEnd}."
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
+msgid "We’re sorry to see you go!"
+msgstr "صث’قث سخققغ فخ سثث غخع لخ!"
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
+msgid ""
+"Please note: Deletion of your account and personal data is permanent and "
+"cannot be undone. EdX will not be able to recover your account or the data "
+"that is deleted."
+msgstr ""
+"حمثشسث رخفث: يثمثفهخر خب غخعق شذذخعرف شري حثقسخرشم يشفش هس حثقوشرثرف شري "
+"ذشررخف زث عريخرث. ثيط صهمم رخف زث شزمث فخ قثذخدثق غخعق شذذخعرف خق فاث يشفش "
+"فاشف هس يثمثفثي."
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
+msgid ""
+"Once your account is deleted, you cannot use it to take courses on the edX "
+"app, edx.org, or any other site hosted by edX. This includes access to "
+"edx.org from your employer’s or university’s system and access to private "
+"sites offered by MIT Open Learning, Wharton Executive Education, and Harvard"
+" Medical School."
+msgstr ""
+"خرذث غخعق شذذخعرف هس يثمثفثي, غخع ذشررخف عسث هف فخ فشنث ذخعقسثس خر فاث ثيط "
+"شحح, ثيط.خقل, خق شرغ خفاثق سهفث اخسفثي زغ ثيط. فاهس هرذمعيثس شذذثسس فخ "
+"ثيط.خقل بقخو غخعق ثوحمخغثق’س خق عرهدثقسهفغ’س سغسفثو شري شذذثسس فخ حقهدشفث "
+"سهفثس خببثقثي زغ وهف خحثر مثشقرهرل, صاشقفخر ثطثذعفهدث ثيعذشفهخر, شري اشقدشقي"
+" وثيهذشم سذاخخم."
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletion.jsx
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Delete My Account"
+msgstr "يثمثفث وغ شذذخعرف"
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid "Password is incorrect"
+msgstr "حشسسصخقي هس هرذخققثذف"
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid "Unable to delete account"
+msgstr "عرشزمث فخ يثمثفث شذذخعرف"
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid "Please re-enter your password."
+msgstr "حمثشسث قث-ثرفثق غخعق حشسسصخقي."
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid ""
+"Sorry, there was an error trying to process your request. Please try again "
+"later."
+msgstr ""
+"سخققغ, فاثقث صشس شر ثققخق فقغهرل فخ حقخذثسس غخعق قثضعثسف. حمثشسث فقغ شلشهر "
+"مشفثق."
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid "A Password is required"
+msgstr "ش حشسسصخقي هس قثضعهقثي"
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid ""
+"You have selected “Delete my account.” Deletion of your account and personal"
+" data is permanent and cannot be undone. EdX will not be able to recover "
+"your account or the data that is deleted."
+msgstr ""
+"غخع اشدث سثمثذفثي “يثمثفث وغ شذذخعرف.” يثمثفهخر خب غخعق شذذخعرف شري حثقسخرشم"
+" يشفش هس حثقوشرثرف شري ذشررخف زث عريخرث. ثيط صهمم رخف زث شزمث فخ قثذخدثق "
+"غخعق شذذخعرف خق فاث يشفش فاشف هس يثمثفثي."
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid ""
+"If you proceed, you will be unable to use this account to take courses on "
+"the edX app, edx.org, or any other site hosted by edX. This includes access "
+"to edx.org from your employer’s or university’s system and access to private"
+" sites offered by MIT Open Learning, Wharton Executive Education, and "
+"Harvard Medical School."
+msgstr ""
+"هب غخع حقخذثثي, غخع صهمم زث عرشزمث فخ عسث فاهس شذذخعرف فخ فشنث ذخعقسثس خر "
+"فاث ثيط شحح, ثيط.خقل, خق شرغ خفاثق سهفث اخسفثي زغ ثيط. فاهس هرذمعيثس شذذثسس "
+"فخ ثيط.خقل بقخو غخعق ثوحمخغثق’س خق عرهدثقسهفغ’س سغسفثو شري شذذثسس فخ حقهدشفث"
+" سهفثس خببثقثي زغ وهف خحثر مثشقرهرل, صاشقفخر ثطثذعفهدث ثيعذشفهخر, شري "
+"اشقدشقي وثيهذشم سذاخخم."
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid ""
+"If you still wish to continue and delete your account, please enter your "
+"account password:"
+msgstr ""
+"هب غخع سفهمم صهسا فخ ذخرفهرعث شري يثمثفث غخعق شذذخعرف, حمثشسث ثرفثق غخعق "
+"شذذخعرف حشسسصخقي:"
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid "Yes, Delete"
+msgstr "غثس, يثمثفث"
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid "We're sorry to see you go! Your account will be deleted shortly."
+msgstr "صث'قث سخققغ فخ سثث غخع لخ! غخعق شذذخعرف صهمم زث يثمثفثي ساخقفمغ."
+
+#: common/static/bundles/StudentAccountDeletion.js
+#: common/static/bundles/StudentAccountDeletionInitializer.js
+#: lms/static/js/student_account/components/StudentAccountDeletionModal.jsx
+msgid ""
+"Account deletion, including removal from email lists, may take a few weeks "
+"to fully process through our system. If you want to opt-out of emails before"
+" then, please unsubscribe from the footer of any email."
+msgstr ""
+"شذذخعرف يثمثفهخر, هرذمعيهرل قثوخدشم بقخو ثوشهم مهسفس, وشغ فشنث ش بثص صثثنس "
+"فخ بعممغ حقخذثسس فاقخعلا خعق سغسفثو. هب غخع صشرف فخ خحف-خعف خب ثوشهمس زثبخقث"
+" فاثر, حمثشسث عرسعزسذقهزث بقخو فاث بخخفثق خب شرغ ثوشهم."
+
 #: common/static/bundles/UnenrollmentFactory.js
 #: lms/static/js/dashboard/legacy.js
 #: lms/static/js/learner_dashboard/views/unenroll_view.js
@@ -2385,34 +2662,20 @@ msgstr ""
 "عرشزمث فخ يثفثقوهرث صاثفاثق صث ساخعمي لهدث غخع ش قثبعري زثذشعسث خب سغسفثو "
 "ثققخق. حمثشسث فقغ شلشهر مشفثق."
 
-#: common/static/bundles/commons.js
-msgid "The "
-msgstr "فاث "
-
-#: common/static/bundles/commons.js
-msgid "Invalid "
-msgstr "هردشمهي "
-
-#: common/static/bundles/commons.js
-msgid "Property `"
-msgstr "حقخحثقفغ `"
-
-#: common/static/bundles/commons.js
-msgid ""
-"\n"
-"["
-msgstr ""
-"\n"
-"["
-
+#: common/static/bundles/js/pages/login.js
+#: common/static/bundles/js/pages/textbooks.js
 #: common/static/common/js/components/utils/view_utils.js
 msgid "Required field."
 msgstr "قثضعهقثي بهثمي."
 
+#: common/static/bundles/js/pages/login.js
+#: common/static/bundles/js/pages/textbooks.js
 #: common/static/common/js/components/utils/view_utils.js
 msgid "Please do not use any spaces in this field."
 msgstr "حمثشسث يخ رخف عسث شرغ سحشذثس هر فاهس بهثمي."
 
+#: common/static/bundles/js/pages/login.js
+#: common/static/bundles/js/pages/textbooks.js
 #: common/static/common/js/components/utils/view_utils.js
 msgid "Please do not use any spaces or special characters in this field."
 msgstr "حمثشسث يخ رخف عسث شرغ سحشذثس خق سحثذهشم ذاشقشذفثقس هر فاهس بهثمي."
@@ -2559,8 +2822,8 @@ msgid "Show Discussion"
 msgstr "ساخص يهسذعسسهخر"
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
-msgid "There are no posts in this topic yet."
-msgstr "فاثقث شقث رخ حخسفس هر فاهس فخحهذ غثف."
+msgid "W tej dyskusji nie ma jeszcze żadnych wpisów."
+msgstr "ص فثت يغسنعسته رهث وش تثسظذظث żشيرغذا صحهسóص."
 
 #: common/static/common/js/discussion/views/discussion_thread_list_view.js
 msgid "Loading more threads"
@@ -2699,6 +2962,14 @@ msgstr "صقخرل خببسثف!"
 #: common/static/common/js/vendor/common.min.js
 msgid "Wrong length!"
 msgstr "صقخرل مثرلفا!"
+
+#: common/static/common/js/vendor/common.min.js
+msgid "Promise-chain cycle"
+msgstr "حقخوهسث-ذاشهر ذغذمث"
+
+#: common/static/common/js/vendor/common.min.js
+msgid "Promise can't be resolved itself"
+msgstr "حقخوهسث ذشر'ف زث قثسخمدثي هفسثمب"
 
 #: common/static/js/capa/drag_and_drop/base_image.js
 msgid "Drop target image"
@@ -3016,7 +3287,6 @@ msgstr ""
 "خق يهقثذفهخر خب فاث فثشو (وشطهوعو 300 ذاشقشذفثقس)."
 
 #: lms/djangoapps/teams/static/teams/js/views/edit_team.js
-#: lms/static/js/student_account/views/account_settings_factory.js
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Language"
 msgstr "مشرلعشلث"
@@ -3261,7 +3531,6 @@ msgid "Search teams"
 msgstr "سثشقذا فثشوس"
 
 #: lms/djangoapps/teams/static/teams/js/views/teams_tab.js
-#: lms/djangoapps/discussion/static/discussion/templates/fake-breadcrumbs.underscore
 msgid "All Topics"
 msgstr "شمم فخحهذس"
 
@@ -4080,6 +4349,10 @@ msgstr "سفشقف قثلثرثقشفهرل ذثقفهبهذشفثس بخق سف
 msgid "Error while regenerating certificates. Please try again."
 msgstr "ثققخق صاهمث قثلثرثقشفهرل ذثقفهبهذشفثس. حمثشسث فقغ شلشهر."
 
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Prepare merged pdf contains all certificates in this course?"
+msgstr "حقثحشقث وثقلثي حيب ذخرفشهرس شمم ذثقفهبهذشفثس هر فاهس ذخعقسث?"
+
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Loading data..."
 msgstr "مخشيهرل يشفش..."
@@ -4766,6 +5039,7 @@ msgid "No tasks currently running."
 msgstr "رخ فشسنس ذعققثرفمغ قعررهرل."
 
 #: lms/static/js/instructor_dashboard/util.js
+#: cms/templates/js/previous-video-upload-list.underscore
 msgid "File Name"
 msgstr "بهمث رشوث"
 
@@ -4968,8 +5242,10 @@ msgid "Basic Account Information"
 msgstr "زشسهذ شذذخعرف هربخقوشفهخر"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-msgid "These settings include basic information about your account."
-msgstr "فاثسث سثففهرلس هرذمعيث زشسهذ هربخقوشفهخر شزخعف غخعق شذذخعرف."
+msgid ""
+"These settings include basic information about your account. {platform_name}"
+msgstr ""
+"فاثسث سثففهرلس هرذمعيث زشسهذ هربخقوشفهخر شزخعف غخعق شذذخعرف. {platform_name}"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid ""
@@ -4983,42 +5259,6 @@ msgstr ""
 #: lms/templates/student_account/account.underscore
 msgid "Password"
 msgstr "حشسسصخقي"
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "Check your email account for instructions to reset your password."
-msgstr "ذاثذن غخعق ثوشهم شذذخعرف بخق هرسفقعذفهخرس فخ قثسثف غخعق حشسسصخقي."
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid ""
-"The language used throughout this site. This site is currently available in "
-"a limited number of languages. Changing the value of this field will cause "
-"the page to refresh."
-msgstr ""
-"فاث مشرلعشلث عسثي فاقخعلاخعف فاهس سهفث. فاهس سهفث هس ذعققثرفمغ شدشهمشزمث هر "
-"ش مهوهفثي رعوزثق خب مشرلعشلثس. ذاشرلهرل فاث دشمعث خب فاهس بهثمي صهمم ذشعسث "
-"فاث حشلث فخ قثبقثسا."
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "Time Zone"
-msgstr "فهوث ظخرث"
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid ""
-"Select the time zone for displaying course dates. If you do not specify a "
-"time zone, course dates, including assignment deadlines, will be displayed "
-"in your browser's local time zone."
-msgstr ""
-"سثمثذف فاث فهوث ظخرث بخق يهسحمشغهرل ذخعقسث يشفثس. هب غخع يخ رخف سحثذهبغ ش "
-"فهوث ظخرث, ذخعقسث يشفثس, هرذمعيهرل شسسهلروثرف يثشيمهرثس, صهمم زث يهسحمشغثي "
-"هر غخعق زقخصسثق'س مخذشم فهوث ظخرث."
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "All Time Zones"
-msgstr "شمم فهوث ظخرثس"
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "Default (Local Time Zone)"
-msgstr "يثبشعمف (مخذشم فهوث ظخرث)"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
 msgid "Additional Information"
@@ -5037,32 +5277,6 @@ msgid "Year of Birth"
 msgstr "غثشق خب زهقفا"
 
 #: lms/static/js/student_account/views/account_settings_factory.js
-#: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
-msgid "Preferred Language"
-msgstr "حقثبثققثي مشرلعشلث"
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "Social Media Links"
-msgstr "سخذهشم وثيهش مهرنس"
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid ""
-"Optionally, link your personal accounts to the social media icons on your "
-"edX profile."
-msgstr ""
-"خحفهخرشممغ, مهرن غخعق حثقسخرشم شذذخعرفس فخ فاث سخذهشم وثيهش هذخرس خر غخعق "
-"ثيط حقخبهمث."
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid " Link"
-msgstr " مهرن"
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-msgid "Enter your "
-msgstr "ثرفثق غخعق "
-
-#: lms/static/js/student_account/views/account_settings_factory.js
-#: lms/static/js/student_account/views/account_settings_view.js
 msgid "Linked Accounts"
 msgstr "مهرنثي شذذخعرفس"
 
@@ -5173,10 +5387,6 @@ msgstr "سعذذثسسبعممغ عرمهرنثي."
 #: lms/static/js/student_account/views/account_settings_view.js
 msgid "Account Information"
 msgstr "شذذخعرف هربخقوشفهخر"
-
-#: lms/static/js/student_account/views/account_settings_view.js
-msgid "Order History"
-msgstr "خقيثق اهسفخقغ"
 
 #: lms/static/js/verify_student/views/image_input_view.js
 msgid "Image Upload Error"
@@ -5415,6 +5625,10 @@ msgstr "خدثقشمم سذخقث"
 msgid "Bookmark this page"
 msgstr "زخخنوشقن فاهس حشلث"
 
+#: openedx/features/course_bookmarks/static/course_bookmarks/js/views/bookmark_button.js
+msgid "Bookmarked"
+msgstr "زخخنوشقنثي"
+
 #: openedx/features/course_search/static/course_search/js/views/search_results_view.js
 msgid "{total_results} result"
 msgid_plural "{total_results} results"
@@ -5450,6 +5664,10 @@ msgid "Add Country"
 msgstr "شيي ذخعرفقغ"
 
 #: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
+msgid "Preferred Language"
+msgstr "حقثبثققثي مشرلعشلث"
+
+#: openedx/features/learner_profile/static/learner_profile/js/learner_profile_factory.js
 msgid "Add language"
 msgstr "شيي مشرلعشلث"
 
@@ -5483,11 +5701,13 @@ msgstr ""
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_fields.js
 msgid ""
-"You must be over 13 to share a full profile. If you are over 13, make sure "
-"that you have specified a birth year on the {account_settings_page_link}"
+"<br>You must be over 13 to share a full profile. If you are over 13, make "
+"sure that you have specified a birth year on the "
+"{account_settings_page_link}"
 msgstr ""
-"غخع وعسف زث خدثق 13 فخ ساشقث ش بعمم حقخبهمث. هب غخع شقث خدثق 13, وشنث سعقث "
-"فاشف غخع اشدث سحثذهبهثي ش زهقفا غثشق خر فاث {account_settings_page_link}"
+"<br>غخع وعسف زث خدثق 13 فخ ساشقث ش بعمم حقخبهمث. هب غخع شقث خدثق 13, وشنث "
+"سعقث فاشف غخع اشدث سحثذهبهثي ش زهقفا غثشق خر فاث "
+"{account_settings_page_link}"
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/learner_profile_fields.js
 msgid "Profile Image"
@@ -5509,30 +5729,9 @@ msgstr "شذذخوحمهساوثرفس"
 msgid "Profile"
 msgstr "حقخبهمث"
 
-#: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
-#: cms/static/js/views/video_transcripts.js
-msgid ""
-"This may be happening because of an error with our server or your internet "
-"connection. Try refreshing the page or making sure you are online."
-msgstr ""
-"فاهس وشغ زث اشححثرهرل زثذشعسث خب شر ثققخق صهفا خعق سثقدثق خق غخعق هرفثقرثف "
-"ذخررثذفهخر. فقغ قثبقثساهرل فاث حشلث خق وشنهرل سعقث غخع شقث خرمهرث."
-
-#: cms/static/cms/js/main.js
-msgid "Studio's having trouble saving your work"
-msgstr "سفعيهخ'س اشدهرل فقخعزمث سشدهرل غخعق صخقن"
-
 #: cms/static/cms/js/xblock/cms.runtime.v1.js
 msgid "OpenAssessment Save Error"
 msgstr "خحثرشسسثسسوثرف سشدث ثققخق"
-
-#: cms/static/js/base.js
-msgid "This link will open in a new browser window/tab"
-msgstr "فاهس مهرن صهمم خحثر هر ش رثص زقخصسثق صهريخص/فشز"
-
-#: cms/static/js/base.js
-msgid "This link will open in a modal window"
-msgstr "فاهس مهرن صهمم خحثر هر ش وخيشم صهريخص"
 
 #: cms/static/js/certificates/collections/certificates.js
 msgid "Could not parse certificate JSON. %(message)s"
@@ -5587,13 +5786,6 @@ msgstr "يثمثفث \"<%= signatoryName %>\" بقخو فاث مهسف خب سه
 #: cms/static/js/views/course_info_update.js
 msgid "This action cannot be undone."
 msgstr "فاهس شذفهخر ذشررخف زث عريخرث."
-
-#: cms/static/js/certificates/views/signatory_editor.js
-#: cms/static/js/views/course_info_update.js cms/static/js/views/list_item.js
-#: cms/static/js/views/show_textbook.js cms/static/js/views/tabs.js
-#: cms/static/js/views/utils/xblock_utils.js
-msgid "Deleting"
-msgstr "يثمثفهرل"
 
 #: cms/static/js/certificates/views/signatory_editor.js
 msgid "Upload signature image."
@@ -5664,57 +5856,6 @@ msgstr "اهيث يثحقثذشفثي سثففهرلس"
 msgid "Show Deprecated Settings"
 msgstr "ساخص يثحقثذشفثي سثففهرلس"
 
-#: cms/static/js/factories/textbooks.js
-#: cms/static/js/views/pages/group_configurations.js
-msgid "You have unsaved changes. Do you really want to leave this page?"
-msgstr "غخع اشدث عرسشدثي ذاشرلثس. يخ غخع قثشممغ صشرف فخ مثشدث فاهس حشلث?"
-
-#: cms/static/js/features/import/factories/import.js
-msgid "There was an error during the upload process."
-msgstr "فاثقث صشس شر ثققخق يعقهرل فاث عحمخشي حقخذثسس."
-
-#: cms/static/js/features/import/factories/import.js
-msgid "There was an error while unpacking the file."
-msgstr "فاثقث صشس شر ثققخق صاهمث عرحشذنهرل فاث بهمث."
-
-#: cms/static/js/features/import/factories/import.js
-msgid "There was an error while verifying the file you submitted."
-msgstr "فاثقث صشس شر ثققخق صاهمث دثقهبغهرل فاث بهمث غخع سعزوهففثي."
-
-#: cms/static/js/features/import/factories/import.js
-msgid "Choose new file"
-msgstr "ذاخخسث رثص بهمث"
-
-#: cms/static/js/features/import/factories/import.js
-msgid ""
-"File format not supported. Please upload a file with a {ext} extension."
-msgstr ""
-"بهمث بخقوشف رخف سعححخقفثي. حمثشسث عحمخشي ش بهمث صهفا ش {ext} ثطفثرسهخر."
-
-#: cms/static/js/features/import/factories/import.js
-msgid "There was an error while importing the new library to our database."
-msgstr "فاثقث صشس شر ثققخق صاهمث هوحخقفهرل فاث رثص مهزقشقغ فخ خعق يشفشزشسث."
-
-#: cms/static/js/features/import/factories/import.js
-msgid "There was an error while importing the new course to our database."
-msgstr "فاثقث صشس شر ثققخق صاهمث هوحخقفهرل فاث رثص ذخعقسث فخ خعق يشفشزشسث."
-
-#: cms/static/js/features/import/factories/import.js
-msgid "Your import has failed."
-msgstr "غخعق هوحخقف اشس بشهمثي."
-
-#: cms/static/js/features/import/views/import.js
-msgid "Your import is in progress; navigating away will abort it."
-msgstr "غخعق هوحخقف هس هر حقخلقثسس; رشدهلشفهرل شصشغ صهمم شزخقف هف."
-
-#: cms/static/js/features/import/views/import.js
-msgid "Error importing course"
-msgstr "ثققخق هوحخقفهرل ذخعقسث"
-
-#: cms/static/js/features/import/views/import.js
-msgid "There was an error with the upload"
-msgstr "فاثقث صشس شر ثققخق صهفا فاث عحمخشي"
-
 #: cms/static/js/maintenance/force_publish_course.js
 msgid "Internal Server Error."
 msgstr "هرفثقرشم سثقدثق ثققخق."
@@ -5735,18 +5876,6 @@ msgstr "عحمخشي ذخوحمثفثي"
 #: cms/static/js/models/active_video_upload.js
 msgid "Upload failed"
 msgstr "عحمخشي بشهمثي"
-
-#: cms/static/js/models/chapter.js
-msgid "Chapter name and asset_path are both required"
-msgstr "ذاشحفثق رشوث شري شسسثف_حشفا شقث زخفا قثضعهقثي"
-
-#: cms/static/js/models/chapter.js
-msgid "Chapter name is required"
-msgstr "ذاشحفثق رشوث هس قثضعهقثي"
-
-#: cms/static/js/models/chapter.js
-msgid "asset_path is required"
-msgstr "شسسثف_حشفا هس قثضعهقثي"
 
 #: cms/static/js/models/course_update.js
 msgid "Action required: Enter a valid date."
@@ -5845,33 +5974,6 @@ msgstr "لقشذث حثقهخي وعسف زث سحثذهبهثي هر اا:وو 
 msgid "Not able to set passing grade to less than %(minimum_grade_cutoff)s%."
 msgstr "رخف شزمث فخ سثف حشسسهرل لقشيث فخ مثسس فاشر %(minimum_grade_cutoff)s%."
 
-#: cms/static/js/models/textbook.js
-msgid "Textbook name is required"
-msgstr "فثطفزخخن رشوث هس قثضعهقثي"
-
-#: cms/static/js/models/textbook.js
-msgid "Please add at least one chapter"
-msgstr "حمثشسث شيي شف مثشسف خرث ذاشحفثق"
-
-#: cms/static/js/models/textbook.js
-msgid "All chapters must have a name and asset"
-msgstr "شمم ذاشحفثقس وعسف اشدث ش رشوث شري شسسثف"
-
-#: cms/static/js/models/uploads.js
-msgid ""
-"Only <%= fileTypes %> files can be uploaded. Please select a file ending in "
-"<%= fileExtensions %> to upload."
-msgstr ""
-"خرمغ <%= fileTypes %> بهمثس ذشر زث عحمخشيثي. حمثشسث سثمثذف ش بهمث ثريهرل هر "
-"<%= fileExtensions %> فخ عحمخشي."
-
-#: cms/static/js/models/uploads.js
-#: lms/templates/student_account/hinted_login.underscore
-#: lms/templates/student_account/institution_login.underscore
-#: lms/templates/student_account/institution_register.underscore
-msgid "or"
-msgstr "خق"
-
 #: cms/static/js/models/xblock_validation.js
 msgid "This unit has validation issues."
 msgstr "فاهس عرهف اشس دشمهيشفهخر هسسعثس."
@@ -5950,7 +6052,7 @@ msgstr ""
 msgid "Your file has been deleted."
 msgstr "غخعق بهمث اشس زثثر يثمثفثي."
 
-#: cms/static/js/views/assets.js cms/templates/js/asset-library.underscore
+#: cms/static/js/views/assets.js
 #: cms/templates/js/previous-video-upload-list.underscore
 msgid "Date Added"
 msgstr "يشفث شييثي"
@@ -6042,14 +6144,6 @@ msgstr "شعفخوشفهذ فقشرسذقهحفس شقث يهسشزمثي."
 #: cms/static/js/views/course_video_settings.js
 msgid "{selectedProvider} credentials saved"
 msgstr "{selectedProvider} ذقثيثرفهشمس سشدثي"
-
-#: cms/static/js/views/edit_chapter.js
-msgid "Upload a new PDF to “<%= name %>”"
-msgstr "عحمخشي ش رثص حيب فخ “<%= name %>”"
-
-#: cms/static/js/views/edit_chapter.js
-msgid "Please select a PDF file to upload."
-msgstr "حمثشسث سثمثذف ش حيب بهمث فخ عحمخشي."
 
 #: cms/static/js/views/export.js
 msgid "There has been an error while exporting."
@@ -6282,10 +6376,6 @@ msgstr ""
 #: cms/static/js/views/manage_users_and_roles.js
 msgid "Return to team listing"
 msgstr "قثفعقر فخ فثشو مهسفهرل"
-
-#: cms/static/js/views/manage_users_and_roles.js
-msgid "Are you sure?"
-msgstr "شقث غخع سعقث?"
 
 #: cms/static/js/views/manage_users_and_roles.js
 msgid "Are you sure you want to restrict {email} access to “{container}”?"
@@ -6614,18 +6704,6 @@ msgstr "عحمخشي غخعق زشررثق هوشلث."
 msgid "Upload your video thumbnail image."
 msgstr "عحمخشي غخعق دهيثخ فاعوزرشهم هوشلث."
 
-#: cms/static/js/views/show_textbook.js
-msgid "Delete “<%= name %>”?"
-msgstr "يثمثفث “<%= name %>”?"
-
-#: cms/static/js/views/show_textbook.js
-msgid ""
-"Deleting a textbook cannot be undone and once deleted any reference to it in"
-" your courseware's navigation will also be removed."
-msgstr ""
-"يثمثفهرل ش فثطفزخخن ذشررخف زث عريخرث شري خرذث يثمثفثي شرغ قثبثقثرذث فخ هف هر"
-" غخعق ذخعقسثصشقث'س رشدهلشفهخر صهمم شمسخ زث قثوخدثي."
-
 #: cms/static/js/views/tabs.js
 msgid "Delete Page Confirmation"
 msgstr "يثمثفث حشلث ذخربهقوشفهخر"
@@ -6635,16 +6713,6 @@ msgid ""
 "Are you sure you want to delete this page? This action cannot be undone."
 msgstr ""
 "شقث غخع سعقث غخع صشرف فخ يثمثفث فاهس حشلث? فاهس شذفهخر ذشررخف زث عريخرث."
-
-#: cms/static/js/views/uploads.js
-#: cms/templates/js/metadata-file-uploader-item.underscore
-#: cms/templates/js/video/metadata-translations-item.underscore
-msgid "Upload"
-msgstr "عحمخشي"
-
-#: cms/static/js/views/uploads.js
-msgid "We're sorry, there was an error"
-msgstr "صث'قث سخققغ, فاثقث صشس شر ثققخق"
 
 #: cms/static/js/views/utils/create_course_utils.js
 msgid ""
@@ -6693,6 +6761,11 @@ msgstr "عريخ وخدهرل"
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Moving"
 msgstr "وخدهرل"
+
+#: cms/static/js/views/utils/xblock_utils.js
+#: cms/templates/js/container-access.underscore
+msgid "component"
+msgstr "ذخوحخرثرف"
 
 #: cms/static/js/views/utils/xblock_utils.js
 msgid "Deleting this {xblock_type} is permanent and cannot be undone."
@@ -6969,6 +7042,10 @@ msgid "Settings"
 msgstr "سثففهرلس"
 
 #: cms/static/js/views/xblock_outline.js
+msgid "New. {component_type}"
+msgstr "رثص. {component_type}"
+
+#: cms/static/js/views/xblock_outline.js
 msgid "New {component_type}"
 msgstr "رثص {component_type}"
 
@@ -6994,6 +7071,11 @@ msgstr "شذفهخرس"
 #: lms/templates/ccx/schedule.underscore
 msgid "Unscheduled"
 msgstr "عرسذاثيعمثي"
+
+#: cms/templates/js/course_grade_cutoff.underscore
+#: lms/templates/ccx/schedule.underscore
+msgid "remove"
+msgstr "قثوخدث"
 
 #: cms/templates/js/course_info_update.underscore
 #: lms/templates/commerce/receipt.underscore
@@ -7100,6 +7182,19 @@ msgstr "عرقثحخقف"
 msgid "Vote for this post,"
 msgstr "دخفث بخق فاهس حخسف,"
 
+#: common/static/common/templates/discussion/inline-discussion.underscore
+msgid "Add a Post"
+msgstr "شيي ش حخسف"
+
+#: common/static/common/templates/discussion/inline-discussion.underscore
+#: lms/djangoapps/discussion/static/discussion/templates/user-profile.underscore
+msgid "All Posts"
+msgstr "شمم حخسفس"
+
+#: common/static/common/templates/discussion/inline-discussion.underscore
+msgid "Return to all posts"
+msgstr "قثفعقر فخ شمم حخسفس"
+
 #: common/static/common/templates/discussion/nav-load-more-link.underscore
 msgid "Load more"
 msgstr "مخشي وخقث"
@@ -7116,10 +7211,6 @@ msgstr "فاهس حخسف صهمم زث دهسهزمث خرمغ فخ %(group_nam
 #: common/static/common/templates/discussion/new-post-visibility.underscore
 msgid "This post will be visible to everyone."
 msgstr "فاهس حخسف صهمم زث دهسهزمث فخ ثدثقغخرث."
-
-#: common/static/common/templates/discussion/new-post.underscore
-msgid "Add a Post"
-msgstr "شيي ش حخسف"
 
 #: common/static/common/templates/discussion/new-post.underscore
 msgid "Visible to"
@@ -7331,6 +7422,7 @@ msgid "Question"
 msgstr "ضعثسفهخر"
 
 #: common/static/common/templates/discussion/thread-type.underscore
+#: lms/djangoapps/discussion/static/discussion/templates/fake-breadcrumbs.underscore
 msgid "Discussion"
 msgstr "يهسذعسسهخر"
 
@@ -7364,17 +7456,16 @@ msgid "Find discussions"
 msgstr "بهري يهسذعسسهخرس"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-msgid "Use the All Topics menu to find specific topics."
-msgstr "عسث فاث شمم فخحهذس وثرع فخ بهري سحثذهبهذ فخحهذس."
+msgid "Search for topics"
+msgstr "سثشقذا بخق فخحهذس"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-#: lms/djangoapps/discussion/static/discussion/templates/search.underscore
-msgid "Search all posts"
-msgstr "سثشقذا شمم حخسفس"
+msgid "Filter all posts"
+msgstr "بهمفثق شمم حخسفس"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
-msgid "Filter and sort topics"
-msgstr "بهمفثق شري سخقف فخحهذس"
+msgid "Sort posts"
+msgstr "سخقف حخسفس"
 
 #: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
 msgid "Engage with posts"
@@ -7408,9 +7499,9 @@ msgstr ""
 "ذاثذن فاهس زخط فخ قثذثهدث شر ثوشهم يهلثسف خرذث ش يشغ رخفهبغهرل غخع شزخعف "
 "رثص, عرقثشي شذفهدهفغ بقخو حخسفس غخع شقث بخممخصهرل."
 
-#: lms/djangoapps/discussion/static/discussion/templates/user-profile.underscore
-msgid "All Posts"
-msgstr "شمم حخسفس"
+#: lms/djangoapps/discussion/static/discussion/templates/search.underscore
+msgid "Search all posts"
+msgstr "سثشقذا شمم حخسفس"
 
 #: lms/djangoapps/support/static/support/templates/certificates.underscore
 msgid "username or email"
@@ -7694,10 +7785,6 @@ msgid "Remove chapter %(chapterDisplayName)s"
 msgstr "قثوخدث ذاشحفثق %(chapterDisplayName)s"
 
 #: lms/templates/ccx/schedule.underscore
-msgid "remove"
-msgstr "قثوخدث"
-
-#: lms/templates/ccx/schedule.underscore
 #, python-format
 msgid "toggle subsection %(displayName)s"
 msgstr "فخللمث سعزسثذفهخر %(displayName)s"
@@ -7839,21 +7926,14 @@ msgid "Hide Timer"
 msgstr "اهيث فهوثق"
 
 #: lms/templates/discovery/course_card.underscore
-msgid "LEARN MORE"
-msgstr "مثشقر وخقث"
-
-#: lms/templates/discovery/course_card.underscore
 #, python-format
 msgid "Starts: %(start_date)s"
 msgstr "سفشقفس: %(start_date)s"
 
-#: lms/templates/discovery/course_card.underscore
-msgid "Starts"
-msgstr "سفشقفس"
-
-#: lms/templates/discovery/filter_bar.underscore
-msgid "Clear All"
-msgstr "ذمثشق شمم"
+#: lms/templates/discovery/facet.underscore
+#: lms/templates/discovery/facet_select.underscore
+msgid "Wybierz"
+msgstr "صغزهثقظ"
 
 #: lms/templates/edxnotes/note-item.underscore
 msgid "Highlighted text"
@@ -7979,10 +8059,6 @@ msgstr ""
 "عسثقرشوث خق ثوشهم شييقثسس هر فاث بهقسف ذخووش سثحشقشفثي بهثمي. غخع ذشر "
 "هرذمعيث شر خحفهخرشم رخفث يثسذقهزهرل فاث قثشسخر بخق فاث ثطذثحفهخر هر فاث "
 "سثذخري ذخووش سثحشقشفثي بهثمي."
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
-msgid "Upload a CSV file"
-msgstr "عحمخشي ش ذسد بهمث"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
@@ -8512,10 +8588,6 @@ msgstr "ذاشرلث وغ ثوشهم شييقثسس"
 #: lms/templates/student_account/account.underscore
 msgid "Reset Password"
 msgstr "قثسثف حشسسصخقي"
-
-#: lms/templates/student_account/account_settings.underscore
-msgid "Account Settings"
-msgstr "شذذخعرف سثففهرلس"
 
 #: lms/templates/student_account/account_settings_section.underscore
 msgid "An error occurred. Please reload the page."
@@ -9396,6 +9468,10 @@ msgstr "%(type)s ذخوحخرثرف فثوحمشفث وثرع"
 msgid "Common Problem Types"
 msgstr "ذخووخر حقخزمثو فغحثس"
 
+#: cms/templates/js/add-xblock-component-menu-problem.underscore
+msgid "Advanced types of exercises"
+msgstr "شيدشرذثي فغحثس خب ثطثقذهسثس"
+
 #: cms/templates/js/add-xblock-component-support-legend.underscore
 msgid "Supported"
 msgstr "سعححخقفثي"
@@ -9440,6 +9516,10 @@ msgstr "ساخص شمم"
 #: cms/templates/js/asset-library.underscore
 msgid "Other"
 msgstr "خفاثق"
+
+#: cms/templates/js/asset-library.underscore
+msgid "Data"
+msgstr "يشفش"
 
 #: cms/templates/js/asset-library.underscore
 msgid "You haven't added any assets to this course yet."
@@ -9579,10 +9659,6 @@ msgid "Deactivate"
 msgstr "يثشذفهدشفث"
 
 #: cms/templates/js/container-access.underscore
-msgid "component"
-msgstr "ذخوحخرثرف"
-
-#: cms/templates/js/container-access.underscore
 msgid "Access to this {blockType} is restricted to: {selectedGroupsLabel}"
 msgstr "شذذثسس فخ فاهس {blockType} هس قثسفقهذفثي فخ: {selectedGroupsLabel}"
 
@@ -9711,7 +9787,6 @@ msgid "Please add the instructor's title"
 msgstr "حمثشسث شيي فاث هرسفقعذفخق'س فهفمث"
 
 #: cms/templates/js/course-instructor-details.underscore
-#: cms/templates/js/signatory-details.underscore
 msgid "Organization"
 msgstr "خقلشرهظشفهخر"
 

@@ -9,40 +9,37 @@ arguments.
 import hashlib
 from collections import Counter
 
-from celery.states import READY_STATES
-
 from bulk_email.models import CourseEmail
-from lms.djangoapps.certificates.models import CertificateGenerationHistory
-from lms.djangoapps.instructor_task.api_helper import (
-    check_arguments_for_rescoring,
-    check_arguments_for_overriding,
-    check_entrance_exam_problems_for_rescoring,
-    encode_entrance_exam_and_student_input,
-    encode_problem_and_student_input,
-    submit_task
-)
-from lms.djangoapps.instructor_task.models import InstructorTask
-from lms.djangoapps.instructor_task.tasks import (
-    override_problem_score,
-    calculate_grades_csv,
-    calculate_may_enroll_csv,
-    calculate_problem_grade_report,
-    calculate_problem_responses_csv,
-    calculate_students_features_csv,
-    cohort_students,
-    course_survey_report_csv,
-    delete_problem_state,
-    enrollment_report_features_csv,
-    exec_summary_report_csv,
-    export_ora2_data,
-    generate_certificates,
-    proctored_exam_results_csv,
-    rescore_problem,
-    reset_problem_attempts,
-    send_bulk_course_email
-)
+from celery.states import READY_STATES
 from util import milestones_helpers
 from xmodule.modulestore.django import modulestore
+
+from lms.djangoapps.certificates.models import CertificateGenerationHistory, \
+    CertificateGenerationMergeHistory
+from lms.djangoapps.instructor_task.api_helper import (
+    check_arguments_for_overriding, check_arguments_for_rescoring,
+    check_entrance_exam_problems_for_rescoring,
+    encode_entrance_exam_and_student_input, encode_problem_and_student_input,
+    submit_task)
+from lms.djangoapps.instructor_task.models import InstructorTask
+from lms.djangoapps.instructor_task.tasks import (calculate_grades_csv,
+                                                  calculate_may_enroll_csv,
+                                                  calculate_problem_grade_report,
+                                                  calculate_problem_responses_csv,
+                                                  calculate_students_features_csv,
+                                                  cohort_students,
+                                                  course_survey_report_csv,
+                                                  delete_problem_state,
+                                                  enrollment_report_features_csv,
+                                                  exec_summary_report_csv,
+                                                  export_ora2_data,
+                                                  generate_certificates,
+                                                  merge_all_certificates,
+                                                  override_problem_score,
+                                                  proctored_exam_results_csv,
+                                                  rescore_problem,
+                                                  reset_problem_attempts,
+                                                  send_bulk_course_email)
 
 
 class SpecificStudentIdMissingError(Exception):
@@ -65,7 +62,8 @@ def get_running_instructor_tasks(course_id):
     return instructor_tasks.order_by('-id')
 
 
-def get_instructor_task_history(course_id, usage_key=None, student=None, task_type=None):
+def get_instructor_task_history(course_id, usage_key=None, student=None,
+                                task_type=None):
     """
     Returns a query of InstructorTask objects of historical tasks for a given course,
     that optionally match a particular problem, a student, and/or a task type.
@@ -80,7 +78,8 @@ def get_instructor_task_history(course_id, usage_key=None, student=None, task_ty
     return instructor_tasks.order_by('-id')
 
 
-def get_entrance_exam_instructor_task_history(course_id, usage_key=None, student=None):  # pylint: disable=invalid-name
+def get_entrance_exam_instructor_task_history(course_id, usage_key=None,
+                                              student=None):  # pylint: disable=invalid-name
     """
     Returns a query of InstructorTask objects of historical tasks for a given course,
     that optionally match an entrance exam and student if present.
@@ -94,7 +93,8 @@ def get_entrance_exam_instructor_task_history(course_id, usage_key=None, student
 
 
 # Disabling invalid-name because this fn name is longer than 30 chars.
-def submit_rescore_problem_for_student(request, usage_key, student, only_if_higher=False):  # pylint: disable=invalid-name
+def submit_rescore_problem_for_student(request, usage_key, student,
+                                       only_if_higher=False):  # pylint: disable=invalid-name
     """
     Request a problem to be rescored as a background task.
 
@@ -113,7 +113,8 @@ def submit_rescore_problem_for_student(request, usage_key, student, only_if_high
     task_class = rescore_problem
     task_input, task_key = encode_problem_and_student_input(usage_key, student)
     task_input.update({'only_if_higher': only_if_higher})
-    return submit_task(request, task_type, task_class, usage_key.course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, usage_key.course_key,
+                       task_input, task_key)
 
 
 def submit_override_score(request, usage_key, student, score):
@@ -135,10 +136,12 @@ def submit_override_score(request, usage_key, student, score):
     task_class = override_problem_score
     task_input, task_key = encode_problem_and_student_input(usage_key, student)
     task_input['score'] = score
-    return submit_task(request, task_type, task_class, usage_key.course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, usage_key.course_key,
+                       task_input, task_key)
 
 
-def submit_rescore_problem_for_all_students(request, usage_key, only_if_higher=False):  # pylint: disable=invalid-name
+def submit_rescore_problem_for_all_students(request, usage_key,
+                                            only_if_higher=False):  # pylint: disable=invalid-name
     """
     Request a problem to be rescored as a background task.
 
@@ -159,10 +162,12 @@ def submit_rescore_problem_for_all_students(request, usage_key, only_if_higher=F
     task_class = rescore_problem
     task_input, task_key = encode_problem_and_student_input(usage_key)
     task_input.update({'only_if_higher': only_if_higher})
-    return submit_task(request, task_type, task_class, usage_key.course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, usage_key.course_key,
+                       task_input, task_key)
 
 
-def submit_rescore_entrance_exam_for_student(request, usage_key, student=None, only_if_higher=False):  # pylint: disable=invalid-name
+def submit_rescore_entrance_exam_for_student(request, usage_key, student=None,
+                                             only_if_higher=False):  # pylint: disable=invalid-name
     """
     Request entrance exam problems to be re-scored as a background task.
 
@@ -183,12 +188,15 @@ def submit_rescore_entrance_exam_for_student(request, usage_key, student=None, o
     # check to see if task is already running, and reserve it otherwise
     task_type = 'rescore_problem_if_higher' if only_if_higher else 'rescore_problem'
     task_class = rescore_problem
-    task_input, task_key = encode_entrance_exam_and_student_input(usage_key, student)
+    task_input, task_key = encode_entrance_exam_and_student_input(usage_key,
+                                                                  student)
     task_input.update({'only_if_higher': only_if_higher})
-    return submit_task(request, task_type, task_class, usage_key.course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, usage_key.course_key,
+                       task_input, task_key)
 
 
-def submit_reset_problem_attempts_for_all_students(request, usage_key):  # pylint: disable=invalid-name
+def submit_reset_problem_attempts_for_all_students(request,
+                                                   usage_key):  # pylint: disable=invalid-name
     """
     Request to have attempts reset for a problem as a background task.
 
@@ -207,10 +215,12 @@ def submit_reset_problem_attempts_for_all_students(request, usage_key):  # pylin
     task_type = 'reset_problem_attempts'
     task_class = reset_problem_attempts
     task_input, task_key = encode_problem_and_student_input(usage_key)
-    return submit_task(request, task_type, task_class, usage_key.course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, usage_key.course_key,
+                       task_input, task_key)
 
 
-def submit_reset_problem_attempts_in_entrance_exam(request, usage_key, student):  # pylint: disable=invalid-name
+def submit_reset_problem_attempts_in_entrance_exam(request, usage_key,
+                                                   student):  # pylint: disable=invalid-name
     """
     Request to have attempts reset for a entrance exam as a background task.
 
@@ -230,11 +240,14 @@ def submit_reset_problem_attempts_in_entrance_exam(request, usage_key, student):
 
     task_type = 'reset_problem_attempts'
     task_class = reset_problem_attempts
-    task_input, task_key = encode_entrance_exam_and_student_input(usage_key, student)
-    return submit_task(request, task_type, task_class, usage_key.course_key, task_input, task_key)
+    task_input, task_key = encode_entrance_exam_and_student_input(usage_key,
+                                                                  student)
+    return submit_task(request, task_type, task_class, usage_key.course_key,
+                       task_input, task_key)
 
 
-def submit_delete_problem_state_for_all_students(request, usage_key):  # pylint: disable=invalid-name
+def submit_delete_problem_state_for_all_students(request,
+                                                 usage_key):  # pylint: disable=invalid-name
     """
     Request to have state deleted for a problem as a background task.
 
@@ -253,10 +266,12 @@ def submit_delete_problem_state_for_all_students(request, usage_key):  # pylint:
     task_type = 'delete_problem_state'
     task_class = delete_problem_state
     task_input, task_key = encode_problem_and_student_input(usage_key)
-    return submit_task(request, task_type, task_class, usage_key.course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, usage_key.course_key,
+                       task_input, task_key)
 
 
-def submit_delete_entrance_exam_state_for_student(request, usage_key, student):  # pylint: disable=invalid-name
+def submit_delete_entrance_exam_state_for_student(request, usage_key,
+                                                  student):  # pylint: disable=invalid-name
     """
     Requests reset of state for entrance exam as a background task.
 
@@ -285,8 +300,10 @@ def submit_delete_entrance_exam_state_for_student(request, usage_key, student): 
 
     task_type = 'delete_problem_state'
     task_class = delete_problem_state
-    task_input, task_key = encode_entrance_exam_and_student_input(usage_key, student)
-    return submit_task(request, task_type, task_class, usage_key.course_key, task_input, task_key)
+    task_input, task_key = encode_entrance_exam_and_student_input(usage_key,
+                                                                  student)
+    return submit_task(request, task_type, task_class, usage_key.course_key,
+                       task_input, task_key)
 
 
 def submit_bulk_course_email(request, course_key, email_id):
@@ -305,7 +322,8 @@ def submit_bulk_course_email(request, course_key, email_id):
     # the InstructorTask status.
     email_obj = CourseEmail.objects.get(id=email_id)
     # task_input has a limit to the size it can store, so any target_type with count > 1 is combined and counted
-    targets = Counter([target.target_type for target in email_obj.targets.all()])
+    targets = Counter(
+        [target.target_type for target in email_obj.targets.all()])
     targets = [
         target if count <= 1 else
         "{} {}".format(count, target)
@@ -318,10 +336,12 @@ def submit_bulk_course_email(request, course_key, email_id):
     task_key_stub = str(email_id)
     # create the key value by using MD5 hash:
     task_key = hashlib.md5(task_key_stub).hexdigest()
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
-def submit_calculate_problem_responses_csv(request, course_key, problem_location):  # pylint: disable=invalid-name
+def submit_calculate_problem_responses_csv(request, course_key,
+                                           problem_location):  # pylint: disable=invalid-name
     """
     Submits a task to generate a CSV file containing all student
     answers to a given problem.
@@ -333,7 +353,8 @@ def submit_calculate_problem_responses_csv(request, course_key, problem_location
     task_input = {'problem_location': problem_location}
     task_key = ""
 
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
 def submit_calculate_grades_csv(request, course_key):
@@ -345,7 +366,8 @@ def submit_calculate_grades_csv(request, course_key):
     task_input = {}
     task_key = ""
 
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
 def submit_problem_grade_report(request, course_key):
@@ -357,7 +379,8 @@ def submit_problem_grade_report(request, course_key):
     task_class = calculate_problem_grade_report
     task_input = {}
     task_key = ""
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
 def submit_calculate_students_features_csv(request, course_key, features):
@@ -371,10 +394,12 @@ def submit_calculate_students_features_csv(request, course_key, features):
     task_input = features
     task_key = ""
 
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
-def submit_detailed_enrollment_features_csv(request, course_key):  # pylint: disable=invalid-name
+def submit_detailed_enrollment_features_csv(request,
+                                            course_key):  # pylint: disable=invalid-name
     """
     Submits a task to generate a CSV containing detailed enrollment info.
 
@@ -385,7 +410,8 @@ def submit_detailed_enrollment_features_csv(request, course_key):  # pylint: dis
     task_input = {}
     task_key = ""
 
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
 def submit_calculate_may_enroll_csv(request, course_key, features):
@@ -400,7 +426,8 @@ def submit_calculate_may_enroll_csv(request, course_key, features):
     task_input = {'features': features}
     task_key = ""
 
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
 def submit_executive_summary_report(request, course_key):
@@ -414,7 +441,8 @@ def submit_executive_summary_report(request, course_key):
     task_input = {}
     task_key = ""
 
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
 def submit_course_survey_report(request, course_key):
@@ -428,10 +456,12 @@ def submit_course_survey_report(request, course_key):
     task_input = {}
     task_key = ""
 
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
-def submit_proctored_exam_results_report(request, course_key):  # pylint: disable=invalid-name
+def submit_proctored_exam_results_report(request,
+                                         course_key):  # pylint: disable=invalid-name
     """
     Submits a task to generate a HTML File containing the executive summary report.
 
@@ -442,7 +472,8 @@ def submit_proctored_exam_results_report(request, course_key):  # pylint: disabl
     task_input = {}
     task_key = ""
 
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
 def submit_cohort_students(request, course_key, file_name):
@@ -456,7 +487,8 @@ def submit_cohort_students(request, course_key, file_name):
     task_input = {'file_name': file_name}
     task_key = ""
 
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
 def submit_export_ora2_data(request, course_key):
@@ -468,10 +500,12 @@ def submit_export_ora2_data(request, course_key):
     task_input = {}
     task_key = ''
 
-    return submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    return submit_task(request, task_type, task_class, course_key, task_input,
+                       task_key)
 
 
-def generate_certificates_for_students(request, course_key, student_set=None, specific_student_id=None):  # pylint: disable=invalid-name
+def generate_certificates_for_students(request, course_key, student_set=None,
+                                       specific_student_id=None):  # pylint: disable=invalid-name
     """
     Submits a task to generate certificates for given students enrolled in the course.
 
@@ -505,7 +539,8 @@ def generate_certificates_for_students(request, course_key, student_set=None, sp
 
     task_class = generate_certificates
     task_key = ""
-    instructor_task = submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    instructor_task = submit_task(request, task_type, task_class, course_key,
+                                  task_input, task_key)
 
     CertificateGenerationHistory.objects.create(
         course_id=course_key,
@@ -532,7 +567,8 @@ def regenerate_certificates(request, course_key, statuses_to_regenerate):
     task_class = generate_certificates
     task_key = ""
 
-    instructor_task = submit_task(request, task_type, task_class, course_key, task_input, task_key)
+    instructor_task = submit_task(request, task_type, task_class, course_key,
+                                  task_input, task_key)
 
     CertificateGenerationHistory.objects.create(
         course_id=course_key,
@@ -540,5 +576,25 @@ def regenerate_certificates(request, course_key, statuses_to_regenerate):
         instructor_task=instructor_task,
         is_regeneration=True
     )
+
+    return instructor_task
+
+
+def merge_certificates(request, course_key):
+    task_type = 'merge_all_certificates_all'
+    task_input = {}
+
+    task_class = merge_all_certificates
+    task_key = ""
+
+    instructor_task = submit_task(request, task_type, task_class, course_key,
+                                  task_input, task_key)
+
+    obj, created = CertificateGenerationMergeHistory.objects.get_or_create(
+        instructor_task=instructor_task,
+    )
+    obj.course_id = course_key
+    obj.generated_by = request.user
+    obj.save()
 
     return instructor_task
