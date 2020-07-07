@@ -2907,7 +2907,7 @@ def start_merge_certificates(request, course_id):
      entry in POST data.
      """
     course_key = CourseKey.from_string(course_id)
-    lms.djangoapps.instructor_task.api.merge_certificates(request,course_key)
+    lms.djangoapps.instructor_task.api.merge_certificates(request, course_key)
     response_payload = {
         'message': _('Merging certificates task has been started. '
                      'You can view the status of the generation task in the "Pending Tasks" section.'),
