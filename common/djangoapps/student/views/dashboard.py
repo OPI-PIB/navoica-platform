@@ -194,7 +194,7 @@ def _create_recent_enrollment_message(course_enrollments, course_modes):  # pyli
         return render_to_string(
             'enrollment/course_enrollment_message.html',
             {
-                'course_names': course_names,
+                'course_names': recently_enrolled_courses[0].course_overview.display_name,
                 'current_time': time,
                 'course_date_start': recently_enrolled_courses[0].course_overview.dashboard_start_display,
                 'enrollments_count': enrollments_count,
