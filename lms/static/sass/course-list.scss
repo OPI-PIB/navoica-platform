@@ -227,8 +227,8 @@ button {
   border-radius: 0;
 
   &:focus {
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+  //  outline: 1px dotted;
+  //  outline: 5px auto -webkit-focus-ring-color;
   }
 }
 
@@ -4574,11 +4574,15 @@ input {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1rem;
 }
 
 .card-title {
+  flex: 1 1 auto;
+  min-height: 3rem;
+}
+.about-us .card-title {
   margin-bottom: 1rem;
+  flex: auto;
 }
 
 .card-subtitle {
@@ -4713,12 +4717,9 @@ input {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
-.card-title {
-  margin-bottom: 1rem;
-}
 
 .card-subtitle {
   margin-top: -0.5rem;
@@ -9796,15 +9797,11 @@ section .display-2 {
   padding: 0.75rem 0.5rem;
 }
 
-.card-body {
-  padding: 0.5rem 0.5rem 1rem;
-}
-
 .card-title {
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.5rem;
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem 0;
 }
 
 .card-footer {
@@ -9905,11 +9902,13 @@ footer {
     }
   }
 
+
   .about-us .card-body > figure {
     flex: 0 0 8rem;
     margin: 0;
   }
 }
+
 
 @media (max-width: 1279.98px) {
   .navbar-nav .nav-item {
@@ -9950,7 +9949,7 @@ footer {
   }
 
   .card-title {
-    min-height: 3rem;
+  //  min-height: 3rem;
   }
 }
 
@@ -10273,7 +10272,7 @@ aside {
 }
 
 #discovery-form {
-  background: rgba(200, 200, 200, 0.25);
+//  background: rgba(200, 200, 200, 0.25);
 
   button, input {
     color: #212529;
@@ -10347,7 +10346,7 @@ main.container aside {
 
 @media (min-width: 960px) {
   #content {
-    margin: 0 0 4rem;
+    margin: 0!important;
     padding: 3rem 0;
   }
 
@@ -10526,10 +10525,19 @@ main.container aside {
 }
 
 .card {
+  .course-text {
+    min-height: 6rem;
+    width: 100%;
+  }
+  .card-footer {
+    .course-meta {
+      height: unset;
+    }
+  }
   .course-meta {
-    margin: 0 0 1rem;
-    min-height: 4.875em;
-
+    margin-bottom: 0.5rem;
+    height: 5.5rem;
+    width: 100%;
     p {
       margin: 0;
 
@@ -10546,8 +10554,8 @@ main.container aside {
 
 .card-text {
     border-top: none;
-    padding: .5rem 0;
-  }
+    min-height: 3.50rem;
+}
 
 .course-details .course-details-icon {
   align-items: center;
@@ -10866,6 +10874,7 @@ article .display-3 {
         font-weight: 600;
         margin: 0;
         padding: 0 0 1rem;
+        display: block;
       }
 
       .question-description {
@@ -10920,18 +10929,17 @@ article .display-3 {
 
       .action {
         margin-top: 0;
-        align-items: center;
         background-color: #f8f9fa;
         border: 1px solid #e9ecef;
-        border-top: 0;
-        display: flex;
         margin-bottom: 1rem;
         padding: 1rem 1rem 0 1rem;
+        overflow: auto;
+
+        button {
+          margin-bottom: 1rem;
+        }
 
         .submit-attempt-container {
-          align-items: center;
-          display: flex;
-          flex-grow: 1;
 
           .submission-feedback {
             font-size: .875rem;
@@ -11159,7 +11167,7 @@ p.lead.text-center.my-3 {
     object-fit: cover;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
    .card-img-top {
      height: auto;
    }
@@ -11222,14 +11230,14 @@ button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-butto
 #courses-list-header {
   margin: 0 0 1rem !important;
   border-bottom: 1px solid #dee2e6 !important;
-  padding-bottom: 1rem;
+  padding-bottom: 0;
 }
 
 li.list-group-item {
   border: none !important;
 }
 
-#organizator, #discovery-message, #h2 {
+#organizator, #discovery-message, #h2, #sorting-form {
   color: darkcyan;
   display: block;
   font-size: 1rem;
@@ -11242,8 +11250,36 @@ li.list-group-item {
   margin: 1rem 0 0;
 }
 
+#sorting-form {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  .custom-select {
+    align-items: center;
+    display: flex;
+    white-space: nowrap;
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 960px) {
+  #sorting-form {
+    display: block;
+    .custom-select {
+      margin: 0.5rem 0 0 0;
+
+    }
+  }
+}
+
+#results, #filters, #filter, .sidebar, #courses-list-header{
+  #h2 {
+    line-height: 2.5;
+  }
+}
+
 @media (min-width: 960px) {
-  #h2, #discovery-message, {
+  #h2, #discovery-message, #sorting-form {
     font-size: 0.875rem;
     text-align: left;
     margin: 0;
@@ -11261,7 +11297,15 @@ main.container {
     main.container {
       flex-direction: column;
    }
- }  
+ }
+}
+
+@media (min-width: 960px) {
+  #content1 {
+   #discovery-message{
+    margin-bottom: -1rem;
+   }
+  } 
 }
 
 @media (min-width: 960px) {
@@ -11557,6 +11601,7 @@ main.container > aside {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   font-size: 0.875rem !important;
+  align-items: center;
 }
 
 #content1 {
@@ -11610,7 +11655,7 @@ main.container > aside {
    }
 }
 
-.bg-light {
+#page-header, #content, #courses, #header-course, #password-reset-complete-container, #password-reset-confirm-container {
   background-image: none;
   background-position: center center;
   background-size: cover;
@@ -11744,6 +11789,10 @@ aside {
     overflow: hidden;
     position: relative;
     margin-bottom: 2rem;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
   }
 }
 
@@ -11894,7 +11943,7 @@ label {
     line-height: 1.625;
 }
 
-#exampleModalLabel {
+#exampleModalLabel, #email-settings-title {
     color: darkcyan;
     font-size: 0.875rem;
     font-weight: 700;
@@ -12000,7 +12049,7 @@ fieldset {
     flex-flow: row wrap;
     display: flex;
     img {
-      width: 100%;
+    //  width: 100%;
     }
   }
 }
@@ -12507,6 +12556,14 @@ fieldset {
   display: none !important;
 }
 
+
+
+@media (min-width: 960px) and (max-width: 1280px) {
+  .card-body > figure {
+     min-height: 5rem;
+  }  
+} 
+
 .card-body > figure {
     flex: 0 0 10rem;
     margin: 0 1rem 0 0;
@@ -12678,13 +12735,19 @@ main.container .d-flex {
 .page-header-search .input-text {width: 15rem;}
 }
 
-@media (min-width: 480px) and (max-width: 1280px) {
-  .card-title {
+@media (min-width: 480px) and (max-width: 1024px) {
+  .card-title, .card-text, .course-meta {
     margin-left: 5px;
     margin-right: 5px;
   }
+  .card-title {
+    flex: auto;
+  }
+  .view-dashboard .card-title {
+    flex: 0 0 21rem;
+  }
   main.container > aside {
-    flex: 0 0 345px;
+  //  flex: 0 0 345px;
   }
 }
 
@@ -12914,10 +12977,6 @@ img.message-author {
   margin-left: 5px;
 }
 
-.fa-angle-right::before {
-  content: "/";
- }
-
 .has-breadcrumbs {
   font-size: 14px;
   overflow: hidden;
@@ -13008,7 +13067,7 @@ img.message-author {
         .action-preview-actions {
           padding-top: 0rem !important;
           display: inline-block;
-        }  
+        }
       }
     }
   }
@@ -13022,7 +13081,7 @@ img.message-author {
     padding-top: 4rem;
   }
 
-  .discussion, 
+  .discussion,
   .view-instructordash,
   .view-progress,
   .view-courseware {
@@ -13035,7 +13094,7 @@ img.message-author {
 
   #header {
     margin: 0;
-  }  
+  }
   #action-tab-select {
     display: block;
     margin: 1rem 0 1rem 0;
@@ -13088,8 +13147,7 @@ justify-content: space-around;
 
 #course-content #seq_content .vert .xblock li {
   line-height:1.4;
-   font-size:16px;
-
+  font-size: 1rem;
 }
 
 #course-content .spacing {
@@ -13201,7 +13259,7 @@ span.complete-checkmark.fa.fa-check {
   .jumbotronn {
     padding-top: 2rem;
   }
-}  
+}
 
 #results #h2 {
 //  display: flex;
@@ -13232,7 +13290,7 @@ span.complete-checkmark.fa.fa-check {
     line-height: 1.6em;
     margin-top: 0 !important;
     margin-bottom: 1.416em !important;
-    font-size: 1em !important;
+  //  font-size: 1rem;
   }
 
 }
@@ -13265,7 +13323,7 @@ span.complete-checkmark.fa.fa-check {
 
 
 .tc-wrapper .subtitles ol li {list-style-type: none !important; font-size:13px !important;}
-.video-wrapper .video-controls .secondary-controls .video-speeds {list-style-type: none !important;margin-bottom:0 !important;} 
+.video-wrapper .video-controls .secondary-controls .video-speeds {list-style-type: none !important;margin-bottom:0 !important;}
 .video-wrapper #course-content #seq_content .vert .xblock ol {display:flex; flex-wrap:wrap; margin-bottom: 0px !important; padding:0 !important;}
 .video-wrapper #course-content .speed-option, #course-content .control {background-color: #D0353F; color: #fff;}
 .video-wrapper #course-content .vcr {margin-top: 5px; margin-bottom:10px;}
@@ -13412,15 +13470,93 @@ span.complete-checkmark.fa.fa-check {
     font-size: 87.5%;
     text-align: inherit;
     color: #495057;
-  }  
+  }
 }
 
 #content1 {
-  #filters {
-    .facet-group {
-      .custom-select:focus {
-        box-shadow: none !important;
-      }  
+  #filters, #results {
+    .custom-select:focus {
+      box-shadow: none ;
+      border: 1px solid #ced4da;
     }
+  }
+}
+
+.location-info, .location-example {
+    font-size: small;
+    font-style: italic;
+}
+
+#lean_overlay {
+    background-image: radial-gradient(circle at 50% 30%, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+#email_settings_form {
+  hr {
+     margin: 0;
+  }
+}
+
+#email-settings-modal {
+  #receive_emails {
+    vertical-align: sub;
+    margin-left: 1rem;
+  }
+}
+
+#email-settings-title {
+  width: 100%;
+}
+
+.authorization-confirmation {
+  font-size: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .login {
+    margin: 0;
+    max-width: unset;
+    padding: 0;
+    width: unset; 
+  }
+}
+
+// Footer Facebook Icon Link
+
+.fb-link-icon {
+  background: #E41D37;
+  border: 1px solid #E41D37;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #f3f5f7;
+  display: flex;
+  font-size: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  
+  i {
+    margin: auto;
+  }
+}
+
+.fb-link-icon-big {
+  background: #E41D37;
+  border: 1px solid #E41D37;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #f3f5f7;
+  display: flex;
+  font-size: 2rem;
+  height: 4rem;
+  width: 4rem;
+  
+  i {
+    margin: auto;
   }
 }

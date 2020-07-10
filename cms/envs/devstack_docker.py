@@ -19,6 +19,7 @@ FEATURES.update({
     'ENABLE_DISCUSSION_SERVICE': True,
     'ENABLE_CREATOR_GROUP': True,
     'SHOW_HEADER_LANGUAGE_SELECTOR': True,
+    "PREVIEW_LMS_BASE": "preview.localhost:18000",
 })
 
 CREDENTIALS_SERVICE_USERNAME = 'credentials_worker'
@@ -45,3 +46,7 @@ SETTINGS_EXPORT = [
 ]
 
 WIKI_ENABLED = False
+
+ENABLE_ES_INDEX_PREFIX = True
+ES_INDEX_PREFIX = "lh__"
+

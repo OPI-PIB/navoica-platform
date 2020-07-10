@@ -25,6 +25,8 @@ from xmodule.modulestore.modulestore_settings import convert_module_store_settin
 import sentry_sdk
 sentry_sdk.init(os.environ.get('SENTRY_URL_CMS', None))
 
+INTERNAL_HOST_IP = os.environ.get('INTERNAL_HOST_IP', None)
+
 # SERVICE_VARIANT specifies name of the variant used, which decides what JSON
 # configuration files are read during startup.
 SERVICE_VARIANT = os.environ.get('SERVICE_VARIANT', None)
@@ -508,6 +510,14 @@ if FEATURES['ENABLE_COURSEWARE_INDEX'] or FEATURES['ENABLE_LIBRARY_INDEX']:
     SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 
 ELASTIC_SEARCH_CONFIG = ENV_TOKENS.get('ELASTIC_SEARCH_CONFIG', [{}])
+
+# ES
+
+ENABLE_ES_INDEX_PREFIX = ENV_TOKENS.get('ENABLE_ES_INDEX_PREFIX', ENABLE_ES_INDEX_PREFIX)
+if ENABLE_ES_INDEX_PREFIX:
+    ES_INDEX_PREFIX = ENV_TOKENS.get('ES_INDEX_PREFIX', ES_INDEX_PREFIX)
+
+##
 
 XBLOCK_SETTINGS = ENV_TOKENS.get('XBLOCK_SETTINGS', {})
 XBLOCK_SETTINGS.setdefault("VideoDescriptor", {})["licensing_enabled"] = FEATURES.get("LICENSING", False)

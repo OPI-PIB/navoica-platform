@@ -37,7 +37,7 @@ from openedx.core.djangolib.markup import HTML
         <span class="sr">${_("Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.")}</span>
       </div>
     </div>
-    <div class="problem-action-buttons-wrapper">
+    <div class="problem-action-buttons-wrapper float-left float-md-right">
       % if demand_hint_possible:
       <span class="problem-action-button-wrapper">
           <button type="button" class="hint-button problem-action-btn btn btn-sm btn-outline-primary" data-value="${_('Hint')}" ${'' if should_enable_next_hint else 'disabled'}><i class="far fa-lightbulb" aria-hidden="true"></i>${_('Hint')}</button>

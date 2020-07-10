@@ -1,4 +1,6 @@
 // @import "variables";
+$static-path: '..';
+
 @import "discussion/utilities/variables-new_look";
 
 :root {
@@ -47,7 +49,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article, b, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
@@ -9349,14 +9351,43 @@ main.container aside h6 {
     outline-color: darkcyan;
   }
 
-  .active {
+  .fa-check {
+     border: 0px;
+      background: transparent;
+      position: absolute;
+      bottom:  -2px;
+      right: -8px;
+  }
+
+  .fa-bookmark {
+      border: 0px;
+      background: transparent;
+      position: absolute;
+      top: -4px;
+      right: -6px;
+  }
+
+  .tab.active {
     background: #f8f9fa;
     border: 1px solid darkcyan;
-    i {
+    .fas {
       border: 1px solid darkcyan;
     }
+    .fa-check.checkmarked, .fa-bookmark.bookmarked {
+      color: darkcyan;
+    }
   }
-}
+
+  .tab.inactive, .tab.visited {
+    background: #ffffff;
+    border: 1px solid #DEE2E6;
+    .fas {
+      border: 1px solid #DEE2E6;
+    }
+  }
+
+
+  }
 
   /*
    *  Course page styles
@@ -9544,13 +9575,25 @@ main.container aside h6 {
   display: none;
     }
 
-#seq_content table.survey-table .survey-row td p,
-#seq_content table.survey-table .survey-row th p,
-#seq_content .poll-answers .poll-answer .poll-answer p,
-#seq_content ul.poll-results li.poll-result .poll-answer-label p {
-    margin-bottom: 0 !important;
+
+ @media (max-width: 480px) {
+  #seq_content table.survey-table .survey-row td p,
+  #seq_content table.survey-table .survey-row th p,
+  #seq_content .poll-answers .poll-answer .poll-answer p,
+  #seq_content ul.poll-results li.poll-result .poll-answer-label p {
+    font-size: 1rem;
+  }
 }
 
+@media (min-width: 480px) {
+  #seq_content table.survey-table .survey-row td p,
+  #seq_content table.survey-table .survey-row th p,
+  #seq_content .poll-answers .poll-answer .poll-answer p,
+  #seq_content ul.poll-results li.poll-result .poll-answer-label p {
+      margin-bottom: 0 !important;
+      font-size: 0.8em;
+  }
+}
 
   #seq_content .btn-outline-light, .instructor-info-action {
     background: #f8f9fa;
@@ -9648,7 +9691,7 @@ main.container aside h6 {
 
   #seq_content .vert .xblock p {
     color: #343a40;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.7778;
     margin: 1em 0;
     a {
@@ -9658,13 +9701,13 @@ main.container aside h6 {
   }
 
   #seq_content .vert .xblock ul, #seq_content .vert .xblock ol {
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-bottom: 1em;
   }
 
   #seq_content .vert .xblock li {
     color: #343a40;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.7778;
     margin: 0;
     span {
@@ -9754,10 +9797,6 @@ main.container aside h6 {
     color: initial !important;
   }
 
-  .submit-attempt-container {
-    padding-bottom: 1rem !important;
-  }
-
   #content .vert .notification {
     margin-top: unset;
     line-height: unset;
@@ -9804,7 +9843,7 @@ main.container aside h6 {
   }
 
   .discussion {
-    word-break: break-all;
+    word-break: normal;
     label {
       white-space: normal !important;
     }
@@ -10473,7 +10512,7 @@ main.container aside h6 {
                 font-weight: 400;
                 margin-top: 4px;
                 text-overflow: ellipsis;
-                word-break: break-all;
+                word-break: normal;
               }
 
             }
@@ -10919,6 +10958,7 @@ main.container aside h6 {
 
   .xmodule_HtmlModule img {
     max-width: 100%;
+    height: auto;
   }
 
   .slick-column-name {
@@ -10941,7 +10981,7 @@ main.container aside h6 {
 
 
   .problem .action {
-    display: block !important;
+  //  display: block !important;
     .notification-btn-wrapper .notification-btn {
       white-space: nowrap;
       padding-left: 1rem;
@@ -11483,7 +11523,273 @@ code {color: black;}
     .grades {
       display: grid;
     }
-  }   
-}  
+  }
+}
+
+.openassessment {
+  .step__header, .staff__grade__header, .action, .staff-assessment__display__header {
+    display: unset !important;
+  }
+  .step__header {
+    cursor: default;
+    .step__title button {
+        opacity: 1;
+    }
+  }
+  .step__header:focus {
+    outline-color: white;
+  }
+  .staff__grade__control:focus,
+  .staff__grade__header:focus,
+  .staff__grade__content:focus {
+      outline-color: #dee2e6;
+  }
+
+  .wrapper--input, .field--textarea {
+    textarea:focus {
+      outline-color: #dee2e6;
+    }
+    input:focus {
+      outline-color: #dee2e6;
+    }
+  }
+  .staff__grade__header {
+    border: unset !important;
+    padding: 0 !important;
+  }
+  .openassessment__steps .openassessment__steps__step {
+    margin-bottom: 20px !important;
+  }
+  .submission__save {
+    display: inline-block !important;
+  }
+  .step__deadline {
+    vertical-align: middle;
+  }
+  .openassessment_student_info_form .label {
+    white-space: unset !important;
+    display: unset !important;
+    input {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .student__answer__display__content, .staff-info__final__grade__score {
+    p {
+      color: unset !important;
+    }
+  }
+  .staff-info__cancel-submission__content {
+    label {
+      display: unset !important;
+      white-space: unset !important;
+    }
+  }
+  .question__title {
+    display: block;
+  }
+  h4, h3 {
+    font-size: unset !important;
+    font-weight: unset !important;
+    line-height: unset !important;
+    margin: unset !important;
+  }
+
+  .message--error {
+    margin: 8px 0 !important;
+    color: #770f1d !important;
+    padding: 16px 16px 0 16px !important;
+    background-color: #fad2d7 !important;
+    border-top: 2px solid #770f1d !important;
+    div {
+      display: flex;
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+    .message__content {
+      p {
+        font-weight: unset !important;
+      }
+    }
+    p {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      line-height: 21px !important;
+      color: #770f1d !important;
+    }
+  }
+  .tip {
+    padding-left: 15px;
+  }
+  button:focus {
+    outline: unset !important;
+  }
+  .step__label {
+    color: #343a40;
+  }
+  .step--staff-assessment {
+    button {
+      padding: 0 !important;
+    }
+  }
+}
+
+#seq_content .vert .xblock .wrapper-problem-response select {
+  max-width: 14.57rem;
+}
+
+// CAPA PROBLEM
+
+$checkmark-icon: '\f00c'; // .fa-check
+$cross-icon: '\f00d'; // .fa-close
+$asterisk-icon: '\f069'; // .fa-asterisk
+
+// +Mixins - Status Icon - Capa
+// ====================
+@mixin status-icon($color: $gray, $fontAwesomeIcon: "\f00d") {
+  .status-icon {
+    &::after {
+      @extend %use-font-awesome;
+
+      color: $color;
+      font-size: 1.2em;
+      content: $fontAwesomeIcon;
+    }
+  }
+}
+
+// +Extends - Capa
+// ====================
+// Duplicated from _mixins.scss due to xmodule compilation, inheritance issues
+%use-font-awesome {
+  font-family: FontAwesome;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  speak: none;
+}
+
+// +Problem - Text Input, Numerical Input
+// ====================
+.problem {
+  .capa_inputtype.textline, .inputtype.formulaequationinput {
+    input {
+      border: 2px solid gray;
+      border-radius: 3px;
+      min-width: 160px;
+      height: 46px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: (baseline/2);
+      background: none;
+    }
+
+    // CASE: incorrect answer
+    > .incorrect {
+      input {
+        border: 2px solid red;
+      }
+
+      .status {
+        @include status-icon(red, $cross-icon);
+      }
+    }
+
+    // CASE: partially correct answer
+    > .partially-correct {
+      input {
+        border: 2px solid orange;
+      }
+
+      .status {
+        @include status-icon(orange, $asterisk-icon);
+      }
+    }
+
+    // CASE: correct answer
+    > .correct {
+      input {
+        border: 2px solid green;
+        display: inline-block !important;
+      }
+
+      .status {
+        @include status-icon(green, $checkmark-icon);
+      }
+    }
+
+    // CASE: submitted, correctness withheld
+    > .submitted {
+      input {
+        border: 2px solid green;
+      }
+
+      .status {
+        content: '';
+      }
+    }
+
+    // CASE: unanswered and unsubmitted
+    > .unanswered, > .unsubmitted {
+      input {
+        border: 2px solid gray;
+      }
+
+      .status {
+        .status-icon {
+          &::after {
+            content: '';
+          }
+        }
+      }
+    }
+
+  }
+
+  .trailing_text {
+        display: inline-block;
+  }
+}
 
 
+// +Problem - Option Input (Dropdown)
+// ====================
+.problem {
+  .inputtype.option-input {
+    margin: (-baseline/2) 0 baseline;
+
+    .indicator-container {
+      display: inline-block;
+    }
+  }
+}
+
+div.equation {
+  clear: both;
+  margin-top: 3px;
+
+  .MathJax_Display {
+    width: auto;
+  }
+
+  img.loading {
+     display: inline-block;
+  }
+
+  span {
+    margin-bottom: 0;
+    display: inline-block;
+
+    &.MathJax_CHTML, &.MathJax, &.MathJax_SVG {
+      padding: 6px;
+      min-width: 30px;
+      border: 1px solid var(--dark);
+      border-radius: 4px;
+      background: #f1f1f1;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+@import 'elements/_creative-commons';

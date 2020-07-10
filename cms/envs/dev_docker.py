@@ -19,6 +19,8 @@ FEATURES.update({
     'ENABLE_DISCUSSION_SERVICE': True,
     'ENABLE_CREATOR_GROUP': True,
     'SHOW_HEADER_LANGUAGE_SELECTOR': True,
+    "PREVIEW_LMS_BASE": "preview-dev.navoica.pl",
+    "THIRD_PARTY_AUTH_HINT": None,
 })
 
 CREDENTIALS_SERVICE_USERNAME = 'credentials_worker'

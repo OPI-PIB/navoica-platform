@@ -90,7 +90,7 @@ def get_course_enrollment(username, course_id):
         )
         return CourseEnrollmentSerializer(enrollment).data
     except CourseEnrollment.DoesNotExist:
-        return None
+        return {'is_active': False}
 
 
 def create_course_enrollment(username, course_id, mode, is_active):

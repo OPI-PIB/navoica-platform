@@ -35,6 +35,8 @@ from django.utils.translation import ugettext_lazy as _
 import sentry_sdk
 sentry_sdk.init(os.environ.get('SENTRY_URL_LMS', None))
 
+INTERNAL_HOST_IP = os.environ.get('INTERNAL_HOST_IP', None)
+
 # SERVICE_VARIANT specifies name of the variant used, which decides what JSON
 # configuration files are read during startup.
 SERVICE_VARIANT = os.environ.get('SERVICE_VARIANT', None)
@@ -799,6 +801,14 @@ if FEATURES.get('ENABLE_COURSEWARE_SEARCH') or \
     SEARCH_ENGINE = "search.elastic.ElasticSearchEngine"
 
 ELASTIC_SEARCH_CONFIG = ENV_TOKENS.get('ELASTIC_SEARCH_CONFIG', [{}])
+
+# ES
+
+ENABLE_ES_INDEX_PREFIX = ENV_TOKENS.get('ENABLE_ES_INDEX_PREFIX', ENABLE_ES_INDEX_PREFIX)
+if ENABLE_ES_INDEX_PREFIX:
+    ES_INDEX_PREFIX = ENV_TOKENS.get('ES_INDEX_PREFIX', ES_INDEX_PREFIX)
+    ## edx-search setting variable
+    COURSEWARE_INDEX_NAME = ES_INDEX_PREFIX + "courseware_index"
 
 # Facebook app
 FACEBOOK_API_VERSION = AUTH_TOKENS.get("FACEBOOK_API_VERSION")

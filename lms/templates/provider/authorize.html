@@ -14,14 +14,12 @@ from openedx.core.djangolib.markup import HTML, Text
 <%block name="bodyclass">oauth2</%block>
 
 <%block name="body">
-<div class="authorization-confirmation">
+
+<header id="header-course" class="bg-light"></header>
+<div class="authorization-confirmation container">
   % if not error:
   <p>
-  ${Text(_("{start_strong}{application_name}{end_strong} would like to access your data with the following permissions:")).format(
-    start_strong=HTML("<strong>"),
-    application_name=client.name,
-    end_strong=HTML("</strong>")
-  )}
+  ${_("Application would like to access your data with the following permissions:")}
   </p>
   <ul>
     % for permission in scopes(oauth_data['scope']):
@@ -55,8 +53,8 @@ from openedx.core.djangolib.markup import HTML, Text
           % endfor
         </select>
       </div>
-      <input type="submit" class="btn login large danger" name="cancel" value="Cancel" />
-      <input type="submit" class="btn login large primary" name="authorize" value="Authorize" />
+      <input type="submit" class="btn btn-primary btn-sm login large danger" name="cancel" value="${_("Cancel")}" />
+      <input type="submit" class="btn btn-primary btn-sm login large primary" name="authorize" value="${_("Authorize")}" />
     </fieldset>
     <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}" />
   </form>

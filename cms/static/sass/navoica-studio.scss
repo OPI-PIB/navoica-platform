@@ -949,7 +949,7 @@ div#edit_textbook_error {
 }
 
 #main_container .controls-link-wrapper {
-  margin-top: -40px !important;
+  margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
@@ -1039,6 +1039,7 @@ div#edit_textbook_error {
     padding-top: 0.5rem !important;
     padding-left: 0 !important;
     padding-right: 0;
+    
     a {
   //  font-size: 16px !important;
   //  color: #B43F37 !important;
@@ -1233,7 +1234,16 @@ div#edit_textbook_error {
         background-color: #B43F37;
     }
   }
-
+  
+  .post-content {
+    ol {
+      margin-left: 2rem;
+      list-style: normal;
+    }
+    ul {
+      list-style: inside;
+    }
+  }
 }
 
 .xblock blockquote {
@@ -1249,4 +1259,128 @@ div#edit_textbook_error {
 .poll-block .survey-table {
     table-layout: fixed;
     width: 100%;
+}
+
+.btn-sm {
+  @extend %btn-small;
+}
+
+.openassessment {
+  .step__header, .staff__grade__header, .action, .staff-assessment__display__header {
+    display: unset !important;
+  }
+  .step__header {
+    cursor: pointer;
+  }
+  .step__header:focus {
+    outline-color: white;
+  }
+  .staff__grade__control:focus,
+  .staff__grade__header:focus,
+  .staff__grade__content:focus {
+      outline-color: #dee2e6;
+  }
+  .wrapper--input, .field--textarea {
+    textarea:focus {
+      outline-color: #dee2e6;
+    } 
+    input:focus {
+      outline-color: #dee2e6;
+    }
+  }    
+    
+  .staff__grade__header {
+    border: unset !important;
+    padding: 0 !important;
+  }
+  .openassessment__steps .openassessment__steps__step {
+    margin-bottom: 20px !important;
+  }
+  .submission__save {
+    display: inline-block !important;
+  }
+  .step__deadline {
+    vertical-align: middle;
+  }
+  .openassessment_student_info_form .label {
+    white-space: unset !important;
+    display: unset !important;
+    input {
+      margin-bottom: 0.5rem;
+      padding-top:0 !important;
+      padding-bottom:0 !important;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+  .student__answer__display__content, .staff-info__final__grade__score {
+    p {
+      color: unset !important;
+    }
+  }  
+  .staff-info__cancel-submission__content {
+    label {
+      display: unset !important;
+      white-space: unset !important;
+    }
+  }
+  .question__title {
+    display: block;
+  }
+  h4, h3 {
+    font-size: unset !important;
+    font-weight: unset !important;
+    line-height: unset !important;
+    margin: unset !important;
+  }
+
+  .message--error {
+    margin: 8px 0 8px !important;
+    color: #770f1d !important;
+    padding: 16px !important;
+    background-color: #fad2d7 !important;
+    border-top: 2px solid #770f1d !important;
+    .message__content {
+      p {
+        font-weight: unset !important;
+      }
+    }
+    p {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      line-height: 21px !important;
+      color: #770f1d !important;
+      margin-bottom: 1em;
+    }
+  }
+    button:focus {
+    outline: unset !important;
+  }
+  .step__label {
+    color: #343a40;
+  }
+  .step--staff-assessment {
+    button {
+      padding: 0 !important;
+    }
+  }
+}
+
+.studio-xblock-wrapper .xblock .wrapper-problem-response select {
+  max-width: 16.65rem;
+}
+
+.embedded_answers, .inline_dropdown {
+  .problem_progress {
+    display: inline-block;
+    color: #666;
+    font-size: .875em;
+  }
+  .action {
+    display: flex;
+    .submit-attempt-container {
+      flex-grow: 1;
+    }
+  }
 }

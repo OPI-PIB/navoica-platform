@@ -42,6 +42,7 @@ FEATURES.update({
     'ENABLE_DISCUSSION_SERVICE': True,
     'SHOW_HEADER_LANGUAGE_SELECTOR': True,
     'ENABLE_ENTERPRISE_INTEGRATION': False,
+    "PREVIEW_LMS_BASE": "preview.localhost:18000",
 })
 
 ENABLE_MKTG_SITE = os.environ.get('ENABLE_MARKETING_SITE', False)
@@ -90,3 +91,8 @@ GRADES_DOWNLOAD = {
     'BUCKET': 'edx-grades',
     'ROOT_PATH': '/edx/var/edxapp/media',
 }
+
+ENABLE_ES_INDEX_PREFIX = True
+ES_INDEX_PREFIX = "lh__"
+if ENABLE_ES_INDEX_PREFIX:
+    COURSEWARE_INDEX_NAME = ES_INDEX_PREFIX + "courseware_index"

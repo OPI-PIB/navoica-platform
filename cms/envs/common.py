@@ -136,7 +136,9 @@ from lms.envs.common import (
     RETIRED_EMAIL_FMT,
     RETIRED_USER_SALTS,
     RETIREMENT_SERVICE_WORKER_USERNAME,
-
+    # ES
+    ENABLE_ES_INDEX_PREFIX,
+    ES_INDEX_PREFIX,
     # Methods to derive settings
     _make_mako_template_dirs,
     _make_locale_paths,
@@ -160,7 +162,10 @@ from machina import MACHINA_MAIN_TEMPLATE_DIR
 ############################ FEATURE CONFIGURATION #############################
 
 EDX_ROOT = path(__file__).abspath().dirname().dirname().dirname()  # /edx-platform/
-PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
+try:
+    PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
+except subprocess.CalledProcessError as e:
+    PLATFORM_VERSION = "HEAD"
 
 # Dummy secret key for dev/test
 SECRET_KEY = 'dev key'
@@ -315,6 +320,8 @@ FEATURES = {
 
     'ALLOW_HIDING_DISCUSSION_TAB': True,
 }
+
+
 
 ENABLE_JASMINE = False
 
@@ -746,14 +753,14 @@ PIPELINE_CSS = {
     'style-vendor-tinymce-content': {
         'source_filenames': [
             'css/tinymce-studio-content-fonts.css',
-            'js/vendor/tinymce/js/tinymce/skins/studio-tmce4/content.min.css',
+            'js/vendor/tinymce/js/tinymce/skins/lightgray/content.min.css',
             'css/tinymce-studio-content.css'
         ],
         'output_filename': 'css/cms-style-vendor-tinymce-content.css',
     },
     'style-vendor-tinymce-skin': {
         'source_filenames': [
-            'js/vendor/tinymce/js/tinymce/skins/studio-tmce4/skin.min.css'
+            'js/vendor/tinymce/js/tinymce/skins/lightgray/skin.min.css'
         ],
         'output_filename': 'css/cms-style-vendor-tinymce-skin.css',
     },
@@ -1349,6 +1356,15 @@ ADVANCED_PROBLEM_TYPES = [
     #},
     {
         'component': 'drag-and-drop-v2',
+        'boilerplate_name': None
+    },
+    {
+        'component': 'inline-dropdown',
+        'boilerplate_name': None
+        #'boilerplate_name': _('Inline Dropdown')
+    },
+        {
+        'component': 'embedded_answers',
         'boilerplate_name': None
     }
 ]

@@ -243,7 +243,9 @@ def get_component_templates(courselike, library=False):
         'html': _("HTML"),
         'problem': _("Problem"),
         'video': _("Video from Youtube"),
-        'videojs': _("Video from cloud")
+        'videojs': _("Video from cloud"),
+        'inline_dropdown': _('Inline Dropdown'),
+        'embedded_answers': _('Embedded Answers'),
     }
 
     component_templates = []
@@ -324,7 +326,9 @@ def get_component_templates(courselike, library=False):
                 )
                 if advanced_component_support_level:
                     try:
+                        print(component)
                         component_display_name = xblock_type_display_name(component)
+                        print(component_display_name)
                     except PluginMissingError:
                         log.warning('Unable to load xblock type %s to read display_name', component, exc_info=True)
                     else:
@@ -355,6 +359,8 @@ def get_component_templates(courselike, library=False):
     # are the names of the modules in ADVANCED_COMPONENT_TYPES that should be
     # enabled for the course.
     course_advanced_keys = courselike.advanced_modules
+    #course_advanced_keys += ['inline-dropdown',]
+
     advanced_component_templates = {
         "type": "advanced",
         "templates": [],

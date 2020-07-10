@@ -9,7 +9,7 @@ from django.utils.translation import ugettext as _
   <button class="btn btn-link bookmark-button ${"bookmarked" if is_bookmarked else ""}"
     aria-pressed="${"true" if is_bookmarked else "false"}"
     data-bookmark-id="${bookmark_id}"
-    data-bookmarks-api-url="${reverse('bookmarks')}"><i class="far fa-bookmark"></i>
+    data-bookmarks-api-url="${reverse('bookmarks')}"><i class="${"fa" if is_bookmarked else "far"} fa-bookmark"></i>
      <span class="bookmark-text">${_("Bookmarked") if is_bookmarked else _("Bookmark this page")}</span>
     </button>
 </div>

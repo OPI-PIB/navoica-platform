@@ -11,7 +11,7 @@
         return Backbone.Model.extend({
 
             page: 0,
-            pageSize: 20,
+            pageSize: 100,
             searchTerm: '',
             terms: {},
             jqhxr: null,
@@ -123,7 +123,7 @@
                 if (this.cached) {
                     deferred.resolveWith(this, [this.cached]);
                 } else {
-                    this.cached = new CourseDiscovery();
+                    this.cached = new CourseDiscovery({meanings: this.meanings});
                     this.cached.fetch({
                         type: 'POST',
                         data: {

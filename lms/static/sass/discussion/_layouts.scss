@@ -7,7 +7,7 @@ div {
 div {
   .justify-content-between {
     align-items: stretch;
-    flex-flow: row wrap;
+    flex-flow: wrap-reverse;
     justify-content: space-between !important;  
     line-height: 1.7143;
   }
@@ -26,7 +26,7 @@ div {
   .jumbotron > .container {
     .d-flex {
       align-items: stretch;
-      flex-flow: row wrap;
+      flex-flow: wrap-reverse;
 
       > aside, > section, > article {
 
@@ -83,7 +83,7 @@ div {
   main.container {
     .d-flex {
       align-items: stretch;
-      flex-flow: row wrap;
+      flex-flow: wrap-reverse;
 
       > aside, > section, > article {
 

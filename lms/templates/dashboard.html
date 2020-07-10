@@ -50,7 +50,7 @@ from student.models import CourseEnrollment
       });
 
       let MaxSignsNumber = 150;
-      $('.card-text').each(function(index, el) {
+      $('.course-text').each(function(index, el) {
           if ($(el).text().length > MaxSignsNumber) {
             $(el).text($(el).text().substring(0, MaxSignsNumber) + "...")}
               });

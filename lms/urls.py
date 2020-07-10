@@ -28,8 +28,11 @@ from lms.djangoapps.instructor_task import views as instructor_task_views
 from lms_migration import migrate as lms_migrate_views
 from notes import views as notes_views
 from notification_prefs import views as notification_prefs_views
+
+from lms.sitemaps import CourseOverviewSitemap
 from openedx.core.djangoapps.auth_exchange.views import LoginWithAccessTokenView
 from openedx.core.djangoapps.catalog.models import CatalogIntegration
+
 from openedx.core.djangoapps.cors_csrf import views as cors_csrf_views
 from openedx.core.djangoapps.course_groups import views as course_groups_views
 from openedx.core.djangoapps.debug import views as openedx_debug_views
@@ -50,6 +53,8 @@ from student_account import views as student_account_views
 from track import views as track_views
 from util import views as util_views
 from django.views.generic import TemplateView
+from django.contrib.sitemaps.views import sitemap
+from django.contrib.sitemaps import GenericSitemap
 
 if settings.DEBUG or settings.FEATURES.get('ENABLE_DJANGO_ADMIN_SITE'):
     django_autodiscover()
@@ -137,6 +142,8 @@ urlpatterns = [
 
     url(r'^dashboard/', include('learner_dashboard.urls')),
     url(r'^api/experiments/', include('experiments.urls', namespace='api_experiments')),
+    url(r'^sitemap\.xml$', sitemap,  {'sitemaps': {'courses': CourseOverviewSitemap() }},name='django.contrib.sitemaps.views.sitemap')
+
 ]
 #robots.txt
 robots_file = 'robots.txt'

@@ -63,7 +63,10 @@ PLATFORM_NAME = "Navoica.pl"
 PLATFORM_DESCRIPTION = _('Your Platform Description Here')
 CC_MERCHANT_NAME = PLATFORM_NAME
 
-PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
+try:
+    PLATFORM_VERSION = subprocess.check_output(["git -C %s describe --tags" % EDX_ROOT],shell=True)
+except subprocess.CalledProcessError as e:
+    PLATFORM_VERSION = "HEAD"
 
 PLATFORM_FACEBOOK_ACCOUNT = "http://www.facebook.com/YourPlatformFacebookAccount"
 PLATFORM_TWITTER_ACCOUNT = "@YourPlatformTwitterAccount"
@@ -173,7 +176,7 @@ FEATURES = {
     'ENABLE_DEBUG_RUN_PYTHON': False,
 
     # Enable URL that shows information about the status of variuous services
-    'ENABLE_SERVICE_STATUS': False,
+    'ENABLE_SERVICE_STATUS': True,
 
     # Don't autoplay videos for students
     'AUTOPLAY_VIDEOS': False,
@@ -413,6 +416,8 @@ FEATURES = {
     'ENABLE_PASSWORD_RESET_FAILURE_EMAIL': False,
 
     'UNSUPPORTED_BROWSER_ALERT_VERSIONS': "{e:0,f:-3,o:0,s:-3,c:-3,i:20}",
+    
+    'THIRD_PARTY_AUTH_HINT': None,
 }
 
 COURSE_DISCOVERY_FILTERS = ['course_category', 'availability', 'organizer', 'difficulty']
@@ -958,6 +963,7 @@ STATICFILES_DIRS = [
     COMMON_ROOT / "static",
     PROJECT_ROOT / "static",
     NODE_MODULES_ROOT / "@edx",
+    NODE_MODULES_ROOT / "@opipib",
 ]
 
 FAVICON_PATH = 'images/favicon.ico'
@@ -1475,6 +1481,12 @@ PIPELINE_CSS = {
             'css/instructor/course-leader.css',
         ],
         'output_filename': 'css/instructor_dash.css'
+    },
+    'style-bookmarks' : {
+        'source_filenames' : [
+            'css/bookmarks/bookmarks.css',
+        ],
+        'output_filename' : 'css/bookmarks.css'
     },
     'style-vendor-tinymce-content': {
         'source_filenames': [
@@ -2002,6 +2014,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'djcelery',
 
     # Common Initialization
@@ -2327,7 +2340,7 @@ MKTG_URL_LINK_MAP = {
     'PRESS': 'press',
     'BLOG': 'blog',
     'DONATE': 'donate',
-    'SITEMAP.XML': 'sitemap_xml',
+    #'SITEMAP.XML': 'sitemap_xml',
     'PARTNERS': 'partners',
     'COOPERATION': 'cooperation',
     'HONOR': 'honor',
@@ -2685,7 +2698,7 @@ ALL_COURSE_ORGANIZER = sorted([
     [u"19", u"Uniwersytet im. Adama Mickiewicza w Poznaniu"],
     [u"20", u"Uniwersytet Jagielloński"],
     [u"21", u"Uniwersytet Kardynała Stefana Wyszyńskiego w Warszawie"],
-    [u"22", u"Uniwersytet Mikołaja Kopernika"],
+    [u"22", u"Uniwersytet Mikołaja Kopernika w Toruniu"],
     [u"23", u"Uniwersytet Pedagogiczny im. KEN w Krakowie"],
     [u"24", u"Uniwersytet Szczeciński"],
     [u"25", u"Uniwersytet Śląski w Katowicach"],
@@ -2886,6 +2899,13 @@ SEARCH_FILTER_GENERATOR = "lms.lib.courseware_search.lms_filter_generator.LmsSea
 # Override to skip enrollment start date filtering in course search
 SEARCH_SKIP_ENROLLMENT_START_DATE_FILTERING = False
 
+############################# ES INDEX PREFIX SETTINGS #########################
+
+ENABLE_ES_INDEX_PREFIX = False
+ES_INDEX_PREFIX = ""
+
+################################################################################
+
 ### PERFORMANCE EXPERIMENT SETTINGS ###
 # CDN experiment/monitoring flags
 CDN_VIDEO_URLS = {}
@@ -2901,6 +2921,7 @@ ACCOUNT_VISIBILITY_CONFIGURATION = {
 
     # The list of all fields that can be shared with other users
     "shareable_fields": [
+        'id',
         'username',
         'profile_image',
         'country',
@@ -2916,6 +2937,7 @@ ACCOUNT_VISIBILITY_CONFIGURATION = {
 
     # The list of account fields that are always public
     "public_fields": [
+        'id',
         'username',
         'profile_image',
         'account_privacy',
@@ -2923,6 +2945,7 @@ ACCOUNT_VISIBILITY_CONFIGURATION = {
 
     # The list of account fields that are visible only to staff and users viewing their own profiles
     "admin_fields": [
+        'id',
         "username",
         "email",
         "is_active",

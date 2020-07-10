@@ -43,6 +43,9 @@ pull_translations: ## pull translations from Transifex
 requirements: ## install production environment requirements
 	CFLAGS=-DXMLSEC_NO_SIZE_T pip install --no-cache-dir --exists-action w -r requirements/edx/base.txt
 
+requirements_dev: ## install production environment requirements
+	pip install --exists-action w -r requirements/edx/development.txt
+
 upgrade: ## update the pip requirements files to use the latest releases satisfying our constraints
 	pip install -qr requirements/edx/pip-tools.txt
 	# Make sure to compile files after any other files they include!

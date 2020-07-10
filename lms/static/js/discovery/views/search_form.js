@@ -22,6 +22,7 @@
             },
 
             doSearch: function(term) {
+                this.$message.removeClass('not-found');
                 if (term !== undefined) {
                     this.$searchField.val(term);
                 } else {
@@ -49,6 +50,7 @@
                 count
             );
                 this.$message.html(interpolate(msg, [count]));
+                this.$message.removeClass('text-danger');
             },
 
             showNotFoundMessage: function(term) {
@@ -56,12 +58,12 @@
                 gettext('We couldn\'t find any results for "%s".'),
                 [_.escape(term)]
             );
-                this.$message.html(msg);
+                this.$message.html(msg).addClass('text-danger');
                 this.clearSearch();
             },
 
             showErrorMessage: function() {
-                this.$message.html(gettext('There was an error, try searching again.'));
+                this.$message.html(gettext('There was an error, try searching again.')).addClass('text-danger');
             }
 
         });

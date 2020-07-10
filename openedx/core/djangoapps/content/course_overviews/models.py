@@ -172,7 +172,6 @@ class CourseOverview(TimeStampedModel):
         course_overview.end = end
         course_overview.advertised_start = course.advertised_start
         course_overview.announcement = course.announcement
-
         course_overview.course_image_url = course_image_url(course)
         course_overview.social_sharing_url = course.social_sharing_url
 
@@ -207,10 +206,10 @@ class CourseOverview(TimeStampedModel):
         course_overview.organizer = course.organizer
         course_overview.course_category = course.course_category
         course_overview.timetable = course.timetable
-        
-        
+
+
         course_overview.is_new = course.is_newish
-        
+
         course_overview.availability = course.availability
         course_overview.main_page = course.main_page
 
@@ -630,6 +629,10 @@ class CourseOverview(TimeStampedModel):
             urls['large'] = self.image_set.large_url or raw_image_url
 
         return self.apply_cdn_to_urls(urls)
+
+    @property
+    def video_url(self):
+        return self.course_video_url
 
     @property
     def pacing(self):

@@ -24,7 +24,11 @@
                 return Sequence.prototype.selectNext.apply(self, [event]);
             };
             this.goto = function(event) {
+                $.scrollTo(0, 0);
                 return Sequence.prototype.goto.apply(self, [event]);
+            };
+            this.keyDownHandler = function(event) {
+                return Sequence.prototype.keyDownHandler.apply(self, [event]);
             };
             this.toggleArrows = function() {
                 return Sequence.prototype.toggleArrows.apply(self);
@@ -57,7 +61,8 @@
             this.ajaxUrl = this.el.data('ajax-url');
             this.nextUrl = this.el.data('next-url');
             this.prevUrl = this.el.data('prev-url');
-            this.keydownHandler($(element).find('#sequence-list .tab'));
+            this.previousButtonClass = '.sequence-nav-button.button-previous';
+            this.nextButtonClass = '.sequence-nav-button.button-next';
             this.base_page_title = ($('title').data('base-title') || '').trim();
             this.bind();
             this.render(parseInt(this.el.data('position'), 10));
@@ -69,62 +74,32 @@
 
         Sequence.prototype.bind = function() {
             this.$('#sequence-list .nav-item').click(this.goto);
-            this.$('#sequence-list .nav-item').keypress(this.keyDownHandler);
+            $('body').keydown(this.keyDownHandler);
             this.el.on('bookmark:add', this.addBookmarkIconToActiveNavItem);
             this.el.on('bookmark:remove', this.removeBookmarkIconFromActiveNavItem);
             this.$('#sequence-list .nav-item').on('focus mouseenter', this.displayTabTooltip);
             this.$('#sequence-list .nav-item').on('blur mouseleave', this.hideTabTooltip);
         };
 
-        Sequence.prototype.previousNav = function(focused, index) {
-            var $navItemList,
-                $sequenceList = $(focused).parent().parent();
-            if (index === 0) {
-                $navItemList = $sequenceList.find('li').last();
-            } else {
-                $navItemList = $sequenceList.find('li:eq(' + index + ')').prev();
-            }
-            $sequenceList.find('.tab').removeClass('visited').removeClass('focused');
-            $navItemList.find('.tab').addClass('focused').focus();
-        };
-
-        Sequence.prototype.nextNav = function(focused, index, total) {
-            var $navItemList,
-                $sequenceList = $(focused).parent().parent();
-            if (index === total) {
-                $navItemList = $sequenceList.find('li').first();
-            } else {
-                $navItemList = $sequenceList.find('li:eq(' + index + ')').next();
-            }
-            $sequenceList.find('.tab').removeClass('visited').removeClass('focused');
-            $navItemList.find('.tab').addClass('focused').focus();
-        };
-
-        Sequence.prototype.keydownHandler = function(element) {
-            var self = this;
-            element.keydown(function(event) {
-                var key = event.keyCode,
-                    $focused = $(event.currentTarget),
-                    $sequenceList = $focused.parent().parent(),
-                    index = $sequenceList.find('li')
-                        .index($focused.parent()),
-                    total = $sequenceList.find('li')
-                        .size() - 1;
+        Sequence.prototype.keyDownHandler = function(event) {
+            if (!($(event.target).is("input") || $(event.target).is("textarea"))){
+                var key = event.keyCode;
                 switch (key) {
-                case self.arrowKeys.LEFT:
-                    event.preventDefault();
-                    self.previousNav($focused, index);
-                    break;
-
-                case self.arrowKeys.RIGHT:
-                    event.preventDefault();
-                    self.nextNav($focused, index, total);
-                    break;
-
-                // no default
-                }
-            });
-        };
+                    case this.arrowKeys.LEFT:
+                        event.preventDefault();
+                        if (!$(this.previousButtonClass).hasClass('disabled')){
+                            this._change_sequential('previous', event);
+                        }
+                        break;
+                    case this.arrowKeys.RIGHT:
+                        event.preventDefault();
+                        if (!$(this.nextButtonClass).hasClass('disabled')){
+                            this._change_sequential('next', event);
+                        }
+                        break;
+                    }
+                };
+            };
 
         Sequence.prototype.displayTabTooltip = function(event) {
             $(event.currentTarget).find('.sequence-tooltip').removeClass('sr');
@@ -405,13 +380,14 @@
             var element = this.link_for(position);
             var completionUrl = this.ajaxUrl + '/get_completion';
             var usageKey = element[0].attributes['data-id'].value;
-            var completionIndicators = element.find('.check-circle');
+            var completionIndicators = element.find('.complete-checkmark');
             if (completionIndicators.length) {
                 $.postWithPrefix(completionUrl, {
                     usage_key: usageKey
                 }, function(data) {
                     if (data.complete === true) {
-                        completionIndicators.removeClass('is-hidden');
+                        completionIndicators.removeClass('d-none');
+                        completionIndicators.addClass('checkmarked');
                     }
                 });
             }
@@ -430,14 +406,14 @@
 
         Sequence.prototype.addBookmarkIconToActiveNavItem = function(event) {
             event.preventDefault();
-            this.el.find('.nav-item.active .bookmark-icon').removeClass('is-hidden').addClass('bookmarked');
-            this.el.find('.nav-item.active .bookmark-icon-sr').text(gettext('Bookmarked'));
+            this.el.find('.nav-item.active .bookmark-icon').removeClass('d-none').addClass('bookmarked');
+            // this.el.find('.nav-item.active .bookmark-icon-sr').text(gettext('Bookmarked'));
         };
 
         Sequence.prototype.removeBookmarkIconFromActiveNavItem = function(event) {
             event.preventDefault();
-            this.el.find('.nav-item.active .bookmark-icon').removeClass('bookmarked').addClass('is-hidden');
-            this.el.find('.nav-item.active .bookmark-icon-sr').text('');
+            this.el.find('.nav-item.active .bookmark-icon').removeClass('bookmarked').addClass('d-none');
+            // this.el.find('.nav-item.active .bookmark-icon-sr').text('');
         };
 
         return Sequence;

@@ -42,6 +42,8 @@ FEATURES.update({
     'ENABLE_DISCUSSION_SERVICE': True,
     'SHOW_HEADER_LANGUAGE_SELECTOR': True,
     'ENABLE_ENTERPRISE_INTEGRATION': False,
+    "PREVIEW_LMS_BASE": "preview-dev.navoica.pl",
+    "THIRD_PARTY_AUTH_HINT": None,
 })
 
 ENABLE_MKTG_SITE = os.environ.get('ENABLE_MARKETING_SITE', False)
