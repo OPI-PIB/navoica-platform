@@ -113,7 +113,7 @@ from student.models import CourseEnrollment
     %endif
 
     %if course_enrollments:
-        %if enrollment_message and courses_count > prev_courses_count and ((time - course_enrollments[0].created).seconds / 60) < 1:
+        %if enrollment_message and courses_count > prev_courses_count and ((time - course_enrollments[0].created).seconds / 60 - 120) >= 0 and ((time - course_enrollments[0].created).seconds / 60 - 120) < 1 :
             <div class="dashboard-banner alert alert-success" role="alert">
                 ${enrollment_message | n,  decode.utf8}
             </div>
