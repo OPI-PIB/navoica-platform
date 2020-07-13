@@ -10,7 +10,7 @@
                 % if enrollments_count >= 1 and course_date_start < current_time:
                     <p>${_("Congratulations! You are now a course {course_names} participant and have access to course materials. We wish you pleasant learning!").format(course_names=course_names)}</p>
                 % elif course_date_start > current_time:
-                    <p>${_("Congratulations! You are now a {course_names} participant and you will have access to course materials since its launch on {course_date_start}. We wish you pleasant learning!").format(course_names=course_names, course_date_start=course_date_start)}</p>
+                    <p>${_("Thank you for enrolling on the course {course_names}. This course will be accessible from {course_date_start}. Don't forget to save the date in your calendar!").format(course_names=course_names, course_date_start=course_date_start)}</p>
                 % endif
                 % if allow_donations:
                     <p>
