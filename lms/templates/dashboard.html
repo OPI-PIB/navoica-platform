@@ -1,3 +1,4 @@
+
 <%page expression_filter="h"/>
 <%inherit file="main.html" />
 <%def name="online_help_token()"><% return "learnerdashboard" %></%def>
@@ -103,7 +104,7 @@ from student.models import CourseEnrollment
 <div id="content1">
     <main class="container">
 
-<div class="dashboard-notifications" tabindex="-1">
+<div class="dashboard-notifications col-12" tabindex="-1">
 
     %if banner_account_activation_message:
         <div class="dashboard-banner">
@@ -111,10 +112,12 @@ from student.models import CourseEnrollment
         </div>
     %endif
 
-    %if enrollment_message:
-        <div class="dashboard-banner">
-            ${enrollment_message | n,  decode.utf8}
-        </div>
+    %if course_enrollments:
+        %if enrollment_message and courses_count > prev_courses_count and ((time - course_enrollments[0].created).seconds / 60 - 120) >= 0 and ((time - course_enrollments[0].created).seconds / 60 - 120) < 1 :
+            <div class="dashboard-banner alert alert-success" role="alert">
+                ${enrollment_message | n,  decode.utf8}
+            </div>
+        %endif
     %endif
 
     %if enterprise_message:
