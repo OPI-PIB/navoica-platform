@@ -495,6 +495,7 @@ def _get_and_validate_course(course_key_string, user):
     if (
             settings.FEATURES["ENABLE_VIDEO_UPLOAD_PIPELINE"] and
             getattr(settings, "VIDEO_UPLOAD_PIPELINE", None) and
+            getattr(settings, "VIDEO_UPLOAD_PREAUTH_URL", None) and
             course and
             course.video_pipeline_configured
     ):
@@ -730,7 +731,6 @@ def videos_post(course, request):
     if error:
         return JsonResponse({'error': error}, status=400)
 
-    bucket = storage_service_bucket()
     req_files = data['files']
     resp_files = []
 
@@ -744,7 +744,6 @@ def videos_post(course, request):
             return JsonResponse({'error': error_msg}, status=400)
 
         edx_video_id = unicode(uuid4())
-        key = storage_service_key(bucket, file_name=edx_video_id)
 
         metadata_list = [
             ('client_video_id', file_name),
@@ -763,13 +762,7 @@ def videos_post(course, request):
             if transcript_preferences is not None:
                 metadata_list.append(('transcript_preferences', json.dumps(transcript_preferences)))
 
-        for metadata_name, value in metadata_list:
-            key.set_metadata(metadata_name, value)
-        upload_url = key.generate_url(
-            KEY_EXPIRATION_IN_SECONDS,
-            'PUT',
-            headers={'Content-Type': req_file['content_type']}
-        )
+        upload_url = settings.VIDEO_UPLOAD_PREAUTH_URL+edx_video_id
 
         # persist edx_video_id in VAL
         create_video({

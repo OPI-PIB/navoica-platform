@@ -995,6 +995,8 @@ VIDEO_UPLOAD_PIPELINE = {
     'CONCURRENT_UPLOAD_LIMIT': 4,
 }
 
+VIDEO_UPLOAD_PREAUTH_URL = None
+
 ############################ APPS #####################################
 
 # The order of INSTALLED_APPS is important, when adding new apps here
