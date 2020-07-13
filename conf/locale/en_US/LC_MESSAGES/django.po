@@ -6,6 +6,7 @@
 #
 # Translators:
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
+# Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/).
@@ -39,7 +40,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-06-15 13:41+0000\n"
+"POT-Creation-Date: 2020-07-13 08:05+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
@@ -2327,6 +2328,11 @@ msgstr ""
 msgid ""
 "You must wait at least {wait_secs} between submissions. {remaining_secs} "
 "remaining."
+msgstr ""
+
+#: common/lib/xmodule/xmodule/capa_base.py
+#, python-brace-format
+msgid "Staff debug info: {tb}"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/capa_base.py
@@ -4730,7 +4736,7 @@ msgstr ""
 msgid "FAQ"
 msgstr ""
 
-#: lms/templates/static_templates/legend.html
+#: lms/djangoapps/branding/api.py lms/templates/static_templates/legend.html
 msgid "Legend_title"
 msgstr "The legend of Nawojka"
 
@@ -16686,15 +16692,15 @@ msgstr ""
 
 #: lms/templates/enrollment/course_enrollment_message.html
 msgid ""
-"Thank you for enrolling in {course_names}. We hope you enjoy the course."
+"Congratulations! You are now a course {course_names} participant and have "
+"access to course materials. We wish you pleasant learning!"
 msgstr ""
 
 #: lms/templates/enrollment/course_enrollment_message.html
-msgid "Thank you for enrolling in:"
-msgstr ""
-
-#: lms/templates/enrollment/course_enrollment_message.html
-msgid "We hope you enjoy the course."
+msgid ""
+"Congratulations! You are now a {course_names} participant and you will have "
+"access to course materials since its launch on {course_date_start}. We wish "
+"you pleasant learning!"
 msgstr ""
 
 #: lms/templates/enrollment/course_enrollment_message.html

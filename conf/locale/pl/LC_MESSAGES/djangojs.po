@@ -5,8 +5,9 @@
 # EdX Team <info@edx.org>, 2020.
 #
 # Translators:
-# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
+# krystianlygas <krystian.lygas@gmail.com>, 2020
+# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 #
 # #-#-#-#-#  djangojs-studio.po (0.1a)  #-#-#-#-#
@@ -16,8 +17,8 @@
 # EdX Team <info@edx.org>, 2020.
 #
 # Translators:
-# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
+# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 #
 # #-#-#-#-#  underscore.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -29,8 +30,8 @@
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2019
 # krystianlygas <krystian.lygas@gmail.com>, 2019
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 # Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 #
 # #-#-#-#-#  underscore-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -48,7 +49,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-06-15 13:41+0000\n"
+"POT-Creation-Date: 2020-07-13 08:05+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -65,10 +66,13 @@ msgid ""
 "This may be happening because of an error with our server or your internet "
 "connection. Try refreshing the page or making sure you are online."
 msgstr ""
+"Może się to dziać z powodu błędu serwera lub twojego połączenia "
+"internetowego. Spróbuj odświeżyć stronę lub upewnij się, że jesteś w trybie "
+"online."
 
 #: cms/static/cms/js/main.js common/static/bundles/commons.js
 msgid "Studio's having trouble saving your work"
-msgstr ""
+msgstr "Studio ma problem z zapisaniem twojej pracy"
 
 #: cms/static/cms/js/xblock/cms.runtime.v1.js
 #: cms/static/js/certificates/views/signatory_details.js
@@ -88,12 +92,12 @@ msgstr "Zapisywanie"
 #: cms/static/js/base.js common/static/bundles/js/pages/login.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "This link will open in a new browser window/tab"
-msgstr ""
+msgstr "Ten odnośnik zostanie otwarty w nowym oknie lub karcie przeglądarki"
 
 #: cms/static/js/base.js common/static/bundles/js/pages/login.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "This link will open in a modal window"
-msgstr ""
+msgstr "Odnośnik zostanie otwarty w oknie modalnym"
 
 #: cms/static/js/certificates/views/signatory_editor.js
 #: cms/static/js/views/asset.js cms/static/js/views/list_item.js
@@ -127,7 +131,7 @@ msgstr "Usuń"
 #: cms/static/js/views/utils/xblock_utils.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "Deleting"
-msgstr ""
+msgstr "Usuwanie"
 
 #. #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 #. Translators: this is a message from the raw HTML editor displayed in the
@@ -173,89 +177,94 @@ msgstr "Anuluj"
 #: cms/static/js/views/pages/group_configurations.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "You have unsaved changes. Do you really want to leave this page?"
-msgstr ""
+msgstr "Posiadasz niezapisane zmiany. Czy na pewno chcesz opuścić tę stronę?"
 
 #: cms/static/js/features/import/factories/import.js
 #: common/static/bundles/Import.js
 msgid "There was an error during the upload process."
-msgstr ""
+msgstr "Wystąpił błąd w trakcie przesyłania pliku."
 
 #: cms/static/js/features/import/factories/import.js
 #: common/static/bundles/Import.js
 msgid "There was an error while unpacking the file."
-msgstr ""
+msgstr "Wystąpił błąd w trakcie rozpakowywania pliku."
 
 #: cms/static/js/features/import/factories/import.js
 #: common/static/bundles/Import.js
 msgid "There was an error while verifying the file you submitted."
-msgstr ""
+msgstr "Wystąpił błąd w trakcie weryfikacji przesłanego pliku."
 
 #: cms/static/js/features/import/factories/import.js
 #: common/static/bundles/Import.js
 msgid "Choose new file"
-msgstr ""
+msgstr "Wybierz nowy plik"
 
 #: cms/static/js/features/import/factories/import.js
 #: common/static/bundles/Import.js
 msgid ""
 "File format not supported. Please upload a file with a {ext} extension."
 msgstr ""
+"Nieobsługiwany format pliku. Proszę przesłać plik o rozszerzeniu {ext}."
 
 #: cms/static/js/features/import/factories/import.js
 #: common/static/bundles/Import.js
 msgid "There was an error while importing the new library to our database."
-msgstr ""
+msgstr "Wystąpił błąd w trakcie importowania nowej biblioteki do bazy danych."
 
 #: cms/static/js/features/import/factories/import.js
 #: common/static/bundles/Import.js
 msgid "There was an error while importing the new course to our database."
-msgstr ""
+msgstr "Wystąpił błąd w trakcie importowania nowego kursu do bazy danych."
 
 #: cms/static/js/features/import/factories/import.js
 #: common/static/bundles/Import.js
 msgid "Your import has failed."
-msgstr ""
+msgstr "Twoje importowanie się nie powiodło."
 
 #: cms/static/js/features/import/views/import.js
 #: common/static/bundles/Import.js
 msgid "Your import is in progress; navigating away will abort it."
 msgstr ""
+"Twoje importowanie znajduje się w toku; przejście na inną stronę spowoduje "
+"jego przerwanie."
 
 #: cms/static/js/features/import/views/import.js
 #: common/static/bundles/Import.js
 msgid "Error importing course"
-msgstr ""
+msgstr "Błąd importowania kursu"
 
 #: cms/static/js/features/import/views/import.js
 #: common/static/bundles/Import.js
 msgid "There was an error with the upload"
-msgstr ""
+msgstr "Wystąpił błąd przesyłania pliku"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Organization:"
-msgstr ""
+msgstr "Organizacja:"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Course Number:"
-msgstr ""
+msgstr "Numer kursu:"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Course Run:"
-msgstr ""
+msgstr "Edycja kursu:"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "(Read-only)"
-msgstr ""
+msgstr "(tylko do odczytu)"
 
 #: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
 #: common/static/bundles/CourseOrLibraryListing.js
 msgid "Re-run Course"
-msgstr ""
+msgstr "Wznów kurs"
 
+#: cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx
+#: common/static/bundles/CourseOrLibraryListing.js
 #: cms/templates/js/show-textbook.underscore
 msgid "View Live"
 msgstr "Zobacz wersję próbną"
@@ -268,43 +277,46 @@ msgstr "Przesyłanie"
 
 #: cms/static/js/models/chapter.js common/static/bundles/js/pages/textbooks.js
 msgid "Chapter name and asset_path are both required"
-msgstr ""
+msgstr "Nazwa rozdziału i asset_path są wymagane"
 
 #: cms/static/js/models/chapter.js common/static/bundles/js/pages/textbooks.js
 msgid "Chapter name is required"
-msgstr ""
+msgstr "Wymagana jest nazwa rozdziału"
 
 #: cms/static/js/models/chapter.js common/static/bundles/js/pages/textbooks.js
 msgid "asset_path is required"
-msgstr ""
+msgstr "Wymagany jest asset_path"
 
 #: cms/static/js/models/course.js cms/static/js/models/section.js
 #: common/static/bundles/js/pages/login.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "You must specify a name"
-msgstr ""
+msgstr "Musisz określić nazwę"
 
 #: cms/static/js/models/textbook.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "Textbook name is required"
-msgstr ""
+msgstr "Wymagana jest nazwa podręcznika"
 
 #: cms/static/js/models/textbook.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "Please add at least one chapter"
-msgstr ""
+msgstr "Proszę dodać co najmniej jeden rozdział"
 
 #: cms/static/js/models/textbook.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "All chapters must have a name and asset"
-msgstr ""
+msgstr "Wszystkie rozdziały muszą posiadać nazwy i zasoby"
 
 #: cms/static/js/models/uploads.js common/static/bundles/js/pages/textbooks.js
 msgid ""
 "Only <%= fileTypes %> files can be uploaded. Please select a file ending in "
 "<%= fileExtensions %> to upload."
 msgstr ""
+"Można przesyłać wyłącznie pliki <%= fileTypes %>. Proszę wybrać i przesłać "
+"plik kończący się rozszerzeniem <%= fileExtensions %>."
 
+#: cms/static/js/models/uploads.js common/static/bundles/js/pages/textbooks.js
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/institution_login.underscore
 #: lms/templates/student_account/institution_register.underscore
@@ -379,12 +391,12 @@ msgstr "Usuń"
 #: cms/static/js/views/edit_chapter.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "Upload a new PDF to “<%= name %>”"
-msgstr ""
+msgstr "Prześlij nowy plik PDF do “<%= name %>”"
 
 #: cms/static/js/views/edit_chapter.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "Please select a PDF file to upload."
-msgstr ""
+msgstr "Wybierz plik PDF do przesłania"
 
 #. Translators: this is a message from the raw HTML editor displayed in the
 #. browser when a user needs to edit HTML
@@ -446,7 +458,7 @@ msgstr "Usuwanie"
 #: cms/static/js/views/show_textbook.js
 #: common/static/bundles/js/pages/textbooks.js
 msgid "Delete “<%= name %>”?"
-msgstr ""
+msgstr "Usunąć “<%= name %>”?"
 
 #: cms/static/js/views/show_textbook.js
 #: common/static/bundles/js/pages/textbooks.js
@@ -454,7 +466,10 @@ msgid ""
 "Deleting a textbook cannot be undone and once deleted any reference to it in"
 " your courseware's navigation will also be removed."
 msgstr ""
+"Usunięcie podręcznika nie może zostać cofnięte. Usunięte zostaną również "
+"wszelkie odniesienia do niego w nawigacji kursu."
 
+#: cms/static/js/views/uploads.js common/static/bundles/js/pages/textbooks.js
 #: cms/templates/js/metadata-file-uploader-item.underscore
 #: cms/templates/js/video/metadata-translations-item.underscore
 msgid "Upload"
@@ -462,7 +477,7 @@ msgstr "Prześlij"
 
 #: cms/static/js/views/uploads.js common/static/bundles/js/pages/textbooks.js
 msgid "We're sorry, there was an error"
-msgstr ""
+msgstr "Przepraszamy, wystąpił błąd"
 
 #: cms/static/js/views/validation.js
 #: lms/static/js/discussions_management/views/divided_discussions_course_wide.js
@@ -2200,7 +2215,7 @@ msgstr "Wyłącz transkrypcję"
 
 #: common/static/bundles/CourseGoals.js
 msgid "Thank you for setting your course goal to "
-msgstr ""
+msgstr "Dziękujemy za ustalenie celu kursu: "
 
 #: common/static/bundles/CourseGoals.js
 msgid ""
@@ -2437,7 +2452,7 @@ msgstr "Nieokreślony kurs"
 
 #: common/static/bundles/SingleSupportForm.js
 msgid "What can we help you with?"
-msgstr ""
+msgstr "Z czym możemy Ci pomóc?"
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/logged_in_user.jsx
@@ -2466,8 +2481,9 @@ msgstr "Prześlij"
 
 #: common/static/bundles/SingleSupportForm.js
 msgid "Sign in to so we can help you better."
-msgstr ""
+msgstr "Zaloguj się, abyśmy mogli Ci lepiej pomóc"
 
+#: common/static/bundles/SingleSupportForm.js
 #: lms/templates/student_account/hinted_login.underscore
 #: lms/templates/student_account/login.underscore
 msgid "Sign in"
@@ -2475,11 +2491,13 @@ msgstr "Zaloguj się"
 
 #: common/static/bundles/SingleSupportForm.js
 msgid "Create an account"
-msgstr ""
+msgstr "Utwórz konto"
 
 #: common/static/bundles/SingleSupportForm.js
 msgid "If you are unable to access your account contact us via email using "
 msgstr ""
+"Jeśli nie możesz uzyskać dostępu do swojego konta, skontaktuj się z nami za "
+"pośrednictwem poczty e-mail za pomocą "
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/single_support_form.jsx
@@ -2513,7 +2531,7 @@ msgstr "Znajdź odpowiedzi na najważniejsze pytania zadawane przez uczniów."
 
 #: common/static/bundles/SingleSupportForm.js
 msgid "Search the Help Center"
-msgstr ""
+msgstr "Przeszukaj centrum pomocy"
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/success.jsx
@@ -2522,7 +2540,7 @@ msgstr "Przejdź do mojego pulpitu"
 
 #: common/static/bundles/SingleSupportForm.js
 msgid "Go to "
-msgstr ""
+msgstr "Idź do"
 
 #: common/static/bundles/SingleSupportForm.js
 #: lms/djangoapps/support/static/support/jsx/success.jsx
@@ -2985,34 +3003,6 @@ msgstr "%(field)s może składać się z maksymalnie %(count)d znaków."
 #: common/static/common/js/utils/edx.utils.validate.js
 msgid "Please enter your %(field)s."
 msgstr "Proszę podać %(field)s."
-
-#: common/static/common/js/vendor/common.min.js
-msgid "delete"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "has"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "get"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "Wrong offset!"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "Wrong length!"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "Promise-chain cycle"
-msgstr ""
-
-#: common/static/common/js/vendor/common.min.js
-msgid "Promise can't be resolved itself"
-msgstr ""
 
 #: common/static/js/capa/drag_and_drop/base_image.js
 msgid "Drop target image"
@@ -5833,7 +5823,7 @@ msgid ""
 "interests are, why you're taking courses, or what you hope to learn."
 msgstr ""
 "Opowiedz trochę o sobie innym studentom: gdzie mieszkasz, jakie masz "
-"zainteresowania, dlaczego bierzesz udział w kursach lub czego masz nadzieje "
+"zainteresowania, dlaczego bierzesz udział w kursach lub czego masz nadzieję "
 "się nauczyć."
 
 #: openedx/features/learner_profile/static/learner_profile/js/views/badge_list_container.js
@@ -6414,7 +6404,7 @@ msgstr "Prześlij zdjęcie prowadzącego"
 
 #: cms/static/js/views/instructor_info.js cms/static/js/views/settings/main.js
 msgid "Files must be in JPEG or PNG format."
-msgstr ""
+msgstr "Pliki muszą być w formacie JPEG lub PNG."
 
 #: cms/static/js/views/license.js cms/templates/js/license-selector.underscore
 msgid "All Rights Reserved"
@@ -6848,31 +6838,32 @@ msgstr ""
 
 #: cms/static/js/views/settings/main.js
 msgid "Course Credit Requirements"
-msgstr ""
+msgstr "Wymagania do uzyskania zaświadczenia o ukończeniu kursu"
 
 #: cms/static/js/views/settings/main.js
 msgid "The minimum grade for course credit is not set."
 msgstr ""
+"Nie ustalono minimalnej oceny potrzebnej do uzyskania punktów edukacyjnych."
 
 #: cms/static/js/views/settings/main.js
 msgid "Course pacing cannot be changed once a course has started."
-msgstr ""
+msgstr "Nie można zmienić trybu kursu po dacie rozpoczęcia kursu."
 
 #: cms/static/js/views/settings/main.js
 msgid "{hours}:{minutes} (current UTC time)"
-msgstr ""
+msgstr "{hours}:{minutes} (aktualny czas UTC)"
 
 #: cms/static/js/views/settings/main.js
 msgid "Upload your course image."
-msgstr ""
+msgstr "Prześlij zdjęcie/grafikę swojego kursu."
 
 #: cms/static/js/views/settings/main.js
 msgid "Upload your banner image."
-msgstr ""
+msgstr "Prześlij banner"
 
 #: cms/static/js/views/settings/main.js
 msgid "Upload your video thumbnail image."
-msgstr ""
+msgstr "Prześlij grafikę - miniaturę filmu promocyjnego"
 
 #: cms/static/js/views/tabs.js
 msgid "Delete Page Confirmation"
@@ -8947,7 +8938,7 @@ msgstr "Gratulacje! Jesteś teraz zweryfikowanym studentem %(platformName)s!"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "You are now enrolled as a verified student for:"
-msgstr "Jesteś zapisany jako zweryfikowany student kursu:"
+msgstr "Jesteś zapisany/a jako zweryfikowany student kursu:"
 
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "A list of courses you have just enrolled in as a verified student"
