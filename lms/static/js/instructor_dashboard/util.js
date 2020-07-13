@@ -266,6 +266,7 @@
             });
             $emailHeader.append($('<input>', {
                 type: 'button',
+                class: 'btn btn-primary btn-sm mb-2',
                 name: 'copy-email-body-text',
                 value: gettext('Copy Email To Editor'),
                 id: 'copy_email_' + emailId
@@ -279,14 +280,14 @@
             }));
             $emailHeader.append($closeButton);
             interpolateHeader = function(title, value) {
-                return edx.HtmlUtils.setHtml($('<h2>', {
+                return edx.HtmlUtils.setHtml($('<div>', {
                     class: 'message-bold'
                 }), edx.HtmlUtils.joinHtml(edx.HtmlUtils.HTML('<em>'), title, edx.HtmlUtils.HTML('</em>'), value));
             };
-            $subject = interpolateHeader(gettext('Subject:'), emailInfo.email.subject);
-            $requester = interpolateHeader(gettext('Sent By:'), emailInfo.requester);
-            $created = interpolateHeader(gettext('Time Sent:'), emailInfo.created);
-            $sentTo = interpolateHeader(gettext('Sent To:'), emailInfo.sent_to.join(', '));
+            $subject = interpolateHeader(gettext('Subject: '), emailInfo.email.subject);
+            $requester = interpolateHeader(gettext('Sent By: '), emailInfo.requester);
+            $created = interpolateHeader(gettext('Time Sent: '), emailInfo.created);
+            $sentTo = interpolateHeader(gettext('Sent To: '), emailInfo.sent_to.join(', '));
             $emailHeader.append($subject);
             $emailHeader.append($requester);
             $emailHeader.append($created);
@@ -296,7 +297,7 @@
             $emailContent = $('<div>', {
                 class: 'email-content-message'
             });
-            $emailContentHeader = edx.HtmlUtils.setHtml($('<h2>', {
+            $emailContentHeader = edx.HtmlUtils.setHtml($('<div>', {
                 class: 'message-bold'
             }), edx.HtmlUtils.joinHtml(edx.HtmlUtils.HTML('<em>'), gettext('Message:'), edx.HtmlUtils.HTML('</em>')));
             $emailContent.append($emailContentHeader);
@@ -361,7 +362,7 @@
             this.$table_running_tasks = findAndAssert(this.$section, '.running-tasks-table');
             this.$no_tasks_message = findAndAssert(this.$section, '.no-pending-tasks-message');
             if (this.$table_running_tasks.length) {
-                TASK_LIST_POLL_INTERVAL = 20000;
+                TASK_LIST_POLL_INTERVAL = 2;
                 this.reload_running_tasks_list();
                 this.task_poller = new IntervalManager(TASK_LIST_POLL_INTERVAL, function() {
                     return ths.reload_running_tasks_list();
