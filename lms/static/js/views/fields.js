@@ -139,6 +139,7 @@
             },
 
             showSuccessMessage: function() {
+                this.showSuccessIndicator();
                 var successMessage = this.getMessage('success');
                 this.showNotificationMessage(successMessage);
 
@@ -164,6 +165,7 @@
             },
 
             showErrorMessage: function(xhr) {
+                this.showErrorIndicator();
                 if (xhr.status === 400) {
                     try {
                         var errors = JSON.parse(xhr.responseText),
@@ -176,7 +178,19 @@
                 } else {
                     this.showNotificationMessage(this.getMessage('error'));
                 }
-            }
+            },
+
+            showSuccessIndicator: function() {
+                this.$('select').css({'color':'darkcyan'});
+                setTimeout(function () {
+                    this.$('select').css({'color':'black'});
+                }, 3000);
+            },
+
+            showErrorIndicator: function() {
+                this.$('select').css({'color':'red'});
+            },
+
         });
 
         FieldViews.EditableFieldView = FieldViews.FieldView.extend({
@@ -398,7 +412,7 @@
 
             events: {
                 click: 'startEditing',
-                'focusout select': 'finishEditing'
+                'change select': 'finishEditing'
             },
 
             initialize: function(options) {
@@ -407,6 +421,12 @@
                 this._super(options);
 
                 this.listenTo(this.model, 'change:' + this.options.valueAttribute, this.updateValueInField);
+            },
+
+            startEditing: function() {
+                if (this.editable === 'toggle' && this.mode !== 'edit') {
+                    this.showEditMode(false);
+                }
             },
 
             render: function() {

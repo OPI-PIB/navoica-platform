@@ -41,7 +41,7 @@
 </span>
 
 <% if (editable != 'never' && id === 'account_privacy') { %>
-    <button class="btn btn-change-privacy hidden">
+    <button class="btn btn-change-privacy d-none">
         <span><%- gettext('Save') %></span>
     </button>
 <% } %>
