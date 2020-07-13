@@ -20,9 +20,9 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
 <div id="content" class="border-top">
 <main class="container">
 <div id="nav-tabContent" class="tab-content">
-  
+
 <div id="nav-home" class="tab-pane fade show active" role="tbpanel" aria-labelledby="nav-home-tab">
-  
+
 
 <div class="page-header-secondary">
   ## Breadcrumb navigation
@@ -84,7 +84,11 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
 </div>
 </div>
 </main>
-</div>  
+</div>
+
+<%static:webpack entry="Enrollment">
+    new CourseEnrollment('.enroll-btn', '${course_key | n, js_escaped_string}');
+</%static:webpack>
 
 <%include file="_underscore_templates.html" />
 <%include file="_thread_list_template.html" />

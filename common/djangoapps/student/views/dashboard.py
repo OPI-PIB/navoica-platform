@@ -3,6 +3,7 @@ Dashboard view and supporting methods
 """
 
 import datetime
+import pytz
 import logging
 from collections import defaultdict
 
@@ -56,6 +57,10 @@ from xmodule.modulestore.django import modulestore
 
 log = logging.getLogger("edx.student")
 
+prev_time = pytz.utc.localize(datetime.datetime.now())
+time = pytz.utc.localize(datetime.datetime.now())
+prev_courses_count = 0
+courses_count = 0
 
 def get_org_black_and_whitelist_for_site():
     """
@@ -94,11 +99,12 @@ def _get_recently_enrolled_courses(course_enrollments):
     """
     seconds = DashboardConfiguration.current().recent_enrollment_time_delta
     time_delta = (datetime.datetime.now(UTC) - datetime.timedelta(seconds=seconds))
+
     return [
         enrollment for enrollment in course_enrollments
         # If the enrollment has no created date, we are explicitly excluding the course
         # from the list of recent enrollments.
-        if enrollment.is_active and enrollment.created > time_delta
+        if enrollment.is_active and enrollment.created < time_delta
     ]
 
 
@@ -164,6 +170,12 @@ def _create_recent_enrollment_message(course_enrollments, course_modes):  # pyli
     if recently_enrolled_courses:
         enrollments_count = len(recently_enrolled_courses)
         course_name_separator = ', '
+
+        prev_courses_count = enrollments_count
+        courses_count = enrollments_count + 1
+
+        prev_time = pytz.utc.localize(datetime.datetime.now())
+
         # If length of enrolled course 2, join names with 'and'
         if enrollments_count == 2:
             course_name_separator = _(' and ')
@@ -182,7 +194,9 @@ def _create_recent_enrollment_message(course_enrollments, course_modes):  # pyli
         return render_to_string(
             'enrollment/course_enrollment_message.html',
             {
-                'course_names': course_names,
+                'course_names': recently_enrolled_courses[0].course_overview.display_name,
+                'current_time': time,
+                'course_date_start': recently_enrolled_courses[0].course_overview.dashboard_start_display,
                 'enrollments_count': enrollments_count,
                 'allow_donations': allow_donations,
                 'platform_name': platform_name,
@@ -595,11 +609,13 @@ def student_dashboard(request):
         for course_id, modes in iteritems(unexpired_course_modes)
     }
 
+    courses_count = len(course_enrollments)
     # Check to see if the student has recently enrolled in a course.
     # If so, display a notification message confirming the enrollment.
     enrollment_message = _create_recent_enrollment_message(
         course_enrollments, course_modes_by_course
     )
+
     course_optouts = Optout.objects.filter(user=user).values_list('course_id', flat=True)
 
     sidebar_account_activation_message = ''
@@ -786,6 +802,10 @@ def student_dashboard(request):
         'enterprise_message': enterprise_message,
         'consent_required_courses': consent_required_courses,
         'enterprise_customer_name': enterprise_customer_name,
+        'prev_courses_count': prev_courses_count,
+        'courses_count': courses_count,
+        'prev_time': prev_time,
+        'time': time,
         'enrollment_message': enrollment_message,
         'redirect_message': redirect_message,
         'account_activation_messages': account_activation_messages,
@@ -838,8 +858,10 @@ def student_dashboard(request):
     # There must be enough urls for dashboard.html. Template creates course
     # cards for "enrollments + entitlements".
     resume_button_urls += ['' for entitlement in course_entitlements]
+
     context.update({
-        'resume_button_urls': resume_button_urls
+        'resume_button_urls': resume_button_urls,
+        'time': pytz.utc.localize(datetime.datetime.now()),
     })
 
     response = render_to_response('dashboard.html', context)

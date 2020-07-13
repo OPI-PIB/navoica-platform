@@ -65,7 +65,7 @@
             },
 
             showSaveButton: function() {
-                $('.btn-change-privacy').removeClass('hidden');
+                $('.btn-change-privacy').removeClass('d-none');
             }
         });
 
