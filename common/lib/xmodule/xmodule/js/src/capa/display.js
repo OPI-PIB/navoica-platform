@@ -27,6 +27,9 @@
             this.enableSubmitButtonAfterTimeout = function() {
                 return Problem.prototype.enableSubmitButtonAfterTimeout.apply(that, arguments);
             };
+            this.enableSubmitButtonAfterShortTimeout = function() {
+                return Problem.prototype.enableSubmitButtonAfterShortTimeout.apply(that, arguments);
+            };
             this.enableSubmitButtonAfterResponse = function() {
                 return Problem.prototype.enableSubmitButtonAfterResponse.apply(that, arguments);
             };
@@ -925,7 +928,7 @@
                 }
             });
             if (answered) {
-                return this.enableSubmitButton(true);
+                return this.enableSubmitButtonAfterShortTimeout();
             } else {
                 return this.enableSubmitButton(false, false);
             }
@@ -1283,6 +1286,15 @@
                 }
             };
             return window.setTimeout(enableSubmitButton, 750);
+        };
+
+        Problem.prototype.enableSubmitButtonAfterShortTimeout = function() {
+            var enableSubmitButton,
+                that = this;
+            enableSubmitButton = function() {
+                that.enableSubmitButton(true);
+            };
+            return window.setTimeout(enableSubmitButton, 1000);
         };
 
         Problem.prototype.hint_button = function() {
