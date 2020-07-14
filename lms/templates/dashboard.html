@@ -141,8 +141,16 @@ from student.models import CourseEnrollment
 </div>
 
       <section id="results">
-        <header id="header-login">
-          <h2 id="h2">Lista kursów</h2>
+        <header id="header-login" class="d-flex justify-content-between align-items-center">
+          <h2 id="h2" class="my-0">Lista kursów</h2>
+
+            <div id="sorting-form" class="col-md-4">Sortuj według:
+                <select class="custom-select">
+                    <option value="">Domyślnie</option>
+                    <option value="name">Alfabetycznie A-Z</option>
+                    <option value="-name">Alfabetycznie Z-A</option>
+                </select>
+            </div>
         </header>
 
 
