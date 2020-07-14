@@ -4620,9 +4620,6 @@ input {
 }
 
 .card-footer {
-  padding: 1rem 1rem;
-  background-color: #fff;
-  border-top: 0 solid rgba(0, 0, 0, 0.125);
 
   &:last-child {
     border-radius: 0 0 calc(0 - 0) calc(0 - 0);
@@ -4752,16 +4749,6 @@ input {
 
   + .list-group .list-group-item:first-child {
     border-top: 0;
-  }
-}
-
-.card-footer {
-  padding: 1rem 1rem;
-  background-color: #fff;
-  border-top: 0 solid rgba(0, 0, 0, 0.125);
-
-  &:last-child {
-    border-radius: 0 0 calc(0 - 0) calc(0 - 0);
   }
 }
 
@@ -10528,6 +10515,7 @@ main.container aside {
   .course-text {
     min-height: 6rem;
     width: 100%;
+    font-size: 13px;
   }
   .card-footer {
     .course-meta {
@@ -11118,7 +11106,6 @@ article .display-3 {
   border-top: none;
   font-weight: initial;
   margin-top: auto;
-  padding-top: .5rem;
 
   .course-meta {
     margin: 0;

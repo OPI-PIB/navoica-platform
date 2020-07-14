@@ -32,7 +32,7 @@ else:
 
 % if cert_status['status'] != 'processing':
   % if cert_status['status'] == 'certificate_earned_but_not_available':
-    <div class="card-footer message message-status ${status_css_class} is-shown">
+    <div class="message message-status ${status_css_class} is-shown">
       <div class="course-meta">
         <%
           certificate_available_date_string = course_overview.certificate_available_date.strftime('%Y-%m-%dT%H:%M:%S%z')
@@ -43,7 +43,7 @@ else:
       </p>
     </div>
   % else:
-    <div class="card-footer message message-status ${status_css_class} is-shown">
+    <div class="message message-status ${status_css_class} is-shown">
       <p class="message-copy">${_("Your final grade:")}
         <span class="grade-value">${"{0:.0f}%".format(float(cert_status['grade'])*100)}</span>.
 
