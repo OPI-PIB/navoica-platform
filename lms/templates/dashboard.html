@@ -49,11 +49,70 @@ from student.models import CourseEnrollment
         changeEmailSettings: "${reverse('change_email_settings') | n, js_escaped_string}"
       });
 
+        document.onkeydown = function(e) {
+            if(e.keyCode === 13) {
+                document.activeElement.click();
+            }
+        };
+
       let MaxSignsNumber = 150;
       $('.course-text').each(function(index, el) {
           if ($(el).text().length > MaxSignsNumber) {
             $(el).text($(el).text().substring(0, MaxSignsNumber) + "...")}
               });
+
+      let selectedFilters = [];
+
+        $('.form-check-input').change(function() {
+            if (selectedFilters.indexOf($(this).attr('id')) === -1) {
+                selectedFilters = [...selectedFilters, $(this).attr('id')];
+            } else {
+                let itemIndex = selectedFilters.findIndex(el => el === $(this).attr('id'));
+                selectedFilters = [
+                    ...selectedFilters.slice(0, itemIndex),
+                    ...selectedFilters.slice(itemIndex + 1)
+                ];
+            }
+
+            if (selectedFilters.length > 0) {
+                $('#clear-all-filters').show();
+            } else {
+                $('#clear-all-filters').hide();
+            }
+        });
+
+        $("#clear-all-filters").click(function() {
+            $('.form-check-input').each(function () {
+                    if ($(this).is(':checked')) $(this).trigger('click');
+                }
+            );
+        });
+
+        let upcomingCoursesCount = $( ".js-enrolled-course" )
+            .filter(function( index ) {
+                return new Date($(this).attr('data-datetime-start')) > new Date();
+            }).length;
+
+        let nowCoursesCount = $( ".js-enrolled-course" )
+            .filter(function( index ) {
+                return new Date($(this).attr('data-datetime-start')) < new Date();
+            }).length;
+
+        let finishedCoursesCount = $( ".js-enrolled-course" )
+            .filter(function( index ) {
+                return new Date($(this).attr('data-datetime-end')) < new Date();
+            }).length;
+
+        let certificatedCoursesCount = $( ".js-enrolled-course" )
+            .filter(function( index ) {
+                return $(this).attr('data-cert-status') !== 'processing' && $(this).attr('data-cert-status') !== 'notpassing';
+            }).length;
+
+        $('.count-number').eq(0).text(String(upcomingCoursesCount));
+        $('.count-number').eq(1).text(String(nowCoursesCount));
+        $('.count-number').eq(2).text(String(finishedCoursesCount));
+        $('.count-number').eq(3).text(String(certificatedCoursesCount));
+
 
         $('#upcoming').change(function() {
             if ($(this).is(':checked')) {
@@ -141,7 +200,6 @@ from student.models import CourseEnrollment
             }
 
         });
-
     });
   </script>
   <%static:webpack entry="UnenrollmentFactory">
@@ -232,9 +290,9 @@ from student.models import CourseEnrollment
             <div class="bg-brand rounded search-facets">
                 <h2 id="filter-bar" class="list-group filters hide-phone d-none d-md-block is-animated is-collapsed">
                     <div class="d-flex justify-content-between align-items-center">
-                        <span class="d-none d-md-block" id="h2">Filtrowanie</span>
-                        <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true">Filtry</a>
-                        <a id="clear-all-filters" href="#" class="clear-filters flt-right btn btn-primary btn-sm btn-icon" style="display: none;">wyczyść filtry</a>
+                        <span class="d-none d-md-block" id="h2" tabindex="0" aria-labelledby="Filtrowanie">Filtrowanie</span>
+                        <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true" tabindex="0" aria-labelledby="Filtrowanie">Filtry</a>
+                        <a id="clear-all-filters" href="#" class="clear-filters flt-right btn btn-primary btn-sm btn-icon" style="display: none;" tabindex="0" aria-label="Wyczyść filtry" role="button">wyczyść filtry</a>
                     </div>
 
                 </h2>
@@ -255,9 +313,9 @@ from student.models import CourseEnrollment
                             <li id="filter-list" role="listitem">
                                 <button type="button" data-facet="availability" data-value="Upcoming" data-text="W przygotowaniu" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
-                                        <input type="checkbox" class="form-check-input my-0" id="upcoming">
+                                        <input type="checkbox" class="form-check-input my-0" name="upcoming" id="upcoming">
                                         <label class="form-check-label label flex-fill" for="upcoming">Nadchodzący</label>
-                                        <span class="count-number">1</span>
+                                        <span class="count-number"></span>
                                     </div>
                                 </button>
                             </li>
@@ -265,9 +323,9 @@ from student.models import CourseEnrollment
                             <li id="filter-list" role="listitem">
                                 <button type="button" data-facet="availability" data-value="Now" data-text="W trakcie" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
-                                        <input type="checkbox" class="form-check-input my-0" id="now">
+                                        <input type="checkbox" class="form-check-input my-0" name="now" id="now">
                                         <label class="form-check-label label flex-fill" for="now">W trakcie</label>
-                                        <span class="count-number">1</span>
+                                        <span class="count-number"></span>
                                     </div>
                                 </button>
                             </li>
@@ -275,9 +333,9 @@ from student.models import CourseEnrollment
                             <li id="filter-list" role="listitem">
                                 <button type="button" data-facet="availability" data-value="Ended" data-text="Zakończony" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
-                                        <input type="checkbox" class="form-check-input my-0" id="finished">
+                                        <input type="checkbox" class="form-check-input my-0" name="finished" id="finished">
                                         <label class="form-check-label label flex-fill" for="finished">Zakończony</label>
-                                        <span class="count-number">1</span>
+                                        <span class="count-number"></span>
                                     </div>
                                 </button>
                             </li>
@@ -285,9 +343,9 @@ from student.models import CourseEnrollment
                             <li id="filter-list" role="listitem">
                                 <button type="button" data-facet="availability" data-value="Certificated" data-text="Z zaświadczeniem" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
-                                        <input type="checkbox" class="form-check-input my-0" id="certificated">
+                                        <input type="checkbox" class="form-check-input my-0" name="certificated" id="certificated">
                                         <label class="form-check-label label flex-fill" for="certificated">Z zaświadczeniem</label>
-                                        <span class="count-number">1</span>
+                                        <span class="count-number"></span>
                                     </div>
                                 </button>
                             </li>
@@ -305,8 +363,10 @@ from student.models import CourseEnrollment
         <header id="header-login" class="d-flex justify-content-between align-items-center flex-wrap px-1">
           <h2 id="h2" class="my-0">Lista kursów</h2>
 
-            <div id="sorting-form" class="col-lg-4 col-md-6 col-sm-12 px-0">Sortuj według:
-                <select class="custom-select">
+            <div id="sorting-form" tabindex="0" aria-labelledby="Sortuj według" class="col-lg-4 col-md-6 col-sm-12 px-0">
+                Sortuj według:
+                <label for="enrolled-course-sort" style="display: none">Sortuj według:</label>
+                <select id="enrolled-course-sort" tabindex="0" class="custom-select" name="select">
                     <option value="byCourseEnroll">Domyślnie</option>
                     <option value="name">Alfabetycznie A-Z</option>
                     <option value="-name">Alfabetycznie Z-A</option>
