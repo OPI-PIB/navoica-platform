@@ -97,23 +97,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
            <div class="course-text" id="border_top">${course_overview.short_description}</div>
            </div>
 
-<div class="card-footer">           
-
-<div class="message message-status course-status-certavailable is-shown">
-      <p class="message-copy">Twoja ocena końcowa:
-        <span class="grade-value">100%</span>.
-
-
-      </p>
-
-        <div class="wrapper-message-primary">
-                <a class="btn btn-primary" style="width: 100%; margin-top:10px" href="/certificates/f61c6aa23c894d68acac8858724e1a92" target="_blank" title="Ten odnośnik otworzy sieciowy podgląd zaświadczenia o ukończeniu kursu">
-                  Wyświetl Certyfikat
-                </a>
-
-        </div>
-
-    </div>
+    <div class="card-footer">           
 
       % if entitlement and not entitlement_expired_at:
         <div class="course-entitlement-selection-container ${'' if is_unfulfilled_entitlement else 'hidden'}"></div>
@@ -150,14 +134,6 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
             % endfor
           </ul>
         </div>
-      % endif
-
-      % if cert_status:
-        <%include file='_dashboard_certificate_information.html' args='cert_status=cert_status,course_overview=course_overview, enrollment=enrollment, reverify_link=reverify_link'/>
-      % endif
-
-      % if credit_status is not None:
-        <%include file="_dashboard_credit_info.html" args="credit_status=credit_status"/>
       % endif
 
       % if is_course_blocked and entitlement:
@@ -311,7 +287,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
           %>
 
                 % if isinstance(course_date, basestring):
-                        <span class="course-card-start info-date-block"><i class="icon-calendar"></i> ${container_string.format(date=course_date)}</span>
+                    <strong><span class="course-card-start info-date-block"><i class="icon-calendar"></i> ${container_string.format(date=course_date)}</span></strong>
                     % elif course_date is not None:
                     <strong><span class="course-card-start info-date-block localized-datetime" data-language="${LANGUAGE_CODE}"  data-format-language="${LANGUAGE_CODE}" data-timezone="${user_timezone}"  data-datetime="${course_date.strftime('%Y-%m-%dT%H:%M:%S%z')}" data-format=${format} data-string="${container_string}"></span></strong>
                     % endif
@@ -389,6 +365,15 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
                 </div>
 
+                <div class="course-cert mb-0">
+                  % if cert_status:
+                    <%include file='_dashboard_certificate_information.html' args='cert_status=cert_status,course_overview=course_overview, enrollment=enrollment, reverify_link=reverify_link'/>
+                  % endif
+
+                  % if credit_status is not None:
+                    <%include file="_dashboard_credit_info.html" args="credit_status=credit_status"/>
+                  % endif
+                </div>
 
            <!-- </div>-->
       </div>

@@ -78,10 +78,10 @@ else:
                   ${_("Your {cert_name_short} is Generating").format(cert_name_short=cert_name_short)}
                 </span>
             % elif cert_status['status'] == 'downloadable' and cert_status.get('show_cert_web_view', False):
-                <a class="btn btn-primary" style="width: 100%; margin-top:10px" href="${cert_status['cert_web_view_url']}" target="_blank"
+                (<a style="width: 100%;" href="${cert_status['cert_web_view_url']}" target="_blank"
                    title="${_('This link will open the certificate web view')}">
                   ${_("View {cert_name_short}").format(cert_name_short=cert_name_short,)}
-                </a>
+                </a>)
             % elif cert_status['status'] == 'downloadable' and enrollment.mode in CourseMode.NON_VERIFIED_MODES:
                 <a class="btn" href="${cert_status['download_url']}"
                    title="${_('This link will open/download a PDF document')}">
