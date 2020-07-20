@@ -62,6 +62,8 @@ from student.models import CourseEnrollment
               });
 
       let selectedFilters = [];
+      let $enrolledCourse = $('.js-enrolled-course');
+      let $clearAllFilters = $('#clear-all-filters');
 
         $('.form-check-input').change(function() {
             if (selectedFilters.indexOf($(this).attr('id')) === -1) {
@@ -75,66 +77,70 @@ from student.models import CourseEnrollment
             }
 
             if (selectedFilters.length > 0) {
-                $('#clear-all-filters').show();
+                $clearAllFilters.show();
             } else {
-                $('#clear-all-filters').hide();
+                $clearAllFilters.hide();
             }
         });
 
-        $("#clear-all-filters").click(function() {
+        $clearAllFilters.click(function() {
             $('.form-check-input').each(function () {
                     if ($(this).is(':checked')) $(this).trigger('click');
                 }
             );
         });
 
-        let upcomingCoursesCount = $( ".js-enrolled-course" )
+        let upcomingCoursesCount = $enrolledCourse
             .filter(function( index ) {
                 return new Date($(this).attr('data-datetime-start')) > new Date();
             }).length;
 
-        let nowCoursesCount = $( ".js-enrolled-course" )
+        let nowCoursesCount = $enrolledCourse
             .filter(function( index ) {
                 return new Date($(this).attr('data-datetime-start')) < new Date();
             }).length;
 
-        let finishedCoursesCount = $( ".js-enrolled-course" )
+        let finishedCoursesCount = $enrolledCourse
             .filter(function( index ) {
                 return new Date($(this).attr('data-datetime-end')) < new Date();
             }).length;
 
-        let certificatedCoursesCount = $( ".js-enrolled-course" )
+        let certificatedCoursesCount = $enrolledCourse
             .filter(function( index ) {
                 return $(this).attr('data-cert-status') === 'downloadable';
             }).length;
 
-        $('.count-number').eq(0).text(String(upcomingCoursesCount));
-        $('.count-number').eq(1).text(String(nowCoursesCount));
-        $('.count-number').eq(2).text(String(finishedCoursesCount));
-        $('.count-number').eq(3).text(String(certificatedCoursesCount));
+        let $countNumber = $('.count-number');
+
+        $countNumber.eq(0).text(String(upcomingCoursesCount));
+        $countNumber.eq(1).text(String(nowCoursesCount));
+        $countNumber.eq(2).text(String(finishedCoursesCount));
+        $countNumber.eq(3).text(String(certificatedCoursesCount));
+
+        let $courseFiltersInput = $('.js-course-enrollment-filters input');
 
         if (upcomingCoursesCount <= 0) {
-            $('.js-course-enrollment-filters input').eq(0).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+            $courseFiltersInput.eq(0).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
         }
         if (nowCoursesCount <= 0) {
-            $('.js-course-enrollment-filters input').eq(1).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+            $courseFiltersInput.eq(1).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
         }
         if (finishedCoursesCount <= 0) {
-            $('.js-course-enrollment-filters input').eq(2).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+            $courseFiltersInput.eq(2).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
         }
         if (certificatedCoursesCount <= 0) {
-            $('.js-course-enrollment-filters input').eq(3).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+            $courseFiltersInput.eq(3).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
         }
 
 
         $('#upcoming').change(function() {
             if ($(this).is(':checked')) {
-                $( ".js-enrolled-course" )
+                $enrolledCourse
                     .filter(function( index ) {
                         return new Date($(this).attr('data-datetime-start')) < new Date()
                     }).hide()
             } else {
-                $( ".js-enrolled-course" )
+                $enrolledCourse
                     .filter(function( index ) {
                         return new Date($(this).attr('data-datetime-start')) < new Date()
                     }).show()
@@ -143,12 +149,12 @@ from student.models import CourseEnrollment
 
         $('#now').change(function() {
             if ($(this).is(':checked')) {
-                $( ".js-enrolled-course" )
+                $enrolledCourse
                     .filter(function( index ) {
                         return new Date($(this).attr('data-datetime-start')) > new Date()
                     }).hide()
             } else {
-                $( ".js-enrolled-course" )
+                $enrolledCourse
                     .filter(function( index ) {
                         return new Date($(this).attr('data-datetime-start')) > new Date()
                     }).show()
@@ -157,12 +163,12 @@ from student.models import CourseEnrollment
 
         $('#finished').change(function() {
             if ($(this).is(':checked')) {
-                $( ".js-enrolled-course" )
+                $enrolledCourse
                     .filter(function( index ) {
                         return new Date($(this).attr('data-datetime-end')) > new Date()
                     }).hide()
             } else {
-                $( ".js-enrolled-course" )
+                $enrolledCourse
                     .filter(function( index ) {
                         return new Date($(this).attr('data-datetime-end')) > new Date()
                     }).show()
@@ -171,12 +177,12 @@ from student.models import CourseEnrollment
 
         $('#certificated').change(function() {
             if ($(this).is(':checked')) {
-                $( ".js-enrolled-course" )
+                $enrolledCourse
                     .filter(function( index ) {
                         return $(this).attr('data-cert-status') !== 'downloadable'
                     }).hide()
             } else {
-                $( ".js-enrolled-course" )
+                $enrolledCourse
                     .filter(function( index ) {
                         return $(this).attr('data-cert-status') !== 'downloadable'
                     }).show()
@@ -184,12 +190,14 @@ from student.models import CourseEnrollment
         });
 
         $( ".custom-select" ).change(function() {
-            var $target = $("#sorting-form");
+            let $target = $("#sorting-form");
             $target = $target.find('option:selected');
-            var sort = $target.val();
+            let sort = $target.val();
+
+            let $enrolledCourseList =  $(".js-enrolled-courses-list");
 
             if (sort === 'name') {
-                $(".js-enrolled-courses-list").each(function(){
+                $enrolledCourseList.each(function(){
                     $(this).html($(this).children('.js-enrolled-course').sort(function(a, b){
                         return ($(a).data('title')).localeCompare($(b).data('title'))
                     }));
@@ -197,7 +205,7 @@ from student.models import CourseEnrollment
             }
 
             if (sort === '-name') {
-                $(".js-enrolled-courses-list").each(function(){
+                $enrolledCourseList.each(function(){
                     $(this).html($(this).children('.js-enrolled-course').sort(function(a, b){
                         return ($(b).data('title')).localeCompare($(a).data('title'));
                     }));
@@ -205,7 +213,7 @@ from student.models import CourseEnrollment
             }
 
             if (sort === 'byCourseEnroll') {
-                $(".js-enrolled-courses-list").each(function(){
+                $enrolledCourseList.each(function(){
                     $(this).html($(this).children('.js-enrolled-course').sort(function(a, b){
                         return ($(a).data('datetime-enrollment')) > ($(b).data('datetime-enrollment')) ? 1 : -1;
                     }));
