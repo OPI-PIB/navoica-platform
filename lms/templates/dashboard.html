@@ -105,7 +105,7 @@ from student.models import CourseEnrollment
 
         let certificatedCoursesCount = $( ".js-enrolled-course" )
             .filter(function( index ) {
-                return $(this).attr('data-cert-status') !== 'processing' && $(this).attr('data-cert-status') !== 'notpassing';
+                return $(this).attr('data-cert-status') === 'downloadable';
             }).length;
 
         $('.count-number').eq(0).text(String(upcomingCoursesCount));
@@ -160,12 +160,12 @@ from student.models import CourseEnrollment
             if ($(this).is(':checked')) {
                 $( ".js-enrolled-course" )
                     .filter(function( index ) {
-                        return $(this).attr('data-cert-status') === 'processing' || $(this).attr('data-cert-status') === 'notpassing'
+                        return $(this).attr('data-cert-status') !== 'downloadable'
                     }).hide()
             } else {
                 $( ".js-enrolled-course" )
                     .filter(function( index ) {
-                        return $(this).attr('data-cert-status') === 'processing' || $(this).attr('data-cert-status') === 'notpassing'
+                        return $(this).attr('data-cert-status') !== 'downloadable'
                     }).show()
             }
         });
