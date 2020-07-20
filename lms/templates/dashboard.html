@@ -113,6 +113,19 @@ from student.models import CourseEnrollment
         $('.count-number').eq(2).text(String(finishedCoursesCount));
         $('.count-number').eq(3).text(String(certificatedCoursesCount));
 
+        if (upcomingCoursesCount <= 0) {
+            $('.js-course-enrollment-filters input').eq(0).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+        }
+        if (nowCoursesCount <= 0) {
+            $('.js-course-enrollment-filters input').eq(1).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+        }
+        if (finishedCoursesCount <= 0) {
+            $('.js-course-enrollment-filters input').eq(2).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+        }
+        if (certificatedCoursesCount <= 0) {
+            $('.js-course-enrollment-filters input').eq(3).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+        }
+
 
         $('#upcoming').change(function() {
             if ($(this).is(':checked')) {
