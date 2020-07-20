@@ -204,7 +204,7 @@ def _footer_navigation_links():
             "url": link_url,
         }
         for link_name, link_url, link_title in [
-            ("about", "http://navoica.edu.pl/", _("About the project")),
+            #("about", "http://navoica.edu.pl/", _("About the project")),
             ("faq", "/faq", _("FAQ")),
             ("legend", "/legend", _("Legend_title")),
             #("partners", marketing_link("PARTNERS"), _("Partners")),
