@@ -616,6 +616,7 @@ def student_dashboard(request):
         course_enrollments, course_modes_by_course
     )
 
+
     course_optouts = Optout.objects.filter(user=user).values_list('course_id', flat=True)
 
     sidebar_account_activation_message = ''
