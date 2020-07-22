@@ -45,19 +45,23 @@ from django.conf import settings
             </div>
         </div>
         
-        <div class="row footer-logos mt-5 pt-5 border-top justify-content-between">
-            <div class="col-lg-3 d-flex mb-3">
+        <div class="row footer-logos mt-5 pt-5 mb-5 border-top justify-content-between flex-md-row flex-column">
+            <a href="http://www.nauka.gov.pl/" target="_blank">
                 <img style="max-width:297px" src="/static/images/patrons/logo_mnisw.jpg" alt="Ministerstwo Nauki i Szkolnictwa Wyższego">
-            </div>
-            <div class="col-lg-3 d-flex mb-3">
-                <img style="max-width:128px" src="/static/images/patrons/logo_krasp.jpg" alt="KRASP">
-            </div>
-            <div class="col-lg-3 d-flex mb-3">
-                <img style="max-width:220px" src="/static/images/patrons/logo_fmn.jpg" alt="Fundacja Młodej Nauki">
-            </div>
-            <div class="col-lg-3 d-flex mb-3">
-                <img style="max-width:181px" src="/static/images/patrons/logo_opi_pib.png" alt="OPI - PIB">
-            </div>
+                <span class="sr">otwiera się w nowym oknie</span>
+            </a>
+            <a href="https://www.krasp.org.pl/" target="_blank">
+                <img style="max-width:128px" src="/static/images/patrons/logo_krasp.jpg" alt="Konferencja Rektorów Akademickich Szkół Polskich ">
+                <span class="sr">otwiera się w nowym oknie</span>
+            </a>
+           <a href="http://fmn.org.pl/" target="_blank">
+               <img style="max-width:220px" src="/static/images/patrons/logo_fmn.jpg" alt="Fundacja Młodej Nauki">
+               <span class="sr">otwiera się w nowym oknie</span>
+           </a>
+           <a href="https://opi.org.pl/" target="_blank">
+               <img style="max-width:181px" src="/static/images/patrons/logo_opi_pib.png" alt="Ośrodek Przetwarzania Informacji - Państwowy Instytut Badawczy">
+               <span class="sr">otwiera się w nowym oknie</span>
+            </a>
         </div>
         <% current_year = date.today().year %>
         <p class="footer-copyright"><span>&copy; Copyright 2018-${current_year} Navoica.pl</span> — ${_('All rights reserved  ')} | ver. Nawojka ${ settings.PLATFORM_VERSION }</p>
