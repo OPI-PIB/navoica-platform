@@ -9086,7 +9086,7 @@ main.container .d-flex > aside header h2, main.container .d-flex > aside header 
 .jumbotron > .container .d-flex > article header h2,
 .jumbotron > .container .d-flex > article header a {
   color: #212529;
-  color: darkcyan;
+  color: teal;
   display: block;
   font-size: 1rem;
   font-weight: 700;
@@ -9326,7 +9326,7 @@ main.container aside h6 {
     border-radius: 50%;
     box-sizing: border-box;
     color: #6c757d;
-    color: darkcyan;
+    color: teal;
     display: flex;
     flex: 0 0 36px;
     font-size: 18px;
@@ -9348,7 +9348,7 @@ main.container aside h6 {
   }
 
   a:focus {
-    outline-color: darkcyan;
+    outline-color: teal;
   }
 
   .fa-check {
@@ -9369,12 +9369,12 @@ main.container aside h6 {
 
   .tab.active {
     background: #f8f9fa;
-    border: 1px solid darkcyan;
+    border: 1px solid teal;
     .fas {
-      border: 1px solid darkcyan;
+      border: 1px solid teal;
     }
     .fa-check.checkmarked, .fa-bookmark.bookmarked {
-      color: darkcyan;
+      color: teal;
     }
   }
 
@@ -9655,7 +9655,7 @@ main.container aside h6 {
     display: block;
     width: 80px;
     height: 4px;
-    background: darkcyan;
+    background: teal;
     margin-bottom: 8px;
   }
 
@@ -9671,7 +9671,7 @@ main.container aside h6 {
     display: block;
     width: 80px;
     height: 2px;
-    background: darkcyan;
+    background: teal;
     margin-bottom: 8px;
   }
 
@@ -10307,7 +10307,7 @@ main.container aside h6 {
                     margin-bottom: 10px !important;
 
                     &::before {
-                      background: darkcyan;
+                      background: teal;
                       content: "";
                       display: block;
                       height: 4px;
@@ -10411,7 +10411,7 @@ main.container aside h6 {
 
         > h2 {
           color: map_get($grays, "900");
-          color: darkcyan;
+          color: teal;
           display: block;
           font-size: $font-size-base;
           font-weight: $font-weight-bold;
@@ -10614,7 +10614,7 @@ main.container aside h6 {
     }
 
     .post-labels {
-      color: darkcyan;
+      color: teal;
       display: flex;
       font-size: .875em;
       justify-content: flex-start;
