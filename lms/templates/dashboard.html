@@ -66,6 +66,9 @@ from student.models import CourseEnrollment
       let $clearAllFilters = $('#clear-all-filters');
 
         $('.form-check-input').change(function() {
+            $enrolledCourse.show();
+            $('.form-check-input').not(this).prop('checked', false);
+
             if (selectedFilters.indexOf($(this).attr('id')) === -1) {
                 selectedFilters = [...selectedFilters, $(this).attr('id')];
             } else {
@@ -81,6 +84,8 @@ from student.models import CourseEnrollment
             } else {
                 $clearAllFilters.hide();
             }
+
+            console.log(selectedFilters)
         });
 
         $clearAllFilters.click(function() {
