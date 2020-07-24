@@ -213,7 +213,7 @@ from six import string_types
 		</div>
 	    %else:
 		<div class="hero">
-		  <img src="${course_image_urls['large']}">
+		  <img src="${course_image_urls['large']}" alt="">
 		</div>
 	    % endif
 	</aside>
@@ -250,7 +250,7 @@ from six import string_types
                             <p class="mt-2 mx-auto text-center">
                                 % if course.organizer:
         <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-        <img src="/static/images/org/${course_organize}.png" height="80">
+        <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80">
       % endif
                             </p>
                         </div>
