@@ -32,7 +32,7 @@ HeaderFactory();
 % endif
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md fixed-top navbar-light">
+<nav class="navbar navbar-expand-md fixed-top navbar-light" style="display: none">
     % if use_cookie_banner and ENABLE_GDPR_COMPAT_FLAG.is_enabled_without_course_context():
     ${static.renderReact(
     component="CookiePolicyBanner",
@@ -99,6 +99,126 @@ HeaderFactory();
         </div>
     </div>
 </nav>
+
+<div id="header-navigation" class="bg-white">
+    % if use_cookie_banner and ENABLE_GDPR_COMPAT_FLAG.is_enabled_without_course_context():
+    ${static.renderReact(
+    component="CookiePolicyBanner",
+    id="cookie-policy-banner",
+    props={}
+    )}
+    % endif
+    <div class="container">
+
+        <div class="navbar navbar-expand-md">
+
+            <a class="navbar-brand mr-3" href="/">
+                <img src="/static/images/logo-light-bg.svg" alt="Strona główna platformy Nawojka">
+            </a>
+
+            % if course and user.is_authenticated():
+
+            <span id="" class="course-preview-title d-flex flex-column flex-wrap">
+              % if course.organizer:
+                          <span class="provider text-uppercase text-darkgrey w-100">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</span><br>
+
+             % else:
+                          <span class="provider text-uppercase text-darkgrey w-100">${course.display_org_with_default}</span><br>
+
+              % endif
+             <span class="course-name text-primary text-uppercase">${course.display_name_with_default}</span>
+           </span>
+
+            % else:
+
+
+            % if request.path != '/':
+            <form method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
+                <div class="input-group w-100">
+                    <input class="form-control" id="form-control" type="search" name="search_query" placeholder="${_('What do you want to learn?')}">
+                    <div class="input-group-append">
+                        <button class="btn btn-light btn-outline-secondary" type="submit">Szukaj</button>
+                    </div>
+                </div>
+            </form>
+            % else:
+            <div></div>
+            % endif
+
+            % endif
+
+            <nav id="nav" aria-label="Nawiguj do wybranych stron platformy Nawojka">
+
+                <div class="dropdown ml-auto">
+                    <button id="mooc-my-mooc"
+                            class="btn btn-outline-primary border-secondary dropdown-toggle"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" aria-label="Menu - Moja Nawojka">
+                        <em class="fa fa-bars"></em>
+                    </button>
+                    <ul id="mooc-my-mooc-menu"
+                        class="dropdown-menu dropdown-menu-right"
+                        aria-labelledby="mooc-my-mooc">
+                        <h6 class="dropdown-header text-uppercase">Moje konto</h6>
+                        <li>
+                            <a class="dropdown-item" href="b.html">Zaloguj się</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="c.html">Zarejestruj się</a>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-uppercase">Kursy</h6>
+                        <li>
+                            <a class="dropdown-item" href="b.html">Katalog kursów</a>
+                        </li>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-uppercase">Wybierz język</h6>
+                        <li>
+                            <a class="dropdown-item text-capitalize"
+                               href="b.html"
+                               aria-label="Ustaw język interfejsu strony na polski">
+                                <img class="mooc-lang-flag"
+                                     src="https://img.icons8.com/color/32/000000/poland-circular.png"
+                                     aria-hidden="true"
+                                     alt="Język polski"
+                                     height="32">Polski
+                            </a></li>
+                        <li>
+                            <a class="dropdown-item text-capitalize"
+                               href="c.html"
+                               aria-label="Set the website interface language to English">
+                                <img class="mooc-lang-flag"
+                                     src="https://img.icons8.com/color/32/000000/great-britain-circular.png"
+                                     aria-hidden="true"
+                                     alt="English language"
+                                     height="32">English
+                            </a></li>
+                    </ul>
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                    <ul class="navbar-nav ml-auto">
+                        % if user.is_authenticated():
+                        <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
+                        % else:
+                        <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
+                        % endif
+
+
+                    </ul>
+                </div>
+
+            </nav>
+
+
+        </div>
+
+    </div>
+</div>
+
+
 
 
 % if course:
