@@ -1186,6 +1186,7 @@ INSTALLED_APPS = [
     'mptt',
     'haystack',
     'widget_tweaks',
+    'ckeditor',
 
     'xblock_jupyter_graded'
 ] + get_machina_apps()
@@ -1571,3 +1572,19 @@ from openedx.core.djangoapps.plugins import plugin_apps, plugin_settings, consta
 
 INSTALLED_APPS.extend(plugin_apps.get_apps(plugin_constants.ProjectType.CMS))
 plugin_settings.add_plugins(__name__, plugin_constants.ProjectType.CMS, plugin_constants.SettingsType.COMMON)
+
+############## Machina forum & ckeditor configuration #########################
+MACHINA_MARKUP_LANGUAGE = None
+MACHINA_MARKUP_WIDGET = 'ckeditor.widgets.CKEditorWidget'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+}
