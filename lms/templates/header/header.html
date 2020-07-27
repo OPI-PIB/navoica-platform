@@ -15,9 +15,12 @@ from openedx.core.djangolib.markup import HTML, Text
 from branding import api as branding_api
 from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled, released_languages
 
+
 # GDPR Flag
 from openedx.features.course_experience import ENABLE_GDPR_COMPAT_FLAG
 %>
+
+
 
 ## Provide a hook for themes to inject branding on top.
 <%block name="navigation_top" />
@@ -137,7 +140,7 @@ HeaderFactory();
                 <div class="input-group w-100">
                     <input class="form-control" id="form-control" type="search" name="search_query" placeholder="${_('What do you want to learn?')}">
                     <div class="input-group-append">
-                        <button class="btn btn-light btn-outline-secondary" type="submit">Szukaj</button>
+                        <button class="btn btn-light btn-outline-secondary" type="submit">${_('Search')}</button>
                     </div>
                 </div>
             </form>
@@ -159,23 +162,33 @@ HeaderFactory();
                     <ul id="mooc-my-mooc-menu"
                         class="dropdown-menu dropdown-menu-right"
                         aria-labelledby="mooc-my-mooc">
-                        <h6 class="dropdown-header text-uppercase">Moje konto</h6>
-                        <li>
-                            <a class="dropdown-item" href="b.html">Zaloguj się</a>
+                        <h6 class="dropdown-header text-uppercase">${_('My Account')}</h6>
+                        % if user.is_authenticated():
+                        <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
+                        <!--<li><a class="dropdown-item" href="${reverse('dashboard')}">${_("My Courses")}</a></li>
+                        <li><a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}">${_("Profile")}</a></li>
+                        <li><a class="dropdown-item" href="${reverse('account_settings')}">${_("Account")}</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a><li> -->
+                        % else:
+                        <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
+                       <!-- <li>
+                            <a class="dropdown-item" href="/login${login_query()}">${_("Log in")}</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="c.html">Zarejestruj się</a>
+                            <a class="dropdown-item" href="/register${login_query()}">${_("Register")}</a>
+                        </li>-->
+                        % endif
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-uppercase">${_("Courses")}</h6>
+                        <li>
+                            <a class="dropdown-item" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
                         </li>
                         <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-header text-uppercase">Kursy</h6>
-                        <li>
-                            <a class="dropdown-item" href="b.html">Katalog kursów</a>
-                        </li>
-                        <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-header text-uppercase">Wybierz język</h6>
+                        <h6 class="dropdown-header text-uppercase">${_("Choose Language")}</h6>
                         <li>
                             <a class="dropdown-item text-capitalize"
-                               href="b.html"
+                               href="#"
                                aria-label="Ustaw język interfejsu strony na polski">
                                 <img class="mooc-lang-flag"
                                      src="https://img.icons8.com/color/32/000000/poland-circular.png"
@@ -185,7 +198,7 @@ HeaderFactory();
                             </a></li>
                         <li>
                             <a class="dropdown-item text-capitalize"
-                               href="c.html"
+                               href="#"
                                aria-label="Set the website interface language to English">
                                 <img class="mooc-lang-flag"
                                      src="https://img.icons8.com/color/32/000000/great-britain-circular.png"
@@ -197,7 +210,7 @@ HeaderFactory();
 
                 </div>
 
-                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="collapse navbar-collapse desktop-menu" id="navbarResponsive">
 
                     <ul class="navbar-nav ml-auto">
                         % if user.is_authenticated():

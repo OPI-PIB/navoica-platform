@@ -13680,6 +13680,10 @@ span.complete-checkmark.fa.fa-check {
       line-height: 1rem;
     }
 
+    .desktop-menu, .my-account {
+      display: block;
+    }
+
   }
 }
 
@@ -13690,6 +13694,10 @@ span.complete-checkmark.fa.fa-check {
     .course-preview-title .provider, .course-preview-title .course-name {
       font-size: 0.6875rem;
       line-height: 0.8rem;
+    }
+
+    .desktop-menu {
+      display: none;
     }
   }
 
