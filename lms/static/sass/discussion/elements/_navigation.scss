@@ -591,7 +591,7 @@
 
       > h2 {
         color: map_get($grays, "900");
-        color: darkcyan;
+        color: teal;
         display: block;
         font-size: $font-size-base;
         font-weight: $font-weight-bold;
@@ -868,7 +868,7 @@
       padding: 2rem;
 
       &::before {
-        background: darkcyan;
+        background: teal;
         content: "";
         display: block;
         height: 4px;
@@ -919,7 +919,7 @@
   .post-labels {
     
 
-    color: darkcyan;
+    color: teal;
     display: flex;
     font-size: .875em;
     justify-content: flex-start;
