@@ -121,6 +121,10 @@ ${block_content}
         <div id="histogram_${element_id}" class="histogram" data-histogram="${histogram}"></div>
         %endif
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-sm close-window">${_("Close")}</button>
+
+      </div>
     </div>
   </div>      
 </div>
@@ -179,6 +183,7 @@ $(function () {
   $('.close-window').on('click', function() {
     $('.modal').hide();
     $('#lean_overlay').hide();
+    $('.modal-backdrop').hide();
 });
 </script>  
 %endif
