@@ -49,11 +49,181 @@ from student.models import CourseEnrollment
         changeEmailSettings: "${reverse('change_email_settings') | n, js_escaped_string}"
       });
 
+        document.onkeydown = function(e) {
+            if(e.keyCode === 13) {
+                document.activeElement.click();
+            }
+        };
+
       let MaxSignsNumber = 150;
       $('.course-text').each(function(index, el) {
           if ($(el).text().length > MaxSignsNumber) {
             $(el).text($(el).text().substring(0, MaxSignsNumber) + "...")}
               });
+
+      let selectedFilters = [];
+      let $enrolledCourse = $('.js-enrolled-course');
+      let $clearAllFilters = $('#clear-all-filters');
+
+        $('.form-check-input').change(function() {
+            $enrolledCourse.show();
+            $('.form-check-input').not(this).prop('checked', false);
+
+            if (selectedFilters.indexOf($(this).attr('id')) === -1) {
+                selectedFilters = [...selectedFilters, $(this).attr('id')];
+            } else {
+                let itemIndex = selectedFilters.findIndex(el => el === $(this).attr('id'));
+                selectedFilters = [
+                    ...selectedFilters.slice(0, itemIndex),
+                    ...selectedFilters.slice(itemIndex + 1)
+                ];
+            }
+
+            if (selectedFilters.length > 0) {
+                $clearAllFilters.show();
+            } else {
+                $clearAllFilters.hide();
+            }
+        });
+
+        $clearAllFilters.click(function() {
+            $('.form-check-input').each(function () {
+                    if ($(this).is(':checked')) $(this).trigger('click');
+                }
+            );
+        });
+
+        let upcomingCoursesCount = $enrolledCourse
+            .filter(function( index ) {
+                return new Date($(this).attr('data-datetime-start')) > new Date();
+            }).length;
+
+        let nowCoursesCount = $enrolledCourse
+            .filter(function( index ) {
+                return new Date($(this).attr('data-datetime-start')) < new Date();
+            }).length;
+
+        let finishedCoursesCount = $enrolledCourse
+            .filter(function( index ) {
+                return new Date($(this).attr('data-datetime-end')) < new Date();
+            }).length;
+
+        let certificatedCoursesCount = $enrolledCourse
+            .filter(function( index ) {
+                return $(this).attr('data-cert-status') === 'downloadable';
+            }).length;
+
+        let $countNumber = $('.count-number');
+
+        $countNumber.eq(0).text(String(upcomingCoursesCount));
+        $countNumber.eq(1).text(String(nowCoursesCount));
+        $countNumber.eq(2).text(String(finishedCoursesCount));
+        $countNumber.eq(3).text(String(certificatedCoursesCount));
+
+        let $courseFiltersInput = $('.js-course-enrollment-filters input');
+
+        if (upcomingCoursesCount <= 0) {
+            $courseFiltersInput.eq(0).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+        }
+        if (nowCoursesCount <= 0) {
+            $courseFiltersInput.eq(1).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+        }
+        if (finishedCoursesCount <= 0) {
+            $courseFiltersInput.eq(2).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+        }
+        if (certificatedCoursesCount <= 0) {
+            $courseFiltersInput.eq(3).attr('disabled', 'True').closest('li').attr('tabindex', '-1');
+        }
+
+
+        $('#upcoming').change(function() {
+            if ($(this).is(':checked')) {
+                $enrolledCourse
+                    .filter(function( index ) {
+                        return new Date($(this).attr('data-datetime-start')) < new Date()
+                    }).hide()
+            } else {
+                $enrolledCourse
+                    .filter(function( index ) {
+                        return new Date($(this).attr('data-datetime-start')) < new Date()
+                    }).show()
+            }
+        });
+
+        $('#now').change(function() {
+            if ($(this).is(':checked')) {
+                $enrolledCourse
+                    .filter(function( index ) {
+                        return new Date($(this).attr('data-datetime-start')) > new Date()
+                    }).hide()
+            } else {
+                $enrolledCourse
+                    .filter(function( index ) {
+                        return new Date($(this).attr('data-datetime-start')) > new Date()
+                    }).show()
+            }
+        });
+
+        $('#finished').change(function() {
+            if ($(this).is(':checked')) {
+                $enrolledCourse
+                    .filter(function( index ) {
+                        return new Date($(this).attr('data-datetime-end')) > new Date()
+                    }).hide()
+            } else {
+                $enrolledCourse
+                    .filter(function( index ) {
+                        return new Date($(this).attr('data-datetime-end')) > new Date()
+                    }).show()
+            }
+        });
+
+        $('#certificated').change(function() {
+            if ($(this).is(':checked')) {
+                $enrolledCourse
+                    .filter(function( index ) {
+                        return $(this).attr('data-cert-status') !== 'downloadable'
+                    }).hide()
+            } else {
+                $enrolledCourse
+                    .filter(function( index ) {
+                        return $(this).attr('data-cert-status') !== 'downloadable'
+                    }).show()
+            }
+        });
+
+        $( ".custom-select" ).change(function() {
+            let $target = $("#sorting-form");
+            $target = $target.find('option:selected');
+            let sort = $target.val();
+
+            let $enrolledCourseList =  $(".js-enrolled-courses-list");
+
+            if (sort === 'name') {
+                $enrolledCourseList.each(function(){
+                    $(this).html($(this).children('.js-enrolled-course').sort(function(a, b){
+                        return ($(a).data('title')).localeCompare($(b).data('title'))
+                    }));
+                });
+            }
+
+            if (sort === '-name') {
+                $enrolledCourseList.each(function(){
+                    $(this).html($(this).children('.js-enrolled-course').sort(function(a, b){
+                        return ($(b).data('title')).localeCompare($(a).data('title'));
+                    }));
+                });
+            }
+
+            if (sort === 'byCourseEnroll') {
+                $enrolledCourseList.each(function(){
+                    $(this).html($(this).children('.js-enrolled-course').sort(function(a, b){
+                        return ($(a).data('datetime-enrollment')) > ($(b).data('datetime-enrollment')) ? 1 : -1;
+                    }));
+                });
+            }
+
+        });
     });
   </script>
   <%static:webpack entry="UnenrollmentFactory">
@@ -140,14 +310,97 @@ from student.models import CourseEnrollment
 
 </div>
 
+        <aside id="filters" class="sidebar">
+            <div class="bg-brand rounded search-facets">
+                <h2 id="filter-bar" class="list-group filters hide-phone d-none d-md-block is-animated is-collapsed">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="d-none d-md-block" id="h2" tabindex="0" aria-labelledby="Filtrowanie">Filtrowanie</span>
+                        <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true" tabindex="0" aria-labelledby="Filtrowanie">Filtry</a>
+                        <a id="clear-all-filters" href="#" class="clear-filters flt-right btn btn-primary btn-sm btn-icon" style="display: none;" tabindex="0" aria-label="Wyczyść filtry" role="button">wyczyść filtry</a>
+                    </div>
+
+                </h2>
+                <a href="#search-facets-lists" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">FILTRY</a>
+
+                <div id="search-facets-lists" class="search-facets-lists collapse">
+
+                    <div class="list-group list-gruop-flush" data-facet="availability">
+
+                        <div class="list-group-item">
+                            <div class="header-facet">
+                                Status kursu
+                            </div>
+                        </div>
+
+                        <ul data-facet="availability" class="facet-list col-12 px-0 js-course-enrollment-filters" role="list">
+
+                            <li id="filter-list" role="listitem">
+                                <button type="button" data-facet="availability" data-value="Upcoming" data-text="W przygotowaniu" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                    <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
+                                        <input type="checkbox" class="form-check-input my-0" name="upcoming" id="upcoming">
+                                        <label class="form-check-label label flex-fill" for="upcoming">Nadchodzący</label>
+                                        <span class="count-number"></span>
+                                    </div>
+                                </button>
+                            </li>
+
+                            <li id="filter-list" role="listitem">
+                                <button type="button" data-facet="availability" data-value="Now" data-text="W trakcie" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                    <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
+                                        <input type="checkbox" class="form-check-input my-0" name="now" id="now">
+                                        <label class="form-check-label label flex-fill" for="now">W trakcie</label>
+                                        <span class="count-number"></span>
+                                    </div>
+                                </button>
+                            </li>
+
+                            <li id="filter-list" role="listitem">
+                                <button type="button" data-facet="availability" data-value="Ended" data-text="Zakończony" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                    <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
+                                        <input type="checkbox" class="form-check-input my-0" name="finished" id="finished">
+                                        <label class="form-check-label label flex-fill" for="finished">Zakończony</label>
+                                        <span class="count-number"></span>
+                                    </div>
+                                </button>
+                            </li>
+
+                            <li id="filter-list" role="listitem">
+                                <button type="button" data-facet="availability" data-value="Certificated" data-text="Z zaświadczeniem" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                    <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
+                                        <input type="checkbox" class="form-check-input my-0" name="certificated" id="certificated">
+                                        <label class="form-check-label label flex-fill" for="certificated">Z zaświadczeniem</label>
+                                        <span class="count-number"></span>
+                                    </div>
+                                </button>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </aside>
+
       <section id="results">
-        <header id="header-login">
-          <h2 id="h2">Lista kursów</h2>
+        <header id="header-login" class="d-flex justify-content-between align-items-center flex-wrap px-1">
+          <h2 id="h2" class="my-0">Lista kursów</h2>
+
+            <div id="sorting-form" tabindex="0" aria-labelledby="Sortuj według" class="col-lg-4 col-md-6 col-sm-12 px-0">
+                Sortuj według:
+                <label for="enrolled-course-sort" style="display: none">Sortuj według:</label>
+                <select id="enrolled-course-sort" tabindex="0" class="custom-select" name="select">
+                    <option value="byCourseEnroll">Domyślnie</option>
+                    <option value="name">Alfabetycznie A-Z</option>
+                    <option value="-name">Alfabetycznie Z-A</option>
+                </select>
+            </div>
         </header>
 
 
           % if len(course_entitlements + course_enrollments) > 0:
-            <div class="row">
+            <div class="row js-enrolled-courses-list">
             <%
                 share_settings = configuration_helpers.get_value(
                     'SOCIAL_SHARING_SETTINGS',
