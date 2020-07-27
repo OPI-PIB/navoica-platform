@@ -22,7 +22,7 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 
 
 % if courses_are_browsable:
-<li class="nav-item">
+<li class="nav-item desktop-menu">
     <a href="${marketing_link('COURSES')}"><button type="button" class="btn btn-outline-primary btn-sm">${_("Discover New")}</button></a>
 </li>
 % endif
@@ -54,21 +54,59 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 % endif
 
 % if allows_login:
-% if restrict_enroll_for_course:
-<li class="nav-item">
+        % if restrict_enroll_for_course:
+<li class="nav-item desktop-menu">
     <a class="btn btn-primary btn-smr" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
+</li>
+<li class="mobile-menu">
+    <a class="dropdown-item" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register")}</a>
 </li>
 <li class="nav-item">
     <a href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}"><button type="button" class="btn btn-outline-primary btn-sm"> ${_("Sign in")}</button></a>
 </li>
+
 % else:
-<li class="nav-item">
+<li class="nav-item desktop-menu">
     <a href="/login${login_query()}"><button type="button" class="btn btn-outline-primary btn-sm"> ${_("Log in")}</button></a>
 </li>
+<li class="mobile-menu">
+    <a class="dropdown-item" href="/login${login_query()}">${_("Log in")}</a>
+</li>
 % if allow_public_account_creation:
-<li class="nav-item">
+<li class="nav-item desktop-menu">
     <a class="btn btn-primary btn-sm" href="/register${login_query()}"> ${_("Register")}</a>
+</li>
+<li class="mobile-menu">
+    <a class="dropdown-item" href="/register${login_query()}">${_("Register")}</a>
 </li>
 % endif
 % endif
 % endif
+
+<div class="dropdown-divider mobile-menu"></div>
+<h6 class="dropdown-header text-uppercase mobile-menu">${_("Courses")}</h6>
+<li class="mobile-menu">
+    <a class="dropdown-item" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
+</li>
+<div class="dropdown-divider mobile-menu"></div>
+<h6 class="dropdown-header text-uppercase mobile-menu">${_("Choose Language")}</h6>
+<li class="mobile-menu">
+    <a class="dropdown-item text-capitalize"
+       href="#"
+       aria-label="Ustaw język interfejsu strony na polski">
+        <img class="mooc-lang-flag"
+             src="/static/images/pl-lang.png"
+             aria-hidden="true"
+             alt="Język polski"
+             height="32">${_('Polish')}
+    </a></li>
+<li class="mobile-menu">
+    <a class="dropdown-item text-capitalize"
+       href="#"
+       aria-label="Set the website interface language to English">
+        <img class="mooc-lang-flag"
+             src="/static/images/en-lang.png"
+             aria-hidden="true"
+             alt="English language"
+             height="32">${_('English')}
+    </a></li>

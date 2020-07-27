@@ -35,73 +35,7 @@ HeaderFactory();
 % endif
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md fixed-top navbar-light" style="display: none">
-    % if use_cookie_banner and ENABLE_GDPR_COMPAT_FLAG.is_enabled_without_course_context():
-    ${static.renderReact(
-    component="CookiePolicyBanner",
-    id="cookie-policy-banner",
-    props={}
-    )}
-    % endif
-    <div class="container">
-		<a class="navbar-brand" href="/">
-            <img src="/static/images/logo-light-bg.svg" alt="Nawojka">
-            <!--<img id="img-mobile" src="/static/images/navoica_m.png" alt="Nawojka">-->
-        </a>
 
-        % if course and user.is_authenticated():
-
-         <span id="provider_course">
-              % if course.organizer:
-                          <span class="provider"><strong>${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</strong></span><br>
-
-             % else:
-                          <span class="provider"><strong>${course.display_org_with_default}</strong></span><br>
-
-              % endif
-             <span class="course-name" title="${course.display_name_with_default}">${course.display_name_with_default}</span>
-           </span>
-
-        % else:
-
-
-         % if request.path != '/':
-            <form method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
-                <div class="input-group w-100">
-                    <input class="form-control" id="form-control" type="search" name="search_query" placeholder="${_('What do you want to learn?')}">
-                    <div class="input-group-append">
-                        <button class="btn btn-light btn-outline-secondary" type="submit">Szukaj</button>
-                    </div>
-                </div>
-            </form>
-	  % else:
-		<div></div>
-          % endif
-
-        % endif
-
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-
-            <ul class="navbar-nav ml-auto">
-                % if user.is_authenticated():
-                <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
-                % else:
-                <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
-                % endif
-
-
-            </ul>
-        </div>
-    </div>
-</nav>
 
 <div id="header-navigation" class="bg-white">
     % if use_cookie_banner and ENABLE_GDPR_COMPAT_FLAG.is_enabled_without_course_context():
@@ -165,47 +99,9 @@ HeaderFactory();
                         <h6 class="dropdown-header text-uppercase">${_('My Account')}</h6>
                         % if user.is_authenticated():
                         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
-                        <!--<li><a class="dropdown-item" href="${reverse('dashboard')}">${_("My Courses")}</a></li>
-                        <li><a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}">${_("Profile")}</a></li>
-                        <li><a class="dropdown-item" href="${reverse('account_settings')}">${_("Account")}</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li><a class="dropdown-item" href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a><li> -->
                         % else:
                         <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
-                       <!-- <li>
-                            <a class="dropdown-item" href="/login${login_query()}">${_("Log in")}</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="/register${login_query()}">${_("Register")}</a>
-                        </li>-->
                         % endif
-                        <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-header text-uppercase">${_("Courses")}</h6>
-                        <li>
-                            <a class="dropdown-item" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
-                        </li>
-                        <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-header text-uppercase">${_("Choose Language")}</h6>
-                        <li>
-                            <a class="dropdown-item text-capitalize"
-                               href="#"
-                               aria-label="Ustaw język interfejsu strony na polski">
-                                <img class="mooc-lang-flag"
-                                     src="https://img.icons8.com/color/32/000000/poland-circular.png"
-                                     aria-hidden="true"
-                                     alt="Język polski"
-                                     height="32">Polski
-                            </a></li>
-                        <li>
-                            <a class="dropdown-item text-capitalize"
-                               href="#"
-                               aria-label="Set the website interface language to English">
-                                <img class="mooc-lang-flag"
-                                     src="https://img.icons8.com/color/32/000000/great-britain-circular.png"
-                                     aria-hidden="true"
-                                     alt="English language"
-                                     height="32">English
-                            </a></li>
                     </ul>
 
                 </div>

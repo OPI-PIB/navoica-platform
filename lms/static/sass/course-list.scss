@@ -13623,6 +13623,10 @@ span.complete-checkmark.fa.fa-check {
   line-height: 1.65;
 }
 
+#header-navigation .dropdown-item:hover, #header-navigation .dropdown-item {
+  border-left: 5px transparent solid;
+}
+
 #header-navigation .dropdown-item:hover, #header-navigation .dropdown-item:focus {
   color: #000000;
   text-decoration: none;
@@ -13684,6 +13688,10 @@ span.complete-checkmark.fa.fa-check {
       display: block;
     }
 
+    .mobile-menu {
+      display: none;
+    }
+
   }
 }
 
@@ -13698,6 +13706,10 @@ span.complete-checkmark.fa.fa-check {
 
     .desktop-menu {
       display: none;
+    }
+
+    .mobile-menu {
+      display: block;
     }
   }
 
