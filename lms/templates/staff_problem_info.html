@@ -55,72 +55,77 @@ ${block_content}
 </div>
 
 <div aria-hidden="true" role="dialog" tabindex="-1" class="modal staff-modal" id="${element_id}_debug" >
-  <div class="inner-wrapper">
-    <header>
-      <h2>${_('Staff Debug:')} ${dict(fields)['display_name']}</h2>
-    </header>
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="inner-wrapper modal-content">
+      <header class="modal-header">
+        <h2 class="modal-title">${_('Staff Debug:')} ${dict(fields)['display_name']}</h2>
+        <button type="button" class="close close-window" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </header>  
+      <div class="modal-body">
+        <div class="staff_actions">
+          <h3>${_('Actions')}</h3>
+          <div>
+            <label for="sd_fu_${location.block_id | h}">${_('Username')}:</label>
+            <input type="text" tabindex="0" id="sd_fu_${location.block_id | h}" placeholder="${user.username}"/>
+          </div>
+          % if can_override_problem_score:
+          <div>
+            <label for="sd_fs_${location.block_id | h}">${_('Score (for override only)')}:</label>
+            <input class="w-25" type="text" tabindex="0" id="sd_fs_${location.block_id | h}" placeholder="0"/>
+            <label for="sd_fs_${location.block_id | h}"> / ${max_problem_score}</label>
+          </div>
+          % endif
+          <div class="row" data-location="${location | h}" data-location-name="${location.block_id | h}">
+            
+            % if can_reset_attempts:
+            <button type="button" class="btn btn-outline-primary btn-sm btn-block staff-debug-reset">${_('Reset Learner\'s Attempts to Zero')}</button>
+            
+            % endif
+            <button type="button" class="btn btn-outline-primary btn-sm btn-block staff-debug-sdelete">${_('Delete Learner\'s State')}</button>
+            % if can_rescore_problem:
+            
+            <button type="button" class="btn btn-outline-primary btn-sm btn-block staff-debug-rescore">${_('Rescore Learner\'s Submission')}</button>
+            
+            <button type="button" class="btn btn-outline-primary btn-sm btn-block staff-debug-rescore-if-higher">${_('Rescore Only If Score Improves')}</button>
+            
+            % endif
+            % if can_override_problem_score:
+            <button type="button" class="btn btn-outline-primary btn-sm btn-block staff-debug-override-score">${_('Override Score')}</button>
+            % endif
+            
+          </div>
+          <div id="result_${location.block_id | h}"></div>
+        </div>
 
-    <hr />
-    <div class="staff_actions">
-      <h3>${_('Actions')}</h3>
-      <div>
-        <label for="sd_fu_${location.block_id | h}">${_('Username')}:</label>
-        <input type="text" tabindex="0" id="sd_fu_${location.block_id | h}" placeholder="${user.username}"/>
+        <div class="staff_info" style="display:block">
+          is_released = ${is_released}
+          location = ${text_type(location) | h}
+
+          <table summary="${_('Module Fields')}">
+            <tr><th>${_('Module Fields')}</th></tr>
+            %for name, field in fields:
+            <tr><td style="width:25%">${name}</td><td style="width:25%"><pre class="text-break" style="display:inline-block; margin: 0;">${field | h}</pre></td></tr>
+            %endfor
+          </table>
+          <table>
+            <tr><th>${_('XML attributes')}</th></tr>
+            %for name, field in xml_attributes.items():
+            <tr><td style="width:25%">${name}</td><td style="width:25%"><pre class="text-break" style="display:inline-block; margin: 0;">${field | h}</pre></td></tr>
+            %endfor
+          </table>
+          category = ${category | h}
+        </div>
+        %if render_histogram:
+        <div id="histogram_${element_id}" class="histogram" data-histogram="${histogram}"></div>
+        %endif
       </div>
-      % if can_override_problem_score:
-      <div>
-        <label for="sd_fs_${location.block_id | h}">${_('Score (for override only)')}:</label>
-        <input type="text" tabindex="0" id="sd_fs_${location.block_id | h}" placeholder="0"/>
-        <label for="sd_fs_${location.block_id | h}"> / ${max_problem_score}</label>
-      </div>
-      % endif
-      <div data-location="${location | h}" data-location-name="${location.block_id | h}">
-        [
-        % if can_reset_attempts:
-        <button type="button" class="btn-link staff-debug-reset">${_('Reset Learner\'s Attempts to Zero')}</button>
-        |
-        % endif
-        <button type="button" class="btn-link staff-debug-sdelete">${_('Delete Learner\'s State')}</button>
-        % if can_rescore_problem:
-        |
-        <button type="button" class="btn-link staff-debug-rescore">${_('Rescore Learner\'s Submission')}</button>
-        |
-        <button type="button" class="btn-link staff-debug-rescore-if-higher">${_('Rescore Only If Score Improves')}</button>
-        |
-        % endif
-        % if can_override_problem_score:
-        <button type="button" class="btn-link staff-debug-override-score">${_('Override Score')}</button>
-        % endif
-        ]
-      </div>
-      <div id="result_${location.block_id | h}"></div>
     </div>
-
-    <div class="staff_info" style="display:block">
-      is_released = ${is_released}
-      location = ${text_type(location) | h}
-
-      <table summary="${_('Module Fields')}">
-        <tr><th>${_('Module Fields')}</th></tr>
-        %for name, field in fields:
-        <tr><td style="width:25%">${name}</td><td><pre style="display:inline-block; margin: 0;">${field | h}</pre></td></tr>
-        %endfor
-      </table>
-      <table>
-        <tr><th>${_('XML attributes')}</th></tr>
-        %for name, field in xml_attributes.items():
-        <tr><td style="width:25%">${name}</td><td><pre style="display:inline-block; margin: 0;">${field | h}</pre></td></tr>
-        %endfor
-      </table>
-      category = ${category | h}
-    </div>
-    %if render_histogram:
-    <div id="histogram_${element_id}" class="histogram" data-histogram="${histogram}"></div>
-    %endif
-  </div>
+  </div>      
 </div>
 
-<div role="dialog" tabindex="-1" class="modal history-modal text-break" id="${element_id}_history">
+<div aria-hidden="true" role="dialog" tabindex="-1" class="modal history-modal text-break" id="${element_id}_history">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="inner-wrapper modal-content">
       <header class="modal-header">
