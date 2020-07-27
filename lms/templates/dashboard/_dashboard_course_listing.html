@@ -41,7 +41,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
 
 
-<div class="col-lg-3 col-md-6 mb-1 js-enrolled-course"
+<div class="col-lg-4 col-md-6 mb-1 js-enrolled-course"
      data-title="${course_overview.display_name_with_default.lower()}"
      data-datetime-end="${course_overview.end}"
      data-datetime-start="${course_overview.dashboard_start_display}"
@@ -104,117 +104,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
            </div>
 
 
-
-           <div class="card-footer" id="border_top">
-
-             <div class="course-meta">
-
-                <%
-            if course_overview.start_date_is_still_default:
-                container_string = _("Coming Soon")
-                course_date = None
-            else:
-                format = 'shortDate'
-                if course_overview.has_ended():
-                    container_string = _("Ended - {date}")
-                    course_date = course_overview.end
-                elif course_overview.has_started():
-                    container_string = _("Started - {date}")
-                    course_date = course_overview.dashboard_start_display
-                elif course_overview.starts_within(days=5):
-                    container_string = _("Starts - {date}")
-                    course_date = course_overview.dashboard_start_display
-                    format = 'defaultFormat'
-                else: ## hasn't started yet
-                    container_string = _("Starts - {date}")
-                    course_date = course_overview.dashboard_start_display
-                endif
-            endif
-          %>
-
-                % if isinstance(course_date, basestring):
-                        <span class="course-card-start info-date-block"><i class="icon-calendar"></i> ${container_string.format(date=course_date)}</span>
-                    % elif course_date is not None:
-                    <strong><span class="course-card-start info-date-block localized-datetime" data-language="${LANGUAGE_CODE}"  data-format-language="${LANGUAGE_CODE}" data-timezone="${user_timezone}"  data-datetime="${course_date.strftime('%Y-%m-%dT%H:%M:%S%z')}" data-format=${format} data-string="${container_string}"></span></strong>
-                    % endif
-
-                <span class="info-date-block-container">
-                % if is_unfulfilled_entitlement:
-                    <span class="info-date-block" aria-live="polite">
-                        <span class="icon fa fa-warning" aria-hidden="true"></span>
-                        % if not entitlement_expired_at:
-                            % if entitlement_expiration_date:
-                                ${_('You must select a session by {expiration_date} to access the course.').format(expiration_date=entitlement_expiration_date)}
-                            % else:
-                                ${_('You must select a session to access the course.')}
-                            % endif
-                        % endif
-                    </span>
-                % endif
-                % if entitlement:
-                    % if not entitlement_expired_at:
-                        <button class="change-session btn-link ${'hidden' if is_unfulfilled_entitlement else ''}">${_('Change or Leave Session')}</button>
-                    % endif
-                % endif
-            </span>
-            % if entitlement and not is_unfulfilled_entitlement and entitlement_expiration_date:
-                <div class="info-expires-at">
-                        <span class="msg-icon fa fa-warning" aria-hidden="true"></span>
-                        % if entitlement_expired_at:
-                            ${_('You can no longer change sessions.')}
-                        % else:
-                            ${_('You can change sessions until {entitlement_expiration_date}.').format(entitlement_expiration_date=entitlement_expiration_date)}
-                        % endif
-                </div>
-            % endif
-                <div>
-                      % if can_unenroll:
-                          <% course_refund_url = reverse('course_run_refund_status', args=[unicode(course_overview.id)]) %>
-                              % if not is_course_blocked:
-
-                              (<a href="#unenroll-modal" id="unenroll-0" class="action-unenroll" rel="leanModal"
-                                 data-course-id="${course_overview.id}"
-                                 course-id="${course_overview.id}"
-                                 data-course-number="${course_overview.number}"
-                                 data-course-name="${course_overview.display_name_with_default}"
-                                 data-dashboard-index="${dashboard_index}"
-                                 data-course-refund-url="${course_refund_url}"
-                                 data-course-is-paid-course="${is_paid_course}"
-                                 data-course-cert-name-long="${cert_name_long}"
-                                 data-course-enrollment-mode="${enrollment.mode}">
-                                ${_('Unenroll')}
-                              </a>)
-                              % else:
-                              <a class="dropdown-item action-unenroll"  id="unenroll-0"
-                                 data-course-id="${course_overview.id}"
-                                 data-course-number="${course_overview.number}"
-                                 data-course-name="${course_overview.display_name_with_default}"
-                                 data-dashboard-index="${dashboard_index}"
-                                 data-course-refund-url="${course_refund_url}"
-                                 data-course-is-paid-course="${is_paid_course}"
-                                 data-course-cert-name-long="${cert_name_long}"
-                                 data-course-enrollment-mode="${enrollment.mode}">
-                                ${_('Unenroll')}
-                              </a>)
-                            % endif
-                    % endif
-                  </div>  
-                     % if false:
-                        % if show_email_settings:
-                          % if not is_course_blocked:
-                            <a href="#email-settings-modal" class="dropdown-item action-email-settings" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
-                          % else:
-                            <a class="dropdown-item action-email-settings" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
-                          % endif
-                        % endif
-                      % endif
-
-                </div>
-
-
-           <!-- </div>-->
-          </div>
-
+    <div class="card-footer">
 
       % if entitlement and not entitlement_expired_at:
         <div class="course-entitlement-selection-container ${'' if is_unfulfilled_entitlement else 'hidden'}"></div>
@@ -252,6 +142,18 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
           </ul>
         </div>
       % endif
+
+
+      <div class="course-cert mb-0">
+          <p>dsfasf</p>
+          <p>dsfasf</p>
+        % if cert_status:
+            <%include file='_dashboard_certificate_information.html' args='cert_status=cert_status,course_overview=course_overview, enrollment=enrollment, reverify_link=reverify_link'/>
+        % endif
+        % if credit_status is not None:
+            <%include file="_dashboard_credit_info.html" args="credit_status=credit_status"/>
+        % endif
+       </div>
 
       % if is_course_blocked and entitlement:
         <p id="block-course-msg" class="course-block">
@@ -480,16 +382,6 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                         % endif
                       % endif
 
-                </div>
-
-                <div class="course-cert mb-0">
-                  % if cert_status:
-                    <%include file='_dashboard_certificate_information.html' args='cert_status=cert_status,course_overview=course_overview, enrollment=enrollment, reverify_link=reverify_link'/>
-                  % endif
-
-                  % if credit_status is not None:
-                    <%include file="_dashboard_credit_info.html" args="credit_status=credit_status"/>
-                  % endif
                 </div>
 
            <!-- </div>-->
