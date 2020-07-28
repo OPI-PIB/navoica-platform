@@ -68,6 +68,14 @@ from django.conf import settings
     </div>
 </footer>
 
+<div class="alert text-center cookiealert" role="alert">
+    ${_('We use cookies and similar technologies to provide services and to gather information for statistical and other purposes. You can change the way you want the cookies to be stored or accessed on your device in the settings of your browser. If you do not agree, change the settings of your browser. For more information, refer to our')} <a href="/privacy">${_('Privacy policy')}</a>.
+
+    <button type="button" class="btn btn-primary btn-sm acceptcookies">
+        ${_('Close')}
+    </button>
+</div>
+
 % if include_dependencies:
 <%static:js group='base_vendor'/>
 <%static:css group='style-vendor'/>

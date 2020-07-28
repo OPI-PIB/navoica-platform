@@ -1469,6 +1469,7 @@ PIPELINE_CSS = {
 
             'css/course-list.css',
             'css/faq.css',
+            'css/cookie-alert.css',
             #'css/course-content.css',
             #'css/polipedia.css',
             #'css/polipedia.custom.css',
@@ -1503,6 +1504,7 @@ PIPELINE_CSS = {
     'style-main-v1': {
         'source_filenames': [
            #'css/lms-main-v1.css',
+           #'css/cookie-alert.css'
          ],
         'output_filename': 'css/lms-main-v1.css',
     },
@@ -1669,6 +1671,7 @@ xblock_runtime_js = [
 lms_application_js = [
     'js/calculator.js',
     'js/feedback_form.js',
+    'js/cookie-alert.js',
     'js/main.js',
 
     # 'lms/js/polipedia.js'
