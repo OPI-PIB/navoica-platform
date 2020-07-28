@@ -196,6 +196,7 @@ def _create_recent_enrollment_message(course_enrollments, course_modes):  # pyli
             {
                 'course_names': recently_enrolled_courses[0].course_overview.display_name,
                 'current_time': time,
+                'recently_enrolled_courses': recently_enrolled_courses,
                 'course_date_start': recently_enrolled_courses[0].course_overview.dashboard_start_display,
                 'enrollments_count': enrollments_count,
                 'allow_donations': allow_donations,

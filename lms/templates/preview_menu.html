@@ -95,7 +95,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
               <p class="mt-2 mx-auto text-center">
                 % if course.organizer:
 		  <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-		    <img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
+		    <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80" class="d-block mt-4">
 		% endif
               </p>
             </div>
@@ -140,7 +140,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
               <p class="mt-2 mx-auto text-center">
                 % if course.organizer:
                   <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-                    <img src="/static/images/org/${course_organize}.png" height="80" class="d-block mt-4">
+                    <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80" class="d-block mt-4">
                 % endif
               </p>
             </div>
