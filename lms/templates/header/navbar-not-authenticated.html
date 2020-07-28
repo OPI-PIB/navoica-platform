@@ -74,7 +74,7 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 </li>
 % if allow_public_account_creation:
 <li class="nav-item desktop-menu">
-    <a class="btn btn-primary btn-sm" href="/register${login_query()}"> ${_("Register")}</a>
+    <a class="btn btn-primary btn-sm" href="/register${login_query()}">${_("Register")}</a>
 </li>
 <li class="mobile-menu">
     <a class="dropdown-item" href="/register${login_query()}">${_("Register")}</a>
