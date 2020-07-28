@@ -13785,7 +13785,7 @@ span.complete-checkmark.fa.fa-check {
   background-color: transparent;
 }
 
-.btn-outline-primary:not(:disabled):not(.disabled):active, #header-navigation .btn-outline-primary:not(:disabled):not(.disabled).active,
+#header-navigation .btn-outline-primary:not(:disabled):not(.disabled):active, #header-navigation .btn-outline-primary:not(:disabled):not(.disabled).active,
 #header-navigation .show > .btn-outline-primary.dropdown-toggle {
   color: #fff;
   background-color: #cf1930;
@@ -13795,6 +13795,12 @@ span.complete-checkmark.fa.fa-check {
 #header-navigation .course-preview-title {
   max-width: 50%;
   line-height: 0;
+}
+
+.d-none {
+  & #header-navigation {
+    display: none;
+  }
 }
 
 .text-darkgrey {
