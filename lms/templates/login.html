@@ -169,7 +169,7 @@ from third_party_auth import provider, pipeline
 %endif
 
     <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
         <div class="d-flex">
           <article id="result">
            <header id="header-login">
@@ -179,7 +179,7 @@ from third_party_auth import provider, pipeline
             </header>
             <h1><strong>${_("Please log in")}</strong><br>${_("to access your account and courses")}</h1>
       
-      <form role="form" id="login-form" method="post" data-remote="true" action="/login_ajax" novalidate autocomplete="disabled">
+      <form role="form" id="login-form" method="post" data-remote="true" action="/login_ajax" novalidate autocomplete="off">
 
 		  <!-- status messages -->
 		  <div role="alert" class="status message" id="alert-info">
@@ -215,17 +215,17 @@ from third_party_auth import provider, pipeline
 			
 			<div class="form-group form-group-required field required text">
               <label for="email">E-mail</label>
-              <input class="form-control" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" required aria-required="true" aria-described-by="email-tip" autocomplete="disabled"/>
+              <input class="form-control" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" aria-describedby="email-tip" autocomplete="off" required aria-required="true">
               <small id="emailHelp" class="tip tip-input form-text text-muted">${_("This is the e-mail address you used to register with {platform}").format(platform=platform_name)}</small>
             </div>
             <div class="form-group form-group-required field required password">
               <div class="d-flex justify-content-between align-items-center">
                 <label for="password">Hasło</label>
-                <span class="tip tip-input">
-				  <a href="#forgot-password-modal" rel="leanModal" class="pwd-reset action action-forgotpw" id="forgot-password-link" role="button" aria-haspopup="true">${_('Forgot password?')}</a>
-				</span>
               </div>
               <input type="password" class="form-control" id="password" name="password" value="" required aria-required="true">
+				<div class="tip tip-input">
+				  <a href="#forgot-password-modal" rel="leanModal" class="pwd-reset action action-forgotpw" id="forgot-password-link" role="button" aria-haspopup="true">${_('Forgot password?')}</a>
+				</div>
             </div>
 		  </div>
 		  <div class="form-group">
