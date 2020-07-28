@@ -8,9 +8,10 @@
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
+# Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
 #
 # #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
@@ -37,9 +38,9 @@
 # Navoica Navoica <navoica@opi.org.pl>, 2020
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
 # Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -68,7 +69,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-07-13 08:05+0000\n"
+"POT-Creation-Date: 2020-07-13 13:09+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -2981,7 +2982,7 @@ msgstr "Wprowadź datę publikacji zapowiedzi twojego kursu."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Cohort Configuration"
-msgstr "Konfiguracja grupy"
+msgstr "Konfiguracja kohorty"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -7444,11 +7445,11 @@ msgstr "zapisy"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "The file must contain a 'cohort' column containing cohort names."
-msgstr "Plik musi zawierać kolumnę \"grupa\" obejmującą nazwy grup użytkowników."
+msgstr "Plik musi zawierać kolumnę \"cohort\" obejmującą nazwy grup użytkowników."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "The file must contain a 'username' column, an 'email' column, or both."
-msgstr "Plik musi zawierać kolumnę 'użytkownik', kolumnę 'e-mail' lub obie."
+msgstr "Plik musi zawierać kolumnę 'username', kolumnę 'email' lub obie."
 
 #: lms/djangoapps/instructor/views/api.py
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
@@ -9650,10 +9651,8 @@ msgstr " Czym jest Navoica?"
 #: lms/djangoapps/static_template_view/faq_content.py
 msgid "FAQ_Answer1.1"
 msgstr ""
-"Navoica jest ogólnopolską platformą edukacyjną oferującą bezpłatne kursy "
-"online typu MOOC (ang. Massive Open Online Courses) realizowane przez "
-"uczelnie i instytucje. Dzięki platformie internetowej docieramy do każdego, "
-"kto chce się uczyć bez względu na wiek i miejsce zamieszkania."
+"NAVOICA to ogólnopolska platforma edukacyjna oferująca bezpłatne kursy online typu MOOC (ang. Massive Open Online Courses) realizowane przez uczelnie i instytucje edukacyjne. Dzięki platformie, dostępnej pod adresem navioca.pl, docieramy do każdego, kto chce się uczyć bez względu na wiek i miejsce zamieszkania. \n"
+"NAVOICA powstała w ramach projektu pn. „Polski MOOC”, realizowanego na zlecenie Ministerstwa Nauki i Szkolnictwa Wyższego. Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy stworzył i stale rozwija platformę pod względem technologicznym. Operatorem merytorycznym do 15 lipca 2020 była Fundacja Młodej Nauki. Konferencja Rektorów Akademickich Szkół Polskich wspiera zaś tę inicjatywę instytucjonalnie. Projekt „Polski MOOC” ma charakter niekomercyjny."
 
 #: lms/djangoapps/static_template_view/faq_content.py
 msgid "FAQ_Question1.2"
@@ -9998,8 +9997,7 @@ msgstr "Mam problem techniczny, w jaki sposób mogę uzyskać pomoc?"
 #: lms/djangoapps/static_template_view/faq_content.py
 msgid "FAQ_Answer6.1"
 msgstr ""
-"Operatorem technicznym jest Ośrodek Przetwarzania Informacji. Wszystkie "
-"zapytania techniczne prosimy wysyłać na adres e-mailowy: "
+"Wszystkie zapytania techniczne prosimy wysyłać na adres e-mailowy: "
 "mooc_help@opi.org.pl"
 
 #: lms/djangoapps/static_template_view/faq_content.py
@@ -10009,8 +10007,8 @@ msgstr "Mam ogólne pytanie, w jaki sposób mogę uzyskać pomoc? "
 #: lms/djangoapps/static_template_view/faq_content.py
 msgid "FAQ_Answer6.2"
 msgstr ""
-"Operatorem merytorycznym jest Fundacja Młodej Nauki. Wszystkie zapytania "
-"ogólne prosimy wysyłać na adres e-mailowy: fmn@fmn.org.pl"
+"Wszystkie zapytania ogólne prosimy wysyłać na adres e-mail: "
+"navoica@opi.org.pl"
 
 #: lms/djangoapps/student_account/test/test_views.py
 #: openedx/features/enterprise_support/utils.py
@@ -21735,8 +21733,7 @@ msgstr ""
 "użytkownik zobowiązany jest do zapoznania się z Regulaminem. Korzystanie z "
 "Usług możliwe jest jedynie w przypadku akceptacji Regulaminu. W przypadku "
 "Jednostek edukacyjnych korzystanie z Usług możliwe jest po zawarciu "
-"dodatkowej umowy z Operatorem merytorycznym i Operatorem technicznym w "
-"formie pisemnej."
+"dodatkowej umowy z Operatorem platformy."
 
 #: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_6"
