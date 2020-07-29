@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 
 
 <aside id="filter" class="sidebar">
-  <header id="header-login">
+  <header class="header-login">
     <h2 id="h2">
       <span class="d-none d-md-block">${_("Helpful Information")}</span>
     </h2>
@@ -44,10 +44,9 @@ from django.core.urlresolvers import reverse
          </div>
        </li>
      </ul>
-    <a href="https://www.facebook.com/NAVOICA/" target="_blank">
-      <div class="fb-link-icon-big center">
-        <i class="fab fa-facebook-f m-auto" alt="Facebook"></i>
-      </div>
+    <a href="https://www.facebook.com/NAVOICA/" target="_blank" title="Facebook Nawojka" class="fb-link-icon-big center">
+        <i class="fab fa-facebook-f m-auto"></i>
+        <span class="sr">Facebook Nawojka</span>
     </a>
    </div>
   % endif
