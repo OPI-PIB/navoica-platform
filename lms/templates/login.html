@@ -230,8 +230,10 @@ from third_party_auth import provider, pipeline
 		  </div>
 		  <div class="form-group">
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck1" name="remember" value="true">
-                <label class="custom-control-label" for="customCheck1">${_('Remember me')}</label>
+				<label for="customCheck1">
+                	<input type="checkbox" class="custom-control-input" id="customCheck1" name="remember" aria-label="${_('Remember me')}">
+				  	<span class="custom-control-label font-weight-normal">${_('Remember me')}</span>
+                </label>
               </div>
             </div>
           <div class="form-actions login-button">
