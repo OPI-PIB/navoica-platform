@@ -24,6 +24,8 @@ from .mako_module import MakoModuleDescriptor
 from .progress import Progress
 from .x_module import STUDENT_VIEW, XModule
 from .xml_module import XmlDescriptor
+from django.urls import reverse
+
 
 log = logging.getLogger(__name__)
 
@@ -477,6 +479,10 @@ class SequenceModule(SequenceFields, ProctoringFields, XModule):
                 'id': text_type(usage_id),
                 'bookmarked': is_bookmarked,
                 'path': " > ".join(display_names + [item.display_name_with_default]),
+                'lms_web_url': reverse(
+                'jump_to',
+                kwargs={'course_id': unicode(item.course_id), 'location': text_type(usage_id)},
+                ),
             }
 
             if is_user_authenticated:

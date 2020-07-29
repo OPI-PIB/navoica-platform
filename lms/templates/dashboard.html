@@ -314,8 +314,8 @@ from student.models import CourseEnrollment
             <div class="bg-brand rounded search-facets">
                 <h2 id="filter-bar" class="list-group filters hide-phone d-none d-md-block is-animated is-collapsed">
                     <div class="d-flex justify-content-between align-items-center">
-                        <span class="d-none d-md-block" id="h2" tabindex="0" aria-labelledby="Filtrowanie">Filtrowanie</span>
-                        <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true" tabindex="0" aria-labelledby="Filtrowanie">Filtry</a>
+                        <span class="d-none d-md-block" id="h2" aria-label="Filtrowanie">Filtrowanie</span>
+                        <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true" aria-label="Filtrowanie">Filtry</a>
                         <a id="clear-all-filters" href="#" class="clear-filters flt-right btn btn-primary btn-sm btn-icon" style="display: none;" tabindex="0" aria-label="Wyczyść filtry" role="button">wyczyść filtry</a>
                     </div>
 
@@ -383,14 +383,12 @@ from student.models import CourseEnrollment
             </div>
         </aside>
 
-      <section id="results">
+      <section>
         <header id="header-login" class="d-flex justify-content-between align-items-center flex-wrap px-1">
-          <h2 id="h2" class="my-0">Lista kursów</h2>
-
-            <div id="sorting-form" tabindex="0" aria-labelledby="Sortuj według" class="col-lg-4 col-md-6 col-sm-12 px-0">
-                Sortuj według:
-                <label for="enrolled-course-sort" style="display: none">Sortuj według:</label>
-                <select id="enrolled-course-sort" tabindex="0" class="custom-select" name="select">
+          <h2 id="h2" class="my-0 col-md-6 col-lg-7 px-0">Lista kursów</h2>
+            <div id="sorting-form" class="col-md px-0">
+                <label for="enrolled-course-sort" class="text-uppercase my-0 text-darkcyan">Sortuj według:</label>
+                <select id="enrolled-course-sort" class="custom-select" name="select">
                     <option value="byCourseEnroll">Domyślnie</option>
                     <option value="name">Alfabetycznie A-Z</option>
                     <option value="-name">Alfabetycznie Z-A</option>

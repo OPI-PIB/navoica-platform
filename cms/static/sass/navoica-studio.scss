@@ -1244,6 +1244,14 @@ div#edit_textbook_error {
       list-style: inside;
     }
   }
+
+  .django-ckeditor-widget {
+    display: block !important;
+
+    .cke_1 {
+      width: unset !important;
+    }
+  }
 }
 
 .xblock blockquote {
