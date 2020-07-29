@@ -11738,13 +11738,13 @@ main.container > aside {
 }
 
 @media (min-width: 480px) {
-  #form-control {
+  #form-control, .search-input {
     width: 300px !important;
   }
 }
 
 @media (min-width: 1280px) {
-  #form-control {
+  #form-control, .search-input {
     width: 400px;
   }
 }
@@ -11766,7 +11766,7 @@ aside {
   }
 }
 
-#form-control {
+#form-control, .search-input {
   height: unset !important;
   border-color: #E41D37 !important;
 }
