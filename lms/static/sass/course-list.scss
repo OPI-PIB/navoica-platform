@@ -36,6 +36,14 @@
   --font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.text-darkred {
+  color: #a11326;
+}
+
+.text-darkgrey {
+  color: #333333;
+}
+
 
 * {
   box-sizing: border-box;
@@ -11051,7 +11059,7 @@ article .display-3 {
   }
 
   #login-form .required label::after, #register-form .required label::after {
-    color: #E41D37;
+    color: #a11326;
     content: '\f069';
     font-family: "Font Awesome 5 Free";
     font-size: 10px;
