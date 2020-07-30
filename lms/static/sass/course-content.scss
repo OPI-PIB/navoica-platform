@@ -5212,7 +5212,7 @@ a.close.disabled {
 
 .modal-dialog-scrollable {
   display: flex;
-  max-height: calc(100% - 1rem);
+  max-height: calc(100% - 7rem);
 }
 
 .modal-dialog-scrollable .modal-content {
@@ -5344,7 +5344,7 @@ a.close.disabled {
     margin: 1.75rem auto;
   }
   .modal-dialog-scrollable {
-    max-height: calc(100% - 3.5rem);
+    max-height: calc(100% - 7rem);
   }
   .modal-dialog-scrollable .modal-content {
     max-height: calc(100vh - 3.5rem);
