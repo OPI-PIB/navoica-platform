@@ -25,7 +25,7 @@ displayname = get_enterprise_learner_generic_name(request) or username
 <li class="mobile-menu"><a class="dropdown-item" href="${reverse('account_settings')}">${_("Account")}</a></li>
 
 <hr class="dropdown-divider mobile-menu my-0" />
-<h6 class="dropdown-header text-uppercase mobile-menu">${_("Courses")}</h6>
+<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu">${_("Courses")}</div>
 <li class="mobile-menu">
     <a class="dropdown-item" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
 </li>
@@ -52,9 +52,9 @@ displayname = get_enterprise_learner_generic_name(request) or username
              height="32">${_('English')}
     </a></li>-->
 <hr class="dropdown-divider mobile-menu my-0" />
-<li class="mobile-menu"><a class="dropdown-item" href="${reverse('logout')}">${_("Sign Out")}</a><li>
+<li class="mobile-menu"><a class="dropdown-item" href="${reverse('logout')}">${_("Sign Out")}</a></li>
 <li class="nav-item dropdown my-account desktop-menu">
-            <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Menu - Moja Nawojka">
+            <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="${username} Menu">
              <!-- 
              <img class="mr-2 rounded-circle" src="${profile_image_url}" width="32" height="32">
 	     -->				

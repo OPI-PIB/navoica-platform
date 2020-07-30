@@ -13697,7 +13697,7 @@ span.complete-checkmark.fa.fa-check {
 
 @media (max-width: 959px) {
   #header-navigation {
-    height: 3.5rem;
+    //height: 3.5rem;
 
     .course-preview-title .provider, .course-preview-title .course-name {
       font-size: 0.6875rem;
@@ -13726,6 +13726,11 @@ span.complete-checkmark.fa.fa-check {
   #header-navigation #mooc-my-mooc::after {
     border: 0;
     margin: 0;
+  }
+
+  #header-navigation #mooc-my-mooc.btn {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
   }
 
   #header-navigation #mooc-my-mooc-menu {
@@ -13777,7 +13782,7 @@ span.complete-checkmark.fa.fa-check {
 }
 
 #header-navigation .btn-outline-primary:focus, #header-navigation .btn-outline-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(207, 25, 48, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 1);
 }
 
 #header-navigation .btn-outline-primary.disabled, #header-navigation .btn-outline-primary:disabled {

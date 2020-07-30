@@ -83,13 +83,14 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 % endif
 % endif
 
+
 <hr class="dropdown-divider mobile-menu my-0" />
-<h6 class="dropdown-header text-uppercase mobile-menu">${_("Courses")}</h6>
+<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase">${_("Courses")}</div>
 <li class="mobile-menu">
     <a class="dropdown-item" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
 </li>
 <!--<hr class="dropdown-divider mobile-menu my-0" />
-<h6 class="dropdown-header text-uppercase mobile-menu">${_("Choose Language")}</h6>
+<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase">${_("Choose Language")}</div>
 <li class="mobile-menu">
     <a class="dropdown-item text-capitalize"
        href="#"

@@ -47,7 +47,7 @@ HeaderFactory();
     % endif
     <div class="container">
 
-        <div class="navbar navbar-expand-md">
+        <div class="navbar navbar-expand-md justify-content-between">
 
             <a class="navbar-brand mr-3" href="/">
                 <img src="/static/images/logo-light-bg.svg" alt="Strona główna platformy Nawojka">
@@ -55,7 +55,7 @@ HeaderFactory();
 
             % if course and user.is_authenticated():
 
-            <span id="" class="course-preview-title d-flex flex-column flex-wrap">
+            <span id="" class="course-preview-title d-flex flex-column flex-wrap mr-auto">
               % if course.organizer:
                           <span class="provider text-uppercase text-darkgrey w-100">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</span><br>
 
@@ -70,7 +70,7 @@ HeaderFactory();
 
 
             % if request.path != '/':
-            <form method="GET" action="/courses" class="form-inline mx-auto d-none d-xl-block">
+            <form method="GET" action="/courses" class="form-inline mr-auto d-none d-xl-block">
                 <div class="input-group w-100">
                     <input class="form-control" id="form-control" type="search" name="search_query" placeholder="${_('What do you want to learn?')}">
                     <div class="input-group-append">
@@ -96,7 +96,7 @@ HeaderFactory();
                     <ul id="mooc-my-mooc-menu"
                         class="dropdown-menu dropdown-menu-right"
                         aria-labelledby="mooc-my-mooc">
-                        <h6 class="dropdown-header text-uppercase">${_('My Account')}</h6>
+                        <div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase">${_('My Account')}</div>
                         % if user.is_authenticated():
                         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
                         % else:
