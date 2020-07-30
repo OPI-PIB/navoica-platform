@@ -221,7 +221,7 @@ from third_party_auth import provider, pipeline
               <label for="email">E-mail</label>
               <input class="form-control js-input-login" id="email" type="email" name="email" value="" spellcheck="false" placeholder="${_('example: username@domain.com')}" autocomplete="off" required aria-required="true" aria-label="Podaj email">
               <small id="emailHelp" class="tip tip-input form-text text-darkgrey">${_("This is the e-mail address you used to register with {platform}").format(platform=platform_name)}</small>
-				<small aria-atomic="true" aria-live="assertive" class="error-message"></small>
+				<small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
 			</div>
             <div class="form-group form-group-required field required password">
               <div class="d-flex justify-content-between align-items-center">
@@ -231,7 +231,7 @@ from third_party_auth import provider, pipeline
 				<div class="tip tip-input">
 				  <a href="#forgot-password-modal" data-toggle="modal" data-target="forgot-password-modal" rel="leanModal" class="pwd-reset action action-forgotpw text-darkred js-forgot-password-link" role="button" aria-haspopup="true" aria-label="${_('Forgot password? Open modal')}">${_('Forgot password?')}</a>
 				</div>
-				<small aria-atomic="true" aria-live="assertive" class="error-message"></small>
+				<small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
             </div>
 		  </div>
 		  <div class="form-group">
