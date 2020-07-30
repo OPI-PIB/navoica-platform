@@ -253,13 +253,6 @@ select {
   word-wrap: normal;
 }
 
-body:not(.user-is-tabbing) button:focus,
-body:not(.user-is-tabbing) input:focus,
-body:not(.user-is-tabbing) select:focus,
-body:not(.user-is-tabbing) textarea:focus {
-  outline: none;
-}
-
 input:focus, textarea:focus, select:focus, a:focus, button:focus {
   outline: none;
 }
