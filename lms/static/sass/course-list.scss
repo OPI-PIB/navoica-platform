@@ -36,8 +36,6 @@
   --font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-$darkcyan : darkcyan;
-
 
 * {
   box-sizing: border-box;
@@ -9803,6 +9801,7 @@ section .display-2 {
   font-weight: 700;
   line-height: 1.5rem;
   margin: 0 0 0.5rem 0;
+  width: 100%;
 }
 
 .card-footer {
@@ -9956,7 +9955,7 @@ footer {
 
 @media (min-width: 1280px) {
   .navbar {
-    height: 4rem;
+//    height: 4rem;
   }
 
   body > section {
@@ -10341,7 +10340,6 @@ main.container aside {
 
   h6 {
     font-size: 1rem;
-    line-height: 21px;
   }
 }
 
@@ -10523,6 +10521,7 @@ main.container aside {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .card {
@@ -10567,9 +10566,9 @@ main.container aside {
   color: #6c757d;
   color: teal;
   display: flex;
-  flex: 0 0 36px;
-  font-size: 18px;
-  height: 36px;
+  flex: 0 0 2.25rem;
+  font-size: 1.125rem;
+  height: 2.25rem;
   justify-content: center;
   margin-right: 12px;
   margin-top: -1px;
@@ -11056,7 +11055,7 @@ article .display-3 {
     color: #E41D37;
     content: '\f069';
     font-family: "Font Awesome 5 Free";
-    font-size: 10px;
+    font-size: 0.625rem;
     font-weight: 900;
     margin-left: .2em;
     vertical-align: top;
@@ -11088,7 +11087,7 @@ article .display-3 {
   }
 
   #login-form .tip, #register-form .tip {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 2.0893;
   }
 
@@ -11303,7 +11302,7 @@ main.container {
 @media (min-width: 960px) {
   #content1 {
    #discovery-message{
-    margin-bottom: -1rem;
+//    margin-bottom: -1rem;
    }
   }
 }
@@ -11688,9 +11687,9 @@ main.container > aside {
     color: #6c757d;
     color: teal;
     display: flex;
-    flex: 0 0 36px;
-    font-size: 18px;
-    height: 36px;
+    flex: 0 0 2.25rem;
+    font-size: 1.125rem;
+    height: 2.25rem;
     justify-content: center;
     margin-right: 12px;
     margin-top: -1px;
@@ -12017,7 +12016,7 @@ fieldset {
 
 .course-details-content > h6 {
   margin-bottom: 0;
-  line-height: 21px;
+  line-height: 1.6;
 }
 
 #content #register-form .message {
@@ -12099,7 +12098,7 @@ fieldset {
   }
   .u-field-message-help {
     font-style: italic;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 2.0893;
     color: #6c757d !important;
     display: block;
@@ -12213,7 +12212,7 @@ fieldset {
     color: #E41D37;
     content: '\f069';
     font-family: "Font Awesome 5 Free";
-    font-size: 10px;
+    font-size: 0.625rem;
     font-weight: 900;
     margin-left: .2em;
     vertical-align: top;
@@ -12567,7 +12566,9 @@ fieldset {
 .card-body > figure {
     flex: 0 0 10rem;
     margin: 0 1rem 0 0;
-    position: relative; }
+    position: relative;
+    width: 100%;
+    }
     .card-body > figure .course-card-label {
       align-items: center;
       background: teal;
@@ -12876,7 +12877,7 @@ img.message-author {
 @media (min-width: 960px) {
   .navbar {
     img {
-      max-height: 34px !important;
+      max-height: 2.125rem !important;
       display: block !important;
     }
     #img-mobile {
@@ -12887,7 +12888,7 @@ img.message-author {
 
 .navbar {
   img {
-    max-height: 34px;
+    max-height: 2.125rem;
   }
    #img-mobile {
     display: block;
@@ -13388,8 +13389,8 @@ span.complete-checkmark.fa.fa-check {
     }
     #legend-author {
       font-size: 0.8rem;
-      padding-left: 30rem;
       margin: 0;
+      text-align: end;
     }
     blockquote {
       font-weight: 600;
@@ -13576,8 +13577,4 @@ span.complete-checkmark.fa.fa-check {
   #header-course {
     margin-top: 0;
   }
-}
-
-.text-darkcyan {
-  color: $darkcyan;
 }
