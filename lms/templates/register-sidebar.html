@@ -16,7 +16,7 @@ from django.core.urlresolvers import reverse
         <i class="fas fa-user-check"></i>
       </div>
       <div class="course-details-content">
-        <h6>${_("Already registered?")}</h6>
+        <h3 class="custom-h6">${_("Already registered?")}</h3>
         <div>
           <a class="btn-login-action" href="${reverse('signin_user')}${login_query()}">
       ${_("Log in")} </a>
@@ -33,7 +33,7 @@ from django.core.urlresolvers import reverse
         <i class="fas fa-graduation-cap"></i>
       </div>
       <div class="course-details-content">
-        <h6>${_("Welcome to {platform_name}").format(platform_name=platform_name)}</h6>
+        <h3 class="custom-h6">${_("Welcome to {platform_name}").format(platform_name=platform_name)}</h3>
         <div>${_("Registering with {platform_name} gives you access to all of our current and future free courses. Not ready to take a course just yet? Registering puts you on our mailing list - we will update you as courses are added.").format(platform_name=platform_name)}
         </div>
       </div>
@@ -44,7 +44,7 @@ from django.core.urlresolvers import reverse
         <i class="fas fa-arrow-right"></i>
       </div>
       <div class="course-details-content">
-        <h6>${_("Next Steps")}</h6>
+        <h3 class="custom-h6">${_("Next Steps")}</h3>
         <div>${_("As part of joining {platform_name}, you will receive an email message with instructions for activating your account. Don't see the email? Check your spam folder and mark {platform_name} emails as 'not spam'. At {platform_name}, we communicate mostly through email.").format(platform_name=platform_name)}
         </div>
       </div>
@@ -56,7 +56,7 @@ from django.core.urlresolvers import reverse
         <i class="far fa-envelope-open"></i>
       </div>
       <div class="course-details-content">
-        <h6>${_("Need Help?")}</h6>
+        <h3 class="custom-h6">${_("Need Help?")}</h3>
         <div>${_("Need help registering with {platform_name}?").format(platform_name=platform_name)}
     	${_("Skontaktuj się z naszym działem pomocy technicznej dostepnym pod adresem ")}	
           <a href="mailto:mooc_help@opi.org.pl">
