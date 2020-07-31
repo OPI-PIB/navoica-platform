@@ -12740,6 +12740,7 @@ main.container .d-flex {
   .card-title, .card-text, .course-meta {
     margin-left: 5px;
     margin-right: 5px;
+    word-break: break-word;
   }
   .card-title {
     flex: auto;
@@ -13567,14 +13568,38 @@ span.complete-checkmark.fa.fa-check {
   }
 }
 
-@media (max-width: 959.98px) {
+//@media (max-width: 959.98px) {
+//  .navbar {
+//    position: sticky !important;
+//    position: -webkit-sticky;
+//    top: 0;
+//    z-index: 1071;
+//  }
+//  #header-course {
+//    margin-top: 0;
+//  }
+//}
+
+@media (max-height: 375px), (max-width: 412px) {
   .navbar {
-    position: sticky !important;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 1071;
+    position: unset;
+  }
+  #page-header {
+    margin:0;
   }
   #header-course {
-    margin-top: 0;
+    margin-top:0px;
+  }
+}
+
+.footer-logos {
+  img {
+    max-width: 100%;
+  }
+}
+
+.legend{
+  .img-mobile {
+    max-width: 100%;
   }
 }

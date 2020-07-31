@@ -71,7 +71,7 @@
           display: flex;
           flex: 1;
           flex-flow: row nowrap;
-          font-size: 14px;
+          font-size: 0.875rem;
           font-weight: 700;
           justify-content: space-between;
           padding: 8px 8px;
@@ -96,7 +96,7 @@
             align-self: flex-start;
             display: flex;
             font-family: "Font Awesome 5 Free";
-            font-size: 12px;
+            font-size: 0.75rem;
             font-weight: 600;
             flex: 0 0 24px;
             justify-content: flex-end;
@@ -107,7 +107,7 @@
       }
 
       .card-body {
-        font-size: 14px;
+        font-size: 0.875rem;
         padding: 16px 8px;
 
         > .accordion {
@@ -116,7 +116,7 @@
 
         // answer to faq-question
         p {
-          font-size: 14px;
+          font-size: 0.875rem;
           margin: 8px;
 
           &:last-child {
@@ -224,7 +224,7 @@
           }
 
           p {
-            font-size: 14px;
+            font-size: 0.875rem;
           }
         }
 
