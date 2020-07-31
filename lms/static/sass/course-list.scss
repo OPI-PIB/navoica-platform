@@ -13692,6 +13692,12 @@ span.complete-checkmark.fa.fa-check {
       display: none;
     }
 
+    .list-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
   }
 }
 
@@ -13710,6 +13716,12 @@ span.complete-checkmark.fa.fa-check {
 
     .mobile-menu {
       display: block;
+    }
+
+    .list-menu {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
     }
   }
 

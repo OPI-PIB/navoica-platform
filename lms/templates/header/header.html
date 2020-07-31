@@ -93,7 +93,7 @@ HeaderFactory();
                             aria-haspopup="true" aria-expanded="false" aria-label="Menu - Moja Nawojka">
                         <em class="fa fa-bars"></em>
                     </button>
-                    <ul id="mooc-my-mooc-menu"
+                    <div id="mooc-my-mooc-menu"
                         class="dropdown-menu dropdown-menu-right"
                         aria-labelledby="mooc-my-mooc">
                         <div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase">${_('My Account')}</div>
@@ -102,13 +102,13 @@ HeaderFactory();
                         % else:
                         <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
                         % endif
-                    </ul>
+                    </div>
 
                 </div>
 
                 <div class="collapse navbar-collapse desktop-menu" id="navbarResponsive">
 
-                    <ul class="navbar-nav ml-auto">
+                    <div class="navbar-nav ml-auto">
                         % if user.is_authenticated():
                         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
                         % else:
@@ -116,7 +116,7 @@ HeaderFactory();
                         % endif
 
 
-                    </ul>
+                    </div>
                 </div>
 
             </nav>
