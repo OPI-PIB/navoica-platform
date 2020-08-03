@@ -2,14 +2,14 @@
 	<a href="/courses/<%- course %>/about" class="card h-100">
 	  <div class="card-body d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
 	    <figure>
-		<img class="card-img-top" src="<%- image_url %>" alt="" />
+			<img class="card-img-top" src="<%- image_url %>" alt="" />
+	    </figure>
 
-		<% if (is_new) { %>
+	   	<% if (is_new) { %>
 			<span class="course-card-label">Nowy kurs</span>
 		<% }  else { %>
 			<span class="sr"> <%= gettext("Course") %></span>
-		<% } %>		
-	    </figure>
+		<% } %>	
 
 	      <div>
 		  	<h4 class="card-title"><%- content.display_name %></h4>
