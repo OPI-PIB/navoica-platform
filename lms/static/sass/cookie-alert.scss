@@ -10,8 +10,8 @@
   border-radius: 0;
   transform: translateY(100%);
   transition: all 500ms ease-out;
-  color: #ecf0f1;
-  background-color: #4e4e4e;
+  color: #fff;
+  background-color: #000;
 
 
   &.show {
@@ -22,7 +22,13 @@
   }
 
   a {
-    text-decoration: underline
+    text-decoration: underline;
+    color: white;
+
+    &:hover{
+      text-decoration: none;
+      color: white;
+    }
   }
 
   &.acceptcookies {
