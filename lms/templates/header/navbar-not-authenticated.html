@@ -20,11 +20,11 @@ restrict_enroll_for_course = course and settings.FEATURES.get('RESTRICT_ENROLL_B
 allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
 %>
 
-<ul class="list-menu m-0 p-0">
+<!--<ul class="list-menu m-0 p-0">-->
 % if courses_are_browsable:
-<li class="nav-item desktop-menu">
+<div role="menu" class="nav-item desktop-menu">
     <a href="${marketing_link('COURSES')}"><button type="button" class="btn btn-outline-primary btn-sm">${_("Discover New")}</button></a>
-</li>
+</div>
 % endif
 
 <!--
@@ -44,57 +44,57 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 % if mktg_site_enabled:
 
 
-<li class="nav-item">
+<div role="menuitem" class="nav-item">
     <a class="nav-link" href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
-</li>
+</div>
 
-<li class="nav-item">
+<div role="menuitem" class="nav-item">
     <a class="nav-link" href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
-</li>
+</div>
 % endif
 
 % if allows_login:
         % if restrict_enroll_for_course:
-<li class="nav-item desktop-menu">
+<div role="menuitem" class="nav-item desktop-menu">
     <a class="btn btn-primary btn-smr" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
-</li>
-<li class="mobile-menu">
+</div>
+<div role="menuitem" class="mobile-menu">
     <a class="dropdown-item" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register")}</a>
-</li>
-<li class="nav-item">
+</div>
+<div role="menuitem" class="nav-item">
     <a href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}"><button type="button" class="btn btn-outline-primary btn-sm"> ${_("Sign in")}</button></a>
-</li>
+</div>
 
 % else:
-<li class="nav-item desktop-menu">
+<div role="menuitem" class="nav-item desktop-menu">
     <a href="/login${login_query()}"><button type="button" class="btn btn-outline-primary btn-sm"> ${_("Log in")}</button></a>
-</li>
-<li class="mobile-menu">
+</div>
+<div role="menuitem" class="mobile-menu">
     <a class="dropdown-item" href="/login${login_query()}">${_("Log in")}</a>
-</li>
+</div>
 % if allow_public_account_creation:
-<li class="nav-item desktop-menu">
+<div role="menuitem" class="nav-item desktop-menu">
     <a class="btn btn-primary btn-sm" href="/register${login_query()}">${_("Register")}</a>
-</li>
-<li class="mobile-menu">
+</div>
+<div role="menuitem" class="mobile-menu">
     <a class="dropdown-item" href="/register${login_query()}">${_("Register")}</a>
-</li>
+</div>
 % endif
 % endif
 % endif
-</ul>
+<!--</ul>-->
 
 <hr class="dropdown-divider mobile-menu my-0" />
 <div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu">${_("Courses")}</div>
-<ul class="mobile-menu m-0 p-0">
-<li class="mobile-menu">
+
+<div role="menuitem" class="mobile-menu">
     <a class="dropdown-item" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
-</li>
-</ul>
+</div>
+
 <!--<hr class="dropdown-divider mobile-menu my-0" />
-<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu">${_("Choose Language")}</div>
-<ul class="mobile-menu m-0 p-0">
-<li class="mobile-menu">
+<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu" id="language-mobile">${_("Choose Language")}</div>
+
+<div class="mobile-menu" role="menuitem" aria-labelledby="language-mobile">
     <a class="dropdown-item text-capitalize"
        href="#"
        aria-label="Ustaw język interfejsu strony na polski">
@@ -104,7 +104,7 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
              alt="Język polski"
              height="32">${_('Polish')}
     </a></li>
-<li class="mobile-menu">
+<div class="mobile-menu" role="menuitem" aria-labelledby="language-mobile">
     <a class="dropdown-item text-capitalize"
        href="#"
        aria-label="Set the website interface language to English">
@@ -113,4 +113,4 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
              aria-hidden="true"
              alt="English language"
              height="32">${_('English')}
-    </a></li></ul>-->
+    </a></div>-->

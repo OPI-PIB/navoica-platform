@@ -41,20 +41,20 @@ self.real_user = getattr(user, 'real_user', user)
 -->
 
 <!--% if show_explore_courses:-->
-<ul class="desktop-menu m-0 p-0">
-<li class="nav-item desktop-menu">
+
+<div class="nav-item desktop-menu" role="menuitem">
     <a class="btn btn-outline-primary btn-sm" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
-</li>
+</div>
 <!--% endif-->
 % if show_sysadmin_dashboard:
-<li class="mobile-nav-item hidden-mobile nav-item">
+<div class="mobile-nav-item hidden-mobile nav-item" role="menuitem">
     ## Translators: This is short for "System administration".
     <a class="tab-nav-link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
-</li>
+</div>
 % endif
-</ul>
+
 % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
-<div class="mobile-nav-item hidden-mobile nav-item">
+<div class="mobile-nav-item hidden-mobile nav-item" role="menuitem">
     <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
         <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
     </a>

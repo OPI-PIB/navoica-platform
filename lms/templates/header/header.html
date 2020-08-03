@@ -95,8 +95,8 @@ HeaderFactory();
                     </button>
                     <div id="mooc-my-mooc-menu"
                         class="dropdown-menu dropdown-menu-right"
-                        aria-labelledby="mooc-my-mooc">
-                        <div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase">${_('My Account')}</div>
+                        aria-labelledby="mooc-my-mooc" role="menu">
+                        <div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase" id="my-account">${_('My Account')}</div>
                         % if user.is_authenticated():
                         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
                         % else:
