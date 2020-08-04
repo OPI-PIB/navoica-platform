@@ -9,12 +9,12 @@ from student.models import UserProfile
 <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
 
 <!-- status messages -->
-<div id="alert-info" role="alert" class="status message">
+<div id="alert-info" role="alert" class="status message" tabindex="-1">
     <h3 class="message-title">${_("We're sorry, but this version of your browser is not supported. Try again using a different browser or a newer version of your browser.")}</h3>
 </div>
 
 <div id="alert-primary" role="alert" class="status message submission-error" tabindex="-1">
-    <h3 class="message-title">${_("The following errors occurred while processing your registration:")} </h3>
+    <h3 class="message-title">${_("The following errors occurred while processing your registration:")}</h3>
     <ul class="message-copy"></ul>
 </div>
 
