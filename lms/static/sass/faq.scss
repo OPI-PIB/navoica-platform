@@ -84,6 +84,7 @@
 
           &:focus, &:hover {
             text-decoration: none;
+            border: 2px black solid;
           }
         }
 
@@ -400,6 +401,10 @@
           margin: 0 1% 8px 0;
           // min-height: 88px;
         }
+
+        > .list-group-item:focus {
+          outline: 2px black solid;
+        }
       }
     }
 
@@ -420,6 +425,10 @@
     .accordion-switch > div {
       display: flex;
     }
+
+  .custom-control-label:focus::before {
+    outline: 2px black solid;
+  }
 
     /**
        End of FAQ Categories
