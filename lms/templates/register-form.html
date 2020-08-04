@@ -170,7 +170,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
 <div class="group group-form group-form-secondary group-form-personalinformation">
     <h2 class="sr">${_("Additional Personal Information")}</h2>
 
-    <odiv class="list-input">
+    <div class="list-input">
         % if settings.REGISTRATION_EXTRA_FIELDS['city'] != 'hidden':
         <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['city']} text" id="field-city">
             <label for="city">${_('City')}</label>
