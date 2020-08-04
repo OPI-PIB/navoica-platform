@@ -36,6 +36,8 @@
   --font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+$darkcyan : darkcyan;
+
 .text-darkred {
   color: #a11326;
 }
@@ -13605,6 +13607,10 @@ span.complete-checkmark.fa.fa-check {
   #header-course {
     margin-top: 0;
   }
+}
+
+.text-darkcyan {
+  color: $darkcyan;
 }
 
 /** ERROR FIELD **/
