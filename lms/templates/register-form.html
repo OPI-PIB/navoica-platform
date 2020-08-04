@@ -78,16 +78,19 @@ from student.models import UserProfile
         <div class="field text form-group form-group-required" id="field-email">
             <label for="email">${_('E-mail')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="form-control" id="email" type="email" name="email" value="${email}" placeholder="${_('example: username@domain.com')}" spellcheck="false" autocomplete="on" required aria-required="true"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
         </div>
 
         <div class="field text form-group form-group-required" id="field-name">
             <label for="name">${_('Full Name')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="form-control" id="name" type="text" name="name" value="${name}" placeholder="${_('example: Jane Doe')}" required aria-required="true" aria-describedby="name-tip"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
             <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
         <div class="field text form-group form-group-required" id="field-username">
             <label for="username">${_('Public Username')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="form-control" id="username" type="text" name="username" value="${username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
             <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
@@ -96,6 +99,7 @@ from student.models import UserProfile
         <div class="is-disabled field optional password form-group form-group-required" id="field-password" hidden>
             <label for="password">${_('Password')}</label>
             <input class="form-control" id="password" type="password" name="password" value="" spellcheck="false" disabled required aria-required="true"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
         </div>
 
         % else:
@@ -103,6 +107,7 @@ from student.models import UserProfile
         <div class="field form-group form-group-required" id="field-password">
             <label for="password">${_('Password')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="form-control" id="password" type="password" name="password" value="" spellcheck="false" required aria-required="true" aria-describedby="password-tip"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
             <span class="tip tip-input" id="password-tip">
 				<%
 min_length = 8
@@ -114,6 +119,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
         <div class="field password form-group form-group-required" id="field-password">
             <label for="confirm_password">${_('Confirm Password')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="form-control" id="confirm_password" type="password" value="" spellcheck="false" required aria-required="true" name="confirm_password" />
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
         </div>
 
         % endif
@@ -133,6 +139,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
         <div class="field text" id="field-email">
             <label for="email">${_("E-mail")}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" required aria-required="true"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
         </div>
 
         % endif
@@ -140,6 +147,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
         <div class="field text" id="field-username">
             <label for="username">${_('Public Display Name')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input id="username" type="text" name="username" value="${extauth_username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
             <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
@@ -148,6 +156,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
         <div class="field text" id="field-name">
             <label for="name">${_('Full Name')} <sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input id="name" type="text" name="name" value="" placeholder="$_('example: Jane Doe')}" aria-describedby="name-tip"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
             <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
 
