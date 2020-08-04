@@ -75,18 +75,18 @@ from student.models import UserProfile
     % if has_extauth_info is UNDEFINED:
 
     <div class="list-input">
-        <div class="field required text form-group form-group-required" id="field-email">
-            <label for="email">${_('E-mail')}</label>
+        <div class="field text form-group form-group-required" id="field-email">
+            <label for="email">${_('E-mail')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="form-control" id="email" type="email" name="email" value="${email}" placeholder="${_('example: username@domain.com')}" spellcheck="false" autocomplete="on" required aria-required="true"/>
         </div>
 
-        <div class="field required text form-group form-group-required" id="field-name">
-            <label for="name">${_('Full Name')}</label>
+        <div class="field text form-group form-group-required" id="field-name">
+            <label for="name">${_('Full Name')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="form-control" id="name" type="text" name="name" value="${name}" placeholder="${_('example: Jane Doe')}" required aria-required="true" aria-describedby="name-tip"/>
             <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
-        <div class="field required text form-group form-group-required" id="field-username">
-            <label for="username">${_('Public Username')}</label>
+        <div class="field text form-group form-group-required" id="field-username">
+            <label for="username">${_('Public Username')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="form-control" id="username" type="text" name="username" value="${username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
             <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
@@ -100,9 +100,9 @@ from student.models import UserProfile
 
         % else:
 
-        <div class="field required form-group form-group-required" id="field-password">
-            <label for="password">${_('Password')}</label>
-            <input class="form-control" id="password" type="password" name="password" value="" spellcheck="false" required aria-required="true"/>
+        <div class="field form-group form-group-required" id="field-password">
+            <label for="password">${_('Password')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
+            <input class="form-control" id="password" type="password" name="password" value="" spellcheck="false" required aria-required="true" aria-describedby="password-tip"/>
             <span class="tip tip-input" id="password-tip">
 				<%
 min_length = 8
@@ -111,8 +111,8 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
 			</span>
         </div>
         
-        <div class="field required password form-group form-group-required" id="field-password">
-            <label for="confirm_password">${_('Confirm Password')}</label>
+        <div class="field password form-group form-group-required" id="field-password">
+            <label for="confirm_password">${_('Confirm Password')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="form-control" id="confirm_password" type="password" value="" spellcheck="false" required aria-required="true" name="confirm_password" />
         </div>
 
@@ -130,23 +130,23 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
 
         % if ask_for_email:
 
-        <div class="field required text" id="field-email">
-            <label for="email">${_("E-mail")}</label>
+        <div class="field text" id="field-email">
+            <label for="email">${_("E-mail")}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input class="" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" required aria-required="true"/>
         </div>
 
         % endif
 
-        <div class="field required text" id="field-username">
-            <label for="username">${_('Public Display Name')}</label>
+        <div class="field text" id="field-username">
+            <label for="username">${_('Public Display Name')}<sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input id="username" type="text" name="username" value="${extauth_username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
             <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
         % if ask_for_fullname:
 
-        <div class="field required text" id="field-name">
-            <label for="name">${_('Full Name')}</label>
+        <div class="field text" id="field-name">
+            <label for="name">${_('Full Name')} <sup><i class="fa fa-asterisk text-darkred px-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
             <input id="name" type="text" name="name" value="" placeholder="$_('example: Jane Doe')}" aria-describedby="name-tip"/>
             <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
