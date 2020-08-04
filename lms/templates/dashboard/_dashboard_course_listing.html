@@ -41,7 +41,13 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
 
 
-<div class="col-lg-3 col-md-6 mb-1">
+<div class="col-lg-4 col-md-6 mb-1 js-enrolled-course"
+     data-title="${course_overview.display_name_with_default.lower()}"
+     data-datetime-end="${course_overview.end}"
+     data-datetime-start="${course_overview.dashboard_start_display}"
+     data-datetime-enrollment="${course_overview.created}"
+     data-cert-status="${cert_status['status']}"
+>
 
     % if display_course_modes_on_dashboard:
     <%
@@ -64,7 +70,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
             <div class="card-body d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
               
               <figure>
-                <img src="${course_overview.image_urls['small']}" class="card-img-top">
+                <img src="${course_overview.image_urls['small']}" alt="" class="card-img-top">
               </figure>
             
 
@@ -100,7 +106,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
 
            <div class="card-footer" id="border_top">
-            
+
              <div class="course-meta">
 
                 <%
