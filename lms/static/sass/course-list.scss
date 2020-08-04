@@ -13252,7 +13252,7 @@ span.complete-checkmark.fa.fa-check {
   }
 }
 
-#register-form .new-vp::after {
+/**#register-form .new-vp::after {
   color: #E41D37;
   content: '\f069';
   font-family: "Font Awesome 5 Free";
@@ -13260,7 +13260,7 @@ span.complete-checkmark.fa.fa-check {
   font-weight: 900;
   margin-left: .2em;
   vertical-align: top;
-}
+}**/
 
 .provider {
   white-space: break-spaces;
@@ -13616,4 +13616,8 @@ span.complete-checkmark.fa.fa-check {
 /** ERROR FIELD **/
 input.form-control.form-control.error-field, .error-field {
   border: 1px solid #a11326;
+}
+
+.f-10 {
+  font-size: 0.625rem;
 }

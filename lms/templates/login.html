@@ -246,14 +246,14 @@ from third_party_auth import provider, pipeline
 			<h2 class="sr">${_('Required Information')}</h2>
 			
 			<div class="form-group form-group-required field text js-email-field">
-              <label for="email">E-mail <sup><i class="fa fa-asterisk text-darkred pr-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
+              <label for="email">E-mail <sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-10">(${_('required')})</span></sup></label>
               <input class="form-control js-input-login" id="email" type="email" name="email" value="" spellcheck="false" placeholder="${_('example: username@domain.com')}" autocomplete="on" required aria-required="true" aria-describedby="emailHelp">
 				<small id="error-email" aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
 				<small id="emailHelp" class="tip tip-input form-text text-darkgrey">${_("This is the e-mail address you used to register with {platform}").format(platform=platform_name)}</small>
 			</div>
             <div class="form-group form-group-required field password js-password-field">
               <div class="d-flex justify-content-between align-items-center">
-                <label for="password">Hasło <sup><i class="fa fa-asterisk text-darkred pr-1" aria-hidden="true"></i><span class="visible-hidden text-darkred">(${_('required')})</span></sup></label>
+                <label for="password">Hasło <sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-10">(${_('required')})</span></sup></label>
               </div>
               <input type="password" class="form-control js-input-login" id="password" name="password" value="" spellcheck="false" autocapitalize="off" required aria-required="true">
 				<small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
