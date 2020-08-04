@@ -11268,7 +11268,7 @@ li.list-group-item {
   border: none !important;
 }
 
-#organizator, #discovery-message, #h2, #sorting-form {
+#organizator, #discovery-message, #h2, #sorting-form, .custom-h2 {
   color: teal;
   display: block;
   font-size: 1rem;
@@ -11304,13 +11304,13 @@ li.list-group-item {
 }
 
 #results, #filters, #filter, .sidebar, #courses-list-header{
-  #h2 {
+  #h2, .custom-h2 {
     line-height: 2.5;
   }
 }
 
 @media (min-width: 960px) {
-  #h2, #discovery-message, #sorting-form {
+  #h2, .custom-h2, #discovery-message, #sorting-form {
     font-size: 0.875rem;
     text-align: left;
     margin: 0;
@@ -11879,7 +11879,7 @@ aside {
   border-bottom: 1px solid #dee2e6;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  #h2 {
+  #h2, .custom-h2 {
     margin: 1rem 0 0;
   }
 }
@@ -12959,7 +12959,7 @@ img.message-author {
   margin-bottom: 2rem;
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
-  #h2 {
+  #h2, .custom-h2 {
     font-size: 0.875rem;
     line-height: 1.7143;
     margin: 0;
@@ -13283,7 +13283,7 @@ span.complete-checkmark.fa.fa-check {
 
 
 
-#results #h2 {
+#results #h2, #results .custom-h2 {
 //  display: flex;
 //  flex-direction: column-reverse;
 }
