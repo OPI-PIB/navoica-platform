@@ -78,6 +78,19 @@ import calendar
             $('.status.message.submission-error .message-copy').html(json.value).stop().css("display", "block");
             $(".field-error").removeClass('field-error');
             $("[data-field='" + json.field + "']").addClass('field-error');
+
+            if (json.field) {
+                $('#' + json.field).attr('aria-invalid', true).addClass('error-field');
+                $('.js-' + json.field.replace('_', '-') + '-field').find('.js-error-message').text(json.value);
+
+                let currentField = "#" + json.field;
+                let currentErrorMessage = ".js-" + json.field.replace('_', '-') + "-field";
+
+                //$(':not(currentField)').removeAttr('aria-invalid').removeClass('error-field');
+                //$(':not(currentErrorMessage)').text('');
+            }
+
+
         });
     })(this);
 
