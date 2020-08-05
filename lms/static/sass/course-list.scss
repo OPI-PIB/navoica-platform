@@ -13525,11 +13525,14 @@ span.complete-checkmark.fa.fa-check {
   border: 1px solid #E41D37;
   border-radius: 50%;
   box-sizing: border-box;
-  color: #f3f5f7;
+  color: #fff;
   display: flex;
   font-size: 1rem;
   height: 2.5rem;
   width: 2.5rem;
+  &:hover {
+    color:#fff;
+  }  
 
   i {
     margin: auto;
@@ -13541,11 +13544,14 @@ span.complete-checkmark.fa.fa-check {
   border: 1px solid #E41D37;
   border-radius: 50%;
   box-sizing: border-box;
-  color: #f3f5f7;
+  color: #fff;
   display: flex;
   font-size: 2rem;
   height: 4rem;
   width: 4rem;
+  &:hover {
+    color:#fff;
+  }  
 
   i {
     margin: auto;
