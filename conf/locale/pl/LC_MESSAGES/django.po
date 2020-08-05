@@ -36,11 +36,11 @@
 # krystianlygas <krystian.lygas@gmail.com>, 2020
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
 # Navoica Navoica <navoica@opi.org.pl>, 2020
-# Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
 # Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
+# Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -5482,10 +5482,6 @@ msgstr "Dla mediów"
 msgid "Donate"
 msgstr "Darowizna"
 
-#: lms/djangoapps/branding/api.py
-msgid "About the project"
-msgstr "O projekcie"
-
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/faq.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "FAQ"
@@ -7630,8 +7626,8 @@ msgid ""
 "Merging certificates task has been started. You can view the status of the "
 "generation task in the \"Pending Tasks\" section."
 msgstr ""
-"Rozpoczęto zadanie scalania certyfikatów. Możesz wyświetlić status zadania "
-"generowania w sekcji „Zadania oczekujące”."
+"Proces generowania certyfikatów został rozpoczęty. Odśwież stronę i sprawdź "
+"status zadania w sekcji „Masowe pobieranie certyfikatów”."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
@@ -10711,8 +10707,9 @@ msgstr "Podgląd wersji roboczej"
 #. interface (a menu or piece of UI that takes the full focus of the screen)
 #: lms/templates/wiki/edit.html lms/templates/wiki/history.html
 #: lms/templates/wiki/includes/cheatsheet.html lms/templates/dashboard.html
-#: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
-#: lms/templates/signup_modal.html lms/templates/ccx/schedule.html
+#: lms/templates/footer.html lms/templates/forgot_password_modal.html
+#: lms/templates/help_modal.html lms/templates/signup_modal.html
+#: lms/templates/staff_problem_info.html lms/templates/ccx/schedule.html
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
@@ -13950,8 +13947,48 @@ msgid "Honor code "
 msgstr "Kodeks honorowy"
 
 #: lms/templates/footer.html
+msgid "Ministry of Science and Higher Education"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "open in a new window"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "The Conference of Rectors of Academic Schools in Poland"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "The Young Science Foundation"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid ""
+"National Information Processing Institute \\u2013 National Research "
+"Institute"
+msgstr ""
+
+#: lms/templates/footer.html
 msgid "All rights reserved  "
 msgstr "Wszelkie prawa zastrzeżone"
+
+#: lms/templates/footer.html
+msgid ""
+"We use cookies and similar technologies to provide services and to gather "
+"information for statistical and other purposes. You can change the way you "
+"want the cookies to be stored or accessed on your device in the settings of "
+"your browser. If you do not agree, change the settings of your browser. For "
+"more information, refer to our"
+msgstr ""
+"Używamy cookies i podobnych technologii m.in. w celu świadczenia usług i w "
+"celach statystycznych. Możesz określić warunki przechowywania lub dostępu do"
+" plików cookies w Twojej przeglądarce, w jej ustawieniach. Jeżeli nie "
+"wyrażasz zgody – zmień ustawienia swojej przeglądarki. Więcej informacji "
+"znajdziesz w naszej"
+
+#: lms/templates/footer.html
+msgid "Privacy policy"
+msgstr "Polityka prywatności"
 
 #: lms/templates/forgot_password_modal.html
 msgid "Password Reset"
@@ -18793,6 +18830,10 @@ msgstr "Aplikuj po wsparcie finansowe"
 msgid "{platform_name} Home Page"
 msgstr "Strona główna {platform_name}"
 
+#: lms/templates/header/header.html
+msgid "Navoica logo"
+msgstr ""
+
 #: lms/templates/header/header.html lms/templates/navigation/navigation.html
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
@@ -21426,6 +21467,10 @@ msgstr ""
 #: lms/templates/static_templates/legend.html
 msgid "Legend_author"
 msgstr "Leszek Mazan i Mieczysław Czuma „Pępek świata nazywa się Kraków”"
+
+#: lms/templates/static_templates/legend.html
+msgid "Navoica avatar"
+msgstr ""
 
 #: lms/templates/static_templates/legend.html
 msgid "Legend_paragraph_1"
