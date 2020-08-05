@@ -77,7 +77,7 @@ import calendar
             $('.status.message.submission-error').addClass('is-shown').focus();
             $('.status.message.submission-error .message-copy').html(json.value).stop().css("display", "block");
             $(".field-error").removeClass('field-error');
-            $("[data-field='" + json.field + "']").addClass('field-error')
+            $("[data-field='" + json.field + "']").addClass('field-error');
         });
     })(this);
 
