@@ -90,7 +90,7 @@ import calendar
         var $submitButton = $('form .form-actions #submit');
 
         if (enable) {
-            $submitButton.removeClass('is-disabled').attr('aria-disabled', false).removeProp('disabled').removeAttr('disabled').html("<i class='fas fa-check'></i> ${_('Register')}");
+            $submitButton.removeClass('is-disabled').attr('aria-disabled', false).removeProp('disabled').removeAttr('disabled').html("<i class='fas fa-check' aria-hidden='true'></i> ${_('Register')}");
         }
         else {
             $submitButton.addClass('is-disabled').prop('disabled', true).text("${_('Processing your account information')}");

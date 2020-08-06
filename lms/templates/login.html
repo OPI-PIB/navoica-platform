@@ -102,7 +102,7 @@ from third_party_auth import provider, pipeline
           attr('aria-disabled', false).
           removeProp('disabled').
           removeAttr('disabled').
-          html("<i class='fas fa-check'></i> ${_('Sign in')}");
+          html("<i class='fas fa-check' aria-hidden='true'></i> ${_('Sign in')}");
       }
       else {
         $submitButton.
@@ -235,7 +235,7 @@ from third_party_auth import provider, pipeline
               </div>
             </div>
           <div class="form-actions login-button">
-            <button type="submit" class="btn btn-primary action action-primary action-update" name="submit" id="submit"><i class="fas fa-check"></i> ${_('Sign in')}</button>
+            <button type="submit" class="btn btn-primary action action-primary action-update" name="submit" id="submit"><i class="fas fa-check" aria-hidden="true"></i> ${_('Sign in')}</button>
           </div>
 		</form>
 		% if third_party_auth.is_enabled():

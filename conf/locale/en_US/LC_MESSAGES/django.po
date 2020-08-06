@@ -4727,10 +4727,6 @@ msgstr ""
 msgid "Donate"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py
-msgid "About the project"
-msgstr ""
-
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/faq.html
 #: themes/red-theme/lms/templates/footer.html
 msgid "FAQ"
@@ -9447,8 +9443,9 @@ msgstr ""
 #. interface (a menu or piece of UI that takes the full focus of the screen)
 #: lms/templates/wiki/edit.html lms/templates/wiki/history.html
 #: lms/templates/wiki/includes/cheatsheet.html lms/templates/dashboard.html
-#: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
-#: lms/templates/signup_modal.html lms/templates/ccx/schedule.html
+#: lms/templates/footer.html lms/templates/forgot_password_modal.html
+#: lms/templates/help_modal.html lms/templates/signup_modal.html
+#: lms/templates/staff_problem_info.html lms/templates/ccx/schedule.html
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
@@ -12420,7 +12417,42 @@ msgid "Honor code "
 msgstr ""
 
 #: lms/templates/footer.html
+msgid "Ministry of Science and Higher Education"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "open in a new window"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "The Conference of Rectors of Academic Schools in Poland"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "The Young Science Foundation"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid ""
+"National Information Processing Institute \\u2013 National Research "
+"Institute"
+msgstr ""
+
+#: lms/templates/footer.html
 msgid "All rights reserved  "
+msgstr ""
+
+#: lms/templates/footer.html
+msgid ""
+"We use cookies and similar technologies to provide services and to gather "
+"information for statistical and other purposes. You can change the way you "
+"want the cookies to be stored or accessed on your device in the settings of "
+"your browser. If you do not agree, change the settings of your browser. For "
+"more information, refer to our"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "Privacy policy"
 msgstr ""
 
 #: lms/templates/forgot_password_modal.html
@@ -16780,6 +16812,10 @@ msgstr ""
 msgid "{platform_name} Home Page"
 msgstr ""
 
+#: lms/templates/header/header.html
+msgid "Navoica logo"
+msgstr ""
+
 #: lms/templates/header/header.html lms/templates/navigation/navigation.html
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
@@ -19137,6 +19173,10 @@ msgid "Legend_author"
 msgstr ""
 "Leszek Mazdan and Mieczysław Czuma “Pępek świata nazywa się Kraków” (“The "
 "hub of the universe is called Kraków”)"
+
+#: lms/templates/static_templates/legend.html
+msgid "Navoica avatar"
+msgstr ""
 
 #: lms/templates/static_templates/legend.html
 msgid "Legend_paragraph_1"
