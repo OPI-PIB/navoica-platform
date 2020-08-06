@@ -39,12 +39,12 @@
                             <div class="accordion-anchor" id="accordion-anchor-${category_identifier}">
                             </div>
 
-                            <label class="accordion-switch">
+                            <div class="accordion-switch">
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input">
-                                    <span class="custom-control-label">${_("show answers")}</span>
+                                    <input type="checkbox" class="custom-control-input" value="" name="show-answers-${category_identifier}" id="show-answers-${category_identifier}">
+                                    <label for="show-answers-${category_identifier}" class="custom-control-label">${_("show answers")}</label>
                                 </div>
-                            </label>
+                            </div>
                             <!-- category -->
                             <div class="accordion faq">
                                 <div class="card">
