@@ -270,7 +270,7 @@ from six import string_types
       % if course.difficulty:
          <li class="list-group-item">
                 <div class="course-details-icon ${course.difficulty}">
-                  <i class="fas fa-star-half-alt"></i>
+                  <i class="fas fa-star-half-alt" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
           <% for a in settings.ALL_COURSE_DIFFICULTY:
@@ -286,7 +286,7 @@ from six import string_types
       % if course.course_category:
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="icon fa fa-graduation-cap"></i>
+                  <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
          <% course_c = settings.ALL_COURSE_CATEGORY_DICT[course.course_category] %>
@@ -300,7 +300,7 @@ from six import string_types
       % if course.timetable:
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="icon far fa-clock"></i>
+                  <i class="icon far fa-clock" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>Czas trwania kursu:</h6>
@@ -316,7 +316,7 @@ from six import string_types
 
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="far fa-calendar-alt"></i>
+                  <i class="far fa-calendar-alt" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>${_("Classes Start")}:</h6>
@@ -342,7 +342,7 @@ from six import string_types
 
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="far fa-bell"></i>
+                  <i class="far fa-bell" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>${_("Classes End")}:</h6>
@@ -366,7 +366,7 @@ from six import string_types
 
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="fas fa-calendar-alt"></i>
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>${_("Enrollment start")}:</h6>
@@ -389,7 +389,7 @@ from six import string_types
 
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="fas fa-bell"></i>
+                  <i class="fas fa-bell" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
                   <h6>${_("Enrollment end")}:</h6>
@@ -408,7 +408,7 @@ from six import string_types
             % if get_course_about_section(request, course, "effort"):
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="fas fa-battery-three-quarters"></i>
+                  <i class="fas fa-battery-three-quarters" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
            <%
@@ -425,7 +425,7 @@ from six import string_types
          % if course.organizer:
               <li class="list-group-item">
                 <div class="course-details-icon">
-                  <i class="fas fa-landmark"></i>
+                  <i class="fas fa-landmark" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
                   <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
