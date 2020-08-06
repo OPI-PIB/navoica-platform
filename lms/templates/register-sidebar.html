@@ -13,7 +13,7 @@ from django.core.urlresolvers import reverse
   <ul class="course-details list-group list-group-flush">
     <li class="list-group-item">
       <div class="course-details-icon easy">
-        <i class="fas fa-user-check"></i>
+        <i class="fas fa-user-check" aria-hidden="true"></i>
       </div>
       <div class="course-details-content">
         <h6>${_("Already registered?")}</h6>
@@ -30,7 +30,7 @@ from django.core.urlresolvers import reverse
 ##       override in a more generalizable fashion.
     <li class="list-group-item">
       <div class="course-details-icon">
-        <i class="fas fa-graduation-cap"></i>
+        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
       </div>
       <div class="course-details-content">
         <h6>${_("Welcome to {platform_name}").format(platform_name=platform_name)}</h6>
@@ -41,7 +41,7 @@ from django.core.urlresolvers import reverse
 
     <li class="list-group-item">
       <div class="course-details-icon">
-        <i class="fas fa-arrow-right"></i>
+        <i class="fas fa-arrow-right" aria-hidden="true"></i>
       </div>
       <div class="course-details-content">
         <h6>${_("Next Steps")}</h6>
@@ -53,7 +53,7 @@ from django.core.urlresolvers import reverse
 % if settings.MKTG_URL_LINK_MAP.get('FAQ'):
     <li class="list-group-item">
       <div class="course-details-icon">
-        <i class="far fa-envelope-open"></i>
+        <i class="far fa-envelope-open" aria-hidden="true"></i>
       </div>
       <div class="course-details-content">
         <h6>${_("Need Help?")}</h6>

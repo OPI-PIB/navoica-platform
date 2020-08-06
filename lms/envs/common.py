@@ -416,7 +416,7 @@ FEATURES = {
     'ENABLE_PASSWORD_RESET_FAILURE_EMAIL': False,
 
     'UNSUPPORTED_BROWSER_ALERT_VERSIONS': "{e:0,f:-3,o:0,s:-3,c:-3,i:20}",
-    
+
     'THIRD_PARTY_AUTH_HINT': None,
 }
 
@@ -915,6 +915,11 @@ CODE_JAIL = {
 #       r"Harvard/XY123.1/.*"
 #   ]
 COURSES_WITH_UNSAFE_CODE = []
+
+######################NAVOICA_SANDBOX###########################################
+
+NAVOICA_SANDBOX = True
+NAVOICA_SANDBOX_URL = "http://0.0.0.0:8111/sandbox"
 
 ############################### DJANGO BUILT-INS ###############################
 # Change DEBUG in your environment settings files, not here

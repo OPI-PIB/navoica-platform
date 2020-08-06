@@ -322,7 +322,6 @@ FEATURES = {
 }
 
 
-
 ENABLE_JASMINE = False
 
 ############################# SOCIAL MEDIA SHARING #############################
@@ -637,6 +636,11 @@ CODE_JAIL = {
         'CPU': 1,
     },
 }
+
+######################NAVOICA_SANDBOX###########################################
+
+NAVOICA_SANDBOX = True
+NAVOICA_SANDBOX_URL = "http://0.0.0.0:8111/sandbox"
 
 ############################ DJANGO_BUILTINS ################################
 # Change DEBUG in your environment settings files, not here
