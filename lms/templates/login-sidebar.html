@@ -23,7 +23,7 @@ from django.core.urlresolvers import reverse
     <ul class="course-details list-group list-group-flush">
       <li class="list-group-item">
         <div class="course-details-icon easy">
-          <i class="fas fa-user-times"></i>
+          <i class="fas fa-user-times" aria-hidden="true"></i>
         </div>
         <div class="course-details-content">
           <h3 class="custom-h6">${_("Not Enrolled?")}</h3>
@@ -34,7 +34,7 @@ from django.core.urlresolvers import reverse
     % if settings.MKTG_URL_LINK_MAP.get('FAQ'):
       <li class="list-group-item">
         <div class="course-details-icon">
-          <i class="far fa-envelope-open"></i>
+          <i class="far fa-envelope-open" aria-hidden="true"></i>
         </div>
         <div class="course-details-content">
           <h3 class="custom-h6">${_("Need Help?")}</h3>
@@ -44,9 +44,9 @@ from django.core.urlresolvers import reverse
          </div>
        </li>
      </ul>
-    <a href="https://www.facebook.com/NAVOICA/" target="_blank" title="Facebook Nawojka" class="fb-link-icon-big center">
+    <a href="https://www.facebook.com/NAVOICA/" target="_blank" title="${_('Navoica page on Facebook')}" class="fb-link-icon-big center">
         <i class="fab fa-facebook-f m-auto"></i>
-        <span class="sr">Facebook Nawojka</span>
+        <span class="sr">${_('open in a new window')}</span>
     </a>
    </div>
   % endif
