@@ -13614,7 +13614,7 @@ span.complete-checkmark.fa.fa-check {
 }
 
 /** ERROR FIELD **/
-input.form-control.form-control.error-field, .error-field {
+input.form-control.form-control.error-field, .error-field, .error-field ~ .custom-control-label::before {
   border: 1px solid #a11326;
 }
 

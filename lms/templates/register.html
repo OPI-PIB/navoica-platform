@@ -81,12 +81,20 @@ import calendar
 
             if (json.field) {
                 $('#' + json.field).attr('aria-invalid', true).addClass('error-field');
-                $('.js-' + json.field.replace('_', '-') + '-field').find('.js-error-message').text(json.value);
+                $('.js-' + json.field.replace(/_/g, '-') + '-field').find('.js-error-message').text(json.value);
 
                 $('input.js-register-field').each(function() {
-                    if ($(this).val() !== '' ) {
-                        $(this).removeAttr('aria-invalid').removeClass('error-field');
-                        $('.js-' + $(this).attr('id').replace('_', '-') + '-field').find('.js-error-message').text('');
+
+                    if ($(this).prop('type') !== 'checkbox') {
+                        if ($(this).val() !== '') {
+                            $(this).removeAttr('aria-invalid').removeClass('error-field');
+                            $('.js-' + $(this).attr('id').replace(/_/g, '-') + '-field').find('.js-error-message').text('');
+                        }
+                    } else {
+                        if ($(this).is(':checked')) {
+                            $(this).removeAttr('aria-invalid').removeClass('error-field');
+                            $('.js-' + $(this).attr('id').replace(/_/g, '-') + '-field').find('.js-error-message').text('');
+                        }
                     }
                 });
             }
