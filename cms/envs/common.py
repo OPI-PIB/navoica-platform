@@ -638,6 +638,11 @@ CODE_JAIL = {
     },
 }
 
+######################NAVOICA_SANDBOX###########################################
+
+NAVOICA_SANDBOX = False
+NAVOICA_SANDBOX_URL = ''
+
 ############################ DJANGO_BUILTINS ################################
 # Change DEBUG in your environment settings files, not here
 DEBUG = False
