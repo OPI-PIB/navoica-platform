@@ -20,14 +20,54 @@ resume_block = retrieve_last_sitewide_block_completed(username)
 displayname = get_enterprise_learner_generic_name(request) or username
 %>
 
- <li class="nav-item dropdown">
-            <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" href="${reverse('dashboard')}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="mobile-menu" role="menuitem" aria-labelledby="my-account"><a class="dropdown-item" href="${reverse('dashboard')}">${_("My Courses")}</a></div>
+<div class="mobile-menu" role="menuitem" aria-labelledby="my-account"><a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}">${_("Profile")}</a></div>
+<div class="mobile-menu" role="menuitem" aria-labelledby="my-account"><a class="dropdown-item" href="${reverse('account_settings')}">${_("Account")}</a></div>
+
+
+<hr class="dropdown-divider mobile-menu my-0"/>
+<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu" id="courses-links">${_("Courses")}</div>
+
+<div class="mobile-menu" role="menuitem" aria-labelledby="courses-links">
+    <a class="dropdown-item" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
+</div>
+
+<!--<hr class="dropdown-divider mobile-menu my-0" />
+<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu" id="language">${_("Choose Language")}</div>
+<div class="mobile-menu" role="menuitem" aria-labelledby="language">
+    <a class="dropdown-item text-capitalize"
+       href="#"
+       aria-label="Ustaw język interfejsu strony na polski">
+        <img class="mooc-lang-flag"
+             src="/static/images/pl-lang.png"
+             aria-hidden="true"
+             alt="Język polski"
+             height="32">${_('Polish')}
+    </a></div>
+<div class="mobile-menu" role="menuitem" aria-labelledby="language">
+    <a class="dropdown-item text-capitalize"
+       href="#"
+       aria-label="Set the website interface language to English">
+        <img class="mooc-lang-flag"
+             src="/static/images/en-lang.png"
+             aria-hidden="true"
+             alt="English language"
+             height="32">${_('English')}
+    </a></div>-->
+
+<hr class="dropdown-divider mobile-menu my-0" />
+
+<div role="menuitem" class="mobile-menu"><a class="dropdown-item" href="${reverse('logout')}">${_("Sign Out")}</a></div>
+
+
+<div class="nav-item dropdown my-account desktop-menu">
+            <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="${username} Menu">
              <!-- 
              <img class="mr-2 rounded-circle" src="${profile_image_url}" width="32" height="32">
 	     -->				
              ${displayname}
              </button>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" role="menu">
                 <a class="dropdown-item" href="${reverse('dashboard')}" role="menuitem">${_("My Courses")}</a>
                 <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a>
                 <a class="dropdown-item" href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a>
@@ -35,5 +75,6 @@ displayname = get_enterprise_learner_generic_name(request) or username
                 <a class="dropdown-item" href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a>
             </div>
 
-          </li>
+</div>
+
 
