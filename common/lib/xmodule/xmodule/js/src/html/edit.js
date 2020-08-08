@@ -1357,41 +1357,41 @@
       content = rewriteStaticLinks(source.content, '/static/', this.base_asset_url);
       return source.content = content;
     };
-    HTMLEditingDescriptor.prototype.retriveUploadAssetsEndPoint = function(){
 
-       /*
-       Used to retrive url of Upload Assets EndPoint
-       */
-      let baseAssetUrl = this.base_asset_url;
+    HTMLEditingDescriptor.prototype.retriveUploadAssetsEndPoint = function () {
+      /*
+      Used to retrive url of Upload Assets EndPoint
+      */
+      var baseAssetUrl = this.base_asset_url;
       baseAssetUrl = baseAssetUrl.match(/asset-v1\:(.*?)\+type/g).shift();
       return '/assets/course-v1:' + baseAssetUrl.replace(/asset\-v1\:|\+type/gi, '') + '/';
     };
 
-    HTMLEditingDescriptor.prototype.imagesUploadHandler = function(blobInfo, success, failure){
-
-       /*
+    HTMLEditingDescriptor.prototype.imagesUploadHandler = function (blobInfo, success, failure) {
+      /*
       Overriding image_upload_handler function.
-       */
-      visualEditor = this.getVisualEditor()
-      imageFile =  new File([blobInfo.blob()], blobInfo.filename().match(/[^@]*$/g).shift(), {type:blobInfo.blob()["type"], lastModified:new Date()})
-      const imageData = new FormData();
+      */
+      visualEditor = this.getVisualEditor();
+      imageFile = new File([blobInfo.blob()], blobInfo.filename().match(/[^@]*$/g).shift(), {
+        type: blobInfo.blob()["type"],
+        lastModified: new Date()
+      });
+      var imageData = new FormData();
       imageData.append('file', imageFile);
-      fetch(
-          this.retriveUploadAssetsEndPoint(), {
-          credentials: 'same-origin',
-          method: 'post',
-          body: imageData,
-          headers: {
-            'Accept': 'application/json',
-            'X-CSRFToken': $.cookie('csrftoken'),
-          },
-        },
-      ).then(response => response.json())
-      .then(data => {
+      fetch(this.retriveUploadAssetsEndPoint(), {
+        credentials: 'same-origin',
+        method: 'post',
+        body: imageData,
+        headers: {
+          'Accept': 'application/json',
+          'X-CSRFToken': $.cookie('csrftoken')
+        }
+      }).then(function (response) {
+        return response.json();
+      }).then(function (data) {
         success(data.asset.url);
-      })
-      .catch((error) => {
-        failure(error)
+      }).catch(function (error) {
+        failure(error);
       });
       return visualEditor.focus();
     };
