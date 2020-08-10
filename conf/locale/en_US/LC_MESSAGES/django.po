@@ -21,8 +21,8 @@
 # EdX Team <info@edx.org>, 2020.
 #
 # Translators:
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)
@@ -40,9 +40,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-07-13 13:09+0000\n"
+"POT-Creation-Date: 2020-08-10 11:19+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
-"Last-Translator: Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020\n"
+"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -4232,8 +4232,8 @@ msgstr ""
 #: lms/djangoapps/courseware/views/views.py
 #: lms/djangoapps/shoppingcart/reports.py
 #: openedx/features/course_experience/__init__.py
-#: cms/templates/widgets/header.html lms/templates/help_modal.html
-#: lms/templates/courseware/courseware.html
+#: cms/templates/widgets/header.html lms/templates/course.html
+#: lms/templates/help_modal.html lms/templates/courseware/courseware.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 msgid "Course"
 msgstr ""
@@ -4725,10 +4725,6 @@ msgstr ""
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/donate.html
 msgid "Donate"
-msgstr ""
-
-#: lms/djangoapps/branding/api.py
-msgid "About the project"
 msgstr ""
 
 #: lms/djangoapps/branding/api.py lms/templates/static_templates/faq.html
@@ -9447,8 +9443,9 @@ msgstr ""
 #. interface (a menu or piece of UI that takes the full focus of the screen)
 #: lms/templates/wiki/edit.html lms/templates/wiki/history.html
 #: lms/templates/wiki/includes/cheatsheet.html lms/templates/dashboard.html
-#: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
-#: lms/templates/signup_modal.html lms/templates/ccx/schedule.html
+#: lms/templates/forgot_password_modal.html lms/templates/header.html
+#: lms/templates/help_modal.html lms/templates/signup_modal.html
+#: lms/templates/staff_problem_info.html lms/templates/ccx/schedule.html
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
@@ -9719,7 +9716,7 @@ msgstr ""
 #: lms/templates/dashboard.html lms/templates/index.html
 #: lms/templates/api_admin/catalogs/search.html
 #: lms/templates/courseware/courseware.html
-#: lms/templates/edxnotes/edxnotes.html
+#: lms/templates/edxnotes/edxnotes.html lms/templates/header/header.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html
@@ -10747,9 +10744,9 @@ msgstr ""
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's password.
 #: openedx/core/djangoapps/user_api/api.py cms/templates/login.html
-#: cms/templates/register.html lms/templates/provider_login.html
-#: lms/templates/register-form.html lms/templates/signup_modal.html
-#: lms/templates/sysadmin_dashboard.html
+#: cms/templates/register.html lms/templates/login.html
+#: lms/templates/provider_login.html lms/templates/register-form.html
+#: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
 #: themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Password"
@@ -11930,6 +11927,8 @@ msgstr ""
 #: cms/templates/index.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/user_dropdown.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
@@ -12033,6 +12032,8 @@ msgid "Reset"
 msgstr ""
 
 #: cms/templates/widgets/header.html lms/templates/header/header.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/user_dropdown.html
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
@@ -12403,6 +12404,14 @@ msgid ""
 "registered user."
 msgstr ""
 
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "Navoica page on Facebook"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "open in a new window"
+msgstr ""
+
 #: lms/templates/footer.html
 msgid "About us"
 msgstr ""
@@ -12417,6 +12426,24 @@ msgstr ""
 
 #: lms/templates/footer.html
 msgid "Honor code "
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "Ministry of Science and Higher Education"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "The Conference of Rectors of Academic Schools in Poland"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "The Young Science Foundation"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid ""
+"National Information Processing Institute \\u2013 National Research "
+"Institute"
 msgstr ""
 
 #: lms/templates/footer.html
@@ -12459,6 +12486,19 @@ msgstr ""
 
 #: lms/templates/forgot_password_modal.html
 msgid "Email is incorrect."
+msgstr ""
+
+#: lms/templates/header.html
+msgid ""
+"We use cookies and similar technologies to provide services and to gather "
+"information for statistical and other purposes. You can change the way you "
+"want the cookies to be stored or accessed on your device in the settings of "
+"your browser. If you do not agree, change the settings of your browser. For "
+"more information, refer to our"
+msgstr ""
+
+#: lms/templates/header.html
+msgid "Privacy policy"
 msgstr ""
 
 #: lms/templates/help_modal.html
@@ -12713,7 +12753,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: lms/templates/login-sidebar.html
+#: lms/templates/login-sidebar.html lms/templates/register.html
 msgid "Helpful Information"
 msgstr ""
 
@@ -12744,6 +12784,14 @@ msgstr ""
 msgid "Looking for help signing in or with your {platform_name} account?"
 msgstr ""
 
+#: lms/templates/login-sidebar.html lms/templates/register-sidebar.html
+msgid " Please contact our Help Center at "
+msgstr ""
+
+#: lms/templates/login-sidebar.html lms/templates/register-sidebar.html
+msgid "mooc_help@opi.org.pl."
+msgstr ""
+
 #: lms/templates/login.html
 msgid "Log into your {platform_name} Account"
 msgstr ""
@@ -12757,6 +12805,10 @@ msgstr ""
 #: lms/templates/login.html
 #: lms/templates/registration/activate_account_notice.html
 msgid "You're almost there!"
+msgstr ""
+
+#: lms/templates/login.html
+msgid "Login form"
 msgstr ""
 
 #: lms/templates/login.html wiki/templates/wiki/accounts/login.html
@@ -13095,6 +13147,10 @@ msgid "example: New York"
 msgstr ""
 
 #: lms/templates/register-form.html
+msgid "Poland"
+msgstr ""
+
+#: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Highest Level of Education Completed"
 msgstr ""
@@ -13200,16 +13256,6 @@ msgstr ""
 
 #: lms/templates/register-sidebar.html
 msgid ""
-"Skontaktuj si\\u0119 z naszym dzia\\u0142em pomocy technicznej dostepnym pod"
-" adresem "
-msgstr ""
-
-#: lms/templates/register-sidebar.html
-msgid "mooc_help@opi.org.pl."
-msgstr ""
-
-#: lms/templates/register-sidebar.html
-msgid ""
 "You can find the answers to most of your questions in our list of FAQs. "
 "After you enroll in a course, you can also find answers in the course "
 "discussions."
@@ -13217,6 +13263,10 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Register for {platform_name}"
+msgstr ""
+
+#: lms/templates/register.html
+msgid "Registration form"
 msgstr ""
 
 #: lms/templates/register.html
@@ -16780,6 +16830,14 @@ msgstr ""
 msgid "{platform_name} Home Page"
 msgstr ""
 
+#: lms/templates/header/header.html
+msgid "Navoica logo"
+msgstr ""
+
+#: lms/templates/header/header.html
+msgid "My Account"
+msgstr ""
+
 #: lms/templates/header/header.html lms/templates/navigation/navigation.html
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
@@ -16796,8 +16854,9 @@ msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/user_dropdown.html
 msgid "Discover New"
-msgstr ""
+msgstr "Courses"
 
 #. Translators: This is short for "System administration".
 #: lms/templates/header/navbar-authenticated.html
@@ -16823,6 +16882,16 @@ msgstr ""
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 msgid "Schools"
+msgstr ""
+
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/user_dropdown.html
+msgid "Polish"
+msgstr ""
+
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/user_dropdown.html
+msgid "English"
 msgstr ""
 
 #: lms/templates/header/user_dropdown.html
@@ -19139,6 +19208,10 @@ msgstr ""
 "hub of the universe is called Kraków”)"
 
 #: lms/templates/static_templates/legend.html
+msgid "Navoica avatar"
+msgstr ""
+
+#: lms/templates/static_templates/legend.html
 msgid "Legend_paragraph_1"
 msgstr ""
 "Legend has it, Nawojka received basic education at home where she learned "
@@ -19204,7 +19277,7 @@ msgid "Currently the {platform_name} servers are overloaded"
 msgstr ""
 
 #: lms/templates/static_templates/tos.html
-msgid "tos_title"
+msgid "mooc_help@opi.org.pl"
 msgstr ""
 
 #: lms/templates/static_templates/tos.html
@@ -19605,10 +19678,6 @@ msgstr ""
 
 #: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_5"
-msgstr ""
-
-#: lms/templates/static_templates/tos.html
-msgid "mooc_help@opi.org.pl"
 msgstr ""
 
 #: lms/templates/static_templates/tos.html

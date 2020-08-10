@@ -7,8 +7,9 @@
 # Translators:
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
-# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
+# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
+# Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
 #
 # #-#-#-#-#  djangojs-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
@@ -49,7 +50,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-07-13 13:08+0000\n"
+"POT-Creation-Date: 2020-08-10 11:19+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -4471,7 +4472,7 @@ msgstr ""
 
 #: lms/static/js/instructor_dashboard/certificates.js
 msgid "Prepare merged pdf contains all certificates in this course?"
-msgstr ""
+msgstr "Przygotować zestawienie wszystkich certyfikatów?"
 
 #: lms/static/js/instructor_dashboard/data_download.js
 msgid "Loading data..."
@@ -5168,20 +5169,20 @@ msgid "Copy Email To Editor"
 msgstr "Skopiuj e-mail do edytora"
 
 #: lms/static/js/instructor_dashboard/util.js
-msgid "Subject:"
+msgid "Subject: "
 msgstr "Temat:"
 
 #: lms/static/js/instructor_dashboard/util.js
-msgid "Sent By:"
-msgstr "Wysłany przez:"
+msgid "Sent By: "
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-msgid "Time Sent:"
-msgstr "Czas wysyłki:"
+msgid "Time Sent: "
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-msgid "Sent To:"
-msgstr "Wysłany do:"
+msgid "Sent To: "
+msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
 msgid "Message:"
@@ -8124,6 +8125,16 @@ msgid "Hide Timer"
 msgstr "Ukryj zegar"
 
 #: lms/templates/discovery/course_card.underscore
+#: lms/templates/learner_dashboard/program_card.underscore
+#: lms/templates/verify_student/enrollment_confirmation_step.underscore
+msgid "Course"
+msgid_plural "Courses"
+msgstr[0] "Kurs"
+msgstr[1] "Kursy"
+msgstr[2] "Kursów"
+msgstr[3] "Kursów"
+
+#: lms/templates/discovery/course_card.underscore
 #, python-format
 msgid "Starts: %(start_date)s"
 msgstr "Rozpoczęcie: %(start_date)s"
@@ -8687,15 +8698,6 @@ msgstr ""
 #: lms/templates/learner_dashboard/explore_new_programs.underscore
 msgid "Explore New Programs"
 msgstr "Odkryj nowe programy"
-
-#: lms/templates/learner_dashboard/program_card.underscore
-#: lms/templates/verify_student/enrollment_confirmation_step.underscore
-msgid "Course"
-msgid_plural "Courses"
-msgstr[0] "Kurs"
-msgstr[1] "Kursy"
-msgstr[2] "Kursów"
-msgstr[3] "Kursów"
 
 #: lms/templates/learner_dashboard/program_card.underscore
 msgid "Completed"

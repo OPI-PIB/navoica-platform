@@ -322,7 +322,6 @@ FEATURES = {
 }
 
 
-
 ENABLE_JASMINE = False
 
 ############################# SOCIAL MEDIA SHARING #############################

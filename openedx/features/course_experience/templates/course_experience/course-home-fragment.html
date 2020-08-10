@@ -96,7 +96,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                     % for course_tool in course_tools:
                         <li class="list-group-item">
                           <div class="course-details-icon">
-                            <i class="icon ${course_tool.icon_classes()}"></i>
+                            <i class="icon ${course_tool.icon_classes()}" aria-hidden="true"></i>
                           </div>
                             <div class="course-details-content">
                               <a href="${course_tool.url(course_key)}">${course_tool.title()}</a>
@@ -106,7 +106,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
 
                     <li class="list-group-item">
                         <div class="course-details-icon">
-                            <i class="icon fas fa-envelope"></i>
+                            <i class="icon fas fa-envelope" aria-hidden="true"></i>
                         </div>
                         <div class="course-details-content">
                             <a href="#email-settings-modal" class="action-email-settings" rel="leanModal" data-course-id="${course.id}" data-course-number="${course.number}" data-optout="${course.id in course_optouts}">${_('Email Settings')}</a>   
