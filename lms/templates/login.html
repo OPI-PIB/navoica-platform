@@ -206,7 +206,7 @@ from third_party_auth import provider, pipeline
           <article id="result">
            <header class="header-login">
              <h2 class="custom-h2">
-               <span class="d-none d-md-block">Formularz logowania</span>
+               <span class="d-none d-md-block">${_("Login form")}</span>
              </h2>
             </header>
             <h1><strong>${_("Please log in")}</strong><br>${_("to access your account and courses")}</h1>
@@ -253,7 +253,7 @@ from third_party_auth import provider, pipeline
 			</div>
             <div class="form-group form-group-required field password js-password-field">
               <div class="d-flex justify-content-between align-items-center">
-                <label for="password">Hasło <sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+                <label for="password">${_('Password') <sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
               </div>
               <input type="password" class="form-control js-input-login" id="password" name="password" value="" spellcheck="false" autocapitalize="off" required aria-required="true">
 				<small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
