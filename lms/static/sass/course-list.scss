@@ -1687,9 +1687,11 @@ margin-top: 4rem !important;
   &:focus {
     color: #212529;
     background-color: #fff;
-    border-color: #f28f9c;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem #dee2e6;
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+    outline: 2px solid #626C7A;
+  }
+  &:hover{
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
   }
 
   &::placeholder {
@@ -9789,6 +9791,11 @@ section .display-2 {
 
   &:hover {
     text-decoration: none;
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+  }
+  &:focus {
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+    outline: 2px solid #626C7A;
   }
 }
 
@@ -11146,7 +11153,17 @@ button#button-addon2 {
     background: #f8f9fa;
     color: #212529;
     border-color: #adb5bd !important;
-}
+    &:focus {
+       box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+       border: 2px solid #626C7A;
+       z-index: 1000;
+    }
+    &:hover{
+      box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+      z-index: 1000;
+    }
+  }
+
 #courses, .about-us {
     padding: 3rem 0 !important;
 }
@@ -13535,7 +13552,12 @@ span.complete-checkmark.fa.fa-check {
   width: 2.5rem;
   &:hover {
     color:#fff;
-  }  
+    background: #c3172e;
+    border-color: #b8162b;
+  }
+  &:focus {
+    outline: 2px black solid;
+  }
 
   i {
     margin: auto;
@@ -13619,6 +13641,10 @@ span.complete-checkmark.fa.fa-check {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+
+    &:focus {
+      outline: 2px black solid;
+  }
 }
 
 #header-navigation .dropdown-header {
@@ -13803,7 +13829,11 @@ span.complete-checkmark.fa.fa-check {
 }
 
 #header-navigation .btn-outline-primary:focus, #header-navigation .btn-outline-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 1);
+  outline: 2px black solid;
+}
+
+#header-navigation .btn-primary:focus, #header-navigation .btn-primary.focus {
+  outline: 2px black solid;
 }
 
 #header-navigation .btn-outline-primary.disabled, #header-navigation .btn-outline-primary:disabled {
@@ -13835,4 +13865,8 @@ span.complete-checkmark.fa.fa-check {
 
 .text-darkcyan {
   color: $darkcyan;
+}
+
+.btn-primary:focus, #header-navigation .btn-primary.focus {
+  outline: 2px black solid;
 }
