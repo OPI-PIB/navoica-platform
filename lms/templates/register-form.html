@@ -173,7 +173,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
             <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['country']} select" id="field-country">
                 <label for="country">${_("Country")}</label>
                 <select class="custom-select ${settings.REGISTRATION_EXTRA_FIELDS['country']}" id="country" name="country" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['country'] == 'required' else ''}>
-                <option value="PL">Polska</option>
+                <option value="PL">${_("Poland")}</option>
                 %for code, country_name in countries:
                 <option value="${code}">${ unicode(country_name) }</option>
                 %endfor
