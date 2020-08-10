@@ -16,10 +16,11 @@ from openedx.core.djangolib.markup import HTML, Text
             <p class="lead text-center my-3">${_('Free online courses offered by Polish universities and institutions')}</p>
 	      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
 				<form method="get" action="/courses">
-					<div class="input-group my-2 p-2">
-					  <input class="form-control form-control-lg" type="search" name="search_query" placeholder="${_('What do you want to learn?')}">
-					  <button class="btn btn-outline-secondary btn-lg" type="submit" id="button-addon2">${_('Search')}</button>
-					  </div>
+					<div class="input-group my-2 p-2 d-flex flex-row flex-nowrap" role="search">
+                        <label for="search-query" class="mx-0 my-0 w-100 sr-only">${_('What do you want to learn?')}</label>
+                        <input id="search-query" class="form-control form-control-lg" type="search" name="search_query" placeholder="${_('What do you want to learn?')}" aria-label="${_('What do you want to learn?')}">
+					    <button class="btn btn-outline-secondary btn-lg" type="submit" id="button-addon2" aria-label="${_('Search')}"><i class="fa fa-search mx-0" aria-hidden="true"></i></button>
+					</div>
 			  </form>
 		   % endif
 		</div>
