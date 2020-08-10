@@ -36,7 +36,7 @@
   --font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-$darkcyan : darkcyan;
+$darkcyan : teal;
 
 .text-darkred {
   color: #a11326;
@@ -2353,7 +2353,7 @@ a.btn.disabled, fieldset:disabled a.btn {
   }
 
   &.disabled, &:disabled {
-    color: #212529;
+    color: #000;
     background-color: #adb5bd;
     border-color: #adb5bd;
   }
@@ -4651,16 +4651,6 @@ input {
   }
 }
 
-.card-footer {
-  padding: 1rem 1rem;
-  background-color: #fff;
-  border-top: 0 solid rgba(0, 0, 0, 0.125);
-
-  &:last-child {
-    border-radius: 0 0 calc(0 - 0) calc(0 - 0);
-  }
-}
-
 .navbar-dark {
   .navbar-brand {
     color: #fff;
@@ -4788,7 +4778,6 @@ input {
 }
 
 .card-footer {
-  padding: 1rem 1rem;
   background-color: #fff;
   border-top: 0 solid rgba(0, 0, 0, 0.125);
 
@@ -9839,7 +9828,7 @@ section .display-2 {
 .card-footer {
   background: transparent;
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
 
   p {
     margin: 0;
@@ -10560,10 +10549,20 @@ main.container aside {
   .course-text {
     min-height: 6rem;
     width: 100%;
+    font-size: 0.813rem;
   }
   .card-footer {
     .course-meta {
-      height: unset;
+      height: 2.844rem;
+    }
+  }
+  .course-cert {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    height: 5.047rem;
+    button {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
   .course-meta {
@@ -11150,7 +11149,6 @@ article .display-3 {
   border-top: none;
   font-weight: initial;
   margin-top: auto;
-  padding-top: .5rem;
 
   .course-meta {
     margin: 0;
