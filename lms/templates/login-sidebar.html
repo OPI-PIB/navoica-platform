@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 
 
 <aside id="filter" class="sidebar">
-  <header id="header-login">
+  <header class="header-login">
     <h2 id="h2">
       <span class="d-none d-md-block">${_("Helpful Information")}</span>
     </h2>
@@ -26,7 +26,7 @@ from django.core.urlresolvers import reverse
           <i class="fas fa-user-times" aria-hidden="true"></i>
         </div>
         <div class="course-details-content">
-          <h6>${_("Not Enrolled?")}</h6>
+          <h3 class="custom-h6">${_("Not Enrolled?")}</h3>
           <div><a href="${reverse('register_user')}">${_("Sign up for {platform_name} today!").format(platform_name=platform_name)}</a></div>
         </div>
       </li>
@@ -37,16 +37,16 @@ from django.core.urlresolvers import reverse
           <i class="far fa-envelope-open" aria-hidden="true"></i>
         </div>
         <div class="course-details-content">
-          <h6>${_("Need Help?")}</h6>
+          <h3 class="custom-h6">${_("Need Help?")}</h3>
           <div>${_("Looking for help signing in or with your {platform_name} account?").format(platform_name=platform_name)}<br>
           Skontaktuj się z naszym działem pomocy technicznej dostępnym pod adresem <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a>.
           </div>
          </div>
        </li>
-    </ul>
-    <a href="https://www.facebook.com/NAVOICA/" class="fb-link-icon-big center" target="_blank">
-      <i class="fab fa-facebook-f m-auto" title="${_('Navoica page on Facebook')}"></i>
-      <span class="sr">${_('open in a new window')}</span>
+     </ul>
+    <a href="https://www.facebook.com/NAVOICA/" target="_blank" title="${_('Navoica page on Facebook')}" class="fb-link-icon-big center">
+        <i class="fab fa-facebook-f m-auto"></i>
+        <span class="sr">${_('open in a new window')}</span>
     </a>
    </div>
   % endif

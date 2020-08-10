@@ -9,12 +9,12 @@ from student.models import UserProfile
 <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
 
 <!-- status messages -->
-<div id="alert-info" role="alert" class="status message">
+<div id="alert-info" role="alert" class="status message" tabindex="-1">
     <h3 class="message-title">${_("We're sorry, but this version of your browser is not supported. Try again using a different browser or a newer version of your browser.")}</h3>
 </div>
 
 <div id="alert-primary" role="alert" class="status message submission-error" tabindex="-1">
-    <h3 class="message-title">${_("The following errors occurred while processing your registration:")} </h3>
+    <h3 class="message-title">${_("The following errors occurred while processing your registration:")}</h3>
     <ul class="message-copy"></ul>
 </div>
 
@@ -46,7 +46,7 @@ from student.models import UserProfile
 
 <p class="instructions">
     ${_('Create your own {platform_name} account below').format(platform_name=platform_name)}
-    <span class="note">${_('Required fields are noted by <strong class="indicator">bold text and an asterisk (*)</strong>.')}</span>
+    <span class="note">${_('Required fields are noted by <strong class="indicator">an asterisk (*)</strong>.')}</span>
 </p>
 
 
@@ -64,7 +64,7 @@ from student.models import UserProfile
 
 <p class="instructions">
     ${_("Please complete the following fields to register for an account. ")}<br/>
-    ${_('Required fields are noted by <strong class="indicator">bold text and an asterisk (*)</strong>.')}
+    ${_('Required fields are noted by <strong class="indicator">an asterisk (*)</strong>.')}
 </p>
 
 % endif
@@ -75,34 +75,39 @@ from student.models import UserProfile
     % if has_extauth_info is UNDEFINED:
 
     <div class="list-input">
-        <div class="field required text form-group form-group-required" id="field-email">
-            <label for="email">${_('E-mail')}</label>
-            <input class="form-control" class="" id="email" type="email" name="email" value="${email}" placeholder="${_('example: username@domain.com')}" required aria-required="true"/>
+        <div class="field text form-group form-group-required js-email-field" id="field-email">
+            <label for="email">${_('E-mail')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <input class="form-control js-register-field" id="email" type="email" name="email" value="${email}" placeholder="${_('example: username@domain.com')}" spellcheck="false" autocomplete="on" required aria-required="true"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
         </div>
 
-        <div class="field required text form-group form-group-required" id="field-name">
-            <label for="name">${_('Full Name')}</label>
-            <input class="form-control" id="name" type="text" name="name" value="${name}" placeholder="${_('example: Jane Doe')}" required aria-required="true" aria-describedby="name-tip"/>
+        <div class="field text form-group form-group-required js-name-field" id="field-name">
+            <label for="name">${_('Full Name')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <input class="form-control js-register-field" id="name" type="text" name="name" value="${name}" placeholder="${_('example: Jane Doe')}" required aria-required="true" aria-describedby="name-tip"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
             <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
-        <div class="field required text form-group form-group-required" id="field-username">
-            <label for="username">${_('Public Username')}</label>
-            <input class="form-control" id="username" type="text" name="username" value="${username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
+        <div class="field text form-group form-group-required js-username-field" id="field-username">
+            <label for="username">${_('Public Username')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <input class="form-control js-register-field" id="username" type="text" name="username" value="${username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
             <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
         % if third_party_auth.is_enabled() and running_pipeline:
 
-        <div class="is-disabled field optional password form-group form-group-required" id="field-password" hidden>
+        <div class="is-disabled field optional password form-group form-group-required field-password js-password-field" hidden>
             <label for="password">${_('Password')}</label>
-            <input class="form-control" id="password" type="password" name="password" value="" disabled required aria-required="true"/>
+            <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" disabled required aria-required="true"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
         </div>
 
         % else:
 
-        <div class="field required form-group form-group-required" id="field-password">
-            <label for="password">${_('Password')}</label>
-            <input class="form-control" id="password" type="password" name="password" value="" required aria-required="true"/>
+        <div class="field form-group form-group-required field-password js-password-field">
+            <label for="password">${_('Password')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" required aria-required="true" aria-describedby="password-tip"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
             <span class="tip tip-input" id="password-tip">
 				<%
 min_length = 8
@@ -111,9 +116,10 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
 			</span>
         </div>
         
-        <div class="field required password form-group form-group-required" id="field-password">
-            <label for="password">${_('Confirm Password')}</label>
-            <input class="form-control" id="confirm_password" type="password" value="" required name="confirm_password" />
+        <div class="field password form-group form-group-required field-password js-confirm-password-field">
+            <label for="confirm_password">${_('Confirm Password')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <input class="form-control js-register-field" id="confirm_password" type="password" value="" spellcheck="false" required aria-required="true" name="confirm_password" />
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
         </div>
 
         % endif
@@ -130,24 +136,27 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
 
         % if ask_for_email:
 
-        <div class="field required text" id="field-email">
-            <label for="email">${_("E-mail")}</label>
-            <input class="" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}"/>
+        <div class="field text js-email-field" id="field-email">
+            <label for="email">${_("E-mail")}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <input class="js-register-field" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" spellcheck="false" required aria-required="true"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
         </div>
 
         % endif
 
-        <div class="field required text" id="field-username">
-            <label for="username">${_('Public Display Name')}</label>
-            <input id="username" type="text" name="username" value="${extauth_username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
+        <div class="field text js-username-field" id="field-username">
+            <label for="username">${_('Public Display Name')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <input class="js-register-field" id="username" type="text" name="username" value="${extauth_username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
             <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
         % if ask_for_fullname:
 
-        <div class="field required text" id="field-name">
-            <label for="name">${_('Full Name')}</label>
-            <input id="name" type="text" name="name" value="" placeholder="$_('example: Jane Doe')}" aria-describedby="name-tip"/>
+        <div class="field text js-name-field" id="field-name">
+            <label for="name">${_('Full Name')} <sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <input class="js-register-field" id="name" type="text" name="name" value="" placeholder="$_('example: Jane Doe')}" aria-describedby="name-tip"/>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
             <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
 
@@ -161,11 +170,11 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
 <div class="group group-form group-form-secondary group-form-personalinformation">
     <h2 class="sr">${_("Additional Personal Information")}</h2>
 
-    <odiv class="list-input">
+    <div class="list-input">
         % if settings.REGISTRATION_EXTRA_FIELDS['city'] != 'hidden':
         <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['city']} text" id="field-city">
             <label for="city">${_('City')}</label>
-            <input id="city" type="text" name="city" value="" placeholder="${_('example: New York')}" aria-describedby="city-tip" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['city'] == 'required' else ''} />
+            <input id="city" type="text" name="city" value="" placeholder="${_('example: New York')}" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['city'] == 'required' else ''} />
         </div>
         % endif
         % if settings.REGISTRATION_EXTRA_FIELDS['country'] != 'hidden':
@@ -249,6 +258,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
 		</div>
 	</div>
 % endif
+</div>
 
 <div class="group group-form group-form-accountacknowledgements">
     <h2 class="sr">${_("Account Acknowledgements")}</h2>
@@ -257,13 +267,14 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
     % if has_extauth_info is UNDEFINED or ask_for_tos :
 
 
-    <div class="form-group">
+    <div class="form-group js-terms-of-service-field">
         <div class="custom-control custom-checkbox">
-            <input type="checkbox" name="terms_of_service" class="custom-control-input" id="customCheck1" value="true" >
-            <label class="custom-control-label" for="customCheck1">${_('I agree to the {link_start}Terms of Service{link_end}').format(
-                link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=marketing_link('TOS')),
-                    link_end='</a>')}</label>
+            <input type="checkbox" name="terms_of_service" class="custom-control-input js-register-field" id="terms_of_service" value="true" required aria-required="true">
+            <label class="custom-control-label" for="terms_of_service">${_('I agree to the {link_start}Terms of Service{link_end}').format(
+                link_start='<a href="{url}" class="new-vp text-darkred">'.format(url=marketing_link('TOS')),
+                    link_end='</a>')} <sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
         </div>
+        <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
     </div>
     % endif
 
@@ -271,16 +282,17 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
     ## check if we have an Honor Code link in our marketing map
     % if marketing_link('HONOR') and marketing_link('HONOR') != '#':
 
-    <div class="form-group">
+    <div class="form-group js-honor-code-field">
         <div class="custom-control custom-checkbox">
-            <input name="honor_code" type="checkbox" class="custom-control-input" id="customCheck2" value="true">
+            <input name="honor_code" type="checkbox" class="custom-control-input js-register-field" id="honor_code" value="true" required aria-required="true">
             <%
             honor_code_path = marketing_link('HONOR')
             %>
-            <label class="custom-control-label" for="customCheck2">${_('I agree to the {link_start}Honor Code{link_end}').format(
-                link_start='<a href="{url}" class="new-vp" tabindex="-1">'.format(url=honor_code_path),
-                    link_end='</a>')}</label>
+            <label class="custom-control-label" for="honor_code">${_('I agree to the {link_start}Honor Code{link_end}').format(
+                link_start='<a href="{url}" class="new-vp text-darkred">'.format(url=honor_code_path),
+                    link_end='</a>')} <sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
         </div>
+        <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
     </div>
 
 
@@ -291,5 +303,5 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
 
 
 <div class="login-button form-actions">
-    <button type="submit" class="btn btn-primary" id="submit"><i class="fas fa-check"></i> ${_('Register')}</button>
+    <button type="submit" class="btn btn-primary" id="submit"><i class="fas fa-check" aria-hidden="true"></i> ${_('Register')}</button>
 </div>
