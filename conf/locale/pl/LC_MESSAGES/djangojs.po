@@ -50,7 +50,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-07-13 13:08+0000\n"
+"POT-Creation-Date: 2020-08-10 11:19+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -8125,6 +8125,16 @@ msgid "Hide Timer"
 msgstr "Ukryj zegar"
 
 #: lms/templates/discovery/course_card.underscore
+#: lms/templates/learner_dashboard/program_card.underscore
+#: lms/templates/verify_student/enrollment_confirmation_step.underscore
+msgid "Course"
+msgid_plural "Courses"
+msgstr[0] "Kurs"
+msgstr[1] "Kursy"
+msgstr[2] "Kursów"
+msgstr[3] "Kursów"
+
+#: lms/templates/discovery/course_card.underscore
 #, python-format
 msgid "Starts: %(start_date)s"
 msgstr "Rozpoczęcie: %(start_date)s"
@@ -8688,15 +8698,6 @@ msgstr ""
 #: lms/templates/learner_dashboard/explore_new_programs.underscore
 msgid "Explore New Programs"
 msgstr "Odkryj nowe programy"
-
-#: lms/templates/learner_dashboard/program_card.underscore
-#: lms/templates/verify_student/enrollment_confirmation_step.underscore
-msgid "Course"
-msgid_plural "Courses"
-msgstr[0] "Kurs"
-msgstr[1] "Kursy"
-msgstr[2] "Kursów"
-msgstr[3] "Kursów"
 
 #: lms/templates/learner_dashboard/program_card.underscore
 msgid "Completed"

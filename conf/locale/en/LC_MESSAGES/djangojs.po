@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-07-13 13:08+0000\n"
-"PO-Revision-Date: 2020-07-13 13:09:04.839815\n"
+"POT-Creation-Date: 2020-08-10 11:19+0000\n"
+"PO-Revision-Date: 2020-08-10 11:19:31.454810\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -4749,19 +4749,19 @@ msgid "Copy Email To Editor"
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-msgid "Subject:"
+msgid "Subject: "
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-msgid "Sent By:"
+msgid "Sent By: "
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-msgid "Time Sent:"
+msgid "Time Sent: "
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
-msgid "Sent To:"
+msgid "Sent To: "
 msgstr ""
 
 #: lms/static/js/instructor_dashboard/util.js
@@ -7497,6 +7497,14 @@ msgid "Hide Timer"
 msgstr ""
 
 #: lms/templates/discovery/course_card.underscore
+#: lms/templates/learner_dashboard/program_card.underscore
+#: lms/templates/verify_student/enrollment_confirmation_step.underscore
+msgid "Course"
+msgid_plural "Courses"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lms/templates/discovery/course_card.underscore
 #, python-format
 msgid "Starts: %(start_date)s"
 msgstr ""
@@ -8024,13 +8032,6 @@ msgstr ""
 #: lms/templates/learner_dashboard/explore_new_programs.underscore
 msgid "Explore New Programs"
 msgstr ""
-
-#: lms/templates/learner_dashboard/program_card.underscore
-#: lms/templates/verify_student/enrollment_confirmation_step.underscore
-msgid "Course"
-msgid_plural "Courses"
-msgstr[0] ""
-msgstr[1] ""
 
 #: lms/templates/learner_dashboard/program_card.underscore
 msgid "Completed"
