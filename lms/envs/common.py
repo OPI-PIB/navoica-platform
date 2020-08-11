@@ -918,8 +918,8 @@ COURSES_WITH_UNSAFE_CODE = []
 
 ######################NAVOICA_SANDBOX###########################################
 
-NAVOICA_SANDBOX = True
-NAVOICA_SANDBOX_URL = "http://0.0.0.0:8111/sandbox"
+NAVOICA_SANDBOX = False
+NAVOICA_SANDBOX_URL = ''
 
 ############################### DJANGO BUILT-INS ###############################
 # Change DEBUG in your environment settings files, not here

@@ -39,6 +39,7 @@
 
     function HTMLEditingDescriptor(element) {
       this.initInstanceCallback = bind(this.initInstanceCallback, this);
+      this.imagesUploadHandler = bind(this.imagesUploadHandler, this );
       this.saveCodeEditor = bind(this.saveCodeEditor, this);
       this.showCodeEditor = bind(this.showCodeEditor, this);
       this.saveLink = bind(this.saveLink, this);
@@ -154,6 +155,10 @@
           codemirror: {
             path: baseUrl + "/js/vendor"
           },
+          // Image Tools plugin options
+          automatic_uploads: true,
+          images_upload_handler: this.imagesUploadHandler,
+          images_reuse_filename: true,
           /*
           Necessary to avoid stripping of style tags.
            */
@@ -1351,6 +1356,44 @@
       var content;
       content = rewriteStaticLinks(source.content, '/static/', this.base_asset_url);
       return source.content = content;
+    };
+
+    HTMLEditingDescriptor.prototype.retriveUploadAssetsEndPoint = function () {
+      /*
+      Used to retrive url of Upload Assets EndPoint
+      */
+      var baseAssetUrl = this.base_asset_url;
+      baseAssetUrl = baseAssetUrl.match(/asset-v1\:(.*?)\+type/g).shift();
+      return '/assets/course-v1:' + baseAssetUrl.replace(/asset\-v1\:|\+type/gi, '') + '/';
+    };
+
+    HTMLEditingDescriptor.prototype.imagesUploadHandler = function (blobInfo, success, failure) {
+      /*
+      Overriding image_upload_handler function.
+      */
+      visualEditor = this.getVisualEditor();
+      imageFile = new File([blobInfo.blob()], blobInfo.filename().match(/[^@]*$/g).shift(), {
+        type: blobInfo.blob()["type"],
+        lastModified: new Date()
+      });
+      var imageData = new FormData();
+      imageData.append('file', imageFile);
+      fetch(this.retriveUploadAssetsEndPoint(), {
+        credentials: 'same-origin',
+        method: 'post',
+        body: imageData,
+        headers: {
+          'Accept': 'application/json',
+          'X-CSRFToken': $.cookie('csrftoken')
+        }
+      }).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        success(data.asset.url);
+      }).catch(function (error) {
+        failure(error);
+      });
+      return visualEditor.focus();
     };
 
     HTMLEditingDescriptor.prototype.initInstanceCallback = function (visualEditor) {
