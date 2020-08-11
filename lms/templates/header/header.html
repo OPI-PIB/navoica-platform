@@ -54,13 +54,13 @@ HeaderFactory();
 
             <span id="" class="course-preview-title d-flex flex-column flex-wrap mr-auto">
               % if course.organizer:
-                          <span class="provider text-uppercase text-darkgrey w-100">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</span><br>
+                          <span class="provider w-100 font-weight-bold">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</span><br>
 
              % else:
-                          <span class="provider text-uppercase text-darkgrey w-100">${course.display_org_with_default}</span><br>
+                          <span class="provider w-100 font-weight-bold">${course.display_org_with_default}</span><br>
 
               % endif
-             <span class="course-name text-primary text-uppercase">${course.display_name_with_default}</span>
+             <span class="course-name w-100">${course.display_name_with_default}</span>
            </span>
 
             % else:
