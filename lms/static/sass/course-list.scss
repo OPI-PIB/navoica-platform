@@ -273,16 +273,6 @@ input:focus, textarea:focus, select:focus, a:focus, button:focus {
   outline: none; /* Adjust to suit your tastes */
 }
 
-body *:focus {
-  outline: 2px solid #000000 !important; /* for non-webkit browsers */
-  outline: 5px auto -webkit-focus-ring-color !important;
-}
-
-input:focus-visible, textarea:focus-visible, select:focus-visible, a:focus-visible, button:focus-visible {
-  outline: 2px solid #000000 !important; /* for non-webkit browsers */
-  outline: 5px auto -webkit-focus-ring-color !important;
-}
-
 
 button, [type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button;
