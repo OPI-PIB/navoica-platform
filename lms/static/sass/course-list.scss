@@ -3720,13 +3720,19 @@ input {
     background-color: #fff;
   }
 
+   &:hover {
+     ~ .custom-control-label::before {
+       box-shadow: 0px 0px 3px 2px rgba(71, 79, 89, 0.8);
+     }
+   }
+
   &:focus {
     ~ .custom-control-label::before {
-      box-shadow: 0 0 0 0.2rem #dee2e6;
+      outline: 2px black solid;
     }
 
     &:not(:checked) ~ .custom-control-label::before {
-      border-color: #f28f9c;
+     // border-color: #f28f9c;
     }
   }
 
@@ -3885,9 +3891,8 @@ input {
   text-overflow: '';
 
   &:focus {
-    border-color: #f28f9c;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(228, 29, 55, 0.25);
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+    outline: 2px solid #626C7A;
 
     &::-ms-value {
       color: #212529;
@@ -13886,14 +13891,21 @@ span.complete-checkmark.fa.fa-check {
 .btn-primary:focus, .btn-primary.focus {
   outline: 2px black solid;
 }
-footer a, .nav-skip, #forgot-password-link, .container .about a, #contact a {
+footer a,
+.nav-skip,
+#forgot-password-link,
+.container .about a,
+#contact a,
+#login-form a,
+#register-form a,
+#filter a {
   &:focus, &.focus {
     outline: 2px solid black;
   }
 }
   /** ERROR FIELD **/
 input.form-control.form-control.error-field, .error-field, .error-field ~ .custom-control-label::before {
-  border: 2px solid #e41d37;
+  border: 2px solid #a11326;
 }
 
 .f-10 {

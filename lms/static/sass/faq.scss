@@ -82,9 +82,15 @@
         .btn-link {
           color: #212529;
 
-          &:focus, &:hover {
+          &:focus {
             text-decoration: none;
             border: 2px black solid;
+            background-color: #ffffff;
+          }
+
+          &:hover {
+            background-color: #eeeeee;
+            text-decoration: none;
           }
         }
 
@@ -354,6 +360,8 @@
 
         &:hover {
           cursor: pointer;
+          box-shadow: 0px 0px 8px 3px rgba(71,79,89,0.6);
+          background-color: #ffffff;
         }
 
         i {
