@@ -76,21 +76,21 @@ from student.models import UserProfile
 
     <div class="list-input">
         <div class="field text form-group form-group-required js-email-field" id="field-email">
-            <label for="email">${_('E-mail')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <label for="email">${_('E-mail')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="email" type="email" name="email" value="${email}" placeholder="${_('example: username@domain.com')}" spellcheck="false" autocomplete="on" required aria-required="true"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
         </div>
 
         <div class="field text form-group form-group-required js-name-field" id="field-name">
-            <label for="name">${_('Full Name')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <label for="name">${_('Full Name')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="name" type="text" name="name" value="${name}" placeholder="${_('example: Jane Doe')}" required aria-required="true" aria-describedby="name-tip"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred"></small>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
             <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
         <div class="field text form-group form-group-required js-username-field" id="field-username">
-            <label for="username">${_('Public Username')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <label for="username">${_('Public Username')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="username" type="text" name="username" value="${username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
             <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
@@ -99,15 +99,15 @@ from student.models import UserProfile
         <div class="is-disabled field optional password form-group form-group-required field-password js-password-field" hidden>
             <label for="password">${_('Password')}</label>
             <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" disabled required aria-required="true"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
         </div>
 
         % else:
 
         <div class="field form-group form-group-required field-password js-password-field">
-            <label for="password">${_('Password')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <label for="password">${_('Password')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" required aria-required="true" aria-describedby="password-tip"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
             <span class="tip tip-input" id="password-tip">
 				<%
 min_length = 8
@@ -117,9 +117,9 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
         </div>
         
         <div class="field password form-group form-group-required field-password js-confirm-password-field">
-            <label for="confirm_password">${_('Confirm Password')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <label for="confirm_password">${_('Confirm Password')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="confirm_password" type="password" value="" spellcheck="false" required aria-required="true" name="confirm_password" />
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
         </div>
 
         % endif
@@ -137,26 +137,26 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
         % if ask_for_email:
 
         <div class="field text js-email-field" id="field-email">
-            <label for="email">${_("E-mail")}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <label for="email">${_("E-mail")}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="js-register-field" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" spellcheck="false" required aria-required="true"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
         </div>
 
         % endif
 
         <div class="field text js-username-field" id="field-username">
-            <label for="username">${_('Public Display Name')}<sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <label for="username">${_('Public Display Name')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="js-register-field" id="username" type="text" name="username" value="${extauth_username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
             <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
         % if ask_for_fullname:
 
         <div class="field text js-name-field" id="field-name">
-            <label for="name">${_('Full Name')} <sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+            <label for="name">${_('Full Name')} <sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="js-register-field" id="name" type="text" name="name" value="" placeholder="$_('example: Jane Doe')}" aria-describedby="name-tip"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
             <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
 
@@ -271,10 +271,10 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
         <div class="custom-control custom-checkbox">
             <input type="checkbox" name="terms_of_service" class="custom-control-input js-register-field" id="terms_of_service" value="true" required aria-required="true">
             <label class="custom-control-label" for="terms_of_service">${_('I agree to the {link_start}Terms of Service{link_end}').format(
-                link_start='<a href="{url}" class="new-vp text-darkred">'.format(url=marketing_link('TOS')),
-                    link_end='</a>')} <sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+                link_start='<a href="{url}" class="new-vp text-navoica-red">'.format(url=marketing_link('TOS')),
+                    link_end='</a>')} <sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
         </div>
-        <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
+        <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
     </div>
     % endif
 
@@ -289,10 +289,10 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
             honor_code_path = marketing_link('HONOR')
             %>
             <label class="custom-control-label" for="honor_code">${_('I agree to the {link_start}Honor Code{link_end}').format(
-                link_start='<a href="{url}" class="new-vp text-darkred">'.format(url=honor_code_path),
-                    link_end='</a>')} <sup><i class="fa fa-asterisk text-darkred pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-darkred f-14">(${_('required')})</span></sup></label>
+                link_start='<a href="{url}" class="new-vp text-navoica-red">'.format(url=honor_code_path),
+                    link_end='</a>')} <sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
         </div>
-        <small aria-atomic="true" aria-live="assertive" class="js-error-message text-darkred d-flex"></small>
+        <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
     </div>
 
 
