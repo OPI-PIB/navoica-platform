@@ -2679,13 +2679,14 @@ a.btn.disabled, fieldset:disabled a.btn {
   border-color: #adb5bd;
 
   &:hover {
-    color: #212529;
-    background-color: #adb5bd;
-    border-color: #adb5bd;
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+    z-index: 1000;
   }
 
   &:focus, &.focus {
-    box-shadow: 0 0 0 0.2rem rgba(173, 181, 189, 0.5);
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+    outline: 2px solid #626C7A;
+    z-index: 1000;
   }
 
   &.disabled, &:disabled {
@@ -3867,6 +3868,10 @@ input {
       color: #212529;
       background-color: #fff;
     }
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
   }
 
   &[multiple], &[size]:not([size="1"]) {
@@ -11147,22 +11152,11 @@ article .display-3 {
 }
 
 
-
-
 button#button-addon2 {
-    background: #f8f9fa;
-    color: #212529;
-    border-color: #adb5bd !important;
-    &:focus {
-       box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
-       border: 2px solid #626C7A;
-       z-index: 1000;
-    }
-    &:hover{
-      box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
-      z-index: 1000;
-    }
-  }
+  background: #f8f9fa;
+  color: #212529;
+  border-color: #adb5bd !important;
+}
 
 #courses, .about-us {
     padding: 3rem 0 !important;
@@ -11920,14 +11914,6 @@ label {
     padding: 1rem;
 }
 
-#email:focus, #password:focus {
-     color: #212529 !important;
-     background-color: #fff !important;
-     border-color: #f28f9c !important;
-     outline: 0;
-     box-shadow: 0 0 0 0.2rem #dee2e6;
-}
-
 @media (min-width: 960px) {
   #filter {
     order: initial;
@@ -12618,7 +12604,7 @@ fieldset {
   display: block;
   height: 10px;
   left: 0;
-  position: absolute;
+  position: absolute; 
   top: 100%;
   width: 9px; 
 }
@@ -13554,6 +13540,7 @@ span.complete-checkmark.fa.fa-check {
     color:#fff;
     background: #c3172e;
     border-color: #b8162b;
+    text-decoration: none;
   }
   &:focus {
     outline: 2px black solid;
@@ -13574,9 +13561,15 @@ span.complete-checkmark.fa.fa-check {
   font-size: 2rem;
   height: 4rem;
   width: 4rem;
-  &:hover {
+    &:hover {
     color:#fff;
-  }  
+    background: #c3172e;
+    border-color: #b8162b;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 2px black solid;
+  } 
 
   i {
     margin: auto;
@@ -13867,6 +13860,11 @@ span.complete-checkmark.fa.fa-check {
   color: $darkcyan;
 }
 
-.btn-primary:focus, #header-navigation .btn-primary.focus {
+.btn-primary:focus, .btn-primary.focus {
   outline: 2px black solid;
+}
+footer a, .nav-skip, #forgot-password-link {
+  &:focus, &.focus {
+    outline: 2px solid black;
+  }
 }
