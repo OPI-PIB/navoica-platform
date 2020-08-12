@@ -37,10 +37,10 @@
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
 # Navoica Navoica <navoica@opi.org.pl>, 2020
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
-# Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
 # Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
+# Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -69,7 +69,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-07-13 13:09+0000\n"
+"POT-Creation-Date: 2020-08-10 11:19+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2019\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -4889,8 +4889,8 @@ msgstr "Strona główna"
 #: lms/djangoapps/courseware/views/views.py
 #: lms/djangoapps/shoppingcart/reports.py
 #: openedx/features/course_experience/__init__.py
-#: cms/templates/widgets/header.html lms/templates/help_modal.html
-#: lms/templates/courseware/courseware.html
+#: cms/templates/widgets/header.html lms/templates/course.html
+#: lms/templates/help_modal.html lms/templates/courseware/courseware.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 msgid "Course"
 msgstr "Kurs"
@@ -10707,7 +10707,7 @@ msgstr "Podgląd wersji roboczej"
 #. interface (a menu or piece of UI that takes the full focus of the screen)
 #: lms/templates/wiki/edit.html lms/templates/wiki/history.html
 #: lms/templates/wiki/includes/cheatsheet.html lms/templates/dashboard.html
-#: lms/templates/footer.html lms/templates/forgot_password_modal.html
+#: lms/templates/forgot_password_modal.html lms/templates/header.html
 #: lms/templates/help_modal.html lms/templates/signup_modal.html
 #: lms/templates/staff_problem_info.html lms/templates/ccx/schedule.html
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
@@ -10997,7 +10997,7 @@ msgstr ""
 #: lms/templates/dashboard.html lms/templates/index.html
 #: lms/templates/api_admin/catalogs/search.html
 #: lms/templates/courseware/courseware.html
-#: lms/templates/edxnotes/edxnotes.html
+#: lms/templates/edxnotes/edxnotes.html lms/templates/header/header.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html
@@ -12146,9 +12146,9 @@ msgstr "Adres e-mail, którego użyłeś podczas rejestracji w {platform_name}"
 #. Translators: This label appears above a field on the registration form
 #. meant to hold the user's password.
 #: openedx/core/djangoapps/user_api/api.py cms/templates/login.html
-#: cms/templates/register.html lms/templates/provider_login.html
-#: lms/templates/register-form.html lms/templates/signup_modal.html
-#: lms/templates/sysadmin_dashboard.html
+#: cms/templates/register.html lms/templates/login.html
+#: lms/templates/provider_login.html lms/templates/register-form.html
+#: lms/templates/signup_modal.html lms/templates/sysadmin_dashboard.html
 #: themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Password"
@@ -13437,6 +13437,8 @@ msgstr "Edycja kursu:"
 #: cms/templates/index.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/user_dropdown.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
@@ -13542,6 +13544,8 @@ msgid "Reset"
 msgstr "Zresetuj"
 
 #: cms/templates/widgets/header.html lms/templates/header/header.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/user_dropdown.html
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
@@ -13930,6 +13934,14 @@ msgstr ""
 "Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat"
 " i dla każdego zarejestrowanego użytkownika."
 
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "Navoica page on Facebook"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "open in a new window"
+msgstr ""
+
 #: lms/templates/footer.html
 msgid "About us"
 msgstr "O nas"
@@ -13951,10 +13963,6 @@ msgid "Ministry of Science and Higher Education"
 msgstr ""
 
 #: lms/templates/footer.html
-msgid "open in a new window"
-msgstr ""
-
-#: lms/templates/footer.html
 msgid "The Conference of Rectors of Academic Schools in Poland"
 msgstr ""
 
@@ -13971,24 +13979,6 @@ msgstr ""
 #: lms/templates/footer.html
 msgid "All rights reserved  "
 msgstr "Wszelkie prawa zastrzeżone"
-
-#: lms/templates/footer.html
-msgid ""
-"We use cookies and similar technologies to provide services and to gather "
-"information for statistical and other purposes. You can change the way you "
-"want the cookies to be stored or accessed on your device in the settings of "
-"your browser. If you do not agree, change the settings of your browser. For "
-"more information, refer to our"
-msgstr ""
-"Używamy cookies i podobnych technologii m.in. w celu świadczenia usług i w "
-"celach statystycznych. Możesz określić warunki przechowywania lub dostępu do"
-" plików cookies w Twojej przeglądarce, w jej ustawieniach. Jeżeli nie "
-"wyrażasz zgody – zmień ustawienia swojej przeglądarki. Więcej informacji "
-"znajdziesz w naszej"
-
-#: lms/templates/footer.html
-msgid "Privacy policy"
-msgstr "Polityka prywatności"
 
 #: lms/templates/forgot_password_modal.html
 msgid "Password Reset"
@@ -14030,6 +14020,24 @@ msgstr "Zresetuj moje hasło"
 #: lms/templates/forgot_password_modal.html
 msgid "Email is incorrect."
 msgstr "Nieprawidłowy adres e-mail"
+
+#: lms/templates/header.html
+msgid ""
+"We use cookies and similar technologies to provide services and to gather "
+"information for statistical and other purposes. You can change the way you "
+"want the cookies to be stored or accessed on your device in the settings of "
+"your browser. If you do not agree, change the settings of your browser. For "
+"more information, refer to our"
+msgstr ""
+"Używamy cookies i podobnych technologii m.in. w celu świadczenia usług i w "
+"celach statystycznych. Możesz określić warunki przechowywania lub dostępu do"
+" plików cookies w Twojej przeglądarce, w jej ustawieniach. Jeżeli nie "
+"wyrażasz zgody – zmień ustawienia swojej przeglądarki. Więcej informacji "
+"znajdziesz w naszej"
+
+#: lms/templates/header.html
+msgid "Privacy policy"
+msgstr "Polityka prywatności"
 
 #: lms/templates/help_modal.html
 msgid "Support"
@@ -14323,7 +14331,7 @@ msgstr[3] ""
 "Wyświetlanie wszelkiej dostępnej treści dla {display_name}. Każdy student "
 "uzyska dostęp do {max_count} elementów wybranych losowo z tej listy."
 
-#: lms/templates/login-sidebar.html
+#: lms/templates/login-sidebar.html lms/templates/register.html
 msgid "Helpful Information"
 msgstr "Przydatne informacje"
 
@@ -14356,6 +14364,14 @@ msgstr "Potrzebujesz pomocy?"
 msgid "Looking for help signing in or with your {platform_name} account?"
 msgstr "Szukasz pomocy przy logowaniu na swoim koncie {platform_name}?"
 
+#: lms/templates/login-sidebar.html lms/templates/register-sidebar.html
+msgid " Please contact our Help Center at "
+msgstr "Prosimy o kontakt z Centrum Pomocy wysyłając maila na adres "
+
+#: lms/templates/login-sidebar.html lms/templates/register-sidebar.html
+msgid "mooc_help@opi.org.pl."
+msgstr "mooc_help@opi.org.pl."
+
 #: lms/templates/login.html
 msgid "Log into your {platform_name} Account"
 msgstr "Zaloguj się na swoje konto {platform_name} "
@@ -14370,6 +14386,10 @@ msgstr "Przetwarzanie informacji o twoim koncie"
 #: lms/templates/registration/activate_account_notice.html
 msgid "You're almost there!"
 msgstr "Już prawie koniec!"
+
+#: lms/templates/login.html
+msgid "Login form"
+msgstr "Formularz logowania"
 
 #: lms/templates/login.html wiki/templates/wiki/accounts/login.html
 msgid "Please log in"
@@ -14729,6 +14749,10 @@ msgid "example: New York"
 msgstr "przykład: Łódź"
 
 #: lms/templates/register-form.html
+msgid "Poland"
+msgstr "Polska"
+
+#: lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Highest Level of Education Completed"
 msgstr "Poziom wykształcenia"
@@ -14844,16 +14868,6 @@ msgstr ""
 
 #: lms/templates/register-sidebar.html
 msgid ""
-"Skontaktuj si\\u0119 z naszym dzia\\u0142em pomocy technicznej dostepnym pod"
-" adresem "
-msgstr ""
-
-#: lms/templates/register-sidebar.html
-msgid "mooc_help@opi.org.pl."
-msgstr "mooc_help@opi.org.pl."
-
-#: lms/templates/register-sidebar.html
-msgid ""
 "You can find the answers to most of your questions in our list of FAQs. "
 "After you enroll in a course, you can also find answers in the course "
 "discussions."
@@ -14864,6 +14878,10 @@ msgstr ""
 #: lms/templates/register.html
 msgid "Register for {platform_name}"
 msgstr "Zarejestruj się w {platform_name}"
+
+#: lms/templates/register.html
+msgid "Registration form"
+msgstr "Formularz rejestracji"
 
 #: lms/templates/register.html
 msgid "Welcome!"
@@ -18834,6 +18852,10 @@ msgstr "Strona główna {platform_name}"
 msgid "Navoica logo"
 msgstr ""
 
+#: lms/templates/header/header.html
+msgid "My Account"
+msgstr ""
+
 #: lms/templates/header/header.html lms/templates/navigation/navigation.html
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
@@ -18852,6 +18874,7 @@ msgstr "Programy"
 
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/user_dropdown.html
 msgid "Discover New"
 msgstr "Katalog kursów"
 
@@ -18880,6 +18903,16 @@ msgstr "Jak to działa"
 #: lms/templates/navigation/navbar-not-authenticated.html
 msgid "Schools"
 msgstr "Uczelnie"
+
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/user_dropdown.html
+msgid "Polish"
+msgstr ""
+
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/user_dropdown.html
+msgid "English"
+msgstr ""
 
 #: lms/templates/header/user_dropdown.html
 #: lms/templates/learner_dashboard/_dashboard_navigation_courses.html
@@ -21543,8 +21576,8 @@ msgid "Currently the {platform_name} servers are overloaded"
 msgstr "Przepraszamy, obecnie serwery {platform_name} są przeciążone."
 
 #: lms/templates/static_templates/tos.html
-msgid "tos_title"
-msgstr "WARUNKI KORZYSTANIA Z PLATFORMY NAVOICA"
+msgid "mooc_help@opi.org.pl"
+msgstr ""
 
 #: lms/templates/static_templates/tos.html
 msgid "tos_intro_1"
@@ -22124,10 +22157,6 @@ msgid "tos_contract_and_termination_paragraph_5"
 msgstr ""
 "Użytkownik może rozwiązać Umowę w każdym czasie poprzez zgłoszenie "
 "odpowiedniego oświadczenia na adres e-mail "
-
-#: lms/templates/static_templates/tos.html
-msgid "mooc_help@opi.org.pl"
-msgstr ""
 
 #: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_5_1"
