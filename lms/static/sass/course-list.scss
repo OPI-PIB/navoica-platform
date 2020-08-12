@@ -42,6 +42,10 @@ $darkcyan : teal;
   color: #a11326;
 }
 
+.text-navoica-red {
+  color: #e41d37;
+}
+
 .text-darkgrey {
   color: #333333;
 }
@@ -271,16 +275,6 @@ input:focus, textarea:focus, select:focus, a:focus, button:focus {
 
 .text-input:focus {
   outline: none; /* Adjust to suit your tastes */
-}
-
-body *:focus {
-  outline: 2px solid #000000 !important; /* for non-webkit browsers */
-  outline: 5px auto -webkit-focus-ring-color !important;
-}
-
-input:focus-visible, textarea:focus-visible, select:focus-visible, a:focus-visible, button:focus-visible {
-  outline: 2px solid #000000 !important; /* for non-webkit browsers */
-  outline: 5px auto -webkit-focus-ring-color !important;
 }
 
 
@@ -13738,7 +13732,7 @@ span.complete-checkmark.fa.fa-check {
 
     .course-preview-title .provider, .course-preview-title .course-name {
       font-size: 1rem;
-      line-height: 1rem;
+      line-height: 1.2rem;
     }
 
     .desktop-menu, .my-account {
@@ -13763,8 +13757,8 @@ span.complete-checkmark.fa.fa-check {
     //height: 3.5rem;
 
     .course-preview-title .provider, .course-preview-title .course-name {
-      font-size: 0.6875rem;
-      line-height: 0.8rem;
+      font-size: 0.9rem;
+      line-height: 1.1rem;
     }
 
     .desktop-menu {
@@ -13899,7 +13893,7 @@ footer a, .nav-skip, #forgot-password-link, .container .about a, #contact a {
 }
   /** ERROR FIELD **/
 input.form-control.form-control.error-field, .error-field, .error-field ~ .custom-control-label::before {
-  border: 1px solid #a11326;
+  border: 2px solid #e41d37;
 }
 
 .f-10 {
