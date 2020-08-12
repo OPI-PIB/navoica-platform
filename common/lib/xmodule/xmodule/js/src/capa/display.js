@@ -46,7 +46,7 @@
             };
             this.submitAnswersAndSubmitButton = function(bind) {
                 if (bind === null || bind === undefined) {
-                    bind = false;  // eslint-disable-line no-param-reassign
+                    bind = false; // eslint-disable-line no-param-reassign
                 }
                 return Problem.prototype.submitAnswersAndSubmitButton.apply(that, arguments);
             };
@@ -602,14 +602,14 @@
                     complete: this.enableSubmitButtonAfterResponse,
                     success: function(response) {
                         switch (response.success) {
-                        case 'submitted':
-                        case 'incorrect':
-                        case 'correct':
-                            that.render(response.contents);
-                            that.updateProgress(response);
-                            break;
-                        default:
-                            that.gentle_alert(response.success);
+                            case 'submitted':
+                            case 'incorrect':
+                            case 'correct':
+                                that.render(response.contents);
+                                that.updateProgress(response);
+                                break;
+                            default:
+                                that.gentle_alert(response.success);
                         }
                         return Logger.log('problem_graded', [that.answers, response.contents], that.id);
                     }
@@ -629,17 +629,23 @@
             Logger.log('problem_check', this.answers);
             return $.postWithPrefix('' + this.url + '/problem_check', this.answers, function(response) {
                 switch (response.success) {
-                case 'submitted':
-                case 'incorrect':
-                case 'correct':
-                    window.SR.readTexts(that.get_sr_status(response.contents));
-                    that.el.trigger('contentChanged', [that.id, response.contents, response]);
-                    that.render(response.contents, that.focus_on_submit_notification);
-                    that.updateProgress(response);
-                    break;
-                default:
-                    that.saveNotification.hide();
-                    that.gentle_alert(response.success);
+                    case 'submitted':
+                    case 'incorrect':
+                    case 'correct':
+                        window.SR.readTexts(that.get_sr_status(response.contents));
+                        that.el.trigger('contentChanged', [that.id, response.contents, response]);
+                        var submitButtonState = that.submitButton.attr('disabled');
+                        that.render(response.contents, that.focus_on_submit_notification);
+                        // if submitButton was disabled before render function, restore his state
+                        if (submitButtonState === 'disabled') {
+                            // refresh submit selector after rerender and disabled him,
+                            that.$(that.submitButton.selector).attr({ disabled: 'disabled' });
+                        }
+                        that.updateProgress(response);
+                        break;
+                    default:
+                        that.saveNotification.hide();
+                        that.gentle_alert(response.success);
                 }
                 return Logger.log('problem_graded', [that.answers, response.contents], that.id);
             });
@@ -896,19 +902,19 @@
                 var checked;
                 checked = false;
                 $(choicegroupBlock).find('input[type=checkbox], input[type=radio]').
-                    each(function(j, checkboxOrRadio) {
-                        if ($(checkboxOrRadio).is(':checked')) {
-                            checked = true;
-                        }
-                        if (bind) {
-                            $(checkboxOrRadio).on('click', function() {
-                                that.saveNotification.hide();
-                                that.el.find('.show').removeAttr('disabled');
-                                that.showAnswerNotification.hide();
-                                that.submitAnswersAndSubmitButton();
-                            });
-                        }
-                    });
+                each(function(j, checkboxOrRadio) {
+                    if ($(checkboxOrRadio).is(':checked')) {
+                        checked = true;
+                    }
+                    if (bind) {
+                        $(checkboxOrRadio).on('click', function() {
+                            that.saveNotification.hide();
+                            that.el.find('.show').removeAttr('disabled');
+                            that.showAnswerNotification.hide();
+                            that.submitAnswersAndSubmitButton();
+                        });
+                    }
+                });
                 if (!checked) {
                     answered = false;
                 }
@@ -928,7 +934,7 @@
                 }
             });
             if (answered) {
-                return this.enableSubmitButtonAfterShortTimeout();
+                return this.enableSubmitButton(true);
             } else {
                 return this.enableSubmitButton(false, false);
             }
@@ -1230,7 +1236,7 @@
                 } else if (enable) {
                     button.removeAttr('disabled');
                 } else {
-                    button.attr({disabled: 'disabled'});
+                    button.attr({ disabled: 'disabled' });
                 }
             });
         };
@@ -1245,19 +1251,29 @@
          */
         Problem.prototype.enableSubmitButton = function(enable, changeText) {
             var submitCanBeEnabled;
+            var that = this;
             if (changeText === null || changeText === undefined) {
                 changeText = true; // eslint-disable-line no-param-reassign
             }
             if (enable) {
                 submitCanBeEnabled = this.submitButton.data('should-enable-submit-button') === 'True';
                 if (submitCanBeEnabled) {
-                    this.submitButton.removeAttr('disabled');
+                    var existCondition = setInterval(function() {
+                        var loadingImgStatus = [];
+                        $('img.loading').each(function(index, imgElement) {
+                            loadingImgStatus.push($(imgElement).css('visibility'));
+                        });
+                        if (!loadingImgStatus.includes('visible')) {
+                            that.submitButton.removeAttr('disabled');
+                            clearInterval(existCondition);
+                        }
+                    }, 100); // check every 100ms
                 }
                 if (changeText) {
                     this.submitButtonLabel.text(this.submitButtonSubmitText);
                 }
             } else {
-                this.submitButton.attr({disabled: 'disabled'});
+                this.submitButton.attr({ disabled: 'disabled' });
                 if (changeText) {
                     this.submitButtonLabel.text(this.submitButtonSubmittingText);
                 }
@@ -1322,7 +1338,7 @@
                     if (response.should_enable_next_hint) {
                         that.hintButton.removeAttr('disabled');
                     } else {
-                        that.hintButton.attr({disabled: 'disabled'});
+                        that.hintButton.attr({ disabled: 'disabled' });
                     }
                     that.el.find('.notification-hint').show();
                     that.focus_on_hint_notification(nextIndex);
