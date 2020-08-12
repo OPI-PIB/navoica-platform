@@ -67,12 +67,12 @@ HeaderFactory();
 
 
             % if request.path != '/':
-            <form method="GET" action="/courses" class="form-inline mr-auto d-none d-xl-block">
+            <form method="GET" action="/courses" class="form-inline mr-auto d-none d-xl-block" role="search">
                 <div class="input-group w-100">
-                    <label for="search-course" class="sr-only">${_('What do you want to learn?')}</label>
-                    <input class="form-control search-input" id="search-course" type="search" name="search_query" placeholder="${_('What do you want to learn?')}" aria-label="${_('What do you want to learn?')}">
+                    <label for="search-course" class="sr-only">${_('Search courses')}</label>
+                    <input class="form-control search-input" id="search-course" type="search" name="search_query" placeholder="${_('Search courses...')}">
                     <div class="input-group-append">
-                        <button class="btn btn-light btn-outline-secondary" type="submit" aria-label="${_('Search')}"><i class="fa fa-search mx-0" aria-hidden="true"></i></button>
+                        <button class="btn btn-light btn-outline-secondary" type="submit" title="${_('Search')}"><i class="fa fa-search mx-0" aria-hidden="true"></i><span class="sr-only">${_('Search courses')}</span></button>
                     </div>
                 </div>
             </form>
@@ -106,7 +106,7 @@ HeaderFactory();
 
                 <div class="collapse navbar-collapse desktop-menu" id="navbarResponsive">
 
-                    <div class="navbar-nav ml-auto">
+                    <div class="navbar-nav ml-auto" role="menu">
                         % if user.is_authenticated():
                         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
                         % else:
