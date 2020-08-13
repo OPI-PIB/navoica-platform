@@ -13903,6 +13903,33 @@ footer a,
     outline: 2px solid black;
   }
 }
+
+.navbar{
+  button, .form-control {
+    &:focus {
+      box-shadow: 0px 0px 5px 3px rgba(71,79,89,0.7);
+      outline: none;
+    }  
+  }
+}  
+
+#filter-list button {
+  &:hover{
+    border-left: solid 3px #e41d37 !important;
+    background-color: #ffffff;
+  }
+  &:focus{
+    border: 2px black solid;
+  }
+}
+
+#sorting-form select {
+  &:focus {
+    outline: 2px black solid;
+    box-shadow: none;
+  }
+}
+
   /** ERROR FIELD **/
 input.form-control.form-control.error-field, .error-field, .error-field ~ .custom-control-label::before {
   border: 2px solid #a11326;
@@ -13915,3 +13942,4 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
 .f-14 {
   font-size: 0.875rem;
 }
+
