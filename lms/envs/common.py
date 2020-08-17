@@ -1351,7 +1351,8 @@ base_vendor_js = [
     'common/js/vendor/require.js',
     'js/RequireJS-namespace-undefine.js',
     'js/vendor/URI.min.js',
-    'common/js/vendor/backbone.js'
+    'common/js/vendor/backbone.js',
+    'js/vendor/prism.js',
 ]
 
 main_vendor_js = base_vendor_js + [
@@ -1475,6 +1476,7 @@ PIPELINE_CSS = {
             'css/course-list.css',
             'css/faq.css',
             'css/cookie-alert.css',
+            'js/vendor/tinymce/js/tinymce/plugins/codesample/css/prism.css',
             #'css/course-content.css',
             #'css/polipedia.css',
             #'css/polipedia.custom.css',
