@@ -36,10 +36,10 @@
 # krystianlygas <krystian.lygas@gmail.com>, 2020
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
 # Navoica Navoica <navoica@opi.org.pl>, 2020
-# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2020
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
+# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
@@ -52,8 +52,8 @@
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2019
 # krystianlygas <krystian.lygas@gmail.com>, 2020
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 #
 # #-#-#-#-#  wiki.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/)
@@ -3820,19 +3820,19 @@ msgstr ""
 msgid "General"
 msgstr "Ogólne"
 
-#: common/lib/xmodule/xmodule/course_module.py
+#: common/lib/xmodule/xmodule/course_module.py lms/templates/dashboard.html
 msgid "Archived"
 msgstr "Zakończony"
 
-#: common/lib/xmodule/xmodule/course_module.py
+#: common/lib/xmodule/xmodule/course_module.py lms/templates/dashboard.html
 msgid "Current"
 msgstr "Trwający"
 
-#: common/lib/xmodule/xmodule/course_module.py
+#: common/lib/xmodule/xmodule/course_module.py lms/templates/dashboard.html
 msgid "Starting Soon"
 msgstr "Dostępny"
 
-#: common/lib/xmodule/xmodule/course_module.py
+#: common/lib/xmodule/xmodule/course_module.py lms/templates/dashboard.html
 #: lms/templates/courseware/progress.html
 msgid "Upcoming"
 msgstr "Zaplanowany"
@@ -13795,6 +13795,66 @@ msgstr "Wyświetl wszystkie kursy"
 msgid "Dashboard"
 msgstr "Pulpit"
 
+#: lms/templates/dashboard.html
+msgid "Filter By"
+msgstr "Filtrowanie"
+
+#: lms/templates/dashboard.html
+msgid "Filters"
+msgstr "Filtry"
+
+#: lms/templates/dashboard.html
+msgid "Reset Filters"
+msgstr "Wyczyść filtry"
+
+#: lms/templates/dashboard.html
+msgid "reset filters"
+msgstr "wyczyść filtry"
+
+#: lms/templates/dashboard.html
+msgid "FILTERS"
+msgstr "FILTRY"
+
+#: lms/templates/dashboard.html
+msgid "Course Status"
+msgstr "Status kursu"
+
+#: lms/templates/dashboard.html
+msgid "Now"
+msgstr "W trakcie"
+
+#: lms/templates/dashboard.html
+msgid "Ended"
+msgstr "Zakończony"
+
+#: lms/templates/dashboard.html
+msgid "Certificated"
+msgstr "Z Zaświadczeniem"
+
+#: lms/templates/dashboard.html
+msgid "My certificates"
+msgstr "Moje zaświadczenia"
+
+#: lms/templates/dashboard.html
+msgid "Course List"
+msgstr "Lista kursów"
+
+#: lms/templates/dashboard.html
+msgid "Sort By"
+msgstr "Sortuj według"
+
+#: lms/templates/dashboard.html
+msgid "Default"
+msgstr "Domyślny"
+
+#: lms/templates/dashboard.html
+msgid "Alphabetically Ascending"
+msgstr "Alfabetycznie A-Z"
+
+#: lms/templates/dashboard.html
+msgid "Alphabetically Descending"
+msgstr "Alfabetycznie Z-A"
+
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
 msgid "You are not enrolled in any courses yet."
 msgstr "Nie uczestniczysz jeszcze w żadnym kursie..."
@@ -13844,6 +13904,23 @@ msgstr "Chcę otrzymywać powiadomienia e-mail z kursu"
 #: themes/edx.org/lms/templates/dashboard.html
 msgid "Save Settings"
 msgstr "Zapisz ustawienia"
+
+#: lms/templates/dashboard.html
+msgid "Unenroll from Course"
+msgstr "Wypisz się z kursu"
+
+#: lms/templates/dashboard.html
+msgid "Are you sure you want to unenroll from"
+msgstr "Czy na pewno chcesz się wypisać z kursu"
+
+#: lms/templates/dashboard.html lms/templates/ccx/enrollment.html
+#: lms/templates/dashboard/_dashboard_course_listing.html
+#: lms/templates/dashboard/_dashboard_entitlement_actions.html
+#: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
+#: themes/edx.org/lms/templates/dashboard.html
+#: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
+msgid "Unenroll"
+msgstr "Wypisz się "
 
 #: lms/templates/edit_unit_link.html
 msgid "View Unit in Studio"
@@ -13936,11 +14013,11 @@ msgstr ""
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
 msgid "Navoica page on Facebook"
-msgstr ""
+msgstr "Strona Navoica na Facebooku"
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
 msgid "open in a new window"
-msgstr ""
+msgstr "otwórz w nowym oknie"
 
 #: lms/templates/footer.html
 msgid "About us"
@@ -13974,7 +14051,7 @@ msgstr ""
 msgid ""
 "National Information Processing Institute \\u2013 National Research "
 "Institute"
-msgstr ""
+msgstr "Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy"
 
 #: lms/templates/footer.html
 msgid "All rights reserved  "
@@ -14007,6 +14084,10 @@ msgstr "Informacja wymagana"
 #: lms/templates/forgot_password_modal.html
 msgid "Your E-mail Address"
 msgstr "Twój adres e-mail"
+
+#: lms/templates/forgot_password_modal.html
+msgid "Enter your E-mail Address to reset your password"
+msgstr ""
 
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
 msgid "This is the e-mail address you used to register with {platform}"
@@ -14419,12 +14500,16 @@ msgstr "Wystąpił błąd w trakcie logowania do {platform_name}."
 #: lms/templates/login.html
 msgid ""
 "Please provide the following information to log into your {platform_name} "
-"account. Required fields are noted by <strong class=\"indicator\">bold text "
-"and an asterisk (*)</strong>."
+"account. Required fields are noted by <strong class=\"indicator\">an "
+"asterisk (*)</strong>."
 msgstr ""
-"Proszę podać następujące informacje, aby zalogować się na swoje konto "
-"{platform_name}. Wymagane pola oznaczone są <strong "
-"class=\"indicator\">pogrubioną czcionką oraz symbolem gwiazdki (*)</strong>."
+"Podaj następujące informacje, aby zalogować się do konta na platformie "
+"{platform_name}. Pola obowiązkowe zostały oznaczone <strong "
+"class=\"indicator\">gwiazdką (*) </strong>."
+
+#: lms/templates/login.html lms/templates/register-form.html
+msgid "required"
+msgstr "wymagane"
 
 #: lms/templates/login.html
 msgid "Sign in with {provider_name}"
@@ -14671,15 +14756,13 @@ msgstr "Zarejestruj się za pomocą {provider_name}"
 msgid "Create your own {platform_name} account below"
 msgstr "Utwórz konto na platformie {platform_name}"
 
-#: lms/templates/register-form.html lms/templates/register-shib.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-shib.html
+#: lms/templates/register-form.html
 msgid ""
-"Required fields are noted by <strong class=\"indicator\">bold text and an "
-"asterisk (*)</strong>."
+"Required fields are noted by <strong class=\"indicator\">an asterisk "
+"(*)</strong>."
 msgstr ""
-"Wymagane pola zostały zaznaczone <strong class=\"indicator\">pogrubioną "
-"czcionką i symbolem gwiazdki (*)</strong>."
+"Pola obowiązkowe zostały oznaczone <strong class=\"indicator\">gwiazdką "
+"(*)</strong>."
 
 #. Translators: selected_provider is the name of an external, third-party user
 #. authentication service (like Google or LinkedIn).
@@ -14804,6 +14887,16 @@ msgstr "Uaktualnij moje konto w {platform_name}"
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Welcome {username}!  Please set your preferences below"
 msgstr "Witaj {username}! Ustaw swoje preferencje"
+
+#: lms/templates/register-shib.html
+#: themes/stanford-style/lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-shib.html
+msgid ""
+"Required fields are noted by <strong class=\"indicator\">bold text and an "
+"asterisk (*)</strong>."
+msgstr ""
+"Wymagane pola zostały zaznaczone <strong class=\"indicator\">pogrubioną "
+"czcionką i symbolem gwiazdki (*)</strong>."
 
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-shib.html
@@ -16242,15 +16335,6 @@ msgid "Enroll"
 msgstr "Zapisz się"
 
 #: lms/templates/ccx/enrollment.html
-#: lms/templates/dashboard/_dashboard_course_listing.html
-#: lms/templates/dashboard/_dashboard_entitlement_actions.html
-#: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
-#: themes/edx.org/lms/templates/dashboard.html
-#: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
-msgid "Unenroll"
-msgstr "Wypisz się "
-
-#: lms/templates/ccx/enrollment.html
 msgid "Student List Management"
 msgstr "Zarządzanie listą studentów"
 
@@ -17329,8 +17413,8 @@ msgstr ""
 "Ten odnośnik otworzy sieciowy podgląd zaświadczenia o ukończeniu kursu"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
-msgid "View {cert_name_short}"
-msgstr "Wyświetl {cert_name_short}"
+msgid "Certificate"
+msgstr "Zaświadczenie"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "This link will open/download a PDF document"
@@ -18854,7 +18938,7 @@ msgstr ""
 
 #: lms/templates/header/header.html
 msgid "My Account"
-msgstr ""
+msgstr "Moje konto"
 
 #: lms/templates/header/header.html lms/templates/navigation/navigation.html
 msgid ""
@@ -25127,7 +25211,7 @@ msgid ""
 msgstr ""
 "{studio_name} opiera się na prostym systemie tworzenia hierarchii "
 "{strong_start}modułów{strong_end} i {strong_start}lekcji{strong_end}. Dzięki"
-" temu układ kursu treści staje się czytelny."
+" temu układ treści w kursie staje się czytelny."
 
 #: cms/templates/howitworks.html
 msgid "Change Your Mind Anytime"

@@ -21,8 +21,8 @@
 # EdX Team <info@edx.org>, 2020.
 #
 # Translators:
-# Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
+# Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
 #
 # #-#-#-#-#  mako-studio.po (0.1a)  #-#-#-#-#
 # edX community translations have been downloaded from English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)
@@ -42,7 +42,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
 "POT-Creation-Date: 2020-08-10 11:19+0000\n"
 "PO-Revision-Date: 2019-10-24 13:47+0000\n"
-"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
+"Last-Translator: Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -3325,19 +3325,19 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py
+#: common/lib/xmodule/xmodule/course_module.py lms/templates/dashboard.html
 msgid "Archived"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py
+#: common/lib/xmodule/xmodule/course_module.py lms/templates/dashboard.html
 msgid "Current"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py
+#: common/lib/xmodule/xmodule/course_module.py lms/templates/dashboard.html
 msgid "Starting Soon"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py
+#: common/lib/xmodule/xmodule/course_module.py lms/templates/dashboard.html
 #: lms/templates/courseware/progress.html
 msgid "Upcoming"
 msgstr ""
@@ -12270,6 +12270,66 @@ msgstr ""
 msgid "Dashboard"
 msgstr ""
 
+#: lms/templates/dashboard.html
+msgid "Filter By"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Filters"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Reset Filters"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "reset filters"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "FILTERS"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Course Status"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Now"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Ended"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Certificated"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "My certificates"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Course List"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Sort By"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Default"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Alphabetically Ascending"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Alphabetically Descending"
+msgstr ""
+
 #: lms/templates/dashboard.html themes/edx.org/lms/templates/dashboard.html
 msgid "You are not enrolled in any courses yet."
 msgstr ""
@@ -12318,6 +12378,23 @@ msgstr ""
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
 msgid "Save Settings"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Unenroll from Course"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid "Are you sure you want to unenroll from"
+msgstr ""
+
+#: lms/templates/dashboard.html lms/templates/ccx/enrollment.html
+#: lms/templates/dashboard/_dashboard_course_listing.html
+#: lms/templates/dashboard/_dashboard_entitlement_actions.html
+#: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
+#: themes/edx.org/lms/templates/dashboard.html
+#: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
+msgid "Unenroll"
 msgstr ""
 
 #: lms/templates/edit_unit_link.html
@@ -12406,7 +12483,7 @@ msgstr ""
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
 msgid "Navoica page on Facebook"
-msgstr ""
+msgstr "Strona Navoica na Facebooku"
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
 msgid "open in a new window"
@@ -12430,21 +12507,21 @@ msgstr ""
 
 #: lms/templates/footer.html
 msgid "Ministry of Science and Higher Education"
-msgstr ""
+msgstr "Ministerstwo Nauki i Szkolnictwa Wyższego"
 
 #: lms/templates/footer.html
 msgid "The Conference of Rectors of Academic Schools in Poland"
-msgstr ""
+msgstr "Konferencja Rektorów Akademickich Szkół Polskich "
 
 #: lms/templates/footer.html
 msgid "The Young Science Foundation"
-msgstr ""
+msgstr "Fundacja Młodej Nauki"
 
 #: lms/templates/footer.html
 msgid ""
 "National Information Processing Institute \\u2013 National Research "
 "Institute"
-msgstr ""
+msgstr "Ośrodek Przetwarzania Informacji \\u2013 Państwowy Instytut Badawczy"
 
 #: lms/templates/footer.html
 msgid "All rights reserved  "
@@ -12474,6 +12551,10 @@ msgstr ""
 
 #: lms/templates/forgot_password_modal.html
 msgid "Your E-mail Address"
+msgstr ""
+
+#: lms/templates/forgot_password_modal.html
+msgid "Enter your E-mail Address to reset your password"
 msgstr ""
 
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
@@ -12838,8 +12919,12 @@ msgstr ""
 #: lms/templates/login.html
 msgid ""
 "Please provide the following information to log into your {platform_name} "
-"account. Required fields are noted by <strong class=\"indicator\">bold text "
-"and an asterisk (*)</strong>."
+"account. Required fields are noted by <strong class=\"indicator\">an "
+"asterisk (*)</strong>."
+msgstr ""
+
+#: lms/templates/login.html lms/templates/register-form.html
+msgid "required"
 msgstr ""
 
 #: lms/templates/login.html
@@ -13074,12 +13159,10 @@ msgstr ""
 msgid "Create your own {platform_name} account below"
 msgstr ""
 
-#: lms/templates/register-form.html lms/templates/register-shib.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-shib.html
+#: lms/templates/register-form.html
 msgid ""
-"Required fields are noted by <strong class=\"indicator\">bold text and an "
-"asterisk (*)</strong>."
+"Required fields are noted by <strong class=\"indicator\">an asterisk "
+"(*)</strong>."
 msgstr ""
 
 #. Translators: selected_provider is the name of an external, third-party user
@@ -13201,6 +13284,14 @@ msgstr ""
 #: lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Welcome {username}!  Please set your preferences below"
+msgstr ""
+
+#: lms/templates/register-shib.html
+#: themes/stanford-style/lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-shib.html
+msgid ""
+"Required fields are noted by <strong class=\"indicator\">bold text and an "
+"asterisk (*)</strong>."
 msgstr ""
 
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
@@ -14554,15 +14645,6 @@ msgid "Enroll"
 msgstr ""
 
 #: lms/templates/ccx/enrollment.html
-#: lms/templates/dashboard/_dashboard_course_listing.html
-#: lms/templates/dashboard/_dashboard_entitlement_actions.html
-#: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
-#: themes/edx.org/lms/templates/dashboard.html
-#: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
-msgid "Unenroll"
-msgstr ""
-
-#: lms/templates/ccx/enrollment.html
 msgid "Student List Management"
 msgstr ""
 
@@ -15543,8 +15625,8 @@ msgid "This link will open the certificate web view"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
-msgid "View {cert_name_short}"
-msgstr ""
+msgid "Certificate"
+msgstr "Zaświadczenie"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "This link will open/download a PDF document"
