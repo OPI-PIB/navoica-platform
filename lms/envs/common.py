@@ -1160,6 +1160,10 @@ FOOTER_BROWSER_CACHE_MAX_AGE = 5 * 60
 # Credit api notification cache timeout
 CREDIT_NOTIFICATION_CACHE_TIMEOUT = 5 * 60 * 60
 
+######################### Navoica Branding ###################################
+
+HEADER_NAVOICA_LOGO_IMAGE = "/static/images/logo-light-bg.svg"
+
 ################################# Middleware ###################################
 
 # TODO: Remove Django 1.11 upgrade shim
