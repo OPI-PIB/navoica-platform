@@ -7,7 +7,7 @@
     from courseware.courses import get_course_about_section
 %>
 
-<%block name="headextra">
+<%block name="og_meta">
     <meta property="og:title" content="${course.display_name_with_default}"/>
     <meta property="og:description" content="${get_course_about_section(request, course, 'short_description')}"/>
 </%block>
