@@ -420,7 +420,7 @@ FEATURES = {
     'THIRD_PARTY_AUTH_HINT': None,
 }
 
-COURSE_DISCOVERY_FILTERS = ['course_category', 'availability', 'organizer', 'difficulty']
+COURSE_DISCOVERY_FILTERS = ['course_category', 'availability', 'organizer', 'difficulty','language']
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
 COURSE_REVIEWS_TOOL_PROVIDER_FRAGMENT_NAME = 'coursetalk-reviews-fragment.html'
@@ -2756,7 +2756,7 @@ ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % w
                         for week in range(1, 50)]
 
 # property name should be untranslated phrases. Translation will be done on the fly using djangojs.po // KH
-LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Jezyk"}
+LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Język"}
 COURSE_DISCOVERY_MEANINGS = {
     'modes': {
         'name': 'Typ kursu',
@@ -2786,7 +2786,9 @@ COURSE_DISCOVERY_MEANINGS = {
             'Current': 'W trakcie',
             'Archived': 'Zakończony',
         }
-    }
+    },
+    'language': LANGUAGE_MAP,
+
 }
 
 ### Apps only installed in some instances
