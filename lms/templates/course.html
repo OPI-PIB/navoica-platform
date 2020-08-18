@@ -7,8 +7,6 @@ from six import text_type
 %>
 <%page args="course" expression_filter="h"/>
 
-
-
 <div class="col-lg-3 col-md-6 mb-3">
 	<a href="${reverse('about_course', args=[text_type(course.id)])}" class="card h-100">
 		<div class="card-body d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
@@ -19,7 +17,7 @@ from six import text_type
 	  			<img class="card-img-top" src="${course.course_image_url}" alt="">
 			</figure>
 			<span class="sr">${_('Course')}</span>
-	   	    <h4 class="card-title">${course.display_name_with_default}</h4>
+	   	    <h3 class="card-title">${course.display_name_with_default}</h3>
          </div>
 
 		<div class="card-footer small">

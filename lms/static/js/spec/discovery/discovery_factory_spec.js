@@ -148,7 +148,7 @@ define([
             $('.discovery-submit').trigger('click');
             AjaxHelpers.respondWithJson(requests, {});
             expect($('.discovery-input').val()).toEqual('');
-            expect($('#discovery-message')).not.toBeEmpty();
+            expect($('.js-discovery-message')).not.toBeEmpty();
             expect($('.courses-listing')).toBeEmpty();
         });
 
@@ -157,7 +157,7 @@ define([
             $('.discovery-input').val('asdfasdf');
             $('.discovery-submit').trigger('click');
             AjaxHelpers.respondWithError(requests, 404);
-            expect($('#discovery-message')).not.toBeEmpty();
+            expect($('.js-discovery-message')).not.toBeEmpty();
             expect($('.courses-listing')).toBeEmpty();
         });
 
