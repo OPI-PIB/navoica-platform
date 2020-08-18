@@ -14,7 +14,7 @@
                 'click li button': 'selectOption',
                 'click .show-less': 'collapse',
                 'click .show-more': 'expand',
-                'change select': 'selectListOption',
+                'change select': 'selectListOption'
             },
 
             initialize: function(options) {
@@ -79,7 +79,9 @@
                     }
                 }, this)
             );
+                var focused = window.document.activeElement.id; //Get the focused element
                 HtmlUtils.setHtml(this.$container, htmlSnippet);
+                if (focused) $('#' + focused).focus(); //Focus if previously focused prior to innerHTML
                 return this;
             },
 

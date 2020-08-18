@@ -31,10 +31,11 @@ from six import string_types
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="628" />
 	% endif
+<style type="text/css">.header-course, .course-container-heading {display: none}</style>
 </%block>
 
 <%block name="js_extra">
-  <script type="text/javascript">
+  <script>
   (function() {
     $(".register").click(function(event) {
       $("#class_enroll_form").submit();
@@ -132,7 +133,7 @@ from six import string_types
             else:
               href_class = "register"
           %>
-<style>#header-course {display: none}</style>
+
       <header id="page-header" class="bg-light">
         <div class="jumbotron">
           <div class="container" id="container-flex">
@@ -207,8 +208,8 @@ from six import string_types
 
         </article>
 	<aside>
-	  <div id="courses-list-header">
-        <h2 class="custom-h2">${_("Course Summary Page")}</h2>
+	  <div class="courses-list-header">
+           <h2 class="custom-h2">${_("Course Summary Page")}</h2>
       </div>
 	    % if get_course_about_section(request, course, "video"):
 		<div class="embed-responsive embed-responsive-16by9">
@@ -231,10 +232,10 @@ from six import string_types
   <%block name="course_about_details">
     % if (course.organizer and get_course_about_section(request, course, "overview") and course.difficulty and course.course_category and course.timetable and get_course_about_section(request, course, "effort")):
 	<div id="content" class="border-top">
-        <main class="container">
+<main class="container">
 
                 <article id="results">
-      <div id="courses-list-header">
+      <div class="courses-list-header">
          <h2 class="custom-h2">${_("Course Description")}</h2>
       </div>
       ${get_course_about_section(request, course, "overview")}
@@ -245,9 +246,9 @@ from six import string_types
       </article>
 
 <aside class="sidebar">
-       <div id="courses-list-header">
+       <div class="courses-list-header">
          <h2 class="custom-h2">
-            <span class="d-none d-md-block">${_("Organizer")}</span>
+             <span class="d-none d-md-block">${_("Organizer")}</span>
          </h2>
        </div>
        <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
@@ -267,16 +268,16 @@ from six import string_types
                                 % endif
                             </p>
                         </div>
-                    </div>
+       </div>
 <br/>
-            <div id="courses-list-header">
+            <div class="courses-list-header">
                 <h2 class="custom-h2">
                     <span class="d-none d-md-block">${_("Basic Information")}</span>
                 </h2>
             </div>
               <a href="#basic-data-facets" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none mb-2">${_("Basic Information")}</a>
               <div id="basic-data-facets" class="collapse">
-            <ul class="course-details list-group list-group-flush">
+                  <ul class="course-details list-group list-group-flush">
 
       % if course.difficulty:
          <li class="list-group-item">
@@ -301,8 +302,8 @@ from six import string_types
                 </div>
                 <div class="course-details-content">
          <% course_c = settings.ALL_COURSE_CATEGORY_DICT[course.course_category] %>
-                  <h6>${_("Course Category")}:</h6>
-      <div>${course_c}</div>
+                    <h6>${_("Course Category")}:</h6>
+                    <div>${course_c}</div>
                 </div>
               </li>
             % endif
@@ -314,8 +315,8 @@ from six import string_types
                   <i class="icon far fa-clock" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
-                  <h6>${_("Course Timetable")}:</h6>
-      <div>${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}</div>
+                    <h6>${_("Course Timetable")}:</h6>
+                    <div>${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}</div>
                 </div>
               </li>
             % endif
@@ -427,8 +428,8 @@ from six import string_types
             course_effort = txt
             txt = float(txt.replace(':', '.'))
                    %>
-                  <h6>${_("Hours of effort per week")}:</h6>
-      <div>${ungettext("{effort} hour", "{effort} hours", txt).format(effort=course_effort) | h}</div>
+                    <h6>${_("Hours of effort per week")}:</h6>
+                    <div>${ungettext("{effort} hour", "{effort} hours", txt).format(effort=course_effort) | h}</div>
                 </div>
               </li>
             % endif
@@ -439,9 +440,9 @@ from six import string_types
                   <i class="fas fa-landmark" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
-                  <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-                  <h6>${_("Organizer")}:</h6>
-      <div>${course_organize}</div>
+                    <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
+                    <h6>${_("Organizer")}:</h6>
+                    <div>${course_organize}</div>
                 </div>
               </li>
              % endif
@@ -467,15 +468,10 @@ from six import string_types
             </a>
             -->
           % endif
+</aside>
 
-          </aside>
-
-
-
-
-
-        </main>
-      </div>
+</main>
+    </div>
     % else:
     <strong style="color:red; margin: 10%">${_("Fill all fields in Schedule & Details Settings!")}</strong>
     % endif
@@ -494,7 +490,6 @@ from six import string_types
       ## For now, ocw links are the only thing that goes in additional resources
       % if get_course_about_section(request, course, "ocw_links"):
       <div class="additional-resources">
-        <div>
           <h1>${_("Additional Resources")}</h1>
       </div>
 
@@ -503,13 +498,9 @@ from six import string_types
           <h2 class="opencourseware">MITOpenCourseware</h2>
              ${get_course_about_section(request, course, "ocw_links")}
         </div>
-    </div>
+
       %endif
 
-  </div>
-
-  </div>
-</div>
 
 ## Need to put this hidden form on the page so that the registration button works.
 ## Since it's no harm to display a hidden form, we display it with the most permissive conditional
