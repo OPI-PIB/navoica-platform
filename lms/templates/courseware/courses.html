@@ -33,11 +33,11 @@
     $(document).ready(function() {
         let $selectedSortOption = $('.js-selected-sort');
 
-        $selectedSortOption.text(_('None') );
+        $selectedSortOption.text("${_('None')}");
 
         $('select.js-select-change').change(function() {
             let selectedOption = $(this).children("option:selected").text();
-            $selectedSortOption.text(selectedOption || _('None') );
+            $selectedSortOption.text(selectedOption || "${_('None')}" );
         });
 
     });
@@ -60,7 +60,7 @@
         <div id="filters" class="aside-block sidebar">
           <div class="bg-brand rounded search-facets">
             <h2 class="course-list-filters-header list-group filters hide-phone is-collapsed d-none d-md-block">
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center" id="filtering">
                     <span class="d-none d-md-block" id="h2">Filtrowanie</span>
                     <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true">Filtry</a>
                 </div>
