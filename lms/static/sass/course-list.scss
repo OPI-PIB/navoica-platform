@@ -11678,7 +11678,7 @@ main.container > aside {
    }
 }
 
-#page-header, #content, #courses, #header-course, #password-reset-complete-container, #password-reset-confirm-container {
+#page-header, #content, #courses, #header-course, .course-container-heading, #password-reset-complete-container, #password-reset-confirm-container {
   background-image: none;
   background-position: center center;
   background-size: cover;
@@ -13082,7 +13082,7 @@ img.message-author {
 }
 
 @media (max-width: 960px) {
-  #header-course {
+  #header-course, .course-container-heading {
     .jumbotron {
       .container {
         .action-preview-actions {
@@ -13242,7 +13242,7 @@ span.complete-checkmark.fa.fa-check {
 }
 
 @media (max-width: 959.98px) {
-  #header-course {
+  #header-course, .course-container-heading {
     margin: 0;
   }
 }
@@ -13267,7 +13267,7 @@ span.complete-checkmark.fa.fa-check {
     order: 1;
     width: 960px;
   }
-  #header-course {
+  #header-course, .course-container-heading {
     margin-top: 8rem;
   }
 }
@@ -13605,7 +13605,7 @@ span.complete-checkmark.fa.fa-check {
     top: 0;
     z-index: 1071;
   }
-  #header-course {
+  #header-course, .course-container-heading {
     margin-top: 0;
   }
 }

@@ -76,9 +76,9 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
                 % if show_courseware_link and not is_unfulfilled_entitlement:
             % if not is_course_blocked:
-              <h4 class="card-title">
+              <h3 class="card-title">
                 <a href="${course_target}"> ${course_overview.display_name_with_default}</a>
-              </h4>
+              </h3>
             % else:
               <a class="disable-look" data-course-key="${enrollment.course_id}">${course_overview.display_name_with_default}</a>
             % endif
