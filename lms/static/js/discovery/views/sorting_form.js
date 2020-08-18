@@ -12,7 +12,7 @@
             initialize: function () {
                 this.$searchField = this.$el.find('input');
                 this.$searchButton = this.$el.find('button');
-                this.$message = this.$el.find('#discovery-message');
+                this.$message = this.$el.find('.js-discovery-message');
                 this.$loadingIndicator = this.$el.find('#loading-indicator');
             },
 
