@@ -31,7 +31,7 @@ from six import string_types
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="628" />
 	% endif
-<style type="text/css">.header-course {display: none}</style>
+<style type="text/css">.header-course, .course-container-heading {display: none}</style>
 </%block>
 
 <%block name="js_extra">
@@ -118,6 +118,7 @@ from six import string_types
 
   <script type="module" src="${static.url('js/course_info.js')}"></script>
 </%block>
+
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
 
   <%block name="course_about_header">

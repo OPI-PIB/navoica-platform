@@ -67,11 +67,12 @@ HeaderFactory();
 
 
             % if request.path != '/':
-            <form method="GET" action="/courses" class="form-inline mr-auto d-none d-xl-block">
+            <form method="GET" action="/courses" class="form-inline mr-auto d-none d-xl-block" role="search">
                 <div class="input-group w-100">
-                    <input class="form-control search-input" type="search" name="search_query" placeholder="${_('What do you want to learn?')}">
+                    <label for="search-course" class="sr-only">${_('Search courses')}</label>
+                    <input class="form-control search-input" type="search-course" name="search_query" placeholder="${_('Search courses...')}">
                     <div class="input-group-append">
-                        <button class="btn btn-light btn-outline-secondary" type="submit">${_('Search')}</button>
+                        <button class="btn btn-light btn-outline-secondary" type="submit" title="${_('Search')}"><i class="fa fa-search mx-0" aria-hidden="true"></i><span class="sr-only">${_('Search courses')}</span></button>
                     </div>
                 </div>
             </form>

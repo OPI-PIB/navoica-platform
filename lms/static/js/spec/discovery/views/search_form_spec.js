@@ -22,7 +22,7 @@ define(['jquery', 'js/discovery/views/search_form'], function($, SearchForm) {
             this.form.doSearch(term);
             expect(this.onSearch).toHaveBeenCalledWith($.trim(term));
             expect($('.discovery-input').val()).toBe(term);
-            expect($('#discovery-message')).toBeEmpty();
+            expect($('.js-discovery-message')).toBeEmpty();
         });
 
         it('clears search', function() {
@@ -40,11 +40,11 @@ define(['jquery', 'js/discovery/views/search_form'], function($, SearchForm) {
 
         it('shows messages', function() {
             this.form.showFoundMessage(123);
-            expect($('#discovery-message')).toContainHtml(123);
+            expect($('.js-discovery-message')).toContainHtml(123);
             this.form.showNotFoundMessage();
-            expect($('#discovery-message')).not.toBeEmpty();
+            expect($('.js-discovery-message')).not.toBeEmpty();
             this.form.showErrorMessage();
-            expect($('#discovery-message')).not.toBeEmpty();
+            expect($('.js-discovery-message')).not.toBeEmpty();
         });
     });
 });
