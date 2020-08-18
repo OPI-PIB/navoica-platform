@@ -1,6 +1,6 @@
 <div class="list-group list-gruop-flush" data-facet="<%- name %>">
 	<div class="list-group-item">
-		<div class="header-facet">
+		<div class="header-facet" id="<%- name %>" aria-label="<%- gettext(displayName) %>">
  	   		<%- gettext(displayName) %>
 		</div>
 	</div>
@@ -11,9 +11,9 @@
 	</select>	
 	</div>
 <% } else { %>
-	<div data-facet="<%- name %>" class="facet-list">
+	<ul data-facet="<%- name %>" class="facet-list px-0" aria-labelledby="<%- name %>">
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
-	</div>
+	</ul>
 <% } %>
 <% if (listIsHuge) { %>
     <div class="toggle collapse">
