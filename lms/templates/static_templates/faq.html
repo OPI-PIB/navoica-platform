@@ -22,8 +22,9 @@
                          % for i, category in enumerate(page_content, 1):
                             <% category_identifier = "{:02d}".format(i) %>
                             <a href="#accordion-anchor-${category_identifier}" class="list-group-item list-group-item-action">
-                                <i class="${category['icon_class']}"></i>
+                                <i class="${category['icon_class']}" aria-hidden="true"></i>
                                 <div>
+                                    <span class="sr-only">${_('Category')}</span>
                                     <h2 class="text-18">${category['name']}</h2>
                                 </div>
                             </a>
@@ -42,7 +43,7 @@
                             <div class="accordion-switch">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" value="" name="show-answers-${category_identifier}" id="show-answers-${category_identifier}">
-                                    <label for="show-answers-${category_identifier}" class="custom-control-label">${_("show answers")}</label>
+                                    <label for="show-answers-${category_identifier}" class="custom-control-label">${_("show answers")} <span class="sr-only">${_('Category')} ${category['name']}</span></label>
                                 </div>
                             </div>
                             <!-- category -->
@@ -50,7 +51,7 @@
                                 <div class="card">
                                     <div class="card-header" id="heading-${category_identifier}">
                                         <button class="btn btn-link btn-cat my-0" type="button"
-                                                data-toggle="collapse" data-target="#collapse-${category_identifier}" aria-expanded="true" aria-controls="collapse-${category_identifier}">
+                                                data-toggle="collapse" data-target="#collapse-${category_identifier}" aria-expanded="true" aria-controls="collapse-${category_identifier}" tabindex="0">
                                                 ${category['name']}:
                                         </button>
                                     </div>
@@ -63,7 +64,7 @@
                                                 <div class="card">
                                                     <div class="card-header" id="heading-${question_identifier}">
                                                         <button class="btn btn-link my-0" type="button" data-toggle="collapse" data-target="#collapse-${question_identifier}" aria-expanded="false"
-                                                                aria-controls="collapse-${question_identifier}" aria-describedby="description-${question_identifier}">
+                                                                aria-controls="collapse-${question_identifier}" aria-describedby="description-${question_identifier}" tabindex="0">
                                                                 ${question_answer[0]}
                                                         </button>
                                                     </div>
