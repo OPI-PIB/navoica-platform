@@ -420,7 +420,7 @@ FEATURES = {
     'THIRD_PARTY_AUTH_HINT': None,
 }
 
-COURSE_DISCOVERY_FILTERS = ['course_category', 'availability', 'organizer', 'difficulty']
+COURSE_DISCOVERY_FILTERS = ['course_category', 'availability', 'organizer', 'difficulty','language']
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
 COURSE_REVIEWS_TOOL_PROVIDER_FRAGMENT_NAME = 'coursetalk-reviews-fragment.html'
@@ -1160,6 +1160,10 @@ FOOTER_BROWSER_CACHE_MAX_AGE = 5 * 60
 # Credit api notification cache timeout
 CREDIT_NOTIFICATION_CACHE_TIMEOUT = 5 * 60 * 60
 
+######################### Navoica Branding ###################################
+
+HEADER_NAVOICA_LOGO_IMAGE = "/static/images/logo-light-bg.svg"
+
 ################################# Middleware ###################################
 
 # TODO: Remove Django 1.11 upgrade shim
@@ -1351,7 +1355,8 @@ base_vendor_js = [
     'common/js/vendor/require.js',
     'js/RequireJS-namespace-undefine.js',
     'js/vendor/URI.min.js',
-    'common/js/vendor/backbone.js'
+    'common/js/vendor/backbone.js',
+    'js/vendor/prism.js',
 ]
 
 main_vendor_js = base_vendor_js + [
@@ -1475,6 +1480,7 @@ PIPELINE_CSS = {
             'css/course-list.css',
             'css/faq.css',
             'css/cookie-alert.css',
+            'js/vendor/tinymce/js/tinymce/plugins/codesample/css/prism.css',
             #'css/course-content.css',
             #'css/polipedia.css',
             #'css/polipedia.custom.css',
@@ -2752,7 +2758,7 @@ ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % w
                         for week in range(1, 50)]
 
 # property name should be untranslated phrases. Translation will be done on the fly using djangojs.po // KH
-LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Jezyk"}
+LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Język"}
 COURSE_DISCOVERY_MEANINGS = {
     'modes': {
         'name': 'Typ kursu',
@@ -2782,7 +2788,9 @@ COURSE_DISCOVERY_MEANINGS = {
             'Current': 'W trakcie',
             'Archived': 'Zakończony',
         }
-    }
+    },
+    'language': LANGUAGE_MAP,
+
 }
 
 ### Apps only installed in some instances
