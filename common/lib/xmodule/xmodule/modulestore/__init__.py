@@ -1432,28 +1432,6 @@ def prefer_xmodules(identifier, entry_points):
         return default_select(identifier, entry_points)
 
 
-class EdxJSONEncoder(json.JSONEncoder):
-    """
-    Custom JSONEncoder that handles `Location` and `datetime.datetime` objects.
-
-    `Location`s are encoded as their url string form, and `datetime`s as
-    ISO date strings
-    """
-    def default(self, obj):
-        if isinstance(obj, (CourseKey, UsageKey)):
-            return unicode(obj)
-        elif isinstance(obj, datetime.datetime):
-            if obj.tzinfo is not None:
-                if obj.utcoffset() is None:
-                    return obj.isoformat() + 'Z'
-                else:
-                    return obj.isoformat()
-            else:
-                return obj.isoformat()
-        else:
-            return super(EdxJSONEncoder, self).default(obj)
-
-
 # using load_function from django module, for importing force_text and Promise django functions
 from .django import load_function
 force_text = load_function('django.utils.encoding.force_text')

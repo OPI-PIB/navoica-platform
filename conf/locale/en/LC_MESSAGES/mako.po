@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-19 10:43+0000\n"
-"PO-Revision-Date: 2020-08-19 10:44:00.708939\n"
+"POT-Creation-Date: 2020-08-19 12:54+0000\n"
+"PO-Revision-Date: 2020-08-19 12:54:43.171563\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -255,8 +255,12 @@ msgstr ""
 msgid "Course End Date"
 msgstr ""
 
-#: cms/templates/settings.html:339
-#: lms/templates/courseware/course_about.html:307
+#: cms/templates/settings.html lms/templates/preview_menu.html
+#: lms/templates/preview_menu.html
+msgid "Course Organizer"
+msgstr ""
+
+#: cms/templates/settings.html lms/templates/courseware/course_about.html
 msgid "{week} week"
 msgid_plural "{week} weeks"
 msgstr[0] ""
@@ -1549,8 +1553,12 @@ msgstr ""
 msgid "Course edition"
 msgstr ""
 
-#: lms/templates/preview_menu.html:56 lms/templates/preview_menu.html:186
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:165
+#: lms/templates/preview_menu.html
+msgid "View this course as"
+msgstr ""
+
+#: lms/templates/preview_menu.html lms/templates/preview_menu.html
+#: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Staff"
 msgstr ""
 
@@ -8166,8 +8174,44 @@ msgstr ""
 msgid "This page left intentionally blank. Feel free to add your own content."
 msgstr ""
 
-#: lms/templates/static_templates/donate.html:5
-#: lms/templates/static_templates/donate.html:10
+#: lms/templates/static_templates/contact.html
+msgid "Contact us"
+msgstr ""
+
+#: lms/templates/static_templates/contact.html
+msgid ""
+"Online learning platform owned by the Polish Ministry of Science and Higher "
+"Education"
+msgstr ""
+
+#: lms/templates/static_templates/contact.html
+msgid "Address"
+msgstr ""
+
+#: lms/templates/static_templates/contact.html
+msgid "National Information Processing Institute"
+msgstr ""
+
+#: lms/templates/static_templates/contact.html
+msgid "General questions"
+msgstr ""
+
+#: lms/templates/static_templates/contact.html
+msgid ""
+"Questions, comments and contact with universities and institutions regarding"
+" publishing courses on the platform"
+msgstr ""
+
+#: lms/templates/static_templates/contact.html
+msgid "Help center"
+msgstr ""
+
+#: lms/templates/static_templates/contact.html
+msgid "Issues, errors, technical comments"
+msgstr ""
+
+#: lms/templates/static_templates/donate.html
+#: lms/templates/static_templates/donate.html
 msgid "Donate"
 msgstr ""
 
@@ -9551,8 +9595,12 @@ msgstr ""
 msgid "Upgrade ({price})"
 msgstr ""
 
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:190
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:166
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+msgid "Table of Contents"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
 msgid "Expand All"
 msgstr ""
 
@@ -9656,7 +9704,11 @@ msgstr ""
 msgid "This course does not have any updates."
 msgstr ""
 
-#: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html:14
+#: openedx/features/course_experience/templates/course_experience/dates-summary.html
+msgid "Today is"
+msgstr ""
+
+#: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
 msgid "Latest Update"
 msgstr ""
 
