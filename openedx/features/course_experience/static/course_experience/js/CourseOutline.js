@@ -83,13 +83,13 @@ export class CourseOutline {  // eslint-disable-line import/prefer-default-expor
         toggleAllButton.setAttribute('aria-expanded', 'false');
         sectionAction = collapseSection;
         toggleAllSpan.classList.add(extraPaddingClass);
-        toggleAllSpan.innerText = 'Rozwiń wszystko';
+        toggleAllSpan.innerText = gettext('Expand All');
         caretIconClass.classList.replace('fa-rotate-180', 'fa-rotate-0');
       } else {
         toggleAllButton.setAttribute('aria-expanded', 'true');
         sectionAction = expandSection;
         toggleAllSpan.classList.remove(extraPaddingClass);
-        toggleAllSpan.innerText = 'Zwiń wszystko';
+        toggleAllSpan.innerText = gettext('Collapse All');
         caretIconClass.classList.replace('fa-rotate-0', 'fa-rotate-180');
       }
       const sections = Array.prototype.slice.call(document.querySelectorAll('.accordion-trigger'));
