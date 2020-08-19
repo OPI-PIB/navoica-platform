@@ -1,4 +1,4 @@
-<li id="filter-list">
+<li class="filter-list">
     <button type="button" data-facet="<%- facet %>" data-value="<%- term %>" data-text="<%- name %>" class="list-group-item list-group-item-action d-flex facet-option discovery-button <%- selected ? 'selected' : '' %>">
 	<span class="label flex-fill"><%- gettext(name) %></span>
 	<span class="count-number"><%- count %></span>
