@@ -324,7 +324,7 @@ from student.models import CourseEnrollment
                 <h2 id="filter-bar" class="list-group filters hide-phone d-none d-md-block is-animated is-collapsed">
                     <span class="d-flex justify-content-between align-items-center">
                         <span class="custom-h2 d-none d-md-block" aria-label="${_('Filter By')}">${_("Filter By")}</span>
-                        <a data-toggle="collapse" class="discovery-message js-discovery-message d-md-none" aria-expanded="true" aria-label="${_('Filters')}">${_("Filters")}</a>
+                        <a href="#" data-toggle="collapse" class="discovery-message js-discovery-message d-md-none" aria-expanded="true" aria-label="${_('Filters')}">${_("Filters")}</a>
                         <a id="clear-all-filters" href="#" class="clear-filters flt-right btn btn-primary btn-sm btn-icon" style="display: none;" tabindex="0" aria-label="${_('Reset Filters')}" role="button">${_('reset filters')}</a>
                     </span>
 
@@ -392,7 +392,7 @@ from student.models import CourseEnrollment
             </div>
         </div>
 
-      <section>
+      <div class="col">
         <header class="header-login d-flex justify-content-between align-items-center flex-wrap px-1">
           <h2 class="custom-h2 my-0 col-md-6 col-lg-7 px-0">${_("Course List")}</h2>
             <div id="sorting-form" class="col-md px-0">
@@ -502,8 +502,8 @@ from student.models import CourseEnrollment
             % endfor
             </div>
           % endif
-        </div>
-      </div>
+
+
       <div style="display: none" class="side-container">
         %if sidebar_account_activation_message:
           <div class="sidebar-notification">
@@ -552,8 +552,8 @@ from student.models import CourseEnrollment
             </div>
           </div>
         % endif
-
-      </section>
+      </div>
+      </div>
     </main>
 </div>
 
