@@ -10221,7 +10221,7 @@ main.container nav .nav-tabs .nav-item.active, .jumbotron > .container nav .nav-
   z-index: 10;
 }
 
-aside {
+aside, .aside-block {
   .header-facet {
     font-weight: 700;
   }
@@ -10323,7 +10323,7 @@ aside {
         }
       }
 
-      aside {
+      aside, .aside-block {
         flex: 0 0 304px;
         margin-right: 0;
         padding-right: 0;
@@ -10341,7 +10341,7 @@ aside {
 }
 
 @media (min-width: 1280px) {
-  main.container > aside .search-facets-lists .list-group-item {
+  main.container > aside .search-facets-lists .list-group-item, main.container > .aside-block .search-facets-lists .list-group-item {
     font-size: 87.5%;
   }
 }
@@ -10405,7 +10405,7 @@ main.container aside {
         }
       }
 
-      aside {
+      aside, .aside-block {
       //  border-left: 1px solid #dee2e6;
       //  flex: 0 0 346px;
       //  margin-left: 2rem;

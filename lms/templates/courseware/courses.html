@@ -30,10 +30,10 @@
 
 <%block name="pagetitle">${_("Courses")}</%block>
 
-	<header class="bg-light course-container-heading">
+	<header class="bg-light course-container-heading" aria-labelledby="top-header-title-name">
 	  <div class="jumbotron" id="header_jumbotron">
 	    <div class="container">
-	      <h2 class="display-2 text-center">${_('List of Courses')}</h2>
+	      <h2 class="display-2 text-center" id="top-header-title-name">${_('List of Courses')}</h2>
 	    </div>
 	  </div>
 	</header>
@@ -41,7 +41,7 @@
 <div id="content1">
     <main class="container">
 
-        <aside id="filters" class="sidebar">
+        <div id="filters" class="aside-block sidebar">
           <div class="bg-brand rounded search-facets">
             <h2 id="filter-bar" class="list-group filters hide-phone is-collapsed d-none d-md-block">
             </h2>
@@ -50,7 +50,7 @@
                <div id="search-facets-lists" class="search-facets-lists collapse" aria-controls="filter-count">
                </div>
            </div>
-        </aside>
+        </div>
 
         <section>
            <header id="header_results" class="row">
