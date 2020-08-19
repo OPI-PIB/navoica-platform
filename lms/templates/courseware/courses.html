@@ -28,6 +28,20 @@
 </%block>
 % endif
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        let $selectedSortOption = $('.js-selected-sort');
+
+        $selectedSortOption.text(_('None') );
+
+        $('select.js-select-change').change(function() {
+            let selectedOption = $(this).children("option:selected").text();
+            $selectedSortOption.text(selectedOption || _('None') );
+        });
+    });
+
+</script>
+
 <%block name="pagetitle">${_("Courses")}</%block>
 
 	<header class="bg-light course-container-heading" aria-labelledby="top-header-title-name">
@@ -60,6 +74,7 @@
 
                <div id="sorting-form" class="col-md">
                    <label for="sort-select" class="text-uppercase my-0 text-darkcyan">Sortuj według:</label>
+                   <span class="sr-only" id="my-courses-sorted-list" aria-live="polite">${_('Sorted course list by')} <strong class="js-selected-sort"></strong></span>
                    <select id="sort-select" class="custom-select" name="select">
                    <option value="">Domyślnie</option>
                    <option value="name">Alfabetycznie A-Z</option>

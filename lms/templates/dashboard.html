@@ -61,6 +61,15 @@ from student.models import CourseEnrollment
             $(el).text($(el).text().substring(0, MaxSignsNumber) + "...")}
               });
 
+      let $selectedSortOption = $('.js-selected-sort');
+
+        $selectedSortOption.text(_('None') );
+
+        $('select.js-select-change').change(function() {
+            let selectedOption = $(this).children("option:selected").text();
+            $selectedSortOption.text(selectedOption || _('None') );
+        });
+
       let selectedFilters = [];
       let $enrolledCourse = $('.js-enrolled-course');
       let $clearAllFilters = $('#clear-all-filters');
@@ -313,18 +322,18 @@ from student.models import CourseEnrollment
         <div id="filters" class="aside-block sidebar">
             <div class="bg-brand rounded search-facets">
                 <h2 id="filter-bar" class="list-group filters hide-phone d-none d-md-block is-animated is-collapsed">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="d-none d-md-block" id="h2" aria-label="${_('Filter By')}">${_("Filter By")}</span>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span class="custom-h2 d-none d-md-block" aria-label="${_('Filter By')}">${_("Filter By")}</span>
                         <a data-toggle="collapse" class="discovery-message js-discovery-message d-md-none" aria-expanded="true" aria-label="${_('Filters')}">${_("Filters")}</a>
                         <a id="clear-all-filters" href="#" class="clear-filters flt-right btn btn-primary btn-sm btn-icon" style="display: none;" tabindex="0" aria-label="${_('Reset Filters')}" role="button">${_('reset filters')}</a>
-                    </div>
+                    </span>
 
                 </h2>
                 <a href="#search-facets-lists" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">${_("FILTERS")}</a>
 
                 <div id="search-facets-lists" class="search-facets-lists collapse">
 
-                    <div class="list-group list-gruop-flush" data-facet="availability">
+                    <div class="list-group" data-facet="availability">
 
                         <div class="list-group-item">
                             <div class="header-facet">
@@ -335,43 +344,43 @@ from student.models import CourseEnrollment
                         <ul data-facet="availability" class="facet-list col-12 px-0 js-course-enrollment-filters">
 
                             <li class="filter-list">
-                                <button type="button" data-facet="availability" data-value="Upcoming" data-text="${_('Upcoming')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                <div aria-controls="filter-upcoming" data-facet="availability" data-value="Upcoming" data-text="${_('Upcoming')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="upcoming" id="upcoming">
                                         <label class="form-check-label label flex-fill" for="upcoming">${_("Starting Soon")}</label>
-                                        <span class="count-number"></span>
+                                        <div id="filter-upcoming" aria-live="polite"><span class="sr-only">${_('Found courses')}</span><span class="count-number"></span></div>
                                     </div>
-                                </button>
+                                </div>
                             </li>
 
                             <li class="filter-list">
-                                <button type="button" data-facet="availability" data-value="Now" data-text="${_('Now')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                <div aria-controls="filter-now" data-facet="availability" data-value="Now" data-text="${_('Now')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="now" id="now">
                                         <label class="form-check-label label flex-fill" for="now">${_("Current")}</label>
-                                        <span class="count-number"></span>
+                                        <div id="filter-now" aria-live="polite"><span class="sr-only">${_('Found courses')}</span><span class="count-number"></span></div>
                                     </div>
-                                </button>
+                                </div>
                             </li>
 
                             <li class="filter-list">
-                                <button type="button" data-facet="availability" data-value="Ended" data-text="${_('Ended')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                <div aria-controls="filter-ended" data-facet="availability" data-value="Ended" data-text="${_('Ended')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="finished" id="finished">
                                         <label class="form-check-label label flex-fill" for="finished">${_("Archived")}</label>
-                                        <span class="count-number"></span>
+                                        <div id="filter-ended" aria-live="polite"><span class="sr-only">${_('Found courses')}</span><span class="count-number"></span></div>
                                     </div>
-                                </button>
+                                </div>
                             </li>
 
                             <li class="filter-list">
-                                <button type="button" data-facet="availability" data-value="Certificated" data-text="${_('Certificated')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                <div aria-controls="filter-certificated" data-facet="availability" data-value="Certificated" data-text="${_('Certificated')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="certificated" id="certificated">
                                         <label class="form-check-label label flex-fill" for="certificated">${_("My certificates")}</label>
-                                        <span class="count-number"></span>
+                                        <div id="filter-certificated" aria-live="polite"><span class="sr-only">${_('Found courses')}</span><span class="count-number"></span></div>
                                     </div>
-                                </button>
+                                </div>
                             </li>
 
                         </ul>
@@ -384,11 +393,12 @@ from student.models import CourseEnrollment
         </div>
 
       <section>
-        <header class="header-login" class="d-flex justify-content-between align-items-center flex-wrap px-1">
-          <h2 id="h2" class="my-0 col-md-6 col-lg-7 px-0">${_("Course List")}</h2>
+        <header class="header-login d-flex justify-content-between align-items-center flex-wrap px-1">
+          <h2 class="custom-h2 my-0 col-md-6 col-lg-7 px-0">${_("Course List")}</h2>
             <div id="sorting-form" class="col-md px-0">
                 <label for="enrolled-course-sort" class="text-uppercase my-0 text-darkcyan">${_("Sort By")}:</label>
-                <select id="enrolled-course-sort" class="custom-select" name="select">
+                <span class="sr-only" id="my-courses-sorted-list" aria-live="polite">${_('Sorted course list by')} <strong class="js-selected-sort"></strong></span>
+                <select id="enrolled-course-sort" class="js-select-change custom-select" name="select" aria-controls="my-courses-sorted-list">
                     <option value="byCourseEnroll">${_("Default")}</option>
                     <option value="name">${_("Alphabetically Ascending")}</option>
                     <option value="-name">${_("Alphabetically Descending")}</option>
@@ -593,8 +603,8 @@ from student.models import CourseEnrollment
 
            <div class="modal-body">
                 <form id="info_body">
-                    <div class="instructions">
-                        <div id="track-info">
+                    <div class="instructions" id="unenrollment-modal-title">
+                        <div id="track-info" >
                             ${_("Are you sure you want to unenroll from")}
                             <h3 id="unenroll_course_name"></h3>
                             <p>
