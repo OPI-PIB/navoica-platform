@@ -11260,7 +11260,7 @@ li.list-group-item {
   border: none !important;
 }
 
-#organizator, #discovery-message, #h2, #sorting-form, .custom-h2 {
+#organizator, #discovery-message, .discovery-message, #h2, #sorting-form, .custom-h2 {
   color: teal;
   display: block;
   font-size: 1rem;
@@ -11302,7 +11302,7 @@ li.list-group-item {
 }
 
 @media (min-width: 960px) {
-  #h2, .custom-h2, #discovery-message, #sorting-form {
+  #h2, .custom-h2, #discovery-message, .discovery-message, #sorting-form {
     font-size: 0.875rem;
     text-align: left;
     margin: 0;
@@ -11325,7 +11325,7 @@ main.container {
 
 @media (min-width: 960px) {
   #content1 {
-   #discovery-message{
+   #discovery-message, .discovery-message {
     margin-bottom: -1rem;
    }
   }

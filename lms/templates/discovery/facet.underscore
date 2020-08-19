@@ -1,6 +1,6 @@
 <div class="list-group list-gruop-flush" data-facet="<%- name %>">
 	<div class="list-group-item">
-		<div class="header-facet" id="<%- name %>" aria-label="<%- gettext(displayName) %>">
+		<div class="header-facet" id="name-<%- name %>" aria-label="<%- gettext(displayName) %>">
  	   		<%- gettext(displayName) %>
 		</div>
 	</div>
@@ -11,7 +11,7 @@
 	</select>	
 	</div>
 <% } else { %>
-	<ul data-facet="<%- name %>" class="facet-list px-0" aria-labelledby="<%- name %>">
+	<ul data-facet="<%- name %>" class="facet-list px-0" aria-labelledby="name-<%- name %>">
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
 	</ul>
 <% } %>
