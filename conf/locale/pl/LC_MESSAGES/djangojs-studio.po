@@ -1,24 +1,25 @@
-# edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
+# edX translation file.
 # Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2020.
-#
+# 
 # Translators:
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2019
+# krystianlygas <krystian.lygas@gmail.com>, 2020
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
-#
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-18 13:25+0000\n"
-"PO-Revision-Date: 2019-10-24 13:47+0000\n"
-"Last-Translator: Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020\n"
+"POT-Creation-Date: 2020-08-19 07:38+0000\n"
+"PO-Revision-Date: 2020-08-19 08:21+0000\n"
+"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: cms/static/cms/js/xblock/cms.runtime.v1.js:98
@@ -395,7 +396,7 @@ msgstr "Czy na pewno chcesz usunąć tę zmianę?"
 
 #: cms/static/js/views/course_rerun.js:47
 msgid "Create Re-run"
-msgstr "Utwórz wznowienie"
+msgstr "Stwórz nową edycję"
 
 #: cms/static/js/views/course_rerun.js:53
 msgid "Processing Re-run Request"
@@ -508,10 +509,10 @@ msgstr "Wystąpił błąd dla twojego eksportu."
 #: cms/static/js/views/group_configuration_details.js:70
 msgid "Contains {count} group"
 msgid_plural "Contains {count} groups"
-msgstr[0] "Zawiera {count} grupę"
-msgstr[1] "Zawiera {count} grupy"
-msgstr[2] "Zawiera {count} grup"
-msgstr[3] "Zawiera {count} grup"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: cms/static/js/views/group_configuration_details.js:81
 #: cms/static/js/views/partition_group_details.js:66
@@ -526,10 +527,10 @@ msgstr "Nie jest w użyciu"
 #: cms/static/js/views/partition_group_details.js:74
 msgid "Used in {count} location"
 msgid_plural "Used in {count} locations"
-msgstr[0] "Użyty w {count} lokalizacji"
-msgstr[1] "Użyty w {count} lokalizacjach"
-msgstr[2] "Użyty w {count} lokalizacjach"
-msgstr[3] "Użyty w {count} lokalizacjach"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: this refers to a collection of groups.
 #: cms/static/js/views/group_configuration_item.js:26
@@ -721,7 +722,7 @@ msgstr "Jeszcze nie"
 
 #: cms/static/js/views/modals/course_outline_modals.js:736
 msgid "All Learners and Staff"
-msgstr "Wszyscy studenci i kadra"
+msgstr "Wszystkich studentów i kadry"
 
 #: cms/static/js/views/modals/course_outline_modals.js:1040
 msgid "Basic"
@@ -738,7 +739,7 @@ msgstr "Edytowanie: %(title)s"
 
 #: cms/static/js/views/modals/edit_xblock.js:123
 msgid "Unit"
-msgstr "Ekran"
+msgstr "Jednostka"
 
 #: cms/static/js/views/modals/edit_xblock.js:125
 msgid "Component"
@@ -1262,7 +1263,7 @@ msgstr "{seconds} {unit}"
 #. `13 minutes and 45 seconds`
 #: cms/static/js/views/video_thumbnail.js:207
 msgid " and "
-msgstr ","
+msgstr "i"
 
 #: cms/static/js/views/video_thumbnail.js:234
 msgid "Video image upload started"
