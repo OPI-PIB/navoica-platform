@@ -1,29 +1,29 @@
-# edX community translations have been downloaded from Polish (https://www.transifex.com/navoica/teams/104253/pl/).
+# edX translation file.
 # Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2020.
-#
+# 
 # Translators:
-# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2019
-# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
+# Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
+# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
-# Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
-#
+# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-18 13:25+0000\n"
-"PO-Revision-Date: 2019-10-24 13:46+0000\n"
-"Last-Translator: Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020\n"
+"POT-Creation-Date: 2020-08-19 07:38+0000\n"
+"PO-Revision-Date: 2020-08-19 08:21+0000\n"
+"Last-Translator: Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
@@ -1423,13 +1423,10 @@ msgstr "grudnia"
 msgid "The file must end with the extension '{file_types}'."
 msgid_plural ""
 "The file must end with one of the following extensions: '{file_types}'."
-msgstr[0] "Plik musi się kończyć następującym rozszerzeniem: '{file_types}'."
+msgstr[0] ""
 msgstr[1] ""
-"Plik musi się kończyć jednym z następujących rozszerzeń: '{file_types}'."
 msgstr[2] ""
-"Plik musi się kończyć jednym z następujących rozszerzeń: '{file_types}'."
 msgstr[3] ""
-"Plik musi się kończyć jednym z następujących rozszerzeń: '{file_types}'."
 
 #: common/djangoapps/util/file.py:67
 #, python-brace-format
@@ -1453,89 +1450,89 @@ msgstr "Systemowo zdefiniowany punkt milowy"
 #, python-brace-format
 msgid "{num} letter"
 msgid_plural "{num} letters"
-msgstr[0] "{num} litera"
-msgstr[1] "{num} litery"
-msgstr[2] "{num} liter"
-msgstr[3] "{num} liter"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py:110
 #, python-brace-format
 msgid "{num} uppercase letter"
 msgid_plural "{num} uppercase letters"
-msgstr[0] "{num} wielka litera"
-msgstr[1] "{num} wielkie litery"
-msgstr[2] "{num} wielkich liter"
-msgstr[3] "{num} wielkich liter"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py:113
 #, python-brace-format
 msgid "{num} lowercase letter"
 msgid_plural "{num} lowercase letters"
-msgstr[0] "{num} mała litera"
-msgstr[1] "{num} małe litery"
-msgstr[2] "{num} małych liter"
-msgstr[3] "{num} małych liter"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py:116
 #, python-brace-format
 msgid "{num} digit"
 msgid_plural "{num} digits"
-msgstr[0] "{num} cyfra"
-msgstr[1] "{num} cyfry"
-msgstr[2] "{num} cyfr"
-msgstr[3] "{num} cyfr"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py:119
 #, python-brace-format
 msgid "{num} number"
 msgid_plural "{num} numbers"
-msgstr[0] "{num} numer"
-msgstr[1] "{num} numery"
-msgstr[2] "{num} numerów"
-msgstr[3] "{num} numerów"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py:122
 #, python-brace-format
 msgid "{num} punctuation mark"
 msgid_plural "{num} punctuation marks"
-msgstr[0] "{num} znak interpunkcyjny"
-msgstr[1] "{num} znaki interpunkcyjne"
-msgstr[2] "{num} znaków interpunkcyjnych"
-msgstr[3] "{num} znaków interpunkcyjnych"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py:125
 #, python-brace-format
 msgid "{num} symbol"
 msgid_plural "{num} symbols"
-msgstr[0] "{num} znak"
-msgstr[1] "{num} znaki"
-msgstr[2] "{num} znaków"
-msgstr[3] "{num} znaków"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: This appears in a list of password requirements
 #: common/djangoapps/util/password_policy_validators.py:128
 #, python-brace-format
 msgid "{num} word"
 msgid_plural "{num} words"
-msgstr[0] "{num} słowo"
-msgstr[1] "{num} słowa"
-msgstr[2] "{num} słów"
-msgstr[3] "{num} słów"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/djangoapps/util/password_policy_validators.py:143
 #, python-brace-format
 msgid "Your password must contain at least {num} character."
 msgid_plural "Your password must contain at least {num} characters."
-msgstr[0] "Twoje hasło musi zawierać co najmniej {num} znak."
-msgstr[1] "Twoje hasło musi zawierać co najmniej {num} znaki."
-msgstr[2] "Twoje hasło musi zawierać co najmniej {num} znaków."
-msgstr[3] "Twoje hasło musi zawierać co najmniej {num} znaków."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/djangoapps/util/password_policy_validators.py:147
 #, python-brace-format
@@ -1546,17 +1543,9 @@ msgid_plural ""
 "Your password must contain at least {num} characters, including "
 "{requirements}."
 msgstr[0] ""
-"Twoje hasło musi składać się co najmniej z {num} znaku i zawierać "
-"{requirements}. "
 msgstr[1] ""
-"Twoje hasło musi składać się co najmniej z {num} znaków i zawierać "
-"{requirements}. "
 msgstr[2] ""
-"Twoje hasło musi składać się co najmniej z {num} znaków i zawierać "
-"{requirements}. "
 msgstr[3] ""
-"Twoje hasło musi składać się co najmniej z {num} znaków i zawierać "
-"{requirements}. "
 
 #: common/djangoapps/util/password_policy_validators.py:167
 msgid "Invalid password."
@@ -1576,17 +1565,9 @@ msgid_plural ""
 "You are re-using a password that you have used recently. You must have {num}"
 " distinct passwords before reusing a previous password."
 msgstr[0] ""
-"Chcesz użyć hasła, którego używałeś dotychczas. Musisz użyć {num} innego "
-"hasła, zanim będziesz mógł wrócić do dotychczasowego. "
 msgstr[1] ""
-"Chcesz użyć hasła, którego używałeś dotychczas. Musisz użyć {num} innych "
-"haseł, zanim będziesz mógł wrócić do dotychczasowego. "
 msgstr[2] ""
-"Chcesz użyć hasła, którego używałeś dotychczas. Musisz użyć {num} innych "
-"haseł, zanim będziesz mógł wrócić do dotychczasowego. "
 msgstr[3] ""
-"Chcesz użyć hasła, którego używałeś dotychczas. Musisz użyć {num} innych "
-"haseł, zanim będziesz mógł wrócić do dotychczasowego. "
 
 #: common/djangoapps/util/password_policy_validators.py:209
 #, python-brace-format
@@ -1597,35 +1578,27 @@ msgid_plural ""
 "You are resetting passwords too frequently. Due to security policies, {num} "
 "days must elapse between password resets."
 msgstr[0] ""
-"Zbyt często resetujesz hasło. Zgodnie z naszą polityką bezpieczeństwa, musi "
-"upłynąć {num} dzień przed podjęciem kolejnej próby zresetowania hasła. "
 msgstr[1] ""
-"Zbyt często resetujesz hasło. Zgodnie z naszą polityką bezpieczeństwa, muszą"
-" upłynąć {num} dni przed podjęciem kolejnej próby zresetowania hasła."
 msgstr[2] ""
-"Zbyt często resetujesz hasło. Zgodnie z naszą polityką bezpieczeństwa, musi "
-"upłynąć {num} dni przed podjęciem kolejnej próby zresetowania hasła."
 msgstr[3] ""
-"Zbyt często resetujesz hasło. Zgodnie z naszą polityką bezpieczeństwa, musi "
-"upłynąć {num} dni przed podjęciem kolejnej próby zresetowania hasła."
 
 #: common/djangoapps/util/password_policy_validators.py:228
 #, python-brace-format
 msgid "{num} character"
 msgid_plural "{num} characters"
-msgstr[0] "{num} znak"
-msgstr[1] "{num} znaki"
-msgstr[2] "{num} znaków"
-msgstr[3] "{num} znaków"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/djangoapps/util/password_policy_validators.py:234
 #, python-brace-format
 msgid "Enter a password with at most {num} character."
 msgid_plural "Enter a password with at most {num} characters."
-msgstr[0] "Hasło musi się składać z co najmniej {num} znaku. "
-msgstr[1] "Hasło musi się składać z co najmniej {num} znaków. "
-msgstr[2] "Hasło musi się składać z co najmniej {num} znaków."
-msgstr[3] "Hasło musi się składać z co najmniej {num} znaków. "
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #. Translators: This message is shown to users who enter a password matching
 #. the username they enter(ed).
@@ -2458,28 +2431,28 @@ msgstr ""
 #, python-brace-format
 msgid "Incorrect ({progress} point)"
 msgid_plural "Incorrect ({progress} points)"
-msgstr[0] "Błędnie ({progress} punkt)"
-msgstr[1] "Błędnie ({progress} punkty)"
-msgstr[2] "Błędnie ({progress} punktów)"
-msgstr[3] "Błędnie ({progress} punktów)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py:814
 #, python-brace-format
 msgid "Correct ({progress} point)"
 msgid_plural "Correct ({progress} points)"
-msgstr[0] "Poprawnie ({progress} punkt)"
-msgstr[1] "Poprawnie ({progress} punkty)"
-msgstr[2] "Poprawnie ({progress} punktów)"
-msgstr[3] "Poprawnie ({progress} punktów)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py:823
 #, python-brace-format
 msgid "Partially correct ({progress} point)"
 msgid_plural "Partially correct ({progress} points)"
-msgstr[0] "Częściowo poprawnie ({progress} punkt)"
-msgstr[1] "Częściowo poprawnie ({progress} punkty)"
-msgstr[2] "Częściowo poprawnie ({progress} punktów)"
-msgstr[3] "Częściowo poprawnie ({progress} punktów)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py:828
 msgid "Partially Correct"
@@ -2523,28 +2496,28 @@ msgstr "Komunikat błędu: {tb}"
 #, python-brace-format
 msgid "{num_hour} hour"
 msgid_plural "{num_hour} hours"
-msgstr[0] "{num_hour} godzina"
-msgstr[1] "{num_hour} godziny"
-msgstr[2] "{num_hour} godzin"
-msgstr[3] "{num_hour} godzin"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py:1384
 #, python-brace-format
 msgid "{num_minute} minute"
 msgid_plural "{num_minute} minutes"
-msgstr[0] "{num_minute} minuta"
-msgstr[1] "{num_minute} minuty"
-msgstr[2] "{num_minute} minut"
-msgstr[3] "{num_minute} minut"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py:1390
 #, python-brace-format
 msgid "{num_second} second"
 msgid_plural "{num_second} seconds"
-msgstr[0] "{num_second} sekunda"
-msgstr[1] "{num_second} sekundy"
-msgstr[2] "{num_second} sekund"
-msgstr[3] "{num_second} sekund"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/capa_base.py:1510
 msgid "Problem needs to be reset prior to save."
@@ -4023,22 +3996,18 @@ msgstr "Wybierz inny typ ćwiczenia."
 msgid "The specified library is configured to fetch {count} problem, "
 msgid_plural "The specified library is configured to fetch {count} problems, "
 msgstr[0] ""
-"Wskazana biblioteka została skonfigurowana do odbierania {count} ćwiczenia,"
 msgstr[1] ""
-"Wskazana biblioteka została skonfigurowana do odbierania {count} ćwiczeń,"
 msgstr[2] ""
-"Wskazana biblioteka została skonfigurowana do odbierania {count} ćwiczeń,"
 msgstr[3] ""
-"Wskazana biblioteka została skonfigurowana do odbierania {count} ćwiczeń,"
 
 #: common/lib/xmodule/xmodule/library_content_module.py:601
 #, python-brace-format
 msgid "but there is only {actual} matching problem."
 msgid_plural "but there are only {actual} matching problems."
-msgstr[0] "jednak znaleziono tylko {actual} pasujące ćwiczenie."
-msgstr[1] "jednak znaleziono tylko {actual} pasujące ćwiczenia."
-msgstr[2] "jednak znaleziono tylko {actual} pasujących ćwiczeń."
-msgstr[3] "jednak znaleziono tylko {actual} pasujących ćwiczeń."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/library_content_module.py:607
 msgid "Edit the library configuration."
@@ -4870,10 +4839,10 @@ msgstr "Podstawowy"
 msgid "There is no transcript file associated with the {lang} language."
 msgid_plural ""
 "There are no transcript files associated with the {lang} languages."
-msgstr[0] "Brak plików transkrypcji powiązanych z językiem {lang}."
-msgstr[1] "Brak plików transkrypcji powiązanych z językami {lang}."
-msgstr[2] "Brak plików transkrypcji powiązanych z językami {lang}."
-msgstr[3] "Brak plików transkrypcji powiązanych z językami {lang}."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/lib/xmodule/xmodule/video_module/video_module.py:788
 msgid ""
@@ -7787,19 +7756,19 @@ msgstr "0 wysłanych"
 #, python-brace-format
 msgid "{num_emails} sent"
 msgid_plural "{num_emails} sent"
-msgstr[0] "Wysłano {num_emails} e-mail"
-msgstr[1] "Wysłano {num_emails} e-maile"
-msgstr[2] "Wysłano {num_emails} e-maili"
-msgstr[3] "Wysłano {num_emails} e-mail"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py:91
 #, python-brace-format
 msgid "{num_emails} failed"
 msgid_plural "{num_emails} failed"
-msgstr[0] "Nie udało się wysłać {num_emails} e-maila"
-msgstr[1] "Nie udało się wysłać {num_emails} e-maili"
-msgstr[2] "Nie udało się wysłać {num_emails} e-maili"
-msgstr[3] "Nie udało się wysłać {num_emails} e-maili"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: lms/djangoapps/instructor/views/instructor_task_helpers.py:132
 msgid "Complete"
@@ -10222,113 +10191,113 @@ msgstr "Przeglądanie"
 
 #. Translators: This is the website name of www.facebook.com.  Please
 #. translate this the way that Facebook advertises in your language.
-#: lms/envs/common.py:2424
+#: lms/envs/common.py:2430
 msgid "Facebook"
 msgstr "Facebook"
 
-#: lms/envs/common.py:2426
+#: lms/envs/common.py:2432
 #, python-brace-format
 msgid "Like {platform_name} on Facebook"
 msgstr "Polub {platform_name} na Facebooku"
 
 #. Translators: This is the website name of www.twitter.com.  Please
 #. translate this the way that Twitter advertises in your language.
-#: lms/envs/common.py:2431
+#: lms/envs/common.py:2437
 msgid "Twitter"
 msgstr "Twitter"
 
-#: lms/envs/common.py:2433
+#: lms/envs/common.py:2439
 #, python-brace-format
 msgid "Follow {platform_name} on Twitter"
 msgstr "Śledź {platform_name} na Twitterze"
 
 #. Translators: This is the website name of www.linkedin.com.  Please
 #. translate this the way that LinkedIn advertises in your language.
-#: lms/envs/common.py:2438
+#: lms/envs/common.py:2444
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: lms/envs/common.py:2440
+#: lms/envs/common.py:2446
 #, python-brace-format
 msgid "Follow {platform_name} on LinkedIn"
 msgstr "Śledź {platform_name} na LinkedIn"
 
 #. Translators: This is the website name of plus.google.com.  Please
 #. translate this the way that Google+ advertises in your language.
-#: lms/envs/common.py:2445
+#: lms/envs/common.py:2451
 msgid "Google+"
 msgstr "Google+"
 
-#: lms/envs/common.py:2447
+#: lms/envs/common.py:2453
 #, python-brace-format
 msgid "Follow {platform_name} on Google+"
 msgstr "Śledź {platform_name} w Google+"
 
 #. Translators: This is the website name of www.tumblr.com.  Please
 #. translate this the way that Tumblr advertises in your language.
-#: lms/envs/common.py:2452
+#: lms/envs/common.py:2458
 msgid "Tumblr"
 msgstr "Tumblr"
 
 #. Translators: This is the website name of www.meetup.com.  Please
 #. translate this the way that MeetUp advertises in your language.
-#: lms/envs/common.py:2458
+#: lms/envs/common.py:2464
 msgid "Meetup"
 msgstr "Meetup"
 
 #. Translators: This is the website name of www.reddit.com.  Please
 #. translate this the way that Reddit advertises in your language.
-#: lms/envs/common.py:2464
+#: lms/envs/common.py:2470
 msgid "Reddit"
 msgstr "Reddit"
 
-#: lms/envs/common.py:2466
+#: lms/envs/common.py:2472
 #, python-brace-format
 msgid "Subscribe to the {platform_name} subreddit"
 msgstr "Subskrybuj subreddit {platform_name}"
 
 #. Translators: This is the website name of https://vk.com.  Please
 #. translate this the way that VK advertises in your language.
-#: lms/envs/common.py:2471
+#: lms/envs/common.py:2477
 msgid "VK"
 msgstr "VK"
 
 #. Translators: This is the website name of http://www.weibo.com.  Please
 #. translate this the way that Weibo advertises in your language.
-#: lms/envs/common.py:2477
+#: lms/envs/common.py:2483
 msgid "Weibo"
 msgstr "Weibo"
 
 #. Translators: This is the website name of www.youtube.com.  Please
 #. translate this the way that YouTube advertises in your language.
-#: lms/envs/common.py:2483
+#: lms/envs/common.py:2489
 msgid "Youtube"
 msgstr "Youtube"
 
-#: lms/envs/common.py:2485
+#: lms/envs/common.py:2491
 #, python-brace-format
 msgid "Subscribe to the {platform_name} YouTube channel"
 msgstr "Subskrybuj kanał {platform_name} na YouTubie"
 
-#: lms/envs/common.py:2751
+#: lms/envs/common.py:2757
 #, python-format
 msgid "%d week"
 msgid_plural "%d weeks"
-msgstr[0] "%dtydzień"
-msgstr[1] "%d tygodnie"
-msgstr[2] "%d tygodni"
-msgstr[3] "%d tygodnie"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
-#: lms/envs/common.py:2861
+#: lms/envs/common.py:2869
 msgid "Kosovo"
 msgstr "Kosovo"
 
-#: lms/envs/common.py:3270
+#: lms/envs/common.py:3278
 #, python-brace-format
 msgid "Welcome to {platform_name}."
 msgstr "Witamy na platformie {platform_name}."
 
-#: lms/envs/common.py:3272
+#: lms/envs/common.py:3280
 #, python-brace-format
 msgid ""
 "You have left the {start_bold}{enterprise_name}{end_bold} website and are "
