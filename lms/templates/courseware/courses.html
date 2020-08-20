@@ -29,6 +29,7 @@
 % endif
 
 <script type="text/javascript">
+
     $(document).ready(function() {
         let $selectedSortOption = $('.js-selected-sort');
 
@@ -38,6 +39,7 @@
             let selectedOption = $(this).children("option:selected").text();
             $selectedSortOption.text(selectedOption || _('None') );
         });
+
     });
 
 </script>
