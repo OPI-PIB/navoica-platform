@@ -14,7 +14,7 @@
                 'click li button': 'selectOption',
                 'click .show-less': 'collapse',
                 'click .show-more': 'expand',
-                'change select': 'selectListOption',
+                'change select': 'selectListOption'
             },
 
             initialize: function(options) {
