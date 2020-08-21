@@ -25,6 +25,12 @@
             templateId: '#course_card-tpl',
             className: 'col-lg-4 mb-2',
 
+            attributes : function () {
+                return {
+                    tabindex : "4"
+                };
+            },
+
             initialize: function() {
                 this.tpl = _.template($(this.templateId).html());
             },

@@ -579,6 +579,12 @@ margin-top: 4rem !important;
   .container {
     max-width: 960px;
   }
+
+  .clear-all-filters {
+    position: absolute;
+    transform: translate(0%, -58px);
+    right: 0;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -11339,6 +11345,7 @@ main.container {
     padding-left: 0;
     padding-right: 1rem;
     border-left: 0 !important;
+    position: relative;
   }
 }
 

@@ -77,7 +77,7 @@
                <div id="sorting-form" class="col-md">
                    <label for="sort-select" class="text-uppercase my-0 text-darkcyan">Sortuj według:</label>
                    <span class="sr-only" id="my-courses-sorted-list" aria-live="polite">${_('Sorted course list by')} <strong class="js-selected-sort"></strong></span>
-                   <select id="sort-select" class="custom-select" name="select">
+                   <select id="sort-select" class="custom-select" name="select" tabindex="3">
                    <option value="">Domyślnie</option>
                    <option value="name">Alfabetycznie A-Z</option>
                    <option value="-name">Alfabetycznie Z-A</option>
@@ -88,7 +88,7 @@
     </header>
 
             <div class="courses-row courses-listing courses" role="region" aria-label="${_('List of Courses')}">
-		<div class="row courses-row courses-listing"></div>
+		        <div class="row courses-row courses-listing"></div>
             </div>
         </section>
     </main>
