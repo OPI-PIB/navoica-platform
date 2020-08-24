@@ -11626,7 +11626,7 @@ main.container > aside {
     border-radius: 0;
 }
 
-#header_results, #filter-bar {
+#header_results, #filter-bar, .course-list-filters-header {
   border-bottom: 1px solid #dee2e6;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
@@ -12066,7 +12066,7 @@ fieldset {
    background: none !important;
 }
 
-#filter-bar {
+#filter-bar, .course-list-filters-header {
   width: unset !important;
 }
 
@@ -13882,4 +13882,15 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
 
 .message.message-status.course-status-certavailable.is-shown {
     width: 100%;
+}
+
+.course-list-clear-filters {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+}
+
+#filters .course-list-clear-filters {
+  border: none;
 }

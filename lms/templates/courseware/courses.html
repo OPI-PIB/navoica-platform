@@ -12,7 +12,7 @@
 
 % if course_discovery_enabled:
 <%block name="header_extras">
-  % for template_name in ["course_card", "filter_bar", "filter", "facet", "facet_option", "facet_select"]:
+  % for template_name in ["course_card", "filter", "filter_bar", "facet", "facet_option", "facet_select", "filter_bar"]:
   <script type="text/template" id="${template_name}-tpl">
       <%static:include path="discovery/${template_name}.underscore" />
   </script>
@@ -59,12 +59,18 @@
 
         <div id="filters" class="aside-block sidebar">
           <div class="bg-brand rounded search-facets">
-            <h2 id="filter-bar" class="list-group filters hide-phone is-collapsed d-none d-md-block">
+            <h2 class="course-list-filters-header list-group filters hide-phone is-collapsed d-none d-md-block">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="d-none d-md-block" id="h2">Filtrowanie</span>
+                    <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true">Filtry</a>
+                </div>
             </h2>
                <a href="#search-facets-lists" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">FILTRY</a>
 
                <div id="search-facets-lists" class="search-facets-lists collapse" aria-controls="filter-count">
                </div>
+              <div id="filter-bar" class="course-list-clear-filters list-group filters hide-phone is-collapsed d-none d-md-block"></div>
+
            </div>
         </div>
 
@@ -77,7 +83,7 @@
                <div id="sorting-form" class="col-md">
                    <label for="sort-select" class="text-uppercase my-0 text-darkcyan">Sortuj według:</label>
                    <span class="sr-only" id="my-courses-sorted-list" aria-live="polite">${_('Sorted course list by')} <strong class="js-selected-sort"></strong></span>
-                   <select id="sort-select" class="custom-select" name="select" tabindex="3">
+                   <select id="sort-select" class="custom-select" name="select">
                    <option value="">Domyślnie</option>
                    <option value="name">Alfabetycznie A-Z</option>
                    <option value="-name">Alfabetycznie Z-A</option>
