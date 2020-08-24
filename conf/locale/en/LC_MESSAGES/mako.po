@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-19 12:54+0000\n"
-"PO-Revision-Date: 2020-08-19 12:54:43.171563\n"
+"POT-Creation-Date: 2020-08-24 09:50+0000\n"
+"PO-Revision-Date: 2020-08-24 09:51:12.250033\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -255,12 +255,13 @@ msgstr ""
 msgid "Course End Date"
 msgstr ""
 
-#: cms/templates/settings.html lms/templates/preview_menu.html
-#: lms/templates/preview_menu.html
+#: cms/templates/settings.html:315 lms/templates/preview_menu.html:91
+#: lms/templates/preview_menu.html:137
 msgid "Course Organizer"
 msgstr ""
 
-#: cms/templates/settings.html lms/templates/courseware/course_about.html
+#: cms/templates/settings.html:339
+#: lms/templates/courseware/course_about.html:307
 msgid "{week} week"
 msgid_plural "{week} weeks"
 msgstr[0] ""
@@ -748,7 +749,7 @@ msgstr ""
 #: lms/templates/courseware/courseware.html:146
 #: lms/templates/edxnotes/edxnotes.html:39 lms/templates/header/header.html:74
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html:48
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:171
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:172
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html:49
 #: themes/edx.org/lms/templates/dashboard.html:254
 #: themes/stanford-style/lms/templates/index.html:26
@@ -788,7 +789,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html:60
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html:13
 #: lms/templates/modal/_modal-settings-language.html:13
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:230
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:231
 #: themes/edx.org/lms/templates/dashboard.html:314
 #: themes/edx.org/lms/templates/dashboard.html:345
 #: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:13
@@ -796,7 +797,7 @@ msgid "Close"
 msgstr ""
 
 #: lms/templates/dashboard.html:562
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:218
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:219
 #: themes/edx.org/lms/templates/dashboard.html:320
 msgid "Email Settings for {course_number}"
 msgstr ""
@@ -806,7 +807,7 @@ msgstr ""
 #: lms/templates/dashboard.html:565
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:22
 #: lms/templates/modal/_modal-settings-language.html:22
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:221
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:222
 #: themes/edx.org/lms/templates/dashboard.html:323
 #: themes/edx.org/lms/templates/dashboard.html:356
 #: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:22
@@ -814,13 +815,13 @@ msgid "window open"
 msgstr ""
 
 #: lms/templates/dashboard.html:573
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:241
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:242
 #: themes/edx.org/lms/templates/dashboard.html:331
 msgid "Receive course emails"
 msgstr ""
 
 #: lms/templates/dashboard.html:575
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:246
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:247
 #: themes/edx.org/lms/templates/dashboard.html:333
 msgid "Save Settings"
 msgstr ""
@@ -1553,36 +1554,36 @@ msgstr ""
 msgid "Course edition"
 msgstr ""
 
-#: lms/templates/preview_menu.html
+#: lms/templates/preview_menu.html:54
 msgid "View this course as"
 msgstr ""
 
-#: lms/templates/preview_menu.html lms/templates/preview_menu.html
-#: lms/templates/instructor/instructor_dashboard_2/membership.html
+#: lms/templates/preview_menu.html:56 lms/templates/preview_menu.html:187
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:165
 msgid "Staff"
 msgstr ""
 
-#: lms/templates/preview_menu.html:57 lms/templates/preview_menu.html:187
+#: lms/templates/preview_menu.html:57 lms/templates/preview_menu.html:188
 msgid "Learner"
 msgstr ""
 
-#: lms/templates/preview_menu.html:58 lms/templates/preview_menu.html:188
+#: lms/templates/preview_menu.html:58 lms/templates/preview_menu.html:189
 msgid "Specific learner"
 msgstr ""
 
-#: lms/templates/preview_menu.html:62 lms/templates/preview_menu.html:192
+#: lms/templates/preview_menu.html:62 lms/templates/preview_menu.html:193
 msgid "Learner in {content_group}"
 msgstr ""
 
-#: lms/templates/preview_menu.html:69 lms/templates/preview_menu.html:199
+#: lms/templates/preview_menu.html:69 lms/templates/preview_menu.html:200
 msgid "Username or email:"
 msgstr ""
 
-#: lms/templates/preview_menu.html:72 lms/templates/preview_menu.html:202
+#: lms/templates/preview_menu.html:72 lms/templates/preview_menu.html:203
 msgid "Set preview mode"
 msgstr ""
 
-#: lms/templates/preview_menu.html:77 lms/templates/preview_menu.html:207
+#: lms/templates/preview_menu.html:77 lms/templates/preview_menu.html:208
 msgid "You are now viewing the course as {i_start}{user_name}{i_end}."
 msgstr ""
 
@@ -3902,7 +3903,7 @@ msgid "Welcome to {course_title}!"
 msgstr ""
 
 #: lms/templates/courseware/info.html:74
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:180
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:181
 msgid "Resume Course"
 msgstr ""
 
@@ -8174,44 +8175,44 @@ msgstr ""
 msgid "This page left intentionally blank. Feel free to add your own content."
 msgstr ""
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:15
 msgid "Contact us"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:22
 msgid ""
 "Online learning platform owned by the Polish Ministry of Science and Higher "
 "Education"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:27
 msgid "Address"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:30
 msgid "National Information Processing Institute"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:37
 msgid "General questions"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:38
 msgid ""
 "Questions, comments and contact with universities and institutions regarding"
 " publishing courses on the platform"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:40
 msgid "Help center"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:41
 msgid "Issues, errors, technical comments"
 msgstr ""
 
-#: lms/templates/static_templates/donate.html
-#: lms/templates/static_templates/donate.html
+#: lms/templates/static_templates/donate.html:5
+#: lms/templates/static_templates/donate.html:10
 msgid "Donate"
 msgstr ""
 
@@ -9389,15 +9390,15 @@ msgid "Skeleton Page"
 msgstr ""
 
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html:46
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:162
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:168
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:163
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:169
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html:40
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html:47
 msgid "Search the course"
 msgstr ""
 
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html:52
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:182
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:183
 msgid "Start Course"
 msgstr ""
 
@@ -9595,12 +9596,12 @@ msgstr ""
 msgid "Upgrade ({price})"
 msgstr ""
 
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:157
 msgid "Table of Contents"
 msgstr ""
 
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:191
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:166
 msgid "Expand All"
 msgstr ""
 
@@ -9704,11 +9705,11 @@ msgstr ""
 msgid "This course does not have any updates."
 msgstr ""
 
-#: openedx/features/course_experience/templates/course_experience/dates-summary.html
+#: openedx/features/course_experience/templates/course_experience/dates-summary.html:9
 msgid "Today is"
 msgstr ""
 
-#: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
+#: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html:14
 msgid "Latest Update"
 msgstr ""
 

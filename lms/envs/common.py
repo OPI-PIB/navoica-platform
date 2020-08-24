@@ -2733,7 +2733,8 @@ ALL_COURSE_ORGANIZER = [
     [u"40", _(u"West Pomeranian University of Technology in Szczecin")],
     [u"41", _(u"Copernicus Science Centre")],
     [u"42", _(u"Pomeranian University in Słupsk")],
-    [u"43", _(u"Collegium Humanum – Warsaw Management University")]
+    [u"43", _(u"Collegium Humanum – Warsaw Management University")],
+    [u"44", _(u"Parlament Studentów Rzeczypospolitej Polskiej")]
 ]
 
 ALL_COURSE_ORGANIZER_DICT = dict(ALL_COURSE_ORGANIZER)
@@ -2773,7 +2774,7 @@ COURSE_DISCOVERY_MEANINGS = {
         'terms': {b[0]: b[1] for b in ALL_COURSE_CATEGORY},
     },
     'organizer': {
-        'name': (u'Institution'),
+        'name': _(u'Institution'),
         'terms': {b[0]: b[1] for b in ALL_COURSE_ORGANIZER},
     },
     'difficulty': {
