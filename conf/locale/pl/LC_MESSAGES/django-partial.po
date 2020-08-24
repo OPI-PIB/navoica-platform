@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-19 12:54+0000\n"
+"POT-Creation-Date: 2020-08-24 13:35+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
 "Last-Translator: krystianlygas <krystian.lygas@gmail.com>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -143,7 +143,7 @@ msgstr "Potwierdzenie tożsamości w toku"
 msgid "You're enrolled as a verified student"
 msgstr "Jesteś zapisany/a jako student ścieżki potwierdzonej"
 
-#: common/djangoapps/course_modes/helpers.py:40 lms/envs/common.py:2767
+#: common/djangoapps/course_modes/helpers.py:40 lms/envs/common.py:2768
 msgid "Verified"
 msgstr "Potwierdzony"
 
@@ -223,7 +223,7 @@ msgstr ""
 "Jest to masowy numer SKU (kod sprzedaży) tego trybu w zewnętrznym systemie "
 "płatności."
 
-#: common/djangoapps/course_modes/models.py:182 lms/envs/common.py:2766
+#: common/djangoapps/course_modes/models.py:182 lms/envs/common.py:2767
 msgid "Honor"
 msgstr "Honor"
 
@@ -3719,7 +3719,7 @@ msgstr ""
 msgid "General"
 msgstr "Ogólne"
 
-#: common/lib/xmodule/xmodule/course_module.py:1310 lms/envs/common.py:2789
+#: common/lib/xmodule/xmodule/course_module.py:1310 lms/envs/common.py:2790
 msgid "Archived"
 msgstr "Zakończony"
 
@@ -3731,7 +3731,7 @@ msgstr "Trwający"
 msgid "Starting Soon"
 msgstr "Dostępny"
 
-#: common/lib/xmodule/xmodule/course_module.py:1316 lms/envs/common.py:2786
+#: common/lib/xmodule/xmodule/course_module.py:1316 lms/envs/common.py:2787
 msgid "Upcoming"
 msgstr "Zaplanowany"
 
@@ -7234,7 +7234,7 @@ msgstr "E-mail"
 
 #: lms/djangoapps/instructor/views/api.py:1251
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py:105
-#: lms/envs/common.py:2761
+#: lms/envs/common.py:2762
 msgid "Language"
 msgstr "Język"
 
@@ -10527,51 +10527,55 @@ msgstr "Akademia Pomorska w Słupsku"
 msgid "Collegium Humanum – Warsaw Management University"
 msgstr "Collegium Humanum w Warszawie"
 
-#: lms/envs/common.py:2742
+#: lms/envs/common.py:2737
+msgid "Parlament Studentów Rzeczypospolitej Polskiej"
+msgstr "Students’ Parliament of the Republic of Poland"
+
+#: lms/envs/common.py:2743
 msgid "Language learning"
 msgstr "Języki obce"
 
-#: lms/envs/common.py:2743
+#: lms/envs/common.py:2744
 msgid "Humanities"
 msgstr "Nauki humanistyczne"
 
-#: lms/envs/common.py:2744
+#: lms/envs/common.py:2745
 msgid "IT & Computer Science"
 msgstr "Nauki komputerowe"
 
-#: lms/envs/common.py:2745
+#: lms/envs/common.py:2746
 msgid "Technology"
 msgstr "Nauki techniczne"
 
-#: lms/envs/common.py:2746
+#: lms/envs/common.py:2747
 msgid "Agriculture"
 msgstr "Nauki rolnicze"
 
-#: lms/envs/common.py:2747
+#: lms/envs/common.py:2748
 msgid "Social Sciences"
 msgstr "Nauki społeczne"
 
-#: lms/envs/common.py:2748
+#: lms/envs/common.py:2749
 msgid "Science"
 msgstr "Nauki ścisłe i przyrodnicze"
 
-#: lms/envs/common.py:2749
+#: lms/envs/common.py:2750
 msgid "Art"
 msgstr "Sztuka"
 
-#: lms/envs/common.py:2750
+#: lms/envs/common.py:2751
 msgid "Economics & Management"
 msgstr "Zarządzanie i ekonomia"
 
-#: lms/envs/common.py:2751
+#: lms/envs/common.py:2752
 msgid "Health sciences"
 msgstr "Zdrowie i nauki medyczne"
 
-#: lms/envs/common.py:2752
+#: lms/envs/common.py:2753
 msgid "Business"
 msgstr "Nauki biznesowe"
 
-#: lms/envs/common.py:2757
+#: lms/envs/common.py:2758
 #, python-format
 msgid "%d week"
 msgid_plural "%d weeks"
@@ -10580,45 +10584,49 @@ msgstr[1] "%d tygodnie"
 msgstr[2] "%d tygodni"
 msgstr[3] "%d tygodnie"
 
-#: lms/envs/common.py:2764
+#: lms/envs/common.py:2765
 msgid "Course type"
 msgstr "Typ kursu"
 
-#: lms/envs/common.py:2768
+#: lms/envs/common.py:2769
 msgid "audit"
 msgstr "audit"
 
-#: lms/envs/common.py:2772
+#: lms/envs/common.py:2773
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion/__init__.py:51
 msgid "Category"
 msgstr "kategoria"
 
-#: lms/envs/common.py:2780
+#: lms/envs/common.py:2777
+msgid "Institution"
+msgstr "Organizator"
+
+#: lms/envs/common.py:2781
 msgid "Level"
 msgstr "Poziom trudności"
 
-#: lms/envs/common.py:2784
+#: lms/envs/common.py:2785
 msgid "Availability"
 msgstr "Dostępność"
 
-#: lms/envs/common.py:2787
+#: lms/envs/common.py:2788
 msgid "Starting soon"
 msgstr "Nadchodzący"
 
-#: lms/envs/common.py:2788
+#: lms/envs/common.py:2789
 msgid "In progress"
 msgstr "W trakcie"
 
-#: lms/envs/common.py:2868
+#: lms/envs/common.py:2869
 msgid "Kosovo"
 msgstr "Kosovo"
 
-#: lms/envs/common.py:3277
+#: lms/envs/common.py:3278
 #, python-brace-format
 msgid "Welcome to {platform_name}."
 msgstr "Witamy na platformie {platform_name}."
 
-#: lms/envs/common.py:3279
+#: lms/envs/common.py:3280
 #, python-brace-format
 msgid ""
 "You have left the {start_bold}{enterprise_name}{end_bold} website and are "
