@@ -71,6 +71,20 @@ $select-border: #ced4da;
   text-transform: none;
 }
 
+button.select-styled {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+
+
+[role=option] {
+  cursor: pointer;
+}
+
 .select-hidden {
   display: none;
   visibility: hidden;
@@ -127,7 +141,6 @@ $select-border: #ced4da;
   z-index: 999;
   margin: 0;
   padding: 0;
-  max-height: 200px;
   overflow-y: auto;
   overflow-x: hidden;
   list-style: none;
@@ -135,6 +148,8 @@ $select-border: #ced4da;
   background-color: #fff;
   border: 1px solid $select-border;
   box-shadow: 0 10px 13px 5px rgba(71,79,89,0.9);
+  border-top: 0;
+  max-height: 11rem;
 
   li {
     margin: 0;

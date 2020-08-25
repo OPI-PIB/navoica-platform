@@ -66,24 +66,37 @@
 
   $(document).ready(function() {
 
+    function closeSelect() {
+      $('.select-styled').removeClass('active');
+      $('.select-options').hide();
+    }
+
   $('select').each(function () {
     var $this = $(this), numberOfOptions = $(this).children('option').length;
 
     $this.addClass('select-hidden');
-    $this.wrap('<div class="select d-flex flex-wrap" tabindex="0"></div>');
-    $this.after('<div class="select-styled"></div>');
 
-    var $styledSelect = $this.next('div.select-styled');
+    $this.wrap('<div class="select d-flex flex-wrap"></div>');
+    $this.after('<button type="button" aria-labelledby="sort-select" class="select-styled" aria-haspopup="listbox"></button>');
+
+    var $styledSelect = $this.next('button.select-styled');
     $styledSelect.text($this.children('option').eq(0).text());
 
     var $list = $('<ul />', {
-      'class': 'select-options'
+      'class': 'select-options',
+      'tabindex': '0',
+      'role': 'listbox',
+      'aria-activedescendant': 'exp_elem_0'
     }).insertAfter($styledSelect);
 
     for (var i = 0; i < numberOfOptions; i++) {
       $('<li />', {
         text: $this.children('option').eq(i).text(),
-        rel: $this.children('option').eq(i).val()
+        rel: $this.children('option').eq(i).val(),
+        role: 'option',
+        id: 'exp_elem_' + i,
+        'tabindex': '-1',
+        'aria-selected': 'false'
       }).appendTo($list);
     }
 
@@ -91,10 +104,12 @@
 
     $styledSelect.click(function (e) {
       e.stopPropagation();
-      $('div.select-styled.active').not(this).each(function () {
+
+      $('button.select-styled.active').not(this).each(function () {
         $(this).removeClass('active').next('ul.select-options').hide();
       });
       $(this).toggleClass('active').next('ul.select-options').toggle();
+
     });
 
     $listItems.click(function (e) {
@@ -102,7 +117,6 @@
       $styledSelect.text($(this).text()).removeClass('active');
       $this.val($(this).attr('rel'));
       $list.hide();
-      //console.log($this.val());
     });
 
     $(document).click(function () {
@@ -111,6 +125,87 @@
     });
 
   });
+
+    $('.select-options li').on('click', function(){
+      var value = $(this).attr("rel");
+      var indexOpt = $(this).index();
+      value++;
+      $('.select-options').attr('aria-activedescendant', $(this).attr('id'));
+      $('#sort-select').find('option').eq(indexOpt).prop('selected', true).trigger('change');
+      return false;
+    });
+
+    $("[role=listbox]").on("focus", function () {
+      // If no selected element, select the first by default
+      if (!$(this).find("[aria-selected=true]").length) {
+        $(this).find("[role=option]:first").attr("aria-selected", "true").focus();
+      } else {
+        $(this).find("[aria-selected=true]").focus();
+      }
+    });
+
+    $("[role=option]").on("focus", function (e) {
+      $(this).parent().attr("tabindex", "-1");
+    });
+
+    $("[role=option]").on("blur", function (e) {
+      $(this).parent().attr("tabindex", "0");
+    });
+
+
+    $("[role=listbox]").on("keydown", function (e) {
+      var currentItem = $(this).find("[aria-selected=true]");
+
+      if (currentItem.length == 0) {
+        currentItem = $(this).eq(0);
+      }
+
+      switch (e.keyCode) {
+        case 37: // Left Arrow
+        case 38:  // Up arrow
+          if (currentItem.prev().length) {
+            currentItem.attr("aria-selected", "false");
+            currentItem.prev().focus();
+            $('.select-styled').text(currentItem.prev().text());
+          }
+          e.preventDefault();
+          break;
+        case 39: // Right Arrow
+        case 40: // Down arrow
+          if (currentItem.next().length) {
+            currentItem.attr("aria-selected", "false");
+            currentItem.next().attr("aria-selected", "true").focus();
+            $('.select-styled').text(currentItem.next().text());
+          }
+          e.preventDefault();
+          break;
+        case 27: // Escape
+          if (currentItem.length) {
+            currentItem.attr("aria-selected", "false");
+          }
+          closeSelect();
+          e.preventDefault();
+          break;
+        case 13: // Enter
+        case 32: // Space
+          if (currentItem.length) {
+            var indexOpt = currentItem.index();
+            $('.select-options').attr('aria-activedescendant', currentItem.attr('id'));
+            $('#sort-select').find('option').eq(indexOpt).prop('selected', true).trigger('change');
+            currentItem.attr("aria-selected", "false");
+            closeSelect();
+            return false;
+          }
+          e.preventDefault();
+          break;
+      }
+    });
+
+    $("[role=option]").on("mousedown", function (e) {
+      $(this).parent().find("[aria-selected=true]").attr("aria-selected", "false");
+      $(this).attr("aria-selected", "true");
+      e.preventDefault();
+    });
 
 });
 
