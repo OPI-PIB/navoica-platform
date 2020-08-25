@@ -26,13 +26,18 @@
                 };
                 this.courseCards = new Backbone.Collection([], {model: CourseCard});
                 this.facetOptions = new Backbone.Collection([], {
-                    model: FacetOption, comparator: function (modelA, modelB) {
+                    model: FacetOption,
+                    comparator: function(modelA, modelB) {
                         var modelA = _.clone(modelA.attributes);
                         var modelB = _.clone(modelB.attributes);
                         modelA.name = termName(modelA.facet, modelA.term);
                         modelB.name = termName(modelB.facet, modelB.term);
                         if (modelA.facet === modelB.facet) {
-                            return modelA.name.localeCompare(modelB.name);
+                            if (modelA.facet === 'language') {
+                                return modelB.count - modelA.count
+                            } else {
+                                return modelA.name.localeCompare(modelB.name);
+                            }
                         }
                         return modelA.facet.localeCompare(modelB.facet);
                     }
