@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-19 12:54+0000\n"
+"POT-Creation-Date: 2020-08-24 09:50+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
 "Last-Translator: krystianlygas <krystian.lygas@gmail.com>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -260,12 +260,13 @@ msgstr "Potwierdź hasło"
 msgid "Course End Date"
 msgstr "Data zakończenia kursu"
 
-#: cms/templates/settings.html lms/templates/preview_menu.html
-#: lms/templates/preview_menu.html
+#: cms/templates/settings.html:315 lms/templates/preview_menu.html:91
+#: lms/templates/preview_menu.html:137
 msgid "Course Organizer"
 msgstr "Organizator"
 
-#: cms/templates/settings.html lms/templates/courseware/course_about.html
+#: cms/templates/settings.html:339
+#: lms/templates/courseware/course_about.html:307
 msgid "{week} week"
 msgid_plural "{week} weeks"
 msgstr[0] "{week} tydzień"
@@ -768,7 +769,7 @@ msgstr "Przeszukaj swoje kursy"
 #: lms/templates/courseware/courseware.html:146
 #: lms/templates/edxnotes/edxnotes.html:39 lms/templates/header/header.html:74
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html:48
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:171
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:172
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html:49
 #: themes/edx.org/lms/templates/dashboard.html:254
 #: themes/stanford-style/lms/templates/index.html:26
@@ -808,7 +809,7 @@ msgstr "Historia zamówień"
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html:60
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html:13
 #: lms/templates/modal/_modal-settings-language.html:13
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:230
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:231
 #: themes/edx.org/lms/templates/dashboard.html:314
 #: themes/edx.org/lms/templates/dashboard.html:345
 #: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:13
@@ -816,7 +817,7 @@ msgid "Close"
 msgstr "Zamknij"
 
 #: lms/templates/dashboard.html:562
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:218
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:219
 #: themes/edx.org/lms/templates/dashboard.html:320
 msgid "Email Settings for {course_number}"
 msgstr "Ustawienia e-mail dla kursu {course_number}"
@@ -826,7 +827,7 @@ msgstr "Ustawienia e-mail dla kursu {course_number}"
 #: lms/templates/dashboard.html:565
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:22
 #: lms/templates/modal/_modal-settings-language.html:22
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:221
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:222
 #: themes/edx.org/lms/templates/dashboard.html:323
 #: themes/edx.org/lms/templates/dashboard.html:356
 #: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:22
@@ -834,13 +835,13 @@ msgid "window open"
 msgstr "pełne okno"
 
 #: lms/templates/dashboard.html:573
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:241
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:242
 #: themes/edx.org/lms/templates/dashboard.html:331
 msgid "Receive course emails"
 msgstr "Chcę otrzymywać powiadomienia e-mail z kursu"
 
 #: lms/templates/dashboard.html:575
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:246
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:247
 #: themes/edx.org/lms/templates/dashboard.html:333
 msgid "Save Settings"
 msgstr "Zapisz ustawienia"
@@ -1643,36 +1644,36 @@ msgstr "Nie posiadasz żadnych notatek."
 msgid "Course edition"
 msgstr "Edycja kursu"
 
-#: lms/templates/preview_menu.html
+#: lms/templates/preview_menu.html:54
 msgid "View this course as"
 msgstr "Wyświetl kurs jako"
 
-#: lms/templates/preview_menu.html lms/templates/preview_menu.html
-#: lms/templates/instructor/instructor_dashboard_2/membership.html
+#: lms/templates/preview_menu.html:56 lms/templates/preview_menu.html:187
+#: lms/templates/instructor/instructor_dashboard_2/membership.html:165
 msgid "Staff"
 msgstr "Kadra"
 
-#: lms/templates/preview_menu.html:57 lms/templates/preview_menu.html:187
+#: lms/templates/preview_menu.html:57 lms/templates/preview_menu.html:188
 msgid "Learner"
 msgstr "Student"
 
-#: lms/templates/preview_menu.html:58 lms/templates/preview_menu.html:188
+#: lms/templates/preview_menu.html:58 lms/templates/preview_menu.html:189
 msgid "Specific learner"
 msgstr "Określony student"
 
-#: lms/templates/preview_menu.html:62 lms/templates/preview_menu.html:192
+#: lms/templates/preview_menu.html:62 lms/templates/preview_menu.html:193
 msgid "Learner in {content_group}"
 msgstr "Student w grupie {content_group}"
 
-#: lms/templates/preview_menu.html:69 lms/templates/preview_menu.html:199
+#: lms/templates/preview_menu.html:69 lms/templates/preview_menu.html:200
 msgid "Username or email:"
 msgstr "Nazwa użytkownika lub adres e-mail:"
 
-#: lms/templates/preview_menu.html:72 lms/templates/preview_menu.html:202
+#: lms/templates/preview_menu.html:72 lms/templates/preview_menu.html:203
 msgid "Set preview mode"
 msgstr "Ustaw tryb podglądu"
 
-#: lms/templates/preview_menu.html:77 lms/templates/preview_menu.html:207
+#: lms/templates/preview_menu.html:77 lms/templates/preview_menu.html:208
 msgid "You are now viewing the course as {i_start}{user_name}{i_end}."
 msgstr "Przeglądasz teraz kurs jako {i_start}{user_name}{i_end}."
 
@@ -1769,7 +1770,7 @@ msgstr "Zarejestruj się za pomocą {provider_name}"
 #: lms/templates/register-form.html:48
 #: themes/stanford-style/lms/templates/register-form.html:48
 msgid "Create your own {platform_name} account below"
-msgstr "Utwórz konto na platformie {platform_name}"
+msgstr "Utwórz konto na platformie {platform_name}."
 
 #: lms/templates/register-form.html:49 lms/templates/register-form.html:67
 msgid ""
@@ -4383,7 +4384,7 @@ msgid "Welcome to {course_title}!"
 msgstr "Witamy na kursie \"{course_title}\""
 
 #: lms/templates/courseware/info.html:74
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:180
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:181
 msgid "Resume Course"
 msgstr "Wznów kurs"
 
@@ -9228,47 +9229,47 @@ msgstr ""
 "Ta strona celowo pozostała pusta. Jeśli chcesz, możesz dodać na nią własną "
 "treść."
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:15
 msgid "Contact us"
 msgstr "Kontakt"
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:22
 msgid ""
 "Online learning platform owned by the Polish Ministry of Science and Higher "
 "Education"
 msgstr ""
 "Platforma kształcenia na odległość Ministerstwa Nauki i Szkolnictwa Wyższego"
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:27
 msgid "Address"
 msgstr "Adres"
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:30
 msgid "National Information Processing Institute"
-msgstr "OPI PIB"
+msgstr "Ośrodek Przetwarzania Informacji - Państwowy Instytut Badawczy"
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:37
 msgid "General questions"
 msgstr "Pytania ogólne"
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:38
 msgid ""
 "Questions, comments and contact with universities and institutions regarding"
 " publishing courses on the platform"
 msgstr ""
 "Pytania, uwagi oraz kontakt dla uczelni i instytucji w sprawie udostępnienia"
-" kursów na platformie:"
+" kursów na platformie"
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:40
 msgid "Help center"
 msgstr "Centrum Pomocy"
 
-#: lms/templates/static_templates/contact.html
+#: lms/templates/static_templates/contact.html:41
 msgid "Issues, errors, technical comments"
 msgstr "Problemy, błędy, uwagi techniczne:"
 
-#: lms/templates/static_templates/donate.html
-#: lms/templates/static_templates/donate.html
+#: lms/templates/static_templates/donate.html:5
+#: lms/templates/static_templates/donate.html:10
 msgid "Donate"
 msgstr "Darowizna"
 
@@ -11016,15 +11017,15 @@ msgid "Skeleton Page"
 msgstr "Szablon strony"
 
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html:46
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:162
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:168
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:163
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:169
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html:40
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html:47
 msgid "Search the course"
 msgstr "Przeszukaj kurs"
 
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html:52
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:182
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:183
 msgid "Start Course"
 msgstr "Rozpocznij kurs"
 
@@ -11243,12 +11244,12 @@ msgstr "Uzyskaj zaświadczenie o ukończeniu kursu"
 msgid "Upgrade ({price})"
 msgstr "Premium ({price})"
 
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:157
 msgid "Table of Contents"
 msgstr "Spis treści"
 
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:191
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:166
 msgid "Expand All"
 msgstr "Rozwiń wszystko"
 
@@ -11359,11 +11360,11 @@ msgstr "Wersja premium ({course_price})"
 msgid "This course does not have any updates."
 msgstr "Ten kurs nie ma żadnych opublikowanych aktualności."
 
-#: openedx/features/course_experience/templates/course_experience/dates-summary.html
+#: openedx/features/course_experience/templates/course_experience/dates-summary.html:9
 msgid "Today is"
 msgstr "Dziś jest"
 
-#: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html
+#: openedx/features/course_experience/templates/course_experience/latest-update-fragment.html:14
 msgid "Latest Update"
 msgstr "Najnowsza aktualizacja"
 
