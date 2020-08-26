@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-24 09:50+0000\n"
-"PO-Revision-Date: 2020-08-24 09:51:12.250033\n"
+"POT-Creation-Date: 2020-08-26 13:18+0000\n"
+"PO-Revision-Date: 2020-08-26 13:18:32.377463\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -250,6 +250,17 @@ msgstr ""
 msgid "Confirm Password"
 msgstr ""
 
+#: cms/templates/settings.html:63
+#: lms/templates/courseware/course_about.html:262
+#: lms/templates/courseware/course_about.html:265
+msgid "Basic Information"
+msgstr ""
+
+#: cms/templates/settings.html:89
+#: lms/templates/courseware/course_about.html:207
+msgid "Course Summary Page"
+msgstr ""
+
 #: cms/templates/settings.html:205
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html:39
 msgid "Course End Date"
@@ -260,12 +271,28 @@ msgstr ""
 msgid "Course Organizer"
 msgstr ""
 
+#: cms/templates/settings.html:325
+#: lms/templates/courseware/course_about.html:292
+msgid "Course Category"
+msgstr ""
+
+#: cms/templates/settings.html:335
+#: lms/templates/courseware/course_about.html:305
+msgid "Course Timetable"
+msgstr ""
+
 #: cms/templates/settings.html:339
-#: lms/templates/courseware/course_about.html:307
+#: lms/templates/courseware/course_about.html:306
 msgid "{week} week"
 msgid_plural "{week} weeks"
 msgstr[0] ""
 msgstr[1] ""
+
+#: cms/templates/settings.html:373
+#: lms/templates/courseware/course_about.html:232
+#: lms/templates/courseware/course_about.html:279
+msgid "Course Description"
+msgstr ""
 
 #: cms/templates/settings.html:545
 #: lms/templates/courseware/program_marketing.html:344
@@ -3720,27 +3747,44 @@ msgstr ""
 msgid "Enroll in {course_name}"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:322
+#: lms/templates/courseware/course_about.html:236
+msgid " Instructor list "
+msgstr ""
+
+#: lms/templates/courseware/course_about.html:244
+#: lms/templates/courseware/course_about.html:431
+msgid "Organizer"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html:321
 msgid "Classes Start"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:348
+#: lms/templates/courseware/course_about.html:347
 msgid "Classes End"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:372
+#: lms/templates/courseware/course_about.html:371
 msgid "Enrollment start"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:395
+#: lms/templates/courseware/course_about.html:394
 msgid "Enrollment end"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:420
+#: lms/templates/courseware/course_about.html:418
+msgid "Hours of effort per week"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html:419
 msgid "{effort} hour"
 msgid_plural "{effort} hours"
 msgstr[0] ""
 msgstr[1] ""
+
+#: lms/templates/courseware/course_about.html:469
+msgid "Fill all fields in Schedule & Details Settings!"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html:487
 msgid "Additional Resources"
