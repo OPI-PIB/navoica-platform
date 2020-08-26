@@ -9544,18 +9544,12 @@ main.container aside h6 {
     margin: 0 .5em 0 .5em
   }
 
-  .container .breadcrumbs .nav-item:nth-child(3)::before {
-    content: "Lekcja:";
-    font-style: italic;
+  .container .breadcrumbs .nav-item:nth-child(4)::after {
+    content: "/";
+    margin: 0 .5em 0 .5em
   }
 
-  .container .breadcrumbs .nav-item:nth-child(2)::before {
-    content: "Moduł: ";
-    font-style: italic;
-  }
-
-  .container .breadcrumbs .nav-item:nth-child(4)::before {
-    content: "Jednostka: ";
+  .container .breadcrumbs-before {
     font-style: italic;
   }
 
