@@ -47,7 +47,7 @@ HeaderFactory();
         <div class="navbar navbar-expand-md justify-content-between">
 
             <a class="navbar-brand mr-3" href="/">
-                <img src="${settings.HEADER_NAVOICA_LOGO_IMAGE}" alt="${_('Navoica logo')}">
+                <img src="${static.url(settings.HEADER_NAVOICA_LOGO_IMAGE)}" alt="${_('Navoica logo')}">
             </a>
 
             % if course and user.is_authenticated():
