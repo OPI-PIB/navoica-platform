@@ -69,6 +69,7 @@
     function closeSelect() {
       $('.select-styled').removeClass('active');
       $('.select-options').hide();
+      $('button.select-styled').focus();
     }
 
   $('select').each(function () {
@@ -109,6 +110,7 @@
         $(this).removeClass('active').next('ul.select-options').hide();
       });
       $(this).toggleClass('active').next('ul.select-options').toggle();
+      $('ul.select-options').focus();
 
     });
 
@@ -157,7 +159,7 @@
       var currentItem = $(this).find("[aria-selected=true]");
 
       if (currentItem.length == 0) {
-        currentItem = $(this).eq(0);
+        //currentItem = $(this).eq(0);
       }
 
       switch (e.keyCode) {
@@ -167,7 +169,7 @@
             currentItem.attr("aria-selected", "false");
             currentItem.prev().focus();
             $('.select-styled').text(currentItem.prev().text());
-          }
+          } else return;
           e.preventDefault();
           break;
         case 39: // Right Arrow
@@ -176,7 +178,7 @@
             currentItem.attr("aria-selected", "false");
             currentItem.next().attr("aria-selected", "true").focus();
             $('.select-styled').text(currentItem.next().text());
-          }
+          } else return;
           e.preventDefault();
           break;
         case 27: // Escape
