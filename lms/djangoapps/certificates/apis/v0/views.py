@@ -181,8 +181,7 @@ class CertificatesListView(GenericAPIView):
             user_cert = get_certificate_for_user(username=student, course_key=course_key)
             if user_cert is not None:
                 users_cert.append({
-                    "first_name": user_cert.get('username').first_name,
-                    "last_name": user_cert.get('username').last_name,
+                    "profile_name": user_cert.get('username').profile.name,
                     "username": user_cert.get('username').username,
                     "e_mail": user_cert.get('username').email,
                     "course_id": unicode(user_cert.get('course_key')),
@@ -197,14 +196,14 @@ class CertificatesListView(GenericAPIView):
         # temporary used. it will be removed, when application/json will be implemented in instructor_dashboard
         if 'text/html' in request.META.get('HTTP_ACCEPT', 'text/html'):
             html = ['<table>']
-            html.append('''<tr><th>Lp.</th><th>first_name</th><th>last_name</th><th>username</th>
+            html.append('''<tr><th>Lp.</th><th>profile_name</th><th>username</th>
                             <th>e-mail</th><th>created_date</th></tr>''')
             n=0
             for user_cert in users_cert:
                 n += 1
                 html.append('<tr>')
-                html.append('<td>{}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td>'.format(
-                    n, user_cert['first_name'],user_cert['last_name'], user_cert['username'],
+                html.append('<td>{}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td>'.format(
+                    n, user_cert['profile_name'], user_cert['username'],
                     user_cert['e_mail'],user_cert['created_date']))
                 html.append('</tr>')
             html.append('</table>')
