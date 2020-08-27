@@ -158,16 +158,12 @@
     $("[role=listbox]").on("keydown", function (e) {
       var currentItem = $(this).find("[aria-selected=true]");
 
-      if (currentItem.length == 0) {
-        //currentItem = $(this).eq(0);
-      }
-
       switch (e.keyCode) {
         case 37: // Left Arrow
         case 38:  // Up arrow
           if (currentItem.prev().length) {
             currentItem.attr("aria-selected", "false");
-            currentItem.prev().focus();
+            currentItem.prev().attr("aria-selected", "true").focus();
             $('.select-styled').text(currentItem.prev().text());
           } else return;
           e.preventDefault();
