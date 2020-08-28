@@ -16,7 +16,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
 %>
 
 </script>
-  <script src="${static.url('js/course_info.js')}">
+  <script type="module" src="${static.url('js/course_info.js')}">
 </script>
 
 % if request.path.endswith("course/"):
@@ -41,7 +41,6 @@ show_preview_menu = course and staff_access and supports_preview_menu
     <div class="container">
       <div class="d-flex">
         <article>
-
           <h1 class="display-2">${course.display_name_with_default}</h1>
           <p class="lead mt-3">${_("Course edition")}: <strong>${course.id.run}</strong></p>
           <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
@@ -67,7 +66,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
                 </div>
 		<div class="action-preview-username-container">
 		    <label for="action-preview-username">${_("Username or email:")}</label>
-		    <input type="text" class="form-control action-preview-username" id="action-preview-username">
+		    <input type="text" class="form-control action-preview-username js-learner-username" id="action-preview-username">
 		</div>
 		<button type="submit" class="sr-only" name="submit" value="submit">${_("Set preview mode")}</button>
 	     </form>
@@ -198,7 +197,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
 					</div>
 			<div class="action-preview-username-container">
 				<label for="action-preview-username">${_("Username or email:")}</label>
-				<input type="text" class="form-control action-preview-username" id="action-preview-username">
+				<input type="text" class="form-control action-preview-username js-learner-username" id="action-preview-username">
 			</div>
 			<button type="submit" class="sr-only" name="submit" value="submit">${_("Set preview mode")}</button>
 			 </form>

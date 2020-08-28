@@ -994,7 +994,6 @@ def program_marketing(request, program_uuid):
 
     return render_to_response('courseware/program_marketing.html', context)
 
-
 @transaction.non_atomic_requests
 @login_required
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)
