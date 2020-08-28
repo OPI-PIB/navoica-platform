@@ -91,7 +91,9 @@ def get_course_outline_block_tree(request, course_id):
                 if block['children'][idx]['resume_block'] is True:
                     block['resume_block'] = True
 
-            if len([child['complete'] for child in block['children'] if child['complete']]) == len(block['children']):
+            completable_blocks = [child for child in block['children']
+                                  if child.get('type') != 'discussion']
+            if all(child.get('complete') for child in completable_blocks):
                 block['complete'] = True
 
     def mark_last_accessed(user, course_key, block):
@@ -129,7 +131,8 @@ def get_course_outline_block_tree(request, course_id):
         'video',
         'discussion',
         'drag-and-drop-v2',
-        'poll'
+        'poll',
+        'videojs'
     ]
     all_blocks = get_blocks(
         request,
