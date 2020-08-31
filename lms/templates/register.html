@@ -77,7 +77,29 @@ import calendar
             $('.status.message.submission-error').addClass('is-shown').focus();
             $('.status.message.submission-error .message-copy').html(json.value).stop().css("display", "block");
             $(".field-error").removeClass('field-error');
-            $("[data-field='" + json.field + "']").addClass('field-error')
+            $("[data-field='" + json.field + "']").addClass('field-error');
+
+            if (json.field) {
+                $('#' + json.field).attr('aria-invalid', true).addClass('error-field');
+                $('.js-' + json.field.replace(/_/g, '-') + '-field').find('.js-error-message').text(json.value);
+
+                $('input.js-register-field').each(function() {
+
+                    if ($(this).prop('type') !== 'checkbox') {
+                        if ($(this).val() !== '') {
+                            $(this).removeAttr('aria-invalid').removeClass('error-field');
+                            $('.js-' + $(this).attr('id').replace(/_/g, '-') + '-field').find('.js-error-message').text('');
+                        }
+                    } else {
+                        if ($(this).is(':checked')) {
+                            $(this).removeAttr('aria-invalid').removeClass('error-field');
+                            $('.js-' + $(this).attr('id').replace(/_/g, '-') + '-field').find('.js-error-message').text('');
+                        }
+                    }
+                });
+            }
+
+
         });
     })(this);
 
@@ -103,12 +125,12 @@ import calendar
 <div id="content" class="border-top">
   <section class="register container login">
     <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
     <div class="d-flex">
        <article id="result">
-           <header id="header-login">
-             <h2 id="h2">
-              <span class="d-none d-md-block">Formularz rejestracji</span>
+           <header class="header-login">
+             <h2 class="custom-h2">
+              <span class="d-none d-md-block">${_("Registration form")}</span>
             </h2>
           </header>
             <h1><strong>${_("Welcome!")}</strong><br> ${_("Register below to create your {platform_name} account").format(platform_name=platform_name)}</h1>
@@ -126,9 +148,9 @@ import calendar
         </article>
 
         <aside id="filter" class="sidebar">
-          <header id="header-login">
+          <header class="header-login">
             <h2 id="h2">
-              <span class="d-none d-md-block">Przydatne informacje</span>
+              <span class="d-none d-md-block">${_("Helpful Information")}</span>
             </h2>
           </header>
             <%

@@ -314,13 +314,13 @@ from student.models import CourseEnrollment
             <div class="bg-brand rounded search-facets">
                 <h2 id="filter-bar" class="list-group filters hide-phone d-none d-md-block is-animated is-collapsed">
                     <div class="d-flex justify-content-between align-items-center">
-                        <span class="d-none d-md-block" id="h2" aria-label="Filtrowanie">Filtrowanie</span>
-                        <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true" aria-label="Filtrowanie">Filtry</a>
-                        <a id="clear-all-filters" href="#" class="clear-filters flt-right btn btn-primary btn-sm btn-icon" style="display: none;" tabindex="0" aria-label="Wyczyść filtry" role="button">wyczyść filtry</a>
+                        <span class="d-none d-md-block" id="h2" aria-label="${_('Filter By')}">${_("Filter By")}</span>
+                        <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true" aria-label="${_('Filters')}">${_("Filters")}</a>
+                        <a id="clear-all-filters" href="#" class="clear-filters flt-right btn btn-primary btn-sm btn-icon" style="display: none;" tabindex="0" aria-label="${_('Reset Filters')}" role="button">${_('reset filters')}</a>
                     </div>
 
                 </h2>
-                <a href="#search-facets-lists" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">FILTRY</a>
+                <a href="#search-facets-lists" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">${_("FILTERS")}</a>
 
                 <div id="search-facets-lists" class="search-facets-lists collapse">
 
@@ -328,47 +328,47 @@ from student.models import CourseEnrollment
 
                         <div class="list-group-item">
                             <div class="header-facet">
-                                Status kursu
+                                ${_("Course Status")}
                             </div>
                         </div>
 
                         <ul data-facet="availability" class="facet-list col-12 px-0 js-course-enrollment-filters" role="list">
 
                             <li id="filter-list" role="listitem">
-                                <button type="button" data-facet="availability" data-value="Upcoming" data-text="W przygotowaniu" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                <button type="button" data-facet="availability" data-value="Upcoming" data-text="${_('Upcoming')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="upcoming" id="upcoming">
-                                        <label class="form-check-label label flex-fill" for="upcoming">Nadchodzący</label>
+                                        <label class="form-check-label label flex-fill" for="upcoming">${_("Starting Soon")}</label>
                                         <span class="count-number"></span>
                                     </div>
                                 </button>
                             </li>
 
                             <li id="filter-list" role="listitem">
-                                <button type="button" data-facet="availability" data-value="Now" data-text="W trakcie" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                <button type="button" data-facet="availability" data-value="Now" data-text="${_('Now')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="now" id="now">
-                                        <label class="form-check-label label flex-fill" for="now">W trakcie</label>
+                                        <label class="form-check-label label flex-fill" for="now">${_("Current")}</label>
                                         <span class="count-number"></span>
                                     </div>
                                 </button>
                             </li>
 
                             <li id="filter-list" role="listitem">
-                                <button type="button" data-facet="availability" data-value="Ended" data-text="Zakończony" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                <button type="button" data-facet="availability" data-value="Ended" data-text="${_('Ended')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="finished" id="finished">
-                                        <label class="form-check-label label flex-fill" for="finished">Zakończony</label>
+                                        <label class="form-check-label label flex-fill" for="finished">${_("Archived")}</label>
                                         <span class="count-number"></span>
                                     </div>
                                 </button>
                             </li>
 
                             <li id="filter-list" role="listitem">
-                                <button type="button" data-facet="availability" data-value="Certificated" data-text="Z zaświadczeniem" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
+                                <button type="button" data-facet="availability" data-value="Certificated" data-text="${_('Certificated')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="certificated" id="certificated">
-                                        <label class="form-check-label label flex-fill" for="certificated">Z zaświadczeniem</label>
+                                        <label class="form-check-label label flex-fill" for="certificated">${_("My certificates")}</label>
                                         <span class="count-number"></span>
                                     </div>
                                 </button>
@@ -384,14 +384,14 @@ from student.models import CourseEnrollment
         </aside>
 
       <section>
-        <header id="header-login" class="d-flex justify-content-between align-items-center flex-wrap px-1">
-          <h2 id="h2" class="my-0 col-md-6 col-lg-7 px-0">Lista kursów</h2>
-            <div id="sorting-form" class="col-md px-0">
-                <label for="enrolled-course-sort" class="text-uppercase my-0 text-darkcyan">Sortuj według:</label>
+        <header class="header-login row d-flex justify-content-md-between align-items-md-center mx-1">
+          <h2 id="h2" class="col my-md-0 px-0">${_("Course List")}</h2>
+            <div id="sorting-form" class="col my-0 justify-content-md-end px-0">
+                <label for="enrolled-course-sort" class="text-uppercase my-0 text-darkcyan">${_("Sort By")}:</label>
                 <select id="enrolled-course-sort" class="custom-select" name="select">
-                    <option value="byCourseEnroll">Domyślnie</option>
-                    <option value="name">Alfabetycznie A-Z</option>
-                    <option value="-name">Alfabetycznie Z-A</option>
+                    <option value="byCourseEnroll">${_("Default")}</option>
+                    <option value="name">${_("Alphabetically Ascending")}</option>
+                    <option value="-name">${_("Alphabetically Descending")}</option>
                 </select>
             </div>
         </header>
@@ -581,7 +581,7 @@ from student.models import CourseEnrollment
 <div id="unenroll-modal" class="modal unenroll-modal" aria-hidden="true">
   <div class="inner-wrapper" role="dialog" aria-labelledby="unenrollment-modal-title">
     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Wypisz się z kursu</h5>
+      <h5 class="modal-title" id="exampleModalLabel">${_("Unenroll from Course")}</h5>
         <button class="close-modal">
           <span aria-hidden="true">×</span>
           <span class="sr">
@@ -595,7 +595,7 @@ from student.models import CourseEnrollment
                 <form id="info_body">
                     <div class="instructions">
                         <div id="track-info">
-                            Czy na pewno chcesz się wypisać z kursu
+                            ${_("Are you sure you want to unenroll from")}
                             <h3 id="unenroll_course_name"></h3>
                             <p>
                                 (kod kursu: <span id="unenroll_course_number"></span>)?
@@ -611,7 +611,7 @@ from student.models import CourseEnrollment
       <input name="enrollment_action" type="hidden" value="unenroll" />
       <div class="modal-footer" style="padding: 1rem !important;">
         <div class="form-actions d-flex w-100">
-          <button name="submit" type="submit" id="pwd_reset_button" class="action action-primary action-update btn btn-primary flex-grow-1 text-center">Wypisz się</button>
+          <button name="submit" type="submit" id="pwd_reset_button" class="action action-primary action-update btn btn-primary flex-grow-1 text-center">${_("Unenroll")}</button>
         </div>
       </div>
     </form>

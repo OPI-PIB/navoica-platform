@@ -420,7 +420,7 @@ FEATURES = {
     'THIRD_PARTY_AUTH_HINT': None,
 }
 
-COURSE_DISCOVERY_FILTERS = ['course_category', 'availability', 'organizer', 'difficulty']
+COURSE_DISCOVERY_FILTERS = ['course_category', 'availability', 'organizer', 'difficulty','language']
 
 # Settings for the course reviews tool template and identification key, set either to None to disable course reviews
 COURSE_REVIEWS_TOOL_PROVIDER_FRAGMENT_NAME = 'coursetalk-reviews-fragment.html'
@@ -918,8 +918,8 @@ COURSES_WITH_UNSAFE_CODE = []
 
 ######################NAVOICA_SANDBOX###########################################
 
-NAVOICA_SANDBOX = True
-NAVOICA_SANDBOX_URL = "http://0.0.0.0:8111/sandbox"
+NAVOICA_SANDBOX = False
+NAVOICA_SANDBOX_URL = ''
 
 ############################### DJANGO BUILT-INS ###############################
 # Change DEBUG in your environment settings files, not here
@@ -1160,6 +1160,10 @@ FOOTER_BROWSER_CACHE_MAX_AGE = 5 * 60
 # Credit api notification cache timeout
 CREDIT_NOTIFICATION_CACHE_TIMEOUT = 5 * 60 * 60
 
+######################### Navoica Branding ###################################
+
+HEADER_NAVOICA_LOGO_IMAGE = "/static/images/logo-light-bg.svg"
+
 ################################# Middleware ###################################
 
 # TODO: Remove Django 1.11 upgrade shim
@@ -1351,7 +1355,8 @@ base_vendor_js = [
     'common/js/vendor/require.js',
     'js/RequireJS-namespace-undefine.js',
     'js/vendor/URI.min.js',
-    'common/js/vendor/backbone.js'
+    'common/js/vendor/backbone.js',
+    'js/vendor/prism.js',
 ]
 
 main_vendor_js = base_vendor_js + [
@@ -1475,6 +1480,7 @@ PIPELINE_CSS = {
             'css/course-list.css',
             'css/faq.css',
             'css/cookie-alert.css',
+            'js/vendor/tinymce/js/tinymce/plugins/codesample/css/prism.css',
             #'css/course-content.css',
             #'css/polipedia.css',
             #'css/polipedia.custom.css',
@@ -2674,77 +2680,78 @@ VIDEO_TRANSCRIPTS_SETTINGS = dict(
 # Note that this is used as the set of choices to the `code` field of the
 # `LanguageProficiency` model.
 ALL_LANGUAGES = [
-    [u"pl", u"polski"],
-    [u"en", u"angielski"]
+    [u"pl", _(u"Polish")],
+    [u"en", _(u"English")]
 ]
 
 ALL_COURSE_DIFFICULTY = [
-    [u"easy", u"początkujący"],
-    [u"medium", u"średnio zaawansowany"],
-    [u"hard", u"zaawansowany"]
+    [u"easy", _(u"introductory")],
+    [u"medium", _(u"intermediate")],
+    [u"hard", _(u"advanced")]
 ]
 
-ALL_COURSE_ORGANIZER = sorted([
-    [u"1", u"Fundacja Młodej Nauki"],
-    [u"2", u"Politechnika Warszawska"],
-    [u"3", u"Politechnika Łódzka"],
-    [u"4", u"OPI PIB"],
-    [u"5", u"Uczelnia Techniczno-Handlowa im. Heleny Chodkowskiej"],
-    [u"6", u"Akademia Finansów i Biznesu Vistula"],
-    [u"7", u"Akademia Ignatianum w Krakowie"],
-    [u"8", u"Akademia Sztuki Wojennej"],
-    [u"9", u"Akademia WSB"],
-    [u"10", u"Państwowa Wyższa Szkoła Zawodowa im. Witelona w Legnicy"],
-    [u"11", u"Politechnika Białostocka"],
-    [u"12", u"Politechnika Częstochowska"],
-    [u"13", u"Politechnika Gdańska"],
-    [u"14", u"Politechnika Krakowska"],
-    [u"15", u"Powszechna Wyższa Szkoła Humanistyczna 'Pomerania'"],
-    [u"16", u"Szkoła Wyższa im. Pawła Włodkowica w Płocku"],
-    [u"17", u"Uniwersytet Ekonomiczny w Poznaniu"],
-    [u"18", u"Uniwersytet Humanistyczno- Przyrodniczy im. Jana Długosza"],
-    [u"19", u"Uniwersytet im. Adama Mickiewicza w Poznaniu"],
-    [u"20", u"Uniwersytet Jagielloński"],
-    [u"21", u"Uniwersytet Kardynała Stefana Wyszyńskiego w Warszawie"],
-    [u"22", u"Uniwersytet Mikołaja Kopernika w Toruniu"],
-    [u"23", u"Uniwersytet Pedagogiczny im. KEN w Krakowie"],
-    [u"24", u"Uniwersytet Szczeciński"],
-    [u"25", u"Uniwersytet Śląski w Katowicach"],
-    [u"26", u"Uniwersytet Technologiczno- Przyrodniczy w Bydgoszczy"],
-    [u"27", u"Uniwersytet Technologiczno-Humanistyczny im. Kazimierza Pułaskiego"],
-    [u"28", u"Wojskowa Akademia Techniczna im. Jarosława Dąbrowskiego"],
-    [u"29", u"Wyższa Szkoła Biznesu i Przedsiębiorczości w Ostrowcu Św."],
-    [u"30", u"Wyższa Szkoła Ekonomii, Prawa i Nauk Medycznych"],
-    [u"31", u"Wyższa Szkoła Gospodarki w Bydgoszczy"],
-    [u"32", u"Wyższa Szkoła Handlowa we Wrocławiu"],
-    [u"33", u"Wyższa Szkoła Humanistyczna TWP"],
-    [u"34", u"Wyższa Szkoła Humanitas"],
-    [u"35", u"Wyższa Szkoła Informatyki i Zarządzania w Rzeszowie"],
-    [u"36", u"Wyższa Szkoła Integracji Europejskiej"],
-    [u"37", u"WSPiA Rzeszowska Szkoła Wyższa"],
-    [u"38", u"Wyższa Szkoła Techniczna w Katowicach"],
-    [u"39", u"Zachodniopomorska Szkoła Biznesu w Szczecinie"],
-    [u"40", u"Zachodniopomorski Uniwersytet Technologiczny w Szczecinie"],
-    [u"41", u"Centrum Nauki Kopernik"],
-    [u"42", u"Akademia Pomorska w Słupsku"],
-    [u"43", u"Collegium Humanum w Warszawie"]
-], key=lambda x:x[1], reverse=False)
+ALL_COURSE_ORGANIZER = [
+    [u"1", _(u"Young Science Foundation")],
+    [u"2", _(u"Warsaw University of Technology")],
+    [u"3", _(u"Lodz University of Technology")],
+    [u"4", _(u"National Information Processing Institute")],
+    [u"5", _(u"Helena Chodkowska University of Technology and Economics")],
+    [u"6", _(u"Vistula University ")],
+    [u"7", _(u"Akademia Ignatianum w Krakowie")],
+    [u"8", _(u"War Studies University")],
+    [u"9", _(u"WSB University")],
+    [u"10", _(u"The Witelon State University of Applied Sciences in Legnica")],
+    [u"11", _(u"Bialystok University of Technology")],
+    [u"12", _(u"Czestochowa University of Technology")],
+    [u"13", _(u"Gdansk University of Technology")],
+    [u"14", _(u"Cracow University of Technology")],
+    [u"15", _(u"Public Univerity of Humanities ‘POMERANIA’")],
+    [u"16", _(u"Paweł Włodkowic University College in Płock")],
+    [u"17", _(u"Poznań University of Economics and Business ")],
+    [u"18", _(u"Jan Długosz University in Częstochowa ")],
+    [u"19", _(u"Adam Mickiewicz University in Poznań")],
+    [u"20", _(u"Jagiellonian University in Kraków")],
+    [u"21", _(u"Cardinal Wyszyński University in Warsaw")],
+    [u"22", _(u"Nicolaus Copernicus University in Toruń")],
+    [u"23", _(u"Pedagogical University of Krakow")],
+    [u"24", _(u"Uniwersytet Szczeciński")],
+    [u"25", _(u"University of Silesia in Katowice")],
+    [u"26", _(u"UTP University of Science and Technology")],
+    [u"27", _(u"Kazimierz Pułaski University of Technology and Humanities in Radom")],
+    [u"28", _(u"Military University of Technology")],
+    [u"29", _(u"College of Business and Entrepreneurship in Ostrowiec Świętokrzyski")],
+    [u"30", _(u"Lipinski University")],
+    [u"31", _(u"University of Economy in Bydgoszcz")],
+    [u"32", _(u"University of Business in Wrocław")],
+    [u"33", _(u"TWP Higher School of Humanities")],
+    [u"34", _(u"Humanitas University in Sosnowiec")],
+    [u"35", _(u"The University of Information Technology and Management in Rzeszów")],
+    [u"36", _(u"Academy of European Integration in Szczecin")],
+    [u"37", _(u"WSPiA University of Rzeszow")],
+    [u"38", _(u"Katowice School of Technology")],
+    [u"39", _(u"West Pomeranian Business School")],
+    [u"40", _(u"West Pomeranian University of Technology in Szczecin")],
+    [u"41", _(u"Copernicus Science Centre")],
+    [u"42", _(u"Pomeranian University in Słupsk")],
+    [u"43", _(u"Collegium Humanum – Warsaw Management University")],
+    [u"44", _(u"Parlament Studentów Rzeczypospolitej Polskiej")]
+]
 
 ALL_COURSE_ORGANIZER_DICT = dict(ALL_COURSE_ORGANIZER)
 
-ALL_COURSE_CATEGORY = sorted([
-    [u"language", u"Języki obce"],
-    [u"human", u"Nauki humanistyczne"],
-    [u"computer", u"Nauki komputerowe"],
-    [u"technical", u"Nauki techniczne"],
-    ["agricultural", u"Nauki rolnicze"],
-    ["social", u"Nauki społeczne"],
-    ["natural", u"Nauki ścisłe i przyrodnicze"],
-    ["art", u"Sztuka"],
-    ["management", u"Zarządzanie i ekonomia"],
-    ["medicine", u"Zdrowie i nauki medyczne"],
-    [u"business", u"Nauki biznesowe"],
-], key=lambda x:x[1], reverse=False)
+ALL_COURSE_CATEGORY = [
+    [u"language", _(u"Language learning")],
+    [u"human", _(u"Humanities")],
+    [u"computer", _(u"IT & Computer Science")],
+    [u"technical", _(u"Technology")],
+    ["agricultural", _(u"Agriculture")],
+    ["social", _(u"Social Sciences")],
+    ["natural", _(u"Science")],
+    ["art", _(u"Art")],
+    ["management", _(u"Economics & Management")],
+    ["medicine", _(u"Health sciences")],
+    [u"business", _(u"Business")],
+]
 
 ALL_COURSE_CATEGORY_DICT = dict(ALL_COURSE_CATEGORY)
 
@@ -2752,37 +2759,38 @@ ALL_COURSE_TIMETABLE = [[week, ungettext_lazy(u"%d week" % week, u"%d weeks" % w
                         for week in range(1, 50)]
 
 # property name should be untranslated phrases. Translation will be done on the fly using djangojs.po // KH
-LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': "Jezyk"}
+LANGUAGE_MAP = {'terms': {lang: display for lang, display in ALL_LANGUAGES}, 'name': _("Language")}
 COURSE_DISCOVERY_MEANINGS = {
     'modes': {
-        'name': 'Typ kursu',
+        'name': _('Course type'),
         'terms': {
-            'honor': 'Honor',
-            'verified': 'Zweryfikowany',
-            'audit': 'audit',
+            'honor': _('Honor'),
+            'verified': _('Verified'),
+            'audit': _('audit'),
         },
     },
     'course_category': {
-        'name': u'Kategoria',
+        'name': _(u'Category'),
         'terms': {b[0]: b[1] for b in ALL_COURSE_CATEGORY},
     },
     'organizer': {
-        'name': u'Organizator',
+        'name': _(u'Institution'),
         'terms': {b[0]: b[1] for b in ALL_COURSE_ORGANIZER},
     },
     'difficulty': {
-        'name': u'Poziom trudności',
+        'name': _(u'Level'),
         'terms': {b[0]: b[1] for b in ALL_COURSE_DIFFICULTY},
     },
     'availability': {
-        'name': 'Dostępność',
+        'name': _(u'Availability'),
         'terms': {
-            'Upcoming': 'W przygotowaniu',
-            'Starting Soon': 'Nadchodzący',
-            'Current': 'W trakcie',
-            'Archived': 'Zakończony',
+            'Upcoming': _('Upcoming'),
+            'Starting Soon': _('Starting soon'),
+            'Current': _('In progress'),
+            'Archived': _('Archived'),
         }
-    }
+    },
+    'language': LANGUAGE_MAP,
 }
 
 ### Apps only installed in some instances
