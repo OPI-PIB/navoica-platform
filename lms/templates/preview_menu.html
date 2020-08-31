@@ -51,7 +51,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
            <div class="action-preview">
              <form action="#" class="action-preview-form" method="post">
                 <div class="action-preview-actions">
-                  <label>Zobacz ten kurs jako</label>
+                  <label>${_("View this course as")}</label>
 		    <select id="action-preview-select" class="custom-select action-preview-select">
 			<option value="staff" ${staff_selected}>${_("Staff")}</option>
 			<option value="student" ${student_selected}>${_("Learner")}</option>
@@ -88,7 +88,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
 
   <aside>
     <header>
-	    <h2>Organizator</h2>
+      <h2>${_("Course Organizer")}</h2>
 	  </header>
 	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
            <div class="organizer-logo">
@@ -133,7 +133,8 @@ show_preview_menu = course and staff_access and supports_preview_menu
      </article>
   <aside>
     <header>
-	  <h2>Organizator</h2>
+	  <!-- <h2>Organizator</h2> -->
+    <h2>${_("Course Organizer")}</h2>
 	</header>
 	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
            <div class="organizer-logo">
