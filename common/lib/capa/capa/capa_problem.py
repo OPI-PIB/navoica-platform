@@ -69,11 +69,17 @@ html_problem_semantics = [
     "openendedrubric",
 ]
 
+def escape(t):
+    """HTML-escape the text in `t`."""
+    return (t
+        .replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        .replace("'", "&#39;").replace('"', "&quot;")
+        )
+
 log = logging.getLogger(__name__)
 
 #-----------------------------------------------------------------------------
 # main class for this module
-
 
 class LoncapaSystem(object):
     """
@@ -469,6 +475,20 @@ class LoncapaProblem(object):
         answer_map = dict()
         for response in self.responders.keys():
             results = self.responder_answers[response]
+
+            # escape dict value, without <b>*</b> html tag
+            for (k,v) in results.iteritems():
+                if isinstance(v, basestring):
+                    bold_tag_regex = r"(<b>.*?</b>)"
+                    if re.search(bold_tag_regex, v):
+                        escaped_strings = []
+                        for splited_string in re.split(bold_tag_regex, v):
+                            if not re.search(bold_tag_regex, splited_string):
+                                splited_string = escape(splited_string)
+                            escaped_strings.append(splited_string)
+                        results[k] = ''.join(escaped_strings)
+                    else:
+                        results[k] = escape(v)
             answer_map.update(results)
 
         # include solutions from <solution>...</solution> stanzas
