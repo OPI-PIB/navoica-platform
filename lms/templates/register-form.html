@@ -85,13 +85,13 @@ from student.models import UserProfile
             <label for="name">${_('Full Name')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="name" type="text" name="name" value="${name}" placeholder="${_('example: Jane Doe')}" required aria-required="true" aria-describedby="name-tip"/>
             <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
-            <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
+            <span class="tip tip-input text-darkgrey" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
         <div class="field text form-group form-group-required js-username-field" id="field-username">
             <label for="username">${_('Public Username')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="username" type="text" name="username" value="${username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
             <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
-            <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
+            <span class="tip tip-input text-darkgrey" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
         % if third_party_auth.is_enabled() and running_pipeline:
@@ -108,7 +108,7 @@ from student.models import UserProfile
             <label for="password">${_('Password')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" required aria-required="true" aria-describedby="password-tip"/>
             <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
-            <span class="tip tip-input" id="password-tip">
+            <span class="tip tip-input text-darkgrey" id="password-tip">
 				<%
 min_length = 8
 %>
@@ -148,7 +148,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
             <label for="username">${_('Public Display Name')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="js-register-field" id="username" type="text" name="username" value="${extauth_username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
             <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
-            <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
+            <span class="tip tip-input text-darkgrey" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
         % if ask_for_fullname:
@@ -157,7 +157,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
             <label for="name">${_('Full Name')} <sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
             <input class="js-register-field" id="name" type="text" name="name" value="" placeholder="$_('example: Jane Doe')}" aria-describedby="name-tip"/>
             <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
-            <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
+            <span class="tip tip-input text-darkgrey" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
 
         % endif
@@ -167,7 +167,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
     % endif
 </div>
 
-<div class="group group-form group-form-secondary group-form-personalinformation">
+<div class="group group-form group-form-secondary group-form-personalinformation my-5">
     <h2 class="sr">${_("Additional Personal Information")}</h2>
 
     <div class="list-input">
@@ -260,7 +260,7 @@ ${_("Enter a password with at most {num} characters.").format(num=min_length)}
 % endif
 </div>
 
-<div class="group group-form group-form-accountacknowledgements">
+<div class="group group-form group-form-accountacknowledgements my-5">
     <h2 class="sr">${_("Account Acknowledgements")}</h2>
 
  
