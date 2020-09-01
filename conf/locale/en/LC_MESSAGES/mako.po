@@ -89,6 +89,7 @@ msgstr ""
 
 #: cms/templates/course_outline.html:124 lms/templates/seq_module.html:127
 #: lms/templates/ccx/schedule.html:86
+#: lms/templates/courseware/courseware.html:181
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html:43
 msgid "Section"
 msgstr ""
@@ -1965,6 +1966,18 @@ msgstr ""
 msgid "Important!"
 msgstr ""
 
+#: lms/templates/seq_module.html:20 lms/templates/seq_module.html:23
+msgid "Subsection Content"
+msgstr ""
+
+#: lms/templates/seq_module.html:27
+msgid "Sequence"
+msgstr ""
+
+#: lms/templates/seq_module.html:76
+msgid "Unit Content"
+msgstr ""
+
 #: lms/templates/seq_module.html:80 lms/templates/seq_module.html:130
 msgid "Previous"
 msgstr ""
@@ -3359,10 +3372,12 @@ msgid "Schedule a Unit"
 msgstr ""
 
 #: lms/templates/ccx/schedule.html:90
+#: lms/templates/courseware/courseware.html:188
 msgid "Subsection"
 msgstr ""
 
 #: lms/templates/ccx/schedule.html:94
+#: lms/templates/courseware/courseware.html:192
 msgid "Unit"
 msgstr ""
 
@@ -3864,7 +3879,7 @@ msgid "{course_number} Courseware"
 msgstr ""
 
 #: lms/templates/courseware/courseware-chromeless.html:80
-#: lms/templates/courseware/courseware.html:255
+#: lms/templates/courseware/courseware.html:258
 msgid "Course Utilities"
 msgstr ""
 
@@ -3885,14 +3900,14 @@ msgstr ""
 msgid "No content has been added to this course"
 msgstr ""
 
-#: lms/templates/courseware/courseware.html:203
+#: lms/templates/courseware/courseware.html:206
 #, python-format
 msgid ""
 "To access course materials, you must score {required_score}% or higher on "
 "this                     exam. Your current score is {current_score}%."
 msgstr ""
 
-#: lms/templates/courseware/courseware.html:221
+#: lms/templates/courseware/courseware.html:224
 msgid "Your score is {current_score}%. You have passed the entrance exam."
 msgstr ""
 
