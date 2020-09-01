@@ -105,7 +105,7 @@ HeaderFactory();
 
                 <div class="collapse navbar-collapse desktop-menu" id="navbarResponsive">
 
-                    <div class="navbar-nav ml-auto">
+                    <div class="navbar-nav ml-auto" role="menu">
                         % if user.is_authenticated():
                         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
                         % else:
