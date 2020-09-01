@@ -708,6 +708,10 @@ margin-top: 4rem !important;
   .container {
     max-width: 960px;
   }
+  #sorting-form select {
+    width: 250px;
+    max-width: 250px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -12763,7 +12767,7 @@ fieldset {
   left: 0;
   position: absolute; 
   top: 100%;
-  width: 9px; 
+  width: 9px;
 }
 
 .center {
@@ -14060,6 +14064,20 @@ footer a,
 }
 
   /** ERROR FIELD **/
+.text-darkblack {
+  color: #000000;
+}
+
+.text-24 {
+  font-size: 1.5rem;
+}
+
+.text-18 {
+  font-size: 1.125rem;
+}
+
+
+/** ERROR FIELD **/
 input.form-control.form-control.error-field, .error-field, .error-field ~ .custom-control-label::before {
   border: 2px solid #a11326;
 }
@@ -14070,5 +14088,9 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
 
 .f-14 {
   font-size: 0.875rem;
+}
+
+.message.message-status.course-status-certavailable.is-shown {
+    width: 100%;
 }
 

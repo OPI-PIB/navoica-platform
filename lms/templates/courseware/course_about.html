@@ -15,7 +15,7 @@ from six import string_types
 %>
 
 <%inherit file="../main.html" />
-<%block name="headextra">
+<%block name="og_meta">
   ## OG (Open Graph) title and description added below to give social media info to display
   ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
   <meta property="og:title" content="${course.display_name_with_default_escaped}" />
@@ -203,9 +203,8 @@ from six import string_types
         </article>
 	<aside>
 	  <header id="courses-list-header">
-                <h2 id="h2">
-                    Wizytówka kursu
-                </h2>
+                <!-- <h2 id="h2">Wizytówka kursu</h2> -->
+                <h2 id="h2">${_("Course Summary Page")}</h2>
             </header>
 	    % if get_course_about_section(request, course, "video"):
 		<div class="embed-responsive embed-responsive-16by9">
@@ -230,11 +229,11 @@ from six import string_types
 
                 <article id="results">
       <header id="courses-list-header">
-         <h2 id="h2">Opis Kursu</h2>
+         <h2 id="h2">${_("Course Description")}</h2>
       </header>
       ${get_course_about_section(request, course, "overview")}
       % if get_course_about_section(request, course, "course_staff_extended"):
-        <h2>Lista prowadzących</h2>
+        <h2>${_(" Instructor list ")}</h2>
         ${get_course_about_section(request, course, "course_staff_extended")}
       % endif
       </article>
@@ -242,16 +241,16 @@ from six import string_types
 <aside class="sidebar">
              <header id="courses-list-header">
          <h2 id="h2">
-                <span class="d-none d-md-block">Organizator</span>
+                <span class="d-none d-md-block">${_("Organizer")}</span>
               </h2>
        </header>
        <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
                         <div class="organizer-logo">
                             <p class="mt-2 mx-auto text-center">
                                 % if course.organizer:
-        <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-        <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80">
-      % endif
+                                  <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
+                                  <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80">
+                                % endif
                             </p>
                         </div>
                     </div>
@@ -260,10 +259,10 @@ from six import string_types
 <br/>
             <header id="courses-list-header">
                 <h2 id="h2">
-                    <span class="d-none d-md-block">Informacje podstawowe</span>
+                    <span class="d-none d-md-block">${_("Basic Information")}</span>
                 </h2>
             </header>
-              <a href="#basic-data-facets" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none mb-2">Informacje podstawowe</a>
+              <a href="#basic-data-facets" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none mb-2">${_("Basic Information")}</a>
               <div id="basic-data-facets" class="collapse">
             <ul class="course-details list-group list-group-flush">
 
@@ -277,7 +276,7 @@ from six import string_types
             if (a[0]==course.difficulty):
               course_difficulty = a[1]
           %>
-                  <h6>Poziom trudności kursu:</h6>
+                  <h6>${_("Course Description")}:</h6>
                   <div>${course_difficulty}</div>
                 </div>
               </li>
@@ -290,7 +289,7 @@ from six import string_types
                 </div>
                 <div class="course-details-content">
          <% course_c = settings.ALL_COURSE_CATEGORY_DICT[course.course_category] %>
-                  <h6>Kategoria tematyczna:</h6>
+                  <h6>${_("Course Category")}:</h6>
       <div>${course_c}</div>
                 </div>
               </li>
@@ -303,7 +302,7 @@ from six import string_types
                   <i class="icon far fa-clock" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
-                  <h6>Czas trwania kursu:</h6>
+                  <h6>${_("Course Timetable")}:</h6>
       <div>${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}</div>
                 </div>
               </li>
@@ -327,7 +326,7 @@ from six import string_types
                   <%
                      course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                   %>
-                  <div class="important-dates-item-text start-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></div>
+                  <div class="important-dates-item-text start-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></div>
               % endif
 
                 </div>
@@ -352,7 +351,7 @@ from six import string_types
                     <%
                         course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                     %>
-                    <div class="important-dates-item-text final-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></div>
+                    <div class="important-dates-item-text final-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></div>
                   % endif
                 </div>
               </li>
@@ -376,7 +375,7 @@ from six import string_types
                     <%
                         course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                     %>
-                    <div class="important-dates-item-text final-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></div>
+                    <div class="important-dates-item-text final-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></div>
                   % endif
                 </div>
               </li>
@@ -399,7 +398,7 @@ from six import string_types
                     <%
                         course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                     %>
-                    <span class="important-dates-item-text final-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></span>
+                    <span class="important-dates-item-text final-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></span>
                   % endif
                 </div>
               </li>
@@ -416,7 +415,7 @@ from six import string_types
             course_effort = txt
             txt = float(txt.replace(':', '.'))
                    %>
-                  <h6>Tygodniowy wysiłek godzinowy:</h6>
+                  <h6>${_("Hours of effort per week")}:</h6>
       <div>${ungettext("{effort} hour", "{effort} hours", txt).format(effort=course_effort) | h}</div>
                 </div>
               </li>
@@ -429,7 +428,7 @@ from six import string_types
                 </div>
                 <div class="course-details-content">
                   <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-                  <h6>Organizator:</h5>
+                  <h6>${_("Organizer")}:</h5>
       <div>${course_organize}</div>
                 </div>
               </li>
@@ -466,7 +465,8 @@ from six import string_types
         </main>
       </div>
     % else:
-		<strong style="color:red">Uzupełnij wszystkie pola w zakładce Szczegóły i harmonogram!</strong>
+		<!-- <strong style="color:red">Uzupełnij wszystkie pola w zakładce Szczegóły i harmonogram!</strong> -->
+    <strong style="color:red; margin: 10%">${_("Fill all fields in Schedule & Details Settings!")}</strong>
     % endif
 
 

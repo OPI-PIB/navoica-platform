@@ -107,6 +107,8 @@ def _update_certificate_context(context, course, user_certificate, platform_name
         suffix=context.get('certificate_verify_url_suffix')
     )
 
+    context['certificate_absolute_url'] = get_certificate_url(course_id=course.id, uuid=user_certificate.verify_uuid)
+
     # Translators:  The format of the date includes the full name of the month
     date = display_date_for_certificate(course, user_certificate)
     context['certificate_date_issued'] = _('{month} {day}, {year}').format(

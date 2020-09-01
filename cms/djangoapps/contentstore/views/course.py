@@ -1066,8 +1066,8 @@ def settings_handler(request, course_key_string):
                 'language_options': settings.ALL_LANGUAGES,
 
                 'difficulty_options': settings.ALL_COURSE_DIFFICULTY,
-                'organizer_options': settings.ALL_COURSE_ORGANIZER,
-                'course_category_options': settings.ALL_COURSE_CATEGORY,
+                'organizer_options': sorted(settings.ALL_COURSE_ORGANIZER, key=lambda x:x[1], reverse=False),
+                'course_category_options': sorted(settings.ALL_COURSE_CATEGORY, key=lambda x:x[1], reverse=False),
                 'timetable_options': settings.ALL_COURSE_TIMETABLE,
 
                 'credit_eligibility_enabled': credit_eligibility_enabled,

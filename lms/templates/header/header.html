@@ -47,7 +47,7 @@ HeaderFactory();
         <div class="navbar navbar-expand-md justify-content-between">
 
             <a class="navbar-brand mr-3" href="/">
-                <img src="/static/images/logo-light-bg.svg" alt="${_('Navoica logo')}">
+                <img src="${settings.HEADER_NAVOICA_LOGO_IMAGE}" alt="${_('Navoica logo')}">
             </a>
 
             % if course and user.is_authenticated():
@@ -105,7 +105,7 @@ HeaderFactory();
 
                 <div class="collapse navbar-collapse desktop-menu" id="navbarResponsive">
 
-                    <div class="navbar-nav ml-auto">
+                    <div class="navbar-nav ml-auto" role="menu">
                         % if user.is_authenticated():
                         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
                         % else:

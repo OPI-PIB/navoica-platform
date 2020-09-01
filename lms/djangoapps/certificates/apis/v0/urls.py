@@ -14,6 +14,13 @@ CERTIFICATES_URLS = [
         ),
         views.CertificatesDetailView.as_view(), name='detail'
     ),
+    url(
+        r'^courses/{course_id}/$'.format(
+            course_id=settings.COURSE_ID_PATTERN
+        ),
+        views.CertificatesListView.as_view(), name='list'
+    ),
+
 ]
 
 urlpatterns = [
