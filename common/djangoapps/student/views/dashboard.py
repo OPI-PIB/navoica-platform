@@ -58,8 +58,6 @@ from xmodule.modulestore.django import modulestore
 log = logging.getLogger("edx.student")
 
 time = pytz.utc.localize(datetime.datetime.now())
-prev_courses_count = 0
-courses_count = 0
 
 def get_org_black_and_whitelist_for_site():
     """
@@ -103,7 +101,7 @@ def _get_recently_enrolled_courses(course_enrollments):
         enrollment for enrollment in course_enrollments
         # If the enrollment has no created date, we are explicitly excluding the course
         # from the list of recent enrollments.
-        if enrollment.is_active and enrollment.created < time_delta
+        if enrollment.is_active and enrollment.created > time_delta
     ]
 
 
@@ -169,9 +167,6 @@ def _create_recent_enrollment_message(course_enrollments, course_modes):  # pyli
     if recently_enrolled_courses:
         enrollments_count = len(recently_enrolled_courses)
         course_name_separator = ', '
-
-        prev_courses_count = enrollments_count
-        courses_count = enrollments_count + 1
 
         # If length of enrolled course 2, join names with 'and'
         if enrollments_count == 2:
@@ -607,7 +602,6 @@ def student_dashboard(request):
         for course_id, modes in iteritems(unexpired_course_modes)
     }
 
-    courses_count = len(course_enrollments)
     # Check to see if the student has recently enrolled in a course.
     # If so, display a notification message confirming the enrollment.
     enrollment_message = _create_recent_enrollment_message(
@@ -801,9 +795,6 @@ def student_dashboard(request):
         'enterprise_message': enterprise_message,
         'consent_required_courses': consent_required_courses,
         'enterprise_customer_name': enterprise_customer_name,
-        'prev_courses_count': prev_courses_count,
-        'courses_count': courses_count,
-        'time': time,
         'enrollment_message': enrollment_message,
         'redirect_message': redirect_message,
         'account_activation_messages': account_activation_messages,
