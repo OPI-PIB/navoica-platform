@@ -190,6 +190,7 @@ def _create_recent_enrollment_message(course_enrollments, course_modes):  # pyli
                 'current_time': pytz.utc.localize(datetime.datetime.now()),
                 'recently_enrolled_courses': recently_enrolled_courses,
                 'course_date_start': recently_enrolled_courses[0].course_overview.dashboard_start_display,
+                'started': recently_enrolled_courses[0].course_overview.has_started(),
                 'enrollments_count': enrollments_count,
                 'allow_donations': allow_donations,
                 'platform_name': platform_name,
