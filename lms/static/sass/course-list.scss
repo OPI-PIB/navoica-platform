@@ -69,6 +69,10 @@ $select-border: #ced4da;
   font-weight: normal;
   line-height: 1.2rem;
   text-transform: none;
+  &:focus {
+    outline: 2px black solid;
+    outline-offset: 2px;
+  }  
 }
 
 button.select-styled {
@@ -10419,8 +10423,10 @@ aside {
     }
 
     &.selected {
-      background-color: #f8f9fa;
-      border-color: #dee2e6;
+      border-left: solid 3px #e41d37;
+      border-top-color: #dee2e6;
+      border-right-color: #dee2e6;
+      border-bottom-color: #dee2e6;
       color: #E41D37;
 
       .count-number {
@@ -11376,24 +11382,6 @@ input.form-control.form-control {
 
 #result {
   flex: 1 1;
-}
-
-#clear-all-filters {
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-    color: #E41D37;
-    text-decoration: none;
-    background-color: transparent;
-    border: none;
-    font-size: 0.875rem;
-    text-transform: none;
-
-}
-
-#clear-all-filters:hover {
-  color: #96232a;
-  text-decoration: underline;
 }
 
 button.ist-group-item.list-group-item-action.d-flex.facet-option.discovery-button.selected {
@@ -14103,3 +14091,13 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
     width: 100%;
 }
 
+#filters .btn-outline-primary:focus {
+  &:focus{;
+    outline: 2px black solid;
+    outline-offset: 1px;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #cf1930;
+  }
+}    
