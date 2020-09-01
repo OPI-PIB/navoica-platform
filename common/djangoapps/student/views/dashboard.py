@@ -57,7 +57,7 @@ from xmodule.modulestore.django import modulestore
 
 log = logging.getLogger("edx.student")
 
-time = pytz.utc.localize(datetime.datetime.now())
+
 
 def get_org_black_and_whitelist_for_site():
     """
@@ -187,7 +187,7 @@ def _create_recent_enrollment_message(course_enrollments, course_modes):  # pyli
             'enrollment/course_enrollment_message.html',
             {
                 'course_names': recently_enrolled_courses[0].course_overview.display_name,
-                'current_time': time,
+                'current_time': pytz.utc.localize(datetime.datetime.now()),
                 'recently_enrolled_courses': recently_enrolled_courses,
                 'course_date_start': recently_enrolled_courses[0].course_overview.dashboard_start_display,
                 'enrollments_count': enrollments_count,
@@ -850,7 +850,7 @@ def student_dashboard(request):
 
     context.update({
         'resume_button_urls': resume_button_urls,
-        'time': pytz.utc.localize(datetime.datetime.now()),
+        'current_time': pytz.utc.localize(datetime.datetime.now()),
     })
 
     response = render_to_response('dashboard.html', context)
