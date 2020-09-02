@@ -1,6 +1,7 @@
 
 <%namespace name='static' file='../static_content.html'/>
 <%!
+import mimetypes
 from django.utils.translation import ugettext as _
 from django.utils.translation import ungettext
 from django.utils import translation
@@ -21,13 +22,14 @@ from six import string_types
   ## OG (Open Graph) title and description added below to give social media info to display
   ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
   <meta property="og:title" content="${course.display_name_with_default_escaped}" />
-  <meta property="og:description" content="${get_course_about_section(request, course, 'short_description')}" />
-
+  <meta property="og:description" content="${get_course_about_section(request, course, 'short_description').strip()}" />
+  <meta property="og:type" content="website" />
   % if get_course_about_section(request, course, "video"):
       <meta property="og:video" content="${course_video_url}" />
 	%else:
       <meta property="og:image" content="${settings.LMS_ROOT_URL + course_image_urls['large']}" />
-
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="628" />
 	% endif
 </%block>
 

@@ -1162,7 +1162,8 @@ CREDIT_NOTIFICATION_CACHE_TIMEOUT = 5 * 60 * 60
 
 ######################### Navoica Branding ###################################
 
-HEADER_NAVOICA_LOGO_IMAGE = "/static/images/logo-light-bg.svg"
+HEADER_NAVOICA_LOGO_IMAGE = "images/logo-light-bg.svg"
+OG_NAVOICA_LOGO_IMAGE = "images/logo-light-bg.png"
 
 ################################# Middleware ###################################
 

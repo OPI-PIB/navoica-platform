@@ -13,6 +13,7 @@
 <%namespace name='static' file='static_content.html'/>
 <% online_help_token = self.online_help_token() if hasattr(self, 'online_help_token') else None %>
 <%!
+import mimetypes
 from branding import api as branding_api
 from django.core.urlresolvers import reverse
 from django.utils.http import urlquote_plus
@@ -131,8 +132,12 @@ from pipeline_mako import render_require_js_path_overrides
      ## OG (Open Graph) title and description added below to give social media info to display
     ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
     <meta property="og:title" content="${_('Navoica.pl - Polish MOOC platform')}" />
-    <meta property="og:description" content="${_('Navoica.pl - Polish MOOC platform')}" />
-    <meta property="og:image" content="${settings.HEADER_NAVOICA_LOGO_IMAGE}" />
+    <meta property="og:description" content="${_('Polish MOOC platform offering free of charge online courses for every registered user. ')}" />
+    <meta property="og:image" content="${static.url(settings.OG_NAVOICA_LOGO_IMAGE)}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:type" content="website" />
+
   </%block>
   <%block name="head_extra"/>
 
