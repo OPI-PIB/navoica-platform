@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-26 13:18+0000\n"
-"PO-Revision-Date: 2020-08-26 13:18:32.377463\n"
+"POT-Creation-Date: 2020-09-02 06:39+0000\n"
+"PO-Revision-Date: 2020-09-02 06:39:51.588385\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -97,6 +97,11 @@ msgstr ""
 #: cms/templates/course_outline.html:155 cms/templates/settings.html:191
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html:35
 msgid "Course Start Date"
+msgstr ""
+
+#: cms/templates/error.html:13
+#: lms/templates/static_templates/server-error.html:9
+msgid "Internal Server Error"
 msgstr ""
 
 #: cms/templates/group_configurations.html:89
@@ -772,7 +777,7 @@ msgstr ""
 msgid "Search Your Courses"
 msgstr ""
 
-#: lms/templates/dashboard.html:510 lms/templates/index.html:21
+#: lms/templates/dashboard.html:510 lms/templates/index.html:22
 #: lms/templates/api_admin/catalogs/search.html:23
 #: lms/templates/courseware/courseware.html:146
 #: lms/templates/edxnotes/edxnotes.html:39 lms/templates/header/header.html:74
@@ -1226,53 +1231,57 @@ msgstr ""
 msgid "Note: only instructors may annotate."
 msgstr ""
 
-#: lms/templates/index.html:15
-msgid "ACCESSIBLE KNOWLEDGE"
+#: lms/templates/index.html:11
+msgid "Polish MOOC platform"
 msgstr ""
 
 #: lms/templates/index.html:16
+msgid "ACCESSIBLE KNOWLEDGE"
+msgstr ""
+
+#: lms/templates/index.html:17
 msgid "Free online courses offered by Polish universities and institutions"
 msgstr ""
 
-#: lms/templates/index.html:20 lms/templates/header/header.html:72
+#: lms/templates/index.html:21 lms/templates/header/header.html:72
 msgid "What do you want to learn?"
 msgstr ""
 
-#: lms/templates/index.html:36
+#: lms/templates/index.html:37
 msgid "About Navoica"
 msgstr ""
 
-#: lms/templates/index.html:45
+#: lms/templates/index.html:46
 msgid "Wide range of online courses "
 msgstr ""
 
-#: lms/templates/index.html:46
+#: lms/templates/index.html:47
 msgid ""
 "A broad spectrum of courses with varying levels of expertise. Everyone can "
 "find an interesting course for themselves."
 msgstr ""
 
-#: lms/templates/index.html:56
+#: lms/templates/index.html:57
 msgid "Publicly available learning platform"
 msgstr ""
 
-#: lms/templates/index.html:57
+#: lms/templates/index.html:58
 msgid ""
 "We reach anyone who wants to learn \\u2013 regardless of their age or place "
 "of residence."
 msgstr ""
 
-#: lms/templates/index.html:67
+#: lms/templates/index.html:68
 msgid "Network of universities and institutions "
 msgstr ""
 
-#: lms/templates/index.html:68
+#: lms/templates/index.html:69
 msgid ""
 "New online learning ecosystem brings together: universities, research "
 "institutes, businesses and NGOs. Find out more about Navoica"
 msgstr ""
 
-#: lms/templates/index.html:75
+#: lms/templates/index.html:76
 msgid "Find out more about Navoica"
 msgstr ""
 
@@ -1361,8 +1370,11 @@ msgstr ""
 msgid "mooc_help@opi.org.pl."
 msgstr ""
 
-#: lms/templates/login.html:11
-msgid "Log into your {platform_name} Account"
+#: lms/templates/login.html:11 lms/templates/register-sidebar.html:22
+#: lms/templates/header/navbar-not-authenticated.html:70
+#: lms/templates/header/navbar-not-authenticated.html:73
+#: themes/stanford-style/lms/templates/register-sidebar.html:18
+msgid "Log in"
 msgstr ""
 
 #: lms/templates/login.html:137 lms/templates/login.html:274
@@ -1486,15 +1498,14 @@ msgstr ""
 msgid "Press to Launch"
 msgstr ""
 
-#: lms/templates/main.html:44 lms/templates/main.html:133
-#: lms/templates/main.html:134
-msgid "Navoica.pl - Polish MOOC platform"
-msgstr ""
-
 #: lms/templates/main.html:48
 msgid ""
 "Polish MOOC platform offering free of charge online courses for every "
 "registered user. "
+msgstr ""
+
+#: lms/templates/main.html:133 lms/templates/main.html:134
+msgid "Navoica.pl - Polish MOOC platform"
 msgstr ""
 
 #: lms/templates/manage_user_standing.html:8
@@ -1838,7 +1849,8 @@ msgstr ""
 msgid "I agree to the {link_start}Honor Code{link_end}"
 msgstr ""
 
-#: lms/templates/register-form.html:306 lms/templates/register.html:115
+#: lms/templates/register-form.html:306 lms/templates/register.html:16
+#: lms/templates/register.html:115
 #: lms/templates/header/navbar-not-authenticated.html:59
 #: lms/templates/header/navbar-not-authenticated.html:62
 #: lms/templates/header/navbar-not-authenticated.html:77
@@ -1890,13 +1902,6 @@ msgstr ""
 msgid "Already registered?"
 msgstr ""
 
-#: lms/templates/register-sidebar.html:22
-#: lms/templates/header/navbar-not-authenticated.html:70
-#: lms/templates/header/navbar-not-authenticated.html:73
-#: themes/stanford-style/lms/templates/register-sidebar.html:18
-msgid "Log in"
-msgstr ""
-
 #: lms/templates/register-sidebar.html:36
 msgid "Welcome to {platform_name}"
 msgstr ""
@@ -1930,10 +1935,6 @@ msgid ""
 "You can find the answers to most of your questions in our list of FAQs. "
 "After you enroll in a course, you can also find answers in the course "
 "discussions."
-msgstr ""
-
-#: lms/templates/register.html:16
-msgid "Register for {platform_name}"
 msgstr ""
 
 #: lms/templates/register.html:43
@@ -5749,6 +5750,7 @@ msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html:66
 #: lms/templates/header/navbar-not-authenticated.html:36
+#: lms/templates/static_templates/contact.html:5
 #: themes/red-theme/lms/templates/footer.html:46
 #: themes/stanford-style/lms/templates/footer.html:17
 #: themes/stanford-style/lms/templates/static_templates/about.html:43
@@ -8234,39 +8236,39 @@ msgstr ""
 msgid "This page left intentionally blank. Feel free to add your own content."
 msgstr ""
 
-#: lms/templates/static_templates/contact.html:15
+#: lms/templates/static_templates/contact.html:17
 msgid "Contact us"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html:22
+#: lms/templates/static_templates/contact.html:24
 msgid ""
 "Online learning platform owned by the Polish Ministry of Science and Higher "
 "Education"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html:27
+#: lms/templates/static_templates/contact.html:29
 msgid "Address"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html:30
+#: lms/templates/static_templates/contact.html:32
 msgid "National Information Processing Institute"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html:37
+#: lms/templates/static_templates/contact.html:39
 msgid "General questions"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html:38
+#: lms/templates/static_templates/contact.html:40
 msgid ""
 "Questions, comments and contact with universities and institutions regarding"
 " publishing courses on the platform"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html:40
+#: lms/templates/static_templates/contact.html:42
 msgid "Help center"
 msgstr ""
 
-#: lms/templates/static_templates/contact.html:41
+#: lms/templates/static_templates/contact.html:43
 msgid "Issues, errors, technical comments"
 msgstr ""
 
@@ -8305,35 +8307,35 @@ msgstr ""
 msgid "Jobs"
 msgstr ""
 
-#: lms/templates/static_templates/legend.html:8
-#: lms/templates/static_templates/legend.html:13
-#: lms/templates/static_templates/legend.html:16
+#: lms/templates/static_templates/legend.html:5
+#: lms/templates/static_templates/legend.html:10
+#: lms/templates/static_templates/legend.html:17
 msgid "Legend_title"
 msgstr ""
 
-#: lms/templates/static_templates/legend.html:9
-#: lms/templates/static_templates/legend.html:20
+#: lms/templates/static_templates/legend.html:11
+#: lms/templates/static_templates/legend.html:21
 msgid "Legend_quotation"
 msgstr ""
 
-#: lms/templates/static_templates/legend.html:22
+#: lms/templates/static_templates/legend.html:23
 msgid "Legend_author"
 msgstr ""
 
-#: lms/templates/static_templates/legend.html:24
-#: lms/templates/static_templates/legend.html:29
+#: lms/templates/static_templates/legend.html:25
+#: lms/templates/static_templates/legend.html:30
 msgid "Navoica avatar"
 msgstr ""
 
-#: lms/templates/static_templates/legend.html:26
+#: lms/templates/static_templates/legend.html:27
 msgid "Legend_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/legend.html:27
+#: lms/templates/static_templates/legend.html:28
 msgid "Legend_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/legend.html:28
+#: lms/templates/static_templates/legend.html:29
 msgid "Legend_paragraph_3"
 msgstr ""
 
@@ -8360,11 +8362,11 @@ msgid ""
 "Please email us at {tech_support_email} to report any problems or downtime."
 msgstr ""
 
-#: lms/templates/static_templates/server-error.html:16
+#: lms/templates/static_templates/server-error.html:18
 msgid "There has been a 500 error on the {platform_name} servers"
 msgstr ""
 
-#: lms/templates/static_templates/server-error.html:27
+#: lms/templates/static_templates/server-error.html:29
 msgid ""
 "Please wait a few seconds and then reload the page. If the problem persists,"
 " please email us at {tech_support_email}."
