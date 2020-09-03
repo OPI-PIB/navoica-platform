@@ -71,7 +71,7 @@
           display: flex;
           flex: 1;
           flex-flow: row nowrap;
-          font-size: 14px;
+          font-size: 0.875rem;
           font-weight: 700;
           justify-content: space-between;
           padding: 8px 8px;
@@ -103,7 +103,7 @@
             align-self: flex-start;
             display: flex;
             font-family: "Font Awesome 5 Free";
-            font-size: 12px;
+            font-size: 0.75rem;
             font-weight: 600;
             flex: 0 0 24px;
             justify-content: flex-end;
@@ -114,7 +114,7 @@
       }
 
       .card-body {
-        font-size: 14px;
+        font-size: 0.875rem;
         padding: 16px 8px;
 
         > .accordion {
@@ -123,7 +123,7 @@
 
         // answer to faq-question
         p {
-          font-size: 14px;
+          font-size: 0.875rem;
           margin: 8px;
 
           &:last-child {
@@ -182,7 +182,7 @@
           }
 
           .btn-cat {
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 700;
           }
 
@@ -231,7 +231,7 @@
           }
 
           p {
-            font-size: 14px;
+            font-size: 0.875rem;
           }
         }
 
@@ -254,12 +254,12 @@
         margin: 0 0 16px;
 
         .card-header .btn {
-          font-size: 16px;
+          font-size: 1rem;
           padding: 12px 8px;
         }
 
         .card-body {
-          font-size: 16px;
+          font-size: 1rem;
           padding: 12px 8px;
 
           > .accordion {
@@ -267,7 +267,7 @@
           }
 
           p {
-            font-size: 16px !important;
+            font-size: 1rem !important;
 
             &:last-child {
               margin-bottom: 10px;
@@ -315,7 +315,7 @@
         }
 
         &.toc .card-body {
-          font-size: 16px;
+          font-size: 1rem;
           padding: 12px 8px 12px 28px;
 
           > .accordion {
@@ -323,12 +323,12 @@
           }
 
           p {
-            font-size: 16px;
+            font-size: 1rem;
           }
         }
 
         &.faq .card-header .btn-cat {
-          font-size: 18px;
+          font-size: 1.125rem;
         }
       }
     }
@@ -371,9 +371,9 @@
           border-radius: 50%;
           padding: 4px;
           display: flex;
-          flex: 0 0 36px;
-          font-size: 18px;
-          height: 36px;
+          flex: 0 0 2.25rem;
+          font-size: 1.125rem;
+          height: 2.25rem;
           justify-content: center;
           margin-right: 8px;
         }
@@ -386,7 +386,7 @@
           justify-content: flex-start;
 
           h2 {
-            font-size: 16px;
+            font-size: 1rem;
             line-height: 2; // margin 0
           }
 
@@ -421,7 +421,7 @@
         padding: 12px 8px;
 
         div h2 {
-          font-size: 18px;
+          font-size: 1.125rem;
         }
       }
     }
