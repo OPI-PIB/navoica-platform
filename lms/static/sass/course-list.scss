@@ -10425,9 +10425,6 @@ aside {
 
     &.selected {
       border-left: solid 3px #e41d37;
-      border-top-color: #dee2e6;
-      border-right-color: #dee2e6;
-      border-top-color: #dee2e6;
       color: #E41D37;
 
       .count-number {
@@ -14161,3 +14158,27 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
     background-color: #cf1930;
   }
 }    
+
+.filter-mobile {
+  background-color: $select-color;
+  &:focus{
+    position:relative;
+    z-index: 2;
+  }
+}
+
+.clear-filters {
+  background-color: $select-color;
+}
+
+#header {
+  .form-control {
+    &:hover, &:focus {
+      box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+  }
+    &:focus{
+      outline: 2px solid #626C7A;
+      outline-offset: 3px;
+    }
+  }  
+}
