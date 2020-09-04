@@ -290,7 +290,7 @@ FEATURES = {
     'ENABLE_EDXNOTES': False,
 
     # Milestones application flag
-    'MILESTONES_APP': False,
+    'MILESTONES_APP': True,
 
     # Organizations application flag
     'ORGANIZATIONS_APP': False,

@@ -250,7 +250,7 @@ FEATURES = {
     'ENABLE_CONTENT_LIBRARIES': True,
 
     # Milestones application flag
-    'MILESTONES_APP': False,
+    'MILESTONES_APP': True,
 
     # Prerequisite courses feature flag
     'ENABLE_PREREQUISITE_COURSES': False,
