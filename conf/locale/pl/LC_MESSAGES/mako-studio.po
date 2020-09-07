@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-24 09:50+0000\n"
+"POT-Creation-Date: 2020-09-02 06:39+0000\n"
 "PO-Revision-Date: 2020-08-19 11:05+0000\n"
-"Last-Translator: krystianlygas <krystian.lygas@gmail.com>, 2020\n"
+"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -890,10 +890,6 @@ msgstr ""
 #: cms/templates/howitworks.html:195 cms/templates/howitworks.html:208
 msgid "close modal"
 msgstr "zamknij okno"
-
-#: cms/templates/error.html:13
-msgid "Internal Server Error"
-msgstr "Wewnętrzny błąd serwera"
 
 #: cms/templates/error.html:25
 msgid "The Page You Requested Page Cannot be Found"
@@ -2638,10 +2634,6 @@ msgstr "Ustawienia szczegółów i harmonogramu"
 msgid "Schedule & Details"
 msgstr "Szczegóły i harmonogram"
 
-#: cms/templates/settings.html:63
-msgid "Basic Information"
-msgstr "Podstawowe informacje"
-
 #: cms/templates/settings.html:64
 msgid "The nuts and bolts of your course"
 msgstr "Podstawowe informacje dotyczące twojego kursu"
@@ -2651,10 +2643,6 @@ msgstr "Podstawowe informacje dotyczące twojego kursu"
 #: cms/templates/settings.html:158 cms/templates/settings.html:169
 msgid "This field is disabled: this information cannot be changed."
 msgstr "To pole jest wyłączone: informacji nie można zmienić."
-
-#: cms/templates/settings.html:89
-msgid "Course Summary Page"
-msgstr "Strona podsumowująca kursu"
 
 #: cms/templates/settings.html:89
 msgid "(for student enrollment and access)"
@@ -2692,10 +2680,10 @@ msgid ""
 "announced. To provide content for the page and preview it, follow the "
 "instructions provided by your Program Manager."
 msgstr ""
-"Strona podsumowująca twojego kursu nie będzie widoczna publicznie do czasu "
-"opublikowania oficjalnej zapowiedzi kursu. Aby przygotować taką stronę i "
-"sprawdzić ją na podglądzie, postępuj zgodnie z instrukcjami otrzymanymi od "
-"swojego Opiekuna Projektu."
+"Etykieta kursu nie będzie widoczna publicznie do czasu opublikowania "
+"oficjalnej zapowiedzi kursu. Aby przygotować taką stronę i sprawdzić ją na "
+"podglądzie, postępuj zgodnie z instrukcjami otrzymanymi od swojego Opiekuna "
+"Projektu."
 
 #: cms/templates/settings.html:135
 msgid "Course Credit Requirements"
@@ -2835,14 +2823,6 @@ msgstr ""
 msgid "Course Difficulty"
 msgstr "Poziom trudności"
 
-#: cms/templates/settings.html:325
-msgid "Course Category"
-msgstr "Kategoria kursu"
-
-#: cms/templates/settings.html:335
-msgid "Course Timetable"
-msgstr "Czas trwania kursu"
-
 #: cms/templates/settings.html:351
 msgid "Introducing Your Course"
 msgstr "Opis twojego kursu"
@@ -2880,10 +2860,6 @@ msgstr "Czas trwania kursu"
 msgid "Displayed on the course details page. Limit to 50 characters."
 msgstr "Wyświetlany na stronie podsumowującej kursu. Limit 50 znaków."
 
-#: cms/templates/settings.html:373
-msgid "Course Description"
-msgstr "Opis kursu"
-
 #: cms/templates/settings.html:375
 msgid "Displayed on the course details page. Limit to 1000 characters."
 msgstr "Wyświetlany na stronie podsumowującej kursu. Limit 1000 znaków."
@@ -2920,7 +2896,7 @@ msgstr ""
 #: cms/templates/settings.html:403 cms/templates/settings.html:407
 #: cms/templates/settings.html:419
 msgid "Course Card Image"
-msgstr "Zdjęcie / grafika podsumowania kursu"
+msgstr "Zdjęcie / grafika - etykieta kursu "
 
 #: cms/templates/settings.html:411 cms/templates/settings.html:445
 #: cms/templates/settings.html:478
@@ -2955,7 +2931,7 @@ msgstr ""
 
 #: cms/templates/settings.html:431
 msgid "Upload Course Card Image"
-msgstr "Prześlij zdjęcie / grafikę do podsumowania kursu"
+msgstr "Prześlij zdjęcie / grafikę do etykiety kursu"
 
 #: cms/templates/settings.html:437 cms/templates/settings.html:441
 #: cms/templates/settings.html:453
