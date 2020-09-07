@@ -50,3 +50,7 @@ WIKI_ENABLED = False
 ENABLE_ES_INDEX_PREFIX = True
 ES_INDEX_PREFIX = "lh__"
 
+######################NAVOICA_SANDBOX###########################################
+
+NAVOICA_SANDBOX = True
+NAVOICA_SANDBOX_URL = 'http://navoica.devstack.sandbox:8111/sandbox'
