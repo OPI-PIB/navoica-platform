@@ -135,7 +135,7 @@ import calendar
           </header>
             <h1><strong>${_("Welcome!")}</strong><br> ${_("Register below to create your {platform_name} account").format(platform_name=platform_name)}</h1>
 
-            <section role="main">
+            <section role="main" id="main">
                 <form role="form" id="register-form" method="post" data-remote="true" action="/create_account" novalidate>
                     <%
                     # allow for theming override on the registration form
