@@ -10,7 +10,7 @@
             <div class="col-lg-3 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h4 class="card-title">
+                        <h3 class="card-title">
                              <a class="bookmarks-results-list-item"
                                 href="<%- bookmark.blockUrl() %>"
                                 aria-labelledby="bookmark-link-<%- index %>"
@@ -24,7 +24,7 @@
                                     .join(''))
                                 %>
                             </a>   
-                        </h4>     
+                        </h3>
                         <div class="card-meta list-item-left-section">
                             <ul id="bookmark-link-<%- index %>" class=" meta list-item-breadcrumbtrail">
                                 <%=

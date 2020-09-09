@@ -7,7 +7,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <%namespace name='static' file='../static_content.html'/>
 
 <main id="main" aria-label="Content" tabindex="-1">
-    <section class="outside-app">
+    <section class="outside-app" id="skip-main">
         <h1>
             <%block name="pageheader">
                 % if page_header:

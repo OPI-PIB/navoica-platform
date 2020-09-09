@@ -70,6 +70,22 @@ $(document).ready(function() {
     }
 
     createMobileMenu();
+
+    const scrollToMainContent = function() {
+        let $skipLink = $('.js-skip-link-scroll');
+        $skipLink.on('keydown', function(e) {
+            let key = e.keyCode || e.which;
+            if (key === 13) {
+                $('html, body').animate({scrollTop: $('#skip-main').offset().top -100 }, 'slow');
+            }
+        });
+
+        $skipLink.on('click', function(e) {
+           $('html, body').animate({scrollTop: $('#skip-main').offset().top -100 }, 'slow');
+        });
+    }
+
+    scrollToMainContent();
 });
 
 
