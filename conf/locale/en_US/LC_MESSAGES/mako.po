@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-24 09:50+0000\n"
+"POT-Creation-Date: 2020-09-02 06:39+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
 "Last-Translator: krystianlygas <krystian.lygas@gmail.com>, 2020\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
@@ -93,6 +93,7 @@ msgstr "Dismiss"
 
 #: cms/templates/course_outline.html:124 lms/templates/seq_module.html:127
 #: lms/templates/ccx/schedule.html:86
+#: lms/templates/courseware/courseware.html:181
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html:43
 msgid "Section"
 msgstr "Section"
@@ -101,6 +102,11 @@ msgstr "Section"
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html:35
 msgid "Course Start Date"
 msgstr "Course Start Date"
+
+#: cms/templates/error.html:13
+#: lms/templates/static_templates/server-error.html:9
+msgid "Internal Server Error"
+msgstr ""
 
 #: cms/templates/group_configurations.html:89
 #: cms/templates/group_configurations.html:99
@@ -254,6 +260,17 @@ msgstr "example: JaneDoe"
 msgid "Confirm Password"
 msgstr "Confirm Password"
 
+#: cms/templates/settings.html:63
+#: lms/templates/courseware/course_about.html:262
+#: lms/templates/courseware/course_about.html:265
+msgid "Basic Information"
+msgstr ""
+
+#: cms/templates/settings.html:89
+#: lms/templates/courseware/course_about.html:207
+msgid "Course Summary Page"
+msgstr ""
+
 #: cms/templates/settings.html:205
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html:39
 msgid "Course End Date"
@@ -264,12 +281,28 @@ msgstr "Course End Date"
 msgid "Course Organizer"
 msgstr "Course Organizer"
 
+#: cms/templates/settings.html:325
+#: lms/templates/courseware/course_about.html:292
+msgid "Course Category"
+msgstr ""
+
+#: cms/templates/settings.html:335
+#: lms/templates/courseware/course_about.html:305
+msgid "Course Timetable"
+msgstr ""
+
 #: cms/templates/settings.html:339
-#: lms/templates/courseware/course_about.html:307
+#: lms/templates/courseware/course_about.html:306
 msgid "{week} week"
 msgid_plural "{week} weeks"
 msgstr[0] "{week} week"
 msgstr[1] "{week} weeks"
+
+#: cms/templates/settings.html:373
+#: lms/templates/courseware/course_about.html:232
+#: lms/templates/courseware/course_about.html:279
+msgid "Course Description"
+msgstr ""
 
 #: cms/templates/settings.html:545
 #: lms/templates/courseware/program_marketing.html:344
@@ -756,7 +789,7 @@ msgstr "Course-loading errors"
 msgid "Search Your Courses"
 msgstr "Search Your Courses"
 
-#: lms/templates/dashboard.html:510 lms/templates/index.html:21
+#: lms/templates/dashboard.html:510 lms/templates/index.html:22
 #: lms/templates/api_admin/catalogs/search.html:23
 #: lms/templates/courseware/courseware.html:146
 #: lms/templates/edxnotes/edxnotes.html:39 lms/templates/header/header.html:74
@@ -1244,27 +1277,31 @@ msgstr ""
 msgid "Note: only instructors may annotate."
 msgstr "Note: only instructors may annotate."
 
-#: lms/templates/index.html:15
+#: lms/templates/index.html:11
+msgid "Polish MOOC platform"
+msgstr ""
+
+#: lms/templates/index.html:16
 msgid "ACCESSIBLE KNOWLEDGE"
 msgstr "ACCESSIBLE KNOWLEDGE"
 
-#: lms/templates/index.html:16
+#: lms/templates/index.html:17
 msgid "Free online courses offered by Polish universities and institutions"
 msgstr "Free online courses offered by Polish universities and institutions"
 
-#: lms/templates/index.html:20 lms/templates/header/header.html:72
+#: lms/templates/index.html:21 lms/templates/header/header.html:72
 msgid "What do you want to learn?"
 msgstr "What do you want to learn?"
 
-#: lms/templates/index.html:36
+#: lms/templates/index.html:37
 msgid "About Navoica"
 msgstr "About Navoica"
 
-#: lms/templates/index.html:45
+#: lms/templates/index.html:46
 msgid "Wide range of online courses "
 msgstr "Wide range of online courses "
 
-#: lms/templates/index.html:46
+#: lms/templates/index.html:47
 msgid ""
 "A broad spectrum of courses with varying levels of expertise. Everyone can "
 "find an interesting course for themselves."
@@ -1272,11 +1309,11 @@ msgstr ""
 "A broad spectrum of courses with varying levels of expertise. Everyone can "
 "find an interesting course for themselves."
 
-#: lms/templates/index.html:56
+#: lms/templates/index.html:57
 msgid "Publicly available learning platform"
 msgstr "Publicly available learning platform"
 
-#: lms/templates/index.html:57
+#: lms/templates/index.html:58
 msgid ""
 "We reach anyone who wants to learn \\u2013 regardless of their age or place "
 "of residence."
@@ -1284,11 +1321,11 @@ msgstr ""
 "We reach anyone who wants to learn – regardless of their age or place of "
 "residence."
 
-#: lms/templates/index.html:67
+#: lms/templates/index.html:68
 msgid "Network of universities and institutions "
 msgstr "Network of universities and institutions "
 
-#: lms/templates/index.html:68
+#: lms/templates/index.html:69
 msgid ""
 "New online learning ecosystem brings together: universities, research "
 "institutes, businesses and NGOs. Find out more about Navoica"
@@ -1296,7 +1333,7 @@ msgstr ""
 "New online learning ecosystem brings together: universities, research "
 "institutes, businesses and NGOs. "
 
-#: lms/templates/index.html:75
+#: lms/templates/index.html:76
 msgid "Find out more about Navoica"
 msgstr "Find out more about Navoica"
 
@@ -1395,9 +1432,12 @@ msgstr " Please contact our Help Center at "
 msgid "mooc_help@opi.org.pl."
 msgstr "mooc_help@opi.org.pl."
 
-#: lms/templates/login.html:11
-msgid "Log into your {platform_name} Account"
-msgstr "Log into your {platform_name} Account"
+#: lms/templates/login.html:11 lms/templates/register-sidebar.html:22
+#: lms/templates/header/navbar-not-authenticated.html:70
+#: lms/templates/header/navbar-not-authenticated.html:73
+#: themes/stanford-style/lms/templates/register-sidebar.html:18
+msgid "Log in"
+msgstr "Log in"
 
 #: lms/templates/login.html:137 lms/templates/login.html:274
 #: lms/templates/header/navbar-not-authenticated.html:65
@@ -1524,11 +1564,6 @@ msgstr "Feedback on your work from the grader:"
 msgid "Press to Launch"
 msgstr "Press to Launch"
 
-#: lms/templates/main.html:44 lms/templates/main.html:133
-#: lms/templates/main.html:134
-msgid "Navoica.pl - Polish MOOC platform"
-msgstr "Navoica.pl - Polish MOOC platform"
-
 #: lms/templates/main.html:48
 msgid ""
 "Polish MOOC platform offering free of charge online courses for every "
@@ -1536,6 +1571,10 @@ msgid ""
 msgstr ""
 "Polish MOOC platform offering free online courses for every registered user."
 " "
+
+#: lms/templates/main.html:133 lms/templates/main.html:134
+msgid "Navoica.pl - Polish MOOC platform"
+msgstr "Navoica.pl - Polish MOOC platform"
 
 #: lms/templates/manage_user_standing.html:8
 msgid "Manage student accounts"
@@ -1893,7 +1932,8 @@ msgstr "I agree to the {link_start}Terms of Service{link_end}"
 msgid "I agree to the {link_start}Honor Code{link_end}"
 msgstr "I agree to the {link_start}Honor Code{link_end}"
 
-#: lms/templates/register-form.html:306 lms/templates/register.html:115
+#: lms/templates/register-form.html:306 lms/templates/register.html:16
+#: lms/templates/register.html:115
 #: lms/templates/header/navbar-not-authenticated.html:59
 #: lms/templates/header/navbar-not-authenticated.html:62
 #: lms/templates/header/navbar-not-authenticated.html:77
@@ -1947,13 +1987,6 @@ msgstr "Update My Account"
 msgid "Already registered?"
 msgstr "Already registered?"
 
-#: lms/templates/register-sidebar.html:22
-#: lms/templates/header/navbar-not-authenticated.html:70
-#: lms/templates/header/navbar-not-authenticated.html:73
-#: themes/stanford-style/lms/templates/register-sidebar.html:18
-msgid "Log in"
-msgstr "Log in"
-
 #: lms/templates/register-sidebar.html:36
 msgid "Welcome to {platform_name}"
 msgstr "Welcome to {platform_name}"
@@ -1999,10 +2032,6 @@ msgstr ""
 "After you enroll in a course, you can also find answers in the course "
 "discussions."
 
-#: lms/templates/register.html:16
-msgid "Register for {platform_name}"
-msgstr "Register for {platform_name}"
-
 #: lms/templates/register.html:43
 msgid "Passwords Don't Match"
 msgstr "Passwords Don't Match"
@@ -2034,6 +2063,18 @@ msgstr ""
 #: lms/templates/seq_module.html:9
 msgid "Important!"
 msgstr "Important!"
+
+#: lms/templates/seq_module.html:20 lms/templates/seq_module.html:23
+msgid "Subsection Content"
+msgstr ""
+
+#: lms/templates/seq_module.html:27
+msgid "Sequence"
+msgstr ""
+
+#: lms/templates/seq_module.html:76
+msgid "Unit Content"
+msgstr ""
 
 #: lms/templates/seq_module.html:80 lms/templates/seq_module.html:130
 msgid "Previous"
@@ -3725,10 +3766,12 @@ msgid "Schedule a Unit"
 msgstr "Schedule a Unit"
 
 #: lms/templates/ccx/schedule.html:90
+#: lms/templates/courseware/courseware.html:188
 msgid "Subsection"
 msgstr "Subsection"
 
 #: lms/templates/ccx/schedule.html:94
+#: lms/templates/courseware/courseware.html:192
 msgid "Unit"
 msgstr "Unit"
 
@@ -4156,27 +4199,44 @@ msgstr "Add {course_name} to Cart <span>({price} USD)</span>"
 msgid "Enroll in {course_name}"
 msgstr "Enroll in {course_name}"
 
-#: lms/templates/courseware/course_about.html:322
+#: lms/templates/courseware/course_about.html:236
+msgid " Instructor list "
+msgstr ""
+
+#: lms/templates/courseware/course_about.html:244
+#: lms/templates/courseware/course_about.html:431
+msgid "Organizer"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html:321
 msgid "Classes Start"
 msgstr "Classes Start"
 
-#: lms/templates/courseware/course_about.html:348
+#: lms/templates/courseware/course_about.html:347
 msgid "Classes End"
 msgstr "Classes End"
 
-#: lms/templates/courseware/course_about.html:372
+#: lms/templates/courseware/course_about.html:371
 msgid "Enrollment start"
 msgstr "Enrollment start"
 
-#: lms/templates/courseware/course_about.html:395
+#: lms/templates/courseware/course_about.html:394
 msgid "Enrollment end"
 msgstr "Enrollment end"
 
-#: lms/templates/courseware/course_about.html:420
+#: lms/templates/courseware/course_about.html:418
+msgid "Hours of effort per week"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html:419
 msgid "{effort} hour"
 msgid_plural "{effort} hours"
 msgstr[0] "{effort} hour"
 msgstr[1] "{effort} hours"
+
+#: lms/templates/courseware/course_about.html:469
+msgid "Fill all fields in Schedule & Details Settings!"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html:487
 msgid "Additional Resources"
@@ -4256,7 +4316,7 @@ msgid "{course_number} Courseware"
 msgstr "{course_number} Courseware"
 
 #: lms/templates/courseware/courseware-chromeless.html:80
-#: lms/templates/courseware/courseware.html:255
+#: lms/templates/courseware/courseware.html:258
 msgid "Course Utilities"
 msgstr "Course Utilities"
 
@@ -4277,7 +4337,7 @@ msgstr "Course Search"
 msgid "No content has been added to this course"
 msgstr "No content has been added to this course"
 
-#: lms/templates/courseware/courseware.html:203
+#: lms/templates/courseware/courseware.html:206
 #, python-format
 msgid ""
 "To access course materials, you must score {required_score}% or higher on "
@@ -4286,7 +4346,7 @@ msgstr ""
 "To access course materials, you must score {required_score}% or higher on "
 "this                     exam. Your current score is {current_score}%."
 
-#: lms/templates/courseware/courseware.html:221
+#: lms/templates/courseware/courseware.html:224
 msgid "Your score is {current_score}%. You have passed the entrance exam."
 msgstr "Your score is {current_score}%. You have passed the entrance exam."
 
@@ -6364,6 +6424,7 @@ msgstr "Shopping Cart"
 
 #: lms/templates/header/navbar-authenticated.html:66
 #: lms/templates/header/navbar-not-authenticated.html:36
+#: lms/templates/static_templates/contact.html:5
 #: themes/red-theme/lms/templates/footer.html:46
 #: themes/stanford-style/lms/templates/footer.html:17
 #: themes/stanford-style/lms/templates/static_templates/about.html:43
@@ -9092,11 +9153,11 @@ msgid "This page left intentionally blank. Feel free to add your own content."
 msgstr ""
 "This page left intentionally blank. Feel free to add your own content."
 
-#: lms/templates/static_templates/contact.html:15
+#: lms/templates/static_templates/contact.html:17
 msgid "Contact us"
 msgstr "Contact us"
 
-#: lms/templates/static_templates/contact.html:22
+#: lms/templates/static_templates/contact.html:24
 msgid ""
 "Online learning platform owned by the Polish Ministry of Science and Higher "
 "Education"
@@ -9104,19 +9165,19 @@ msgstr ""
 "Online learning platform owned by the Polish Ministry of Science and Higher "
 "Education"
 
-#: lms/templates/static_templates/contact.html:27
+#: lms/templates/static_templates/contact.html:29
 msgid "Address"
 msgstr "Address"
 
-#: lms/templates/static_templates/contact.html:30
+#: lms/templates/static_templates/contact.html:32
 msgid "National Information Processing Institute"
 msgstr "National Information Processing Institute"
 
-#: lms/templates/static_templates/contact.html:37
+#: lms/templates/static_templates/contact.html:39
 msgid "General questions"
 msgstr "General questions"
 
-#: lms/templates/static_templates/contact.html:38
+#: lms/templates/static_templates/contact.html:40
 msgid ""
 "Questions, comments and contact with universities and institutions regarding"
 " publishing courses on the platform"
@@ -9124,11 +9185,11 @@ msgstr ""
 "Questions, comments and contact with universities and institutions regarding"
 " publishing courses on the platform"
 
-#: lms/templates/static_templates/contact.html:40
+#: lms/templates/static_templates/contact.html:42
 msgid "Help center"
 msgstr "Help center"
 
-#: lms/templates/static_templates/contact.html:41
+#: lms/templates/static_templates/contact.html:43
 msgid "Issues, errors, technical comments"
 msgstr "Issues, errors, technical comments"
 
@@ -9171,14 +9232,14 @@ msgstr "Honor Code"
 msgid "Jobs"
 msgstr "Jobs"
 
-#: lms/templates/static_templates/legend.html:8
-#: lms/templates/static_templates/legend.html:13
-#: lms/templates/static_templates/legend.html:16
+#: lms/templates/static_templates/legend.html:5
+#: lms/templates/static_templates/legend.html:10
+#: lms/templates/static_templates/legend.html:17
 msgid "Legend_title"
 msgstr "The legend of Nawojka"
 
-#: lms/templates/static_templates/legend.html:9
-#: lms/templates/static_templates/legend.html:20
+#: lms/templates/static_templates/legend.html:11
+#: lms/templates/static_templates/legend.html:21
 msgid "Legend_quotation"
 msgstr ""
 "In the fall of 1414, fifteen-year-old Jakub, the son of Dominik, enrolled in"
@@ -9186,18 +9247,18 @@ msgstr ""
 "revealed after three years. Nawojka – because that was the inhabitant of "
 "Great Poland’s real name – was the first Polish female student."
 
-#: lms/templates/static_templates/legend.html:22
+#: lms/templates/static_templates/legend.html:23
 msgid "Legend_author"
 msgstr ""
 "Leszek Mazdan and Mieczysław Czuma “Pępek świata nazywa się Kraków” (“The "
 "hub of the universe is called Kraków”)"
 
-#: lms/templates/static_templates/legend.html:24
-#: lms/templates/static_templates/legend.html:29
+#: lms/templates/static_templates/legend.html:25
+#: lms/templates/static_templates/legend.html:30
 msgid "Navoica avatar"
 msgstr "Navoica avatar"
 
-#: lms/templates/static_templates/legend.html:26
+#: lms/templates/static_templates/legend.html:27
 msgid "Legend_paragraph_1"
 msgstr ""
 "Legend has it, Nawojka received basic education at home where she learned "
@@ -9212,7 +9273,7 @@ msgstr ""
 "and an explanation that she had committed this sin \"out of love for "
 "learning\". To atone for her actions, she was sent to a monastery."
 
-#: lms/templates/static_templates/legend.html:27
+#: lms/templates/static_templates/legend.html:28
 msgid "Legend_paragraph_2"
 msgstr ""
 "According to a different version of the legend, Nawojka came from Płomiany "
@@ -9224,7 +9285,7 @@ msgstr ""
 "not particularly fond of books, but because Nawojka was an extremely "
 "talented student, Jakub did not mind his sister to impersonate him."
 
-#: lms/templates/static_templates/legend.html:28
+#: lms/templates/static_templates/legend.html:29
 msgid "Legend_paragraph_3"
 msgstr ""
 "The newspaper “Słowo Polskie” called her “the first Polish suffragette” in "
@@ -9257,11 +9318,11 @@ msgstr ""
 "Our staff is currently working to get the site back up as soon as possible. "
 "Please email us at {tech_support_email} to report any problems or downtime."
 
-#: lms/templates/static_templates/server-error.html:16
+#: lms/templates/static_templates/server-error.html:18
 msgid "There has been a 500 error on the {platform_name} servers"
 msgstr "There has been a 500 error on the {platform_name} servers"
 
-#: lms/templates/static_templates/server-error.html:27
+#: lms/templates/static_templates/server-error.html:29
 msgid ""
 "Please wait a few seconds and then reload the page. If the problem persists,"
 " please email us at {tech_support_email}."

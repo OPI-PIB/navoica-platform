@@ -3,6 +3,8 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 
+<%block name="pagetitle">${_("Legend_title")}</%block>
+
 <%block name="og_meta">
   ## OG (Open Graph) title and description added below to give social media info to display
   ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
@@ -14,7 +16,6 @@
   <meta property="og:image:height" content="628" />
 </%block>
 
-<%block name="title"><title>${_('Legend_title')}</title></%block>
 
 <section class="container legend">
     <h2>${_('Legend_title')}</h2>

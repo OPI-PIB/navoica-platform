@@ -4,8 +4,10 @@
 import mimetypes
 from django.utils.translation import ugettext as _
 from django.utils.translation import ungettext
+from django.utils import translation
 from django.utils.translation import pgettext
 from django.core.urlresolvers import reverse
+from django.contrib.staticfiles import finders
 from courseware.courses import get_course_about_section, get_course_overview_with_access
 from django.conf import settings
 from six import text_type
@@ -113,7 +115,7 @@ from six import string_types
   })(this)
   </script>
 
-  <script type="module" src="${static.url('js/course_info.js')}"></script>
+  <script src="${static.url('js/course_info.js')}"></script>
 </%block>
 
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
@@ -205,7 +207,6 @@ from six import string_types
         </article>
 	<aside>
 	  <header id="courses-list-header">
-                <!-- <h2 id="h2">Wizytówka kursu</h2> -->
                 <h2 id="h2">${_("Course Summary Page")}</h2>
             </header>
 	    % if get_course_about_section(request, course, "video"):
@@ -250,14 +251,20 @@ from six import string_types
                         <div class="organizer-logo">
                             <p class="mt-2 mx-auto text-center">
                                 % if course.organizer:
-                                  <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-                                  <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80">
+                                    <%
+                                        def get_translation_in(language, s):
+                                            with translation.override(language):
+                                                return translation.gettext(s)
+
+                                        course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]
+                                        if not finders.find('images/org/{}.png'.format(course_organize)):
+                                            course_organize = get_translation_in('pl', settings.ALL_COURSE_ORGANIZER_DICT[course.organizer])
+                                        %>
+                                <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80" class="d-block mt-4">
                                 % endif
                             </p>
                         </div>
                     </div>
-
-
 <br/>
             <header id="courses-list-header">
                 <h2 id="h2">
@@ -467,7 +474,6 @@ from six import string_types
         </main>
       </div>
     % else:
-		<!-- <strong style="color:red">Uzupełnij wszystkie pola w zakładce Szczegóły i harmonogram!</strong> -->
     <strong style="color:red; margin: 10%">${_("Fill all fields in Schedule & Details Settings!")}</strong>
     % endif
 

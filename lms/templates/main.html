@@ -42,7 +42,7 @@ from pipeline_mako import render_require_js_path_overrides
 <%def name="pagetitle()" />
   <%block name="title">
       <title>
-       ${_('Navoica.pl - Polish MOOC platform')}
+       ${static.get_page_title_breadcrumbs(self.pagetitle())}
       </title>
   </%block>
   <%block name="metadescription">
