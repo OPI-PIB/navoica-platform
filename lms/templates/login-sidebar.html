@@ -5,11 +5,11 @@ from django.core.urlresolvers import reverse
 
 
 <aside id="filter" class="sidebar">
-  <header class="header-login">
-    <h2 id="h2">
+  <div class="header-login">
+    <h2 class="custom-h2">
       <span class="d-none d-md-block">${_("Helpful Information")}</span>
     </h2>
-  </header>
+  </div>
 
       % if settings.FEATURES.get('AUTH_USE_OPENID'):
     <!-- <div class="cta cta-login-options-openid">
