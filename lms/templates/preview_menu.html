@@ -4,7 +4,9 @@
 <%namespace name='static' file='/static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
+from django.utils import translation
 from django.conf import settings
+from django.contrib.staticfiles import finders
 from openedx.core.djangolib.js_utils import dump_js_escaped_json
 from openedx.core.djangolib.markup import HTML, Text
 from xmodule.partitions.partitions_service import get_all_partitions_for_course
@@ -21,6 +23,17 @@ show_preview_menu = course and staff_access and supports_preview_menu
 
 % if request.path.endswith("course/"):
 
+<%
+  if course.organizer:
+      def get_translation_in(language, s):
+          with translation.override(language):
+              return translation.gettext(s)
+
+      course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]
+      if not finders.find('images/org/{}.png'.format(course_organize)):
+          course_organize = get_translation_in('pl', settings.ALL_COURSE_ORGANIZER_DICT[course.organizer])
+%>
+
 % if show_preview_menu:
     <%
     def selected(is_selected):
@@ -33,7 +46,6 @@ show_preview_menu = course and staff_access and supports_preview_menu
     specific_student_selected = selected(not staff_selected and masquerade.user_name)
     student_selected = selected(not staff_selected and not specific_student_selected and not masquerade_group_id)
     %>
-
 
 
 <header id="header-course" class="bg-light">
@@ -93,10 +105,9 @@ show_preview_menu = course and staff_access and supports_preview_menu
 	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
            <div class="organizer-logo">
               <p class="mt-2 mx-auto text-center">
-                % if course.organizer:
-		  <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-		    <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80" class="d-block mt-4">
-		% endif
+                % if course_organize:
+                      <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80" class="d-block mt-4">
+                % endif
               </p>
             </div>
           </div>
@@ -139,9 +150,8 @@ show_preview_menu = course and staff_access and supports_preview_menu
 	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
            <div class="organizer-logo">
               <p class="mt-2 mx-auto text-center">
-                % if course.organizer:
-                  <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-                    <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80" class="d-block mt-4">
+                % if course_organize:
+                      <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80" class="d-block mt-4">
                 % endif
               </p>
             </div>
@@ -174,7 +184,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
     staff_selected = selected(not masquerade or masquerade.role != "student")
     specific_student_selected = selected(not staff_selected and masquerade.user_name)
     student_selected = selected(not staff_selected and not specific_student_selected and not masquerade_group_id)
-    %>
+  %>
 	<header id="header-course" class="bg-light row justify-content-md-center">
 		<div class="col-md-6 pt-4">
 			<div class="wrapper-preview-menu">
@@ -217,7 +227,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
 		</div>
 	</div>
 	</header>
-	
+
 	    <%
     preview_options = {
         "courseId": course.id,

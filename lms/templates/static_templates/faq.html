@@ -7,7 +7,7 @@
     <header id="page-header" class="bg-light">
         <div class="jumbotron">
             <div class="container">
-                <h2 class="display-2">${_("FAQ")}</h2>
+                <h1 class="display-2 text-darkblack text-24">${_("FAQ")}</h1>
             </div>
         </div>
     </header>
@@ -22,9 +22,10 @@
                          % for i, category in enumerate(page_content, 1):
                             <% category_identifier = "{:02d}".format(i) %>
                             <a href="#accordion-anchor-${category_identifier}" class="list-group-item list-group-item-action">
-                                <i class="${category['icon_class']}"></i>
+                                <i class="${category['icon_class']}" aria-hidden="true"></i>
                                 <div>
-                                    <h5>${category['name']}</h5>
+                                    <span class="sr-only">${_('Category')}</span>
+                                    <h2 class="text-18">${category['name']}</h2>
                                 </div>
                             </a>
                         % endfor
@@ -39,37 +40,37 @@
                             <div class="accordion-anchor" id="accordion-anchor-${category_identifier}">
                             </div>
 
-                            <label class="accordion-switch">
+                            <div class="accordion-switch">
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input">
-                                    <span class="custom-control-label">${_("show answers")}</span>
+                                    <input type="checkbox" class="custom-control-input" value="" name="show-answers-${category_identifier}" id="show-answers-${category_identifier}">
+                                    <label for="show-answers-${category_identifier}" class="custom-control-label">${_("show answers")} <span class="sr-only">${_('Category')} ${category['name']}</span></label>
                                 </div>
-                            </label>
+                            </div>
                             <!-- category -->
                             <div class="accordion faq">
                                 <div class="card">
                                     <div class="card-header" id="heading-${category_identifier}">
-                                        <button class="btn btn-link btn-cat" type="button"
-                                                data-toggle="collapse" data-target="#collapse-${category_identifier}" aria-expanded="false" aria-controls="collapse-${category_identifier}">
+                                        <button class="btn btn-link btn-cat my-0" type="button"
+                                                data-toggle="collapse" data-target="#collapse-${category_identifier}" aria-expanded="true" aria-controls="collapse-${category_identifier}" tabindex="0">
                                                 ${category['name']}:
                                         </button>
                                     </div>
 
-                                    <div class="collapse show" aria-labelledby="heading-01" id="collapse-${category_identifier}">
+                                    <div class="collapse show" aria-labelledby="heading-${category_identifier}" id="collapse-${category_identifier}">
                                         <div class="card-body">
                                             <div class="accordion">
                                             % for j, question_answer in enumerate(category['questions'], 1):
                                             <% question_identifier = "{:02d}-{:02d}".format(i, j) %>
                                                 <div class="card">
                                                     <div class="card-header" id="heading-${question_identifier}">
-                                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-${question_identifier}" aria-expanded="false"
-                                                                aria-controls="collapse-${question_identifier}">
+                                                        <button class="btn btn-link my-0" type="button" data-toggle="collapse" data-target="#collapse-${question_identifier}" aria-expanded="false"
+                                                                aria-controls="collapse-${question_identifier}" aria-describedby="description-${question_identifier}" tabindex="0">
                                                                 ${question_answer[0]}
                                                         </button>
                                                     </div>
                                                     <div id="collapse-${question_identifier}" class="collapse" aria-labelledby="heading-${question_identifier}">
                                                         <div class="card-body">
-                                                            <p>${question_answer[1]}</p>
+                                                            <p id="description-${question_identifier}">${question_answer[1]}</p>
                                                         </div>
                                                     </div>
                                                 </div>

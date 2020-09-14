@@ -249,8 +249,10 @@
                 this.updatePageTitle();
                 sequenceLinks = this.content_container.find('a.seqnav');
                 sequenceLinks.click(this.goto);
-
                 this.sr_container.focus();
+
+                // scroll to nav-tabs element
+                window.scrollTo(0, $("#nav-tab").offset().top-$('#header-navigation').height());
             }
         };
 

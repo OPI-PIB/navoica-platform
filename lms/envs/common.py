@@ -290,7 +290,7 @@ FEATURES = {
     'ENABLE_EDXNOTES': False,
 
     # Milestones application flag
-    'MILESTONES_APP': False,
+    'MILESTONES_APP': True,
 
     # Organizations application flag
     'ORGANIZATIONS_APP': False,
@@ -1162,7 +1162,8 @@ CREDIT_NOTIFICATION_CACHE_TIMEOUT = 5 * 60 * 60
 
 ######################### Navoica Branding ###################################
 
-HEADER_NAVOICA_LOGO_IMAGE = "/static/images/logo-light-bg.svg"
+HEADER_NAVOICA_LOGO_IMAGE = "images/logo-light-bg.svg"
+OG_NAVOICA_LOGO_IMAGE = "images/logo-light-bg.png"
 
 ################################# Middleware ###################################
 
@@ -2298,7 +2299,7 @@ INSTALLED_APPS = [
     'openedx.features.course_experience',
     'openedx.features.course_search',
     'openedx.features.enterprise_support.apps.EnterpriseSupportConfig',
-    'openedx.features.learner_profile',
+    # 'openedx.features.learner_profile',
     'openedx.features.learner_analytics',
     'openedx.features.portfolio_project',
 

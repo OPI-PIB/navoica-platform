@@ -667,10 +667,10 @@ urlpatterns += [
     ),
 
     # Learner profile
-    url(
-        r'^u/',
-        include('openedx.features.learner_profile.urls'),
-    ),
+    # url(
+    #     r'^u/',
+    #     include('openedx.features.learner_profile.urls'),
+    # ),
 
     # Learner analytics dashboard
     url(
