@@ -25,8 +25,6 @@ from openedx.core.djangolib.markup import HTML, Text
 		   % endif
 		</div>
 	  </div>
-	</div>
-</section>
 <%include file="index_promo_video.html" />
 </header>
 
@@ -89,7 +87,7 @@ from openedx.core.djangolib.markup import HTML, Text
 % endif
 
 <%block name="js_extra">
-   <script type="text/javascript">
+   <script>
       $(window).load(function() {
          if(getParameterByName('next')) {
               $('#login').trigger("click");

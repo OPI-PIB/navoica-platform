@@ -34,7 +34,7 @@ HeaderFactory();
 <!-- Navigation -->
 
 
-<div id="header-navigation" class="bg-white">
+<nav id="header-navigation" class="bg-white">
     % if use_cookie_banner and ENABLE_GDPR_COMPAT_FLAG.is_enabled_without_course_context():
     ${static.renderReact(
     component="CookiePolicyBanner",
@@ -81,7 +81,7 @@ HeaderFactory();
 
             % endif
 
-            <nav  role= "navigation" aria-label="Nawiguj do wybranych stron platformy Nawojka">
+            <div role="navigation" aria-label="Nawiguj do wybranych stron platformy Nawojka">
 
                 <div class="dropdown ml-auto">
                     <button id="mooc-my-mooc"
@@ -116,13 +116,13 @@ HeaderFactory();
                     </div>
                 </div>
 
-            </nav>
+            </div>
 
 
         </div>
 
     </div>
-</div>
+</nav>
 
 
 
