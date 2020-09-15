@@ -50,7 +50,7 @@ from pipeline_mako import render_require_js_path_overrides
   </%block>
 
   % if not allow_iframing:
-      <script type="text/javascript">
+      <script>
         /* immediately break out of an iframe if coming from the marketing website */
         (function(window) {
           if (window.location !== window.top.location) {
@@ -73,8 +73,8 @@ from pipeline_mako import render_require_js_path_overrides
     ie11_fix_path = "js/ie11_find_array.js"
   %>
 
-  <script type="text/javascript" src="${static.url(jsi18n_path)}"></script>
-  <script type="text/javascript" src="${static.url(ie11_fix_path)}"></script>
+  <script src="${static.url(jsi18n_path)}"></script>
+  <script src="${static.url(ie11_fix_path)}"></script>
 
   <link rel="icon" type="image/x-icon" href="${static.url(static.get_value('favicon_path', settings.FAVICON_PATH))}" />
 
@@ -116,7 +116,7 @@ from pipeline_mako import render_require_js_path_overrides
       });
     }).call(this, require || RequireJS.require);
   </script>
-  <script type="text/javascript" src="${static.url("lms/js/require-config.js")}"></script>
+  <script src="${static.url("lms/js/require-config.js")}"></script>
   <script src="${static.url("js/popper.min.js")}"></script>
   <script src="${static.url("js/bootstrap.min.js")}"></script>
   <%block name="js_overrides">
@@ -225,9 +225,9 @@ from pipeline_mako import render_require_js_path_overrides
   <%block name="js_extra"/>
 
   <%include file="widgets/segment-io-footer.html" />
-  <script type="text/javascript" src="${static.url('js/vendor/noreferrer.js')}" charset="utf-8"></script>
-  <script type="text/javascript" src="${static.url('js/utils/navigation.js')}" charset="utf-8"></script>
-  <script type="text/javascript" src="${static.url('js/header/header.js')}"></script>
+  <script src="${static.url('js/vendor/noreferrer.js')}"></script>
+  <script src="${static.url('js/utils/navigation.js')}"></script>
+  <script src="${static.url('js/header/header.js')}"></script>
   <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" />
 
 </body>

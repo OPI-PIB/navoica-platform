@@ -10059,7 +10059,7 @@ main.container .d-flex, .jumbotron > .container .d-flex {
 }
 
 main.container .d-flex > {
-  aside header, section header, article header {
+  aside header, aside .sidebar-right-header, section header, article header {
     border-bottom: 1px solid #dee2e6;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
@@ -10067,7 +10067,7 @@ main.container .d-flex > {
 }
 
 .jumbotron > .container .d-flex > {
-  aside header, section header, article header {
+  aside header, aside .sidebar-right-header, section header, article header {
     border-bottom: 1px solid #dee2e6;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
@@ -10126,7 +10126,7 @@ main.container .d-flex > {
 }
 
 .jumbotron > .container .d-flex > {
-  aside header {
+  aside header, aside .sidebar-right-header {
     h2, a {
       color: #212529;
       color: teal;
@@ -10305,12 +10305,12 @@ aside {
     flex-flow: row wrap;
 
     > {
-      aside header, section header {
+      aside header, aside .sidebar-right-header, section header {
         display: flex;
         justify-content: space-between;
       }
 
-      aside header {
+      aside header, aside .sidebar-right-header {
         h2, a {
           font-size: 0.875rem;
           line-height: 1;
@@ -10379,7 +10379,7 @@ main.container aside {
         justify-content: space-between;
       }
 
-      aside header {
+      aside header, aside .sidebar-right-header {
         h2, a {
           font-size: 0.875rem;
           line-height: 1.7143;
@@ -11382,7 +11382,7 @@ main.container > aside {
     }
   }
   .jumbotron > .container > {
-    aside header, section header, article header {
+    aside header, section header, aside .sidebar-right-header, article header {
       display: flex;
       justify-content: space-between;
     }
@@ -11414,7 +11414,7 @@ main.container > aside {
     }
   }
   .jumbotron > .container > {
-    aside header {
+    aside header, aside .sidebar-right-header {
       h2, a {
         font-size: 0.875rem;
         line-height: 1;
@@ -11661,13 +11661,13 @@ main.container > aside {
   display: none;
 }
 
-#section[aria-expanded="true"] {
+#section[aria-expanded="true"], .accordion-section[aria-expanded="true"] {
   .list-group.list-group-flush {
      pading: 1rem 0;
    }
 }
 
-#section[aria-expanded="false"] {
+#section[aria-expanded="false"], .accordion-section[aria-expanded="false"] {
   box-shadow: 0 4px 12px -2px #dee2e6, 0 -2px 4px -4px #dee2e6;
 }
 
@@ -11688,7 +11688,7 @@ main.container > aside {
    }
 }
 
-#page-header, #content, #courses, #header-course, #password-reset-complete-container, #password-reset-confirm-container {
+#page-header, #content, #courses, #header-course, #password-reset-complete-container, #password-reset-confirm-container, .header-course {
   background-image: none;
   background-position: center center;
   background-size: cover;
@@ -12825,7 +12825,7 @@ main.container .d-flex {
   padding: 0;
 }
 
-button#section.subsection-text.accordion-trigger.bg1 {
+button#section.subsection-text.accordion-trigger.bg1, button.accordion-section.subsection-text.accordion-trigger.bg1 {
   font-size: 14px;
 }
 
@@ -12898,13 +12898,13 @@ fieldset label {
   }
 }
 
-button#section.subsection-text.accordion-trigger.bg1[aria-expanded="false"]::before {
+button#section.subsection-text.accordion-trigger.bg1[aria-expanded="false"]::before, button.accordion-section.subsection-text.accordion-trigger.bg1[aria-expanded="false"]::before {
         content: "+";
         left: 12px;
         margin-right: 5px;
       }
 
-button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::before {
+button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::before, button.accordion-section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::before {
         content: "\2012";
         left: 12px;
         margin-right: 5px;
@@ -13125,6 +13125,17 @@ img.message-author {
 }
 
 @media (max-width: 960px) {
+  .header-course {
+    .jumbotron {
+      .container {
+        .action-preview-actions {
+          padding-top: 0rem !important;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
   #header-course {
     .jumbotron {
       .container {
@@ -13285,7 +13296,7 @@ span.complete-checkmark.fa.fa-check {
 }
 
 @media (max-width: 959.98px) {
-  #header-course {
+  #header-course, .header-course {
     margin: 0;
   }
 }
@@ -13310,7 +13321,7 @@ span.complete-checkmark.fa.fa-check {
     order: 1;
     width: 960px;
   }
-  #header-course {
+  #header-course, .header-course {
     margin-top: 8rem;
   }
 }
@@ -13648,7 +13659,7 @@ span.complete-checkmark.fa.fa-check {
 //    top: 0;
 //    z-index: 1071;
 //  }
-//  #header-course {
+//  #header-course, .header-course {
 //    margin-top: 0;
 //  }
 //}
@@ -13660,8 +13671,8 @@ span.complete-checkmark.fa.fa-check {
   #page-header {
     margin:0;
   }
-  #header-course {
-    margin-top:0px;
+  #header-course, .header-course {
+    margin-top: 0;
   }
 }
 
@@ -13958,6 +13969,10 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   font-size: 0.75rem;
 }
 
+.f-18 {
+  font-size: 1.125rem;
+}
+
 .message.message-status.course-status-certavailable.is-shown {
     width: 100%;
 }
@@ -13981,5 +13996,15 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
 .custom-hover:hover {
   color: #a11326;
   text-decoration: none;
+}
+
+.border-top-grey {
+  border-top: 1px solid #e9ecef;
+}
+
+.courses-list-header {
+  margin: 0 0 1rem !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  padding-bottom: 0;
 }
 

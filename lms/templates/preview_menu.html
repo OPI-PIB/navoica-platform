@@ -17,9 +17,8 @@ from courseware.courses import get_course_about_section
 show_preview_menu = course and staff_access and supports_preview_menu
 %>
 
-</script>
-  <script type="module" src="${static.url('js/course_info.js')}">
-</script>
+
+<script type="module" src="${static.url('js/course_info.js')}"></script>
 
 % if request.path.endswith("course/"):
 
@@ -48,7 +47,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
     %>
 
 
-<header id="header-course" class="bg-light">
+<header class="header-course bg-light">
   <div class="jumbotron">
     <div class="container">
       <div class="d-flex">
@@ -99,10 +98,10 @@ show_preview_menu = course and staff_access and supports_preview_menu
      </article>
 
   <aside>
-    <header>
-      <h2>${_("Course Organizer")}</h2>
-	  </header>
-	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+        <div class="sidebar-right-header">
+            <h2>${_("Course Organizer")}</h2>
+	    </div>
+	    <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
            <div class="organizer-logo">
               <p class="mt-2 mx-auto text-center">
                 % if course_organize:
@@ -110,10 +109,11 @@ show_preview_menu = course and staff_access and supports_preview_menu
                 % endif
               </p>
             </div>
-          </div>
-	</aside>
+        </div>
+  </aside>
 
     </div>
+  </div>
   </div>
 </header>
 
@@ -133,7 +133,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
 % else:
 
 % if course:
-<header id="header-course" class="bg-light">
+<header class="header-course bg-light">
   <div class="jumbotron">
     <div class="container">
       <div class="d-flex">
@@ -143,10 +143,10 @@ show_preview_menu = course and staff_access and supports_preview_menu
           <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
      </article>
   <aside>
-    <header>
-	  <!-- <h2>Organizator</h2> -->
-    <h2>${_("Course Organizer")}</h2>
-	</header>
+    <div class="sidebar-right-header">
+	    <!-- <h2>Organizator</h2> -->
+        <h2>${_("Course Organizer")}</h2>
+	</div>
 	<div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
            <div class="organizer-logo">
               <p class="mt-2 mx-auto text-center">
@@ -160,6 +160,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
 
     </div>
   </div>
+  </div>
 </header>
 
 
@@ -169,7 +170,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
 
 % else:
 
-<header id="header-course" class="bg-light"></header>
+<header class="header-course bg-light"></header>
 
 % endif
 
@@ -185,7 +186,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
     specific_student_selected = selected(not staff_selected and masquerade.user_name)
     student_selected = selected(not staff_selected and not specific_student_selected and not masquerade_group_id)
   %>
-	<header id="header-course" class="bg-light row justify-content-md-center">
+	<header class="header-course bg-light row justify-content-md-center">
 		<div class="col-md-6 pt-4">
 			<div class="wrapper-preview-menu">
 			  <div class="preview-menu">

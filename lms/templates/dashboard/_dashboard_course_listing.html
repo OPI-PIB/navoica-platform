@@ -67,7 +67,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
   % endif
     <% course_target = reverse(course_home_url_name(course_overview.id), args=[unicode(course_overview.id)]) %>
 
-  <div href="${course_target}" class="card h-100">
+  <div class="card h-100">
   % if show_courseware_link and not is_unfulfilled_entitlement:
     % if not is_course_blocked:
     <a class="card-color font-weight-normal custom-hover" href="${course_target}">
@@ -88,7 +88,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
           </p>
           <p><strong>${_("Course edition")}</strong>${course_overview.id.run}</p>
         </div>
-        <div class="course-text text-card" id="border_top">${course_overview.short_description}</div>
+        <div class="course-text text-card border-top-grey">${course_overview.short_description}</div>
       </div>
     </a>
     % else:
@@ -117,13 +117,13 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
       </p>
       <p><strong>${_("Course edition")}</strong>${course_overview.id.run}</p>
     </div>
-    <div class="course-text" id="border_top">${course_overview.short_description}</div>
+    <div class="course-text border-top-grey">${course_overview.short_description}</div>
   </div>
   %endif
 
 
 
-           <div class="card-footer" id="border_top">
+           <div class="card-footer border-top-grey">
 
              <div class="course-meta">
 
@@ -192,7 +192,6 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
                               (<a href="#unenroll-modal" id="unenroll-0" class="action-unenroll" rel="leanModal"
                                  data-course-id="${course_overview.id}"
-                                 course-id="${course_overview.id}"
                                  data-course-number="${course_overview.number}"
                                  data-course-name="${course_overview.display_name_with_default}"
                                  data-dashboard-index="${dashboard_index}"
