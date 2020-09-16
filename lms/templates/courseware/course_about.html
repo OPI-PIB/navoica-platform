@@ -115,7 +115,7 @@ from six import string_types
   })(this)
   </script>
 
-  <script src="${static.url('js/course_info.js')}"></script>
+  <script type="module" src="${static.url('js/course_info.js')}"></script>
 </%block>
 
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
@@ -285,7 +285,7 @@ from six import string_types
             if (a[0]==course.difficulty):
               course_difficulty = a[1]
           %>
-                  <h6>${_("Course Description")}:</h6>
+                  <h6>${_("Course Difficulty")}:</h6>
                   <div>${course_difficulty}</div>
                 </div>
               </li>

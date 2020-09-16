@@ -202,10 +202,12 @@ def main():
     except ImportError:
         pass
     if not settings.configured:
- 
         settings.configure(
             INSTALLED_APPS=installed_apps,
         )
+    else:
+        settings.INSTALLED_APPS=installed_apps
+
     django.setup()
 
     args = docopt(main.__doc__)
