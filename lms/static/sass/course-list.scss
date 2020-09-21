@@ -13701,7 +13701,7 @@ span.complete-checkmark.fa.fa-check {
 
     .course-preview-title .provider, .course-preview-title .course-name {
       font-size: 1rem;
-      line-height: 1.2rem;
+      line-height: 1.3rem;
     }
 
     .desktop-menu, .my-account {
@@ -13727,7 +13727,7 @@ span.complete-checkmark.fa.fa-check {
 
     .course-preview-title .provider, .course-preview-title .course-name {
       font-size: 0.9rem;
-      line-height: 1.1rem;
+      line-height: 1.3rem;
     }
 
     .desktop-menu {
@@ -13833,6 +13833,16 @@ span.complete-checkmark.fa.fa-check {
   max-width: 50%;
   line-height: 0;
 }
+
+@media (min-width: 480px) {
+  #header-navigation .course-preview-title{
+   .course-name, .provider {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   } 
+  }
+}  
 
 .d-none {
   & #header-navigation {
