@@ -13986,3 +13986,21 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   text-decoration: none;
 }
 
+//A11Y
+
+.a11y-page header#page-header {
+  background-image: url("/static/images/photo-keyboard.jpeg");
+  background-position: 100% 40%;
+}
+
+ .a11y-page .jumbotron {
+    background: rgba(255, 255, 255, 0.90);
+    padding: 24px 0;
+    margin: 0;
+ }
+
+ .a11y-page h1 {
+   margin-bottom: 0;
+   font-weight: 700;
+ }
+

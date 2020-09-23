@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-09-07 11:47+0000\n"
-"PO-Revision-Date: 2020-09-07 11:48:38.185200\n"
+"POT-Creation-Date: 2020-09-23 11:17+0000\n"
+"PO-Revision-Date: 2020-09-23 11:18:33.453403\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -180,8 +180,8 @@ msgstr ""
 
 #: cms/templates/certificates.html:108 cms/templates/certificates.html:109
 #: cms/templates/group_configurations.html:121
-#: cms/templates/group_configurations.html:122 cms/templates/settings.html:677
-#: cms/templates/settings.html:678 cms/templates/settings_advanced.html:101
+#: cms/templates/group_configurations.html:122 cms/templates/settings.html:679
+#: cms/templates/settings.html:680 cms/templates/settings_advanced.html:101
 #: cms/templates/settings_advanced.html:102
 #: cms/templates/settings_graders.html:158
 #: cms/templates/settings_graders.html:159
@@ -193,7 +193,7 @@ msgid "Details &amp; Schedule"
 msgstr ""
 
 #: cms/templates/certificates.html:112
-#: cms/templates/group_configurations.html:125 cms/templates/settings.html:680
+#: cms/templates/group_configurations.html:125 cms/templates/settings.html:682
 #: cms/templates/settings_advanced.html:105
 #: cms/templates/settings_graders.html:43 cms/templates/widgets/header.html:90
 msgid "Grading"
@@ -201,7 +201,7 @@ msgstr ""
 
 #: cms/templates/certificates.html:113
 #: cms/templates/group_configurations.html:126
-#: cms/templates/manage_users.html:27 cms/templates/settings.html:681
+#: cms/templates/manage_users.html:27 cms/templates/settings.html:683
 #: cms/templates/settings_advanced.html:106
 #: cms/templates/settings_graders.html:162
 #: cms/templates/widgets/header.html:93
@@ -209,7 +209,7 @@ msgid "Course Team"
 msgstr ""
 
 #: cms/templates/certificates.html:114
-#: cms/templates/group_configurations.html:127 cms/templates/settings.html:683
+#: cms/templates/group_configurations.html:127 cms/templates/settings.html:685
 #: cms/templates/settings_advanced.html:13
 #: cms/templates/settings_advanced.html:38
 #: cms/templates/settings_graders.html:164
@@ -219,7 +219,7 @@ msgstr ""
 
 #: cms/templates/certificates.html:115
 #: cms/templates/group_configurations.html:16
-#: cms/templates/group_configurations.html:45 cms/templates/settings.html:682
+#: cms/templates/group_configurations.html:45 cms/templates/settings.html:684
 #: cms/templates/settings_advanced.html:107
 #: cms/templates/settings_graders.html:163
 #: cms/templates/widgets/header.html:96
@@ -403,7 +403,7 @@ msgid ""
 msgstr ""
 
 #: cms/templates/course-create-rerun.html:84 cms/templates/index.html:80
-#: cms/templates/index.html:156 cms/templates/settings.html:69
+#: cms/templates/index.html:156 cms/templates/settings.html:70
 msgid "Organization"
 msgstr ""
 
@@ -429,7 +429,7 @@ msgid "Note: No spaces or special characters are allowed."
 msgstr ""
 
 #: cms/templates/course-create-rerun.html:95 cms/templates/index.html:92
-#: cms/templates/settings.html:75
+#: cms/templates/settings.html:76
 msgid "Course Number"
 msgstr ""
 
@@ -449,7 +449,7 @@ msgid ""
 msgstr ""
 
 #: cms/templates/course-create-rerun.html:104 cms/templates/index.html:105
-#: cms/templates/settings.html:81
+#: cms/templates/settings.html:82
 msgid "Course Run"
 msgstr ""
 
@@ -605,15 +605,15 @@ msgstr ""
 msgid "Edit Start Date"
 msgstr ""
 
-#: cms/templates/course_outline.html:169 cms/templates/settings.html:620
+#: cms/templates/course_outline.html:169 cms/templates/settings.html:622
 msgid "Course Pacing"
 msgstr ""
 
-#: cms/templates/course_outline.html:172 cms/templates/settings.html:634
+#: cms/templates/course_outline.html:172 cms/templates/settings.html:636
 msgid "Self-Paced"
 msgstr ""
 
-#: cms/templates/course_outline.html:174 cms/templates/settings.html:629
+#: cms/templates/course_outline.html:174 cms/templates/settings.html:631
 msgid "Instructor-Paced"
 msgstr ""
 
@@ -2244,152 +2244,152 @@ msgstr ""
 msgid "Schedule & Details Settings"
 msgstr ""
 
-#: cms/templates/settings.html:52 cms/templates/widgets/header.html:87
+#: cms/templates/settings.html:53 cms/templates/widgets/header.html:87
 msgid "Schedule & Details"
 msgstr ""
 
-#: cms/templates/settings.html:64
+#: cms/templates/settings.html:65
 msgid "The nuts and bolts of your course"
 msgstr ""
 
-#: cms/templates/settings.html:70 cms/templates/settings.html:76
-#: cms/templates/settings.html:82 cms/templates/settings.html:147
-#: cms/templates/settings.html:158 cms/templates/settings.html:169
+#: cms/templates/settings.html:71 cms/templates/settings.html:77
+#: cms/templates/settings.html:83 cms/templates/settings.html:148
+#: cms/templates/settings.html:159 cms/templates/settings.html:170
 msgid "This field is disabled: this information cannot be changed."
 msgstr ""
 
-#: cms/templates/settings.html:89
+#: cms/templates/settings.html:90
 msgid "(for student enrollment and access)"
 msgstr ""
 
-#: cms/templates/settings.html:100
+#: cms/templates/settings.html:101
 msgid "Enroll in {course_display_name}"
 msgstr ""
 
-#: cms/templates/settings.html:103
+#: cms/templates/settings.html:104
 msgid ""
 "The course \"{course_display_name}\", provided by {platform_name}, is open "
 "for enrollment. Please navigate to this course at {link_for_about_page} to "
 "enroll."
 msgstr ""
 
-#: cms/templates/settings.html:109
+#: cms/templates/settings.html:110
 msgid "Send a note to students via email"
 msgstr ""
 
-#: cms/templates/settings.html:111
+#: cms/templates/settings.html:112
 msgid "Invite your students"
 msgstr ""
 
-#: cms/templates/settings.html:119
+#: cms/templates/settings.html:120
 msgid "Promoting Your Course with {platform_name}"
 msgstr ""
 
-#: cms/templates/settings.html:121
+#: cms/templates/settings.html:122
 msgid ""
 "Your course summary page will not be viewable until your course has been "
 "announced. To provide content for the page and preview it, follow the "
 "instructions provided by your Program Manager."
 msgstr ""
 
-#: cms/templates/settings.html:135
+#: cms/templates/settings.html:136
 msgid "Course Credit Requirements"
 msgstr ""
 
-#: cms/templates/settings.html:136
+#: cms/templates/settings.html:137
 msgid "Steps required to earn course credit"
 msgstr ""
 
-#: cms/templates/settings.html:144 cms/templates/settings.html:146
+#: cms/templates/settings.html:145 cms/templates/settings.html:147
 msgid "Minimum Grade"
 msgstr ""
 
-#: cms/templates/settings.html:155
+#: cms/templates/settings.html:156
 msgid "Successful Proctored Exam"
 msgstr ""
 
-#: cms/templates/settings.html:157
+#: cms/templates/settings.html:158
 msgid "Proctored Exam {number}"
 msgstr ""
 
-#: cms/templates/settings.html:166
+#: cms/templates/settings.html:167
 msgid "ID Verification"
 msgstr ""
 
-#: cms/templates/settings.html:168
+#: cms/templates/settings.html:169
 msgid "In-Course Reverification {number}"
 msgstr ""
 
-#: cms/templates/settings.html:184
+#: cms/templates/settings.html:186
 msgid "Course Schedule"
 msgstr ""
 
-#: cms/templates/settings.html:185
+#: cms/templates/settings.html:187
 msgid "Dates that control when your course can be viewed"
 msgstr ""
 
-#: cms/templates/settings.html:193
+#: cms/templates/settings.html:195
 msgid "First day the course begins"
 msgstr ""
 
-#: cms/templates/settings.html:197
+#: cms/templates/settings.html:199
 msgid "Course Start Time"
 msgstr ""
 
-#: cms/templates/settings.html:199 cms/templates/settings.html:213
-#: cms/templates/settings.html:241 cms/templates/settings.html:263
+#: cms/templates/settings.html:201 cms/templates/settings.html:215
+#: cms/templates/settings.html:243 cms/templates/settings.html:265
 msgid "(UTC)"
 msgstr ""
 
-#: cms/templates/settings.html:207
+#: cms/templates/settings.html:209
 msgid "Last day your course is active"
 msgstr ""
 
-#: cms/templates/settings.html:211
+#: cms/templates/settings.html:213
 msgid "Course End Time"
 msgstr ""
 
-#: cms/templates/settings.html:222
+#: cms/templates/settings.html:224
 msgid "Certificates Available Date"
 msgstr ""
 
-#: cms/templates/settings.html:224
+#: cms/templates/settings.html:226
 msgid "By default, 48 hours after course end date"
 msgstr ""
 
-#: cms/templates/settings.html:233
+#: cms/templates/settings.html:235
 msgid "Enrollment Start Date"
 msgstr ""
 
-#: cms/templates/settings.html:235
+#: cms/templates/settings.html:237
 msgid "First day students can enroll"
 msgstr ""
 
-#: cms/templates/settings.html:239
+#: cms/templates/settings.html:241
 msgid "Enrollment Start Time"
 msgstr ""
 
-#: cms/templates/settings.html:250
+#: cms/templates/settings.html:252
 msgid "Enrollment End Date"
 msgstr ""
 
-#: cms/templates/settings.html:253
+#: cms/templates/settings.html:255
 msgid "Last day students can enroll."
 msgstr ""
 
-#: cms/templates/settings.html:255
+#: cms/templates/settings.html:257
 msgid "Contact your edX partner manager to update these settings."
 msgstr ""
 
-#: cms/templates/settings.html:261
+#: cms/templates/settings.html:263
 msgid "Enrollment End Time"
 msgstr ""
 
-#: cms/templates/settings.html:270
+#: cms/templates/settings.html:272
 msgid "These Dates Are Not Used When Promoting Your Course"
 msgstr ""
 
-#: cms/templates/settings.html:272
+#: cms/templates/settings.html:274
 msgid ""
 "These dates impact {strong_start}when your courseware can be "
 "viewed{strong_end}, but they are {strong_start}not the dates shown on your "
@@ -2398,103 +2398,99 @@ msgid ""
 "instructions provided by your Program Manager."
 msgstr ""
 
-#: cms/templates/settings.html:289
+#: cms/templates/settings.html:291
 msgid "Course Details"
 msgstr ""
 
-#: cms/templates/settings.html:290
+#: cms/templates/settings.html:292
 msgid "Provide useful information about your course"
 msgstr ""
 
-#: cms/templates/settings.html:294
+#: cms/templates/settings.html:296
 msgid "Course Language"
 msgstr ""
 
-#: cms/templates/settings.html:301
+#: cms/templates/settings.html:303
 msgid ""
 "Identify the course language here. This is used to assist users find courses"
 " that are taught in a specific language. It is also used to localize the "
 "'From:' field in bulk emails."
 msgstr ""
 
-#: cms/templates/settings.html:305
-msgid "Course Difficulty"
-msgstr ""
-
-#: cms/templates/settings.html:351
+#: cms/templates/settings.html:353
 msgid "Introducing Your Course"
 msgstr ""
 
-#: cms/templates/settings.html:352
+#: cms/templates/settings.html:354
 msgid "Information for prospective students"
 msgstr ""
 
-#: cms/templates/settings.html:358
+#: cms/templates/settings.html:360
 msgid "Course Title"
 msgstr ""
 
-#: cms/templates/settings.html:360
+#: cms/templates/settings.html:362
 msgid "Displayed as title on the course details page. Limit to 50 characters."
 msgstr ""
 
-#: cms/templates/settings.html:363
+#: cms/templates/settings.html:365
 msgid "Course Subtitle"
 msgstr ""
 
-#: cms/templates/settings.html:365
+#: cms/templates/settings.html:367
 msgid ""
 "Displayed as subtitle on the course details page. Limit to 150 characters."
 msgstr ""
 
-#: cms/templates/settings.html:368
+#: cms/templates/settings.html:370
 msgid "Course Duration"
 msgstr ""
 
-#: cms/templates/settings.html:370
+#: cms/templates/settings.html:372
 msgid "Displayed on the course details page. Limit to 50 characters."
 msgstr ""
 
-#: cms/templates/settings.html:375
+#: cms/templates/settings.html:377
 msgid "Displayed on the course details page. Limit to 1000 characters."
 msgstr ""
 
-#: cms/templates/settings.html:381
+#: cms/templates/settings.html:383
 msgid "Course Short Description"
 msgstr ""
 
-#: cms/templates/settings.html:383
+#: cms/templates/settings.html:385
 msgid ""
 "Appears on the course catalog page when students roll over the course name. "
 "Limit to ~150 characters"
 msgstr ""
 
-#: cms/templates/settings.html:389
+#: cms/templates/settings.html:391
 msgid "Course Overview"
 msgstr ""
 
-#: cms/templates/settings.html:392
+#: cms/templates/settings.html:394
 msgid "HTML Code Editor"
 msgstr ""
 
-#: cms/templates/settings.html:395
+#: cms/templates/settings.html:397
 msgid ""
 "Introductions, prerequisites, FAQs that are used on {a_link_start}your "
 "course summary page{a_link_end} (formatted in HTML)"
 msgstr ""
 
-#: cms/templates/settings.html:403 cms/templates/settings.html:407
-#: cms/templates/settings.html:419
+#: cms/templates/settings.html:405 cms/templates/settings.html:409
+#: cms/templates/settings.html:421
 msgid "Course Card Image"
 msgstr ""
 
-#: cms/templates/settings.html:411 cms/templates/settings.html:445
-#: cms/templates/settings.html:478
+#: cms/templates/settings.html:413 cms/templates/settings.html:447
+#: cms/templates/settings.html:480
 msgid ""
 "You can manage this image along with all of your other {a_link_start}files "
 "and uploads{a_link_end}"
 msgstr ""
 
-#: cms/templates/settings.html:421
+#: cms/templates/settings.html:423
 msgid ""
 "Your course currently does not have an image. Please upload one (JPEG or PNG"
 " format, and minimum suggested dimensions are 375px wide by 200px tall)"
@@ -2502,26 +2498,26 @@ msgstr ""
 
 #. Translators: This is the placeholder text for a field that requests the URL
 #. for a course image
-#: cms/templates/settings.html:428
+#: cms/templates/settings.html:430
 msgid "Your course image URL"
 msgstr ""
 
-#: cms/templates/settings.html:429
+#: cms/templates/settings.html:431
 msgid ""
 "Please provide a valid path and name to your course image (Note: only JPEG "
 "or PNG format supported)"
 msgstr ""
 
-#: cms/templates/settings.html:431
+#: cms/templates/settings.html:433
 msgid "Upload Course Card Image"
 msgstr ""
 
-#: cms/templates/settings.html:437 cms/templates/settings.html:441
-#: cms/templates/settings.html:453
+#: cms/templates/settings.html:439 cms/templates/settings.html:443
+#: cms/templates/settings.html:455
 msgid "Course Banner Image"
 msgstr ""
 
-#: cms/templates/settings.html:455
+#: cms/templates/settings.html:457
 msgid ""
 "Your course currently does not have an image. Please upload one (JPEG or PNG"
 " format, and minimum suggested dimensions are 1440px wide by 400px tall)"
@@ -2529,29 +2525,29 @@ msgstr ""
 
 #. Translators: This is the placeholder text for a field that requests the URL
 #. for a course banner image
-#: cms/templates/settings.html:462
+#: cms/templates/settings.html:464
 msgid "Your banner image URL"
 msgstr ""
 
-#: cms/templates/settings.html:463
+#: cms/templates/settings.html:465
 msgid ""
 "Please provide a valid path and name to your banner image (Note: only JPEG "
 "or PNG format supported)"
 msgstr ""
 
-#: cms/templates/settings.html:465
+#: cms/templates/settings.html:467
 msgid "Upload Course Banner Image"
 msgstr ""
 
-#: cms/templates/settings.html:470
+#: cms/templates/settings.html:472
 msgid "Course Video Thumbnail Image"
 msgstr ""
 
-#: cms/templates/settings.html:474 cms/templates/settings.html:486
+#: cms/templates/settings.html:476 cms/templates/settings.html:488
 msgid "Video Thumbnail Image"
 msgstr ""
 
-#: cms/templates/settings.html:488
+#: cms/templates/settings.html:490
 msgid ""
 "Your course currently does not have a video thumbnail image. Please upload "
 "one (JPEG or PNG format, and minimum suggested dimensions are 375px wide by "
@@ -2560,137 +2556,137 @@ msgstr ""
 
 #. Translators: This is the placeholder text for a field that requests the URL
 #. for a course video thumbnail image
-#: cms/templates/settings.html:495
+#: cms/templates/settings.html:497
 msgid "Your video thumbnail image URL"
 msgstr ""
 
-#: cms/templates/settings.html:496
+#: cms/templates/settings.html:498
 msgid ""
 "Please provide a valid path and name to your video thumbnail image (Note: "
 "only JPEG or PNG format supported)"
 msgstr ""
 
-#: cms/templates/settings.html:498
+#: cms/templates/settings.html:500
 msgid "Upload Video Thumbnail Image"
 msgstr ""
 
-#: cms/templates/settings.html:505 cms/templates/settings.html:508
+#: cms/templates/settings.html:507 cms/templates/settings.html:510
 msgid "Course Introduction Video"
 msgstr ""
 
-#: cms/templates/settings.html:511
+#: cms/templates/settings.html:513
 msgid "Delete Current Video"
 msgstr ""
 
 #. Translators: This is the placeholder text for a field that requests a
 #. YouTube video ID for a course video
-#: cms/templates/settings.html:517
+#: cms/templates/settings.html:519
 msgid "your YouTube video's ID"
 msgstr ""
 
-#: cms/templates/settings.html:518
+#: cms/templates/settings.html:520
 msgid "Enter your YouTube video's ID (along with any restriction parameters)"
 msgstr ""
 
-#: cms/templates/settings.html:529
+#: cms/templates/settings.html:531
 msgid "Learning Outcomes"
 msgstr ""
 
-#: cms/templates/settings.html:530
+#: cms/templates/settings.html:532
 msgid "Add the learning outcomes for this course"
 msgstr ""
 
-#: cms/templates/settings.html:537
+#: cms/templates/settings.html:539
 msgid "Add Learning Outcome"
 msgstr ""
 
-#: cms/templates/settings.html:546
+#: cms/templates/settings.html:548
 msgid "Add details about the instructors for this course"
 msgstr ""
 
-#: cms/templates/settings.html:553
+#: cms/templates/settings.html:555
 msgid "Add Instructor"
 msgstr ""
 
-#: cms/templates/settings.html:564
+#: cms/templates/settings.html:566
 msgid "Requirements"
 msgstr ""
 
-#: cms/templates/settings.html:565
+#: cms/templates/settings.html:567
 msgid "Expectations of the students taking this course"
 msgstr ""
 
-#: cms/templates/settings.html:571
+#: cms/templates/settings.html:573
 msgid "Hours of Effort per Week"
 msgstr ""
 
-#: cms/templates/settings.html:573
+#: cms/templates/settings.html:575
 msgid "Time spent on all course work"
 msgstr ""
 
-#: cms/templates/settings.html:578
+#: cms/templates/settings.html:580
 msgid "Prerequisite Course"
 msgstr ""
 
-#: cms/templates/settings.html:580
+#: cms/templates/settings.html:582
 msgid "None"
 msgstr ""
 
-#: cms/templates/settings.html:585
+#: cms/templates/settings.html:587
 msgid "Course that students must complete before beginning this course"
 msgstr ""
 
-#: cms/templates/settings.html:586
+#: cms/templates/settings.html:588
 msgid "set pre-requisite course"
 msgstr ""
 
-#: cms/templates/settings.html:591
+#: cms/templates/settings.html:593
 msgid "Entrance Exam"
 msgstr ""
 
-#: cms/templates/settings.html:595
+#: cms/templates/settings.html:597
 msgid "Require students to pass an exam before beginning the course."
 msgstr ""
 
-#: cms/templates/settings.html:599
+#: cms/templates/settings.html:601
 msgid ""
 "You can now view and author your course entrance exam from the "
 "{link_start}Course Outline{link_end}."
 msgstr ""
 
-#: cms/templates/settings.html:603
+#: cms/templates/settings.html:605
 msgid "Grade Requirements"
 msgstr ""
 
-#: cms/templates/settings.html:604
+#: cms/templates/settings.html:606
 msgid " %"
 msgstr ""
 
-#: cms/templates/settings.html:605
+#: cms/templates/settings.html:607
 msgid ""
 "The score student must meet in order to successfully complete the entrance "
 "exam. "
 msgstr ""
 
-#: cms/templates/settings.html:621
+#: cms/templates/settings.html:623
 msgid "Set the pacing for this course"
 msgstr ""
 
-#: cms/templates/settings.html:630
+#: cms/templates/settings.html:632
 msgid ""
 "Instructor-paced courses progress at the pace that the course author sets. "
 "You can configure release dates for course content and due dates for "
 "assignments."
 msgstr ""
 
-#: cms/templates/settings.html:635
+#: cms/templates/settings.html:637
 msgid ""
 "Self-paced courses do not have release dates for course content or due dates"
 " for assignments. Learners can complete course material at any time before "
 "the course end date."
 msgstr ""
 
-#: cms/templates/settings.html:646
+#: cms/templates/settings.html:648
 msgid "Course Content License"
 msgstr ""
 
@@ -2700,21 +2696,21 @@ msgstr ""
 #. license with their own.
 #. In the form, the license selector for course content is described using the
 #. following string:
-#: cms/templates/settings.html:650
+#: cms/templates/settings.html:652
 msgid "Select the default license for course content"
 msgstr ""
 
-#: cms/templates/settings.html:664
+#: cms/templates/settings.html:666
 msgid "How are these settings used?"
 msgstr ""
 
-#: cms/templates/settings.html:665
+#: cms/templates/settings.html:667
 msgid ""
 "Your course's schedule determines when students can enroll in and begin a "
 "course."
 msgstr ""
 
-#: cms/templates/settings.html:667
+#: cms/templates/settings.html:669
 msgid ""
 "Other information from this page appears on the About page for your course. "
 "This information includes the course overview, course image, introduction "

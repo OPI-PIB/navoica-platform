@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-09-07 11:48+0000\n"
-"PO-Revision-Date: 2020-09-07 11:48:38.542304\n"
+"POT-Creation-Date: 2020-09-23 11:18+0000\n"
+"PO-Revision-Date: 2020-09-23 11:18:33.806430\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -135,7 +135,7 @@ msgstr ""
 msgid "You're enrolled as a verified student"
 msgstr ""
 
-#: common/djangoapps/course_modes/helpers.py:40 lms/envs/common.py:2769
+#: common/djangoapps/course_modes/helpers.py:40 lms/envs/common.py:2773
 msgid "Verified"
 msgstr ""
 
@@ -148,7 +148,7 @@ msgid "You're enrolled as an honor code student"
 msgstr ""
 
 #: common/djangoapps/course_modes/helpers.py:45
-#: lms/djangoapps/branding/api.py:242 lms/djangoapps/branding/api.py:296
+#: lms/djangoapps/branding/api.py:243 lms/djangoapps/branding/api.py:297
 #: openedx/core/djangoapps/user_api/api.py:804
 msgid "Honor Code"
 msgstr ""
@@ -207,7 +207,7 @@ msgid ""
 "ecommerce service."
 msgstr ""
 
-#: common/djangoapps/course_modes/models.py:182 lms/envs/common.py:2768
+#: common/djangoapps/course_modes/models.py:182 lms/envs/common.py:2772
 msgid "Honor"
 msgstr ""
 
@@ -3011,7 +3011,7 @@ msgid "Both"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py:712
-#: lms/djangoapps/branding/api.py:267
+#: lms/djangoapps/branding/api.py:268
 msgid "About"
 msgstr ""
 
@@ -3248,7 +3248,7 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:1310 lms/envs/common.py:2791
+#: common/lib/xmodule/xmodule/course_module.py:1310 lms/envs/common.py:2795
 msgid "Archived"
 msgstr ""
 
@@ -3260,7 +3260,7 @@ msgstr ""
 msgid "Starting Soon"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:1316 lms/envs/common.py:2788
+#: common/lib/xmodule/xmodule/course_module.py:1316 lms/envs/common.py:2792
 msgid "Upcoming"
 msgstr ""
 
@@ -4631,7 +4631,7 @@ msgstr ""
 msgid "Help Center"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:186 lms/djangoapps/branding/api.py:233
+#: lms/djangoapps/branding/api.py:186 lms/djangoapps/branding/api.py:234
 msgid "Media Kit"
 msgstr ""
 
@@ -4647,68 +4647,72 @@ msgstr ""
 msgid "Legend_title"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:217
+#: lms/djangoapps/branding/api.py:210
+msgid "Accessibility Statement"
+msgstr ""
+
+#: lms/djangoapps/branding/api.py:218
 msgid "Contact"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:229 lms/djangoapps/branding/api.py:283
+#: lms/djangoapps/branding/api.py:230 lms/djangoapps/branding/api.py:284
 #: lms/djangoapps/certificates/views/webview.py:180
 msgid "Terms of Service & Honor Code"
 msgstr ""
 
 #. Translators: A 'Privacy Policy' is a legal document/statement describing a
 #. website's use of personal information
-#: lms/djangoapps/branding/api.py:230 lms/djangoapps/branding/api.py:284
+#: lms/djangoapps/branding/api.py:231 lms/djangoapps/branding/api.py:285
 #: lms/djangoapps/certificates/views/webview.py:183
 msgid "Privacy Policy"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:231 lms/djangoapps/branding/api.py:285
+#: lms/djangoapps/branding/api.py:232 lms/djangoapps/branding/api.py:286
 msgid "Accessibility Policy"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:232 lms/djangoapps/branding/api.py:287
+#: lms/djangoapps/branding/api.py:233 lms/djangoapps/branding/api.py:288
 msgid "Sitemap"
 msgstr ""
 
 #. Translators: This is a legal document users must agree to
 #. in order to register a new account.
-#: lms/djangoapps/branding/api.py:241 lms/djangoapps/branding/api.py:295
+#: lms/djangoapps/branding/api.py:242 lms/djangoapps/branding/api.py:296
 #: openedx/core/djangoapps/user_api/api.py:870
 msgid "Terms of Service"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:269
+#: lms/djangoapps/branding/api.py:270
 #, python-brace-format
 msgid "{platform_name} for Business"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:270
+#: lms/djangoapps/branding/api.py:271
 msgid "Affiliates"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:271
+#: lms/djangoapps/branding/api.py:272
 msgid "Open edX"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:272
+#: lms/djangoapps/branding/api.py:273
 msgid "Careers"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:273
+#: lms/djangoapps/branding/api.py:274
 msgid "News"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:286
+#: lms/djangoapps/branding/api.py:287
 msgid "Trademark Policy"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:327
+#: lms/djangoapps/branding/api.py:328
 #, python-brace-format
 msgid "Download the {platform_name} mobile app from the Apple App Store"
 msgstr ""
 
-#: lms/djangoapps/branding/api.py:335
+#: lms/djangoapps/branding/api.py:336
 #, python-brace-format
 msgid "Download the {platform_name} mobile app from Google Play"
 msgstr ""
@@ -6310,7 +6314,7 @@ msgstr ""
 
 #: lms/djangoapps/instructor/views/api.py:1251
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py:105
-#: lms/envs/common.py:2763
+#: lms/envs/common.py:2767
 msgid "Language"
 msgstr ""
 
@@ -8279,262 +8283,6 @@ msgstr ""
 msgid "You do not have permission to view this page."
 msgstr ""
 
-#: lms/djangoapps/static_template_view/faq_content.py:7
-msgid "FAQ_Category1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:10
-msgid "FAQ_Question1.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:10
-msgid "FAQ_Answer1.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:11
-msgid "FAQ_Question1.2"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:11
-msgid "FAQ_Answer1.2"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:12
-msgid "FAQ_Question1.3"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:12
-msgid "FAQ_Answer1.3"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:13
-msgid "FAQ_Question1.4"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:13
-msgid "FAQ_Answer1.4"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:17
-msgid "FAQ_Category2"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:20
-msgid "FAQ_Question2.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:20
-msgid "FAQ_Answer2.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:21
-msgid "FAQ_Question2.2"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:21
-msgid "FAQ_Answer2.2"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:22
-msgid "FAQ_Question2.3"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:22
-msgid "FAQ_Answer2.3"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:23
-msgid "FAQ_Question2.4"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:23
-msgid "FAQ_Answer2.4"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:24
-msgid "FAQ_Question2.5"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:24
-msgid "FAQ_Answer2.5"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:25
-msgid "FAQ_Question2.6"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:25
-msgid "FAQ_Answer2.6"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:26
-msgid "FAQ_Question2.7"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:26
-msgid "FAQ_Answer2.7"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:27
-msgid "FAQ_Question2.8"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:27
-msgid "FAQ_Answer2.8"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:28
-msgid "FAQ_Question2.9"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:28
-msgid "FAQ_Answer2.9"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:29
-msgid "FAQ_Question2.10"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:29
-msgid "FAQ_Answer2.10"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:30
-msgid "FAQ_Question2.11"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:30
-msgid "FAQ_Answer2.11"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:31
-msgid "FAQ_Question2.12"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:31
-msgid "FAQ_Answer2.12"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:32
-msgid "FAQ_Question2.13"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:32
-msgid "FAQ_Answer2.13"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:36
-msgid "FAQ_Category3"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:39
-msgid "FAQ_Question3.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:39
-msgid "FAQ_Answer3.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:40
-msgid "FAQ_Question3.2"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:40
-msgid "FAQ_Answer3.2"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:41
-msgid "FAQ_Question3.3"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:41
-msgid "FAQ_Answer3.3"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:42
-msgid "FAQ_Question3.4"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:42
-msgid "FAQ_Answer3.4"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:46
-msgid "FAQ_Category4"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:49
-msgid "FAQ_Question4.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:49
-msgid "FAQ_Answer4.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:50
-msgid "FAQ_Question4.2"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:50
-msgid "FAQ_Answer4.2"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:51
-msgid "FAQ_Question4.3"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:51
-msgid "FAQ_Answer4.3"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:52
-msgid "FAQ_Question4.4"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:52
-msgid "FAQ_Answer4.4"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:53
-msgid "FAQ_Question4.5"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:53
-msgid "FAQ_Answer4.5"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:57
-msgid "FAQ_Category5"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:60
-msgid "FAQ_Question5.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:60
-msgid "FAQ_Answer5.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:64
-msgid "FAQ_Category6"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:67
-msgid "FAQ_Question6.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:67
-msgid "FAQ_Answer6.1"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:68
-msgid "FAQ_Question6.2"
-msgstr ""
-
-#: lms/djangoapps/static_template_view/faq_content.py:68
-msgid "FAQ_Answer6.2"
-msgstr ""
-
 #: lms/djangoapps/student_account/test/test_views.py:560
 #: openedx/features/enterprise_support/utils.py:146
 #, python-brace-format
@@ -8878,394 +8626,394 @@ msgstr ""
 msgid "Your {platform_name} Verification Has Been Denied"
 msgstr ""
 
-#: lms/envs/common.py:63
+#: lms/envs/common.py:64
 msgid "Your Platform Description Here"
 msgstr ""
 
-#: lms/envs/common.py:699
+#: lms/envs/common.py:700
 msgid "Audit"
 msgstr ""
 
 #. Translators: This is the website name of www.facebook.com.  Please
 #. translate this the way that Facebook advertises in your language.
-#: lms/envs/common.py:2431
+#: lms/envs/common.py:2435
 msgid "Facebook"
 msgstr ""
 
-#: lms/envs/common.py:2433
+#: lms/envs/common.py:2437
 #, python-brace-format
 msgid "Like {platform_name} on Facebook"
 msgstr ""
 
 #. Translators: This is the website name of www.twitter.com.  Please
 #. translate this the way that Twitter advertises in your language.
-#: lms/envs/common.py:2438
+#: lms/envs/common.py:2442
 msgid "Twitter"
 msgstr ""
 
-#: lms/envs/common.py:2440
+#: lms/envs/common.py:2444
 #, python-brace-format
 msgid "Follow {platform_name} on Twitter"
 msgstr ""
 
 #. Translators: This is the website name of www.linkedin.com.  Please
 #. translate this the way that LinkedIn advertises in your language.
-#: lms/envs/common.py:2445
+#: lms/envs/common.py:2449
 msgid "LinkedIn"
 msgstr ""
 
-#: lms/envs/common.py:2447
+#: lms/envs/common.py:2451
 #, python-brace-format
 msgid "Follow {platform_name} on LinkedIn"
 msgstr ""
 
 #. Translators: This is the website name of plus.google.com.  Please
 #. translate this the way that Google+ advertises in your language.
-#: lms/envs/common.py:2452
+#: lms/envs/common.py:2456
 msgid "Google+"
 msgstr ""
 
-#: lms/envs/common.py:2454
+#: lms/envs/common.py:2458
 #, python-brace-format
 msgid "Follow {platform_name} on Google+"
 msgstr ""
 
 #. Translators: This is the website name of www.tumblr.com.  Please
 #. translate this the way that Tumblr advertises in your language.
-#: lms/envs/common.py:2459
+#: lms/envs/common.py:2463
 msgid "Tumblr"
 msgstr ""
 
 #. Translators: This is the website name of www.meetup.com.  Please
 #. translate this the way that MeetUp advertises in your language.
-#: lms/envs/common.py:2465
+#: lms/envs/common.py:2469
 msgid "Meetup"
 msgstr ""
 
 #. Translators: This is the website name of www.reddit.com.  Please
 #. translate this the way that Reddit advertises in your language.
-#: lms/envs/common.py:2471
+#: lms/envs/common.py:2475
 msgid "Reddit"
 msgstr ""
 
-#: lms/envs/common.py:2473
+#: lms/envs/common.py:2477
 #, python-brace-format
 msgid "Subscribe to the {platform_name} subreddit"
 msgstr ""
 
 #. Translators: This is the website name of https://vk.com.  Please
 #. translate this the way that VK advertises in your language.
-#: lms/envs/common.py:2478
+#: lms/envs/common.py:2482
 msgid "VK"
 msgstr ""
 
 #. Translators: This is the website name of http://www.weibo.com.  Please
 #. translate this the way that Weibo advertises in your language.
-#: lms/envs/common.py:2484
+#: lms/envs/common.py:2488
 msgid "Weibo"
 msgstr ""
 
 #. Translators: This is the website name of www.youtube.com.  Please
 #. translate this the way that YouTube advertises in your language.
-#: lms/envs/common.py:2490
+#: lms/envs/common.py:2494
 msgid "Youtube"
 msgstr ""
 
-#: lms/envs/common.py:2492
+#: lms/envs/common.py:2496
 #, python-brace-format
 msgid "Subscribe to the {platform_name} YouTube channel"
 msgstr ""
 
-#: lms/envs/common.py:2684
+#: lms/envs/common.py:2688
 msgid "Polish"
 msgstr ""
 
-#: lms/envs/common.py:2685
+#: lms/envs/common.py:2689
 msgid "English"
 msgstr ""
 
-#: lms/envs/common.py:2689
+#: lms/envs/common.py:2693
 msgid "introductory"
 msgstr ""
 
-#: lms/envs/common.py:2690
+#: lms/envs/common.py:2694
 msgid "intermediate"
 msgstr ""
 
-#: lms/envs/common.py:2691
+#: lms/envs/common.py:2695
 msgid "advanced"
 msgstr ""
 
-#: lms/envs/common.py:2695
+#: lms/envs/common.py:2699
 msgid "Young Science Foundation"
 msgstr ""
 
-#: lms/envs/common.py:2696
+#: lms/envs/common.py:2700
 msgid "Warsaw University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2697
+#: lms/envs/common.py:2701
 msgid "Lodz University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2698
+#: lms/envs/common.py:2702
 msgid "National Information Processing Institute"
 msgstr ""
 
-#: lms/envs/common.py:2699
+#: lms/envs/common.py:2703
 msgid "Helena Chodkowska University of Technology and Economics"
 msgstr ""
 
-#: lms/envs/common.py:2700
+#: lms/envs/common.py:2704
 msgid "Vistula University "
 msgstr ""
 
-#: lms/envs/common.py:2701
+#: lms/envs/common.py:2705
 msgid "Akademia Ignatianum w Krakowie"
 msgstr ""
 
-#: lms/envs/common.py:2702
+#: lms/envs/common.py:2706
 msgid "War Studies University"
 msgstr ""
 
-#: lms/envs/common.py:2703
+#: lms/envs/common.py:2707
 msgid "WSB University"
 msgstr ""
 
-#: lms/envs/common.py:2704
+#: lms/envs/common.py:2708
 msgid "The Witelon State University of Applied Sciences in Legnica"
 msgstr ""
 
-#: lms/envs/common.py:2705
+#: lms/envs/common.py:2709
 msgid "Bialystok University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2706
+#: lms/envs/common.py:2710
 msgid "Czestochowa University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2707
+#: lms/envs/common.py:2711
 msgid "Gdansk University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2708
+#: lms/envs/common.py:2712
 msgid "Cracow University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2709
+#: lms/envs/common.py:2713
 msgid "Public Univerity of Humanities ‘POMERANIA’"
 msgstr ""
 
-#: lms/envs/common.py:2710
+#: lms/envs/common.py:2714
 msgid "Paweł Włodkowic University College in Płock"
 msgstr ""
 
-#: lms/envs/common.py:2711
+#: lms/envs/common.py:2715
 msgid "Poznań University of Economics and Business "
 msgstr ""
 
-#: lms/envs/common.py:2712
+#: lms/envs/common.py:2716
 msgid "Jan Długosz University in Częstochowa "
 msgstr ""
 
-#: lms/envs/common.py:2713
+#: lms/envs/common.py:2717
 msgid "Adam Mickiewicz University in Poznań"
 msgstr ""
 
-#: lms/envs/common.py:2714
+#: lms/envs/common.py:2718
 msgid "Jagiellonian University in Kraków"
 msgstr ""
 
-#: lms/envs/common.py:2715
+#: lms/envs/common.py:2719
 msgid "Cardinal Wyszyński University in Warsaw"
 msgstr ""
 
-#: lms/envs/common.py:2716
+#: lms/envs/common.py:2720
 msgid "Nicolaus Copernicus University in Toruń"
 msgstr ""
 
-#: lms/envs/common.py:2717
+#: lms/envs/common.py:2721
 msgid "Pedagogical University of Krakow"
 msgstr ""
 
-#: lms/envs/common.py:2718
+#: lms/envs/common.py:2722
 msgid "Uniwersytet Szczeciński"
 msgstr ""
 
-#: lms/envs/common.py:2719
+#: lms/envs/common.py:2723
 msgid "University of Silesia in Katowice"
 msgstr ""
 
-#: lms/envs/common.py:2720
+#: lms/envs/common.py:2724
 msgid "UTP University of Science and Technology"
 msgstr ""
 
-#: lms/envs/common.py:2721
+#: lms/envs/common.py:2725
 msgid "Kazimierz Pułaski University of Technology and Humanities in Radom"
 msgstr ""
 
-#: lms/envs/common.py:2722
+#: lms/envs/common.py:2726
 msgid "Military University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2723
+#: lms/envs/common.py:2727
 msgid "College of Business and Entrepreneurship in Ostrowiec Świętokrzyski"
 msgstr ""
 
-#: lms/envs/common.py:2724
+#: lms/envs/common.py:2728
 msgid "Lipinski University"
 msgstr ""
 
-#: lms/envs/common.py:2725
+#: lms/envs/common.py:2729
 msgid "University of Economy in Bydgoszcz"
 msgstr ""
 
-#: lms/envs/common.py:2726
+#: lms/envs/common.py:2730
 msgid "University of Business in Wrocław"
 msgstr ""
 
-#: lms/envs/common.py:2727
+#: lms/envs/common.py:2731
 msgid "TWP Higher School of Humanities"
 msgstr ""
 
-#: lms/envs/common.py:2728
+#: lms/envs/common.py:2732
 msgid "Humanitas University in Sosnowiec"
 msgstr ""
 
-#: lms/envs/common.py:2729
+#: lms/envs/common.py:2733
 msgid "The University of Information Technology and Management in Rzeszów"
 msgstr ""
 
-#: lms/envs/common.py:2730
+#: lms/envs/common.py:2734
 msgid "Academy of European Integration in Szczecin"
 msgstr ""
 
-#: lms/envs/common.py:2731
+#: lms/envs/common.py:2735
 msgid "WSPiA University of Rzeszow"
 msgstr ""
 
-#: lms/envs/common.py:2732
+#: lms/envs/common.py:2736
 msgid "Katowice School of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2733
+#: lms/envs/common.py:2737
 msgid "West Pomeranian Business School"
 msgstr ""
 
-#: lms/envs/common.py:2734
+#: lms/envs/common.py:2738
 msgid "West Pomeranian University of Technology in Szczecin"
 msgstr ""
 
-#: lms/envs/common.py:2735
+#: lms/envs/common.py:2739
 msgid "Copernicus Science Centre"
 msgstr ""
 
-#: lms/envs/common.py:2736
+#: lms/envs/common.py:2740
 msgid "Pomeranian University in Słupsk"
 msgstr ""
 
-#: lms/envs/common.py:2737
+#: lms/envs/common.py:2741
 msgid "Collegium Humanum – Warsaw Management University"
 msgstr ""
 
-#: lms/envs/common.py:2738
+#: lms/envs/common.py:2742
 msgid "Parlament Studentów Rzeczypospolitej Polskiej"
 msgstr ""
 
-#: lms/envs/common.py:2744
+#: lms/envs/common.py:2748
 msgid "Language learning"
 msgstr ""
 
-#: lms/envs/common.py:2745
+#: lms/envs/common.py:2749
 msgid "Humanities"
 msgstr ""
 
-#: lms/envs/common.py:2746
+#: lms/envs/common.py:2750
 msgid "IT & Computer Science"
 msgstr ""
 
-#: lms/envs/common.py:2747
+#: lms/envs/common.py:2751
 msgid "Technology"
 msgstr ""
 
-#: lms/envs/common.py:2748
+#: lms/envs/common.py:2752
 msgid "Agriculture"
 msgstr ""
 
-#: lms/envs/common.py:2749
+#: lms/envs/common.py:2753
 msgid "Social Sciences"
 msgstr ""
 
-#: lms/envs/common.py:2750
+#: lms/envs/common.py:2754
 msgid "Science"
 msgstr ""
 
-#: lms/envs/common.py:2751
+#: lms/envs/common.py:2755
 msgid "Art"
 msgstr ""
 
-#: lms/envs/common.py:2752
+#: lms/envs/common.py:2756
 msgid "Economics & Management"
 msgstr ""
 
-#: lms/envs/common.py:2753
+#: lms/envs/common.py:2757
 msgid "Health sciences"
 msgstr ""
 
-#: lms/envs/common.py:2754
+#: lms/envs/common.py:2758
 msgid "Business"
 msgstr ""
 
-#: lms/envs/common.py:2759
+#: lms/envs/common.py:2763
 #, python-format
 msgid "%d week"
 msgid_plural "%d weeks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: lms/envs/common.py:2766
+#: lms/envs/common.py:2770
 msgid "Course type"
 msgstr ""
 
-#: lms/envs/common.py:2770
+#: lms/envs/common.py:2774
 msgid "audit"
 msgstr ""
 
-#: lms/envs/common.py:2774
+#: lms/envs/common.py:2778
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion/__init__.py:51
 msgid "Category"
 msgstr ""
 
-#: lms/envs/common.py:2778
+#: lms/envs/common.py:2782
 msgid "Institution"
 msgstr ""
 
-#: lms/envs/common.py:2782
+#: lms/envs/common.py:2786
 msgid "Level"
 msgstr ""
 
-#: lms/envs/common.py:2786
+#: lms/envs/common.py:2790
 msgid "Availability"
 msgstr ""
 
-#: lms/envs/common.py:2789
+#: lms/envs/common.py:2793
 msgid "Starting soon"
 msgstr ""
 
-#: lms/envs/common.py:2790
+#: lms/envs/common.py:2794
 msgid "In progress"
 msgstr ""
 
-#: lms/envs/common.py:2870
+#: lms/envs/common.py:2874
 msgid "Kosovo"
 msgstr ""
 
-#: lms/envs/common.py:3279
+#: lms/envs/common.py:3283
 #, python-brace-format
 msgid "Welcome to {platform_name}."
 msgstr ""
 
-#: lms/envs/common.py:3281
+#: lms/envs/common.py:3285
 #, python-brace-format
 msgid ""
 "You have left the {start_bold}{enterprise_name}{end_bold} website and are "
