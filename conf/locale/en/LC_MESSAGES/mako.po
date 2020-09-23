@@ -868,8 +868,8 @@ msgid "Are you sure you want to unenroll from"
 msgstr ""
 
 #: lms/templates/dashboard.html:614 lms/templates/ccx/enrollment.html:58
-#: lms/templates/dashboard/_dashboard_course_listing.html:185
-#: lms/templates/dashboard/_dashboard_course_listing.html:197
+#: lms/templates/dashboard/_dashboard_course_listing.html:203
+#: lms/templates/dashboard/_dashboard_course_listing.html:215
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html:42
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:29
 #: themes/edx.org/lms/templates/dashboard.html:366
@@ -1040,15 +1040,15 @@ msgstr ""
 msgid "Enter your E-mail Address to reset your password"
 msgstr ""
 
-#: lms/templates/forgot_password_modal.html:35 lms/templates/login.html:252
+#: lms/templates/forgot_password_modal.html:36 lms/templates/login.html:252
 msgid "This is the e-mail address you used to register with {platform}"
 msgstr ""
 
-#: lms/templates/forgot_password_modal.html:42
+#: lms/templates/forgot_password_modal.html:43
 msgid "Reset My Password"
 msgstr ""
 
-#: lms/templates/forgot_password_modal.html:57
+#: lms/templates/forgot_password_modal.html:64
 msgid "Email is incorrect."
 msgstr ""
 
@@ -3853,6 +3853,14 @@ msgstr ""
 msgid "needs attention"
 msgstr ""
 
+#: lms/templates/courseware/course_navigation.html:78
+msgid "Course progress"
+msgstr ""
+
+#: lms/templates/courseware/course_navigation.html:78
+msgid "finished lessons"
+msgstr ""
+
 #: lms/templates/courseware/course_updates.html:9
 #: lms/templates/courseware/course_updates.html:39
 msgid "Hide"
@@ -4417,66 +4425,67 @@ msgid ""
 "{cert_name_short}. An honor code {cert_name_short} has been granted instead."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:91
+#: lms/templates/dashboard/_dashboard_course_listing.html:82
+#: lms/templates/dashboard/_dashboard_course_listing.html:111
 msgid "Course organizer"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:114
+#: lms/templates/dashboard/_dashboard_course_listing.html:132
 msgid "Coming Soon"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:119
+#: lms/templates/dashboard/_dashboard_course_listing.html:137
 msgid "Ended - {date}"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:122
+#: lms/templates/dashboard/_dashboard_course_listing.html:140
 msgid "Started - {date}"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:125
-#: lms/templates/dashboard/_dashboard_course_listing.html:129
+#: lms/templates/dashboard/_dashboard_course_listing.html:143
+#: lms/templates/dashboard/_dashboard_course_listing.html:147
 msgid "Starts - {date}"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:147
+#: lms/templates/dashboard/_dashboard_course_listing.html:165
 msgid "You must select a session by {expiration_date} to access the course."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:149
+#: lms/templates/dashboard/_dashboard_course_listing.html:167
 msgid "You must select a session to access the course."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:156
+#: lms/templates/dashboard/_dashboard_course_listing.html:174
 msgid "Change or Leave Session"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:164
+#: lms/templates/dashboard/_dashboard_course_listing.html:182
 msgid "You can no longer change sessions."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:166
+#: lms/templates/dashboard/_dashboard_course_listing.html:184
 msgid "You can change sessions until {entitlement_expiration_date}."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:205
-#: lms/templates/dashboard/_dashboard_course_listing.html:207
+#: lms/templates/dashboard/_dashboard_course_listing.html:223
+#: lms/templates/dashboard/_dashboard_course_listing.html:225
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html:56
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:112
 msgid "Email Settings"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:243
+#: lms/templates/dashboard/_dashboard_course_listing.html:261
 msgid "Related Programs"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:268
+#: lms/templates/dashboard/_dashboard_course_listing.html:286
 msgid ""
 "You can no longer access this course because payment has not yet been "
 "received. You can contact the account holder to request payment, or you can "
 "unenroll from this course"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:272
+#: lms/templates/dashboard/_dashboard_course_listing.html:290
 msgid ""
 "You can no longer access this course because payment has not yet been "
 "received. You can {contact_link_start}contact the account "
@@ -4484,87 +4493,87 @@ msgid ""
 "{unenroll_link_start}unenroll{unenroll_link_end} from this course"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:301
+#: lms/templates/dashboard/_dashboard_course_listing.html:319
 msgid "Verification not yet complete."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:302
+#: lms/templates/dashboard/_dashboard_course_listing.html:320
 msgid "You only have {days} day left to verify for this course."
 msgid_plural "You only have {days} days left to verify for this course."
 msgstr[0] ""
 msgstr[1] ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:308
+#: lms/templates/dashboard/_dashboard_course_listing.html:326
 msgid "Almost there!"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:309
+#: lms/templates/dashboard/_dashboard_course_listing.html:327
 msgid "You still need to verify for this course."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:313
+#: lms/templates/dashboard/_dashboard_course_listing.html:331
 msgid "Verify Now"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:316
+#: lms/templates/dashboard/_dashboard_course_listing.html:334
 msgid "You have submitted your verification information."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:317
+#: lms/templates/dashboard/_dashboard_course_listing.html:335
 msgid ""
 "You will see a message on your dashboard when the verification process is "
 "complete (usually within 1-2 days)."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:319
+#: lms/templates/dashboard/_dashboard_course_listing.html:337
 msgid "Your current verification will expire soon!"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:320
+#: lms/templates/dashboard/_dashboard_course_listing.html:338
 msgid ""
 "You have submitted your reverification information. You will see a message "
 "on your dashboard when the verification process is complete (usually within "
 "1-2 days)."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:322
+#: lms/templates/dashboard/_dashboard_course_listing.html:340
 msgid "You have successfully verified your ID with edX"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:324
+#: lms/templates/dashboard/_dashboard_course_listing.html:342
 msgid "Your current verification is effective until {date}."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:327
+#: lms/templates/dashboard/_dashboard_course_listing.html:345
 msgid "Your current verification will expire soon."
 msgstr ""
 
 #. Translators: start_link and end_link will be replaced with HTML tags;
 #. please do not translate these.
-#: lms/templates/dashboard/_dashboard_course_listing.html:330
+#: lms/templates/dashboard/_dashboard_course_listing.html:348
 msgid ""
 "Your current verification will expire in {days} days. {start_link}Re-verify "
 "your identity now{end_link} using a webcam and a government-issued photo ID."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:345
+#: lms/templates/dashboard/_dashboard_course_listing.html:363
 msgid ""
 "Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
 "this course."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:347
+#: lms/templates/dashboard/_dashboard_course_listing.html:365
 msgid ""
 "It's official. It's easily shareable. It's a proven motivator to complete "
 "the course. {line_break}{link_start}Learn more about the verified "
 "{cert_name_long}{link_end}."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:367
+#: lms/templates/dashboard/_dashboard_course_listing.html:385
 msgid "Upgrade to Verified"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:382
+#: lms/templates/dashboard/_dashboard_course_listing.html:400
 msgid ""
 "You must successfully complete {link_start}{prc_display}{link_end} before "
 "you begin this course."
@@ -8210,6 +8219,14 @@ msgid ""
 "The page that you were looking for was not found. Go back to the "
 "{link_start}homepage{link_end} or let us know about any pages that may have "
 "been moved at {email}."
+msgstr ""
+
+#: lms/templates/static_templates/accessibility.html:5
+msgid "Accessibility Statement"
+msgstr ""
+
+#: lms/templates/static_templates/accessibility.html:12
+msgid "Accessibility Statement for educational platform NAVOICA"
 msgstr ""
 
 #: lms/templates/static_templates/blog.html:5
