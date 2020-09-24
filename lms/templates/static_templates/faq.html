@@ -4,110 +4,176 @@
 
 <%block name="pagetitle">${_("FAQ")}</%block>
 <div class="faq-page">
-    <header id="page-header" class="bg-light">
-        <div class="jumbotron">
-            <div class="container">
-                <h1 class="display-2 text-darkblack text-24">${_("FAQ")}</h1>
-            </div>
-        </div>
-    </header>
+	<header id="page-header" class="bg-light">
+		<div class="jumbotron">
+			<div class="container">
+				<h1 class="display-2 text-darkblack text-24">${_("FAQ")}</h1>
+			</div>
+		</div>
+	</header>
 
     <div id="content" class="bg-light">
         <main class="container" id="skip-main">
 
-            <section>
-                <%block name="pagecontent">
-                    <div id="faq-categories" class="list-group">
+			<section>
+				<%block name="pagecontent">
 
-                         % for i, category in enumerate(page_content, 1):
-                            <% category_identifier = "{:02d}".format(i) %>
-                            <a href="#accordion-anchor-${category_identifier}" class="list-group-item list-group-item-action">
-                                <i class="${category['icon_class']}" aria-hidden="true"></i>
-                                <div>
-                                    <span class="sr-only">${_('Category')}</span>
-                                    <h2 class="text-18">${category['name']}</h2>
-                                </div>
-                            </a>
-                        % endfor
+					<%
+						page_content = [
+							{
+								"name": _("FAQ_Category1"),
+								"icon_class": "fas fa-university",
+								"questions": [
+									(_("FAQ_Question1.1"), _("FAQ_Answer1.1")),
+									(_("FAQ_Question1.2"), _("FAQ_Answer1.2")),
+									(_("FAQ_Question1.3"), _("FAQ_Answer1.3")),
+									(_("FAQ_Question1.4"), _("FAQ_Answer1.4")),
+								],
+							}, {
+								"name": _("FAQ_Category2"),
+								"icon_class": "fas fa-graduation-cap",
+								"questions": [
+									(_("FAQ_Question2.1"), _("FAQ_Answer2.1")),
+									(_("FAQ_Question2.2"), _("FAQ_Answer2.2")),
+									(_("FAQ_Question2.3"), _("FAQ_Answer2.3")),
+									(_("FAQ_Question2.4"), _("FAQ_Answer2.4")),
+									(_("FAQ_Question2.5"), _("FAQ_Answer2.5")),
+									(_("FAQ_Question2.6"), _("FAQ_Answer2.6")),
+									(_("FAQ_Question2.7"), _("FAQ_Answer2.7")),
+									(_("FAQ_Question2.8"), _("FAQ_Answer2.8")),
+									(_("FAQ_Question2.9"), _("FAQ_Answer2.9")),
+									(_("FAQ_Question2.10"), _("FAQ_Answer2.10")),
+									(_("FAQ_Question2.11"), _("FAQ_Answer2.11")),
+									(_("FAQ_Question2.12"), _("FAQ_Answer2.12")),
+									(_("FAQ_Question2.13"), _("FAQ_Answer2.13")),
+								],
+							}, {
+								"name": _("FAQ_Category3"),
+								"icon_class": "fas fa-bug",
+								"questions": [
+									(_("FAQ_Question3.1"), _("FAQ_Answer3.1")),
+									(_("FAQ_Question3.2"), _("FAQ_Answer3.2")),
+									(_("FAQ_Question3.3"), _("FAQ_Answer3.3")),
+									(_("FAQ_Question3.4"), _("FAQ_Answer3.4")),
+								]
+							}, {
+								"name": _("FAQ_Category4"),
+								"icon_class": "fas fa-award",
+								"questions": [
+									(_("FAQ_Question4.1"), _("FAQ_Answer4.1")),
+									(_("FAQ_Question4.2"), _("FAQ_Answer4.2")),
+									(_("FAQ_Question4.3"), _("FAQ_Answer4.3")),
+									(_("FAQ_Question4.4"), _("FAQ_Answer4.4")),
+									(_("FAQ_Question4.5"), _("FAQ_Answer4.5")),
+								]
+							}, {
+								"name": _("FAQ_Category5"),
+								"icon_class": "far fa-id-badge",
+								"questions": [
+									(_("FAQ_Question5.1"), _("FAQ_Answer5.1")),
+								]
+							}, {
+								"name": _("FAQ_Category6"),
+								"icon_class": "far fa-envelope",
+								"questions": [
+									(_("FAQ_Question6.1"), _("FAQ_Answer6.1")),
+									(_("FAQ_Question6.2"), _("FAQ_Answer6.2")),
+								]
+							}
+						]
+					%>
 
-                    </div>
+					<div id="faq-categories" class="list-group">
 
-                    % for i, category in enumerate(page_content, 1):
-                        <% category_identifier = "{:02d}".format(i) %>
-                        <div class="accordion-wrapper">
-                            <!-- Category of questions -->
-                            <!-- show answers -->
-                            <div class="accordion-anchor" id="accordion-anchor-${category_identifier}">
-                            </div>
+						 % for i, category in enumerate(page_content, 1):
+							<% category_identifier = "{:02d}".format(i) %>
+							<a href="#accordion-anchor-${category_identifier}" class="list-group-item list-group-item-action">
+								<i class="${category['icon_class']}" aria-hidden="true"></i>
+								<div>
+									<span class="sr-only">${_('Category')}</span>
+									<h2 class="text-18">${category['name']}</h2>
+								</div>
+							</a>
+						% endfor
 
-                            <div class="accordion-switch">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" value="" name="show-answers-${category_identifier}" id="show-answers-${category_identifier}">
-                                    <label for="show-answers-${category_identifier}" class="custom-control-label">${_("show answers")} <span class="sr-only">${_('Category')} ${category['name']}</span></label>
-                                </div>
-                            </div>
-                            <!-- category -->
-                            <div class="accordion faq">
-                                <div class="card">
-                                    <div class="card-header" id="heading-${category_identifier}">
-                                        <button class="btn btn-link btn-cat my-0" type="button"
-                                                data-toggle="collapse" data-target="#collapse-${category_identifier}" aria-expanded="true" aria-controls="collapse-${category_identifier}" tabindex="0">
-                                                ${category['name']}:
-                                        </button>
-                                    </div>
+					</div>
 
-                                    <div class="collapse show" aria-labelledby="heading-${category_identifier}" id="collapse-${category_identifier}">
-                                        <div class="card-body">
-                                            <div class="accordion">
-                                            % for j, question_answer in enumerate(category['questions'], 1):
-                                            <% question_identifier = "{:02d}-{:02d}".format(i, j) %>
-                                                <div class="card">
-                                                    <div class="card-header" id="heading-${question_identifier}">
-                                                        <button class="btn btn-link my-0" type="button" data-toggle="collapse" data-target="#collapse-${question_identifier}" aria-expanded="false"
-                                                                aria-controls="collapse-${question_identifier}" aria-describedby="description-${question_identifier}" tabindex="0">
-                                                                ${question_answer[0]}
-                                                        </button>
-                                                    </div>
-                                                    <div id="collapse-${question_identifier}" class="collapse" aria-labelledby="heading-${question_identifier}">
-                                                        <div class="card-body">
-                                                            <p id="description-${question_identifier}">${question_answer[1]}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+					% for i, category in enumerate(page_content, 1):
+						<% category_identifier = "{:02d}".format(i) %>
+						<div class="accordion-wrapper">
+							<!-- Category of questions -->
+							<!-- show answers -->
+							<div class="accordion-anchor" id="accordion-anchor-${category_identifier}">
+							</div>
 
-                                            % endfor
-                                            </div>   <!-- accordion -->
-                                        </div>   <!-- card-body -->
-                                    </div>  <!-- collapse show -->
-                                </div> <!-- card -->
-                            </div>  <!-- accordion faq -->
-                        </div>  <!-- accordion-wrapper -->
-                        % endfor
+							<div class="accordion-switch">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" value="" name="show-answers-${category_identifier}" id="show-answers-${category_identifier}">
+									<label for="show-answers-${category_identifier}" class="custom-control-label">${_("show answers")} <span class="sr-only">${_('Category')} ${category['name']}</span></label>
+								</div>
+							</div>
+							<!-- category -->
+							<div class="accordion faq">
+								<div class="card">
+									<div class="card-header" id="heading-${category_identifier}">
+										<button class="btn btn-link btn-cat my-0" type="button"
+												data-toggle="collapse" data-target="#collapse-${category_identifier}" aria-expanded="true" aria-controls="collapse-${category_identifier}" tabindex="0">
+												${category['name']}:
+										</button>
+									</div>
+
+									<div class="collapse show" aria-labelledby="heading-${category_identifier}" id="collapse-${category_identifier}">
+										<div class="card-body">
+											<div class="accordion">
+											% for j, question_answer in enumerate(category['questions'], 1):
+											<% question_identifier = "{:02d}-{:02d}".format(i, j) %>
+												<div class="card">
+													<div class="card-header" id="heading-${question_identifier}">
+														<button class="btn btn-link my-0" type="button" data-toggle="collapse" data-target="#collapse-${question_identifier}" aria-expanded="false"
+																aria-controls="collapse-${question_identifier}" aria-describedby="description-${question_identifier}" tabindex="0">
+																${question_answer[0]}
+														</button>
+													</div>
+													<div id="collapse-${question_identifier}" class="collapse" aria-labelledby="heading-${question_identifier}">
+														<div class="card-body">
+															<p id="description-${question_identifier}">${question_answer[1]}</p>
+														</div>
+													</div>
+												</div>
+
+											% endfor
+											</div>   <!-- accordion -->
+										</div>   <!-- card-body -->
+									</div>  <!-- collapse show -->
+								</div> <!-- card -->
+							</div>  <!-- accordion faq -->
+						</div>  <!-- accordion-wrapper -->
+						% endfor
 
 
 
-                <script src="js/jquery.min.js"></script>
-                <script src="js/popper.min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
+				<script src="js/jquery.min.js"></script>
+				<script src="js/popper.min.js"></script>
+				<script src="js/bootstrap.min.js"></script>
 
-                <script type="text/javascript">
-                    $( document ).ready(function() {
-                        $('.accordion-switch input').change(function () {
-                            var state = this.checked;
-                            var accordion = $(this).parents('.accordion-switch').siblings('.accordion');
-                            var collapseTarget = accordion.find('.accordion button[aria-expanded]');
-                            if (this.checked) {
-                                accordion.find('.collapse').collapse('show');
-                                collapseTarget.attr('aria-expanded', 'true');
-                            } else {
-                                accordion.find('.accordion .collapse').collapse('hide');
-                                collapseTarget.attr('aria-expanded', 'false');
-                            }
-                        });
-                    });
-                </script>
-                </%block>
-            </section>
-        </main>
-    </div>
+				<script type="text/javascript">
+					$( document ).ready(function() {
+						$('.accordion-switch input').change(function () {
+							var state = this.checked;
+							var accordion = $(this).parents('.accordion-switch').siblings('.accordion');
+							var collapseTarget = accordion.find('.accordion button[aria-expanded]');
+							if (this.checked) {
+								accordion.find('.collapse').collapse('show');
+								collapseTarget.attr('aria-expanded', 'true');
+							} else {
+								accordion.find('.accordion .collapse').collapse('hide');
+								collapseTarget.attr('aria-expanded', 'false');
+							}
+						});
+					});
+				</script>
+				</%block>
+			</section>
+		</main>
+	</div>
 </div>

@@ -5,11 +5,11 @@ from django.core.urlresolvers import reverse
 
 
 <aside id="filter" class="sidebar">
-  <header class="header-login">
-    <h2 id="h2">
+  <div class="header-login">
+    <h2 class="custom-h2">
       <span class="d-none d-md-block">${_("Helpful Information")}</span>
     </h2>
-  </header>
+  </div>
 
       % if settings.FEATURES.get('AUTH_USE_OPENID'):
     <!-- <div class="cta cta-login-options-openid">
@@ -44,8 +44,8 @@ from django.core.urlresolvers import reverse
          </div>
        </li>
      </ul>
-    <a href="https://www.facebook.com/NAVOICA/" target="_blank" title="${_('Navoica page on Facebook')}" class="fb-link-icon-big center">
-        <i class="fab fa-facebook-f m-auto"></i>
+    <a href="https://www.facebook.com/NAVOICA/" target="_blank" class="fb-link-icon-big center">
+        <i class="fab fa-facebook-f m-auto" title="${_('Navoica page on Facebook')}"></i>
         <span class="sr">${_('open in a new window')}</span>
     </a>
    </div>
