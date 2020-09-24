@@ -13330,13 +13330,6 @@ span.complete-checkmark.fa.fa-check {
   padding-top: 1rem;
 }
 
-
-
-#results #h2, #results .custom-h2 {
-//  display: flex;
-//  flex-direction: column-reverse;
-}
-
 #main {
   margin: 0 auto !important;
 }
@@ -13792,7 +13785,7 @@ span.complete-checkmark.fa.fa-check {
 
     .course-preview-title .provider, .course-preview-title .course-name {
       font-size: 1rem;
-      line-height: 1.2rem;
+      line-height: 1.3rem;
     }
 
     .desktop-menu, .my-account {
@@ -13818,7 +13811,7 @@ span.complete-checkmark.fa.fa-check {
 
     .course-preview-title .provider, .course-preview-title .course-name {
       font-size: 0.9rem;
-      line-height: 1.1rem;
+      line-height: 1.3rem;
     }
 
     .desktop-menu {
@@ -13925,6 +13918,16 @@ span.complete-checkmark.fa.fa-check {
   line-height: 0;
 }
 
+@media (min-width: 480px) {
+  #header-navigation .course-preview-title{
+   .course-name, .provider {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   }
+  }
+}
+
 .d-none {
   & #header-navigation {
     display: none;
@@ -14008,3 +14011,20 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   padding-bottom: 0;
 }
 
+//A11Y
+
+.a11y-page header#page-header {
+  background-image: url("/static/images/photo-keyboard.jpeg");
+  background-position: 100% 40%;
+}
+
+.a11y-page .jumbotron {
+  background: rgba(255, 255, 255, 0.90);
+  padding: 24px 0;
+  margin: 0;
+}
+
+.a11y-page h1 {
+  margin-bottom: 0;
+  font-weight: 700;
+}

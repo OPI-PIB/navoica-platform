@@ -148,11 +148,11 @@ import calendar
         </article>
 
         <aside id="filter" class="sidebar">
-          <header class="header-login">
+          <div class="header-login">
             <h2 id="h2">
               <span class="d-none d-md-block">${_("Helpful Information")}</span>
             </h2>
-          </header>
+          </div>
             <%
             # allow for theming overrides on the registration sidebars, otherwise default to pre-existing ones
             sidebar_file = static.get_template_path('register-sidebar.html')
