@@ -33,7 +33,7 @@ from xmodule.modulestore.modulestore_settings import convert_module_store_settin
 from django.utils.translation import ugettext_lazy as _
 
 import sentry_sdk
-sentry_sdk.init(os.environ.get('SENTRY_URL_LMS', None))
+
 
 INTERNAL_HOST_IP = os.environ.get('INTERNAL_HOST_IP', None)
 
@@ -118,6 +118,10 @@ CELERYBEAT_SCHEDULE = {}  # For scheduling tasks, entries can be added to this d
 
 with open(CONFIG_ROOT / CONFIG_PREFIX + "env.json") as env_file:
     ENV_TOKENS = json.load(env_file)
+
+# initialize sentry logging; if None then its disabled
+sentry_sdk.init(ENV_TOKENS.get('SENTRY_URL', None))
+
 # STATIC_ROOT specifies the directory where static files are
 # collected
 STATIC_ROOT_BASE = ENV_TOKENS.get('STATIC_ROOT_BASE', None)
