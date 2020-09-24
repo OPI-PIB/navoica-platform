@@ -142,7 +142,10 @@ urlpatterns = [
 
     url(r'^dashboard/', include('learner_dashboard.urls')),
     url(r'^api/experiments/', include('experiments.urls', namespace='api_experiments')),
-    url(r'^sitemap\.xml$', sitemap,  {'sitemaps': {'courses': CourseOverviewSitemap() }},name='django.contrib.sitemaps.views.sitemap')
+    url(r'^sitemap\.xml$', sitemap,  {'sitemaps': {'courses': CourseOverviewSitemap() }},name='django.contrib.sitemaps.views.sitemap'),
+
+    # URLs API
+    url(r'^api/navoica/', include('navoica_api.api.urls', namespace='navoica_api')),
 
 ]
 #robots.txt
@@ -667,10 +670,10 @@ urlpatterns += [
     ),
 
     # Learner profile
-    url(
-        r'^u/',
-        include('openedx.features.learner_profile.urls'),
-    ),
+    # url(
+    #     r'^u/',
+    #     include('openedx.features.learner_profile.urls'),
+    # ),
 
     # Learner analytics dashboard
     url(

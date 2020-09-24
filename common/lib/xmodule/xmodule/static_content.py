@@ -201,9 +201,13 @@ def main():
         installed_apps += ('edxval',)
     except ImportError:
         pass
-    settings.configure(
-        INSTALLED_APPS=installed_apps,
-    )
+    if not settings.configured:
+        settings.configure(
+            INSTALLED_APPS=installed_apps,
+        )
+    else:
+        settings.INSTALLED_APPS=installed_apps
+
     django.setup()
 
     args = docopt(main.__doc__)

@@ -1,6 +1,7 @@
 """ API v0 views. """
 import logging
 
+from django.http import HttpResponse
 from edx_rest_framework_extensions.authentication import JwtAuthentication
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey
@@ -10,6 +11,7 @@ from rest_framework.response import Response
 
 from lms.djangoapps.certificates.api import get_certificate_for_user
 from openedx.core.lib.api import authentication, permissions
+from student.models import CourseEnrollmentManager
 
 log = logging.getLogger(__name__)
 
@@ -118,3 +120,96 @@ class CertificatesDetailView(GenericAPIView):
                 "grade": user_cert.get('grade')
             }
         )
+
+class CertificatesListView(GenericAPIView):
+    """
+        **Use Case**
+
+            * Get the list of a certificate for a specific course_id
+
+        **Example Request**
+
+            GET /api/certificates/v0/certificates/courses/{course_id}
+
+        **GET Parameters**
+
+            A GET request must include the following parameters.
+
+            * course_id: A string representation of a Course ID.
+
+    """
+
+    authentication_classes = (
+        authentication.OAuth2AuthenticationAllowInactiveUser,
+        authentication.SessionAuthenticationAllowInactiveUser,
+        JwtAuthentication,
+    )
+    permission_classes = (
+        IsAuthenticated,
+        permissions.IsStaff
+    )
+
+    def get(self, request, course_id):
+        """
+        Gets a certificate information.
+
+        Args:
+            request (Request): Django request object.
+            course_id (string): URI element specifying the course location.
+
+        Return:
+            if application/json
+                A JSON serialized representation of the certificate.
+            if application/html
+                HttpResponse with table
+        """
+        try:
+            course_key = CourseKey.from_string(course_id)
+        except InvalidKeyError:
+            log.warning('Course ID string "%s" is not valid', course_id)
+            return Response(
+                status=404,
+                data={'error_code': 'course_id_not_valid'}
+            )
+
+        course_enrollment_manager = CourseEnrollmentManager()
+        students_enrollments_in_course = course_enrollment_manager.users_enrolled_in(
+            course_id=course_key, include_inactive=True)
+
+        users_cert = []
+        for student in students_enrollments_in_course:
+            user_cert = get_certificate_for_user(username=student, course_key=course_key)
+            if user_cert is not None:
+                users_cert.append({
+                    "profile_name": user_cert.get('username').profile.name,
+                    "username": user_cert.get('username').username,
+                    "e_mail": user_cert.get('username').email,
+                    "course_id": unicode(user_cert.get('course_key')),
+                    "certificate_type": user_cert.get('type'),
+                    "created_date": user_cert.get('created'),
+                    "status": user_cert.get('status'),
+                    "is_passing": user_cert.get('is_passing'),
+                    "download_url": user_cert.get('download_url'),
+                    "grade": user_cert.get('grade')
+                })
+
+        # temporary used. it will be removed, when application/json will be implemented in instructor_dashboard
+        if 'text/html' in request.META.get('HTTP_ACCEPT', 'text/html'):
+            html = ['<table>']
+            html.append('''<tr><th>Lp.</th><th>profile_name</th><th>username</th>
+                            <th>e-mail</th><th>created_date</th></tr>''')
+            n=0
+            for user_cert in users_cert:
+                n += 1
+                html.append('<tr>')
+                html.append('<td>{}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td>'.format(
+                    n, user_cert['profile_name'], user_cert['username'],
+                    user_cert['e_mail'],user_cert['created_date']))
+                html.append('</tr>')
+            html.append('</table>')
+            return HttpResponse(''.join(html))
+
+        # TO DO: add pagination
+        elif "application/json" in request.META.get('HTTP_ACCEPT'):
+            return Response(users_cert)
+

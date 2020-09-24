@@ -45,15 +45,7 @@ course_mode_class = course_mode if course_mode else ''
                             <div id="authentication-note">
                                 <div class="hr"></div>
                                 <p>Dokument poświadcza ukończenie kursu <strong>${accomplishment_copy_course_name}</strong> na platformie Navoica, którego organizatorem jest ${organizer}.</p>
-                                <%
-                                    if request:
-                                        certificate_url = request.build_absolute_uri()
-                                        if '/pdf' in certificate_url:
-                                            certificate_url = certificate_url.replace('/pdf','')
-                                %>
-                                % if certificate_url:
-                                    <a href="${certificate_url}">weryfikacja</a>
-                                % endif
+                                <a href="${settings.LMS_ROOT_URL}${certificate_absolute_url}">weryfikacja</a>
                             </div>
                         </div>
                         % if certificate_data:

@@ -96,3 +96,8 @@ ENABLE_ES_INDEX_PREFIX = True
 ES_INDEX_PREFIX = "lh__"
 if ENABLE_ES_INDEX_PREFIX:
     COURSEWARE_INDEX_NAME = ES_INDEX_PREFIX + "courseware_index"
+
+######################NAVOICA_SANDBOX###########################################
+
+NAVOICA_SANDBOX = True
+NAVOICA_SANDBOX_URL = 'http://navoica.devstack.sandbox:8111/sandbox'

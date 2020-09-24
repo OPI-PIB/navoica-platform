@@ -250,7 +250,7 @@ FEATURES = {
     'ENABLE_CONTENT_LIBRARIES': True,
 
     # Milestones application flag
-    'MILESTONES_APP': False,
+    'MILESTONES_APP': True,
 
     # Prerequisite courses feature flag
     'ENABLE_PREREQUISITE_COURSES': False,
@@ -751,6 +751,7 @@ PIPELINE_CSS = {
             'css/vendor/jquery.qtip.min.css',
             'js/vendor/markitup/skins/simple/style.css',
             'js/vendor/markitup/sets/wiki/style.css',
+            'js/vendor/tinymce/js/tinymce/plugins/codesample/css/prism.css',
         ],
         'output_filename': 'css/cms-style-vendor.css',
     },
@@ -832,7 +833,8 @@ base_vendor_js = [
     'common/js/vendor/bootstrap.js',
 
     # Finally load RequireJS
-    'common/js/vendor/require.js'
+    'common/js/vendor/require.js',
+    'js/vendor/prism.js',
 ]
 
 # test_order: Determines the position of this chunk of javascript on

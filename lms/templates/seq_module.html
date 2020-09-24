@@ -17,14 +17,14 @@
         <aside class="sidebar">
             <header>
                 <h2>
-                    <span class="d-none d-md-block">Zawartość jednostki lekcyjnej</span>
+                    <span class="d-none d-md-block">${_('Subsection Content')}</span>
                 </h2>
             </header>
-            <a href="#sequence" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">Zawartość jednostki lekcyjnej</a>
+            <a href="#sequence" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">${_('Subsection Content')}</a>
             <div class="xblock xblock-student_view xblock-student_view-sequential xmodule_display xmodule_SequenceModule xblock-initialized">
                 <div id="sequence" class="sequence collapse">
                     <div class="sequence-nav">
-                        <nav class="sequence-list-wrapper" aria-label="Sekwencja">
+                        <nav class="sequence-list-wrapper" aria-label="${_('Sequence')}">
                             <ul id="sequence-list" class="course-details list-group list-group-flush mb-3">
 
                                 % if gated_content['gated']:
@@ -73,13 +73,13 @@
 
         <article id="results">
             <header class="d-flex justify-content-between">
-                <h2>Treść jednostki lekcyjnej</h2>
+                <h2>${_('Unit Content')}</h2>
                 <div>
-                    <button class="btn btn-sm btn-outline-primary sequence-nav-button button-previous">
+                    <button class="btn btn-sm btn-outline-primary sequence-nav-button button-previous js-sequence-btn-prev">
                         <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
                         <span class="sequence-nav-button-label">${_('Previous')}</span>
                     </button>
-                    <button class="btn btn-sm btn-outline-primary sequence-nav-button button-next">
+                    <button class="btn btn-sm btn-outline-primary sequence-nav-button button-next js-sequence-btn-next">
                         <span class="sequence-nav-button-label">${_('Next')}</span>
                         <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
                     </button>
@@ -125,11 +125,11 @@
 
             <div>
 				<nav class="sequence-bottom" aria-label="${_('Section')}">
-					<button class="btn btn-sm btn-outline-primary sequence-nav-button button-previous">
+					<button class="btn btn-sm btn-outline-primary sequence-nav-button button-previous js-sequence-btn-prev">
 						<span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
 						<span class="sequence-nav-button-label">${_('Previous')}</span>
 					</button>
-					<button class="btn btn-sm btn-outline-primary sequence-nav-button button-next">
+					<button class="btn btn-sm btn-outline-primary sequence-nav-button button-next js-sequence-btn-next">
 						<span class="sequence-nav-button-label">${_('Next')}</span>
 						<span class="icon fa fa-chevron-next" aria-hidden="true"></span>
 					</button>
