@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-09-07 11:47+0000\n"
-"PO-Revision-Date: 2020-09-07 11:48:37.917042\n"
+"POT-Creation-Date: 2020-09-23 12:53+0000\n"
+"PO-Revision-Date: 2020-09-23 12:54:35.274496\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -272,8 +272,13 @@ msgstr ""
 msgid "Course End Date"
 msgstr ""
 
-#: cms/templates/settings.html:315 lms/templates/preview_menu.html:93
-#: lms/templates/preview_menu.html:147
+#: cms/templates/settings.html:305
+#: lms/templates/courseware/course_about.html:288
+msgid "Course Difficulty"
+msgstr ""
+
+#: cms/templates/settings.html:315 lms/templates/preview_menu.html:103
+#: lms/templates/preview_menu.html:148
 msgid "Course Organizer"
 msgstr ""
 
@@ -296,7 +301,6 @@ msgstr[1] ""
 
 #: cms/templates/settings.html:373
 #: lms/templates/courseware/course_about.html:235
-#: lms/templates/courseware/course_about.html:288
 msgid "Course Description"
 msgstr ""
 
@@ -1588,41 +1592,42 @@ msgstr ""
 msgid "You do not have any notes."
 msgstr ""
 
-#: lms/templates/preview_menu.html:48 lms/templates/preview_menu.html:141
-#: lms/templates/dashboard/_dashboard_course_listing.html:99
+#: lms/templates/preview_menu.html:58 lms/templates/preview_menu.html:142
+#: lms/templates/dashboard/_dashboard_course_listing.html:89
+#: lms/templates/dashboard/_dashboard_course_listing.html:118
 msgid "Course edition"
 msgstr ""
 
-#: lms/templates/preview_menu.html:56
+#: lms/templates/preview_menu.html:66
 msgid "View this course as"
 msgstr ""
 
-#: lms/templates/preview_menu.html:58 lms/templates/preview_menu.html:197
+#: lms/templates/preview_menu.html:68 lms/templates/preview_menu.html:197
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:165
 msgid "Staff"
 msgstr ""
 
-#: lms/templates/preview_menu.html:59 lms/templates/preview_menu.html:198
+#: lms/templates/preview_menu.html:69 lms/templates/preview_menu.html:198
 msgid "Learner"
 msgstr ""
 
-#: lms/templates/preview_menu.html:60 lms/templates/preview_menu.html:199
+#: lms/templates/preview_menu.html:70 lms/templates/preview_menu.html:199
 msgid "Specific learner"
 msgstr ""
 
-#: lms/templates/preview_menu.html:64 lms/templates/preview_menu.html:203
+#: lms/templates/preview_menu.html:74 lms/templates/preview_menu.html:203
 msgid "Learner in {content_group}"
 msgstr ""
 
-#: lms/templates/preview_menu.html:71 lms/templates/preview_menu.html:210
+#: lms/templates/preview_menu.html:81 lms/templates/preview_menu.html:210
 msgid "Username or email:"
 msgstr ""
 
-#: lms/templates/preview_menu.html:74 lms/templates/preview_menu.html:213
+#: lms/templates/preview_menu.html:84 lms/templates/preview_menu.html:213
 msgid "Set preview mode"
 msgstr ""
 
-#: lms/templates/preview_menu.html:79 lms/templates/preview_menu.html:218
+#: lms/templates/preview_menu.html:89 lms/templates/preview_menu.html:218
 msgid "You are now viewing the course as {i_start}{user_name}{i_end}."
 msgstr ""
 
@@ -8299,12 +8304,268 @@ msgstr ""
 msgid "FAQ"
 msgstr ""
 
+#: lms/templates/static_templates/faq.html:24
+msgid "FAQ_Category1"
+msgstr ""
+
 #: lms/templates/static_templates/faq.html:27
-#: lms/templates/static_templates/faq.html:46
-msgid "Category"
+msgid "FAQ_Question1.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:27
+msgid "FAQ_Answer1.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:28
+msgid "FAQ_Question1.2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:28
+msgid "FAQ_Answer1.2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:29
+msgid "FAQ_Question1.3"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:29
+msgid "FAQ_Answer1.3"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:30
+msgid "FAQ_Question1.4"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:30
+msgid "FAQ_Answer1.4"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:33
+msgid "FAQ_Category2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:36
+msgid "FAQ_Question2.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:36
+msgid "FAQ_Answer2.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:37
+msgid "FAQ_Question2.2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:37
+msgid "FAQ_Answer2.2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:38
+msgid "FAQ_Question2.3"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:38
+msgid "FAQ_Answer2.3"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:39
+msgid "FAQ_Question2.4"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:39
+msgid "FAQ_Answer2.4"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:40
+msgid "FAQ_Question2.5"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:40
+msgid "FAQ_Answer2.5"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:41
+msgid "FAQ_Question2.6"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:41
+msgid "FAQ_Answer2.6"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:42
+msgid "FAQ_Question2.7"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:42
+msgid "FAQ_Answer2.7"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:43
+msgid "FAQ_Question2.8"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:43
+msgid "FAQ_Answer2.8"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:44
+msgid "FAQ_Question2.9"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:44
+msgid "FAQ_Answer2.9"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:45
+msgid "FAQ_Question2.10"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:45
+msgid "FAQ_Answer2.10"
 msgstr ""
 
 #: lms/templates/static_templates/faq.html:46
+msgid "FAQ_Question2.11"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:46
+msgid "FAQ_Answer2.11"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:47
+msgid "FAQ_Question2.12"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:47
+msgid "FAQ_Answer2.12"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:48
+msgid "FAQ_Question2.13"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:48
+msgid "FAQ_Answer2.13"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:51
+msgid "FAQ_Category3"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:54
+msgid "FAQ_Question3.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:54
+msgid "FAQ_Answer3.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:55
+msgid "FAQ_Question3.2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:55
+msgid "FAQ_Answer3.2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:56
+msgid "FAQ_Question3.3"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:56
+msgid "FAQ_Answer3.3"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:57
+msgid "FAQ_Question3.4"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:57
+msgid "FAQ_Answer3.4"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:60
+msgid "FAQ_Category4"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:63
+msgid "FAQ_Question4.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:63
+msgid "FAQ_Answer4.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:64
+msgid "FAQ_Question4.2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:64
+msgid "FAQ_Answer4.2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:65
+msgid "FAQ_Question4.3"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:65
+msgid "FAQ_Answer4.3"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:66
+msgid "FAQ_Question4.4"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:66
+msgid "FAQ_Answer4.4"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:67
+msgid "FAQ_Question4.5"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:67
+msgid "FAQ_Answer4.5"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:70
+msgid "FAQ_Category5"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:73
+msgid "FAQ_Question5.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:73
+msgid "FAQ_Answer5.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:76
+msgid "FAQ_Category6"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:79
+msgid "FAQ_Question6.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:79
+msgid "FAQ_Answer6.1"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:80
+msgid "FAQ_Question6.2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:80
+msgid "FAQ_Answer6.2"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:93
+#: lms/templates/static_templates/faq.html:112
+msgid "Category"
+msgstr ""
+
+#: lms/templates/static_templates/faq.html:112
 msgid "show answers"
 msgstr ""
 
