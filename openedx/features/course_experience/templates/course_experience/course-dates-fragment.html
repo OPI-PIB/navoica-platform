@@ -7,14 +7,16 @@
 <%!
 from django.utils.translation import ugettext as _
 %>
-<header id="courses-list-header">
-   <h2 id="h2">
+<header class="courses-list-header">
+   <h2 class="custom-h2">
 	<span class="d-none d-md-block">${_("Important Course Dates")}</span>
     </h2>
 </header>
 ## Should be organized by date, last date appearing at the bottom
 
+<ul class="px-0">
 % for course_date in course_date_blocks:
     <%include file="dates-summary.html" args="course_date=course_date" />
 % endfor
+</ul>
 
