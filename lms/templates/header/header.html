@@ -54,13 +54,13 @@ HeaderFactory();
 
             <span id="" class="course-preview-title d-flex flex-column flex-wrap mr-auto">
               % if course.organizer:
-                          <span class="provider w-100 font-weight-bold">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</span><br>
+                          <span class="provider w-100 font-weight-bold" title="${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</span><br>
 
              % else:
-                          <span class="provider w-100 font-weight-bold">${course.display_org_with_default}</span><br>
+                          <span class="provider w-100 font-weight-bold" title="${course.display_org_with_default}">${course.display_org_with_default}</span><br>
 
               % endif
-             <span class="course-name w-100">${course.display_name_with_default}</span>
+             <span class="course-name w-100" title="${course.display_name_with_default}">${course.display_name_with_default}</span>
            </span>
 
             % else:
@@ -81,7 +81,7 @@ HeaderFactory();
 
             % endif
 
-            <nav aria-label="Nawiguj do wybranych stron platformy Nawojka">
+            <nav  role= "navigation" aria-label="Nawiguj do wybranych stron platformy Nawojka">
 
                 <div class="dropdown ml-auto">
                     <button id="mooc-my-mooc"

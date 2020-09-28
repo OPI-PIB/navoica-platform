@@ -33,7 +33,7 @@ from xmodule.modulestore.modulestore_settings import convert_module_store_settin
 from django.utils.translation import ugettext_lazy as _
 
 import sentry_sdk
-sentry_sdk.init(os.environ.get('SENTRY_URL_LMS', None))
+
 
 INTERNAL_HOST_IP = os.environ.get('INTERNAL_HOST_IP', None)
 
@@ -118,6 +118,10 @@ CELERYBEAT_SCHEDULE = {}  # For scheduling tasks, entries can be added to this d
 
 with open(CONFIG_ROOT / CONFIG_PREFIX + "env.json") as env_file:
     ENV_TOKENS = json.load(env_file)
+
+# initialize sentry logging; if None then its disabled
+sentry_sdk.init(ENV_TOKENS.get('SENTRY_URL', None))
+
 # STATIC_ROOT specifies the directory where static files are
 # collected
 STATIC_ROOT_BASE = ENV_TOKENS.get('STATIC_ROOT_BASE', None)
@@ -145,6 +149,7 @@ MEDIA_URL = ENV_TOKENS.get('MEDIA_URL', MEDIA_URL)
 
 PLATFORM_NAME = ENV_TOKENS.get('PLATFORM_NAME', PLATFORM_NAME)
 PLATFORM_DESCRIPTION = ENV_TOKENS.get('PLATFORM_DESCRIPTION', PLATFORM_DESCRIPTION)
+PRODUCTION = ENV_TOKENS.get('PRODUCTION', PRODUCTION)
 # For displaying on the receipt. At Stanford PLATFORM_NAME != MERCHANT_NAME, but PLATFORM_NAME is a fine default
 PLATFORM_TWITTER_ACCOUNT = ENV_TOKENS.get('PLATFORM_TWITTER_ACCOUNT', PLATFORM_TWITTER_ACCOUNT)
 PLATFORM_FACEBOOK_ACCOUNT = ENV_TOKENS.get('PLATFORM_FACEBOOK_ACCOUNT', PLATFORM_FACEBOOK_ACCOUNT)

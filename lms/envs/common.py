@@ -59,6 +59,7 @@ EDX_ROOT = path(__file__).abspath().dirname().dirname().dirname()  # /edx-platfo
 
 ################################### FEATURES ###################################
 # The display name of the platform to be used in templates/emails/etc.
+PRODUCTION = False
 PLATFORM_NAME = "Navoica.pl"
 PLATFORM_DESCRIPTION = _('Your Platform Description Here')
 CC_MERCHANT_NAME = PLATFORM_NAME
@@ -2312,6 +2313,9 @@ INSTALLED_APPS = [
     'poll',
 
     'xblock_jupyter_graded',
+
+    # Navoica API
+    'navoica_api',
 ]
 
 ######################### CSRF #########################################

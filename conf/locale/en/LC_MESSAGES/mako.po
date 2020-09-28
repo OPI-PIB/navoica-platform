@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-09-23 12:53+0000\n"
-"PO-Revision-Date: 2020-09-23 12:54:35.274496\n"
+"POT-Creation-Date: 2020-09-07 11:47+0000\n"
+"PO-Revision-Date: 2020-09-07 11:48:37.917042\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -272,13 +272,8 @@ msgstr ""
 msgid "Course End Date"
 msgstr ""
 
-#: cms/templates/settings.html:305
-#: lms/templates/courseware/course_about.html:288
-msgid "Course Difficulty"
-msgstr ""
-
-#: cms/templates/settings.html:315 lms/templates/preview_menu.html:103
-#: lms/templates/preview_menu.html:148
+#: cms/templates/settings.html:315 lms/templates/preview_menu.html:93
+#: lms/templates/preview_menu.html:147
 msgid "Course Organizer"
 msgstr ""
 
@@ -301,6 +296,7 @@ msgstr[1] ""
 
 #: cms/templates/settings.html:373
 #: lms/templates/courseware/course_about.html:235
+#: lms/templates/courseware/course_about.html:288
 msgid "Course Description"
 msgstr ""
 
@@ -872,8 +868,8 @@ msgid "Are you sure you want to unenroll from"
 msgstr ""
 
 #: lms/templates/dashboard.html:614 lms/templates/ccx/enrollment.html:58
-#: lms/templates/dashboard/_dashboard_course_listing.html:203
-#: lms/templates/dashboard/_dashboard_course_listing.html:215
+#: lms/templates/dashboard/_dashboard_course_listing.html:185
+#: lms/templates/dashboard/_dashboard_course_listing.html:197
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html:42
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:29
 #: themes/edx.org/lms/templates/dashboard.html:366
@@ -1044,15 +1040,15 @@ msgstr ""
 msgid "Enter your E-mail Address to reset your password"
 msgstr ""
 
-#: lms/templates/forgot_password_modal.html:36 lms/templates/login.html:252
+#: lms/templates/forgot_password_modal.html:35 lms/templates/login.html:252
 msgid "This is the e-mail address you used to register with {platform}"
 msgstr ""
 
-#: lms/templates/forgot_password_modal.html:43
+#: lms/templates/forgot_password_modal.html:42
 msgid "Reset My Password"
 msgstr ""
 
-#: lms/templates/forgot_password_modal.html:64
+#: lms/templates/forgot_password_modal.html:57
 msgid "Email is incorrect."
 msgstr ""
 
@@ -1592,42 +1588,41 @@ msgstr ""
 msgid "You do not have any notes."
 msgstr ""
 
-#: lms/templates/preview_menu.html:58 lms/templates/preview_menu.html:142
-#: lms/templates/dashboard/_dashboard_course_listing.html:89
-#: lms/templates/dashboard/_dashboard_course_listing.html:118
+#: lms/templates/preview_menu.html:48 lms/templates/preview_menu.html:141
+#: lms/templates/dashboard/_dashboard_course_listing.html:99
 msgid "Course edition"
 msgstr ""
 
-#: lms/templates/preview_menu.html:66
+#: lms/templates/preview_menu.html:56
 msgid "View this course as"
 msgstr ""
 
-#: lms/templates/preview_menu.html:68 lms/templates/preview_menu.html:197
+#: lms/templates/preview_menu.html:58 lms/templates/preview_menu.html:197
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:165
 msgid "Staff"
 msgstr ""
 
-#: lms/templates/preview_menu.html:69 lms/templates/preview_menu.html:198
+#: lms/templates/preview_menu.html:59 lms/templates/preview_menu.html:198
 msgid "Learner"
 msgstr ""
 
-#: lms/templates/preview_menu.html:70 lms/templates/preview_menu.html:199
+#: lms/templates/preview_menu.html:60 lms/templates/preview_menu.html:199
 msgid "Specific learner"
 msgstr ""
 
-#: lms/templates/preview_menu.html:74 lms/templates/preview_menu.html:203
+#: lms/templates/preview_menu.html:64 lms/templates/preview_menu.html:203
 msgid "Learner in {content_group}"
 msgstr ""
 
-#: lms/templates/preview_menu.html:81 lms/templates/preview_menu.html:210
+#: lms/templates/preview_menu.html:71 lms/templates/preview_menu.html:210
 msgid "Username or email:"
 msgstr ""
 
-#: lms/templates/preview_menu.html:84 lms/templates/preview_menu.html:213
+#: lms/templates/preview_menu.html:74 lms/templates/preview_menu.html:213
 msgid "Set preview mode"
 msgstr ""
 
-#: lms/templates/preview_menu.html:89 lms/templates/preview_menu.html:218
+#: lms/templates/preview_menu.html:79 lms/templates/preview_menu.html:218
 msgid "You are now viewing the course as {i_start}{user_name}{i_end}."
 msgstr ""
 
@@ -3858,14 +3853,6 @@ msgstr ""
 msgid "needs attention"
 msgstr ""
 
-#: lms/templates/courseware/course_navigation.html:78
-msgid "Course progress"
-msgstr ""
-
-#: lms/templates/courseware/course_navigation.html:78
-msgid "finished lessons"
-msgstr ""
-
 #: lms/templates/courseware/course_updates.html:9
 #: lms/templates/courseware/course_updates.html:39
 msgid "Hide"
@@ -4430,67 +4417,66 @@ msgid ""
 "{cert_name_short}. An honor code {cert_name_short} has been granted instead."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:82
-#: lms/templates/dashboard/_dashboard_course_listing.html:111
+#: lms/templates/dashboard/_dashboard_course_listing.html:91
 msgid "Course organizer"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:132
+#: lms/templates/dashboard/_dashboard_course_listing.html:114
 msgid "Coming Soon"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:137
+#: lms/templates/dashboard/_dashboard_course_listing.html:119
 msgid "Ended - {date}"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:140
+#: lms/templates/dashboard/_dashboard_course_listing.html:122
 msgid "Started - {date}"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:143
-#: lms/templates/dashboard/_dashboard_course_listing.html:147
+#: lms/templates/dashboard/_dashboard_course_listing.html:125
+#: lms/templates/dashboard/_dashboard_course_listing.html:129
 msgid "Starts - {date}"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:165
+#: lms/templates/dashboard/_dashboard_course_listing.html:147
 msgid "You must select a session by {expiration_date} to access the course."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:167
+#: lms/templates/dashboard/_dashboard_course_listing.html:149
 msgid "You must select a session to access the course."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:174
+#: lms/templates/dashboard/_dashboard_course_listing.html:156
 msgid "Change or Leave Session"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:182
+#: lms/templates/dashboard/_dashboard_course_listing.html:164
 msgid "You can no longer change sessions."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:184
+#: lms/templates/dashboard/_dashboard_course_listing.html:166
 msgid "You can change sessions until {entitlement_expiration_date}."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:223
-#: lms/templates/dashboard/_dashboard_course_listing.html:225
+#: lms/templates/dashboard/_dashboard_course_listing.html:205
+#: lms/templates/dashboard/_dashboard_course_listing.html:207
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html:56
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:112
 msgid "Email Settings"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:261
+#: lms/templates/dashboard/_dashboard_course_listing.html:243
 msgid "Related Programs"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:286
+#: lms/templates/dashboard/_dashboard_course_listing.html:268
 msgid ""
 "You can no longer access this course because payment has not yet been "
 "received. You can contact the account holder to request payment, or you can "
 "unenroll from this course"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:290
+#: lms/templates/dashboard/_dashboard_course_listing.html:272
 msgid ""
 "You can no longer access this course because payment has not yet been "
 "received. You can {contact_link_start}contact the account "
@@ -4498,87 +4484,87 @@ msgid ""
 "{unenroll_link_start}unenroll{unenroll_link_end} from this course"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:319
+#: lms/templates/dashboard/_dashboard_course_listing.html:301
 msgid "Verification not yet complete."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:320
+#: lms/templates/dashboard/_dashboard_course_listing.html:302
 msgid "You only have {days} day left to verify for this course."
 msgid_plural "You only have {days} days left to verify for this course."
 msgstr[0] ""
 msgstr[1] ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:326
+#: lms/templates/dashboard/_dashboard_course_listing.html:308
 msgid "Almost there!"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:327
+#: lms/templates/dashboard/_dashboard_course_listing.html:309
 msgid "You still need to verify for this course."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:331
+#: lms/templates/dashboard/_dashboard_course_listing.html:313
 msgid "Verify Now"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:334
+#: lms/templates/dashboard/_dashboard_course_listing.html:316
 msgid "You have submitted your verification information."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:335
+#: lms/templates/dashboard/_dashboard_course_listing.html:317
 msgid ""
 "You will see a message on your dashboard when the verification process is "
 "complete (usually within 1-2 days)."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:337
+#: lms/templates/dashboard/_dashboard_course_listing.html:319
 msgid "Your current verification will expire soon!"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:338
+#: lms/templates/dashboard/_dashboard_course_listing.html:320
 msgid ""
 "You have submitted your reverification information. You will see a message "
 "on your dashboard when the verification process is complete (usually within "
 "1-2 days)."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:340
+#: lms/templates/dashboard/_dashboard_course_listing.html:322
 msgid "You have successfully verified your ID with edX"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:342
+#: lms/templates/dashboard/_dashboard_course_listing.html:324
 msgid "Your current verification is effective until {date}."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:345
+#: lms/templates/dashboard/_dashboard_course_listing.html:327
 msgid "Your current verification will expire soon."
 msgstr ""
 
 #. Translators: start_link and end_link will be replaced with HTML tags;
 #. please do not translate these.
-#: lms/templates/dashboard/_dashboard_course_listing.html:348
+#: lms/templates/dashboard/_dashboard_course_listing.html:330
 msgid ""
 "Your current verification will expire in {days} days. {start_link}Re-verify "
 "your identity now{end_link} using a webcam and a government-issued photo ID."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:363
+#: lms/templates/dashboard/_dashboard_course_listing.html:345
 msgid ""
 "Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
 "this course."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:365
+#: lms/templates/dashboard/_dashboard_course_listing.html:347
 msgid ""
 "It's official. It's easily shareable. It's a proven motivator to complete "
 "the course. {line_break}{link_start}Learn more about the verified "
 "{cert_name_long}{link_end}."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:385
+#: lms/templates/dashboard/_dashboard_course_listing.html:367
 msgid "Upgrade to Verified"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:400
+#: lms/templates/dashboard/_dashboard_course_listing.html:382
 msgid ""
 "You must successfully complete {link_start}{prc_display}{link_end} before "
 "you begin this course."
@@ -8226,14 +8212,6 @@ msgid ""
 "been moved at {email}."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:5
-msgid "Accessibility Statement"
-msgstr ""
-
-#: lms/templates/static_templates/accessibility.html:12
-msgid "Accessibility Statement for educational platform NAVOICA"
-msgstr ""
-
 #: lms/templates/static_templates/blog.html:5
 #: lms/templates/static_templates/blog.html:10
 msgid "Blog"
@@ -8304,275 +8282,138 @@ msgstr ""
 msgid "FAQ"
 msgstr ""
 
-#: lms/templates/static_templates/faq.html:24
-msgid "FAQ_Category1"
-msgstr ""
-
 #: lms/templates/static_templates/faq.html:27
-msgid "FAQ_Question1.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:27
-msgid "FAQ_Answer1.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:28
-msgid "FAQ_Question1.2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:28
-msgid "FAQ_Answer1.2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:29
-msgid "FAQ_Question1.3"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:29
-msgid "FAQ_Answer1.3"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:30
-msgid "FAQ_Question1.4"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:30
-msgid "FAQ_Answer1.4"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:33
-msgid "FAQ_Category2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:36
-msgid "FAQ_Question2.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:36
-msgid "FAQ_Answer2.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:37
-msgid "FAQ_Question2.2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:37
-msgid "FAQ_Answer2.2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:38
-msgid "FAQ_Question2.3"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:38
-msgid "FAQ_Answer2.3"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:39
-msgid "FAQ_Question2.4"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:39
-msgid "FAQ_Answer2.4"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:40
-msgid "FAQ_Question2.5"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:40
-msgid "FAQ_Answer2.5"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:41
-msgid "FAQ_Question2.6"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:41
-msgid "FAQ_Answer2.6"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:42
-msgid "FAQ_Question2.7"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:42
-msgid "FAQ_Answer2.7"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:43
-msgid "FAQ_Question2.8"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:43
-msgid "FAQ_Answer2.8"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:44
-msgid "FAQ_Question2.9"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:44
-msgid "FAQ_Answer2.9"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:45
-msgid "FAQ_Question2.10"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:45
-msgid "FAQ_Answer2.10"
-msgstr ""
-
 #: lms/templates/static_templates/faq.html:46
-msgid "FAQ_Question2.11"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:46
-msgid "FAQ_Answer2.11"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:47
-msgid "FAQ_Question2.12"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:47
-msgid "FAQ_Answer2.12"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:48
-msgid "FAQ_Question2.13"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:48
-msgid "FAQ_Answer2.13"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:51
-msgid "FAQ_Category3"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:54
-msgid "FAQ_Question3.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:54
-msgid "FAQ_Answer3.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:55
-msgid "FAQ_Question3.2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:55
-msgid "FAQ_Answer3.2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:56
-msgid "FAQ_Question3.3"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:56
-msgid "FAQ_Answer3.3"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:57
-msgid "FAQ_Question3.4"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:57
-msgid "FAQ_Answer3.4"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:60
-msgid "FAQ_Category4"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:63
-msgid "FAQ_Question4.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:63
-msgid "FAQ_Answer4.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:64
-msgid "FAQ_Question4.2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:64
-msgid "FAQ_Answer4.2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:65
-msgid "FAQ_Question4.3"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:65
-msgid "FAQ_Answer4.3"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:66
-msgid "FAQ_Question4.4"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:66
-msgid "FAQ_Answer4.4"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:67
-msgid "FAQ_Question4.5"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:67
-msgid "FAQ_Answer4.5"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:70
-msgid "FAQ_Category5"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:73
-msgid "FAQ_Question5.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:73
-msgid "FAQ_Answer5.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:76
-msgid "FAQ_Category6"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:79
-msgid "FAQ_Question6.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:79
-msgid "FAQ_Answer6.1"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:80
-msgid "FAQ_Question6.2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:80
-msgid "FAQ_Answer6.2"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:93
-#: lms/templates/static_templates/faq.html:112
 msgid "Category"
 msgstr ""
 
-#: lms/templates/static_templates/faq.html:112
+#: lms/templates/static_templates/faq.html:46
 msgid "show answers"
 msgstr ""
 
 #: lms/templates/static_templates/honor.html:5
+#: lms/templates/static_templates/honor.html:9
 #: themes/stanford-style/lms/templates/footer.html:20
 #: themes/stanford-style/lms/templates/static_templates/tos.html:18
 msgid "Honor Code"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:12
+msgid ""
+"By enrolling in a course offered on Navoica platform you join the "
+"international community of learners. Our aspiration is to enable every user "
+"in the world who has access to the Internet to take part in courses prepared"
+" by the best universities and educational institutions from Poland and "
+"provide top quality teaching. By logging in to Navoica platform you become a"
+" part of this community. Our success depends to a large extent on your "
+"motivation to learn and your fully honest and fair use of the "
+"Platform\\u2019s resources. A prerequisite for joining any course is that "
+"you accept the terms of this Code of Honour and any additional terms and "
+"conditions set out for your specific course or study programme. This Code of"
+" Honour, like any additional regulations accompanying the course, is "
+"published on the course's page."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:15
+msgid "My pledge"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:18
+msgid "By enrolling in a course on the Navoica platform I undertake:"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:21
+msgid ""
+"to carry out all activities designed to test my knowledge and skills on my "
+"own, without any participation or assistance of third parties, except when "
+"the activity will allow for group work."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:22
+msgid ""
+"to keep only one account on Navoica platform and not to share my login and "
+"password with anyone."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:23
+msgid ""
+"not to engage in any activity that could unfairly or dishonestly impact my "
+"academic performance or the performance of other users of the platform."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:24
+msgid ""
+"not to provide public access by any means to the answers to the evaluation "
+"tasks used to evaluate Navoica students' performance on their courses."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:27
+msgid "Consequences of violation of the Code of Honour"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:30
+msgid ""
+"The following actions may be taken against any Navoica platform user who "
+"violates the Code of Honour:"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:33
+msgid ""
+"No points awarded to the user for solving a task as part of the course."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:34
+msgid ""
+"Withholding or withdrawing a certificate received at the end of a course or "
+"course programme."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:35
+msgid ""
+"Removal of the user in breach of the Code of Honour from the course or "
+"programme of courses."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:36
+msgid "Deletion of the user's Navoica platform account."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:37
+msgid ""
+"Additional actions may be taken by the Navoica platform operator or the "
+"course provider."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:38
+msgid ""
+"In the event of a breach of the Code of Honour, no refund will be granted to"
+" the user for any costs they may have incurred in connection with the "
+"course."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:39
+msgid ""
+"Any violations of the Code of Honour will be communicated to the relevant "
+"course provider in a private and confidential message. At the same time, the"
+" violating user will be informed that his/her breach of the provisions of "
+"the Code of Honour has been detected, and that actions have been taken in "
+"connection with the breach."
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:42
+msgid "Changes to this Code of Honour"
+msgstr ""
+
+#: lms/templates/static_templates/honor.html:45
+msgid ""
+"As the operator of Navoica platform, we reserve the right to amend the "
+"provisions of this Code of Honour. Any changes will take effect immediately "
+"after they are posted on the Navoica website together with their date of "
+"implementation. By expressing consent to the provisions of the Code of "
+"Honour before entering the course, the user also agrees to comply with "
+"prospective provisions. Please check the current version of the Code of "
+"Honour, especially in situations where there may be any concerns about the "
+"activities to be undertaken as part of the course."
 msgstr ""
 
 #: lms/templates/static_templates/jobs.html:5
@@ -8650,934 +8491,936 @@ msgstr ""
 msgid "Currently the {platform_name} servers are overloaded"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:147
-#: lms/templates/static_templates/tos.html:329
-#: lms/templates/static_templates/tos.html:486
-#: lms/templates/static_templates/tos.html:670
+#: lms/templates/static_templates/tos.html:148
+#: lms/templates/static_templates/tos.html:330
+#: lms/templates/static_templates/tos.html:488
+#: lms/templates/static_templates/tos.html:672
+#: lms/templates/static_templates/tos.html:824
+#: lms/templates/static_templates/tos.html:1006
 msgid "mooc_help@opi.org.pl"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:345
+#: lms/templates/static_templates/tos.html:347
 msgid "tos_intro_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:346
+#: lms/templates/static_templates/tos.html:348
 msgid "tos_intro_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:348
+#: lms/templates/static_templates/tos.html:350
 msgid "tos_definitions_header"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:350
+#: lms/templates/static_templates/tos.html:352
 msgid "tos_definitions_email_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:351
+#: lms/templates/static_templates/tos.html:353
 msgid "tos_definitions_email_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:352
+#: lms/templates/static_templates/tos.html:354
 msgid "tos_definitions_registration_form_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:353
+#: lms/templates/static_templates/tos.html:355
 msgid "tos_definitions_registration_form_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:354
+#: lms/templates/static_templates/tos.html:356
 msgid "tos_definitions_password_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:355
+#: lms/templates/static_templates/tos.html:357
 msgid "tos_definitions_password_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:356
+#: lms/templates/static_templates/tos.html:358
 msgid "tos_definitions_service_information_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:357
+#: lms/templates/static_templates/tos.html:359
 msgid "tos_definitions_service_information_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:358
+#: lms/templates/static_templates/tos.html:360
 msgid "tos_definitions_educational_unit_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:359
+#: lms/templates/static_templates/tos.html:361
 msgid "tos_definitions_educational_unit_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:360
+#: lms/templates/static_templates/tos.html:362
 msgid "tos_definitions_account_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:361
+#: lms/templates/static_templates/tos.html:363
 msgid "tos_definitions_account_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:362
+#: lms/templates/static_templates/tos.html:364
 msgid "tos_definitions_course_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:363
+#: lms/templates/static_templates/tos.html:365
 msgid "tos_definitions_course_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:364
+#: lms/templates/static_templates/tos.html:366
 msgid "tos_definitions_substantive_operator_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:365
+#: lms/templates/static_templates/tos.html:367
 msgid "tos_definitions_substantive_operator_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:366
+#: lms/templates/static_templates/tos.html:368
 msgid "tos_definitions_technical_operator_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:367
+#: lms/templates/static_templates/tos.html:369
 msgid "tos_definitions_technical_operator_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:368
+#: lms/templates/static_templates/tos.html:370
 msgid "tos_definitions_platform_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:369
+#: lms/templates/static_templates/tos.html:371
 msgid "tos_definitions_platform_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:370
+#: lms/templates/static_templates/tos.html:372
 msgid "tos_definitions_tos_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:371
+#: lms/templates/static_templates/tos.html:373
 msgid "tos_definitions_tos_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:372
+#: lms/templates/static_templates/tos.html:374
 msgid "tos_definitions_rodo_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:373
+#: lms/templates/static_templates/tos.html:375
 msgid "tos_definitions_rodo_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:374
+#: lms/templates/static_templates/tos.html:376
 msgid "tos_definitions_services_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:375
+#: lms/templates/static_templates/tos.html:377
 msgid "tos_definitions_services_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:376
+#: lms/templates/static_templates/tos.html:378
 msgid "tos_definitions_participant_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:377
+#: lms/templates/static_templates/tos.html:379
 msgid "tos_definitions_participant_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:378
+#: lms/templates/static_templates/tos.html:380
 msgid "tos_definitions_user_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:379
+#: lms/templates/static_templates/tos.html:381
 msgid "tos_definitions_user_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:380
+#: lms/templates/static_templates/tos.html:382
 msgid "tos_definitions_guidelines_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:381
+#: lms/templates/static_templates/tos.html:383
 msgid "tos_definitions_guidelines_text"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:385
+#: lms/templates/static_templates/tos.html:387
 msgid "tos_main_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:387
+#: lms/templates/static_templates/tos.html:389
 msgid "tos_main_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:388
+#: lms/templates/static_templates/tos.html:390
 msgid "tos_main_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:389
+#: lms/templates/static_templates/tos.html:391
 msgid "tos_main_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:390
+#: lms/templates/static_templates/tos.html:392
 msgid "tos_main_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:391
+#: lms/templates/static_templates/tos.html:393
 msgid "tos_main_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:392
+#: lms/templates/static_templates/tos.html:394
 msgid "tos_main_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:393
+#: lms/templates/static_templates/tos.html:395
 msgid "tos_main_paragraph_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:394
+#: lms/templates/static_templates/tos.html:396
 msgid "tos_main_paragraph_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:395
+#: lms/templates/static_templates/tos.html:397
 msgid "tos_main_paragraph_9"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:396
+#: lms/templates/static_templates/tos.html:398
 msgid "tos_main_paragraph_10"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:400
+#: lms/templates/static_templates/tos.html:402
 msgid "tos_technical_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:403
+#: lms/templates/static_templates/tos.html:405
 msgid "tos_technical_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:405
+#: lms/templates/static_templates/tos.html:407
 msgid "tos_technical_paragraph_1_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:406
+#: lms/templates/static_templates/tos.html:408
 msgid "tos_technical_paragraph_1_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:407
+#: lms/templates/static_templates/tos.html:409
 msgid "tos_technical_paragraph_1_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:410
+#: lms/templates/static_templates/tos.html:412
 msgid "tos_technical_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:411
+#: lms/templates/static_templates/tos.html:413
 msgid "tos_technical_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:412
+#: lms/templates/static_templates/tos.html:414
 msgid "tos_technical_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:414
+#: lms/templates/static_templates/tos.html:416
 msgid "tos_technical_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:416
+#: lms/templates/static_templates/tos.html:418
 msgid "tos_technical_paragraph_5_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:417
+#: lms/templates/static_templates/tos.html:419
 msgid "tos_technical_paragraph_5_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:418
+#: lms/templates/static_templates/tos.html:420
 msgid "tos_technical_paragraph_5_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:421
+#: lms/templates/static_templates/tos.html:423
 msgid "tos_technical_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:422
+#: lms/templates/static_templates/tos.html:424
 msgid "tos_technical_paragraph_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:426
+#: lms/templates/static_templates/tos.html:428
 msgid "tos_ros_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:428
+#: lms/templates/static_templates/tos.html:430
 msgid "tos_ros_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:430
+#: lms/templates/static_templates/tos.html:432
 msgid "tos_ros_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:432
+#: lms/templates/static_templates/tos.html:434
 msgid "tos_ros_paragraph_2_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:433
+#: lms/templates/static_templates/tos.html:435
 msgid "tos_ros_paragraph_2_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:434
+#: lms/templates/static_templates/tos.html:436
 msgid "tos_ros_paragraph_2_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:435
+#: lms/templates/static_templates/tos.html:437
 msgid "tos_ros_paragraph_2_section_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:436
+#: lms/templates/static_templates/tos.html:438
 msgid "tos_ros_paragraph_2_section_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:437
+#: lms/templates/static_templates/tos.html:439
 msgid "tos_ros_paragraph_2_section_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:438
+#: lms/templates/static_templates/tos.html:440
 msgid "tos_ros_paragraph_2_section_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:439
+#: lms/templates/static_templates/tos.html:441
 msgid "tos_ros_paragraph_2_section_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:440
+#: lms/templates/static_templates/tos.html:442
 msgid "tos_ros_paragraph_2_section_9"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:444
+#: lms/templates/static_templates/tos.html:446
 msgid "tos_ros_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:446
+#: lms/templates/static_templates/tos.html:448
 msgid "tos_ros_paragraph_3_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:447
+#: lms/templates/static_templates/tos.html:449
 msgid "tos_ros_paragraph_3_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:448
+#: lms/templates/static_templates/tos.html:450
 msgid "tos_ros_paragraph_3_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:449
+#: lms/templates/static_templates/tos.html:451
 msgid "tos_ros_paragraph_3_section_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:450
+#: lms/templates/static_templates/tos.html:452
 msgid "tos_ros_paragraph_3_section_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:451
+#: lms/templates/static_templates/tos.html:453
 msgid "tos_ros_paragraph_3_section_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:452
+#: lms/templates/static_templates/tos.html:454
 msgid "tos_ros_paragraph_3_section_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:453
+#: lms/templates/static_templates/tos.html:455
 msgid "tos_ros_paragraph_3_section_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:459
+#: lms/templates/static_templates/tos.html:461
 msgid "tos_user_registration_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:461
+#: lms/templates/static_templates/tos.html:463
 msgid "tos_user_registration_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:462
+#: lms/templates/static_templates/tos.html:464
 msgid "tos_user_registration_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:464
+#: lms/templates/static_templates/tos.html:466
 msgid "tos_user_registration_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:466
+#: lms/templates/static_templates/tos.html:468
 msgid "tos_user_registration_paragraph_3_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:467
+#: lms/templates/static_templates/tos.html:469
 msgid "tos_user_registration_paragraph_3_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:468
+#: lms/templates/static_templates/tos.html:470
 msgid "tos_user_registration_paragraph_3_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:469
+#: lms/templates/static_templates/tos.html:471
 msgid "tos_user_registration_paragraph_3_section_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:472
+#: lms/templates/static_templates/tos.html:474
 msgid "tos_user_registration_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:473
+#: lms/templates/static_templates/tos.html:475
 msgid "tos_user_registration_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:474
+#: lms/templates/static_templates/tos.html:476
 msgid "tos_user_registration_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:475
+#: lms/templates/static_templates/tos.html:477
 msgid "tos_user_registration_paragraph_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:476
+#: lms/templates/static_templates/tos.html:478
 msgid "tos_user_registration_paragraph_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:480
+#: lms/templates/static_templates/tos.html:482
 msgid "tos_contract_and_termination_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:482
+#: lms/templates/static_templates/tos.html:484
 msgid "tos_contract_and_termination_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:483
+#: lms/templates/static_templates/tos.html:485
 msgid "tos_contract_and_termination_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:484
+#: lms/templates/static_templates/tos.html:486
 msgid "tos_contract_and_termination_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:485
+#: lms/templates/static_templates/tos.html:487
 msgid "tos_contract_and_termination_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:486
+#: lms/templates/static_templates/tos.html:488
 msgid "tos_contract_and_termination_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:486
+#: lms/templates/static_templates/tos.html:488
 msgid "tos_contract_and_termination_paragraph_5_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:488
+#: lms/templates/static_templates/tos.html:490
 msgid "tos_contract_and_termination_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:490
+#: lms/templates/static_templates/tos.html:492
 msgid "tos_contract_and_termination_paragraph_6_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:491
+#: lms/templates/static_templates/tos.html:493
 msgid "tos_contract_and_termination_paragraph_6_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:492
+#: lms/templates/static_templates/tos.html:494
 msgid "tos_contract_and_termination_paragraph_6_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:493
+#: lms/templates/static_templates/tos.html:495
 msgid "tos_contract_and_termination_paragraph_6_section_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:494
+#: lms/templates/static_templates/tos.html:496
 msgid "tos_contract_and_termination_paragraph_6_section_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:497
+#: lms/templates/static_templates/tos.html:499
 msgid "tos_contract_and_termination_paragraph_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:501
+#: lms/templates/static_templates/tos.html:503
 msgid "tos_rules_for_using_services_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:503
+#: lms/templates/static_templates/tos.html:505
 msgid "tos_rules_for_using_services_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:504
+#: lms/templates/static_templates/tos.html:506
 msgid "tos_rules_for_using_services_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:505
+#: lms/templates/static_templates/tos.html:507
 msgid "tos_rules_for_using_services_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:506
+#: lms/templates/static_templates/tos.html:508
 msgid "tos_rules_for_using_services_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:507
+#: lms/templates/static_templates/tos.html:509
 msgid "tos_rules_for_using_services_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:508
+#: lms/templates/static_templates/tos.html:510
 msgid "tos_rules_for_using_services_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:510
+#: lms/templates/static_templates/tos.html:512
 msgid "tos_rules_for_using_services_paragraph_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:512
+#: lms/templates/static_templates/tos.html:514
 msgid "tos_rules_for_using_services_paragraph_7_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:513
+#: lms/templates/static_templates/tos.html:515
 msgid "tos_rules_for_using_services_paragraph_7_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:514
+#: lms/templates/static_templates/tos.html:516
 msgid "tos_rules_for_using_services_paragraph_7_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:515
+#: lms/templates/static_templates/tos.html:517
 msgid "tos_rules_for_using_services_paragraph_7_section_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:518
+#: lms/templates/static_templates/tos.html:520
 msgid "tos_rules_for_using_services_paragraph_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:519
+#: lms/templates/static_templates/tos.html:521
 msgid "tos_rules_for_using_services_paragraph_9"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:521
+#: lms/templates/static_templates/tos.html:523
 msgid "tos_rules_for_using_services_paragraph_10"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:523
+#: lms/templates/static_templates/tos.html:525
 msgid "tos_rules_for_using_services_paragraph_10_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:524
+#: lms/templates/static_templates/tos.html:526
 msgid "tos_rules_for_using_services_paragraph_10_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:525
+#: lms/templates/static_templates/tos.html:527
 msgid "tos_rules_for_using_services_paragraph_10_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:526
+#: lms/templates/static_templates/tos.html:528
 msgid "tos_rules_for_using_services_paragraph_10_section_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:527
+#: lms/templates/static_templates/tos.html:529
 msgid "tos_rules_for_using_services_paragraph_10_section_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:528
+#: lms/templates/static_templates/tos.html:530
 msgid "tos_rules_for_using_services_paragraph_10_section_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:531
+#: lms/templates/static_templates/tos.html:533
 msgid "tos_rules_for_using_services_paragraph_11"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:535
+#: lms/templates/static_templates/tos.html:537
 msgid "tos_operators_rights_and_onligations_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:538
+#: lms/templates/static_templates/tos.html:540
 msgid "tos_operators_rights_and_onligations_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:539
+#: lms/templates/static_templates/tos.html:541
 msgid "tos_operators_rights_and_onligations_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:540
+#: lms/templates/static_templates/tos.html:542
 msgid "tos_operators_rights_and_onligations_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:542
+#: lms/templates/static_templates/tos.html:544
 msgid "tos_operators_rights_and_onligations_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:544
+#: lms/templates/static_templates/tos.html:546
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:545
+#: lms/templates/static_templates/tos.html:547
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:546
+#: lms/templates/static_templates/tos.html:548
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:547
+#: lms/templates/static_templates/tos.html:549
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:548
+#: lms/templates/static_templates/tos.html:550
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:549
+#: lms/templates/static_templates/tos.html:551
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:550
+#: lms/templates/static_templates/tos.html:552
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:553
+#: lms/templates/static_templates/tos.html:555
 msgid "tos_operators_rights_and_onligations_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:554
+#: lms/templates/static_templates/tos.html:556
 msgid "tos_operators_rights_and_onligations_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:555
+#: lms/templates/static_templates/tos.html:557
 msgid "tos_operators_rights_and_onligations_paragraph_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:556
+#: lms/templates/static_templates/tos.html:558
 msgid "tos_operators_rights_and_onligations_paragraph_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:560
+#: lms/templates/static_templates/tos.html:562
 msgid "tos_services_payment_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:562
+#: lms/templates/static_templates/tos.html:564
 msgid "tos_services_payment_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:563
+#: lms/templates/static_templates/tos.html:565
 msgid "tos_services_payment_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:564
+#: lms/templates/static_templates/tos.html:566
 msgid "tos_services_payment_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:568
+#: lms/templates/static_templates/tos.html:570
 msgid "tos_responsibility_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:570
+#: lms/templates/static_templates/tos.html:572
 msgid "tos_responsibility_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:571
+#: lms/templates/static_templates/tos.html:573
 msgid "tos_responsibility_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:573
+#: lms/templates/static_templates/tos.html:575
 msgid "tos_responsibility_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:575
+#: lms/templates/static_templates/tos.html:577
 msgid "tos_responsibility_paragraph_3_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:576
+#: lms/templates/static_templates/tos.html:578
 msgid "tos_responsibility_paragraph_3_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:577
+#: lms/templates/static_templates/tos.html:579
 msgid "tos_responsibility_paragraph_3_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:578
+#: lms/templates/static_templates/tos.html:580
 msgid "tos_responsibility_paragraph_3_section_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:579
+#: lms/templates/static_templates/tos.html:581
 msgid "tos_responsibility_paragraph_3_section_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:580
+#: lms/templates/static_templates/tos.html:582
 msgid "tos_responsibility_paragraph_3_section_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:581
+#: lms/templates/static_templates/tos.html:583
 msgid "tos_responsibility_paragraph_3_section_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:582
+#: lms/templates/static_templates/tos.html:584
 msgid "tos_responsibility_paragraph_3_section_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:583
+#: lms/templates/static_templates/tos.html:585
 msgid "tos_responsibility_paragraph_3_section_9"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:584
+#: lms/templates/static_templates/tos.html:586
 msgid "tos_responsibility_paragraph_3_section_10"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:587
+#: lms/templates/static_templates/tos.html:589
 msgid "tos_responsibility_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:588
+#: lms/templates/static_templates/tos.html:590
 msgid "tos_responsibility_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:589
+#: lms/templates/static_templates/tos.html:591
 msgid "tos_responsibility_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:593
+#: lms/templates/static_templates/tos.html:595
 msgid "tos_copyrights_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:595
+#: lms/templates/static_templates/tos.html:597
 msgid "tos_copyrights_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:596
+#: lms/templates/static_templates/tos.html:598
 msgid "tos_copyrights_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:597
+#: lms/templates/static_templates/tos.html:599
 msgid "tos_copyrights_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:598
+#: lms/templates/static_templates/tos.html:600
 msgid "tos_copyrights_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:599
+#: lms/templates/static_templates/tos.html:601
 msgid "tos_copyrights_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:603
+#: lms/templates/static_templates/tos.html:605
 msgid "tos_courses_storage_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:605
+#: lms/templates/static_templates/tos.html:607
 msgid "tos_courses_storage_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:606
+#: lms/templates/static_templates/tos.html:608
 msgid "tos_courses_storage_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:607
+#: lms/templates/static_templates/tos.html:609
 msgid "tos_courses_storage_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:608
+#: lms/templates/static_templates/tos.html:610
 msgid "tos_courses_storage_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:609
+#: lms/templates/static_templates/tos.html:611
 msgid "tos_courses_storage_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:610
+#: lms/templates/static_templates/tos.html:612
 msgid "tos_courses_storage_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:611
+#: lms/templates/static_templates/tos.html:613
 msgid "tos_courses_storage_paragraph_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:612
+#: lms/templates/static_templates/tos.html:614
 msgid "tos_courses_storage_paragraph_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:616
+#: lms/templates/static_templates/tos.html:618
 msgid "tos_personal_data_protection_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:618
+#: lms/templates/static_templates/tos.html:620
 msgid "tos_personal_data_protection_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:619
+#: lms/templates/static_templates/tos.html:621
 msgid "tos_personal_data_protection_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:620
+#: lms/templates/static_templates/tos.html:622
 msgid "tos_personal_data_protection_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:621
+#: lms/templates/static_templates/tos.html:623
 msgid "tos_personal_data_protection_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:622
+#: lms/templates/static_templates/tos.html:624
 msgid "tos_personal_data_protection_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:623
+#: lms/templates/static_templates/tos.html:625
 msgid "tos_personal_data_protection_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:625
+#: lms/templates/static_templates/tos.html:627
 msgid "tos_personal_data_protection_paragraph_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:627
+#: lms/templates/static_templates/tos.html:629
 msgid "tos_personal_data_protection_paragraph_7_section_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:628
+#: lms/templates/static_templates/tos.html:630
 msgid "tos_personal_data_protection_paragraph_7_section_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:629
+#: lms/templates/static_templates/tos.html:631
 msgid "tos_personal_data_protection_paragraph_7_section_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:630
+#: lms/templates/static_templates/tos.html:632
 msgid "tos_personal_data_protection_paragraph_7_section_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:631
+#: lms/templates/static_templates/tos.html:633
 msgid "tos_personal_data_protection_paragraph_7_section_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:632
+#: lms/templates/static_templates/tos.html:634
 msgid "tos_personal_data_protection_paragraph_7_section_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:635
+#: lms/templates/static_templates/tos.html:637
 msgid "tos_personal_data_protection_paragraph_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:636
+#: lms/templates/static_templates/tos.html:638
 msgid "tos_personal_data_protection_paragraph_9"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:637
+#: lms/templates/static_templates/tos.html:639
 msgid "tos_personal_data_protection_paragraph_10"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:638
+#: lms/templates/static_templates/tos.html:640
 msgid "tos_personal_data_protection_paragraph_11"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:639
+#: lms/templates/static_templates/tos.html:641
 msgid "tos_personal_data_protection_paragraph_12"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:640
+#: lms/templates/static_templates/tos.html:642
 msgid "tos_personal_data_protection_paragraph_13"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:641
+#: lms/templates/static_templates/tos.html:643
 msgid "tos_personal_data_protection_paragraph_14"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:642
+#: lms/templates/static_templates/tos.html:644
 msgid "tos_personal_data_protection_paragraph_15"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:646
+#: lms/templates/static_templates/tos.html:648
 msgid "tos_data_protection_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:648
+#: lms/templates/static_templates/tos.html:650
 msgid "tos_data_protection_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:649
+#: lms/templates/static_templates/tos.html:651
 msgid "tos_data_protection_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:653
+#: lms/templates/static_templates/tos.html:655
 msgid "tos_user_support_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:655
+#: lms/templates/static_templates/tos.html:657
 msgid "tos_user_support_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:656
+#: lms/templates/static_templates/tos.html:658
 msgid "tos_user_support_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:657
+#: lms/templates/static_templates/tos.html:659
 msgid "tos_user_support_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:658
+#: lms/templates/static_templates/tos.html:660
 msgid "tos_user_support_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:658
+#: lms/templates/static_templates/tos.html:660
 msgid "tos_user_support_paragraph_4_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:659
+#: lms/templates/static_templates/tos.html:661
 msgid "tos_user_support_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:660
+#: lms/templates/static_templates/tos.html:662
 msgid "tos_user_support_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:661
+#: lms/templates/static_templates/tos.html:663
 msgid "tos_user_support_paragraph_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:662
+#: lms/templates/static_templates/tos.html:664
 msgid "tos_user_support_paragraph_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:666
+#: lms/templates/static_templates/tos.html:668
 msgid "tos_final_provisions_title"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:668
+#: lms/templates/static_templates/tos.html:670
 msgid "tos_final_provisions_paragraph_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:669
+#: lms/templates/static_templates/tos.html:671
 msgid "tos_final_provisions_paragraph_2"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:670
+#: lms/templates/static_templates/tos.html:672
 msgid "tos_final_provisions_paragraph_3"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:670
+#: lms/templates/static_templates/tos.html:672
 msgid "tos_final_provisions_paragraph_3_1"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:671
+#: lms/templates/static_templates/tos.html:673
 msgid "tos_final_provisions_paragraph_4"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:672
+#: lms/templates/static_templates/tos.html:674
 msgid "tos_final_provisions_paragraph_5"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:673
+#: lms/templates/static_templates/tos.html:675
 msgid "tos_final_provisions_paragraph_6"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:674
+#: lms/templates/static_templates/tos.html:676
 msgid "tos_final_provisions_paragraph_7"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:675
+#: lms/templates/static_templates/tos.html:677
 msgid "tos_final_provisions_paragraph_8"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:676
+#: lms/templates/static_templates/tos.html:678
 msgid "tos_final_provisions_paragraph_9"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:677
+#: lms/templates/static_templates/tos.html:679
 msgid "tos_final_provisions_paragraph_10"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:678
+#: lms/templates/static_templates/tos.html:680
 msgid "tos_final_provisions_paragraph_11"
 msgstr ""
 
-#: lms/templates/static_templates/tos.html:679
+#: lms/templates/static_templates/tos.html:681
 msgid "tos_final_provisions_paragraph_12"
 msgstr ""
 
