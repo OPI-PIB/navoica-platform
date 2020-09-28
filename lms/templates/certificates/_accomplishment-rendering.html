@@ -1,26 +1,45 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
-<%! from django.conf import settings %>
+<%! 
+from django.utils.translation import ugettext as _
+from django.conf import settings
+from django.utils import translation
+from django.contrib.staticfiles import finders
+%>
+
 <%namespace name='static' file='../static_content.html'/>
+
 <%
 course_mode_class = course_mode if course_mode else ''
 %>
 
-
 <div id="content" class="bg-ligh">
     <main class="container d-print-margin">
-
-
         <section>
             <div id="authentication">
                 <header>
-                    <div>Zaświadczenie</div>
+                    <div>${_("Honor Code Certificate")}</div>
                 </header>
                 <div>
                     <div id="logos">
-                        <div id="platform"><img src="${settings.LMS_ROOT_URL}/static/images/logo-light-bg.svg" alt="Navoica"></div>
-                        <div id="administrator"><img
-                                src="${settings.LMS_ROOT_URL}/static/images/org/${organizer}.png" alt="${organizer}"></div>
+                        <div id="platform">
+                            <img src="${settings.LMS_ROOT_URL}/static/images/logo-light-bg.svg" alt="Navoica">
+                        </div>
+                        <div id="administrator">
+                            <%
+
+                                def get_translation_in(language, s):
+                                    with translation.override(language):
+                                        return translation.gettext(s)
+                                
+                                organizer_logo_name = organizer
+                                
+                                if not finders.find('images/org/{}.png'.format(organizer)):
+                                    organizer_logo_name = get_translation_in('pl', organizer)
+
+                            %>
+                            
+                            <img src="${settings.LMS_ROOT_URL}/static/images/org/${organizer_logo_name}.png" alt="${organizer}">
+                        </div>
                     </div>
                     <div id="person">
                         <div class="hr"></div>
@@ -28,7 +47,7 @@ course_mode_class = course_mode if course_mode else ''
                     </div>
                     <div id="course">
                         <div class="label">
-                            <div>ukończył/a kurs</div>
+                            <div>${_("has successfully completed the course")}</div>
                         </div>
                         <div id="title">
                             <div class="hr"></div>
@@ -39,27 +58,27 @@ course_mode_class = course_mode if course_mode else ''
                         <div id="authentication-date">
                             <div id="date">
                                 <div class="hr"></div>
-                                <div class="label">data uzyskania zaświadczenia</div>
+                                <div class="label">${_("Date of certification")}</div>
                                 <div class="value">${certificate_date_issued}</div>
                             </div>
                             <div id="authentication-note">
                                 <div class="hr"></div>
-                                <p>Dokument poświadcza ukończenie kursu <strong>${accomplishment_copy_course_name}</strong> na platformie Navoica, którego organizatorem jest ${organizer}.</p>
-                                <a href="${settings.LMS_ROOT_URL}${certificate_absolute_url}">weryfikacja</a>
+                                <p>${_("This document confirms the completion of the")} <strong> ${accomplishment_copy_course_name}</strong> ${_("offered by")} ${organizer} ${_("through Navoica.")}</p>
+                                <a href="${settings.LMS_ROOT_URL}${certificate_absolute_url}">${_("verification")}</a>
                             </div>
                         </div>
                         % if certificate_data:
                         <div id="experts">
                             <div class="hr"></div>
-                            <div class="label">eksperci</div>
+                            <div class="label">${_("experts")}</div>
                             % for signatory in certificate_data.get('signatories', []):
                             % if loop.index < 2:
                             <div id="expert-${loop.index+1}">
                                 % if signatory['signature_image_path']:
-                                <div class="signature"><img style="max-width:
-                                 100%; max-height: 100%"
-                                                            class="signatory-signature"
-                                         src="${settings.LMS_ROOT_URL}${signatory['signature_image_path']}"></div>
+                                    <div class="signature">
+                                        <img style="max-width: 100%; max-height: 100%" class="signatory-signature"
+                                             src="${settings.LMS_ROOT_URL}${signatory['signature_image_path']}">
+                                    </div>
                                 % endif
                                 <div class="value">${signatory['name']}</div>
                                 <div class="institution">${signatory['title']}</div>
@@ -73,14 +92,10 @@ course_mode_class = course_mode if course_mode else ''
                 <footer></footer>
             </div>
             % if request:
-            <div class="mt-4 text-center d-print-none">
-                <a class="btn btn-primary" href='${settings.LMS_ROOT_URL}${request.path}/pdf?preview=${request.GET.get('preview','')}' role="button"><i class="fas fa-download"></i> Pobierz zaświadczenie</a>
-            </div>
+                <div class="mt-4 text-center d-print-none">
+                    <a class="btn btn-primary" href='${settings.LMS_ROOT_URL}${request.path}/pdf?preview=${request.GET.get('preview','')}' role="button"><i class="fas fa-download"></i> ${_("Download Certificate")}</a>
+                </div>
             % endif
-
         </section>
-
     </main>
 </div>
-
-
