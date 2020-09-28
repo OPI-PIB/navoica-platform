@@ -43,7 +43,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
   <main class="container">
 
    <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
       <div class="d-flex">
         % if ENABLE_DASHBOARD_TAB.is_enabled(course_key):
             ${static.renderReact(
@@ -87,8 +87,8 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                 </div>
             % endif
             % if course_tools:
-                <header id="courses-list-header">
-                    <h2 id="h2">
+                <header class="courses-list-header">
+                    <h2 class="custom-h2">
                     <span class="d-none d-md-block">${_("Course Tools")}</span>
                     </h2>
                 </header>
@@ -139,8 +139,8 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
             % if handouts_html:
                 <!--<div class="section section-handouts">
                     <h3 class="hd-6 section-title">${_("Course Handouts")}</h3>
-                    ${HTML(handouts_html)}-->
-##                 </div>
+                    ${HTML(handouts_html)}
+##                 </div>-->
             % endif
             </aside>
         <article id="results">
@@ -151,8 +151,8 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                     </div>
                 % endif
             </div>
-            <header id="courses-list-header">
-                <h2 id="h2">
+            <header class="courses-list-header">
+                <h2 class="custom-h2">
                     <!-- <span class="d-name d-md-block">Spis treści</span> -->
                     <span class="d-name d-md-block">${_("Table of Contents")}</span>
                 </h2>
@@ -239,7 +239,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
         <div class="modal-body">
             <div id="track-info"> 
                 <input name="course_id" id="email_settings_course_id" type="hidden" />
-                ${_("Receive course emails")} <input type="checkbox" id="receive_emails" name="receive_emails" /></label>
+                <label for="receive_emails">${_("Receive course emails")} <input type="checkbox" id="receive_emails" name="receive_emails" /></label>
             </div>
         </div>
         <hr/>

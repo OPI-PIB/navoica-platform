@@ -52,7 +52,7 @@ HeaderFactory();
 
             % if course and user.is_authenticated():
 
-            <span id="" class="course-preview-title d-flex flex-column flex-wrap mr-auto">
+            <span class="course-preview-title d-flex flex-column flex-wrap mr-auto">
               % if course.organizer:
                           <span class="provider w-100 font-weight-bold" title="${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</span><br>
 
@@ -81,7 +81,7 @@ HeaderFactory();
 
             % endif
 
-            <div role="navigation" aria-label="Nawiguj do wybranych stron platformy Nawojka">
+            <div aria-label="Nawiguj do wybranych stron platformy Nawojka">
 
                 <div class="dropdown ml-auto">
                     <button id="mooc-my-mooc"
