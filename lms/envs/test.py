@@ -95,7 +95,7 @@ WIKI_ENABLED = True
 PARENTAL_CONSENT_AGE_LIMIT = 13
 
 # Local Directories
-TEST_ROOT = path("test_root")
+TEST_ROOT = EDX_ROOT / "test_root"
 # Want static files in the same dir for running on jenkins.
 STATIC_ROOT = TEST_ROOT / "staticfiles"
 INSTALLED_APPS = [app for app in INSTALLED_APPS if app != 'webpack_loader']
