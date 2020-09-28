@@ -23,7 +23,6 @@ from path import Path as path
 from xmodule.modulestore.modulestore_settings import convert_module_store_setting_if_needed
 
 import sentry_sdk
-sentry_sdk.init(os.environ.get('SENTRY_URL_CMS', None))
 
 INTERNAL_HOST_IP = os.environ.get('INTERNAL_HOST_IP', None)
 
@@ -99,6 +98,9 @@ CELERY_ROUTES = "{}celery.Router".format(QUEUE_VARIANT)
 # Things like server locations, ports, etc.
 with open(CONFIG_ROOT / CONFIG_PREFIX + "env.json") as env_file:
     ENV_TOKENS = json.load(env_file)
+
+# initialize sentry logging; if None then its disabled
+sentry_sdk.init(ENV_TOKENS.get('SENTRY_URL', None))
 
 # Do NOT calculate this dynamically at startup with git because it's *slow*.
 EDX_PLATFORM_REVISION = ENV_TOKENS.get('EDX_PLATFORM_REVISION', EDX_PLATFORM_REVISION)
@@ -275,6 +277,7 @@ LOGGING = get_logger_config(LOG_DIR,
 #theming start:
 PLATFORM_NAME = ENV_TOKENS.get('PLATFORM_NAME', PLATFORM_NAME)
 PLATFORM_DESCRIPTION = ENV_TOKENS.get('PLATFORM_DESCRIPTION', PLATFORM_DESCRIPTION)
+PRODUCTION = ENV_TOKENS.get('PRODUCTION', PRODUCTION)
 STUDIO_NAME = ENV_TOKENS.get('STUDIO_NAME', STUDIO_NAME)
 STUDIO_SHORT_NAME = ENV_TOKENS.get('STUDIO_SHORT_NAME', STUDIO_SHORT_NAME)
 
