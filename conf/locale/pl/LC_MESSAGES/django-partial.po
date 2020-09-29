@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-09-02 06:39+0000\n"
+"POT-Creation-Date: 2020-09-07 11:48+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
-"Last-Translator: krystianlygas <krystian.lygas@gmail.com>, 2020\n"
+"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgid "Problem"
 msgstr "Ćwiczenie"
 
 #: cms/djangoapps/contentstore/views/component.py:367
-#: common/lib/xmodule/xmodule/video_module/video_module.py:459
+#: common/lib/xmodule/xmodule/video_module/video_module.py:460
 msgid "Advanced"
 msgstr "Zaawansowane"
 
@@ -113,7 +113,7 @@ msgid "Mode"
 msgstr "Tryb"
 
 #: common/djangoapps/course_modes/admin.py:46
-#: lms/djangoapps/courseware/date_summary.py:609
+#: lms/djangoapps/courseware/date_summary.py:605
 msgid "Verification Deadline"
 msgstr "Ostateczny termin weryfikacji"
 
@@ -143,7 +143,7 @@ msgstr "Potwierdzenie tożsamości w toku"
 msgid "You're enrolled as a verified student"
 msgstr "Jesteś zapisany/a jako student ścieżki potwierdzonej"
 
-#: common/djangoapps/course_modes/helpers.py:40 lms/envs/common.py:2768
+#: common/djangoapps/course_modes/helpers.py:40 lms/envs/common.py:2769
 msgid "Verified"
 msgstr "Potwierdzony"
 
@@ -223,7 +223,7 @@ msgstr ""
 "Jest to masowy numer SKU (kod sprzedaży) tego trybu w zewnętrznym systemie "
 "płatności."
 
-#: common/djangoapps/course_modes/models.py:182 lms/envs/common.py:2767
+#: common/djangoapps/course_modes/models.py:182 lms/envs/common.py:2768
 msgid "Honor"
 msgstr "Honor"
 
@@ -657,49 +657,49 @@ msgstr "Nazwa atrybutu tego użytkownika."
 msgid "Value of this user attribute."
 msgstr "Wartość atrybutu tego użytkownika."
 
-#: common/djangoapps/student/views/dashboard.py:181
+#: common/djangoapps/student/views/dashboard.py:173
 msgid " and "
 msgstr "i"
 
-#: common/djangoapps/student/views/dashboard.py:362
+#: common/djangoapps/student/views/dashboard.py:355
 msgid "Photos are mismatched"
 msgstr "Zdjęcia nie są zgodne"
 
-#: common/djangoapps/student/views/dashboard.py:363
+#: common/djangoapps/student/views/dashboard.py:356
 msgid "Name missing from ID photo"
 msgstr "Na zdjęciu dokumentu tożsamości brakuje imienia i nazwiska"
 
-#: common/djangoapps/student/views/dashboard.py:364
+#: common/djangoapps/student/views/dashboard.py:357
 msgid "ID photo not provided"
 msgstr "Nie przesłano zdjęcia dokumentu tożsamości"
 
-#: common/djangoapps/student/views/dashboard.py:365
+#: common/djangoapps/student/views/dashboard.py:358
 msgid "ID is invalid"
 msgstr "Dokument tożsamości jest nieprawidłowy"
 
-#: common/djangoapps/student/views/dashboard.py:366
+#: common/djangoapps/student/views/dashboard.py:359
 msgid "Learner photo is blurry"
 msgstr "Zdjęcie studenta jest niewyraźne"
 
-#: common/djangoapps/student/views/dashboard.py:367
+#: common/djangoapps/student/views/dashboard.py:360
 msgid "Name on ID does not match name on account"
 msgstr ""
 "Imię i nazwisko na dokumencie nie zgadzają się z tymi przypisanymi do konta."
 
-#: common/djangoapps/student/views/dashboard.py:368
+#: common/djangoapps/student/views/dashboard.py:361
 msgid "Learner photo not provided"
 msgstr "Nie przesłano zdjęcia identyfikacyjnego"
 
-#: common/djangoapps/student/views/dashboard.py:369
+#: common/djangoapps/student/views/dashboard.py:362
 msgid "ID photo is blurry"
 msgstr "Zdjęcie dokumentu tożsamości jest niewyraźne"
 
-#: common/djangoapps/student/views/dashboard.py:780
+#: common/djangoapps/student/views/dashboard.py:772
 #, python-brace-format
 msgid "The course you are looking for does not start until {date}."
 msgstr "Wybrany przez ciebie kurs rozpocznie się {date}."
 
-#: common/djangoapps/student/views/dashboard.py:784
+#: common/djangoapps/student/views/dashboard.py:776
 #, python-brace-format
 msgid "The course you are looking for is closed for enrollment as of {date}."
 msgstr "Zapisy na wybrany przez ciebie kurs zostały zakończone {date}."
@@ -1691,17 +1691,17 @@ msgstr "Częściowo wspierany"
 msgid "Unsupported"
 msgstr "Niewspierany"
 
-#: common/lib/capa/capa/capa_problem.py:449
+#: common/lib/capa/capa/capa_problem.py:455
 msgid "Cannot rescore problems with possible file submissions"
 msgstr ""
 "Nie można ponownie ocenić ćwiczeń, które mogą zawierać załączone pliki"
 
-#: common/lib/capa/capa/capa_problem.py:521
+#: common/lib/capa/capa/capa_problem.py:541
 #: common/lib/xmodule/xmodule/capa_base.py:810
 msgid "Incorrect"
 msgstr "Błędnie"
 
-#: common/lib/capa/capa/capa_problem.py:526
+#: common/lib/capa/capa/capa_problem.py:546
 #: common/lib/xmodule/xmodule/capa_base.py:819
 msgid "Correct"
 msgstr "Poprawnie"
@@ -3719,7 +3719,7 @@ msgstr ""
 msgid "General"
 msgstr "Ogólne"
 
-#: common/lib/xmodule/xmodule/course_module.py:1310 lms/envs/common.py:2790
+#: common/lib/xmodule/xmodule/course_module.py:1310 lms/envs/common.py:2791
 msgid "Archived"
 msgstr "Zakończony"
 
@@ -3731,7 +3731,7 @@ msgstr "Trwający"
 msgid "Starting Soon"
 msgstr "Dostępny"
 
-#: common/lib/xmodule/xmodule/course_module.py:1316 lms/envs/common.py:2787
+#: common/lib/xmodule/xmodule/course_module.py:1316 lms/envs/common.py:2788
 msgid "Upcoming"
 msgstr "Zaplanowany"
 
@@ -4857,11 +4857,11 @@ msgstr ""
 "Nieprawidłowy typ kodowania, transkrypcje powinny wykorzystywać kodowanie "
 "UTF-8."
 
-#: common/lib/xmodule/xmodule/video_module/video_module.py:454
+#: common/lib/xmodule/xmodule/video_module/video_module.py:455
 msgid "Basic"
 msgstr "Podstawowy"
 
-#: common/lib/xmodule/xmodule/video_module/video_module.py:526
+#: common/lib/xmodule/xmodule/video_module/video_module.py:528
 #, python-brace-format
 msgid "There is no transcript file associated with the {lang} language."
 msgid_plural ""
@@ -4871,7 +4871,7 @@ msgstr[1] "Brak plików transkrypcji powiązanych z językami {lang}."
 msgstr[2] "Brak plików transkrypcji powiązanych z językami {lang}."
 msgstr[3] "Brak plików transkrypcji powiązanych z językami {lang}."
 
-#: common/lib/xmodule/xmodule/video_module/video_module.py:788
+#: common/lib/xmodule/xmodule/video_module/video_module.py:791
 msgid ""
 "The URL for your video. This can be a YouTube URL or a link to an .mp4, "
 ".ogg, or .webm video file hosted elsewhere on the Internet."
@@ -4879,7 +4879,7 @@ msgstr ""
 "Adres URL twojego filmu. Może to być adres YouTube albo odnośnik do pliku "
 ".mp4, .ogg lub .webm znajdującego się gdziekolwiek w Internecie."
 
-#: common/lib/xmodule/xmodule/video_module/video_module.py:789
+#: common/lib/xmodule/xmodule/video_module/video_module.py:792
 msgid "Default Video URL"
 msgstr "Domyślny adres URL filmu"
 
@@ -6236,30 +6236,26 @@ msgstr ""
 msgid ""
 "If you have earned a certificate, you will be able to access it "
 "{time_remaining_string} from now. You will also be able to view your "
-"certificates on your {learner_profile_link}."
+"certificates on your {dashboard_link}."
 msgstr ""
 "Jeśli otrzymałeś zaświadczenie o ukończeniu kursu będziesz mieć do niego "
 "dostęp przez {time_remaining_string} od teraz. Możesz przeglądać swoje "
-"zaświadczenia na {learner_profile_link}."
+"zaświadczenia na {dashboard_link}."
 
-#: lms/djangoapps/courseware/date_summary.py:387
-msgid "Learner Profile"
-msgstr "Profil studenta"
-
-#: lms/djangoapps/courseware/date_summary.py:390
+#: lms/djangoapps/courseware/date_summary.py:386
 msgid "We are working on generating course certificates."
 msgstr "Generujemy zaświadczenia ukończenia kursów. "
 
-#: lms/djangoapps/courseware/date_summary.py:460
-#: lms/djangoapps/courseware/date_summary.py:495
+#: lms/djangoapps/courseware/date_summary.py:456
+#: lms/djangoapps/courseware/date_summary.py:491
 msgid "Upgrade to Verified Certificate"
 msgstr "Zdobądź zaświadczenie o ukończeniu kursu"
 
-#: lms/djangoapps/courseware/date_summary.py:497
+#: lms/djangoapps/courseware/date_summary.py:493
 msgid "Verification Upgrade Deadline"
 msgstr "Ostateczny termin na potwierdzenie tożsamości"
 
-#: lms/djangoapps/courseware/date_summary.py:509
+#: lms/djangoapps/courseware/date_summary.py:505
 msgid ""
 "Don't miss the opportunity to highlight your new knowledge and skills by "
 "earning a verified certificate."
@@ -6267,7 +6263,7 @@ msgstr ""
 "Nie przegap okazji, aby podkreślić swoją nową wiedzę i umiejętności przez "
 "zdobycie zaświadczenia o ukończeniu kursu."
 
-#: lms/djangoapps/courseware/date_summary.py:512
+#: lms/djangoapps/courseware/date_summary.py:508
 msgid ""
 "You are still eligible to upgrade to a Verified Certificate! Pursue it to "
 "highlight the knowledge and skills you gain in this course."
@@ -6279,12 +6275,12 @@ msgstr ""
 #. should upgrade to the verified track. 'date' will be
 #. their personalized verified upgrade deadline formatted
 #. according to their locale.
-#: lms/djangoapps/courseware/date_summary.py:528
+#: lms/djangoapps/courseware/date_summary.py:524
 #, python-brace-format
 msgid "by {date}"
 msgstr "do {date}"
 
-#: lms/djangoapps/courseware/date_summary.py:540
+#: lms/djangoapps/courseware/date_summary.py:536
 #, python-brace-format
 msgid ""
 "Don't forget, you have {time_remaining_string} left to upgrade to a Verified"
@@ -6293,14 +6289,14 @@ msgstr ""
 "Pamiętaj, że zostało {time_remaining_string}, aby uzyskać zweryfikowane "
 "zaświadczenie o ukończeniu kursu. "
 
-#: lms/djangoapps/courseware/date_summary.py:544
+#: lms/djangoapps/courseware/date_summary.py:540
 #, python-brace-format
 msgid "Don't forget to upgrade to a verified certificate by {localized_date}."
 msgstr ""
 "Nie zapomnij, że możesz uzyskać zaświadczenie o ukończeniu kursu do "
 "{localized_date}."
 
-#: lms/djangoapps/courseware/date_summary.py:549
+#: lms/djangoapps/courseware/date_summary.py:545
 #, python-brace-format
 msgid ""
 "In order to qualify for a certificate, you must meet all course grading "
@@ -6313,28 +6309,28 @@ msgstr ""
 "zweryfikować swoją tożsamość na {platform_name} jeśli jeszcze tego nie "
 "zrobiłeś/łaś.{button_panel}"
 
-#: lms/djangoapps/courseware/date_summary.py:562
+#: lms/djangoapps/courseware/date_summary.py:558
 #, python-brace-format
 msgid "Upgrade ({upgrade_price})"
 msgstr "Konto premium ({upgrade_price})"
 
-#: lms/djangoapps/courseware/date_summary.py:597
+#: lms/djangoapps/courseware/date_summary.py:593
 msgid "Learn More"
 msgstr "Dowiedz się więcej"
 
-#: lms/djangoapps/courseware/date_summary.py:598
+#: lms/djangoapps/courseware/date_summary.py:594
 msgid "Retry Verification"
 msgstr "Ponów weryfikację"
 
-#: lms/djangoapps/courseware/date_summary.py:600
+#: lms/djangoapps/courseware/date_summary.py:596
 msgid "Verify My Identity"
 msgstr "Potwierdź moją tożsamość"
 
-#: lms/djangoapps/courseware/date_summary.py:608
+#: lms/djangoapps/courseware/date_summary.py:604
 msgid "Missed Verification Deadline"
 msgstr "Przeoczono ostateczny termin weryfikacji"
 
-#: lms/djangoapps/courseware/date_summary.py:615
+#: lms/djangoapps/courseware/date_summary.py:611
 msgid ""
 "Unfortunately you missed this course's deadline for a successful "
 "verification."
@@ -6342,7 +6338,7 @@ msgstr ""
 "Niestety przeoczyłeś ostateczny termin na potwierdzenie tożsamości na "
 "potrzeby kursu."
 
-#: lms/djangoapps/courseware/date_summary.py:619
+#: lms/djangoapps/courseware/date_summary.py:615
 msgid ""
 "You must successfully complete verification before this date to qualify for "
 "a Verified Certificate."
@@ -7234,7 +7230,7 @@ msgstr "E-mail"
 
 #: lms/djangoapps/instructor/views/api.py:1251
 #: lms/djangoapps/instructor_task/tasks_helper/enrollments.py:105
-#: lms/envs/common.py:2762
+#: lms/envs/common.py:2763
 msgid "Language"
 msgstr "Język"
 
@@ -10247,335 +10243,335 @@ msgstr "Przeglądanie"
 
 #. Translators: This is the website name of www.facebook.com.  Please
 #. translate this the way that Facebook advertises in your language.
-#: lms/envs/common.py:2430
+#: lms/envs/common.py:2431
 msgid "Facebook"
 msgstr "Facebook"
 
-#: lms/envs/common.py:2432
+#: lms/envs/common.py:2433
 #, python-brace-format
 msgid "Like {platform_name} on Facebook"
 msgstr "Polub {platform_name} na Facebooku"
 
 #. Translators: This is the website name of www.twitter.com.  Please
 #. translate this the way that Twitter advertises in your language.
-#: lms/envs/common.py:2437
+#: lms/envs/common.py:2438
 msgid "Twitter"
 msgstr "Twitter"
 
-#: lms/envs/common.py:2439
+#: lms/envs/common.py:2440
 #, python-brace-format
 msgid "Follow {platform_name} on Twitter"
 msgstr "Śledź {platform_name} na Twitterze"
 
 #. Translators: This is the website name of www.linkedin.com.  Please
 #. translate this the way that LinkedIn advertises in your language.
-#: lms/envs/common.py:2444
+#: lms/envs/common.py:2445
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: lms/envs/common.py:2446
+#: lms/envs/common.py:2447
 #, python-brace-format
 msgid "Follow {platform_name} on LinkedIn"
 msgstr "Śledź {platform_name} na LinkedIn"
 
 #. Translators: This is the website name of plus.google.com.  Please
 #. translate this the way that Google+ advertises in your language.
-#: lms/envs/common.py:2451
+#: lms/envs/common.py:2452
 msgid "Google+"
 msgstr "Google+"
 
-#: lms/envs/common.py:2453
+#: lms/envs/common.py:2454
 #, python-brace-format
 msgid "Follow {platform_name} on Google+"
 msgstr "Śledź {platform_name} w Google+"
 
 #. Translators: This is the website name of www.tumblr.com.  Please
 #. translate this the way that Tumblr advertises in your language.
-#: lms/envs/common.py:2458
+#: lms/envs/common.py:2459
 msgid "Tumblr"
 msgstr "Tumblr"
 
 #. Translators: This is the website name of www.meetup.com.  Please
 #. translate this the way that MeetUp advertises in your language.
-#: lms/envs/common.py:2464
+#: lms/envs/common.py:2465
 msgid "Meetup"
 msgstr "Meetup"
 
 #. Translators: This is the website name of www.reddit.com.  Please
 #. translate this the way that Reddit advertises in your language.
-#: lms/envs/common.py:2470
+#: lms/envs/common.py:2471
 msgid "Reddit"
 msgstr "Reddit"
 
-#: lms/envs/common.py:2472
+#: lms/envs/common.py:2473
 #, python-brace-format
 msgid "Subscribe to the {platform_name} subreddit"
 msgstr "Subskrybuj subreddit {platform_name}"
 
 #. Translators: This is the website name of https://vk.com.  Please
 #. translate this the way that VK advertises in your language.
-#: lms/envs/common.py:2477
+#: lms/envs/common.py:2478
 msgid "VK"
 msgstr "VK"
 
 #. Translators: This is the website name of http://www.weibo.com.  Please
 #. translate this the way that Weibo advertises in your language.
-#: lms/envs/common.py:2483
+#: lms/envs/common.py:2484
 msgid "Weibo"
 msgstr "Weibo"
 
 #. Translators: This is the website name of www.youtube.com.  Please
 #. translate this the way that YouTube advertises in your language.
-#: lms/envs/common.py:2489
+#: lms/envs/common.py:2490
 msgid "Youtube"
 msgstr "Youtube"
 
-#: lms/envs/common.py:2491
+#: lms/envs/common.py:2492
 #, python-brace-format
 msgid "Subscribe to the {platform_name} YouTube channel"
 msgstr "Subskrybuj kanał {platform_name} na YouTubie"
 
-#: lms/envs/common.py:2683
+#: lms/envs/common.py:2684
 msgid "Polish"
 msgstr "polski"
 
-#: lms/envs/common.py:2684
+#: lms/envs/common.py:2685
 msgid "English"
 msgstr "angielski"
 
-#: lms/envs/common.py:2688
+#: lms/envs/common.py:2689
 msgid "introductory"
 msgstr "początkujący"
 
-#: lms/envs/common.py:2689
+#: lms/envs/common.py:2690
 msgid "intermediate"
 msgstr "średnio zaawansowany"
 
-#: lms/envs/common.py:2690
+#: lms/envs/common.py:2691
 msgid "advanced"
 msgstr "zaawansowany"
 
-#: lms/envs/common.py:2694
+#: lms/envs/common.py:2695
 msgid "Young Science Foundation"
 msgstr "Fundacja Młodej Nauki"
 
-#: lms/envs/common.py:2695
+#: lms/envs/common.py:2696
 msgid "Warsaw University of Technology"
 msgstr "Politechnika Warszawska"
 
-#: lms/envs/common.py:2696
+#: lms/envs/common.py:2697
 msgid "Lodz University of Technology"
 msgstr "Politechnika Łódzka"
 
-#: lms/envs/common.py:2697
+#: lms/envs/common.py:2698
 msgid "National Information Processing Institute"
 msgstr "OPI PIB"
 
-#: lms/envs/common.py:2698
+#: lms/envs/common.py:2699
 msgid "Helena Chodkowska University of Technology and Economics"
 msgstr "Uczelnia Techniczno-Handlowa im. Heleny Chodkowskiej"
 
-#: lms/envs/common.py:2699
+#: lms/envs/common.py:2700
 msgid "Vistula University "
 msgstr "Akademia Finansów i Biznesu Vistula"
 
-#: lms/envs/common.py:2700
+#: lms/envs/common.py:2701
 msgid "Akademia Ignatianum w Krakowie"
 msgstr "Akademia Ignatianum w Krakowie"
 
-#: lms/envs/common.py:2701
+#: lms/envs/common.py:2702
 msgid "War Studies University"
 msgstr "Akademia Sztuki Wojennej"
 
-#: lms/envs/common.py:2702
+#: lms/envs/common.py:2703
 msgid "WSB University"
 msgstr "Akademia WSB"
 
-#: lms/envs/common.py:2703
+#: lms/envs/common.py:2704
 msgid "The Witelon State University of Applied Sciences in Legnica"
 msgstr "Państwowa Wyższa Szkoła Zawodowa im. Witelona w Legnicy"
 
-#: lms/envs/common.py:2704
+#: lms/envs/common.py:2705
 msgid "Bialystok University of Technology"
 msgstr "Politechnika Białostocka"
 
-#: lms/envs/common.py:2705
+#: lms/envs/common.py:2706
 msgid "Czestochowa University of Technology"
 msgstr "Politechnika Częstochowska"
 
-#: lms/envs/common.py:2706
+#: lms/envs/common.py:2707
 msgid "Gdansk University of Technology"
 msgstr "Politechnika Gdańska"
 
-#: lms/envs/common.py:2707
+#: lms/envs/common.py:2708
 msgid "Cracow University of Technology"
 msgstr "Politechnika Krakowska"
 
-#: lms/envs/common.py:2708
+#: lms/envs/common.py:2709
 msgid "Public Univerity of Humanities ‘POMERANIA’"
 msgstr "Powszechna Wyższa Szkoła Humanistyczna 'Pomerania'"
 
-#: lms/envs/common.py:2709
+#: lms/envs/common.py:2710
 msgid "Paweł Włodkowic University College in Płock"
 msgstr "Szkoła Wyższa im. Pawła Włodkowica w Płocku"
 
-#: lms/envs/common.py:2710
+#: lms/envs/common.py:2711
 msgid "Poznań University of Economics and Business "
 msgstr "Uniwersytet Ekonomiczny w Poznaniu"
 
-#: lms/envs/common.py:2711
+#: lms/envs/common.py:2712
 msgid "Jan Długosz University in Częstochowa "
 msgstr "Uniwersytet Humanistyczno- Przyrodniczy im. Jana Długosza"
 
-#: lms/envs/common.py:2712
+#: lms/envs/common.py:2713
 msgid "Adam Mickiewicz University in Poznań"
 msgstr "Uniwersytet im. Adama Mickiewicza w Poznaniu"
 
-#: lms/envs/common.py:2713
+#: lms/envs/common.py:2714
 msgid "Jagiellonian University in Kraków"
 msgstr "Uniwersytet Jagielloński"
 
-#: lms/envs/common.py:2714
+#: lms/envs/common.py:2715
 msgid "Cardinal Wyszyński University in Warsaw"
 msgstr "Uniwersytet Kardynała Stefana Wyszyńskiego w Warszawie"
 
-#: lms/envs/common.py:2715
+#: lms/envs/common.py:2716
 msgid "Nicolaus Copernicus University in Toruń"
 msgstr "Uniwersytet Mikołaja Kopernika w Toruniu"
 
-#: lms/envs/common.py:2716
+#: lms/envs/common.py:2717
 msgid "Pedagogical University of Krakow"
 msgstr "Uniwersytet Pedagogiczny im. KEN w Krakowie"
 
-#: lms/envs/common.py:2717
+#: lms/envs/common.py:2718
 msgid "Uniwersytet Szczeciński"
 msgstr "Uniwersytet Szczeciński"
 
-#: lms/envs/common.py:2718
+#: lms/envs/common.py:2719
 msgid "University of Silesia in Katowice"
 msgstr "Uniwersytet Śląski w Katowicach"
 
-#: lms/envs/common.py:2719
+#: lms/envs/common.py:2720
 msgid "UTP University of Science and Technology"
 msgstr "Uniwersytet Technologiczno- Przyrodniczy w Bydgoszczy"
 
-#: lms/envs/common.py:2720
+#: lms/envs/common.py:2721
 msgid "Kazimierz Pułaski University of Technology and Humanities in Radom"
 msgstr "Uniwersytet Technologiczno-Humanistyczny im. Kazimierza Pułaskiego"
 
-#: lms/envs/common.py:2721
+#: lms/envs/common.py:2722
 msgid "Military University of Technology"
 msgstr "Wojskowa Akademia Techniczna"
 
-#: lms/envs/common.py:2722
+#: lms/envs/common.py:2723
 msgid "College of Business and Entrepreneurship in Ostrowiec Świętokrzyski"
 msgstr "Wyższa Szkoła Biznesu i Przedsiębiorczości w Ostrowcu Św."
 
-#: lms/envs/common.py:2723
+#: lms/envs/common.py:2724
 msgid "Lipinski University"
 msgstr "Wyższa Szkoła Ekonomii, Prawa i Nauk Medycznych"
 
-#: lms/envs/common.py:2724
+#: lms/envs/common.py:2725
 msgid "University of Economy in Bydgoszcz"
 msgstr "Wyższa Szkoła Gospodarki w Bydgoszczy"
 
-#: lms/envs/common.py:2725
+#: lms/envs/common.py:2726
 msgid "University of Business in Wrocław"
 msgstr "Wyższa Szkoła Handlowa we Wrocławiu"
 
-#: lms/envs/common.py:2726
+#: lms/envs/common.py:2727
 msgid "TWP Higher School of Humanities"
 msgstr "Wyższa Szkoła Humanistyczna TWP"
 
-#: lms/envs/common.py:2727
+#: lms/envs/common.py:2728
 msgid "Humanitas University in Sosnowiec"
 msgstr "Wyższa Szkoła Humanitas"
 
-#: lms/envs/common.py:2728
+#: lms/envs/common.py:2729
 msgid "The University of Information Technology and Management in Rzeszów"
 msgstr "Wyższa Szkoła Informatyki i Zarządzania w Rzeszowie"
 
-#: lms/envs/common.py:2729
+#: lms/envs/common.py:2730
 msgid "Academy of European Integration in Szczecin"
 msgstr "Wyższa Szkoła Integracji Europejskiej"
 
-#: lms/envs/common.py:2730
+#: lms/envs/common.py:2731
 msgid "WSPiA University of Rzeszow"
 msgstr "WSPiA Rzeszowska Szkoła Wyższa"
 
-#: lms/envs/common.py:2731
+#: lms/envs/common.py:2732
 msgid "Katowice School of Technology"
 msgstr "Wyższa Szkoła Techniczna w Katowicach"
 
-#: lms/envs/common.py:2732
+#: lms/envs/common.py:2733
 msgid "West Pomeranian Business School"
 msgstr "Zachodniopomorska Szkoła Biznesu w Szczecinie"
 
-#: lms/envs/common.py:2733
+#: lms/envs/common.py:2734
 msgid "West Pomeranian University of Technology in Szczecin"
 msgstr "Zachodniopomorski Uniwersytet Technologiczny w Szczecinie"
 
-#: lms/envs/common.py:2734
+#: lms/envs/common.py:2735
 msgid "Copernicus Science Centre"
 msgstr "Centrum Nauki Kopernik"
 
-#: lms/envs/common.py:2735
+#: lms/envs/common.py:2736
 msgid "Pomeranian University in Słupsk"
 msgstr "Akademia Pomorska w Słupsku"
 
-#: lms/envs/common.py:2736
+#: lms/envs/common.py:2737
 msgid "Collegium Humanum – Warsaw Management University"
 msgstr "Collegium Humanum w Warszawie"
 
-#: lms/envs/common.py:2737
+#: lms/envs/common.py:2738
 msgid "Parlament Studentów Rzeczypospolitej Polskiej"
 msgstr "Parlament Studentów Rzeczypospolitej Polskiej"
 
-#: lms/envs/common.py:2743
+#: lms/envs/common.py:2744
 msgid "Language learning"
 msgstr "Języki obce"
 
-#: lms/envs/common.py:2744
+#: lms/envs/common.py:2745
 msgid "Humanities"
 msgstr "Nauki humanistyczne"
 
-#: lms/envs/common.py:2745
+#: lms/envs/common.py:2746
 msgid "IT & Computer Science"
 msgstr "Nauki komputerowe"
 
-#: lms/envs/common.py:2746
+#: lms/envs/common.py:2747
 msgid "Technology"
 msgstr "Nauki techniczne"
 
-#: lms/envs/common.py:2747
+#: lms/envs/common.py:2748
 msgid "Agriculture"
 msgstr "Nauki rolnicze"
 
-#: lms/envs/common.py:2748
+#: lms/envs/common.py:2749
 msgid "Social Sciences"
 msgstr "Nauki społeczne"
 
-#: lms/envs/common.py:2749
+#: lms/envs/common.py:2750
 msgid "Science"
 msgstr "Nauki ścisłe i przyrodnicze"
 
-#: lms/envs/common.py:2750
+#: lms/envs/common.py:2751
 msgid "Art"
 msgstr "Sztuka"
 
-#: lms/envs/common.py:2751
+#: lms/envs/common.py:2752
 msgid "Economics & Management"
 msgstr "Zarządzanie i ekonomia"
 
-#: lms/envs/common.py:2752
+#: lms/envs/common.py:2753
 msgid "Health sciences"
 msgstr "Zdrowie i nauki medyczne"
 
-#: lms/envs/common.py:2753
+#: lms/envs/common.py:2754
 msgid "Business"
 msgstr "Nauki biznesowe"
 
-#: lms/envs/common.py:2758
+#: lms/envs/common.py:2759
 #, python-format
 msgid "%d week"
 msgid_plural "%d weeks"
@@ -10584,49 +10580,49 @@ msgstr[1] "%d tygodnie"
 msgstr[2] "%d tygodni"
 msgstr[3] "%d tygodnie"
 
-#: lms/envs/common.py:2765
+#: lms/envs/common.py:2766
 msgid "Course type"
 msgstr "Typ kursu"
 
-#: lms/envs/common.py:2769
+#: lms/envs/common.py:2770
 msgid "audit"
 msgstr "audit"
 
-#: lms/envs/common.py:2773
+#: lms/envs/common.py:2774
 #: openedx/core/lib/xblock_builtin/xblock_discussion/xblock_discussion/__init__.py:51
 msgid "Category"
 msgstr "Kategoria"
 
-#: lms/envs/common.py:2777
+#: lms/envs/common.py:2778
 msgid "Institution"
 msgstr "Organizator"
 
-#: lms/envs/common.py:2781
+#: lms/envs/common.py:2782
 msgid "Level"
 msgstr "Poziom trudności"
 
-#: lms/envs/common.py:2785
+#: lms/envs/common.py:2786
 msgid "Availability"
 msgstr "Dostępność"
 
-#: lms/envs/common.py:2788
+#: lms/envs/common.py:2789
 msgid "Starting soon"
 msgstr "Nadchodzący"
 
-#: lms/envs/common.py:2789
+#: lms/envs/common.py:2790
 msgid "In progress"
 msgstr "W trakcie"
 
-#: lms/envs/common.py:2869
+#: lms/envs/common.py:2870
 msgid "Kosovo"
 msgstr "Kosovo"
 
-#: lms/envs/common.py:3278
+#: lms/envs/common.py:3279
 #, python-brace-format
 msgid "Welcome to {platform_name}."
 msgstr "Witamy na platformie {platform_name}."
 
-#: lms/envs/common.py:3280
+#: lms/envs/common.py:3281
 #, python-brace-format
 msgid ""
 "You have left the {start_bold}{enterprise_name}{end_bold} website and are "
