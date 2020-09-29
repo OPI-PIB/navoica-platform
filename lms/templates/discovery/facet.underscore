@@ -6,7 +6,7 @@
 	</div>
 <% if (listIsHuge) { %>
 	<div data-facet="<%- name %>" class="facet-group">
-	<select class="custom-select list-group-item"data-text=<%- gettext('Wybierz') %>>
+	<select class="custom-select list-group-item"data-text=<%- gettext('Select') %>>
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
 	</select>	
 	</div>
