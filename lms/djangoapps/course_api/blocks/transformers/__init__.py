@@ -42,6 +42,7 @@ SUPPORTED_FIELDS = [
     SupportedFieldType('format'),
     SupportedFieldType('due'),
     SupportedFieldType('show_correctness'),
+    SupportedFieldType('start'),
     # 'student_view_data'
     SupportedFieldType(StudentViewTransformer.STUDENT_VIEW_DATA, StudentViewTransformer),
     # 'student_view_multi_device'

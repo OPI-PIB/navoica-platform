@@ -147,7 +147,8 @@ def get_course_outline_block_tree(request, course_id):
             'graded',
             'special_exam_info',
             'show_gated_sections',
-            'format'
+            'format',
+            'start'
         ],
         block_types_filter=block_types_filter
     )
