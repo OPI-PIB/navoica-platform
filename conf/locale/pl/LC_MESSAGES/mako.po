@@ -40,7 +40,7 @@ msgstr "Nie znaleziono strony"
 msgid "Content"
 msgstr "Treść"
 
-#: cms/templates/base.html:68 lms/templates/main.html:193
+#: cms/templates/base.html lms/templates/main.html
 msgid "Skip to main content"
 msgstr "Pomiń i przejdź do zawartości głównej"
 
@@ -254,14 +254,12 @@ msgstr "przykład: JanNowak"
 msgid "Confirm Password"
 msgstr "Potwierdź hasło"
 
-#: cms/templates/settings.html:63
-#: lms/templates/courseware/course_about.html:271
-#: lms/templates/courseware/course_about.html:274
+#: cms/templates/settings.html lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
 msgid "Basic Information"
 msgstr "Podstawowe informacje"
 
-#: cms/templates/settings.html:89
-#: lms/templates/courseware/course_about.html:210
+#: cms/templates/settings.html lms/templates/courseware/course_about.html
 msgid "Course Summary Page"
 msgstr "Etykieta kursu"
 
@@ -270,23 +268,20 @@ msgstr "Etykieta kursu"
 msgid "Course End Date"
 msgstr "Data zakończenia kursu"
 
-#: cms/templates/settings.html:315 lms/templates/preview_menu.html:93
-#: lms/templates/preview_menu.html:147
+#: cms/templates/settings.html lms/templates/preview_menu.html
+#: lms/templates/preview_menu.html
 msgid "Course Organizer"
 msgstr "Organizator"
 
-#: cms/templates/settings.html:325
-#: lms/templates/courseware/course_about.html:301
+#: cms/templates/settings.html lms/templates/courseware/course_about.html
 msgid "Course Category"
 msgstr "Kategoria kursu"
 
-#: cms/templates/settings.html:335
-#: lms/templates/courseware/course_about.html:314
+#: cms/templates/settings.html lms/templates/courseware/course_about.html
 msgid "Course Timetable"
 msgstr "Czas trwania kursu"
 
-#: cms/templates/settings.html:339
-#: lms/templates/courseware/course_about.html:315
+#: cms/templates/settings.html lms/templates/courseware/course_about.html
 msgid "{week} week"
 msgid_plural "{week} weeks"
 msgstr[0] "{week} tydzień"
@@ -294,9 +289,8 @@ msgstr[1] "{week} tygodnie"
 msgstr[2] "{week} tygodni"
 msgstr[3] "{week} tygodni"
 
-#: cms/templates/settings.html:373
-#: lms/templates/courseware/course_about.html:235
-#: lms/templates/courseware/course_about.html:288
+#: cms/templates/settings.html lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
 msgid "Course Description"
 msgstr "Opis kursu"
 
@@ -865,13 +859,13 @@ msgstr "Wypisz się z kursu"
 msgid "Are you sure you want to unenroll from"
 msgstr "Are you sure you want to unenroll from"
 
-#: lms/templates/dashboard.html:614 lms/templates/ccx/enrollment.html:58
-#: lms/templates/dashboard/_dashboard_course_listing.html:203
-#: lms/templates/dashboard/_dashboard_course_listing.html:215
-#: lms/templates/dashboard/_dashboard_entitlement_actions.html:42
-#: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:29
-#: themes/edx.org/lms/templates/dashboard.html:366
-#: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:29
+#: lms/templates/dashboard.html lms/templates/ccx/enrollment.html
+#: lms/templates/dashboard/_dashboard_course_listing.html
+#: lms/templates/dashboard/_dashboard_course_listing.html
+#: lms/templates/dashboard/_dashboard_entitlement_actions.html
+#: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
+#: themes/edx.org/lms/templates/dashboard.html
+#: themes/edx.org/lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
 msgid "Unenroll"
 msgstr "Wypisz się "
 
@@ -911,8 +905,7 @@ msgstr "Konto ze wskazanym nowym adresem e-mail już istnieje."
 msgid "You should Register before trying to access the Unit"
 msgstr "Przed przystąpieniem do lekcji musisz się zarejestrować"
 
-#: lms/templates/enroll_staff.html:34
-#: lms/templates/courseware/course_about.html:518
+#: lms/templates/enroll_staff.html lms/templates/courseware/course_about.html
 msgctxt "self"
 msgid "Enroll"
 msgstr "Zapisz się"
@@ -969,9 +962,9 @@ msgstr ""
 msgid "Navoica page on Facebook"
 msgstr "Strona Navoica na Facebooku"
 
-#: lms/templates/footer.html:22 lms/templates/footer.html:56
-#: lms/templates/footer.html:60 lms/templates/footer.html:64
-#: lms/templates/footer.html:68 lms/templates/login-sidebar.html:49
+#: lms/templates/footer.html lms/templates/footer.html
+#: lms/templates/footer.html lms/templates/footer.html
+#: lms/templates/footer.html lms/templates/login-sidebar.html
 msgid "open in a new window"
 msgstr "otwórz w nowym oknie"
 
@@ -991,25 +984,25 @@ msgstr "Warunki Korzystania z Serwisu"
 msgid "Honor code "
 msgstr "Kodeks honorowy"
 
-#: lms/templates/footer.html:55
+#: lms/templates/footer.html
 msgid "Ministry of Science and Higher Education"
 msgstr "Ministerstwo Nauki i Szkolnictwa Wyższego"
 
-#: lms/templates/footer.html:59
+#: lms/templates/footer.html
 msgid "The Conference of Rectors of Academic Schools in Poland"
 msgstr "Konferencja Rektorów Akademickich Szkół Polskich"
 
-#: lms/templates/footer.html:63
+#: lms/templates/footer.html
 msgid "The Young Science Foundation"
 msgstr "Fundacja Młodej Nauki"
 
-#: lms/templates/footer.html:67
+#: lms/templates/footer.html
 msgid ""
 "National Information Processing Institute \\u2013 National Research "
 "Institute"
 msgstr "Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy"
 
-#: lms/templates/footer.html:72
+#: lms/templates/footer.html
 msgid "All rights reserved  "
 msgstr "Wszelkie prawa zastrzeżone"
 
@@ -1045,16 +1038,16 @@ msgstr "Twój adres e-mail"
 msgid "Enter your E-mail Address to reset your password"
 msgstr "Enter your E-mail Address to reset your password"
 
-#: lms/templates/forgot_password_modal.html:36 lms/templates/login.html:252
+#: lms/templates/forgot_password_modal.html lms/templates/login.html
 msgid "This is the e-mail address you used to register with {platform}"
 msgstr ""
 "Adres e-mail, którego użyto do zarejestrowania się na platformie {platform}"
 
-#: lms/templates/forgot_password_modal.html:43
+#: lms/templates/forgot_password_modal.html
 msgid "Reset My Password"
 msgstr "Zresetuj moje hasło"
 
-#: lms/templates/forgot_password_modal.html:64
+#: lms/templates/forgot_password_modal.html
 msgid "Email is incorrect."
 msgstr "Nieprawidłowy adres e-mail"
 
@@ -1561,7 +1554,7 @@ msgstr "Komentarz oceniającego do twojej pracy:"
 msgid "Press to Launch"
 msgstr "Naciśnij, aby uruchomić"
 
-#: lms/templates/main.html:49 lms/templates/main.html:135
+#: lms/templates/main.html lms/templates/main.html
 msgid ""
 "Polish MOOC platform offering free of charge online courses for every "
 "registered user. "
@@ -1569,7 +1562,7 @@ msgstr ""
 "Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat"
 " i dla każdego zarejestrowanego użytkownika. Czytaj Nawojka."
 
-#: lms/templates/main.html:134
+#: lms/templates/main.html
 msgid "Navoica.pl - Polish MOOC platform"
 msgstr "Navoica.pl – Platforma edukacyjna"
 
@@ -1656,41 +1649,41 @@ msgstr "Moje notatki"
 msgid "You do not have any notes."
 msgstr "Nie posiadasz żadnych notatek."
 
-#: lms/templates/preview_menu.html:48 lms/templates/preview_menu.html:141
-#: lms/templates/dashboard/_dashboard_course_listing.html:99
+#: lms/templates/preview_menu.html lms/templates/preview_menu.html
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course edition"
 msgstr "Edycja kursu"
 
-#: lms/templates/preview_menu.html:56
+#: lms/templates/preview_menu.html
 msgid "View this course as"
 msgstr "Wyświetl kurs jako"
 
-#: lms/templates/preview_menu.html:58 lms/templates/preview_menu.html:197
-#: lms/templates/instructor/instructor_dashboard_2/membership.html:165
+#: lms/templates/preview_menu.html lms/templates/preview_menu.html
+#: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Staff"
 msgstr "Kadra"
 
-#: lms/templates/preview_menu.html:59 lms/templates/preview_menu.html:198
+#: lms/templates/preview_menu.html lms/templates/preview_menu.html
 msgid "Learner"
 msgstr "Student"
 
-#: lms/templates/preview_menu.html:60 lms/templates/preview_menu.html:199
+#: lms/templates/preview_menu.html lms/templates/preview_menu.html
 msgid "Specific learner"
 msgstr "Określony student"
 
-#: lms/templates/preview_menu.html:64 lms/templates/preview_menu.html:203
+#: lms/templates/preview_menu.html lms/templates/preview_menu.html
 msgid "Learner in {content_group}"
 msgstr "Student w grupie {content_group}"
 
-#: lms/templates/preview_menu.html:71 lms/templates/preview_menu.html:210
+#: lms/templates/preview_menu.html lms/templates/preview_menu.html
 msgid "Username or email:"
 msgstr "Nazwa użytkownika lub adres e-mail:"
 
-#: lms/templates/preview_menu.html:74 lms/templates/preview_menu.html:213
+#: lms/templates/preview_menu.html lms/templates/preview_menu.html
 msgid "Set preview mode"
 msgstr "Ustaw tryb podglądu"
 
-#: lms/templates/preview_menu.html:79 lms/templates/preview_menu.html:218
+#: lms/templates/preview_menu.html lms/templates/preview_menu.html
 msgid "You are now viewing the course as {i_start}{user_name}{i_end}."
 msgstr "Przeglądasz teraz kurs jako {i_start}{user_name}{i_end}."
 
@@ -4149,13 +4142,13 @@ msgstr "{section_format} - termin końcowy: {{date}}"
 msgid "This content is graded"
 msgstr "Ta zawartość podlega ocenie"
 
-#: lms/templates/courseware/course_about.html:51
-#: lms/templates/courseware/course_about.html:89
-#: lms/templates/courseware/course_about.html:108
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
 msgid "An error occurred. Please try again later."
 msgstr "Wystąpił błąd. Spróbuj ponownie później."
 
-#: lms/templates/courseware/course_about.html:73
+#: lms/templates/courseware/course_about.html
 msgid ""
 "The currently logged-in user account does not have permission to enroll in "
 "this course. You may need to {start_logout_tag}log out{end_tag} then try the"
@@ -4166,77 +4159,77 @@ msgstr ""
 "{start_logout_tag}Wypisz się{end_tag} i zapisz się ponownie. Odwiedź "
 "{start_help_tag}stronę pomocy{end_tag}, aby odnaleźć możliwe rozwiązanie."
 
-#: lms/templates/courseware/course_about.html:145
+#: lms/templates/courseware/course_about.html
 msgid "You are enrolled in this course"
 msgstr "Jesteś zapisany/a na ten kurs"
 
-#: lms/templates/courseware/course_about.html:146
-#: lms/templates/shoppingcart/registration_code_receipt.html:80
+#: lms/templates/courseware/course_about.html
+#: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "View Course"
 msgstr "Wyświetl kurs"
 
-#: lms/templates/courseware/course_about.html:149
+#: lms/templates/courseware/course_about.html
 msgid "Register for the course"
 msgstr "Zarejestruj się na kurs"
 
-#: lms/templates/courseware/course_about.html:151
+#: lms/templates/courseware/course_about.html
 msgid "Take the course"
 msgstr "Zapisz się"
 
-#: lms/templates/courseware/course_about.html:158
+#: lms/templates/courseware/course_about.html
 msgid "This course is in your <a href=\"{cart_link}\">cart</a>."
 msgstr "Ten kurs znajduje się w twoim <a href=\"{cart_link}\">koszyku</a>."
 
-#: lms/templates/courseware/course_about.html:162
+#: lms/templates/courseware/course_about.html
 msgid "Course is full"
 msgstr "Lista uczestników jest już pełna"
 
-#: lms/templates/courseware/course_about.html:165
+#: lms/templates/courseware/course_about.html
 msgid "Enrollment in this course is by invitation only"
 msgstr "Zapisy na ten kurs są możliwe wyłącznie na zaproszenie"
 
-#: lms/templates/courseware/course_about.html:170
+#: lms/templates/courseware/course_about.html
 msgid "Enrollment is Closed"
 msgstr "Zapisy zostały zamknięte"
 
-#: lms/templates/courseware/course_about.html:185
+#: lms/templates/courseware/course_about.html
 msgid "Add {course_name} to Cart <span>({price} USD)</span>"
 msgstr "Dodaj {course_name} do koszyka <span>({price} USD)</span>"
 
-#: lms/templates/courseware/course_about.html:201
+#: lms/templates/courseware/course_about.html
 msgid "Enroll in {course_name}"
 msgstr "Zapisz się na kurs {course_name}"
 
-#: lms/templates/courseware/course_about.html:239
+#: lms/templates/courseware/course_about.html
 msgid " Instructor list "
 msgstr "Lista prowadzących"
 
-#: lms/templates/courseware/course_about.html:247
-#: lms/templates/courseware/course_about.html:440
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
 msgid "Organizer"
 msgstr "Organizator"
 
-#: lms/templates/courseware/course_about.html:330
+#: lms/templates/courseware/course_about.html
 msgid "Classes Start"
 msgstr "Rozpoczęcie kursu"
 
-#: lms/templates/courseware/course_about.html:356
+#: lms/templates/courseware/course_about.html
 msgid "Classes End"
 msgstr "Zakończenie kursu"
 
-#: lms/templates/courseware/course_about.html:380
+#: lms/templates/courseware/course_about.html
 msgid "Enrollment start"
 msgstr "Data rozpoczęcia zapisów"
 
-#: lms/templates/courseware/course_about.html:403
+#: lms/templates/courseware/course_about.html
 msgid "Enrollment end"
 msgstr "Data zakończenia zapisów"
 
-#: lms/templates/courseware/course_about.html:427
+#: lms/templates/courseware/course_about.html
 msgid "Hours of effort per week"
 msgstr "Godziny nauki w tygodniu"
 
-#: lms/templates/courseware/course_about.html:428
+#: lms/templates/courseware/course_about.html
 msgid "{effort} hour"
 msgid_plural "{effort} hours"
 msgstr[0] "{effort} godzina"
@@ -4244,15 +4237,15 @@ msgstr[1] "{effort} godziny"
 msgstr[2] "{effort} godzin"
 msgstr[3] "{effort} godzin"
 
-#: lms/templates/courseware/course_about.html:477
+#: lms/templates/courseware/course_about.html
 msgid "Fill all fields in Schedule & Details Settings!"
 msgstr "Uzupełnij wszystkie pola w zakładce Szczegóły i harmonogram!"
 
-#: lms/templates/courseware/course_about.html:495
+#: lms/templates/courseware/course_about.html
 msgid "Additional Resources"
 msgstr "Materiały dodatkowe"
 
-#: lms/templates/courseware/course_about.html:523
+#: lms/templates/courseware/course_about.html
 msgctxt "self"
 msgid "enroll"
 msgstr "zapisz się"
@@ -4302,16 +4295,16 @@ msgstr "obecna lokalizacja"
 msgid "needs attention"
 msgstr "wymaga uwagi"
 
-#: lms/templates/courseware/course_navigation.html:78
+#: lms/templates/courseware/course_navigation.html
 msgid "Course progress"
 msgstr "Postęp w kursie"
 
-#: lms/templates/courseware/course_navigation.html:78
+#: lms/templates/courseware/course_navigation.html
 msgid "finished lessons"
 msgstr "ukończonych lekcji"
 
-#: lms/templates/courseware/course_updates.html:9
-#: lms/templates/courseware/course_updates.html:39
+#: lms/templates/courseware/course_updates.html
+#: lms/templates/courseware/course_updates.html
 msgid "Hide"
 msgstr "Ukryj"
 
@@ -4930,61 +4923,61 @@ msgstr ""
 "{cert_name_short}. W zamian został wygenerowany {cert_name_short} będący "
 "Zaświadczeniem Honorowym."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:82
-#: lms/templates/dashboard/_dashboard_course_listing.html:111
+#: lms/templates/dashboard/_dashboard_course_listing.html
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course organizer"
 msgstr "Organizator"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:132
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Coming Soon"
 msgstr "Wkrótce"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:137
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Ended - {date}"
 msgstr "Zakończony - {date}"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:140
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Started - {date}"
 msgstr "Rozpoczęty - {date}"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:143
-#: lms/templates/dashboard/_dashboard_course_listing.html:147
+#: lms/templates/dashboard/_dashboard_course_listing.html
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Starts - {date}"
 msgstr "Rozpocznie się - {date}"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:165
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You must select a session by {expiration_date} to access the course."
 msgstr ""
 "Musisz wybrać sesję do {expiration_date}, aby uzyskać dostęp do kursu."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:167
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You must select a session to access the course."
 msgstr "Musisz wybrać sesję, aby uzyskać dostęp do kursu."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:174
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Change or Leave Session"
 msgstr "Zmień lub opuść sesję"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:182
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You can no longer change sessions."
 msgstr "Nie możesz już zmieniać sesji."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:184
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You can change sessions until {entitlement_expiration_date}."
 msgstr "Możesz zmieniać sesje do {entitlement_expiration_date}."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:223
-#: lms/templates/dashboard/_dashboard_course_listing.html:225
-#: lms/templates/dashboard/_dashboard_entitlement_actions.html:56
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:112
+#: lms/templates/dashboard/_dashboard_course_listing.html
+#: lms/templates/dashboard/_dashboard_course_listing.html
+#: lms/templates/dashboard/_dashboard_entitlement_actions.html
+#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Email Settings"
 msgstr "Ustawienia wiadomości e-mail"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:261
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Related Programs"
 msgstr "Powiązane programy"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:286
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You can no longer access this course because payment has not yet been "
 "received. You can contact the account holder to request payment, or you can "
@@ -4994,7 +4987,7 @@ msgstr ""
 "jeszcze płatności. Możesz skontaktować się z właścicielem konta, aby "
 "poprosić o płatność lub wypisać się z tego kursu"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:290
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You can no longer access this course because payment has not yet been "
 "received. You can {contact_link_start}contact the account "
@@ -5006,11 +4999,11 @@ msgstr ""
 "konta{contact_link_end}, aby poprosić o wpłatę lub "
 "{unenroll_link_start}wypisać się{unenroll_link_end} z kursu."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:319
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Verification not yet complete."
 msgstr "Nie dokonano potwierdzenia tożsamości."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:320
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You only have {days} day left to verify for this course."
 msgid_plural "You only have {days} days left to verify for this course."
 msgstr[0] ""
@@ -5026,25 +5019,25 @@ msgstr[3] ""
 "Pozostało ci tylko {days} dni, aby potwierdzić swoją tożsamość na potrzeby "
 "uczestnictwa w tym kursie. "
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:326
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Almost there!"
 msgstr "Już prawie koniec!"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:327
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You still need to verify for this course."
 msgstr ""
 "Wciąż musisz przejść weryfikację tożsamości na potrzeby uczestnictwa w tym "
 "kursie."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:331
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Verify Now"
 msgstr "Potwierdź teraz"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:334
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You have submitted your verification information."
 msgstr "Dane do weryfikacji zostały przez ciebie przesłane."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:335
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You will see a message on your dashboard when the verification process is "
 "complete (usually within 1-2 days)."
@@ -5052,11 +5045,11 @@ msgstr ""
 "Po zakończeniu czynności weryfikacyjnych otrzymasz wiadomość na swój pulpit "
 "studenta (zwykle w ciągu 1-2 dni)."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:337
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Your current verification will expire soon!"
 msgstr "Twoja aktualna weryfikacja tożsamości wkrótce wygaśnie!"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:338
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You have submitted your reverification information. You will see a message "
 "on your dashboard when the verification process is complete (usually within "
@@ -5066,21 +5059,21 @@ msgstr ""
 " weryfikacyjnych otrzymasz wiadomość na swój pulpit studenta (zwykle w ciągu"
 " 1-2 dni)."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:340
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "You have successfully verified your ID with edX"
 msgstr "Twoja tożsamość została potwierdzona"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:342
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Your current verification is effective until {date}."
 msgstr "Obecna weryfikacja tożsamości jest ważna do dnia {date}."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:345
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Your current verification will expire soon."
 msgstr "Twoja obecna weryfikacja tożsamości wkrótce wygaśnie."
 
 #. Translators: start_link and end_link will be replaced with HTML tags;
 #. please do not translate these.
-#: lms/templates/dashboard/_dashboard_course_listing.html:348
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "Your current verification will expire in {days} days. {start_link}Re-verify "
 "your identity now{end_link} using a webcam and a government-issued photo ID."
@@ -5089,7 +5082,7 @@ msgstr ""
 "{start_link}Ponownie potwierdź swoją tożsamość{end_link}, używając kamerki "
 "internetowej i dokumentu tożsamości."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:363
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
 "this course."
@@ -5097,7 +5090,7 @@ msgstr ""
 "Uzyskaj {cert_name_long}, aby potwierdzić wiedzę i umiejętności zdobyte w "
 "trakcie kursu."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:365
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "It's official. It's easily shareable. It's a proven motivator to complete "
 "the course. {line_break}{link_start}Learn more about the verified "
@@ -5107,11 +5100,11 @@ msgstr ""
 "motywujący do ukończenia kursu. {line_break}{link_start}Dowiedz się więcej "
 "na temat zaświadczenia o ukończeniu kursu {cert_name_long}{link_end}."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:385
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Upgrade to Verified"
 msgstr "Zmień tryb kursu do poziomu zweryfikowanego"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:400
+#: lms/templates/dashboard/_dashboard_course_listing.html
 msgid ""
 "You must successfully complete {link_start}{prc_display}{link_end} before "
 "you begin this course."
@@ -6295,11 +6288,11 @@ msgstr ""
 "Nasz system wskazuje, że próbujesz zapisać się na kurs {platform_name} z "
 "kraju lub regionu, z którego jest to obecnie niemożliwe."
 
-#: lms/templates/enrollment/course_enrollment_message.html:11
+#: lms/templates/enrollment/course_enrollment_message.html
 msgid "Enrollment Successful"
 msgstr "Rejestracja zakończona powodzeniem"
 
-#: lms/templates/enrollment/course_enrollment_message.html:14
+#: lms/templates/enrollment/course_enrollment_message.html
 msgid ""
 "Congratulations! You are now a course {course_names} participant and have "
 "access to course materials. We wish you pleasant learning!"
@@ -6307,7 +6300,7 @@ msgstr ""
 "Udało się! Jesteś uczestnikiem kursu {course_names} i masz dostęp do jego "
 "treści. Życzymy owocnej nauki!"
 
-#: lms/templates/enrollment/course_enrollment_message.html:19
+#: lms/templates/enrollment/course_enrollment_message.html
 msgid ""
 "Thank you for enrolling on the course {course_names}. This course will be "
 "accessible from {course_date_start}. Don't forget to save the date in your "
@@ -6316,7 +6309,7 @@ msgstr ""
 "Dziękujemy za zapisanie się na kurs {course_names}. Rozpocznie się on "
 "{course_date_start}. Nie zapomnij zapisać tej daty w swoim kalendarzu!"
 
-#: lms/templates/enrollment/course_enrollment_message.html:23
+#: lms/templates/enrollment/course_enrollment_message.html
 msgid ""
 "{platform_name} is a nonprofit bringing high-quality education to everyone, "
 "everywhere. Your help allows us to continuously improve the learning "
@@ -6327,7 +6320,7 @@ msgstr ""
 "edukacji. Możesz nam pomóc w systematycznym udoskonalaniu naszej platformy i"
 " zapewnianiu lepszej przyszłości osobom uczącym się za naszym pośrednictwem."
 
-#: lms/templates/enrollment/course_enrollment_message.html:32
+#: lms/templates/enrollment/course_enrollment_message.html
 msgid "Donation Actions"
 msgstr "Opcje darowizny"
 
@@ -6446,16 +6439,16 @@ msgstr "Aktualności"
 msgid "Programs"
 msgstr "Programy"
 
-#: lms/templates/header/navbar-authenticated.html:39
-#: lms/templates/header/navbar-not-authenticated.html:32
-#: lms/templates/static_templates/about.html:5
-#: lms/templates/static_templates/about.html:10
-#: themes/red-theme/lms/templates/footer.html:18
-#: themes/red-theme/lms/templates/footer.html:22
-#: themes/stanford-style/lms/templates/footer.html:15
-#: themes/stanford-style/lms/templates/static_templates/about.html:9
-#: themes/stanford-style/lms/templates/static_templates/about.html:41
-#: themes/stanford-style/lms/templates/static_templates/about.html:58
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/static_templates/about.html
+#: lms/templates/static_templates/about.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
 msgid "About"
 msgstr "O nas"
 
@@ -9240,16 +9233,16 @@ msgstr ""
 "głównej{link_end} i jeśli chcesz, poinformuj nas o brakującej podstronie, "
 "wysyłając e-mail na adres {email}."
 
-#: lms/templates/static_templates/accessibility.html:5
+#: lms/templates/static_templates/accessibility.html
 msgid "Accessibility Statement"
 msgstr "Deklaracja Dostępności"
 
-#: lms/templates/static_templates/accessibility.html:12
+#: lms/templates/static_templates/accessibility.html
 msgid "Accessibility Statement for educational platform NAVOICA"
 msgstr "Deklaracja Dostępności platformy edukacyjnej NAVOICA"
 
-#: lms/templates/static_templates/blog.html:5
-#: lms/templates/static_templates/blog.html:10
+#: lms/templates/static_templates/blog.html
+#: lms/templates/static_templates/blog.html
 msgid "Blog"
 msgstr "Blog"
 
@@ -9327,23 +9320,23 @@ msgstr ""
 msgid "FAQ"
 msgstr "Najczęściej zadawane pytania"
 
-#: lms/templates/static_templates/faq.html:27
-#: lms/templates/static_templates/faq.html:46
+#: lms/templates/static_templates/faq.html
+#: lms/templates/static_templates/faq.html
 msgid "Category"
 msgstr "Kategoria"
 
-#: lms/templates/static_templates/faq.html:46
+#: lms/templates/static_templates/faq.html
 msgid "show answers"
 msgstr "pokaż odpowiedzi"
 
-#: lms/templates/static_templates/honor.html:5
-#: lms/templates/static_templates/honor.html:9
-#: themes/stanford-style/lms/templates/footer.html:20
-#: themes/stanford-style/lms/templates/static_templates/tos.html:18
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/honor.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Honor Code"
 msgstr "Kodeks Honorowy"
 
-#: lms/templates/static_templates/honor.html:12
+#: lms/templates/static_templates/honor.html
 msgid ""
 "By enrolling in a course offered on Navoica platform you join the "
 "international community of learners. Our aspiration is to enable every user "
@@ -9351,12 +9344,12 @@ msgid ""
 " by the best universities and educational institutions from Poland and "
 "provide top quality teaching. By logging in to Navoica platform you become a"
 " part of this community. Our success depends to a large extent on your "
-"motivation to learn and your fully honest and fair use of the "
-"Platform\\u2019s resources. A prerequisite for joining any course is that "
-"you accept the terms of this Code of Honour and any additional terms and "
-"conditions set out for your specific course or study programme. This Code of"
-" Honour, like any additional regulations accompanying the course, is "
-"published on the course's page."
+"motivation to learn and your fully honest and fair use of the Platform's "
+"resources. A prerequisite for joining any course is that you accept the "
+"terms of this Code of Honour and any additional terms and conditions set out"
+" for your specific course or study programme. This Code of Honour, like any "
+"additional regulations accompanying the course, is published on the course's"
+" page."
 msgstr ""
 "Zapisując się na kurs na platformie Navoica dołączasz do międzynarodowej "
 "społeczności ludzi uczących się. Naszą aspiracją jest umożliwienie każdemu "
@@ -9372,15 +9365,15 @@ msgstr ""
 "kursów. Ten Kodeks Honorowy, jak i każde dodatkowe reguły, będą zawsze "
 "umieszczane na stronie kursu."
 
-#: lms/templates/static_templates/honor.html:15
+#: lms/templates/static_templates/honor.html
 msgid "My pledge"
 msgstr "Zobowiązanie"
 
-#: lms/templates/static_templates/honor.html:18
+#: lms/templates/static_templates/honor.html
 msgid "By enrolling in a course on the Navoica platform I undertake:"
 msgstr "Zapisując się na kurs na platformie Navoica zobowiązuję się:"
 
-#: lms/templates/static_templates/honor.html:21
+#: lms/templates/static_templates/honor.html
 msgid ""
 "to carry out all activities designed to test my knowledge and skills on my "
 "own, without any participation or assistance of third parties, except when "
@@ -9390,7 +9383,7 @@ msgstr ""
 " bez udziału i pomocy osób trzecich, za wyjątkiem sytuacji kiedy aktywność "
 "będzie zezwalała na pracę grupową."
 
-#: lms/templates/static_templates/honor.html:22
+#: lms/templates/static_templates/honor.html
 msgid ""
 "to keep only one account on Navoica platform and not to share my login and "
 "password with anyone."
@@ -9398,7 +9391,7 @@ msgstr ""
 "Utrzymywać tylko jedno konto na platformie Navoica i nie udostępniać nikomu "
 "mojego loginu i hasła."
 
-#: lms/templates/static_templates/honor.html:23
+#: lms/templates/static_templates/honor.html
 msgid ""
 "not to engage in any activity that could unfairly or dishonestly impact my "
 "academic performance or the performance of other users of the platform."
@@ -9406,7 +9399,7 @@ msgstr ""
 "Nie podejmować jakichkolwiek aktywności, które w sposób nieuczciwy mogłyby "
 "wpłynąć na osiągnięcia moje lub innych użytkowników."
 
-#: lms/templates/static_templates/honor.html:24
+#: lms/templates/static_templates/honor.html
 msgid ""
 "not to provide public access by any means to the answers to the evaluation "
 "tasks used to evaluate Navoica students' performance on their courses."
@@ -9414,11 +9407,11 @@ msgstr ""
 "Nie upubliczniać gdziekolwiek odpowiedzi na zadania, którą są użyte w kursie"
 " do oceny uczestników."
 
-#: lms/templates/static_templates/honor.html:27
+#: lms/templates/static_templates/honor.html
 msgid "Consequences of violation of the Code of Honour"
 msgstr "Konsekwencje naruszenia Kodeksu Honorowego"
 
-#: lms/templates/static_templates/honor.html:30
+#: lms/templates/static_templates/honor.html
 msgid ""
 "The following actions may be taken against any Navoica platform user who "
 "violates the Code of Honour:"
@@ -9426,12 +9419,12 @@ msgstr ""
 "Względem każdego użytkownika, który naruszy postanowienia Kodeksu "
 "Honorowego, mogą zostać podjęte następujące czynności:"
 
-#: lms/templates/static_templates/honor.html:33
+#: lms/templates/static_templates/honor.html
 msgid ""
 "No points awarded to the user for solving a task as part of the course."
 msgstr "Nieprzyznanie punktów za rozwiązanie zadania w kursie."
 
-#: lms/templates/static_templates/honor.html:34
+#: lms/templates/static_templates/honor.html
 msgid ""
 "Withholding or withdrawing a certificate received at the end of a course or "
 "course programme."
@@ -9439,17 +9432,17 @@ msgstr ""
 "Wstrzymanie lub wycofanie certyfikatu otrzymanego po ukończeniu kursu lub "
 "programu kursów."
 
-#: lms/templates/static_templates/honor.html:35
+#: lms/templates/static_templates/honor.html
 msgid ""
 "Removal of the user in breach of the Code of Honour from the course or "
 "programme of courses."
 msgstr "Usunięcie z kursu lub z programu kursów."
 
-#: lms/templates/static_templates/honor.html:36
+#: lms/templates/static_templates/honor.html
 msgid "Deletion of the user's Navoica platform account."
 msgstr "Usunięcie konta na platformie Navoica."
 
-#: lms/templates/static_templates/honor.html:37
+#: lms/templates/static_templates/honor.html
 msgid ""
 "Additional actions may be taken by the Navoica platform operator or the "
 "course provider."
@@ -9457,7 +9450,7 @@ msgstr ""
 "Dodatkowe czynności mogą zostać podjęte przez operatora platformy Navoica "
 "bądź przez instytucję prowadzącą kurs."
 
-#: lms/templates/static_templates/honor.html:38
+#: lms/templates/static_templates/honor.html
 msgid ""
 "In the event of a breach of the Code of Honour, no refund will be granted to"
 " the user for any costs they may have incurred in connection with the "
@@ -9467,7 +9460,7 @@ msgstr ""
 "przyznane jakiekolwiek zwroty kosztów poniesionych w związku z "
 "przystąpieniem do kursu."
 
-#: lms/templates/static_templates/honor.html:39
+#: lms/templates/static_templates/honor.html
 msgid ""
 "Any violations of the Code of Honour will be communicated to the relevant "
 "course provider in a private and confidential message. At the same time, the"
@@ -9481,11 +9474,11 @@ msgstr ""
 "wykryte naruszenie przez Ciebie postanowień Kodeksu Honorowego wraz z "
 "informacją o czynnościach jakie zostały w związku z tym naruszeniem podjęte."
 
-#: lms/templates/static_templates/honor.html:42
+#: lms/templates/static_templates/honor.html
 msgid "Changes to this Code of Honour"
 msgstr "Zmiany w Kodeksie Honorowym"
 
-#: lms/templates/static_templates/honor.html:45
+#: lms/templates/static_templates/honor.html
 msgid ""
 "As the operator of Navoica platform, we reserve the right to amend the "
 "provisions of this Code of Honour. Any changes will take effect immediately "
@@ -9504,20 +9497,20 @@ msgstr ""
 "aktualnej wersji Kodeksu Honorowego, szczególnie w sytuacjach kiedy mogą "
 "zachodzić jakiekolwiek obawy co do podejmowanych w kursie aktywności."
 
-#: lms/templates/static_templates/jobs.html:5
-#: lms/templates/static_templates/jobs.html:10
-#: themes/red-theme/lms/templates/footer.html:28
+#: lms/templates/static_templates/jobs.html
+#: lms/templates/static_templates/jobs.html
+#: themes/red-theme/lms/templates/footer.html
 msgid "Jobs"
 msgstr "Oferty pracy"
 
-#: lms/templates/static_templates/legend.html:6
-#: lms/templates/static_templates/legend.html:11
-#: lms/templates/static_templates/legend.html:21
+#: lms/templates/static_templates/legend.html
+#: lms/templates/static_templates/legend.html
+#: lms/templates/static_templates/legend.html
 msgid "Legend_title"
 msgstr "Legenda o Nawojce"
 
-#: lms/templates/static_templates/legend.html:12
-#: lms/templates/static_templates/legend.html:25
+#: lms/templates/static_templates/legend.html
+#: lms/templates/static_templates/legend.html
 msgid "Legend_quotation"
 msgstr ""
 "Jesienią 1414 r. na studia w Akademii Krakowskiej zapisał się piętnastoletni"
@@ -9525,16 +9518,16 @@ msgstr ""
 "jako dziewczynę. Nawojka – bo tak w rzeczywistości nazywał się Wielkopolanin"
 " – była pierwszą polską studentką."
 
-#: lms/templates/static_templates/legend.html:27
+#: lms/templates/static_templates/legend.html
 msgid "Legend_author"
 msgstr "Leszek Mazan i Mieczysław Czuma „Pępek świata nazywa się Kraków”"
 
-#: lms/templates/static_templates/legend.html:29
-#: lms/templates/static_templates/legend.html:34
+#: lms/templates/static_templates/legend.html
+#: lms/templates/static_templates/legend.html
 msgid "Navoica avatar"
 msgstr "Avatar Navoica"
 
-#: lms/templates/static_templates/legend.html:31
+#: lms/templates/static_templates/legend.html
 msgid "Legend_paragraph_1"
 msgstr ""
 "Legenda głosi, że Nawojka otrzymała podstawowe wykształcenie w domu, gdzie "
@@ -9549,7 +9542,7 @@ msgstr ""
 "osiągnięciom i tłumacząc, że grzech ten popełniła „z miłości do nauki”. Aby "
 "odpokutować swój postępek, została wysłana do klasztoru."
 
-#: lms/templates/static_templates/legend.html:32
+#: lms/templates/static_templates/legend.html
 msgid "Legend_paragraph_2"
 msgstr ""
 "Według innej wersji legendy, Nawojka pochodziła z Płomian koło Dobrzynia nad"
@@ -9561,7 +9554,7 @@ msgstr ""
 "książek, a że Nawojka była niesamowicie zdolną uczennicą, Jakub nie miał nic"
 " przeciwko, aby siostra się pod niego podszywała."
 
-#: lms/templates/static_templates/legend.html:33
+#: lms/templates/static_templates/legend.html
 msgid "Legend_paragraph_3"
 msgstr ""
 "Okrzyknięta przez „Słowo Polskie” z 1900 roku „pierwszą polską "
@@ -9611,16 +9604,16 @@ msgstr ""
 msgid "Currently the {platform_name} servers are overloaded"
 msgstr "Przepraszamy, obecnie serwery {platform_name} są przeciążone."
 
-#: lms/templates/static_templates/tos.html:148
-#: lms/templates/static_templates/tos.html:330
-#: lms/templates/static_templates/tos.html:488
-#: lms/templates/static_templates/tos.html:672
-#: lms/templates/static_templates/tos.html:824
-#: lms/templates/static_templates/tos.html:1006
+#: lms/templates/static_templates/tos.html
+#: lms/templates/static_templates/tos.html
+#: lms/templates/static_templates/tos.html
+#: lms/templates/static_templates/tos.html
+#: lms/templates/static_templates/tos.html
+#: lms/templates/static_templates/tos.html
 msgid "mooc_help@opi.org.pl"
 msgstr "mooc_help@opi.org.pl"
 
-#: lms/templates/static_templates/tos.html:347
+#: lms/templates/static_templates/tos.html
 msgid "tos_intro_1"
 msgstr ""
 "NAVOICA to platforma edukacyjna dostępna on-line, w ramach której podmioty "
@@ -9629,7 +9622,7 @@ msgstr ""
 " nieodpłatnie. Kursy, zamieszczane i prowadzone są bezpłatnie przez uczelnie"
 " lub instytucje."
 
-#: lms/templates/static_templates/tos.html:348
+#: lms/templates/static_templates/tos.html
 msgid "tos_intro_2"
 msgstr ""
 "Zasady korzystania z platformy NAVOICA, jako narzędzia świadczącego usługi "
@@ -9640,74 +9633,74 @@ msgstr ""
 "odnosi się do sposobu korzystania z kursów lub treści kursów, ten obszar "
 "regulują odrębnie określane zasady przez podmioty zamieszczające kursy."
 
-#: lms/templates/static_templates/tos.html:350
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_header"
 msgstr "SŁOWNIK UŻYTYCH POJĘĆ"
 
-#: lms/templates/static_templates/tos.html:352
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_email_title"
 msgstr "Adres email"
 
-#: lms/templates/static_templates/tos.html:353
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_email_text"
 msgstr ""
 "identyfikator w systemie poczty elektronicznej umożliwiające porozumiewanie "
 "się za pomocą środków komunikacji elektronicznej;"
 
-#: lms/templates/static_templates/tos.html:354
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_registration_form_title"
 msgstr "Formularz rejestracyjny"
 
-#: lms/templates/static_templates/tos.html:355
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_registration_form_text"
 msgstr ""
 "formularz on–line wypełniany przez osobę fizyczną w celu założenia Konta "
 "uprawniającego do korzystania z usług świadczonych za pośrednictwem "
 "Platformy edukacyjnej NAVOICA przypisanych do Konta;"
 
-#: lms/templates/static_templates/tos.html:356
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_password_title"
 msgstr "Hasło"
 
-#: lms/templates/static_templates/tos.html:357
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_password_text"
 msgstr "ciąg znaków umożliwiający Użytkownikowi na dostęp do Konta;"
 
-#: lms/templates/static_templates/tos.html:358
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_service_information_title"
 msgstr "Informacja o usłudze"
 
-#: lms/templates/static_templates/tos.html:359
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_service_information_text"
 msgstr ""
 "każda informacja przeznaczona bezpośrednio lub pośrednio do promowania "
 "Usługi/lub Platformy za pomocą środków komunikacji elektronicznej z "
 "Użytkownikiem;"
 
-#: lms/templates/static_templates/tos.html:360
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_educational_unit_title"
 msgstr "Jednostka edukacyjna"
 
-#: lms/templates/static_templates/tos.html:361
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_educational_unit_text"
 msgstr "podmiot zamieszczający i prowadzący Kurs na Platformie;"
 
-#: lms/templates/static_templates/tos.html:362
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_account_title"
 msgstr "Konto"
 
-#: lms/templates/static_templates/tos.html:363
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_account_text"
 msgstr ""
 "dostępny za pośrednictwem Platformy zbiór zasobów i ustawień utworzonych dla"
 " Użytkownika umożliwiający mu korzystanie po zalogowaniu z dostępnych "
 "aktualnie funkcjonalności oraz przypisanych Usług;"
 
-#: lms/templates/static_templates/tos.html:364
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_course_title"
 msgstr "Kurs"
 
-#: lms/templates/static_templates/tos.html:365
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_course_text"
 msgstr ""
 "kurs typu MOOC, spełniający warunki określone w Wytycznych, mający na celu "
@@ -9715,11 +9708,11 @@ msgstr ""
 "publikowany na Platformie przez Jednostkę edukacyjną po uzyskaniu "
 "dopuszczenia do publikacji przez Operatora merytorycznego;"
 
-#: lms/templates/static_templates/tos.html:366
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_substantive_operator_title"
 msgstr "Operator merytoryczny"
 
-#: lms/templates/static_templates/tos.html:367
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_substantive_operator_text"
 msgstr ""
 "Fundacja Młodej Nauki z siedzibą w Warszawie, ul. Uniwersytecka 5/12, "
@@ -9729,11 +9722,11 @@ msgstr ""
 " m.st. Warszawy w Warszawie, XIII Wydział Gospodarczy KRS pod nr 0000492014,"
 " posiadającą NIP 5213664198 oraz nr REGON 147051213"
 
-#: lms/templates/static_templates/tos.html:368
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_technical_operator_title"
 msgstr "Operator techniczny"
 
-#: lms/templates/static_templates/tos.html:369
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_technical_operator_text"
 msgstr ""
 "Ośrodek Przetwarzania Informacji Państwowy Instytut Badawczy z siedzibą w "
@@ -9742,81 +9735,81 @@ msgstr ""
 "Krajowego Rejestru Sądowego pod numerem 0000127372, NIP 525 000 91 40, REGON"
 " 006746090;"
 
-#: lms/templates/static_templates/tos.html:370
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_platform_title"
 msgstr "Platforma"
 
-#: lms/templates/static_templates/tos.html:371
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_platform_text"
 msgstr ""
 "internetowa platforma edukacyjna o nazwie NAVOICA za pośrednictwem której "
 "świadczone są Usługi oraz udostępniane Kursy, dostępna pod adresem URL "
 
-#: lms/templates/static_templates/tos.html:372
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_tos_title"
 msgstr "Regulamin"
 
-#: lms/templates/static_templates/tos.html:373
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_tos_text"
 msgstr ""
 "niniejszy dokument występujący pod nazwą Warunki korzystania z Platformy "
 "NAVOICA określający warunki korzystania z Platformy NAVOICA;"
 
-#: lms/templates/static_templates/tos.html:374
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_rodo_title"
 msgstr "RODO"
 
-#: lms/templates/static_templates/tos.html:375
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_rodo_text"
 msgstr ""
 "Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 w sprawie "
 "ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w "
 "sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE"
 
-#: lms/templates/static_templates/tos.html:376
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_services_title"
 msgstr "Usługi"
 
-#: lms/templates/static_templates/tos.html:377
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_services_text"
 msgstr ""
 "usługi świadczone za pośrednictwem Platformy na rzecz Jednostek edukacyjnych"
 " oraz Uczestników określone szczegółowo w rozdziale III pkt 2 i 3;"
 
-#: lms/templates/static_templates/tos.html:378
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_participant_title"
 msgstr "Uczestnik"
 
-#: lms/templates/static_templates/tos.html:379
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_participant_text"
 msgstr ""
 "użytkownik który korzysta z udostępnionego na Platformie Kursu na zasadach "
 "określonych w Regulaminie oraz warunkach określonych przez Jednostki "
 "edukacyjne dla poszczególnych kursów;"
 
-#: lms/templates/static_templates/tos.html:380
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_user_title"
 msgstr "Użytkownik"
 
-#: lms/templates/static_templates/tos.html:381
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_user_text"
 msgstr "każda osoba fizyczna posiadająca Konto;"
 
-#: lms/templates/static_templates/tos.html:382
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_guidelines_title"
 msgstr "Wytyczne"
 
-#: lms/templates/static_templates/tos.html:383
+#: lms/templates/static_templates/tos.html
 msgid "tos_definitions_guidelines_text"
 msgstr ""
 "dokument określający warunki merytoryczne, metodyczne i techniczne dla "
 "kursów zamieszczanych na Platformie;"
 
-#: lms/templates/static_templates/tos.html:387
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_title"
 msgstr "POSTANOWIENIA OGÓLNE"
 
-#: lms/templates/static_templates/tos.html:389
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_1"
 msgstr ""
 "Regulamin określa zasady korzystania przez Jednostki edukacyjne oraz "
@@ -9824,28 +9817,28 @@ msgstr ""
 "ich świadczenia odpowiednio przez Operatora merytorycznego i Operatora "
 "technicznego oraz zakres odpowiedzialności poszczególnych podmiotów."
 
-#: lms/templates/static_templates/tos.html:390
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_2"
 msgstr ""
 "Regulamin udostępniany jest nieprzerwanie na Platformie pod nazwą \"Warunki "
 "korzystania z platformy NAVOICA\" w sposób umożliwiający jego pozyskanie, "
 "odtwarzanie i utrwalanie jego treści, dowolnej osobie."
 
-#: lms/templates/static_templates/tos.html:391
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_3"
 msgstr ""
 "Operator merytoryczny lub Operator techniczny zastrzegają sobie prawo do "
 "zmiany treści Regulaminu w zakresie dostarczanych przez siebie usług lub "
 "warunków ich świadczenia."
 
-#: lms/templates/static_templates/tos.html:392
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_4"
 msgstr ""
 "Operatorzy zastrzegają sobie prawo do określania szczegółowych warunków "
 "korzystania ze świadczonych przez siebie Usług, określonych w rozdziale III "
 "pkt 2 i 3 w odrębnych regulaminach lub załącznikach."
 
-#: lms/templates/static_templates/tos.html:393
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_5"
 msgstr ""
 "Przed rozpoczęciem korzystania z Usług Platformy NAVOICA każdy jej "
@@ -9854,7 +9847,7 @@ msgstr ""
 "Jednostek edukacyjnych korzystanie z Usług możliwe jest po zawarciu "
 "dodatkowej umowy z Operatorem platformy."
 
-#: lms/templates/static_templates/tos.html:394
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_6"
 msgstr ""
 "Korzystając w jakikolwiek sposób z Platformy, odpowiednio Jednostka "
@@ -9862,7 +9855,7 @@ msgstr ""
 "Regulaminu, akceptują jego postanowienia i zobowiązuje się do ich "
 "przestrzegania."
 
-#: lms/templates/static_templates/tos.html:395
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_7"
 msgstr ""
 "Wszelką odpowiedzialność za świadczenie Usług w stosunku do Jednostek "
@@ -9870,7 +9863,7 @@ msgstr ""
 " w zakresie Usług określonych w rozdziale III pkt 3 odpowiedzialność ponosi "
 "Operator techniczny."
 
-#: lms/templates/static_templates/tos.html:396
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_8"
 msgstr ""
 "W przypadku usług dostarczanych za pośrednictwem Platformy przez stosowne "
@@ -9881,7 +9874,7 @@ msgstr ""
 "tych usługodawców. Postanowienia niniejszego punktu odnoszą się również do "
 "Kursów."
 
-#: lms/templates/static_templates/tos.html:397
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_9"
 msgstr ""
 "Regulamin stanowi jednocześnie w stosunku do użytkowników Platformy umowę "
@@ -9891,46 +9884,46 @@ msgstr ""
 "ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. "
 "U. z 2019, poz. 123 z późn. zm.)."
 
-#: lms/templates/static_templates/tos.html:398
+#: lms/templates/static_templates/tos.html
 msgid "tos_main_paragraph_10"
 msgstr ""
 "W sprawach nieuregulowanych Regulaminem mają zastosowanie obowiązujące w tym"
 " zakresie przepisy prawa polskiego, a wszelkie spory rozstrzygane będą przez"
 " sądy polskie właściwe dla siedziby Operatora merytorycznego."
 
-#: lms/templates/static_templates/tos.html:402
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_title"
 msgstr "WARUNKI TECHNICZNE"
 
-#: lms/templates/static_templates/tos.html:405
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_1"
 msgstr "W ramach Platformy udostępnia się następujące narzędzia on-line:"
 
-#: lms/templates/static_templates/tos.html:407
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_1_section_1"
 msgstr " - służące do korzystania z Kursów"
 
-#: lms/templates/static_templates/tos.html:408
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_1_section_2"
 msgstr " - służące do tworzenia i zarządzania Kursami"
 
-#: lms/templates/static_templates/tos.html:409
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_1_section_3"
 msgstr "dedykowane platformy testowe"
 
-#: lms/templates/static_templates/tos.html:412
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_2"
 msgstr ""
 "Korzystanie z poszczególnych narzędzi wymaga posiadania Konta użytkownika "
 "zakładanego w procesie rejestracji określonym w Regulaminie."
 
-#: lms/templates/static_templates/tos.html:413
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_3"
 msgstr ""
 "Warunki merytoryczne, metodyczne i techniczne dla Kursów określone są w "
 "Wytycznych."
 
-#: lms/templates/static_templates/tos.html:414
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_4"
 msgstr ""
 "Warunkiem technicznym korzystania z Platformy lub Usług jest posiadanie "
@@ -9938,33 +9931,33 @@ msgstr ""
 "dostępem do sieci Internet i z zainstalowaną przeglądarką internetową "
 "wskazaną w ust. 5 oraz Adresu e-mail działającego na dowolnym serwerze."
 
-#: lms/templates/static_templates/tos.html:416
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_5"
 msgstr ""
 "Korzystanie z Platformy lub Usług możliwe jest przy spełnieniu następujących"
 " wymagań technicznych:"
 
-#: lms/templates/static_templates/tos.html:418
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_5_section_1"
 msgstr ""
 "przeglądarki: Edge 43 lub wyższy, Google Chrome 70 lub wyższy, Mozilla "
 "Firefox 61 lub wyższy, Safari 12 lub wyższy, Opera 56 lub wyższy;"
 
-#: lms/templates/static_templates/tos.html:419
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_5_section_2"
 msgstr "włączona obsługa cookies (ciasteczek) oraz Local Storage;"
 
-#: lms/templates/static_templates/tos.html:420
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_5_section_3"
 msgstr "włączona obsługa JavaScript w przeglądarce."
 
-#: lms/templates/static_templates/tos.html:423
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_6"
 msgstr ""
 "Urządzenia mobilne za pomocą których dochodzi do korzystania z Platformy lub"
 " Usług muszą mieć zapewnione aktywne połączenie internetowe."
 
-#: lms/templates/static_templates/tos.html:424
+#: lms/templates/static_templates/tos.html
 msgid "tos_technical_paragraph_7"
 msgstr ""
 "Korzystanie z Platformy lub Usług wiąże się ze standardowym ryzykiem "
@@ -9975,117 +9968,117 @@ msgstr ""
 "nieudostępniania loginu i hasła, korzystania z programów antywirusowych oraz"
 " aktualnych przeglądarek internetowych."
 
-#: lms/templates/static_templates/tos.html:428
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_title"
 msgstr "ZAKRES USŁUG"
 
-#: lms/templates/static_templates/tos.html:430
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_1"
 msgstr ""
 "Usługi świadczone przez poszczególnych Operatorów na rzecz Jednostek "
 "edukacyjnych i Uczestników wykonywane są zgodnie z Regulaminem i w zakresie "
 "w nim określonym."
 
-#: lms/templates/static_templates/tos.html:432
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_2"
 msgstr "Usługi świadczone przez Operatora merytorycznego obejmują:"
 
-#: lms/templates/static_templates/tos.html:434
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_2_section_1"
 msgstr ""
 "obsługę procesu oceny spełnienia warunków dopuszczenia Kursów do publikacji "
 "na platformie NAVOICA,"
 
-#: lms/templates/static_templates/tos.html:435
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_2_section_2"
 msgstr ""
 "zgromadzenie danych niezbędnych do skonfigurowania Kursu do zamieszczania na"
 " Platformie,"
 
-#: lms/templates/static_templates/tos.html:436
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_2_section_3"
 msgstr ""
 "publikowanie oraz udzielanie informacji o aktualnie prowadzonych kursach,"
 
-#: lms/templates/static_templates/tos.html:437
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_2_section_4"
 msgstr ""
 "udostępnianie Kursów w taki sposób, aby Uczestnik spełniając warunki "
 "techniczne określone w Regulaminie miał do nich dostęp w miejscu i czasie "
 "przez siebie wybranym i mógł się zarejestrować w celu korzystania z nich,"
 
-#: lms/templates/static_templates/tos.html:438
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_2_section_5"
 msgstr "możliwość tworzenia i edycji Kursów,"
 
-#: lms/templates/static_templates/tos.html:439
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_2_section_6"
 msgstr ""
 "obsługę zapytań, zgłaszanych uwag oraz niezgodności w zakresie metodycznym i"
 " merytorycznym,"
 
-#: lms/templates/static_templates/tos.html:440
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_2_section_7"
 msgstr "ewaluacja wybranych kursów,"
 
-#: lms/templates/static_templates/tos.html:441
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_2_section_8"
 msgstr "zatwierdzanie projektu zaświadczeń ukończenia Kursu;"
 
-#: lms/templates/static_templates/tos.html:442
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_2_section_9"
 msgstr "administrowanie danymi Użytkowników,"
 
-#: lms/templates/static_templates/tos.html:446
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_3"
 msgstr "Usługi świadczone przez Operatora technicznego obejmują:"
 
-#: lms/templates/static_templates/tos.html:448
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_3_section_1"
 msgstr ""
 "zapewnienie i utrzymanie środowiska teleinformatycznego dla funkcjonowania "
 "Platformy,"
 
-#: lms/templates/static_templates/tos.html:449
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_3_section_2"
 msgstr ""
 "utrzymanie funkcjonowania Platformy (narzędzi) dla potrzeb świadczonych "
 "Usług,"
 
-#: lms/templates/static_templates/tos.html:450
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_3_section_3"
 msgstr ""
 "utrzymanie Platformy w konfiguracji umożliwiającej zamieszczenie Kursu,"
 
-#: lms/templates/static_templates/tos.html:451
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_3_section_4"
 msgstr ""
 "wsparcie techniczne narzędzi dostępnych na Platformie, o których mowa w "
 "rozdziale II pkt 1,"
 
-#: lms/templates/static_templates/tos.html:452
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_3_section_5"
 msgstr "obsługa zapytań, skarg i zastrzeżeń technicznych,"
 
-#: lms/templates/static_templates/tos.html:453
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_3_section_6"
 msgstr "zarządzanie procesem rejestracji i kontami Użytkowników,"
 
-#: lms/templates/static_templates/tos.html:454
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_3_section_7"
 msgstr ""
 "utrzymanie baz danych w konfiguracjach pozyskanych przez Operatora "
 "merytorycznego,"
 
-#: lms/templates/static_templates/tos.html:455
+#: lms/templates/static_templates/tos.html
 msgid "tos_ros_paragraph_3_section_8"
 msgstr "utrzymanie Kursów w konfiguracjach umieszczonych na Platformie,"
 
-#: lms/templates/static_templates/tos.html:461
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_title"
 msgstr "REJESTRACJA UŻYTKOWNIKA"
 
-#: lms/templates/static_templates/tos.html:463
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_1"
 msgstr ""
 "Każdy podmiot chcąc korzystać z Usług powinien posiadać aktywne Konto. "
@@ -10096,27 +10089,27 @@ msgstr ""
 "Kursów, których są autorami, w szczególności żądać dodatkowych danych, o "
 "czym będą informować w ramach procesu rejestracji do Kursu."
 
-#: lms/templates/static_templates/tos.html:464
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_2"
 msgstr ""
 "Proces rejestracji do Platformy NAVOICA polega na wypełnieniu i przesłaniu "
 "formularza dostępnego pod adresem: "
 
-#: lms/templates/static_templates/tos.html:466
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_3"
 msgstr ""
 "Osoba wypełniająca formularz, przez fakt wysłania Formularza rejestracyjnego"
 " oświadcza, że:"
 
-#: lms/templates/static_templates/tos.html:468
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_3_section_1"
 msgstr "podane w nim dane są kompletne i zgodne ze stanem faktycznym,"
 
-#: lms/templates/static_templates/tos.html:469
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_3_section_2"
 msgstr "posiada pełną zdolność do czynności prawnych,"
 
-#: lms/templates/static_templates/tos.html:470
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_3_section_3"
 msgstr ""
 "w przypadku, gdy działa w imieniu Jednostki edukacyjnej jest uprawniona do "
@@ -10124,11 +10117,11 @@ msgstr ""
 "czynności niezbędnych w zakresie korzystania z Usługi za pośrednictwem "
 "Platformy NAVOICA,"
 
-#: lms/templates/static_templates/tos.html:471
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_3_section_4"
 msgstr "podane dane nie naruszają jakichkolwiek praw osób trzecich,"
 
-#: lms/templates/static_templates/tos.html:474
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_4"
 msgstr ""
 "Operator techniczny po otrzymaniu prawidłowo wypełnionego Formularza "
@@ -10136,14 +10129,14 @@ msgstr ""
 "Konto o identyfikatorze będącym podanym przez niego adresem e-mail poczty "
 "elektronicznej i wybranej nazwie."
 
-#: lms/templates/static_templates/tos.html:475
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_5"
 msgstr ""
 "Adres email jest powiązany z Kontem i stanowi konieczną formę identyfikacji "
 "wobec Użytkownika i będzie wykorzystywany do wszelkiej korespondencji "
 "związanej ze świadczeniem Usług, na co Użytkownik wyraża zgodę."
 
-#: lms/templates/static_templates/tos.html:476
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_6"
 msgstr ""
 "Operator techniczny może odmówić utworzenia Konta o określonej nazwie, "
@@ -10152,7 +10145,7 @@ msgstr ""
 "obyczajami, narusza dobra osobiste lub uzasadnione interesy jakichkolwiek "
 "osób trzecich."
 
-#: lms/templates/static_templates/tos.html:477
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_7"
 msgstr ""
 "Użytkownik uzyskuje dostęp do Konta za pomocą swojego Adresu email oraz "
@@ -10160,15 +10153,15 @@ msgstr ""
 "nieuprawnionej w jego imieniu Hasła i ponosi wyłączną odpowiedzialność za "
 "szkody wyrządzone na skutek jego ujawnienia."
 
-#: lms/templates/static_templates/tos.html:478
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_registration_paragraph_8"
 msgstr "Użytkownik może mieć tylko jedno Konto."
 
-#: lms/templates/static_templates/tos.html:482
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_title"
 msgstr "ZAWARCIE i ROZWIĄZANIE UMOWY"
 
-#: lms/templates/static_templates/tos.html:484
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_1"
 msgstr ""
 "Umowa na korzystanie z usług Platformy NAVOICA zostaje zawarta z chwilą "
@@ -10177,48 +10170,48 @@ msgstr ""
 "Operatora technicznego, określonych i przypisanych mu w Regulaminie. Umowa o"
 " której mowa w zdaniu poprzednim wymaga dla swojej ważności formy pisemnej."
 
-#: lms/templates/static_templates/tos.html:485
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_2"
 msgstr ""
 "Stroną Umowy na korzystanie z Usług Platformy NAVOICA jest Operator "
 "merytoryczny."
 
-#: lms/templates/static_templates/tos.html:486
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_3"
 msgstr ""
 "Użytkownik zawierając Umowę oświadcza, że zapoznał się z Regulaminem i "
 "akceptuje w całości jego postanowienia."
 
-#: lms/templates/static_templates/tos.html:487
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_4"
 msgstr "Umowa z Użytkownikiem zostaje zawarta na czas nieokreślony."
 
-#: lms/templates/static_templates/tos.html:488
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_5"
 msgstr ""
 "Użytkownik może rozwiązać Umowę w każdym czasie poprzez zgłoszenie "
 "odpowiedniego oświadczenia na adres e-mail "
 
-#: lms/templates/static_templates/tos.html:488
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_5_1"
 msgstr ""
 " lub listownie na adres Operatora technicznego. Skutkiem rozwiązania umowy "
 "jest usunięcie Konta i brak możliwości korzystania z Usług."
 
-#: lms/templates/static_templates/tos.html:490
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_6"
 msgstr ""
 "Operator merytoryczny lub działający w jego imieniu Operator techniczny ma "
 "prawo: rozwiązać Umowę lub zablokować Konto Użytkownika w następujących "
 "przypadkach:"
 
-#: lms/templates/static_templates/tos.html:492
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_6_section_1"
 msgstr ""
 "zmiany obowiązujących przepisów prawa lub prowadzonej działalności "
 "statutowej,"
 
-#: lms/templates/static_templates/tos.html:493
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_6_section_2"
 msgstr ""
 "powzięcia uzasadnionych informacji, że Użytkownik korzysta z Usług w sposób "
@@ -10226,22 +10219,22 @@ msgstr ""
 " lub uzasadnione interesy Operatora merytorycznego lub Operatora "
 "technicznego,"
 
-#: lms/templates/static_templates/tos.html:494
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_6_section_3"
 msgstr ""
 "umieszczania przez Jednostkę edukacyjną treści niezgodnych z Regulaminem,"
 
-#: lms/templates/static_templates/tos.html:495
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_6_section_4"
 msgstr ""
 "uznania wniesionego sprzeciwu z przyczyn związanych ze szczególną sytuacją "
 "Użytkownika, zgodnie z art. 21 RODO,"
 
-#: lms/templates/static_templates/tos.html:496
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_6_section_5"
 msgstr "braku akceptacji zmian w Regulaminie."
 
-#: lms/templates/static_templates/tos.html:499
+#: lms/templates/static_templates/tos.html
 msgid "tos_contract_and_termination_paragraph_7"
 msgstr ""
 "O rozwiązaniu umowy Operator merytoryczny lub działający w jego imieniu "
@@ -10251,29 +10244,29 @@ msgstr ""
 "rejestracji Konta. Rozwiązanie Umowy następuje w terminie 14 dni od "
 "przesłania oświadczenia."
 
-#: lms/templates/static_templates/tos.html:503
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_title"
 msgstr "ZASADY KORZYSTANIA Z USŁUG"
 
-#: lms/templates/static_templates/tos.html:505
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_1"
 msgstr "Korzystanie z Usług jest dobrowolne."
 
-#: lms/templates/static_templates/tos.html:506
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_2"
 msgstr ""
 "W celu sprawnej realizacji Usługi Użytkownik akceptuje konieczność "
 "posiadania aktualnego, czynnego Adresu e-mail. Adres ten jest podawany "
 "bezpośrednio w Formularzu rejestracyjnym i może być modyfikowany."
 
-#: lms/templates/static_templates/tos.html:507
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_3"
 msgstr ""
 "Użytkownik ponosi całkowitą odpowiedzialność za nieprawdziwość złożonych "
 "oświadczeń i zapewnień oraz za niedopełnienie zobowiązań wynikających z "
 "Regulaminu."
 
-#: lms/templates/static_templates/tos.html:508
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_4"
 msgstr ""
 "Korzystając z narzędzi umożliwiających przekazywanie informacji dostępnych "
@@ -10281,35 +10274,35 @@ msgstr ""
 "przeznaczonych. Pola mogą zawierać tylko te dane, do których zostały "
 "przeznaczone."
 
-#: lms/templates/static_templates/tos.html:509
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_5"
 msgstr "Zabrania się udostępniania Konta innym osobom lub podmiotom."
 
-#: lms/templates/static_templates/tos.html:510
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_6"
 msgstr ""
 "Niedopuszczalne są działania mogące utrudniać lub destabilizować działanie "
 "Platformy lub Usług."
 
-#: lms/templates/static_templates/tos.html:512
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_7"
 msgstr "Użytkownik jest zobowiązany, w szczególności do:"
 
-#: lms/templates/static_templates/tos.html:514
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_7_section_1"
 msgstr ""
 "powstrzymywania się od jakichkolwiek działań mogących utrudnić lub zakłócić "
 "funkcjonowanie Platformy NAVOICA oraz od korzystania z Usług w sposób "
 "uciążliwy dla innych Użytkowników,"
 
-#: lms/templates/static_templates/tos.html:515
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_7_section_2"
 msgstr ""
 "nienaruszania autorskich praw majątkowych oraz praw wynikających z "
 "rejestracji wynalazków, patentów, znaków towarowych, wzorów użytkowych i "
 "przemysłowych innych osób,"
 
-#: lms/templates/static_templates/tos.html:516
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_7_section_3"
 msgstr ""
 "powstrzymywania się od jakichkolwiek działań naruszających prywatność, w "
@@ -10317,11 +10310,11 @@ msgstr ""
 "Usługobiorcach nie będących Jednostkami naukowymi bez ich wyraźnej zgody, "
 "chyba że jest to dozwolone przez przepisy prawa i Regulamin,"
 
-#: lms/templates/static_templates/tos.html:517
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_7_section_4"
 msgstr "niewykorzystywania Usług do celów komercyjnych."
 
-#: lms/templates/static_templates/tos.html:520
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_8"
 msgstr ""
 "Operator merytoryczny ma prawo do opublikowania nazwy, logo Użytkownika "
@@ -10330,7 +10323,7 @@ msgstr ""
 "ile nie naruszają dobrych obyczajów, powszechnie stosowanych standardów "
 "branżowych, dóbr osobistych i dobrego imienia Jednostek edukacyjnych."
 
-#: lms/templates/static_templates/tos.html:521
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_9"
 msgstr ""
 "Jednostka edukacyjna zobowiązana jest zapewnić, aby Kursy prezentowane na "
@@ -10339,7 +10332,7 @@ msgstr ""
 "edukacyjna ponosi wszelką odpowiedzialność za treść Kursu oraz wszelkie "
 "błędy i nieścisłości."
 
-#: lms/templates/static_templates/tos.html:523
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_10"
 msgstr ""
 "Zakazana jest publikacja Kursów zawierających informacje naruszające "
@@ -10347,33 +10340,33 @@ msgstr ""
 "bądź informacje stanowiące czyn nieuczciwej konkurencji. Kurs nie może w "
 "szczególności:"
 
-#: lms/templates/static_templates/tos.html:525
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_10_section_1"
 msgstr "naruszać godności ludzkiej,"
 
-#: lms/templates/static_templates/tos.html:526
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_10_section_2"
 msgstr "naruszać dobrego imienia jakichkolwiek osób lub podmiotów,"
 
-#: lms/templates/static_templates/tos.html:527
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_10_section_3"
 msgstr "naruszać obowiązujących przepisów prawa,"
 
-#: lms/templates/static_templates/tos.html:528
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_10_section_4"
 msgstr "zawierać treści obraźliwych, pornograficznych lub dyskryminujących,"
 
-#: lms/templates/static_templates/tos.html:529
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_10_section_5"
 msgstr ""
 "naruszać prawnie chronionych interesów Operatorów, w szczególności ich dóbr "
 "osobistych,"
 
-#: lms/templates/static_templates/tos.html:530
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_10_section_6"
 msgstr "wprowadzać Uczestnika w błąd."
 
-#: lms/templates/static_templates/tos.html:533
+#: lms/templates/static_templates/tos.html
 msgid "tos_rules_for_using_services_paragraph_11"
 msgstr ""
 "W przypadku uzyskania informacji, że Kurs narusza postanowienia pkt 10 lub "
@@ -10381,11 +10374,11 @@ msgstr ""
 "zawiesić świadczenie Usługi w stosunku do Jednostki edukacyjnej, co nie "
 "wyłącza dalszych uprawnień przewidzianych w Regulaminie."
 
-#: lms/templates/static_templates/tos.html:537
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_title"
 msgstr "PRAWA I OBOWIĄZKI OPERATORA MERYTORYCZNEGO / OPERATORA TECHNICZNEGO"
 
-#: lms/templates/static_templates/tos.html:540
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_1"
 msgstr ""
 "Operator merytoryczny zastrzega sobie prawo dowolnej modyfikacji Usług oraz "
@@ -10400,14 +10393,14 @@ msgstr ""
 "tego tytułu żadne roszczenia względem Operatora merytorycznego oraz "
 "Operatora technicznego."
 
-#: lms/templates/static_templates/tos.html:541
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_2"
 msgstr ""
 "Operator techniczny zastrzega sobie prawo do zmodyfikowania i/lub usunięcia "
 "Konta Użytkownika, którego działania zostaną uznane za szkodliwe dla "
 "Platformy NAVOICA lub niezgodne z Regulaminem."
 
-#: lms/templates/static_templates/tos.html:542
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_3"
 msgstr ""
 "Operator merytoryczny zastrzega sobie prawo zamieszczania Kursów o dowolnej "
@@ -10416,60 +10409,60 @@ msgstr ""
 "uzasadnionych sytuacjach do usuwania Kursów z Platformy NAVOICA w dowolnym "
 "momencie lub ich modyfikacji."
 
-#: lms/templates/static_templates/tos.html:544
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_4"
 msgstr ""
 "Operator merytoryczny lub Operator techniczny zastrzega sobie prawo do:"
 
-#: lms/templates/static_templates/tos.html:546
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_1"
 msgstr "przejściowego zaprzestania świadczenia Usług w całości lub w części,"
 
-#: lms/templates/static_templates/tos.html:547
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_2"
 msgstr ""
 "okresowego zawieszenia świadczenia Usług w związku z przeprowadzaniem prac "
 "konserwacyjnych lub modernizacyjnych,"
 
-#: lms/templates/static_templates/tos.html:548
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_3"
 msgstr ""
 "wysyłania na adres e-mail Użytkowników komunikatów technicznych, prawnych i "
 "transakcyjnych związanych z funkcjonowaniem Platformy i/lub świadczeniem "
 "Usług,"
 
-#: lms/templates/static_templates/tos.html:549
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_4"
 msgstr ""
 "odmowy świadczenia Usług, jeśli Użytkownik poda błędny, fałszywy lub "
 "tymczasowy adres email lub dane w Formularzu rejestracyjnym,"
 
-#: lms/templates/static_templates/tos.html:550
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_5"
 msgstr ""
 "odmowy świadczenia Usług, jeżeli Użytkownik nie przestrzega postanowień "
 "Regulaminu,"
 
-#: lms/templates/static_templates/tos.html:551
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_6"
 msgstr ""
 "dowolnej modyfikacji świadczonych Usług oraz sposobu działania Platformy "
 "NAVOICA bez wcześniejszego powiadamiania o takim zamiarze,"
 
-#: lms/templates/static_templates/tos.html:552
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_7"
 msgstr ""
 "dowolnego personalizowania treści informacji wysyłanych do Użytkowników oraz"
 " dowolnego wybierania adresatów."
 
-#: lms/templates/static_templates/tos.html:555
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_5"
 msgstr ""
 "W przypadku stwierdzenia nieprawdziwych lub nieaktualnych danych podanych "
 "przez Użytkownika, Operator techniczny ma prawo go wezwać do niezwłocznego "
 "usunięcia nieprawidłowości."
 
-#: lms/templates/static_templates/tos.html:556
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_6"
 msgstr ""
 "Operator merytoryczny i Operator techniczny nie udzielają żadnej gwarancji "
@@ -10477,13 +10470,13 @@ msgstr ""
 "części w zakresie w jakim nie ma wpływu na jakość świadczenia Usługi, np. ze"
 " względu na dostawców usług internetowych, informatycznych, itp."
 
-#: lms/templates/static_templates/tos.html:557
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_7"
 msgstr ""
 "Operator techniczny ma prawo do ingerencji w Konto w celu usunięcia "
 "zakłócenia lub problemu w funkcjonowaniu Konta lub Platformy NAVOICA."
 
-#: lms/templates/static_templates/tos.html:558
+#: lms/templates/static_templates/tos.html
 msgid "tos_operators_rights_and_onligations_paragraph_8"
 msgstr ""
 "W każdym przypadku, w którym Operator techniczny działa w związku z "
@@ -10491,19 +10484,19 @@ msgstr ""
 "Operator merytoryczny, działa on w imieniu i na rzecz Operatora "
 "merytorycznego."
 
-#: lms/templates/static_templates/tos.html:562
+#: lms/templates/static_templates/tos.html
 msgid "tos_services_payment_title"
 msgstr "PŁATNOŚCI ZA USŁUGI"
 
-#: lms/templates/static_templates/tos.html:564
+#: lms/templates/static_templates/tos.html
 msgid "tos_services_payment_paragraph_1"
 msgstr "Portal ma charakter niekomercyjny."
 
-#: lms/templates/static_templates/tos.html:565
+#: lms/templates/static_templates/tos.html
 msgid "tos_services_payment_paragraph_2"
 msgstr "Korzystanie z Usług jest nieodpłatne."
 
-#: lms/templates/static_templates/tos.html:566
+#: lms/templates/static_templates/tos.html
 msgid "tos_services_payment_paragraph_3"
 msgstr ""
 "Użytkownik powinien mieć świadomość, że korzystanie z Usług za pośrednictwem"
@@ -10512,18 +10505,18 @@ msgstr ""
 " planu taryfowego operatora sieci, z której dany Użytkownik/ usługobiorca "
 "korzysta."
 
-#: lms/templates/static_templates/tos.html:570
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_title"
 msgstr "ODPOWIEDZIALNOŚĆ"
 
-#: lms/templates/static_templates/tos.html:572
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_1"
 msgstr ""
 "Użytkownik ponosi pełną odpowiedzialność za złamanie prawa bądź szkodę "
 "wywołaną jego działaniami, w szczególności podaniem nieprawdziwych danych, "
 "naruszeniem dóbr osobistych lub praw autorskich oraz praw pokrewnych."
 
-#: lms/templates/static_templates/tos.html:573
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_2"
 msgstr ""
 "Operator merytoryczny i Operator techniczny nie ponoszą odpowiedzialności za"
@@ -10532,34 +10525,34 @@ msgstr ""
 "odpowiedzialni za szkody powstałe na skutek zaprzestania świadczenia Usług i"
 " usunięcia Konta Użytkownika naruszającego Regulamin."
 
-#: lms/templates/static_templates/tos.html:575
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3"
 msgstr "Podmioty wskazane w ust. 2 nie ponoszą odpowiedzialności za:"
 
-#: lms/templates/static_templates/tos.html:577
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3_section_1"
 msgstr ""
 "szkody wyrządzone osobom trzecim lub następstwa działań, powstałe w wyniku "
 "korzystania przez Użytkowników z Usług w sposób sprzeczny z Regulaminem lub "
 "przepisami prawa,"
 
-#: lms/templates/static_templates/tos.html:578
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3_section_2"
 msgstr ""
 "za treści udostępniane przez Użytkowników w ramach Usług, które to treści "
 "naruszają prawo lub chronione prawem dobra osób trzecich,"
 
-#: lms/templates/static_templates/tos.html:579
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3_section_3"
 msgstr ""
 "szkody Jednostek edukacyjnych lub Uczestników powstałe w związku z "
 "zaprzestaniem publikowania Kursu,"
 
-#: lms/templates/static_templates/tos.html:580
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3_section_4"
 msgstr "zgodność z prawdą zamieszczonych przez Użytkowników informacji,"
 
-#: lms/templates/static_templates/tos.html:581
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3_section_5"
 msgstr ""
 "utratę przez Użytkowników danych spowodowanych działaniem czynników "
@@ -10567,7 +10560,7 @@ msgstr ""
 "niezależnymi od Operatora merytorycznego lub Operatora technicznego "
 "(działanie osób trzecich),"
 
-#: lms/templates/static_templates/tos.html:582
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3_section_6"
 msgstr ""
 "szkody wynikłe na skutek braku ciągłości dostarczania Usług, będące "
@@ -10575,32 +10568,32 @@ msgstr ""
 "odpowiedzialności (siła wyższa, działania zaniechania osób trzecich, awarie,"
 " itp.),"
 
-#: lms/templates/static_templates/tos.html:583
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3_section_7"
 msgstr ""
 "podania przez Użytkowników nieprawdziwych lub niepełnych informacji przy "
 "rejestracji Konta, nieprzestrzegania przez Użytkowników warunków Regulaminu,"
 
-#: lms/templates/static_templates/tos.html:584
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3_section_8"
 msgstr ""
 "działania lub zaniechania dostawców usług internetowych oraz awarie i "
 "zakłócenia w działaniu sieci internetowej, za pośrednictwem której "
 "Użytkownik korzysta z Platformy,"
 
-#: lms/templates/static_templates/tos.html:585
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3_section_9"
 msgstr ""
 "skutki wynikające z wejścia przez osoby trzecie w posiadanie loginu lub "
 "hasła,"
 
-#: lms/templates/static_templates/tos.html:586
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_3_section_10"
 msgstr ""
 "przerwy w świadczeniu Usługi zaistniałych z przyczyn niezależnych od "
 "Operatora merytorycznego lub Operatora technicznego."
 
-#: lms/templates/static_templates/tos.html:589
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_4"
 msgstr ""
 "W przypadku otrzymania urzędowego zawiadomienia o bezprawnym charakterze "
@@ -10609,14 +10602,14 @@ msgstr ""
 "względem tego Użytkownika za szkodę powstałą w wyniku uniemożliwienia "
 "dostępu do tych danych."
 
-#: lms/templates/static_templates/tos.html:590
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_5"
 msgstr ""
 "Operator merytoryczny nie ponosi odpowiedzialności za dane przekazane w celu"
 " otrzymania potwierdzenia ukończenia kursu lub wydania zaświadczenia, w "
 "przypadku, gdy Uczestnik poda je w sposób błędny lub nieprawdziwy."
 
-#: lms/templates/static_templates/tos.html:591
+#: lms/templates/static_templates/tos.html
 msgid "tos_responsibility_paragraph_6"
 msgstr ""
 "Jednostka edukacyjna ponosi odpowiedzialność na zasadzie ryzyka za dobór "
@@ -10624,11 +10617,11 @@ msgstr ""
 "za wprowadzane przez nie dane i informacje, rozporządzanie przez nie "
 "przydzielonymi przez Operatora technicznego hasłami i loginami."
 
-#: lms/templates/static_templates/tos.html:595
+#: lms/templates/static_templates/tos.html
 msgid "tos_copyrights_title"
 msgstr "PRAWA AUTORSKIE ORAZ LICENCJE"
 
-#: lms/templates/static_templates/tos.html:597
+#: lms/templates/static_templates/tos.html
 msgid "tos_copyrights_paragraph_1"
 msgstr ""
 "Wszelkie prawa do utworów, w rozumieniu ustawy z dnia 4 lutego 1994 r. o "
@@ -10640,7 +10633,7 @@ msgstr ""
 "na korzystanie z Usługi, są zastrzeżone odpowiednio na rzecz Operatora "
 "technicznego lub Operatora merytorycznego."
 
-#: lms/templates/static_templates/tos.html:598
+#: lms/templates/static_templates/tos.html
 msgid "tos_copyrights_paragraph_2"
 msgstr ""
 "Postanowienia ust. 1, nie mają zastosowania do utworów wyrażonych w formie "
@@ -10648,7 +10641,7 @@ msgstr ""
 "kod źródłowy systemu Open edX. Warunki korzystania z tych utworów oraz kodu "
 "systemu Open edX określa licencja AGPL dostępna pod adresem URL "
 
-#: lms/templates/static_templates/tos.html:599
+#: lms/templates/static_templates/tos.html
 msgid "tos_copyrights_paragraph_3"
 msgstr ""
 "Postanowienia ust. 1 nie mają zastosowania do Kursów których prawa do "
@@ -10657,7 +10650,7 @@ msgstr ""
 "korzystania z Kursów określają odrębne regulacje określone przez ich "
 "twórców."
 
-#: lms/templates/static_templates/tos.html:600
+#: lms/templates/static_templates/tos.html
 msgid "tos_copyrights_paragraph_4"
 msgstr ""
 "Użytkownik nie ma prawa sprzedawać lub w inny sposób wprowadzać do obrotu "
@@ -10665,29 +10658,29 @@ msgstr ""
 "fragmentu, w szczególności przesyłać lub udostępniać w systemach i sieciach "
 "komputerowych lub jakichkolwiek innych systemach teleinformatycznych."
 
-#: lms/templates/static_templates/tos.html:601
+#: lms/templates/static_templates/tos.html
 msgid "tos_copyrights_paragraph_5"
 msgstr ""
 "Każde naruszenie praw autorskich przez Użytkownika może spowodować jego "
 "odpowiedzialność cywilną lub karną z tego tytułu."
 
-#: lms/templates/static_templates/tos.html:605
+#: lms/templates/static_templates/tos.html
 msgid "tos_courses_storage_title"
 msgstr "PRZECHOWYWANIE I UDOSTĘPNIANIE KURSÓW"
 
-#: lms/templates/static_templates/tos.html:607
+#: lms/templates/static_templates/tos.html
 msgid "tos_courses_storage_paragraph_1"
 msgstr ""
 "Operator techniczny zapewnia możliwość deponowania i publikacji Kursów na "
 "Platformie zgodnie z możliwościami technologicznymi Platformy."
 
-#: lms/templates/static_templates/tos.html:608
+#: lms/templates/static_templates/tos.html
 msgid "tos_courses_storage_paragraph_2"
 msgstr ""
 "Do zamieszczania i publikowania Kursów na Platformie uprawniona jest "
 "Jednostka edukacyjna po zatwierdzeniu Kursu przez Operatora merytorycznego."
 
-#: lms/templates/static_templates/tos.html:609
+#: lms/templates/static_templates/tos.html
 msgid "tos_courses_storage_paragraph_3"
 msgstr ""
 "Jednostka edukacyjna oświadcza, że posiada autorskie prawa majątkowe lub "
@@ -10697,13 +10690,13 @@ msgstr ""
 "aby każdy miał do niego dostęp w dowolnym miejscu i czasie w tym możliwość "
 "utrwalania i zwielokrotniania Kursu techniką cyfrową."
 
-#: lms/templates/static_templates/tos.html:610
+#: lms/templates/static_templates/tos.html
 msgid "tos_courses_storage_paragraph_4"
 msgstr ""
 "Jednostka edukacyjna oświadcza, że Kurs nie narusza żadnych praw osób "
 "trzecich, w szczególności praw autorskich."
 
-#: lms/templates/static_templates/tos.html:611
+#: lms/templates/static_templates/tos.html
 msgid "tos_courses_storage_paragraph_5"
 msgstr ""
 "Operator merytoryczny oraz Operator techniczny nie ponoszą odpowiedzialności"
@@ -10713,14 +10706,14 @@ msgstr ""
 "można korzystać z Kursu każdorazowo określa Jednostka edukacyjna "
 "zamieszczająca Kurs."
 
-#: lms/templates/static_templates/tos.html:612
+#: lms/templates/static_templates/tos.html
 msgid "tos_courses_storage_paragraph_6"
 msgstr ""
 "Operator merytoryczny oraz Operator techniczny nie ponoszą odpowiedzialności"
 " za wykorzystywanie Kursów niezgodnie z prawem oraz niezgodnie z określoną "
 "dla nich licencją."
 
-#: lms/templates/static_templates/tos.html:613
+#: lms/templates/static_templates/tos.html
 msgid "tos_courses_storage_paragraph_7"
 msgstr ""
 "Jednostka edukacyjna ma możliwość zamieszczania lub usunięcia Kursu na "
@@ -10728,38 +10721,38 @@ msgstr ""
 "tematyczne, czas trwania, termin rozpoczęcia i zakończenia Kursu oraz "
 "terminy zapisów na Kurs określa Jednostka edukacyjna."
 
-#: lms/templates/static_templates/tos.html:614
+#: lms/templates/static_templates/tos.html
 msgid "tos_courses_storage_paragraph_8"
 msgstr ""
 "Operator merytoryczny lub Operator techniczny ma możliwość zablokowania "
 "Kursu co do którego zachodzi podejrzenie, że został zamieszczony z "
 "naruszeniem zasad prawa lub postanowień Regulaminu."
 
-#: lms/templates/static_templates/tos.html:618
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_title"
 msgstr "OCHRONA DANYCH OSOBOWYCH"
 
-#: lms/templates/static_templates/tos.html:620
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_1"
 msgstr ""
 "Operator merytoryczny, przetwarza wyłącznie te dane osobowe Użytkowników, "
 "które są niezbędne do świadczenia Usług określonych Regulaminem oraz "
 "realizacji obowiązków wynikających z przepisów prawa."
 
-#: lms/templates/static_templates/tos.html:621
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_2"
 msgstr ""
 "Dane osobowe przetwarzane są z zachowaniem zasad ochrony i bezpieczeństwa "
 "danych zgodnie z wymaganiami RODO."
 
-#: lms/templates/static_templates/tos.html:622
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_3"
 msgstr ""
 "Administratorem danych osobowych przetwarzanych w ramach Platformy jest "
 "Operator merytoryczny Fundacja Młodej Nauki, ul. Uniwersytecka 5 lok. 12, "
 "02-036 Warszawa, tel. +48 22 234 42 53, email: "
 
-#: lms/templates/static_templates/tos.html:623
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_4"
 msgstr ""
 "W związku z realizacją Usług w imieniu Operatora technicznego, przetwarzanie"
@@ -10768,57 +10761,57 @@ msgstr ""
 "Instytutowi Badawczemu, który w rozumieniu zapisów RODO jest podmiotem "
 "przetwarzającym dane."
 
-#: lms/templates/static_templates/tos.html:624
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_5"
 msgstr ""
 "Operator merytoryczny wyznaczył Inspektora Ochrony Danych, z którym w "
 "sprawach dotyczących przetwarzanych danych osobowych istnieje możliwość "
 "kontaktu za pośrednictwem adresu mailowego "
 
-#: lms/templates/static_templates/tos.html:625
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_6"
 msgstr ""
 "Operator merytoryczny przetwarza następujące dane osobowe: imię, nazwisko i "
 "adres e-mail użytkownika."
 
-#: lms/templates/static_templates/tos.html:627
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_7"
 msgstr ""
 "Dane osobowe dotyczące Użytkowników przetwarzane są w następujących celach:"
 
-#: lms/templates/static_templates/tos.html:629
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_7_section_1"
 msgstr "rejestracji Kont w Serwisie,"
 
-#: lms/templates/static_templates/tos.html:630
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_7_section_2"
 msgstr "realizacji Usług,"
 
-#: lms/templates/static_templates/tos.html:631
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_7_section_3"
 msgstr "obsługi procesu rejestracji i logowania do Konta,"
 
-#: lms/templates/static_templates/tos.html:632
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_7_section_4"
 msgstr "ewentualnego ustalenia, dochodzenia lub obrony roszczeń,"
 
-#: lms/templates/static_templates/tos.html:633
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_7_section_5"
 msgstr ""
 "wyjaśniania okoliczności niedozwolonego korzystania z usług świadczonych "
 "drogą elektroniczną,"
 
-#: lms/templates/static_templates/tos.html:634
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_7_section_6"
 msgstr "tworzenia kopii i przechowywania danych."
 
-#: lms/templates/static_templates/tos.html:637
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_8"
 msgstr ""
 "Podanie danych osobowych dotyczących Użytkowników jest dobrowolne, ale "
 "niezbędne dla korzystania z określonych Usług."
 
-#: lms/templates/static_templates/tos.html:638
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_9"
 msgstr ""
 "Dane osobowe dotyczące Użytkowników przetwarzane są w oparciu o przesłankę "
@@ -10827,7 +10820,7 @@ msgstr ""
 " wskazaną w art. 6 ust. 1 lit. f) RODO, jako prawnie uzasadniony interes "
 "administratora przejawiający się w realizacji postanowień umowy."
 
-#: lms/templates/static_templates/tos.html:639
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_10"
 msgstr ""
 "Dostęp do danych mogą mieć następujący odbiorcy danych: upoważnieni "
@@ -10839,33 +10832,33 @@ msgstr ""
 "powierzono przetwarzanie danych na potrzeby świadczenia usług na rzecz "
 "administratora lub podmiotu przetwarzającego."
 
-#: lms/templates/static_templates/tos.html:640
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_11"
 msgstr ""
 "Osobom, których dane są przetwarzane przysługuje prawo dostępu do swoich "
 "danych, ich sprostowania, przenoszenia, wniesienia sprzeciwu wobec "
 "przetwarzania, usunięcia danych oraz ograniczenie ich przetwarzania."
 
-#: lms/templates/static_templates/tos.html:641
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_12"
 msgstr ""
 "W przypadku uznania, że przetwarzanie danych narusza przepisy RODO "
 "przysługuje również prawo wniesienia skargi do organu nadzorczego - Prezesa "
 "Urzędu Ochrony Danych Osobowych."
 
-#: lms/templates/static_templates/tos.html:642
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_13"
 msgstr ""
 "Dane osobowe będą przechowywane do zakończeni projektu Polski MOOC tj. do "
 "końca lipca 2020roku."
 
-#: lms/templates/static_templates/tos.html:643
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_14"
 msgstr ""
 "Realizacja praw, o których mowa w pkt. 11 możliwa jest za pośrednictwem "
 "adresu mailowego "
 
-#: lms/templates/static_templates/tos.html:644
+#: lms/templates/static_templates/tos.html
 msgid "tos_personal_data_protection_paragraph_15"
 msgstr ""
 "W przypadku, gdy Jednostki edukacyjne wprowadziły dodatkowe formy "
@@ -10875,11 +10868,11 @@ msgstr ""
 "pełnym zakresem obowiązków wynikających z przepisów dotyczących "
 "przetwarzania danych osobowych, jakie ciążą na administratorze."
 
-#: lms/templates/static_templates/tos.html:648
+#: lms/templates/static_templates/tos.html
 msgid "tos_data_protection_title"
 msgstr "ZABEZPIECZENIE DANYCH"
 
-#: lms/templates/static_templates/tos.html:650
+#: lms/templates/static_templates/tos.html
 msgid "tos_data_protection_paragraph_1"
 msgstr ""
 "Dane gromadzone przez Operatora merytorycznego są zabezpieczone przed "
@@ -10887,7 +10880,7 @@ msgstr ""
 "organizacyjnymi zgodnie z przyjętą i aktualnie obowiązującą w tym zakresie "
 "polityką bezpieczeństwa informacji i danych osobowych."
 
-#: lms/templates/static_templates/tos.html:651
+#: lms/templates/static_templates/tos.html
 msgid "tos_data_protection_paragraph_2"
 msgstr ""
 "Operator merytoryczny oświadcza, iż dokłada należytej staranności, aby "
@@ -10898,51 +10891,51 @@ msgstr ""
 "podobnym charakterze lub innych aniżeli pliki mechanizmów destrukcyjnych "
 "należy zgłaszać mailowo na adres "
 
-#: lms/templates/static_templates/tos.html:655
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_support_title"
 msgstr "WSPARCIE MERYTORYCZNE I TECHNICZNE UŻYTKOWNIKÓW"
 
-#: lms/templates/static_templates/tos.html:657
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_support_paragraph_1"
 msgstr ""
 "Zakłócenia w funkcjonowaniu lub problemy związane ze świadczonymi usługami w"
 " ramach Platformy NAVOICA mogą być zgłaszane przez Użytkownika za "
 "pośrednictwem adresu e-mail "
 
-#: lms/templates/static_templates/tos.html:658
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_support_paragraph_2"
 msgstr ""
 "Użytkownik może zgłosić zastrzeżenie w takim zakresie w jakim przewidziane "
 "Regulaminem dedykowane im Usługi nie są realizowane lub są realizowane "
 "niezgodnie z postanowieniami Regulaminu."
 
-#: lms/templates/static_templates/tos.html:659
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_support_paragraph_3"
 msgstr ""
 "Zgłoszenie powinno być przesłane w ciągu 14 dni od daty wystąpienia "
 "zdarzenia uzasadniającego przesłanie zgłoszenia."
 
-#: lms/templates/static_templates/tos.html:660
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_support_paragraph_4"
 msgstr ""
 "Zgłoszenie można złożyć za pomocą korespondencji elektronicznej na adres "
 "e-mail: "
 
-#: lms/templates/static_templates/tos.html:660
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_support_paragraph_4_1"
 msgstr ""
 " lub w formie listu poleconego przesłanego na adres: Ośrodek Przetwarzania "
 "Informacji Państwowy Instytut Badawczy, Al. Niepodległości 188b, 00-608 "
 "Warszawa."
 
-#: lms/templates/static_templates/tos.html:661
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_support_paragraph_5"
 msgstr ""
 "Zgłoszenie powinno zawierać co najmniej: imię i nazwisko, adres e-mail lub "
 "inny adres korespondencyjny, okoliczności uzasadniające zgłoszenie, a także "
 "konkretne żądanie związane ze zgłoszeniem."
 
-#: lms/templates/static_templates/tos.html:662
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_support_paragraph_6"
 msgstr ""
 "Jeżeli podane w zgłoszeniu dane lub informacje wymagają uzupełnienia, "
@@ -10950,7 +10943,7 @@ msgstr ""
 "wskazanym zakresie. W przypadku braku uzupełnienia zgłoszenie pozostanie bez"
 " rozpatrzenia."
 
-#: lms/templates/static_templates/tos.html:663
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_support_paragraph_7"
 msgstr ""
 "Operator techniczny lub Operator merytoryczny rozpoznaje zgłoszenie w "
@@ -10961,23 +10954,23 @@ msgstr ""
 "zgłoszenia drogą korespondencji elektronicznej, na podany przez siebie adres"
 " e-mail."
 
-#: lms/templates/static_templates/tos.html:664
+#: lms/templates/static_templates/tos.html
 msgid "tos_user_support_paragraph_8"
 msgstr ""
 "Operator techniczny zastrzega sobie prawo do pozostawienia reklamacji bez "
 "rozpoznania, jeżeli wynikać ona będzie z nieznajomości Regulaminu lub "
 "przepisów prawa."
 
-#: lms/templates/static_templates/tos.html:668
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_title"
 msgstr "POSTANOWIENIA KOŃCOWE"
 
-#: lms/templates/static_templates/tos.html:670
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_1"
 msgstr ""
 "Operator merytoryczny zastrzega sobie prawo do zmiany treści Regulaminu."
 
-#: lms/templates/static_templates/tos.html:671
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_2"
 msgstr ""
 "Użytkownicy zostaną poinformowani o zmianach Regulaminu stosownym "
@@ -10986,14 +10979,14 @@ msgstr ""
 "zamieszczoną informacją o zmianie regulaminu wraz z jego treścią dostępną po"
 " zalogowaniu do Konta."
 
-#: lms/templates/static_templates/tos.html:672
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_3"
 msgstr ""
 "Użytkownik może odmówić akceptacji zmian przesyłając Operatorowi "
 "technicznemu stosowne oświadczenie w tym zakresie w formie pisemnej, "
 "mailowej na adres "
 
-#: lms/templates/static_templates/tos.html:672
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_3_1"
 msgstr ""
 " lub, w przypadku posiadaczy Konta, zaznaczając brak akceptacji zmian po "
@@ -11006,21 +10999,21 @@ msgstr ""
 "dniowego terminu wypowiedzenia, liczonego od dnia otrzymania przez Operatora"
 " technicznego informacji o odmowie akceptacji zmian."
 
-#: lms/templates/static_templates/tos.html:673
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_4"
 msgstr ""
 "Użytkownik ponosi ryzyko nieotrzymania powiadomienia o zmianie Regulaminu z "
 "powodu nieaktualnego, nieprawdziwego lub należącego do innego podmiotu "
 "adresu e-mail."
 
-#: lms/templates/static_templates/tos.html:674
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_5"
 msgstr ""
 "W przypadku zmiany Regulaminu Użytkownikom wyświetlona zostanie lista "
 "najważniejszych zmian. Użytkownik zobowiązany jest do zapoznania się z "
 "Regulaminem w nowym brzmieniu."
 
-#: lms/templates/static_templates/tos.html:675
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_6"
 msgstr ""
 "Wszelkie spory związane z realizacją Umowy będą rozstrzygane przez polskie "
@@ -11031,7 +11024,7 @@ msgstr ""
 " kolejności dążyć do polubownego rozstrzygnięcia sporów w drodze negocjacji "
 "prowadzonych przez okres 90 dni."
 
-#: lms/templates/static_templates/tos.html:676
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_7"
 msgstr ""
 "Nie stanowi zmian Regulaminu: zmiana zawartych w nim danych teleadresowych "
@@ -11040,7 +11033,7 @@ msgstr ""
 "jeżeli jej zmiany wynikają z obowiązujących przepisów prawa lub są bardziej "
 "korzystne dla Użytkownika."
 
-#: lms/templates/static_templates/tos.html:677
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_8"
 msgstr ""
 "Operator merytoryczny lub Operator techniczny ma prawo podjąć decyzję o "
@@ -11049,23 +11042,23 @@ msgstr ""
 "Platformy stosowną informację. Zaprzestanie lub zawieszenie świadczenia "
 "Usługi nastąpi po upływie 30 dni od dnia zamieszczenia w/w informacji."
 
-#: lms/templates/static_templates/tos.html:678
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_9"
 msgstr "Prawem właściwym dla całości Umowy jest prawo polskie."
 
-#: lms/templates/static_templates/tos.html:679
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_10"
 msgstr ""
 "W kwestiach nieuregulowanych w Umowach zawartych z Operatorem zastosowanie "
 "mają przepisy prawa polskiego."
 
-#: lms/templates/static_templates/tos.html:680
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_11"
 msgstr ""
 "Jeżeli którekolwiek postanowienie Regulaminu zostanie uznane prawomocnym "
 "orzeczeniem sądu za nieważne, pozostałe postanowienia pozostają w mocy."
 
-#: lms/templates/static_templates/tos.html:681
+#: lms/templates/static_templates/tos.html
 msgid "tos_final_provisions_paragraph_12"
 msgstr "Regulamin obowiązuje od 25.02.2020r."
 
