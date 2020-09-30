@@ -63,11 +63,11 @@ from student.models import CourseEnrollment
 
       let $selectedSortOption = $('.js-selected-sort');
 
-        $selectedSortOption.text(_('None') );
+        $selectedSortOption.text("${_('None')}");
 
         $('select.js-select-change').change(function() {
             let selectedOption = $(this).children("option:selected").text();
-            $selectedSortOption.text(selectedOption || _('None') );
+            $selectedSortOption.text(selectedOption || "${_('None')}" );
         });
 
       let selectedFilters = [];
