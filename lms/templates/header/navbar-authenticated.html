@@ -28,11 +28,11 @@ self.real_user = getattr(user, 'real_user', user)
     </a>
 </li>
 % endif
-## <li class="mobile-nav-item hidden-mobile nav-item">
-##     <a class="${'active ' if '/u/' in request.path  else ''}nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">
-##         ${_("Profile")}
-##     </a>
-## </li>
+<li class="mobile-nav-item hidden-mobile nav-item">
+    <a class="${'active ' if '/u/' in request.path  else ''}nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">
+        ${_("Profile")}
+    </a>
+</li>
 % endif
 
 <li class="nav-item">

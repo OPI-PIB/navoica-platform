@@ -6,14 +6,14 @@ from django.utils.translation import ugettext as _
     <div class="date-summary date-summary-${course_date.css_class}">
         % if course_date.title:
             % if course_date.title == 'current_datetime':
-                <h6>${_("Today is")}:</h6>
-                <span class="hd hd-6 heading localized-datetime" data-datetime="${course_date.date}" data-format="shortDate" data-timezone="UTC" data-language="${LANGUAGE_CODE}"></span>
+                <h6>Dzisiaj jest:</h6>
+                <span class="hd hd-6 heading localized-datetime" data-datetime="${course_date.date}" data-format="shortDate" data-timezone="UTC" data-language="pl"></span>
             % else:
                 <h6>${course_date.title}</h6>
             % endif
         % endif
         % if course_date.date and course_date.title != 'current_datetime':
-            <p class="hd hd-6 date localized-datetime" data-format="shortDate" data-datetime="${course_date.date}" data-timezone="UTC" data-language="${LANGUAGE_CODE}" data-string="${_(course_date.relative_datestring)}"></p>
+            <p class="hd hd-6 date localized-datetime" data-format="shortDate" data-datetime="${course_date.date}" data-timezone="UTC" data-language="pl" data-string="${_(course_date.relative_datestring)}"></p>
         % endif
         % if course_date.description:
 	   <p class="description">${course_date.description}</p>

@@ -2,8 +2,6 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 
-<%block name="pagetitle">${_("Contact")}</%block>
-
 <div id="content" class="border-top" style="padding-top:7rem">
     <main class="container" id="contact">
 
@@ -14,33 +12,32 @@
                     <article id="results">
                         <header>
                             <h2>
-                                <span class="d-none d-md-block">${_('Contact us')}</span>
+                                <span class="d-none d-md-block">Kontakt</span>
                             </h2>
                         </header>
 
                         <h1>
                             <strong>Navoica.pl</strong>
                             <br>
-                            ${_('Online learning platform owned by the Polish Ministry of Science and Higher Education')}
+                            Platforma kształcenia na odległość Ministerstwa Nauki i Szkolnictwa Wyższego.
                         </h1>
 
 
                         <address>
-                            <h4>${_('Address')}:</h4>
-
+                            <h4>Adres korespondencyjny:</h4>
                             <p>
-                                ${_('National Information Processing Institute')}<br>
+                                Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy<br>
                                 al. Niepodległości 188 B<br>
                                 00-608 Warszawa
                             </p>
                         </address>
 
                         <div>
-                            <h4>${_('General questions')}</h4>
-                            <p>${_('Questions, comments and contact with universities and institutions regarding publishing courses on the platform')}: <a href="mailto:navoica@opi.org.pl">navoica@opi.org.pl</a></p>
+                            <h4>Kontakt w sprawach ogólnych</h4>
+                            <p>Pytania, uwagi oraz kontakt dla uczelni i instytucji w sprawie udostępnienia kursów na platformie: <a href="mailto:navoica@opi.org.pl">navoica@opi.org.pl</a></p>
 
-                            <h4>${_('Help center')}</h4>
-                            <p>${_('Issues, errors, technical comments')}: <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a></p>
+                            <h4>Pomoc techniczna</h4>
+                            <p>Problemy, błędy, uwagi techniczne: <a href="mailto:mooc_help@opi.org.pl">mooc_help@opi.org.pl</a></p>
                         </div>
 
                     </article>

@@ -1,13 +1,10 @@
 
 <%namespace name='static' file='../static_content.html'/>
 <%!
-import mimetypes
 from django.utils.translation import ugettext as _
 from django.utils.translation import ungettext
-from django.utils import translation
 from django.utils.translation import pgettext
 from django.core.urlresolvers import reverse
-from django.contrib.staticfiles import finders
 from courseware.courses import get_course_about_section, get_course_overview_with_access
 from django.conf import settings
 from six import text_type
@@ -18,18 +15,17 @@ from six import string_types
 %>
 
 <%inherit file="../main.html" />
-<%block name="og_meta">
+<%block name="headextra">
   ## OG (Open Graph) title and description added below to give social media info to display
   ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
   <meta property="og:title" content="${course.display_name_with_default_escaped}" />
-  <meta property="og:description" content="${get_course_about_section(request, course, 'short_description').strip()}" />
-  <meta property="og:type" content="website" />
+  <meta property="og:description" content="${get_course_about_section(request, course, 'short_description')}" />
+
   % if get_course_about_section(request, course, "video"):
       <meta property="og:video" content="${course_video_url}" />
 	%else:
       <meta property="og:image" content="${settings.LMS_ROOT_URL + course_image_urls['large']}" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="628" />
+
 	% endif
 </%block>
 
@@ -115,7 +111,7 @@ from six import string_types
   })(this)
   </script>
 
-  <script type="module" src="${static.url('js/course_info.js')}"></script>
+  <script src="${static.url('js/course_info.js')}"></script>
 </%block>
 
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
@@ -151,7 +147,6 @@ from six import string_types
                 <a href="${reg_href}" class="btn btn-lg btn-primary btn-icon ${href_class} ">${_("Take the course")}</a>
               %endif
 		  % endif
-
 %if user.is_authenticated() and registered:
 
 %elif in_cart:
@@ -207,9 +202,11 @@ from six import string_types
 
         </article>
 	<aside>
-	  <div id="courses-list-header">
-        <h2 class="custom-h2">${_("Course Summary Page")}</h2>
-      </div>
+	  <header id="courses-list-header">
+                <h2 id="h2">
+                    Wizytówka kursu
+                </h2>
+            </header>
 	    % if get_course_about_section(request, course, "video"):
 		<div class="embed-responsive embed-responsive-16by9">
 		  ${get_course_about_section(request, course, "video")}
@@ -220,8 +217,6 @@ from six import string_types
 		</div>
 	    % endif
 	</aside>
-          </div>
-        </div>
       </header>
 
 
@@ -234,47 +229,41 @@ from six import string_types
         <main class="container">
 
                 <article id="results">
-      <div id="courses-list-header">
-         <h2 class="custom-h2">${_("Course Description")}</h2>
-      </div>
+      <header id="courses-list-header">
+         <h2 id="h2">Opis Kursu</h2>
+      </header>
       ${get_course_about_section(request, course, "overview")}
       % if get_course_about_section(request, course, "course_staff_extended"):
-        <h2>${_(" Instructor list ")}</h2>
+        <h2>Lista prowadzących</h2>
         ${get_course_about_section(request, course, "course_staff_extended")}
       % endif
       </article>
 
 <aside class="sidebar">
-       <div id="courses-list-header">
-         <h2 class="custom-h2">
-            <span class="d-none d-md-block">${_("Organizer")}</span>
-         </h2>
-       </div>
+             <header id="courses-list-header">
+         <h2 id="h2">
+                <span class="d-none d-md-block">Organizator</span>
+              </h2>
+       </header>
        <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
                         <div class="organizer-logo">
                             <p class="mt-2 mx-auto text-center">
                                 % if course.organizer:
-                                    <%
-                                        def get_translation_in(language, s):
-                                            with translation.override(language):
-                                                return translation.gettext(s)
-
-                                        course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]
-                                        if not finders.find('images/org/{}.png'.format(course_organize)):
-                                            course_organize = get_translation_in('pl', settings.ALL_COURSE_ORGANIZER_DICT[course.organizer])
-                                        %>
-                                <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80" class="d-block mt-4">
-                                % endif
+        <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
+        <img src="/static/images/org/${course_organize}.png" alt="${course_organize}" height="80">
+      % endif
                             </p>
                         </div>
                     </div>
+
+
 <br/>
-            <div id="courses-list-header">
-                <h2 class="custom-h2">
-                    <span class="d-none d-md-block">${_("Basic Information")}</span>
+            <header id="courses-list-header">
+                <h2 id="h2">
+                    <span class="d-none d-md-block">Informacje podstawowe</span>
                 </h2>
-            </div>
-              <a href="#basic-data-facets" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none mb-2">${_("Basic Information")}</a>
+            </header>
+              <a href="#basic-data-facets" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none mb-2">Informacje podstawowe</a>
               <div id="basic-data-facets" class="collapse">
             <ul class="course-details list-group list-group-flush">
 
@@ -288,7 +277,7 @@ from six import string_types
             if (a[0]==course.difficulty):
               course_difficulty = a[1]
           %>
-                  <h6>${_("Course Difficulty")}:</h6>
+                  <h6>Poziom trudności kursu:</h6>
                   <div>${course_difficulty}</div>
                 </div>
               </li>
@@ -301,7 +290,7 @@ from six import string_types
                 </div>
                 <div class="course-details-content">
          <% course_c = settings.ALL_COURSE_CATEGORY_DICT[course.course_category] %>
-                  <h6>${_("Course Category")}:</h6>
+                  <h6>Kategoria tematyczna:</h6>
       <div>${course_c}</div>
                 </div>
               </li>
@@ -314,7 +303,7 @@ from six import string_types
                   <i class="icon far fa-clock" aria-hidden="true"></i>
                 </div>
                 <div class="course-details-content">
-                  <h6>${_("Course Timetable")}:</h6>
+                  <h6>Czas trwania kursu:</h6>
       <div>${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}</div>
                 </div>
               </li>
@@ -338,7 +327,7 @@ from six import string_types
                   <%
                      course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                   %>
-                  <div class="important-dates-item-text start-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></div>
+                  <div class="important-dates-item-text start-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></div>
               % endif
 
                 </div>
@@ -363,7 +352,7 @@ from six import string_types
                     <%
                         course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                     %>
-                    <div class="important-dates-item-text final-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></div>
+                    <div class="important-dates-item-text final-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></div>
                   % endif
                 </div>
               </li>
@@ -387,7 +376,7 @@ from six import string_types
                     <%
                         course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                     %>
-                    <div class="important-dates-item-text final-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></div>
+                    <div class="important-dates-item-text final-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></div>
                   % endif
                 </div>
               </li>
@@ -410,7 +399,7 @@ from six import string_types
                     <%
                         course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                     %>
-                    <span class="important-dates-item-text final-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></span>
+                    <span class="important-dates-item-text final-date localized_datetime" data-language="pl" data-format-language="pl" data-format="ISODate" data-datetime="${course_date_string}"></span>
                   % endif
                 </div>
               </li>
@@ -427,7 +416,7 @@ from six import string_types
             course_effort = txt
             txt = float(txt.replace(':', '.'))
                    %>
-                  <h6>${_("Hours of effort per week")}:</h6>
+                  <h6>Tygodniowy wysiłek godzinowy:</h6>
       <div>${ungettext("{effort} hour", "{effort} hours", txt).format(effort=course_effort) | h}</div>
                 </div>
               </li>
@@ -440,7 +429,7 @@ from six import string_types
                 </div>
                 <div class="course-details-content">
                   <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-                  <h6>${_("Organizer")}:</h6>
+                  <h6>Organizator:</h5>
       <div>${course_organize}</div>
                 </div>
               </li>
@@ -477,7 +466,7 @@ from six import string_types
         </main>
       </div>
     % else:
-    <strong style="color:red; margin: 10%">${_("Fill all fields in Schedule & Details Settings!")}</strong>
+		<strong style="color:red">Uzupełnij wszystkie pola w zakładce Szczegóły i harmonogram!</strong>
     % endif
 
 
@@ -494,7 +483,7 @@ from six import string_types
       ## For now, ocw links are the only thing that goes in additional resources
       % if get_course_about_section(request, course, "ocw_links"):
       <div class="additional-resources">
-        <div>
+        <header>
           <h1>${_("Additional Resources")}</h1>
       </div>
 
@@ -526,7 +515,7 @@ from six import string_types
         <input name="submit" type="submit" value="${pgettext('self','enroll')}">
       </div>
     </form>
-  </div>
+  </di
 %endif
 
 <%include file="../video_modal.html" />

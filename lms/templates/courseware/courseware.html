@@ -178,18 +178,15 @@ ${HTML(fragment.foot_html())}
                                 </span>
                             % endif
                             % if chapter:
-                                <span class="breadcrumbs-before">${_('Section')}:</span>
                                 <span class="nav-item nav-item-chapter" data-course-position="${course.position}" data-chapter-position="${chapter.position}">
                                     <a href="${course_url}#${unicode(chapter.location)}">${chapter.display_name_with_default}</a>
                                 </span>
                             % endif
                             % if section:
                                 <span class="nav-item nav-item-section">
-                                    <span class="breadcrumbs-before">${_('Subsection')}:</span>
                                     <a href="${course_url}#${unicode(section.location)}">${section.display_name_with_default}</a>
                                 </span>
                             % endif
-                            <span class="breadcrumbs-before">${_('Unit')}:</span>
                             <span class="nav-item nav-item-sequence">${sequence_title}</span>
                         </div>
                     </div>

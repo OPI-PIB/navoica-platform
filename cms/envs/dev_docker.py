@@ -47,6 +47,3 @@ SETTINGS_EXPORT = [
 ]
 
 WIKI_ENABLED = False
-
-NAVOICA_SANDBOX = True
-NAVOICA_SANDBOX_URL = 'http://navoica.devstack.sandbox:8111/sandbox'

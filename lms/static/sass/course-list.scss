@@ -36,19 +36,7 @@
   --font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-$darkcyan : teal;
-
-.text-darkred {
-  color: #a11326;
-}
-
-.text-navoica-red {
-  color: #e41d37;
-}
-
-.text-darkgrey {
-  color: #333333;
-}
+$darkcyan : darkcyan;
 
 
 * {
@@ -95,10 +83,6 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-}
-
-.custom-h6 {
-  font-size: 0.875rem;
 }
 
 p {
@@ -268,15 +252,6 @@ select {
   text-transform: none;
   word-wrap: normal;
 }
-
-input:focus, textarea:focus, select:focus, a:focus, button:focus {
-  outline: none;
-}
-
-.text-input:focus {
-  outline: none; /* Adjust to suit your tastes */
-}
-
 
 button, [type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button;
@@ -578,10 +553,6 @@ margin-top: 4rem !important;
 @media (min-width: 960px) {
   .container {
     max-width: 960px;
-  }
-  #sorting-form select {
-    width: 250px;
-    max-width: 250px;
   }
 }
 
@@ -2351,7 +2322,7 @@ a.btn.disabled, fieldset:disabled a.btn {
   }
 
   &.disabled, &:disabled {
-    color: #000;
+    color: #212529;
     background-color: #adb5bd;
     border-color: #adb5bd;
   }
@@ -4649,6 +4620,16 @@ input {
   }
 }
 
+.card-footer {
+  padding: 1rem 1rem;
+  background-color: #fff;
+  border-top: 0 solid rgba(0, 0, 0, 0.125);
+
+  &:last-child {
+    border-radius: 0 0 calc(0 - 0) calc(0 - 0);
+  }
+}
+
 .navbar-dark {
   .navbar-brand {
     color: #fff;
@@ -4776,6 +4757,7 @@ input {
 }
 
 .card-footer {
+  padding: 1rem 1rem;
   background-color: #fff;
   border-top: 0 solid rgba(0, 0, 0, 0.125);
 
@@ -9821,13 +9803,12 @@ section .display-2 {
   font-weight: 700;
   line-height: 1.5rem;
   margin: 0 0 0.5rem 0;
-  width: 100%;
 }
 
 .card-footer {
   background: transparent;
   font-weight: 600;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem;
 
   p {
     margin: 0;
@@ -9839,8 +9820,8 @@ section .display-2 {
 }
 
 .about-us figure img {
-  height: 6rem;
-  width: 6rem;
+  height: 96px;
+  width: 96px;
 }
 
 footer {
@@ -9975,7 +9956,7 @@ footer {
 
 @media (min-width: 1280px) {
   .navbar {
-//    height: 4rem;
+    height: 4rem;
   }
 
   body > section {
@@ -10360,6 +10341,7 @@ main.container aside {
 
   h6 {
     font-size: 1rem;
+    line-height: 21px;
   }
 }
 
@@ -10541,27 +10523,16 @@ main.container aside {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
 }
 
 .card {
   .course-text {
     min-height: 6rem;
     width: 100%;
-    font-size: 0.813rem;
   }
   .card-footer {
     .course-meta {
-      height: 2.844rem;
-    }
-  }
-  .course-cert {
-    padding: 0 0.5rem 0.5rem 0.5rem;
-    height: 5.047rem;
-    button {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      height: unset;
     }
   }
   .course-meta {
@@ -10596,9 +10567,9 @@ main.container aside {
   color: #6c757d;
   color: teal;
   display: flex;
-  flex: 0 0 2.25rem;
-  font-size: 1.125rem;
-  height: 2.25rem;
+  flex: 0 0 36px;
+  font-size: 18px;
+  height: 36px;
   justify-content: center;
   margin-right: 12px;
   margin-top: -1px;
@@ -11082,10 +11053,10 @@ article .display-3 {
   }
 
   #login-form .required label::after, #register-form .required label::after {
-    color: #a11326;
+    color: #E41D37;
     content: '\f069';
     font-family: "Font Awesome 5 Free";
-    font-size: 0.625rem;
+    font-size: 10px;
     font-weight: 900;
     margin-left: .2em;
     vertical-align: top;
@@ -11116,13 +11087,8 @@ article .display-3 {
     }
   }
 
-  #register-form .tip {
-    font-size: 0.875rem;
-    line-height: 2.0893;
-  }
-
-    #login-form .tip{
-    font-size: 1.125rem;
+  #login-form .tip, #register-form .tip {
+    font-size: 14px;
     line-height: 2.0893;
   }
 
@@ -11153,6 +11119,7 @@ article .display-3 {
   border-top: none;
   font-weight: initial;
   margin-top: auto;
+  padding-top: .5rem;
 
   .course-meta {
     margin: 0;
@@ -11270,7 +11237,7 @@ li.list-group-item {
   border: none !important;
 }
 
-#organizator, #discovery-message, #h2, #sorting-form, .custom-h2 {
+#organizator, #discovery-message, #h2, #sorting-form {
   color: teal;
   display: block;
   font-size: 1rem;
@@ -11305,14 +11272,14 @@ li.list-group-item {
   }
 }
 
-#results, #filters, #courses-list-header{
-  #h2, .custom-h2 {
+#results, #filters, #filter, .sidebar, #courses-list-header{
+  #h2 {
     line-height: 2.5;
   }
 }
 
 @media (min-width: 960px) {
-  #h2, .custom-h2, #discovery-message, #sorting-form {
+  #h2, #discovery-message, #sorting-form {
     font-size: 0.875rem;
     text-align: left;
     margin: 0;
@@ -11336,7 +11303,7 @@ main.container {
 @media (min-width: 960px) {
   #content1 {
    #discovery-message{
-//    margin-bottom: -1rem;
+    margin-bottom: -1rem;
    }
   }
 }
@@ -11721,9 +11688,9 @@ main.container > aside {
     color: #6c757d;
     color: teal;
     display: flex;
-    flex: 0 0 2.25rem;
-    font-size: 1.125rem;
-    height: 2.25rem;
+    flex: 0 0 36px;
+    font-size: 18px;
+    height: 36px;
     justify-content: center;
     margin-right: 12px;
     margin-top: -1px;
@@ -11875,13 +11842,13 @@ aside {
   }
 }
 
-.header-login {
+#header-login {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #dee2e6;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  #h2, .custom-h2 {
+  #h2 {
     margin: 1rem 0 0;
   }
 }
@@ -12050,7 +12017,7 @@ fieldset {
 
 .course-details-content > h6 {
   margin-bottom: 0;
-  line-height: 1.6;
+  line-height: 21px;
 }
 
 #content #register-form .message {
@@ -12132,7 +12099,7 @@ fieldset {
   }
   .u-field-message-help {
     font-style: italic;
-    font-size: 0.875rem;
+    font-size: 14px;
     line-height: 2.0893;
     color: #6c757d !important;
     display: block;
@@ -12246,7 +12213,7 @@ fieldset {
     color: #E41D37;
     content: '\f069';
     font-family: "Font Awesome 5 Free";
-    font-size: 0.625rem;
+    font-size: 10px;
     font-weight: 900;
     margin-left: .2em;
     vertical-align: top;
@@ -12600,39 +12567,6 @@ fieldset {
 .card-body > figure {
     flex: 0 0 10rem;
     margin: 0 1rem 0 0;
-    position: relative;
-    width: 100%;
-    }
-    .card-body > figure .course-card-label {
-      align-items: center;
-      background: teal;
-      border: 0;
-      color: #fff;
-      display: flex;
-      flex: 0 0 auto;
-      font-size: 0.75rem;
-      font-weight: 600;
-      left: -9px;
-      letter-spacing: .05em;
-      line-height: 1;
-      margin-right: 1rem;
-      min-width: auto;
-      padding: 8px 8px 10px;
-      position: absolute;
-      text-transform: uppercase;
-      bottom: 10px; }
-      .card-body > figure .course-card-label::after {
-        background: transparent;
-        border-bottom: 10px solid transparent;
-        border-right: 9px solid #008f8f;
-        content: "";
-        display: block;
-        height: 10px;
-        left: 0;
-        position: absolute;
-        top: 100%;
-        width: 9px; }
-  .card-body figure + div {
     position: relative; }
      .card-body figure + div {
     flex: 1 1; }
@@ -12647,6 +12581,7 @@ fieldset {
   color: #fff;
   display: flex;
   flex: 0 0 auto;
+  font-size: 12px;
   font-weight: 600;
   left: -9px;
   letter-spacing: .05em;
@@ -12668,7 +12603,7 @@ fieldset {
   left: 0;
   position: absolute;
   top: 100%;
-  width: 9px;
+  width: 9px; 
 }
 
 .center {
@@ -12758,7 +12693,7 @@ solution {
   margin-bottom:2px;
 }
 
-.header-login {
+#header-login {
   border-bottom: 0;
   padding-bottom: 0;
 }
@@ -12807,7 +12742,6 @@ main.container .d-flex {
   .card-title, .card-text, .course-meta {
     margin-left: 5px;
     margin-right: 5px;
-    word-break: break-word;
   }
   .card-title {
     flex: auto;
@@ -12945,7 +12879,7 @@ img.message-author {
 @media (min-width: 960px) {
   .navbar {
     img {
-      max-height: 2.125rem !important;
+      max-height: 34px !important;
       display: block !important;
     }
     #img-mobile {
@@ -12956,7 +12890,7 @@ img.message-author {
 
 .navbar {
   img {
-    max-height: 2.125rem;
+    max-height: 34px;
   }
    #img-mobile {
     display: block;
@@ -12997,7 +12931,7 @@ img.message-author {
   margin-bottom: 2rem;
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
-  #h2, .custom-h2 {
+  #h2 {
     font-size: 0.875rem;
     line-height: 1.7143;
     margin: 0;
@@ -13290,7 +13224,7 @@ span.complete-checkmark.fa.fa-check {
   }
 }
 
-/**#register-form .new-vp::after {
+#register-form .new-vp::after {
   color: #E41D37;
   content: '\f069';
   font-family: "Font Awesome 5 Free";
@@ -13298,7 +13232,7 @@ span.complete-checkmark.fa.fa-check {
   font-weight: 900;
   margin-left: .2em;
   vertical-align: top;
-}**/
+}
 
 .provider {
   white-space: break-spaces;
@@ -13317,6 +13251,13 @@ span.complete-checkmark.fa.fa-check {
 
 #nav-tab {
   padding-top: 1rem;
+}
+
+
+
+#results #h2 {
+//  display: flex;
+//  flex-direction: column-reverse;
 }
 
 #main {
@@ -13450,8 +13391,8 @@ span.complete-checkmark.fa.fa-check {
     }
     #legend-author {
       font-size: 0.8rem;
+      padding-left: 30rem;
       margin: 0;
-      text-align: end;
     }
     blockquote {
       font-weight: 600;
@@ -13594,7 +13535,7 @@ span.complete-checkmark.fa.fa-check {
   width: 2.5rem;
   &:hover {
     color:#fff;
-  }
+  }  
 
   i {
     margin: auto;
@@ -13613,7 +13554,7 @@ span.complete-checkmark.fa.fa-check {
   width: 4rem;
   &:hover {
     color:#fff;
-  }
+  }  
 
   i {
     margin: auto;
@@ -13634,40 +13575,15 @@ span.complete-checkmark.fa.fa-check {
   }
 }
 
-//@media (max-width: 959.98px) {
-//  .navbar {
-//    position: sticky !important;
-//    position: -webkit-sticky;
-//    top: 0;
-//    z-index: 1071;
-//  }
-//  #header-course {
-//    margin-top: 0;
-//  }
-//}
-
-@media (max-height: 375px), (max-width: 412px) {
+@media (max-width: 959.98px) {
   .navbar {
-    position: unset;
-  }
-  #page-header {
-    margin:0;
+    position: sticky !important;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1071;
   }
   #header-course {
-    margin-top:0px;
-  }
-}
-
-
-.footer-logos {
-  img {
-    max-width: 100%;
-  }
-}
-
-.legend {
-  .img-mobile {
-    max-width: 100%;
+    margin-top: 0;
   }
 }
 
@@ -13774,7 +13690,7 @@ span.complete-checkmark.fa.fa-check {
 
     .course-preview-title .provider, .course-preview-title .course-name {
       font-size: 1rem;
-      line-height: 1.3rem;
+      line-height: 1rem;
     }
 
     .desktop-menu, .my-account {
@@ -13799,8 +13715,8 @@ span.complete-checkmark.fa.fa-check {
     //height: 3.5rem;
 
     .course-preview-title .provider, .course-preview-title .course-name {
-      font-size: 0.9rem;
-      line-height: 1.3rem;
+      font-size: 0.6875rem;
+      line-height: 0.8rem;
     }
 
     .desktop-menu {
@@ -13907,16 +13823,6 @@ span.complete-checkmark.fa.fa-check {
   line-height: 0;
 }
 
-@media (min-width: 480px) {
-  #header-navigation .course-preview-title{
-   .course-name, .provider {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-   } 
-  }
-}  
-
 .d-none {
   & #header-navigation {
     display: none;
@@ -13930,76 +13836,3 @@ span.complete-checkmark.fa.fa-check {
 .text-darkcyan {
   color: $darkcyan;
 }
-
-.text-darkblack {
-  color: #000000;
-}
-
-.text-24 {
-  font-size: 1.5rem;
-}
-
-.text-18 {
-  font-size: 1.125rem;
-}
-
-
-/** ERROR FIELD **/
-input.form-control.form-control.error-field, .error-field, .error-field ~ .custom-control-label::before {
-  border: 2px solid #e41d37;
-}
-
-.f-10 {
-  font-size: 0.625rem;
-}
-
-.f-14 {
-  font-size: 0.875rem;
-}
-
-.f-12 {
-  font-size: 0.75rem;
-}
-
-.message.message-status.course-status-certavailable.is-shown {
-    width: 100%;
-}
-
-.course-progress .progress {
-  background-color: #eeeeee;
-  height: 2.8rem;
-  border-radius: 30px;
-}
-
-.course-progress .progress-bar {
-  background-color: #158467;
-  height: 1.3rem;
-  border-radius: 30px;
-}
-
-.card-color {
-  color: #343a40;
-}
-
-.custom-hover:hover {
-  color: #a11326;
-  text-decoration: none;
-}
-
-//A11Y
-
-.a11y-page header#page-header {
-  background-image: url("/static/images/photo-keyboard.jpeg");
-  background-position: 100% 40%;
-}
-
- .a11y-page .jumbotron {
-    background: rgba(255, 255, 255, 0.90);
-    padding: 24px 0;
-    margin: 0;
- }
-
- .a11y-page h1 {
-   margin-bottom: 0;
-   font-weight: 700;
- }

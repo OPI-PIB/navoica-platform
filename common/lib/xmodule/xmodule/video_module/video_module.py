@@ -202,9 +202,8 @@ class VideoModule(VideoFields, VideoTranscriptsMixin, VideoStudentViewHandlers, 
 
         transcript_language = self.get_default_transcript_language(transcripts)
         native_languages = {lang: label for lang, label in settings.LANGUAGES if len(lang) == 2}
-        ugettext = self.runtime.service(self, "i18n").ugettext
         languages = {
-            lang: native_languages.get(lang, ugettext(str(display)))
+            lang: native_languages.get(lang, display)
             for lang, display in settings.ALL_LANGUAGES
             if lang in other_lang
         }
@@ -514,10 +513,9 @@ class VideoDescriptor(VideoFields, VideoTranscriptsMixin, VideoStudioViewHandler
             validation = StudioValidation.copy(validation)
 
         no_transcript_lang = []
-        ugettext = self.runtime.service(self, "i18n").ugettext
         for lang_code, transcript in self.transcripts.items():
             if not transcript:
-                no_transcript_lang.append([ugettext(str(label)) for code, label in settings.ALL_LANGUAGES if code == lang_code][0])
+                no_transcript_lang.append([label for code, label in settings.ALL_LANGUAGES if code == lang_code][0])
 
         if no_transcript_lang:
             ungettext = self.runtime.service(self, "i18n").ungettext
@@ -609,8 +607,7 @@ class VideoDescriptor(VideoFields, VideoTranscriptsMixin, VideoStudioViewHandler
         else:
             editable_fields.pop('source')
 
-        ugettext = self.runtime.service(self, "i18n").ugettext
-        languages = [{'label': ugettext(str(label)), 'code': lang} for lang, label in settings.ALL_LANGUAGES]
+        languages = [{'label': label, 'code': lang} for lang, label in settings.ALL_LANGUAGES]
         languages.sort(key=lambda l: l['label'])
         editable_fields['transcripts']['languages'] = languages
         editable_fields['transcripts']['type'] = 'VideoTranslations'

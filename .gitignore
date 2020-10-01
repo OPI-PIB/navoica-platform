@@ -47,10 +47,13 @@ codekit-config.json
 
 ### Internationalization artifacts
 *.mo
+*.po
 *.prob
 *.dup
-django.po
-djangojs.po
+!django.po
+!django.mo
+!djangojs.po
+!djangojs.mo
 
 conf/locale/fake*/LC_MESSAGES/*.po
 conf/locale/fake*/LC_MESSAGES/*.mo

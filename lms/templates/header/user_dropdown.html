@@ -21,7 +21,7 @@ displayname = get_enterprise_learner_generic_name(request) or username
 %>
 
 <div class="mobile-menu" role="menuitem" aria-labelledby="my-account"><a class="dropdown-item" href="${reverse('dashboard')}">${_("My Courses")}</a></div>
-## <div class="mobile-menu" role="menuitem" aria-labelledby="my-account"><a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}">${_("Profile")}</a></div>
+<div class="mobile-menu" role="menuitem" aria-labelledby="my-account"><a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}">${_("Profile")}</a></div>
 <div class="mobile-menu" role="menuitem" aria-labelledby="my-account"><a class="dropdown-item" href="${reverse('account_settings')}">${_("Account")}</a></div>
 
 
@@ -62,14 +62,14 @@ displayname = get_enterprise_learner_generic_name(request) or username
 
 <div class="nav-item dropdown my-account desktop-menu">
             <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="${username} Menu">
-             <!--
+             <!-- 
              <img class="mr-2 rounded-circle" src="${profile_image_url}" width="32" height="32">
-	     -->
+	     -->				
              ${displayname}
              </button>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" role="menu">
                 <a class="dropdown-item" href="${reverse('dashboard')}" role="menuitem">${_("My Courses")}</a>
-                ## <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a>
+                <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a>
                 <a class="dropdown-item" href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a>

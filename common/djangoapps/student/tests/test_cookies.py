@@ -34,7 +34,7 @@ class CookieTests(SharedModuleStoreTestCase):
         if settings.ROOT_URLCONF == 'lms.urls':
             expected_header_urls.update({
                 'account_settings': reverse('account_settings'),
-                # 'learner_profile': reverse('learner_profile', kwargs={'username': self.user.username}),
+                'learner_profile': reverse('learner_profile', kwargs={'username': self.user.username}),
             })
 
         # Convert relative URL paths to absolute URIs

@@ -21,7 +21,7 @@
         padding: 24px 0;
         margin: 0;
     }
-     h1 {
+     h2 {
         margin-bottom: 0;
         margin-top: 0;
         font-size: 1.5rem;
@@ -71,7 +71,7 @@
           display: flex;
           flex: 1;
           flex-flow: row nowrap;
-          font-size: 0.875rem;
+          font-size: 14px;
           font-weight: 700;
           justify-content: space-between;
           padding: 8px 8px;
@@ -96,7 +96,7 @@
             align-self: flex-start;
             display: flex;
             font-family: "Font Awesome 5 Free";
-            font-size: 0.75rem;
+            font-size: 12px;
             font-weight: 600;
             flex: 0 0 24px;
             justify-content: flex-end;
@@ -107,7 +107,7 @@
       }
 
       .card-body {
-        font-size: 0.875rem;
+        font-size: 14px;
         padding: 16px 8px;
 
         > .accordion {
@@ -116,7 +116,7 @@
 
         // answer to faq-question
         p {
-          font-size: 0.875rem;
+          font-size: 14px;
           margin: 8px;
 
           &:last-child {
@@ -175,7 +175,7 @@
           }
 
           .btn-cat {
-            font-size: 1rem;
+            font-size: 16px;
             font-weight: 700;
           }
 
@@ -224,7 +224,7 @@
           }
 
           p {
-            font-size: 0.875rem;
+            font-size: 14px;
           }
         }
 
@@ -247,12 +247,12 @@
         margin: 0 0 16px;
 
         .card-header .btn {
-          font-size: 1rem;
+          font-size: 16px;
           padding: 12px 8px;
         }
 
         .card-body {
-          font-size: 1rem;
+          font-size: 16px;
           padding: 12px 8px;
 
           > .accordion {
@@ -260,7 +260,7 @@
           }
 
           p {
-            font-size: 1rem !important;
+            font-size: 16px !important;
 
             &:last-child {
               margin-bottom: 10px;
@@ -308,7 +308,7 @@
         }
 
         &.toc .card-body {
-          font-size: 1rem;
+          font-size: 16px;
           padding: 12px 8px 12px 28px;
 
           > .accordion {
@@ -316,12 +316,12 @@
           }
 
           p {
-            font-size: 1rem;
+            font-size: 16px;
           }
         }
 
         &.faq .card-header .btn-cat {
-          font-size: 1.125rem;
+          font-size: 18px;
         }
       }
     }
@@ -362,9 +362,9 @@
           border-radius: 50%;
           padding: 4px;
           display: flex;
-          flex: 0 0 2.25rem;
-          font-size: 1.125rem;
-          height: 2.25rem;
+          flex: 0 0 36px;
+          font-size: 18px;
+          height: 36px;
           justify-content: center;
           margin-right: 8px;
         }
@@ -376,8 +376,8 @@
           flex-flow: column;
           justify-content: flex-start;
 
-          h2 {
-            font-size: 1rem;
+          h5 {
+            font-size: 16px;
             line-height: 2; // margin 0
           }
 
@@ -407,8 +407,8 @@
       #faq-categories > .list-group-item {
         padding: 12px 8px;
 
-        div h2 {
-          font-size: 1.125rem;
+        div h5 {
+          font-size: 18px;
         }
       }
     }

@@ -9544,12 +9544,18 @@ main.container aside h6 {
     margin: 0 .5em 0 .5em
   }
 
-  .container .breadcrumbs .nav-item:nth-child(4)::after {
-    content: "/";
-    margin: 0 .5em 0 .5em
+  .container .breadcrumbs .nav-item:nth-child(3)::before {
+    content: "Lekcja:";
+    font-style: italic;
   }
 
-  .container .breadcrumbs-before {
+  .container .breadcrumbs .nav-item:nth-child(2)::before {
+    content: "Moduł: ";
+    font-style: italic;
+  }
+
+  .container .breadcrumbs .nav-item:nth-child(4)::before {
+    content: "Jednostka: ";
     font-style: italic;
   }
 
@@ -11301,7 +11307,7 @@ main.container aside h6 {
 
 code {color: black;}
 #seq_content .vert .xblock blockquote {font-size: 1em !important;}
-#results .xmodule_HtmlModule img {vertical-align: 0;}
+#results .xmodule_HtmlModule img {vertical-align: 0 !important;}
 
 // image modal
 // --------------------

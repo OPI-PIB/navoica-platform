@@ -33,6 +33,7 @@ formulaEquationPreview.enable = function() {
             $preview: $preview,
             jax: null,  // Fill this in later.
             $img: $preview.find('img.loading'),
+            $submitButton: $this.parents(':eq(4)').find('.action').find('button.submit'),
             requestCallback: null  // Fill it in in a bit.
         };
 
@@ -48,6 +49,7 @@ formulaEquationPreview.enable = function() {
         // The following acts as a closure of `inputData`.
         var initializeRequest = function() {
             // Show the loading icon.
+            inputData.$submitButton.attr('disabled', 'disabled')
             inputData.$img.css('visibility', 'visible');
 
             // Say we are waiting for request.
