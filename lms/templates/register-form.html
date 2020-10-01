@@ -109,10 +109,8 @@ from student.models import UserProfile
             <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" required aria-required="true" aria-describedby="password-tip"/>
             <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
             <span class="tip tip-input" id="password-tip">
-				<%
-min_length = 8
-%>
-${_("Enter a password with at most {num} characters.").format(num=min_length)}
+				<% min_length = 8 %>
+                ${_("Your password must be at least {num} characters long.").format(num=min_length)}
 			</span>
         </div>
 

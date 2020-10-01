@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-09-30 11:03+0000\n"
-"PO-Revision-Date: 2020-09-30 11:04:32.271375\n"
+"POT-Creation-Date: 2020-09-30 12:31+0000\n"
+"PO-Revision-Date: 2020-09-30 12:31:59.485530\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -42,7 +42,7 @@ msgstr ""
 #: cms/templates/certificates.html:53
 #: cms/templates/group_configurations.html:44
 #: cms/templates/manage_users.html:26 cms/templates/manage_users_lib.html:26
-#: cms/templates/settings.html:51 cms/templates/settings_advanced.html:37
+#: cms/templates/settings.html:52 cms/templates/settings_advanced.html:37
 #: cms/templates/settings_graders.html:42 cms/templates/widgets/header.html:81
 #: cms/templates/widgets/header.html:154
 #: lms/templates/wiki/includes/article_menu.html:57
@@ -94,7 +94,7 @@ msgstr ""
 msgid "Section"
 msgstr ""
 
-#: cms/templates/course_outline.html:155 cms/templates/settings.html:191
+#: cms/templates/course_outline.html:155 cms/templates/settings.html:193
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html:35
 msgid "Course Start Date"
 msgstr ""
@@ -178,7 +178,7 @@ msgstr ""
 #: cms/templates/login.html:44 cms/templates/register.html:32
 #: lms/templates/help_modal.html:99 lms/templates/provider_login.html:45
 #: lms/templates/provider_login.html:46 lms/templates/register-form.html:79
-#: lms/templates/register-form.html:140 lms/templates/register-shib.html:132
+#: lms/templates/register-form.html:138 lms/templates/register-shib.html:132
 #: lms/templates/signup_modal.html:38 lms/templates/signup_modal.html:57
 #: themes/red-theme/cms/templates/login.html:30
 #: themes/stanford-style/lms/templates/register-form.html:79
@@ -193,7 +193,7 @@ msgstr ""
 #: cms/templates/login.html:45 cms/templates/manage_users.html:58
 #: cms/templates/manage_users_lib.html:58 cms/templates/register.html:34
 #: lms/templates/forgot_password_modal.html:34 lms/templates/login.html:250
-#: lms/templates/register-form.html:80 lms/templates/register-form.html:141
+#: lms/templates/register-form.html:80 lms/templates/register-form.html:139
 #: lms/templates/register-shib.html:133
 #: themes/red-theme/cms/templates/login.html:31
 #: themes/stanford-style/lms/templates/register-form.html:80
@@ -219,7 +219,7 @@ msgid "Forgot password?"
 msgstr ""
 
 #: cms/templates/register.html:38 lms/templates/register-form.html:85
-#: lms/templates/register-form.html:157 lms/templates/register-shib.html:142
+#: lms/templates/register-form.html:155 lms/templates/register-shib.html:142
 #: lms/templates/signup_modal.html:47 lms/templates/sysadmin_dashboard.html:78
 #: themes/stanford-style/lms/templates/register-form.html:84
 #: themes/stanford-style/lms/templates/register-form.html:138
@@ -245,62 +245,65 @@ msgstr ""
 #. Translators: This is the placeholder text for a field that asks the user to
 #. pick a username
 #: cms/templates/register.html:46 lms/templates/register-form.html:92
-#: lms/templates/register-form.html:149 lms/templates/register-shib.html:125
+#: lms/templates/register-form.html:147 lms/templates/register-shib.html:125
 #: themes/stanford-style/lms/templates/register-form.html:90
 #: themes/stanford-style/lms/templates/register-form.html:131
 #: themes/stanford-style/lms/templates/register-shib.html:119
 msgid "example: JaneDoe"
 msgstr ""
 
-#: cms/templates/register.html:57 lms/templates/register-form.html:120
+#: cms/templates/register.html:57 lms/templates/register-form.html:118
 msgid "Confirm Password"
 msgstr ""
 
-#: cms/templates/settings.html:63
-#: lms/templates/courseware/course_about.html:271
+#: cms/templates/settings.html:64
 #: lms/templates/courseware/course_about.html:274
 msgid "Basic Information"
 msgstr ""
 
-#: cms/templates/settings.html:89
-#: lms/templates/courseware/course_about.html:210
+#: cms/templates/settings.html:90
+#: lms/templates/courseware/course_about.html:211
 msgid "Course Summary Page"
 msgstr ""
 
-#: cms/templates/settings.html:205
+#: cms/templates/settings.html:207
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html:39
 msgid "Course End Date"
 msgstr ""
 
-#: cms/templates/settings.html:315 lms/templates/preview_menu.html:93
-#: lms/templates/preview_menu.html:147
+#: cms/templates/settings.html:307
+#: lms/templates/courseware/course_about.html:291
+msgid "Course Difficulty"
+msgstr ""
+
+#: cms/templates/settings.html:317 lms/templates/preview_menu.html:103
+#: lms/templates/preview_menu.html:148
 msgid "Course Organizer"
 msgstr ""
 
-#: cms/templates/settings.html:325
-#: lms/templates/courseware/course_about.html:301
+#: cms/templates/settings.html:327
+#: lms/templates/courseware/course_about.html:304
 msgid "Course Category"
 msgstr ""
 
-#: cms/templates/settings.html:335
-#: lms/templates/courseware/course_about.html:314
+#: cms/templates/settings.html:337
+#: lms/templates/courseware/course_about.html:317
 msgid "Course Timetable"
 msgstr ""
 
-#: cms/templates/settings.html:339
-#: lms/templates/courseware/course_about.html:315
+#: cms/templates/settings.html:341
+#: lms/templates/courseware/course_about.html:318
 msgid "{week} week"
 msgid_plural "{week} weeks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: cms/templates/settings.html:373
-#: lms/templates/courseware/course_about.html:235
-#: lms/templates/courseware/course_about.html:288
+#: cms/templates/settings.html:375
+#: lms/templates/courseware/course_about.html:238
 msgid "Course Description"
 msgstr ""
 
-#: cms/templates/settings.html:545
+#: cms/templates/settings.html:547
 #: lms/templates/courseware/program_marketing.html:344
 msgid "Instructors"
 msgstr ""
@@ -695,7 +698,7 @@ msgstr ""
 msgid "reset filters"
 msgstr ""
 
-#: lms/templates/dashboard.html:323
+#: lms/templates/dashboard.html:323 lms/templates/courseware/courses.html:46
 msgid "FILTERS"
 msgstr ""
 
@@ -739,19 +742,19 @@ msgstr ""
 msgid "Course List"
 msgstr ""
 
-#: lms/templates/dashboard.html:390
+#: lms/templates/dashboard.html:390 lms/templates/courseware/courses.html:56
 msgid "Sort By"
 msgstr ""
 
-#: lms/templates/dashboard.html:392
+#: lms/templates/dashboard.html:392 lms/templates/courseware/courses.html:58
 msgid "Default"
 msgstr ""
 
-#: lms/templates/dashboard.html:393
+#: lms/templates/dashboard.html:393 lms/templates/courseware/courses.html:59
 msgid "Alphabetically Ascending"
 msgstr ""
 
-#: lms/templates/dashboard.html:394
+#: lms/templates/dashboard.html:394 lms/templates/courseware/courses.html:60
 msgid "Alphabetically Descending"
 msgstr ""
 
@@ -1436,9 +1439,9 @@ msgstr ""
 #: lms/templates/login.html:249 lms/templates/login.html:256
 #: lms/templates/register-form.html:79 lms/templates/register-form.html:85
 #: lms/templates/register-form.html:91 lms/templates/register-form.html:108
-#: lms/templates/register-form.html:120 lms/templates/register-form.html:140
-#: lms/templates/register-form.html:148 lms/templates/register-form.html:157
-#: lms/templates/register-form.html:275 lms/templates/register-form.html:293
+#: lms/templates/register-form.html:118 lms/templates/register-form.html:138
+#: lms/templates/register-form.html:146 lms/templates/register-form.html:155
+#: lms/templates/register-form.html:273 lms/templates/register-form.html:291
 msgid "required"
 msgstr ""
 
@@ -1737,13 +1740,13 @@ msgstr ""
 msgid "Please complete the following fields to register for an account. "
 msgstr ""
 
-#: lms/templates/register-form.html:88 lms/templates/register-form.html:160
+#: lms/templates/register-form.html:88 lms/templates/register-form.html:158
 #: themes/stanford-style/lms/templates/register-form.html:86
 #: themes/stanford-style/lms/templates/register-form.html:140
 msgid "Your legal name, used for any certificates you earn."
 msgstr ""
 
-#: lms/templates/register-form.html:94 lms/templates/register-form.html:151
+#: lms/templates/register-form.html:94 lms/templates/register-form.html:149
 #: lms/templates/register-shib.html:126
 #: themes/stanford-style/lms/templates/register-form.html:91
 #: themes/stanford-style/lms/templates/register-form.html:132
@@ -1751,105 +1754,105 @@ msgstr ""
 msgid "Will be shown in any discussions or forums you participate in"
 msgstr ""
 
-#: lms/templates/register-form.html:94 lms/templates/register-form.html:151
+#: lms/templates/register-form.html:94 lms/templates/register-form.html:149
 #: themes/stanford-style/lms/templates/register-form.html:91
 #: themes/stanford-style/lms/templates/register-form.html:132
 msgid "cannot be changed later"
 msgstr ""
 
-#: lms/templates/register-form.html:115
-msgid "Enter a password with at most {num} characters."
+#: lms/templates/register-form.html:113
+msgid "Your password must be at least {num} characters long."
 msgstr ""
 
-#: lms/templates/register-form.html:131
+#: lms/templates/register-form.html:129
 #: themes/stanford-style/lms/templates/register-form.html:114
 msgid "Welcome {username}"
 msgstr ""
 
-#: lms/templates/register-form.html:132
+#: lms/templates/register-form.html:130
 #: themes/stanford-style/lms/templates/register-form.html:115
 msgid "Enter a Public Display Name:"
 msgstr ""
 
-#: lms/templates/register-form.html:148
+#: lms/templates/register-form.html:146
 #: themes/stanford-style/lms/templates/register-form.html:130
 msgid "Public Display Name"
 msgstr ""
 
-#: lms/templates/register-form.html:171
+#: lms/templates/register-form.html:169
 #: themes/stanford-style/lms/templates/register-form.html:151
 msgid "Additional Personal Information"
 msgstr ""
 
-#: lms/templates/register-form.html:176
+#: lms/templates/register-form.html:174
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html:88
 #: lms/templates/shoppingcart/receipt.html:249
 #: themes/stanford-style/lms/templates/register-form.html:156
 msgid "City"
 msgstr ""
 
-#: lms/templates/register-form.html:177
+#: lms/templates/register-form.html:175
 #: themes/stanford-style/lms/templates/register-form.html:157
 msgid "example: New York"
 msgstr ""
 
-#: lms/templates/register-form.html:183
+#: lms/templates/register-form.html:181
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html:103
 #: lms/templates/shoppingcart/receipt.html:273
 #: themes/stanford-style/lms/templates/register-form.html:163
 msgid "Country"
 msgstr ""
 
-#: lms/templates/register-form.html:185
+#: lms/templates/register-form.html:183
 msgid "Poland"
 msgstr ""
 
-#: lms/templates/register-form.html:196
+#: lms/templates/register-form.html:194
 #: themes/stanford-style/lms/templates/register-form.html:176
 msgid "Highest Level of Education Completed"
 msgstr ""
 
-#: lms/templates/register-form.html:212 lms/templates/signup_modal.html:88
+#: lms/templates/register-form.html:210 lms/templates/signup_modal.html:88
 #: themes/stanford-style/lms/templates/register-form.html:189
 msgid "Gender"
 msgstr ""
 
-#: lms/templates/register-form.html:227
+#: lms/templates/register-form.html:225
 #: themes/stanford-style/lms/templates/register-form.html:202
 msgid "Year of Birth"
 msgstr ""
 
-#: lms/templates/register-form.html:247
+#: lms/templates/register-form.html:245
 #: themes/stanford-style/lms/templates/register-form.html:219
 msgid "Mailing Address"
 msgstr ""
 
-#: lms/templates/register-form.html:254
+#: lms/templates/register-form.html:252
 #: themes/stanford-style/lms/templates/register-form.html:226
 msgid "Please share with us your reasons for registering with {platform_name}"
 msgstr ""
 
-#: lms/templates/register-form.html:264 lms/templates/register-shib.html:153
+#: lms/templates/register-form.html:262 lms/templates/register-shib.html:153
 #: themes/stanford-style/lms/templates/register-form.html:234
 #: themes/stanford-style/lms/templates/register-shib.html:147
 msgid "Account Acknowledgements"
 msgstr ""
 
-#: lms/templates/register-form.html:273 lms/templates/register-shib.html:162
+#: lms/templates/register-form.html:271 lms/templates/register-shib.html:162
 #: lms/templates/signup_modal.html:130
 #: themes/stanford-style/lms/templates/register-form.html:242
 #: themes/stanford-style/lms/templates/register-shib.html:156
 msgid "I agree to the {link_start}Terms of Service{link_end}"
 msgstr ""
 
-#: lms/templates/register-form.html:291 lms/templates/register-shib.html:174
+#: lms/templates/register-form.html:289 lms/templates/register-shib.html:174
 #: lms/templates/signup_modal.html:138
 #: themes/stanford-style/lms/templates/register-form.html:254
 #: themes/stanford-style/lms/templates/register-shib.html:168
 msgid "I agree to the {link_start}Honor Code{link_end}"
 msgstr ""
 
-#: lms/templates/register-form.html:306 lms/templates/register.html:16
+#: lms/templates/register-form.html:304 lms/templates/register.html:16
 #: lms/templates/register.html:115
 #: lms/templates/header/navbar-not-authenticated.html:59
 #: lms/templates/header/navbar-not-authenticated.html:62
@@ -3733,8 +3736,8 @@ msgstr ""
 
 #: lms/templates/courseware/accordion.html:46
 #: lms/templates/courseware/progress.html:191
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:97
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:242
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:99
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:247
 msgid "due {date}"
 msgstr ""
 
@@ -3743,8 +3746,8 @@ msgid "{section_format} due {{date}}"
 msgstr ""
 
 #: lms/templates/courseware/accordion.html:69
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:114
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:281
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:116
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:286
 msgid "This content is graded"
 msgstr ""
 
@@ -3908,8 +3911,16 @@ msgid "Show Earlier Course Updates"
 msgstr ""
 
 #: lms/templates/courseware/courses.html:36
-#: lms/templates/courseware/courses.html:73
+#: lms/templates/courseware/courses.html:66
 msgid "List of Courses"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:61
+msgid "Oldest to Newest "
+msgstr ""
+
+#: lms/templates/courseware/courses.html:62
+msgid "Newest to Oldest"
 msgstr ""
 
 #: lms/templates/courseware/courseware-chromeless.html:12
@@ -9819,7 +9830,7 @@ msgid "Table of Contents"
 msgstr ""
 
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:191
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:166
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:171
 msgid "Expand All"
 msgstr ""
 
@@ -9827,13 +9838,13 @@ msgstr ""
 msgid "Update,"
 msgstr ""
 
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:65
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:209
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:67
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:214
 msgid "Prerequisite: "
 msgstr ""
 
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:99
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:244
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:101
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:249
 msgid "{subsection_format} due {{date}}"
 msgstr ""
 
