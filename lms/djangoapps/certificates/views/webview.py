@@ -486,22 +486,24 @@ def render_cert_by_uuid(request, certificate_uuid):
     except GeneratedCertificate.DoesNotExist:
         raise Http404
 
-def render_pdf_cert_by_uuid(request, certificate_uuid):
-    output =  render_cert_by_uuid(request, certificate_uuid)
+def render_pdf(html,return_content=False):
 
-    soup = BeautifulSoup(output.content, "html.parser")
+    soup = BeautifulSoup(html, "html.parser")
 
+    """
+    information: replace all url from navoica.pl to internal ip address due to incorrect routing from inside host
+    """
     if settings.INTERNAL_HOST_IP:
         for img in soup.find_all(['img', 'script']):
             if img.get("src", None):
                 img_src = img['src']
                 o = urlparse(img_src)
-                img['src'] = o._replace(netloc=settings.INTERNAL_HOST_IP,scheme="http").geturl()
+                img['src'] = o._replace(netloc=settings.INTERNAL_HOST_IP, scheme="http").geturl()
 
         for href in soup.find_all('link'):
             link_href = href['href']
             o = urlparse(link_href)
-            href['href'] = o._replace(netloc=settings.INTERNAL_HOST_IP,scheme="http").geturl()
+            href['href'] = o._replace(netloc=settings.INTERNAL_HOST_IP, scheme="http").geturl()
 
     multipart_form_data = {
         'file': ('index.html', unicode(soup)),
@@ -513,18 +515,22 @@ def render_pdf_cert_by_uuid(request, certificate_uuid):
     }
 
     # $ docker run --rm -p 3000:3000 thecodingmachine/gotenberg:5
-    r = requests.post('http://gotenberg:3000/convert/html', files=multipart_form_data)
+    r = requests.post(settings.GOTENBERG_URL + 'convert/html', files=multipart_form_data)
 
     filename = "certyfikat.pdf"
 
     if (r.status_code == 200):
+        if return_content:
+            return r.content
         response = HttpResponse(r, content_type='application/pdf')
         response['Content-Disposition'] = 'attachment; filename="' + filename + '"'
         return response
 
+    return ""
 
-    return output
-
+def render_pdf_cert_by_uuid(request, certificate_uuid):
+    output = render_cert_by_uuid(request, certificate_uuid)
+    return render_pdf(html=output.content)
 
 @handle_500(
     template_path="certificates/server-error.html",
@@ -665,27 +671,7 @@ def render_html_view(request, user_id, course_id):
 @login_required
 def render_pdf_view(request, user_id, course_id):
     output = render_html_view(request, user_id, course_id)
-
-    multipart_form_data = {
-        'file': ('index.html', output.content),
-        'marginTop': (None, '0',),
-        'marginBottom': (None, '0',),
-        'marginLeft': (None, '0',),
-        'marginRight': (None, '0',),
-        'landscape': (None, 'true',),
-    }
-
-    # $ docker run --rm -p 3000:3000 thecodingmachine/gotenberg:5
-    r = requests.post('http://gotenberg:3000/convert/html', files=multipart_form_data)
-
-    filename = "certyfikat.pdf"
-
-    if (r.status_code == 200):
-        response = HttpResponse(r, content_type='application/pdf')
-        response['Content-Disposition'] = 'attachment; filename="' + filename + '"'
-        return response
-
-    return output
+    return render_pdf(html=output.content)
 
 def _get_catalog_data_for_course(course_key):
     """
