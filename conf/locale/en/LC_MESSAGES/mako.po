@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-01 16:30+0000\n"
-"PO-Revision-Date: 2020-10-01 16:31:27.794196\n"
+"POT-Creation-Date: 2020-10-02 07:51+0000\n"
+"PO-Revision-Date: 2020-10-02 07:51:43.217430\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -394,7 +394,7 @@ msgstr ""
 msgid "Updates"
 msgstr ""
 
-#: cms/templates/widgets/header.html:198 lms/templates/header/header.html:176
+#: cms/templates/widgets/header.html:198 lms/templates/header/header.html:177
 #: lms/templates/header/navbar-not-authenticated.html:95
 #: lms/templates/header/user_dropdown.html:36
 #: lms/templates/navigation/navigation.html:72
@@ -803,10 +803,10 @@ msgstr ""
 msgid "Search Your Courses"
 msgstr ""
 
-#: lms/templates/dashboard.html:528 lms/templates/index.html:22
+#: lms/templates/dashboard.html:528 lms/templates/index.html:23
 #: lms/templates/api_admin/catalogs/search.html:23
 #: lms/templates/courseware/courseware.html:146
-#: lms/templates/edxnotes/edxnotes.html:39 lms/templates/header/header.html:74
+#: lms/templates/edxnotes/edxnotes.html:39 lms/templates/header/header.html:75
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html:48
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:172
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html:49
@@ -1260,45 +1260,50 @@ msgstr ""
 msgid "Free online courses offered by Polish universities and institutions"
 msgstr ""
 
-#: lms/templates/index.html:21 lms/templates/header/header.html:72
-msgid "What do you want to learn?"
+#: lms/templates/index.html:21 lms/templates/index.html:23
+#: lms/templates/header/header.html:72 lms/templates/header/header.html:75
+msgid "Search courses"
 msgstr ""
 
-#: lms/templates/index.html:35
+#: lms/templates/index.html:22 lms/templates/header/header.html:73
+msgid "Search courses..."
+msgstr ""
+
+#: lms/templates/index.html:36
 msgid "About Navoica"
 msgstr ""
 
-#: lms/templates/index.html:44
+#: lms/templates/index.html:45
 msgid "Wide range of online courses "
 msgstr ""
 
-#: lms/templates/index.html:45
+#: lms/templates/index.html:46
 msgid ""
 "A broad spectrum of courses with varying levels of expertise. Everyone can "
 "find an interesting course for themselves."
 msgstr ""
 
-#: lms/templates/index.html:55
+#: lms/templates/index.html:56
 msgid "Publicly available learning platform"
 msgstr ""
 
-#: lms/templates/index.html:56
+#: lms/templates/index.html:57
 msgid ""
 "We reach anyone who wants to learn \\u2013 regardless of their age or place "
 "of residence."
 msgstr ""
 
-#: lms/templates/index.html:66
+#: lms/templates/index.html:67
 msgid "Network of universities and institutions "
 msgstr ""
 
-#: lms/templates/index.html:67
+#: lms/templates/index.html:68
 msgid ""
 "New online learning ecosystem brings together: universities, research "
 "institutes, businesses and NGOs. Find out more about Navoica"
 msgstr ""
 
-#: lms/templates/index.html:74
+#: lms/templates/index.html:75
 msgid "Find out more about Navoica"
 msgstr ""
 
@@ -2237,7 +2242,7 @@ msgid "Textbook Navigation"
 msgstr ""
 
 #: lms/templates/staticbook.html:120
-#: lms/templates/courseware/gradebook.html:131
+#: lms/templates/courseware/gradebook.html:132
 msgid "Page"
 msgstr ""
 
@@ -4043,26 +4048,27 @@ msgid "Gradebook"
 msgstr ""
 
 #: lms/templates/courseware/gradebook.html:52
+#: lms/templates/courseware/gradebook.html:53
 msgid "Search students"
 msgstr ""
 
-#: lms/templates/courseware/gradebook.html:92
-#: lms/templates/courseware/gradebook.html:117
+#: lms/templates/courseware/gradebook.html:93
+#: lms/templates/courseware/gradebook.html:118
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html:30
 #: lms/templates/shoppingcart/billing_details.html:41
 #: lms/templates/shoppingcart/receipt.html:358
 msgid "Total"
 msgstr ""
 
-#: lms/templates/courseware/gradebook.html:127
+#: lms/templates/courseware/gradebook.html:128
 msgid "previous page"
 msgstr ""
 
-#: lms/templates/courseware/gradebook.html:131
+#: lms/templates/courseware/gradebook.html:132
 msgid "of"
 msgstr ""
 
-#: lms/templates/courseware/gradebook.html:136
+#: lms/templates/courseware/gradebook.html:137
 msgid "next page"
 msgstr ""
 
@@ -5806,11 +5812,11 @@ msgstr ""
 msgid "Navoica logo"
 msgstr ""
 
-#: lms/templates/header/header.html:96
+#: lms/templates/header/header.html:97
 msgid "My Account"
 msgstr ""
 
-#: lms/templates/header/header.html:132
+#: lms/templates/header/header.html:133
 #: lms/templates/navigation/navigation.html:93
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
