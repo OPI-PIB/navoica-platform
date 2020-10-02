@@ -6,7 +6,7 @@
 	    </figure>
 
 	   	<% if (is_new) { %>
-			<span class="course-card-label f-12">Nowy kurs</span>
+			<span class="course-card-label">Nowy kurs</span>
 		<% }  else { %>
 			<span class="sr"> <%= gettext("Course") %></span>
 		<% } %>	

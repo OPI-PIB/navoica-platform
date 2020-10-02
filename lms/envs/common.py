@@ -2312,9 +2312,6 @@ INSTALLED_APPS = [
     'poll',
 
     'xblock_jupyter_graded',
-
-    # Navoica API
-    'navoica_api',
 ]
 
 ######################### CSRF #########################################

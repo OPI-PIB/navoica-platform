@@ -207,7 +207,6 @@ def _footer_navigation_links():
             #("about", "http://navoica.edu.pl/", _("About the project")),
             ("faq", "/faq", _("FAQ")),
             ("legend", "/legend", _("Legend_title")),
-            ("accessibility", "/accessibility", _("Accessibility Statement")),
             #("partners", marketing_link("PARTNERS"), _("Partners")),
             #("cooperation", marketing_link("COOPERATION"), _("Cooperation")),
             #("enterprise", marketing_link("ENTERPRISE"),

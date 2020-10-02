@@ -72,15 +72,3 @@ if course is not None:
 </div>
 </div>
 %endif
-
-<div class="container d-flex justify-content-center align-items-center my-3 w-100">
-    <div class="course-progress d-flex justify-content-center align-items-center flex-wrap w-75" data-user="${request.user}" data-courseid="${course.id}">
-        <p class="w-100">${_('Course progress')}: <strong><span class="js-percentage-progress"></span> ${_('finished lessons')}</strong></p>
-        <div class="w-100 d-flex justify-content-around">
-            <div class="w-100 progress d-flex justify-content-start align-items-center">
-                <div class="progress-bar mx-2" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
-            </div>
-            <span class="align-self-center ml-1 js-percentage-progress"></span>
-        </div>
-    </div>
-</div>

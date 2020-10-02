@@ -115,7 +115,7 @@ from six import string_types
   })(this)
   </script>
 
-  <script type="module" src="${static.url('js/course_info.js')}"></script>
+  <script src="${static.url('js/course_info.js')}"></script>
 </%block>
 
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
@@ -151,7 +151,6 @@ from six import string_types
                 <a href="${reg_href}" class="btn btn-lg btn-primary btn-icon ${href_class} ">${_("Take the course")}</a>
               %endif
 		  % endif
-
 %if user.is_authenticated() and registered:
 
 %elif in_cart:
@@ -207,9 +206,9 @@ from six import string_types
 
         </article>
 	<aside>
-	  <div id="courses-list-header">
-        <h2 class="custom-h2">${_("Course Summary Page")}</h2>
-      </div>
+	  <header id="courses-list-header">
+                <h2 id="h2">${_("Course Summary Page")}</h2>
+            </header>
 	    % if get_course_about_section(request, course, "video"):
 		<div class="embed-responsive embed-responsive-16by9">
 		  ${get_course_about_section(request, course, "video")}
@@ -220,8 +219,6 @@ from six import string_types
 		</div>
 	    % endif
 	</aside>
-          </div>
-        </div>
       </header>
 
 
@@ -234,9 +231,9 @@ from six import string_types
         <main class="container">
 
                 <article id="results">
-      <div id="courses-list-header">
-         <h2 class="custom-h2">${_("Course Description")}</h2>
-      </div>
+      <header id="courses-list-header">
+         <h2 id="h2">${_("Course Description")}</h2>
+      </header>
       ${get_course_about_section(request, course, "overview")}
       % if get_course_about_section(request, course, "course_staff_extended"):
         <h2>${_(" Instructor list ")}</h2>
@@ -245,11 +242,11 @@ from six import string_types
       </article>
 
 <aside class="sidebar">
-       <div id="courses-list-header">
-         <h2 class="custom-h2">
-            <span class="d-none d-md-block">${_("Organizer")}</span>
-         </h2>
-       </div>
+             <header id="courses-list-header">
+         <h2 id="h2">
+                <span class="d-none d-md-block">${_("Organizer")}</span>
+              </h2>
+       </header>
        <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
                         <div class="organizer-logo">
                             <p class="mt-2 mx-auto text-center">
@@ -269,11 +266,11 @@ from six import string_types
                         </div>
                     </div>
 <br/>
-            <div id="courses-list-header">
-                <h2 class="custom-h2">
+            <header id="courses-list-header">
+                <h2 id="h2">
                     <span class="d-none d-md-block">${_("Basic Information")}</span>
                 </h2>
-            </div>
+            </header>
               <a href="#basic-data-facets" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none mb-2">${_("Basic Information")}</a>
               <div id="basic-data-facets" class="collapse">
             <ul class="course-details list-group list-group-flush">
@@ -288,7 +285,7 @@ from six import string_types
             if (a[0]==course.difficulty):
               course_difficulty = a[1]
           %>
-                  <h6>${_("Course Difficulty")}:</h6>
+                  <h6>${_("Course Description")}:</h6>
                   <div>${course_difficulty}</div>
                 </div>
               </li>
@@ -440,7 +437,7 @@ from six import string_types
                 </div>
                 <div class="course-details-content">
                   <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-                  <h6>${_("Organizer")}:</h6>
+                  <h6>${_("Organizer")}:</h5>
       <div>${course_organize}</div>
                 </div>
               </li>
@@ -492,7 +489,7 @@ from six import string_types
       ## For now, ocw links are the only thing that goes in additional resources
       % if get_course_about_section(request, course, "ocw_links"):
       <div class="additional-resources">
-        <div>
+        <header>
           <h1>${_("Additional Resources")}</h1>
       </div>
 
@@ -524,7 +521,7 @@ from six import string_types
         <input name="submit" type="submit" value="${pgettext('self','enroll')}">
       </div>
     </form>
-  </div>
+  </di
 %endif
 
 <%include file="../video_modal.html" />
