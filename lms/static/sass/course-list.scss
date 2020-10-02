@@ -38,6 +38,145 @@
 
 $darkcyan : teal;
 
+$select-color: #fff;
+$select-background: teal;
+$select-width: 100%;
+$select-height: calc(1.625em + 0.75rem + 2px);
+$select-border: #ced4da;
+$color-navoica: #e41d37;
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ced4da;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: teal;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: teal;
+}
+
+#sorting-form .select-options, #sorting-form .select-styled {
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.2rem;
+  text-transform: none;
+  &:focus {
+    outline: 2px black solid;
+    outline-offset: 2px;
+  }  
+}
+
+button.select-styled {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+
+
+[role=option] {
+  cursor: pointer;
+}
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  color: $select-color;
+  width: $select-width;
+  height: $select-height;
+  border: 1px solid #ced4da;
+  background: #fff;
+}
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  color: #212529;
+  padding: 8px 15px;
+  transition: all 0.2s ease-in;
+  &:after {
+    content:"";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: #212529 transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+  &:hover {
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+  }
+  &:focus {
+    outline: solid 2px #919191;
+    outline-offset: 2px;
+  }  
+  &:active, &.active {
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+    &:after {
+      top: 9px;
+      border-color: transparent transparent #212529 transparent;
+    }
+  }
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  list-style: none;
+  color: #212529;
+  background-color: #fff;
+  border: 1px solid $select-border;
+  box-shadow: 0 10px 13px 5px rgba(71,79,89,0.9);
+  border-top: 0;
+  max-height: 11rem;
+
+  li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid #ced4da;
+    transition: all 0.15s ease-in;
+    &:hover, &:focus {
+      color: #fff;
+      background: teal;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
+
+
 .text-darkred {
   color: #a11326;
 }
@@ -13562,11 +13701,6 @@ span.complete-checkmark.fa.fa-check {
 
 .dropdown a.btn { padding:0; }
 
-//language
-#language-settings-form {
-  display: none
-}
-
 .search-facets-lists {
   .custom-select{
     font-size: 87.5%;
@@ -14083,3 +14217,166 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
     font-weight: 700;
   }
 }
+
+/** SELECT LANGUAGE **/
+#language-settings-form {
+  align-items: center;
+  display: flex;
+  min-width: 8em;
+  transition: unset;
+  .btn i {
+    margin-right: .5rem;
+    margin-left: .2rem;
+  }
+  label {
+//    height: inherit;
+    margin: 0;
+  }
+  .select {
+    border: none;
+    height: calc(1.25em + 0.75rem + 2px);
+    color: transparent;
+  
+    .select-options {
+      min-width: 8em;
+      box-shadow: unset;
+      right: unset;
+      left: unset;
+    }
+    li {
+      font-size: 1.1rem;
+      padding: 0.5rem 0.75rem;
+      border-left: 5px transparent solid;
+      font-weight: 600;
+      text-indent: 0;
+      border-top: unset;
+      transition: unset;
+      &:hover, &:focus {
+        color: #000000;
+        text-decoration: none;
+        background-color: #eeeeee;
+        border-left: 5px #b8162b solid;
+      }
+    }
+  }
+  .custom-select {
+    color: transparent;
+    border-color: transparent;
+    background: transparent;
+    padding: 0;
+  }
+ .select-styled {
+    border:1px solid $color-navoica;
+    line-height: 1.7143;
+    text-align: center;
+    &::after {
+      display: inline-block;
+      margin-left: 0.255em;
+      vertical-align: 0.255em;
+      content: "";
+      border-top: 0.3em solid;
+      border-right: 0.3em solid transparent;
+      border-bottom: 0;
+      border-left: 0.3em solid transparent;
+      position: unset;
+    }
+    &:focus{
+      outline: 2px black solid;
+      outline-offset: 1px;
+      box-shadow: unset;
+    } 
+    &:hover {
+      box-shadow: unset;
+      border-color: $select-color transparent transparent transparent;
+    } 
+    &:hover::after {
+      border-color: $select-color transparent transparent transparent;
+    }
+  }  
+  .select-styled.active{
+    box-shadow: unset;
+    transition: all 0.2s ease-in;
+    &::after {
+      top: 10px;
+      border-color: transparent transparent $select-color transparent;
+      border-top: 0;
+      border-right: 0.3em solid transparent;
+      border-bottom: 0.3em solid;
+      border-left: 0.3em solid transparent;
+    }
+    &:hover::after {
+      border-color: transparent transparent $select-color transparent;
+    }
+  }  
+
+  .select-hidden {
+    display: none;
+    padding: 0;
+  }
+}
+
+@media (max-width: 959px) {
+  #language-settings-form {
+    display: none;
+    border: none;
+    height: inherit;
+    color: transparent;
+  }  
+  #mooc-my-mooc-menu {
+    label {
+      height: inherit;
+    }
+    .select {
+      border:none;
+    }
+    .select-options {
+      width: auto;
+      display: block !important;
+      border: none;
+      box-shadow: none;
+      position: unset;
+    }
+    li {
+      text-indent: 0;
+      border: none;
+      border-left: 5px transparent solid;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+      &:hover,  &:focus{
+        color: #000000;
+        text-decoration: none;
+        background-color: #eeeeee;
+        border-left: 5px #b8162b solid;
+      }
+    }
+    .select-styled {
+      display: none;
+    }  
+    .select-hidden {
+      display: none;
+      width: 0;
+    }
+  } 
+}  
+
+@media (max-width: 1279.98px) {
+  #language-settings-form{
+    .select-styled {
+      font-size: 1rem;
+      margin-right: 1rem;
+      position: unset;
+    } 
+    .select {
+      height: calc(1.4em + 0.75rem + 2px);
+      position: unset;
+    } 
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #navbarResponsive .language-menu{
+    display: none !important;
+  }
+}  
+
