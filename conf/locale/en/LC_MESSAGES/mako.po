@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-02 07:51+0000\n"
-"PO-Revision-Date: 2020-10-02 07:51:43.217430\n"
+"POT-Creation-Date: 2020-10-02 12:08+0000\n"
+"PO-Revision-Date: 2020-10-02 12:08:54.058903\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -995,7 +995,7 @@ msgstr ""
 #: lms/templates/footer.html:22 lms/templates/footer.html:56
 #: lms/templates/footer.html:60 lms/templates/footer.html:64
 #: lms/templates/footer.html:68 lms/templates/login-sidebar.html:49
-#: lms/templates/static_templates/accessibility.html:107
+#: lms/templates/static_templates/accessibility.html:126
 msgid "open in a new window"
 msgstr ""
 
@@ -8345,15 +8345,15 @@ msgid ""
 "been moved at {email}."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:5
+#: lms/templates/static_templates/accessibility.html:7
 msgid "Accessibility Statement"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:12
+#: lms/templates/static_templates/accessibility.html:14
 msgid "Declaration of Availability of the NAVOICA Educational Platform"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:19
+#: lms/templates/static_templates/accessibility.html:21
 msgid ""
 "The owner of the NAVOICA Educational Platform is the Ministry of Science and"
 " Higher Education headquartered in Warsaw, Poland, at the following address:"
@@ -8361,77 +8361,67 @@ msgid ""
 "Processing Institute (OPI PIB)"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:20
+#: lms/templates/static_templates/accessibility.html:23
 msgid ""
-"The National Information Processing Institute undertakes to make its website"
-" available under the Act of 4 April 2019 on digital accessibility of "
-"websites and mobile applications of public entities. The declaration of "
-"availability applies to the "
+"{span_start}The National Information Processing Institute{span_end} "
+"undertakes to make its website available under the Act of 4 April 2019 on "
+"digital accessibility of websites and mobile applications of public "
+"entities. The declaration of availability applies to the "
+"{link_start}Navoica.pl{link_end} website."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:20
-msgid " website."
-msgstr ""
-
-#: lms/templates/static_templates/accessibility.html:22
+#: lms/templates/static_templates/accessibility.html:32
 msgid "Date of publication of the website: "
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:23
+#: lms/templates/static_templates/accessibility.html:33
 msgid "Date of the last major update: "
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:25
+#: lms/templates/static_templates/accessibility.html:35
 msgid "Compliance with the Act"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:26
-msgid "The website "
-msgstr ""
-
-#: lms/templates/static_templates/accessibility.html:26
-msgid "partially complies "
-msgstr ""
-
-#: lms/templates/static_templates/accessibility.html:26
+#: lms/templates/static_templates/accessibility.html:36
 msgid ""
-"with the Act on digital accessibility of websites and mobile applications of"
-" public entities due to non-compliance or exclusions listed below."
+"The website {strong_start}partially complies{strong_end} with the Act on "
+"digital accessibility of websites and mobile applications of public entities"
+" due to non-compliance or exclusions listed below."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:28
+#: lms/templates/static_templates/accessibility.html:42
 msgid "Unavailable content"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:31
+#: lms/templates/static_templates/accessibility.html:45
 msgid "contrast of some elements is inadequate,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:34
+#: lms/templates/static_templates/accessibility.html:48
 msgid "some forms have no labels,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:37
+#: lms/templates/static_templates/accessibility.html:51
 msgid "focus is invisible,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:40
+#: lms/templates/static_templates/accessibility.html:54
 msgid "alternative texts for some pictures may be missing,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:43
+#: lms/templates/static_templates/accessibility.html:57
 msgid "not all video materials are subtitled,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:46
+#: lms/templates/static_templates/accessibility.html:60
 msgid "subtitles cannot be downloaded,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:49
+#: lms/templates/static_templates/accessibility.html:63
 msgid "audiodescription is unavailable."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:54
+#: lms/templates/static_templates/accessibility.html:68
 msgid ""
 "The platform is being modified to make it more available. With enhancements "
 "introduced on a regular basis, the availability will be gradually improving "
@@ -8441,103 +8431,103 @@ msgid ""
 "solution allowing to make the courses available electronically."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:58
+#: lms/templates/static_templates/accessibility.html:72
 msgid "Exclusions"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:61
+#: lms/templates/static_templates/accessibility.html:75
 msgid "Courses that have not been created by OPI PIB,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:64
+#: lms/templates/static_templates/accessibility.html:78
 msgid "Multimedia published before "
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:68
+#: lms/templates/static_templates/accessibility.html:82
 msgid "Preparation of the Declaration of Availability"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:70
+#: lms/templates/static_templates/accessibility.html:84
 msgid "The Declaration was made on: "
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:71
+#: lms/templates/static_templates/accessibility.html:85
 msgid "The Declaration was last reviewed and updated on: "
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:74
+#: lms/templates/static_templates/accessibility.html:88
 msgid ""
 "The Declaration was made on the basis of a self-assessment of a public "
 "entity."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:77
+#: lms/templates/static_templates/accessibility.html:91
 msgid "Feedback and contact data"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:79
+#: lms/templates/static_templates/accessibility.html:93
 msgid "Person responsible for handling applications and queries: "
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:80
-#: lms/templates/static_templates/accessibility.html:104
+#: lms/templates/static_templates/accessibility.html:94
+#: lms/templates/static_templates/accessibility.html:118
 msgid "E-mail: "
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:81
-#: lms/templates/static_templates/accessibility.html:105
+#: lms/templates/static_templates/accessibility.html:95
+#: lms/templates/static_templates/accessibility.html:119
 msgid "Telephone: "
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:81
+#: lms/templates/static_templates/accessibility.html:95
 msgid ""
 " (please note that by dialing this number you will reach our reception desk "
 "and that e-mail is our preferred contact method)"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:84
+#: lms/templates/static_templates/accessibility.html:98
 msgid "Each person has the right to:"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:86
+#: lms/templates/static_templates/accessibility.html:100
 msgid ""
 "report any problems with digital access to the website or to any element "
 "thereof,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:87
+#: lms/templates/static_templates/accessibility.html:101
 msgid ""
 "make a request for digital access to the website or to any element thereof,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:88
+#: lms/templates/static_templates/accessibility.html:102
 msgid ""
 "make a request to make unavailable information available in an alternative "
 "form."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:90
+#: lms/templates/static_templates/accessibility.html:104
 msgid "All requests must include:"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:92
+#: lms/templates/static_templates/accessibility.html:106
 msgid "contact data of a person making a request,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:93
+#: lms/templates/static_templates/accessibility.html:107
 msgid ""
 "information about the webpage or any element thereof to which the request "
 "pertains,"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:94
+#: lms/templates/static_templates/accessibility.html:108
 msgid ""
 "indication on the preferred form of making information available if the "
 "request concerns making unavailable information available in an alternative "
 "form."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:96
+#: lms/templates/static_templates/accessibility.html:110
 msgid ""
 "All requests should be handled as soon as possible, but not later than "
 "within 7 days. If it proves impossible to make the website or elements "
@@ -8546,50 +8536,48 @@ msgid ""
 " after the request."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:98
+#: lms/templates/static_templates/accessibility.html:112
 msgid "Complaints and appeals"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:99
+#: lms/templates/static_templates/accessibility.html:113
 msgid ""
 "Complaints and appeals pertaining to failure to meet the said deadlines and "
 "requests may be filed by mail or e-mail with the supervising authority to "
 "the following address:"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:101
+#: lms/templates/static_templates/accessibility.html:115
 msgid ""
 "Supervising authority: Director of the National Information Processing "
 "Institute"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:102
+#: lms/templates/static_templates/accessibility.html:116
 msgid "Address: al. Niepodleg\\u0142o\\u015bci 188 B"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:103
+#: lms/templates/static_templates/accessibility.html:117
 msgid "00-608 Warsaw, Poland"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:107
-msgid "Your complaint can also be filed with the "
+#: lms/templates/static_templates/accessibility.html:122
+msgid ""
+"Your complaint can also be filed with the {link_start}Commissioner for Human"
+" Rights{link_end}."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:107
-msgid "Rzecznika Praw Obywatelskich"
-msgstr ""
-
-#: lms/templates/static_templates/accessibility.html:109
+#: lms/templates/static_templates/accessibility.html:129
 msgid "Architectural accessibility"
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:110
+#: lms/templates/static_templates/accessibility.html:130
 msgid ""
 "National Information Processing Institute, al. Niepodleg\\u0142o\\u015bci "
 "188B, 00-608 Warsaw, Poland."
 msgstr ""
 
-#: lms/templates/static_templates/accessibility.html:111
+#: lms/templates/static_templates/accessibility.html:131
 msgid ""
 "The entrance to the building is accessed via steps or a wheelchair ramp. The"
 " reception desk is located opposite the front door. Entering other parts of "

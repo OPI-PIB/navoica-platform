@@ -1,5 +1,7 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
+<%! from django.utils.translation import ugettext as _ 
+from openedx.core.djangolib.markup import HTML, Text
+%>
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("Accessibility Statement")}</%block>
@@ -17,13 +19,25 @@
         <div id="content">
             <main class="container d-block">
                 <p class="text-justify">${_("The owner of the NAVOICA Educational Platform is the Ministry of Science and Higher Education headquartered in Warsaw, Poland, at the following address: ul. Wspólna 1/3. The operator of the Platform is the National Information Processing Institute (OPI PIB)")}.</p>
-                <p class="text-justify" id="a11y-wstep"><span id="a11y-podmiot">${_("The National Information Processing Institute undertakes to make its website available under the Act of 4 April 2019 on digital accessibility of websites and mobile applications of public entities. The declaration of availability applies to the ")} <a id="a11y-url" href="https://www.navoica.pl">Navoica.pl</a>${_(" website.")}</p>
+
+                <p class="text-justify" id="a11y-wstep">${Text(_("{span_start}The National Information Processing Institute{span_end} undertakes to make its website available under the Act of 4 April 2019 on digital accessibility of websites and mobile applications of public entities. The declaration of availability applies to the {link_start}Navoica.pl{link_end} website.")).format(
+                            link_start=HTML('<a id="a11y-url" href="https://www.navoica.pl">'),
+                            link_end=HTML('</a>'),
+                            span_start=HTML('<span id="a11y-podmiot">'),
+                            span_end=HTML('</span>'),    
+                        )}
+                </p>
+
                 <ul>
                     <li>${_("Date of publication of the website: ")}<time id="a11y-data-publikacja" datetime="2018-10-30">2018-10-30</time></li>
                     <li>${_("Date of the last major update: ")}<time id="a11y-data-aktualizacja" datetime="2020-09-21">2020-09-21</time></li>
                 </ul>
                 <h2>${_("Compliance with the Act")}</h2>
-                <p class="text-justify">${_("The website ")}<strong id="a11y-status">${_("partially complies ")}</strong>${_("with the Act on digital accessibility of websites and mobile applications of public entities due to non-compliance or exclusions listed below.")}</p>
+                <p class="text-justify">${Text(_("The website {strong_start}partially complies{strong_end} with the Act on digital accessibility of websites and mobile applications of public entities due to non-compliance or exclusions listed below.")).format(
+                    strong_start=HTML('<strong id="a11y-status">'),
+                    strong_end=HTML('</strong>'),
+                )}
+                </p>
 
                 <h3>${_("Unavailable content")}</h3>
                 <ul>
@@ -104,7 +118,13 @@
                     <li>${_("E-mail: ")}<a href="mailto:opi@opi.org.pl">opi@opi.org.pl</a></li>
                     <li>${_("Telephone: ")}<a href="tel:+48225701400">+48 22 570 14 00</a></li>
                 </ul>
-                <p class="text-justify">${_("Your complaint can also be filed with the ")}<a href="https://www.rpo.gov.pl/content/jak-zglosic-sie-do-rzecznika-praw-obywatelskich" target="_blank">${_("Rzecznika Praw Obywatelskich")}<span class="sr">${_("open in a new window")}</span></a>.</p>
+                <p class="text-justify">
+                    ${Text(_("Your complaint can also be filed with the {link_start}Commissioner for Human Rights{link_end}.")).format(
+                        link_start=HTML('<a href="https://www.rpo.gov.pl/content/jak-zglosic-sie-do-rzecznika-praw-obywatelskich" target="_blank">'),
+                        link_end=HTML('</a>'),
+                        )}
+                    <span class="sr">${_("open in a new window")}</span>
+                </p>
 
                 <h2 id="a11y-architektura">${_("Architectural accessibility")}</h2>
                 <p class="text-justify">${_("National Information Processing Institute, al. Niepodległości 188B, 00-608 Warsaw, Poland.")}</p>
