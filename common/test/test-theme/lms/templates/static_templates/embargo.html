@@ -9,7 +9,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <!-- This is a test template to test embargo message override for theming. -->
 <main id="main" aria-label="Content" tabindex="-1">
-    <section class="outside-app">
+    <section class="outside-app" id="skip-main">
     <p>
     ${Text(_("Our system indicates that you are trying to access this {platform_name} "
         "course from a country or region currently subject to U.S. economic and trade sanctions." 
