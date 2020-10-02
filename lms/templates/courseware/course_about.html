@@ -120,7 +120,7 @@ from six import string_types
 </%block>
 
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
-
+<section id="skip-main">
   <%block name="course_about_header">
 
       <%
@@ -231,7 +231,7 @@ from six import string_types
   </%block>
   <%block name="course_about_details">
     % if (course.organizer and get_course_about_section(request, course, "overview") and course.difficulty and course.course_category and course.timetable and get_course_about_section(request, course, "effort")):
-	<div id="content" class="border-top">
+	<div id="content" class="border-top bg-white">
 <main class="container">
 
                 <article id="results">
@@ -479,6 +479,7 @@ from six import string_types
 
 
     </%block>
+</section>
 
       <%block name="course_about_reviews_tool">
       ## Course reviews tool

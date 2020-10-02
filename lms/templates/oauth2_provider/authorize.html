@@ -8,7 +8,7 @@
 {% block body %}
     <main id="main" aria-label="Content" tabindex="-1">
       <section class="container authorize {{ selected_tab }}" id="authorize-content">
-        <div class="wrapper-authorize">
+        <div class="wrapper-authorize" id="skip-main">
             <div class="block-center">
                 {% if not error %}
                     <form id="authorizationForm" method="post">

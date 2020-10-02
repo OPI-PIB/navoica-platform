@@ -4611,6 +4611,10 @@ input {
   flex: 1 1 auto;
 }
 
+h3.card-title {
+  font-weight: 700;
+}
+
 .card-title {
   flex: 1 1 auto;
   min-height: 3rem;
@@ -7835,13 +7839,41 @@ button.bg-dark {
 
 .sr-only-focusable {
   &:active, &:focus {
-    position: static;
     width: auto;
     height: auto;
     overflow: visible;
     clip: auto;
     white-space: normal;
   }
+}
+
+.nav-skip {
+  font-size: 0.875rem;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -600px;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 15px 10px;
+}
+
+.nav-skip:focus, .nav-skip:active {
+  left: 50%;
+  margin-left: -6.5em;
+  margin-top: 0;
+  padding: 10px 0.5em;
+  text-align: center;
+  position: absolute;
+  width: 12em;
+  z-index: 1050;
+  top: 0;
+  background-color: #161616;
+  opacity: 0.8;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
 }
 
 .shadow-sm {
