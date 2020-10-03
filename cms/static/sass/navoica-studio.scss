@@ -1273,6 +1273,12 @@ div#edit_textbook_error {
   @extend %btn-small;
 }
 
+div[id^="oa_response_block"] .response__submission__content .submission__answer__part__prompt__copy label {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
 .openassessment {
   .step__header, .staff__grade__header, .action, .staff-assessment__display__header {
     display: unset !important;

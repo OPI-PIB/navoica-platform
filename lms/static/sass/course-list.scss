@@ -73,7 +73,7 @@ $color-navoica: #e41d37;
   &:focus {
     outline: 2px black solid;
     outline-offset: 2px;
-  }  
+  }
 }
 
 button.select-styled {
@@ -131,7 +131,7 @@ button.select-styled {
   &:focus {
     outline: solid 2px #919191;
     outline-offset: 2px;
-  }  
+  }
   &:active, &.active {
     box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
     &:after {
@@ -14236,7 +14236,7 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
     border: none;
     height: calc(1.25em + 0.75rem + 2px);
     color: transparent;
-  
+
     .select-options {
       min-width: 8em;
       box-shadow: unset;
@@ -14284,15 +14284,15 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
       outline: 2px black solid;
       outline-offset: 1px;
       box-shadow: unset;
-    } 
+    }
     &:hover {
       box-shadow: unset;
       border-color: $select-color transparent transparent transparent;
-    } 
+    }
     &:hover::after {
       border-color: $select-color transparent transparent transparent;
     }
-  }  
+  }
   .select-styled.active{
     box-shadow: unset;
     transition: all 0.2s ease-in;
@@ -14307,7 +14307,7 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
     &:hover::after {
       border-color: transparent transparent $select-color transparent;
     }
-  }  
+  }
 
   .select-hidden {
     display: none;
@@ -14321,7 +14321,7 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
     border: none;
     height: inherit;
     color: transparent;
-  }  
+  }
   #mooc-my-mooc-menu {
     label {
       height: inherit;
@@ -14352,13 +14352,13 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
     }
     .select-styled {
       display: none;
-    }  
+    }
     .select-hidden {
       display: none;
       width: 0;
     }
-  } 
-}  
+  }
+}
 
 @media (max-width: 1279.98px) {
   #language-settings-form{
@@ -14366,11 +14366,11 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
       font-size: 1rem;
       margin-right: 1rem;
       position: unset;
-    } 
+    }
     .select {
       height: calc(1.4em + 0.75rem + 2px);
       position: unset;
-    } 
+    }
   }
 }
 
@@ -14378,5 +14378,11 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   #navbarResponsive .language-menu{
     display: none !important;
   }
-}  
+}
 
+
+div[id^="oa_response_block"] .response__submission__content .submission__answer__part__prompt__copy label {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
