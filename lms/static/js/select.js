@@ -15,19 +15,19 @@ $(document).ready(function() {
 
     var $mobileMenu = $('.mobile-language');
 
-    $this.wrap('<div class="select d-md-flex flex-wrap language-menu"></div>');
+  //  $this.wrap('<div class="select d-md-flex flex-wrap language-menu"></div>');
 
-    $this.after('<button type="button" class="btn btn-outline-primary btn-sm select-styled language-button" aria-haspopup="listbox" aria-expanded="false"></button>');
+   // $this.after('<button type="button" class="btn btn-outline-primary btn-sm select-styled language-button" aria-haspopup="listbox" aria-expanded="false"></button>');
 
-  var $languageButton = $('.language-button');
+ // var $languageButton = $('.language-button');
   
-var $globeIcon = $('<i class="fas fa-globe" aria-hidden="true"></i>').appendTo($languageButton);
+//var $globeIcon = $('<i class="fas fa-globe" aria-hidden="true"></i>').appendTo($languageButton);
     
-    $globeIcon.after($('#settings-language-value option:selected').text());
+   // $globeIcon.after($('#settings-language-value option:selected').text());
 
     var $styledSelect = $this.next('button.select-styled');
 
- var $list = $('<ul />', {
+/* var $list = $('<ul />', {
      'class': 'select-options',
       'tabindex': '0',
       'role': 'listbox',
@@ -43,7 +43,7 @@ var $globeIcon = $('<i class="fas fa-globe" aria-hidden="true"></i>').appendTo($
         'aria-selected': 'false',
         class: $this.children('option').eq(i).val()
       }).appendTo($list);
-    }
+    }*/
 
     for (var i = 0; i < numberOfOptions; i++) {
       $('<div />', {
@@ -57,10 +57,10 @@ var $globeIcon = $('<i class="fas fa-globe" aria-hidden="true"></i>').appendTo($
       }).insertAfter($mobileMenu);
     }
 
-    $('li.en-us').attr("lang", 'en');
-    $('li.pl').attr("lang", 'pl-PL');
+  //  $('li.en-us').attr("lang", 'en');
+  //  $('li.pl').attr("lang", 'pl-PL');
 
-    var $listItems = $list.children('li');
+  //  var $listItems = $list.children('li');
 
     $styledSelect.click(function (e) {
       e.stopPropagation();
@@ -102,7 +102,7 @@ var $globeIcon = $('<i class="fas fa-globe" aria-hidden="true"></i>').appendTo($
       return false;
     });
 
-        $('.select-options li').on('click', function(){
+    $('.select-options li').on('click', function(){
       var value = $(this).attr("rel");
       $('#settings-language-value option:selected').removeAttr('selected');
       $('#settings-language-value option:contains(' + value +')').attr('selected="selected"');
