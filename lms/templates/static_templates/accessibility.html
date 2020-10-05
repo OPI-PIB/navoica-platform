@@ -1,5 +1,5 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ 
+<%! from django.utils.translation import ugettext as _
 from openedx.core.djangolib.markup import HTML, Text
 %>
 <%inherit file="../main.html" />
@@ -18,13 +18,13 @@ from openedx.core.djangolib.markup import HTML, Text
 
         <div id="content">
             <main class="container d-block">
-                <p class="text-justify">${_("The owner of the NAVOICA Educational Platform is the Ministry of Science and Higher Education headquartered in Warsaw, Poland, at the following address: ul. Wspólna 1/3. The operator of the Platform is the National Information Processing Institute (OPI PIB)")}.</p>
+                <p class="text-justify">${_("The owner of the NAVOICA Educational Platform is the Ministry of Science and Higher Education headquartered in Warsaw, Poland, at the following address: ul. Wspolna 1/3. The operator of the Platform is the National Information Processing Institute (OPI PIB)")}.</p>
 
                 <p class="text-justify" id="a11y-wstep">${Text(_("{span_start}The National Information Processing Institute{span_end} undertakes to make its website available under the Act of 4 April 2019 on digital accessibility of websites and mobile applications of public entities. The declaration of availability applies to the {link_start}Navoica.pl{link_end} website.")).format(
                             link_start=HTML('<a id="a11y-url" href="https://www.navoica.pl">'),
                             link_end=HTML('</a>'),
                             span_start=HTML('<span id="a11y-podmiot">'),
-                            span_end=HTML('</span>'),    
+                            span_end=HTML('</span>'),
                         )}
                 </p>
 
@@ -42,22 +42,22 @@ from openedx.core.djangolib.markup import HTML, Text
                 <h3>${_("Unavailable content")}</h3>
                 <ul>
                     <li>
-                        ${_("contrast of some elements is inadequate,")} 
+                        ${_("contrast of some elements is inadequate,")}
                     </li>
                     <li>
-                        ${_("some forms have no labels,")} 
+                        ${_("some forms have no labels,")}
                     </li>
                     <li>
                         ${_("focus is invisible,")}
                     </li>
                     <li>
-                        ${_("alternative texts for some pictures may be missing,")} 
+                        ${_("alternative texts for some pictures may be missing,")}
                     </li>
                     <li>
-                        ${_("not all video materials are subtitled,")} 
+                        ${_("not all video materials are subtitled,")}
                     </li>
                     <li>
-                        ${_("subtitles cannot be downloaded,")} 
+                        ${_("subtitles cannot be downloaded,")}
                     </li>
                     <li>
                         ${_("audiodescription is unavailable.")}
@@ -72,7 +72,7 @@ from openedx.core.djangolib.markup import HTML, Text
                 <h3>${_("Exclusions")}</h3>
                 <ul>
                     <li>
-                        ${_("Courses that have not been created by OPI PIB,")} 
+                        ${_("Courses that have not been created by OPI PIB,")}
                     </li>
                     <li>
                         ${_("Multimedia published before ")}<time datetime="2020-09-23">2020-09-23</time>.
@@ -113,7 +113,7 @@ from openedx.core.djangolib.markup import HTML, Text
                 <p class="text-justify">${_("Complaints and appeals pertaining to failure to meet the said deadlines and requests may be filed by mail or e-mail with the supervising authority to the following address:")}</p>
                 <ul>
                     <li>${_("Supervising authority: Director of the National Information Processing Institute")}</li>
-                    <li>${_("Address: al. Niepodległości 188 B")}<br />
+                    <li>${_("Address: al. Niepodleglosci 188 B")}<br />
                     ${_("00-608 Warsaw, Poland")}</li>
                     <li>${_("E-mail: ")}<a href="mailto:opi@opi.org.pl">opi@opi.org.pl</a></li>
                     <li>${_("Telephone: ")}<a href="tel:+48225701400">+48 22 570 14 00</a></li>
@@ -127,7 +127,7 @@ from openedx.core.djangolib.markup import HTML, Text
                 </p>
 
                 <h2 id="a11y-architektura">${_("Architectural accessibility")}</h2>
-                <p class="text-justify">${_("National Information Processing Institute, al. Niepodległości 188B, 00-608 Warsaw, Poland.")}</p>
+                <p class="text-justify">${_("National Information Processing Institute, al. Niepodleglosci 188B, 00-608 Warsaw, Poland.")}</p>
                 <p class="text-justify">${_("The entrance to the building is accessed via steps or a wheelchair ramp. The reception desk is located opposite the front door. Entering other parts of the building is not possible without a door opening badge. Wheelchair users can access only the corridor and the rooms on the ground floor. There is no elevator in the building. The disabled toilet is located on the ground floor, opposite the staircase. There are 2 parking places for the disabled in front of the building. Assistance dogs are allowed in all rooms of the building.")}</p>
             </main>
         </div>
