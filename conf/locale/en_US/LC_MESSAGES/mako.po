@@ -6,14 +6,15 @@
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-09-02 06:39+0000\n"
+"POT-Creation-Date: 2020-10-02 12:08+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
-"Last-Translator: krystianlygas <krystian.lygas@gmail.com>, 2020\n"
+"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,14 +40,14 @@ msgstr "Page not found"
 msgid "Content"
 msgstr "Content"
 
-#: cms/templates/base.html:68 lms/templates/main.html:188
+#: cms/templates/base.html:68 lms/templates/main.html:193
 msgid "Skip to main content"
 msgstr "Skip to main content"
 
 #: cms/templates/certificates.html:53
 #: cms/templates/group_configurations.html:44
 #: cms/templates/manage_users.html:26 cms/templates/manage_users_lib.html:26
-#: cms/templates/settings.html:51 cms/templates/settings_advanced.html:37
+#: cms/templates/settings.html:52 cms/templates/settings_advanced.html:37
 #: cms/templates/settings_graders.html:42 cms/templates/widgets/header.html:81
 #: cms/templates/widgets/header.html:154
 #: lms/templates/wiki/includes/article_menu.html:57
@@ -98,7 +99,7 @@ msgstr "Dismiss"
 msgid "Section"
 msgstr "Section"
 
-#: cms/templates/course_outline.html:155 cms/templates/settings.html:191
+#: cms/templates/course_outline.html:155 cms/templates/settings.html:193
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html:35
 msgid "Course Start Date"
 msgstr "Course Start Date"
@@ -106,7 +107,7 @@ msgstr "Course Start Date"
 #: cms/templates/error.html:13
 #: lms/templates/static_templates/server-error.html:9
 msgid "Internal Server Error"
-msgstr ""
+msgstr "Internal Server Error"
 
 #: cms/templates/group_configurations.html:89
 #: cms/templates/group_configurations.html:99
@@ -148,9 +149,10 @@ msgstr "Course Number:"
 msgid "Course Run:"
 msgstr "Course Run:"
 
-#: cms/templates/index.html:316 lms/templates/sysadmin_dashboard.html:59
+#: cms/templates/index.html:316 lms/templates/dashboard.html:359
+#: lms/templates/sysadmin_dashboard.html:59
 #: lms/templates/sysadmin_dashboard_gitlogs.html:116
-#: lms/templates/courseware/courses.html:31
+#: lms/templates/courseware/courses.html:47
 #: lms/templates/header/navbar-not-authenticated.html:88
 #: lms/templates/header/user_dropdown.html:29
 #: lms/templates/navigation/navbar-authenticated.html:22
@@ -182,8 +184,9 @@ msgstr "Required Information to Sign In to {studio_name}"
 #: cms/templates/login.html:44 cms/templates/register.html:32
 #: lms/templates/help_modal.html:99 lms/templates/provider_login.html:45
 #: lms/templates/provider_login.html:46 lms/templates/register-form.html:79
-#: lms/templates/register-form.html:140 lms/templates/register-shib.html:132
-#: lms/templates/signup_modal.html:38 lms/templates/signup_modal.html:57
+#: lms/templates/register-form.html:138 lms/templates/register-shib.html:132
+#: lms/templates/register.html:78 lms/templates/signup_modal.html:38
+#: lms/templates/signup_modal.html:57
 #: themes/red-theme/cms/templates/login.html:30
 #: themes/stanford-style/lms/templates/register-form.html:79
 #: themes/stanford-style/lms/templates/register-form.html:123
@@ -196,8 +199,8 @@ msgstr "E-mail"
 #. address.
 #: cms/templates/login.html:45 cms/templates/manage_users.html:58
 #: cms/templates/manage_users_lib.html:58 cms/templates/register.html:34
-#: lms/templates/forgot_password_modal.html:34 lms/templates/login.html:250
-#: lms/templates/register-form.html:80 lms/templates/register-form.html:141
+#: lms/templates/forgot_password_modal.html:32 lms/templates/login.html:250
+#: lms/templates/register-form.html:80 lms/templates/register-form.html:139
 #: lms/templates/register-shib.html:133
 #: themes/red-theme/cms/templates/login.html:31
 #: themes/stanford-style/lms/templates/register-form.html:80
@@ -209,8 +212,8 @@ msgstr "example: username@domain.com"
 #: cms/templates/login.html:49 cms/templates/register.html:51
 #: lms/templates/login.html:256 lms/templates/provider_login.html:47
 #: lms/templates/provider_login.html:48 lms/templates/register-form.html:100
-#: lms/templates/register-form.html:108 lms/templates/signup_modal.html:41
-#: lms/templates/sysadmin_dashboard.html:82
+#: lms/templates/register-form.html:108 lms/templates/register.html:93
+#: lms/templates/signup_modal.html:41 lms/templates/sysadmin_dashboard.html:82
 #: themes/red-theme/cms/templates/login.html:35
 #: themes/stanford-style/lms/templates/register-form.html:97
 #: themes/stanford-style/lms/templates/register-form.html:104
@@ -223,8 +226,9 @@ msgid "Forgot password?"
 msgstr "Forgot password?"
 
 #: cms/templates/register.html:38 lms/templates/register-form.html:85
-#: lms/templates/register-form.html:157 lms/templates/register-shib.html:142
-#: lms/templates/signup_modal.html:47 lms/templates/sysadmin_dashboard.html:78
+#: lms/templates/register-form.html:155 lms/templates/register-shib.html:142
+#: lms/templates/register.html:83 lms/templates/signup_modal.html:47
+#: lms/templates/sysadmin_dashboard.html:78
 #: themes/stanford-style/lms/templates/register-form.html:84
 #: themes/stanford-style/lms/templates/register-form.html:138
 #: themes/stanford-style/lms/templates/register-shib.html:136
@@ -239,8 +243,8 @@ msgid "example: Jane Doe"
 msgstr "example: Jane Doe"
 
 #: cms/templates/register.html:44 lms/templates/register-form.html:91
-#: lms/templates/register-shib.html:124 lms/templates/signup_modal.html:44
-#: lms/templates/signup_modal.html:53
+#: lms/templates/register-shib.html:124 lms/templates/register.html:88
+#: lms/templates/signup_modal.html:44 lms/templates/signup_modal.html:53
 #: themes/stanford-style/lms/templates/register-form.html:89
 #: themes/stanford-style/lms/templates/register-shib.html:118
 msgid "Public Username"
@@ -249,65 +253,76 @@ msgstr "Public Username"
 #. Translators: This is the placeholder text for a field that asks the user to
 #. pick a username
 #: cms/templates/register.html:46 lms/templates/register-form.html:92
-#: lms/templates/register-form.html:149 lms/templates/register-shib.html:125
+#: lms/templates/register-form.html:147 lms/templates/register-shib.html:125
 #: themes/stanford-style/lms/templates/register-form.html:90
 #: themes/stanford-style/lms/templates/register-form.html:131
 #: themes/stanford-style/lms/templates/register-shib.html:119
 msgid "example: JaneDoe"
 msgstr "example: JaneDoe"
 
-#: cms/templates/register.html:57 lms/templates/register-form.html:120
+#: cms/templates/register.html:57 lms/templates/register-form.html:118
+#: lms/templates/register.html:98
 msgid "Confirm Password"
 msgstr "Confirm Password"
 
-#: cms/templates/settings.html:63
-#: lms/templates/courseware/course_about.html:262
-#: lms/templates/courseware/course_about.html:265
+#: cms/templates/settings.html:64
+#: lms/templates/courseware/course_about.html:275
+#: lms/templates/courseware/course_about.html:278
 msgid "Basic Information"
-msgstr ""
+msgstr "Basic Information"
 
-#: cms/templates/settings.html:89
-#: lms/templates/courseware/course_about.html:207
+#: cms/templates/settings.html:90
+#: lms/templates/courseware/course_about.html:212
 msgid "Course Summary Page"
-msgstr ""
+msgstr "Course Summary Page"
 
-#: cms/templates/settings.html:205
+#: cms/templates/settings.html:207
 #: lms/templates/instructor/instructor_dashboard_2/executive_summary.html:39
 msgid "Course End Date"
 msgstr "Course End Date"
 
-#: cms/templates/settings.html:315 lms/templates/preview_menu.html:91
-#: lms/templates/preview_menu.html:137
+#: cms/templates/settings.html:307
+#: lms/templates/courseware/course_about.html:292
+msgid "Course Difficulty"
+msgstr "Course Difficulty"
+
+#: cms/templates/settings.html:317 lms/templates/preview_menu.html:102
+#: lms/templates/preview_menu.html:148
 msgid "Course Organizer"
 msgstr "Course Organizer"
 
-#: cms/templates/settings.html:325
-#: lms/templates/courseware/course_about.html:292
-msgid "Course Category"
-msgstr ""
-
-#: cms/templates/settings.html:335
+#: cms/templates/settings.html:327
 #: lms/templates/courseware/course_about.html:305
-msgid "Course Timetable"
-msgstr ""
+msgid "Course Category"
+msgstr "Course Category"
 
-#: cms/templates/settings.html:339
-#: lms/templates/courseware/course_about.html:306
+#: cms/templates/settings.html:337
+#: lms/templates/courseware/course_about.html:318
+msgid "Course Timetable"
+msgstr "Course Timetable"
+
+#: cms/templates/settings.html:341
+#: lms/templates/courseware/course_about.html:319
 msgid "{week} week"
 msgid_plural "{week} weeks"
 msgstr[0] "{week} week"
 msgstr[1] "{week} weeks"
 
-#: cms/templates/settings.html:373
-#: lms/templates/courseware/course_about.html:232
-#: lms/templates/courseware/course_about.html:279
+#: cms/templates/settings.html:375
+#: lms/templates/courseware/course_about.html:239
 msgid "Course Description"
-msgstr ""
+msgstr "Course Description"
 
-#: cms/templates/settings.html:545
+#: cms/templates/settings.html:547
 #: lms/templates/courseware/program_marketing.html:344
 msgid "Instructors"
 msgstr "Instructors"
+
+#: cms/templates/settings.html:582 lms/templates/dashboard.html:66
+#: lms/templates/dashboard.html:70 lms/templates/courseware/courses.html:36
+#: lms/templates/courseware/courses.html:40
+msgid "None"
+msgstr "None"
 
 #: cms/templates/studio_xblock_wrapper.html:131
 #: lms/templates/help_modal.html:293 lms/templates/help_modal.html:302
@@ -338,7 +353,7 @@ msgstr "Course ID"
 msgid "Reset"
 msgstr "Reset"
 
-#: cms/templates/widgets/footer.html:22
+#: cms/templates/widgets/footer.html:22 lms/templates/register.html:103
 #: lms/templates/static_templates/tos.html:5
 #: themes/red-theme/lms/templates/footer.html:96
 #: themes/stanford-style/lms/templates/footer.html:18
@@ -371,7 +386,7 @@ msgstr "Powered by Open edX"
 
 #: cms/templates/widgets/header.html:46 cms/templates/widgets/header.html:50
 #: cms/templates/widgets/header.html:81 cms/templates/widgets/header.html:149
-#: lms/templates/course.html:21 lms/templates/help_modal.html:173
+#: lms/templates/course.html:19 lms/templates/help_modal.html:173
 #: lms/templates/courseware/courseware.html:158
 #: lms/templates/courseware/courseware.html:172
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html:21
@@ -384,7 +399,7 @@ msgstr "Course"
 msgid "Updates"
 msgstr "Updates"
 
-#: cms/templates/widgets/header.html:198 lms/templates/header/header.html:176
+#: cms/templates/widgets/header.html:198 lms/templates/header/header.html:177
 #: lms/templates/header/navbar-not-authenticated.html:95
 #: lms/templates/header/user_dropdown.html:36
 #: lms/templates/navigation/navigation.html:72
@@ -661,7 +676,7 @@ msgstr "Bookmark this page"
 msgid "You do not have access to this dependency module."
 msgstr "You do not have access to this dependency module."
 
-#: lms/templates/course.html:30 lms/templates/course2.html:27
+#: lms/templates/course.html:28 lms/templates/course2.html:27
 msgid "Starts"
 msgstr "Starts"
 
@@ -691,108 +706,120 @@ msgstr "View all Courses"
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: lms/templates/dashboard.html:317
+#: lms/templates/dashboard.html:336 lms/templates/courseware/courses.html:64
 msgid "Filter By"
 msgstr "Filter By"
 
-#: lms/templates/dashboard.html:318
+#: lms/templates/dashboard.html:337
 msgid "Filters"
 msgstr "Filters"
 
-#: lms/templates/dashboard.html:319
-msgid "Reset Filters"
-msgstr "Reset Filters"
-
-#: lms/templates/dashboard.html:319
-msgid "reset filters"
-msgstr "reset filters"
-
-#: lms/templates/dashboard.html:323
+#: lms/templates/dashboard.html:341 lms/templates/courseware/courses.html:65
+#: lms/templates/courseware/courses.html:68
 msgid "FILTERS"
 msgstr "FILTERS"
 
-#: lms/templates/dashboard.html:331
+#: lms/templates/dashboard.html:349
 msgid "Course Status"
 msgstr "Course Status"
 
-#: lms/templates/dashboard.html:338 lms/templates/courseware/progress.html:143
+#: lms/templates/dashboard.html:356 lms/templates/courseware/progress.html:143
 msgid "Upcoming"
 msgstr "Upcoming"
 
-#: lms/templates/dashboard.html:341
+#: lms/templates/dashboard.html:359
 msgid "Starting Soon"
 msgstr "Starting Soon"
 
-#: lms/templates/dashboard.html:348
+#: lms/templates/dashboard.html:360 lms/templates/dashboard.html:369
+#: lms/templates/dashboard.html:370 lms/templates/dashboard.html:379
+#: lms/templates/dashboard.html:380 lms/templates/dashboard.html:389
+#: lms/templates/dashboard.html:390
+msgid "Found courses"
+msgstr "Found courses"
+
+#: lms/templates/dashboard.html:366
 msgid "Now"
 msgstr "Now"
 
-#: lms/templates/dashboard.html:351
+#: lms/templates/dashboard.html:369
 msgid "Current"
 msgstr "Current"
 
-#: lms/templates/dashboard.html:358
+#: lms/templates/dashboard.html:376
 msgid "Ended"
 msgstr "Ended"
 
-#: lms/templates/dashboard.html:361
+#: lms/templates/dashboard.html:379
 msgid "Archived"
 msgstr "Archived"
 
-#: lms/templates/dashboard.html:368
+#: lms/templates/dashboard.html:386
 msgid "Certificated"
 msgstr "Certificated"
 
-#: lms/templates/dashboard.html:371
+#: lms/templates/dashboard.html:389
 msgid "My certificates"
 msgstr "My certificates"
 
-#: lms/templates/dashboard.html:388
+#: lms/templates/dashboard.html:396
+msgid "Reset Filters"
+msgstr "Reset Filters"
+
+#: lms/templates/dashboard.html:396
+msgid "reset filters"
+msgstr "reset filters"
+
+#: lms/templates/dashboard.html:404
 msgid "Course List"
 msgstr "Course List"
 
-#: lms/templates/dashboard.html:390
+#: lms/templates/dashboard.html:406 lms/templates/courseware/courses.html:84
 msgid "Sort By"
 msgstr "Sort By"
 
-#: lms/templates/dashboard.html:392
+#: lms/templates/dashboard.html:407 lms/templates/courseware/courses.html:85
+msgid "Sorted course list by"
+msgstr "Sorted course list by"
+
+#: lms/templates/dashboard.html:409 lms/templates/courseware/courses.html:87
 msgid "Default"
 msgstr "Default"
 
-#: lms/templates/dashboard.html:393
+#: lms/templates/dashboard.html:410 lms/templates/courseware/courses.html:88
 msgid "Alphabetically Ascending"
 msgstr "Alphabetically Ascending"
 
-#: lms/templates/dashboard.html:394
+#: lms/templates/dashboard.html:411 lms/templates/courseware/courses.html:89
 msgid "Alphabetically Descending"
 msgstr "Alphabetically Descending"
 
-#: lms/templates/dashboard.html:468
+#: lms/templates/dashboard.html:485
 #: themes/edx.org/lms/templates/dashboard.html:213
 msgid "You are not enrolled in any courses yet."
 msgstr "You are not enrolled in any courses yet."
 
-#: lms/templates/dashboard.html:472
+#: lms/templates/dashboard.html:489
 #: lms/templates/navigation/navbar-authenticated.html:16
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html:32
 #: themes/edx.org/lms/templates/dashboard.html:217
 msgid "Explore courses"
 msgstr "Explore courses"
 
-#: lms/templates/dashboard.html:481
+#: lms/templates/dashboard.html:498
 #: themes/edx.org/lms/templates/dashboard.html:225
 msgid "Course-loading errors"
 msgstr "Course-loading errors"
 
-#: lms/templates/dashboard.html:507
+#: lms/templates/dashboard.html:525
 #: themes/edx.org/lms/templates/dashboard.html:251
 msgid "Search Your Courses"
 msgstr "Search Your Courses"
 
-#: lms/templates/dashboard.html:510 lms/templates/index.html:22
+#: lms/templates/dashboard.html:528 lms/templates/index.html:23
 #: lms/templates/api_admin/catalogs/search.html:23
 #: lms/templates/courseware/courseware.html:146
-#: lms/templates/edxnotes/edxnotes.html:39 lms/templates/header/header.html:74
+#: lms/templates/edxnotes/edxnotes.html:39 lms/templates/header/header.html:75
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html:48
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:172
 #: openedx/features/course_search/templates/course_search/course-search-fragment.html:49
@@ -801,27 +828,27 @@ msgstr "Search Your Courses"
 msgid "Search"
 msgstr "Search"
 
-#: lms/templates/dashboard.html:513
+#: lms/templates/dashboard.html:531
 #: lms/templates/courseware/courseware.html:147
 #: themes/edx.org/lms/templates/dashboard.html:257
 msgid "Clear search"
 msgstr "Clear search"
 
-#: lms/templates/dashboard.html:525
+#: lms/templates/dashboard.html:543
 #: themes/edx.org/lms/templates/dashboard.html:285
 msgid "Account Status Info"
 msgstr "Account Status Info"
 
-#: lms/templates/dashboard.html:532
+#: lms/templates/dashboard.html:550
 #: themes/edx.org/lms/templates/dashboard.html:292
 msgid "Order History"
 msgstr "Order History"
 
 #. Translators: this is a control to allow users to exit out of this modal
 #. interface (a menu or piece of UI that takes the full focus of the screen)
-#: lms/templates/dashboard.html:556 lms/templates/dashboard.html:589
+#: lms/templates/dashboard.html:574 lms/templates/dashboard.html:607
 #: lms/templates/forgot_password_modal.html:12
-#: lms/templates/forgot_password_modal.html:16 lms/templates/header.html:16
+#: lms/templates/forgot_password_modal.html:16 lms/templates/header.html:18
 #: lms/templates/help_modal.html:28 lms/templates/signup_modal.html:17
 #: lms/templates/staff_problem_info.html:125
 #: lms/templates/staff_problem_info.html:155
@@ -841,7 +868,7 @@ msgstr "Order History"
 msgid "Close"
 msgstr "Close"
 
-#: lms/templates/dashboard.html:562
+#: lms/templates/dashboard.html:580
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:219
 #: themes/edx.org/lms/templates/dashboard.html:320
 msgid "Email Settings for {course_number}"
@@ -849,7 +876,7 @@ msgstr "Email Settings for {course_number}"
 
 #. Translators: this text gives status on if the modal interface (a menu or
 #. piece of UI that takes the full focus of the screen) is open or not
-#: lms/templates/dashboard.html:565
+#: lms/templates/dashboard.html:583
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:22
 #: lms/templates/modal/_modal-settings-language.html:22
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:222
@@ -859,29 +886,29 @@ msgstr "Email Settings for {course_number}"
 msgid "window open"
 msgstr "window open"
 
-#: lms/templates/dashboard.html:573
+#: lms/templates/dashboard.html:591
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:242
 #: themes/edx.org/lms/templates/dashboard.html:331
 msgid "Receive course emails"
 msgstr "Receive course emails"
 
-#: lms/templates/dashboard.html:575
+#: lms/templates/dashboard.html:593
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:247
 #: themes/edx.org/lms/templates/dashboard.html:333
 msgid "Save Settings"
 msgstr "Save Settings"
 
-#: lms/templates/dashboard.html:584
+#: lms/templates/dashboard.html:602
 msgid "Unenroll from Course"
 msgstr "Unenroll from Course"
 
-#: lms/templates/dashboard.html:598
+#: lms/templates/dashboard.html:616
 msgid "Are you sure you want to unenroll from"
 msgstr "Are you sure you want to unenroll from"
 
-#: lms/templates/dashboard.html:614 lms/templates/ccx/enrollment.html:58
-#: lms/templates/dashboard/_dashboard_course_listing.html:185
-#: lms/templates/dashboard/_dashboard_course_listing.html:197
+#: lms/templates/dashboard.html:632 lms/templates/ccx/enrollment.html:58
+#: lms/templates/dashboard/_dashboard_course_listing.html:202
+#: lms/templates/dashboard/_dashboard_course_listing.html:214
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html:42
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html:29
 #: themes/edx.org/lms/templates/dashboard.html:366
@@ -924,7 +951,7 @@ msgid "You should Register before trying to access the Unit"
 msgstr "You should Register before trying to access the Unit"
 
 #: lms/templates/enroll_staff.html:34
-#: lms/templates/courseware/course_about.html:510
+#: lms/templates/courseware/course_about.html:512
 msgctxt "self"
 msgid "Enroll"
 msgstr "Enroll"
@@ -977,13 +1004,14 @@ msgstr ""
 "Polish MOOC platform offering free of charge online courses for every "
 "registered user."
 
-#: lms/templates/footer.html:21 lms/templates/login-sidebar.html:47
+#: lms/templates/footer.html:21 lms/templates/login-sidebar.html:48
 msgid "Navoica page on Facebook"
 msgstr "Strona Navoica na Facebooku"
 
-#: lms/templates/footer.html:22 lms/templates/footer.html:50
-#: lms/templates/footer.html:54 lms/templates/footer.html:58
-#: lms/templates/footer.html:62 lms/templates/login-sidebar.html:49
+#: lms/templates/footer.html:22 lms/templates/footer.html:56
+#: lms/templates/footer.html:60 lms/templates/footer.html:64
+#: lms/templates/footer.html:68 lms/templates/login-sidebar.html:49
+#: lms/templates/static_templates/accessibility.html:126
 msgid "open in a new window"
 msgstr "open in a new window"
 
@@ -1003,25 +1031,25 @@ msgstr "Terms of use"
 msgid "Honor code "
 msgstr "Honor code "
 
-#: lms/templates/footer.html:49
+#: lms/templates/footer.html:55
 msgid "Ministry of Science and Higher Education"
 msgstr "Ministerstwo Nauki i Szkolnictwa Wyższego"
 
-#: lms/templates/footer.html:53
+#: lms/templates/footer.html:59
 msgid "The Conference of Rectors of Academic Schools in Poland"
 msgstr "Konferencja Rektorów Akademickich Szkół Polskich "
 
-#: lms/templates/footer.html:57
+#: lms/templates/footer.html:63
 msgid "The Young Science Foundation"
-msgstr "Fundacja Młodej Nauki"
+msgstr "Foundation of Young Science"
 
-#: lms/templates/footer.html:61
+#: lms/templates/footer.html:67
 msgid ""
 "National Information Processing Institute \\u2013 National Research "
 "Institute"
 msgstr "Ośrodek Przetwarzania Informacji \\u2013 Państwowy Instytut Badawczy"
 
-#: lms/templates/footer.html:66
+#: lms/templates/footer.html:72
 msgid "All rights reserved  "
 msgstr "All rights reserved  "
 
@@ -1037,35 +1065,24 @@ msgstr ""
 "Please enter your e-mail address below, and we will e-mail instructions for "
 "setting a new password."
 
-#: lms/templates/forgot_password_modal.html:30 lms/templates/login.html:246
-#: lms/templates/register-form.html:73 lms/templates/register-shib.html:115
-#: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html:30
-#: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html:26
-#: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html:31
-#: lms/templates/instructor/instructor_dashboard_2/invalidate_registration_code_modal.html:28
-#: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html:30
-#: themes/stanford-style/lms/templates/register-form.html:73
-#: themes/stanford-style/lms/templates/register-shib.html:109
-msgid "Required Information"
-msgstr "Required Information"
-
-#: lms/templates/forgot_password_modal.html:33
+#: lms/templates/forgot_password_modal.html:31
 msgid "Your E-mail Address"
 msgstr "Your E-mail Address"
 
-#: lms/templates/forgot_password_modal.html:34
+#: lms/templates/forgot_password_modal.html:32
 msgid "Enter your E-mail Address to reset your password"
 msgstr "Enter your E-mail Address to reset your password"
 
-#: lms/templates/forgot_password_modal.html:35 lms/templates/login.html:252
+#: lms/templates/forgot_password_modal.html:34 lms/templates/login.html:252
 msgid "This is the e-mail address you used to register with {platform}"
 msgstr "This is the e-mail address you used to register with {platform}"
 
-#: lms/templates/forgot_password_modal.html:42
+#: lms/templates/forgot_password_modal.html:41
 msgid "Reset My Password"
 msgstr "Reset My Password"
 
-#: lms/templates/forgot_password_modal.html:57
+#: lms/templates/forgot_password_modal.html:67
+#: lms/templates/forgot_password_modal.html:73
 msgid "Email is incorrect."
 msgstr "Email is incorrect."
 
@@ -1083,9 +1100,10 @@ msgstr ""
 "your browser. If you do not agree, change the settings of your browser. For "
 "more information, refer to our"
 
-#: lms/templates/header.html:15
-msgid "Privacy policy"
-msgstr "Privacy policy"
+#: lms/templates/header.html:17
+#: lms/templates/static_templates/privacy.html:186
+msgid "Cookies policy"
+msgstr "Cookies policy"
 
 #: lms/templates/help_modal.html:18
 msgid "Support"
@@ -1279,7 +1297,7 @@ msgstr "Note: only instructors may annotate."
 
 #: lms/templates/index.html:11
 msgid "Polish MOOC platform"
-msgstr ""
+msgstr "Polish MOOC platform"
 
 #: lms/templates/index.html:16
 msgid "ACCESSIBLE KNOWLEDGE"
@@ -1289,19 +1307,24 @@ msgstr "ACCESSIBLE KNOWLEDGE"
 msgid "Free online courses offered by Polish universities and institutions"
 msgstr "Free online courses offered by Polish universities and institutions"
 
-#: lms/templates/index.html:21 lms/templates/header/header.html:72
-msgid "What do you want to learn?"
-msgstr "What do you want to learn?"
+#: lms/templates/index.html:21 lms/templates/index.html:23
+#: lms/templates/header/header.html:72 lms/templates/header/header.html:75
+msgid "Search courses"
+msgstr "Search courses"
 
-#: lms/templates/index.html:37
+#: lms/templates/index.html:22 lms/templates/header/header.html:73
+msgid "Search courses..."
+msgstr "Search courses..."
+
+#: lms/templates/index.html:36
 msgid "About Navoica"
 msgstr "About Navoica"
 
-#: lms/templates/index.html:46
+#: lms/templates/index.html:45
 msgid "Wide range of online courses "
 msgstr "Wide range of online courses "
 
-#: lms/templates/index.html:47
+#: lms/templates/index.html:46
 msgid ""
 "A broad spectrum of courses with varying levels of expertise. Everyone can "
 "find an interesting course for themselves."
@@ -1309,11 +1332,11 @@ msgstr ""
 "A broad spectrum of courses with varying levels of expertise. Everyone can "
 "find an interesting course for themselves."
 
-#: lms/templates/index.html:57
+#: lms/templates/index.html:56
 msgid "Publicly available learning platform"
 msgstr "Publicly available learning platform"
 
-#: lms/templates/index.html:58
+#: lms/templates/index.html:57
 msgid ""
 "We reach anyone who wants to learn \\u2013 regardless of their age or place "
 "of residence."
@@ -1321,11 +1344,11 @@ msgstr ""
 "We reach anyone who wants to learn – regardless of their age or place of "
 "residence."
 
-#: lms/templates/index.html:68
+#: lms/templates/index.html:67
 msgid "Network of universities and institutions "
 msgstr "Network of universities and institutions "
 
-#: lms/templates/index.html:69
+#: lms/templates/index.html:68
 msgid ""
 "New online learning ecosystem brings together: universities, research "
 "institutes, businesses and NGOs. Find out more about Navoica"
@@ -1333,7 +1356,7 @@ msgstr ""
 "New online learning ecosystem brings together: universities, research "
 "institutes, businesses and NGOs. "
 
-#: lms/templates/index.html:76
+#: lms/templates/index.html:75
 msgid "Find out more about Navoica"
 msgstr "Find out more about Navoica"
 
@@ -1391,7 +1414,7 @@ msgstr[1] ""
 "student will be assigned {max_count} components drawn randomly from this "
 "list."
 
-#: lms/templates/login-sidebar.html:10 lms/templates/register.html:153
+#: lms/templates/login-sidebar.html:10 lms/templates/register.html:239
 msgid "Helpful Information"
 msgstr "Helpful Information"
 
@@ -1450,7 +1473,7 @@ msgid "Sign in"
 msgstr "Sign in"
 
 #: lms/templates/login.html:143 lms/templates/register-shib.html:82
-#: lms/templates/register.html:118
+#: lms/templates/register.html:204
 #: themes/stanford-style/lms/templates/register-shib.html:76
 msgid "Processing your account information"
 msgstr "Processing your account information"
@@ -1498,12 +1521,24 @@ msgstr ""
 "account. Required fields are noted by <strong class=\"indicator\">an "
 "asterisk (*)</strong>."
 
+#: lms/templates/login.html:246 lms/templates/register-form.html:73
+#: lms/templates/register-shib.html:115
+#: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html:30
+#: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html:26
+#: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html:31
+#: lms/templates/instructor/instructor_dashboard_2/invalidate_registration_code_modal.html:28
+#: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html:30
+#: themes/stanford-style/lms/templates/register-form.html:73
+#: themes/stanford-style/lms/templates/register-shib.html:109
+msgid "Required Information"
+msgstr "Required Information"
+
 #: lms/templates/login.html:249 lms/templates/login.html:256
 #: lms/templates/register-form.html:79 lms/templates/register-form.html:85
 #: lms/templates/register-form.html:91 lms/templates/register-form.html:108
-#: lms/templates/register-form.html:120 lms/templates/register-form.html:140
-#: lms/templates/register-form.html:148 lms/templates/register-form.html:157
-#: lms/templates/register-form.html:275 lms/templates/register-form.html:293
+#: lms/templates/register-form.html:118 lms/templates/register-form.html:138
+#: lms/templates/register-form.html:146 lms/templates/register-form.html:155
+#: lms/templates/register-form.html:273 lms/templates/register-form.html:291
 msgid "required"
 msgstr "required"
 
@@ -1517,6 +1552,7 @@ msgstr "Remember me"
 #: lms/templates/login.html:282 lms/templates/register-form.html:44
 #: lms/templates/course_modes/choose.html:147
 #: lms/templates/course_modes/choose.html:167
+#: lms/templates/static_templates/privacy.html:140
 #: themes/edx.org/lms/templates/course_modes/choose.html:213
 #: themes/edx.org/lms/templates/course_modes/choose.html:233
 #: themes/edx.org/lms/templates/course_modes/choose.html:237
@@ -1564,7 +1600,7 @@ msgstr "Feedback on your work from the grader:"
 msgid "Press to Launch"
 msgstr "Press to Launch"
 
-#: lms/templates/main.html:48
+#: lms/templates/main.html:49 lms/templates/main.html:135
 msgid ""
 "Polish MOOC platform offering free of charge online courses for every "
 "registered user. "
@@ -1572,7 +1608,7 @@ msgstr ""
 "Polish MOOC platform offering free online courses for every registered user."
 " "
 
-#: lms/templates/main.html:133 lms/templates/main.html:134
+#: lms/templates/main.html:134
 msgid "Navoica.pl - Polish MOOC platform"
 msgstr "Navoica.pl - Polish MOOC platform"
 
@@ -1659,41 +1695,42 @@ msgstr "My Notes"
 msgid "You do not have any notes."
 msgstr "You do not have any notes."
 
-#: lms/templates/preview_menu.html:46 lms/templates/preview_menu.html:131
-#: lms/templates/dashboard/_dashboard_course_listing.html:99
+#: lms/templates/preview_menu.html:57 lms/templates/preview_menu.html:142
+#: lms/templates/dashboard/_dashboard_course_listing.html:89
+#: lms/templates/dashboard/_dashboard_course_listing.html:118
 msgid "Course edition"
 msgstr "Course edition"
 
-#: lms/templates/preview_menu.html:54
+#: lms/templates/preview_menu.html:65
 msgid "View this course as"
 msgstr "View this course as"
 
-#: lms/templates/preview_menu.html:56 lms/templates/preview_menu.html:187
+#: lms/templates/preview_menu.html:67 lms/templates/preview_menu.html:198
 #: lms/templates/instructor/instructor_dashboard_2/membership.html:165
 msgid "Staff"
 msgstr "Staff"
 
-#: lms/templates/preview_menu.html:57 lms/templates/preview_menu.html:188
+#: lms/templates/preview_menu.html:68 lms/templates/preview_menu.html:199
 msgid "Learner"
 msgstr "Learner"
 
-#: lms/templates/preview_menu.html:58 lms/templates/preview_menu.html:189
+#: lms/templates/preview_menu.html:69 lms/templates/preview_menu.html:200
 msgid "Specific learner"
 msgstr "Specific learner"
 
-#: lms/templates/preview_menu.html:62 lms/templates/preview_menu.html:193
+#: lms/templates/preview_menu.html:73 lms/templates/preview_menu.html:204
 msgid "Learner in {content_group}"
 msgstr "Learner in {content_group}"
 
-#: lms/templates/preview_menu.html:69 lms/templates/preview_menu.html:200
+#: lms/templates/preview_menu.html:80 lms/templates/preview_menu.html:211
 msgid "Username or email:"
 msgstr "Username or email:"
 
-#: lms/templates/preview_menu.html:72 lms/templates/preview_menu.html:203
+#: lms/templates/preview_menu.html:83 lms/templates/preview_menu.html:214
 msgid "Set preview mode"
 msgstr "Set preview mode"
 
-#: lms/templates/preview_menu.html:77 lms/templates/preview_menu.html:208
+#: lms/templates/preview_menu.html:88 lms/templates/preview_menu.html:219
 msgid "You are now viewing the course as {i_start}{user_name}{i_end}."
 msgstr "You are now viewing the course as {i_start}{user_name}{i_end}."
 
@@ -1819,13 +1856,13 @@ msgstr ""
 msgid "Please complete the following fields to register for an account. "
 msgstr "Please complete the following fields to register for an account. "
 
-#: lms/templates/register-form.html:88 lms/templates/register-form.html:160
+#: lms/templates/register-form.html:88 lms/templates/register-form.html:158
 #: themes/stanford-style/lms/templates/register-form.html:86
 #: themes/stanford-style/lms/templates/register-form.html:140
 msgid "Your legal name, used for any certificates you earn."
 msgstr "Your legal name, used for any certificates you earn."
 
-#: lms/templates/register-form.html:94 lms/templates/register-form.html:151
+#: lms/templates/register-form.html:94 lms/templates/register-form.html:149
 #: lms/templates/register-shib.html:126
 #: themes/stanford-style/lms/templates/register-form.html:91
 #: themes/stanford-style/lms/templates/register-form.html:132
@@ -1833,107 +1870,106 @@ msgstr "Your legal name, used for any certificates you earn."
 msgid "Will be shown in any discussions or forums you participate in"
 msgstr "Will be shown in any discussions or forums you participate in"
 
-#: lms/templates/register-form.html:94 lms/templates/register-form.html:151
+#: lms/templates/register-form.html:94 lms/templates/register-form.html:149
 #: themes/stanford-style/lms/templates/register-form.html:91
 #: themes/stanford-style/lms/templates/register-form.html:132
 msgid "cannot be changed later"
 msgstr "cannot be changed later"
 
-#: lms/templates/register-form.html:115
-msgid "Enter a password with at most {num} characters."
-msgstr "Enter a password with at most {num} characters."
+#: lms/templates/register-form.html:113
+msgid "Your password must be at least {num} characters long."
+msgstr "Your password must be at least {num} characters long."
 
-#: lms/templates/register-form.html:131
+#: lms/templates/register-form.html:129
 #: themes/stanford-style/lms/templates/register-form.html:114
 msgid "Welcome {username}"
 msgstr "Welcome {username}"
 
-#: lms/templates/register-form.html:132
+#: lms/templates/register-form.html:130
 #: themes/stanford-style/lms/templates/register-form.html:115
 msgid "Enter a Public Display Name:"
 msgstr "Enter a Public Display Name:"
 
-#: lms/templates/register-form.html:148
+#: lms/templates/register-form.html:146
 #: themes/stanford-style/lms/templates/register-form.html:130
 msgid "Public Display Name"
 msgstr "Public Display Name"
 
-#: lms/templates/register-form.html:171
+#: lms/templates/register-form.html:169
 #: themes/stanford-style/lms/templates/register-form.html:151
 msgid "Additional Personal Information"
 msgstr "Additional Personal Information"
 
-#: lms/templates/register-form.html:176
+#: lms/templates/register-form.html:174
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html:88
 #: lms/templates/shoppingcart/receipt.html:249
 #: themes/stanford-style/lms/templates/register-form.html:156
 msgid "City"
 msgstr "City"
 
-#: lms/templates/register-form.html:177
+#: lms/templates/register-form.html:175
 #: themes/stanford-style/lms/templates/register-form.html:157
 msgid "example: New York"
 msgstr "example: New York"
 
-#: lms/templates/register-form.html:183
+#: lms/templates/register-form.html:181
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html:103
 #: lms/templates/shoppingcart/receipt.html:273
 #: themes/stanford-style/lms/templates/register-form.html:163
 msgid "Country"
 msgstr "Country"
 
-#: lms/templates/register-form.html:185
+#: lms/templates/register-form.html:183
 msgid "Poland"
 msgstr "Poland"
 
-#: lms/templates/register-form.html:196
+#: lms/templates/register-form.html:194
 #: themes/stanford-style/lms/templates/register-form.html:176
 msgid "Highest Level of Education Completed"
 msgstr "Highest Level of Education Completed"
 
-#: lms/templates/register-form.html:212 lms/templates/signup_modal.html:88
+#: lms/templates/register-form.html:210 lms/templates/signup_modal.html:88
 #: themes/stanford-style/lms/templates/register-form.html:189
 msgid "Gender"
 msgstr "Gender"
 
-#: lms/templates/register-form.html:227
+#: lms/templates/register-form.html:225
 #: themes/stanford-style/lms/templates/register-form.html:202
 msgid "Year of Birth"
 msgstr "Year of Birth"
 
-#: lms/templates/register-form.html:247
+#: lms/templates/register-form.html:245
 #: themes/stanford-style/lms/templates/register-form.html:219
 msgid "Mailing Address"
 msgstr "Mailing Address"
 
-#: lms/templates/register-form.html:254
+#: lms/templates/register-form.html:252
 #: themes/stanford-style/lms/templates/register-form.html:226
 msgid "Please share with us your reasons for registering with {platform_name}"
 msgstr ""
 "Please share with us your reasons for registering with {platform_name}"
 
-#: lms/templates/register-form.html:264 lms/templates/register-shib.html:153
+#: lms/templates/register-form.html:262 lms/templates/register-shib.html:153
 #: themes/stanford-style/lms/templates/register-form.html:234
 #: themes/stanford-style/lms/templates/register-shib.html:147
 msgid "Account Acknowledgements"
 msgstr "Account Acknowledgements"
 
-#: lms/templates/register-form.html:273 lms/templates/register-shib.html:162
+#: lms/templates/register-form.html:271 lms/templates/register-shib.html:162
 #: lms/templates/signup_modal.html:130
 #: themes/stanford-style/lms/templates/register-form.html:242
 #: themes/stanford-style/lms/templates/register-shib.html:156
 msgid "I agree to the {link_start}Terms of Service{link_end}"
 msgstr "I agree to the {link_start}Terms of Service{link_end}"
 
-#: lms/templates/register-form.html:291 lms/templates/register-shib.html:174
+#: lms/templates/register-form.html:289 lms/templates/register-shib.html:174
 #: lms/templates/signup_modal.html:138
 #: themes/stanford-style/lms/templates/register-form.html:254
 #: themes/stanford-style/lms/templates/register-shib.html:168
 msgid "I agree to the {link_start}Honor Code{link_end}"
 msgstr "I agree to the {link_start}Honor Code{link_end}"
 
-#: lms/templates/register-form.html:306 lms/templates/register.html:16
-#: lms/templates/register.html:115
+#: lms/templates/register-form.html:304 lms/templates/register.html:201
 #: lms/templates/header/navbar-not-authenticated.html:59
 #: lms/templates/header/navbar-not-authenticated.html:62
 #: lms/templates/header/navbar-not-authenticated.html:77
@@ -2032,19 +2068,62 @@ msgstr ""
 "After you enroll in a course, you can also find answers in the course "
 "discussions."
 
-#: lms/templates/register.html:43
+#: lms/templates/register.html:16
+msgid "Register for {platform_name}"
+msgstr "Register for {platform_name}"
+
+#: lms/templates/register.html:43 lms/templates/register.html:97
 msgid "Passwords Don't Match"
 msgstr "Passwords Don't Match"
 
-#: lms/templates/register.html:133
+#: lms/templates/register.html:77
+msgid "A properly formatted e-mail is required"
+msgstr "A properly formatted e-mail is required"
+
+#: lms/templates/register.html:82
+msgid "Your legal name must be a minimum of two characters long"
+msgstr "Your legal name must be a minimum of two characters long"
+
+#: lms/templates/register.html:87
+msgid ""
+"Usernames can only contain letters (A-Z, a-z), numerals (0-9), underscores "
+"(_), and hyphens (-) and must be between 2 and 255 characters long."
+msgstr ""
+"Usernames can only contain letters (A-Z, a-z), numerals (0-9), underscores "
+"(_), and hyphens (-) and must be between 2 and 255 characters long."
+
+#: lms/templates/register.html:92
+msgid "A valid password is required"
+msgstr "A valid password is required"
+
+#: lms/templates/register.html:102
+msgid "You must accept the terms of service."
+msgstr "You must accept the terms of service."
+
+#: lms/templates/register.html:106
+msgid "To enroll, you must follow the honor code."
+msgstr "To enroll, you must follow the honor code."
+
+#: lms/templates/register.html:107 lms/templates/static_templates/honor.html:5
+#: lms/templates/static_templates/honor.html:10
+#: themes/stanford-style/lms/templates/footer.html:20
+#: themes/stanford-style/lms/templates/static_templates/tos.html:18
+msgid "Honor Code"
+msgstr "Honor Code"
+
+#: lms/templates/register.html:139
+msgid "A valid confirm password is required"
+msgstr "A valid confirm password is required"
+
+#: lms/templates/register.html:219 lms/templates/register.html:225
 msgid "Registration form"
 msgstr "Registration form"
 
-#: lms/templates/register.html:136
+#: lms/templates/register.html:222
 msgid "Welcome!"
 msgstr "Welcome!"
 
-#: lms/templates/register.html:136
+#: lms/templates/register.html:222
 msgid "Register below to create your {platform_name} account"
 msgstr "Register below to create your {platform_name} account"
 
@@ -2066,15 +2145,15 @@ msgstr "Important!"
 
 #: lms/templates/seq_module.html:20 lms/templates/seq_module.html:23
 msgid "Subsection Content"
-msgstr ""
+msgstr "Subsection Content"
 
 #: lms/templates/seq_module.html:27
 msgid "Sequence"
-msgstr ""
+msgstr "Sequence"
 
 #: lms/templates/seq_module.html:76
 msgid "Unit Content"
-msgstr ""
+msgstr "Unit Content"
 
 #: lms/templates/seq_module.html:80 lms/templates/seq_module.html:130
 msgid "Previous"
@@ -2266,7 +2345,7 @@ msgid "Textbook Navigation"
 msgstr "Textbook Navigation"
 
 #: lms/templates/staticbook.html:120
-#: lms/templates/courseware/gradebook.html:131
+#: lms/templates/courseware/gradebook.html:132
 msgid "Page"
 msgstr "Page"
 
@@ -3870,6 +3949,46 @@ msgstr "Add to Mozilla Backpack"
 msgid "Print Certificate"
 msgstr "Print Certificate"
 
+#: lms/templates/certificates/_accomplishment-introduction.html:7
+msgid "Confirmation of your achievement"
+msgstr "Confirmation of your achievement"
+
+#: lms/templates/certificates/_accomplishment-rendering.html:20
+msgid "Honor Code Certificate"
+msgstr "Honor Code Certificate"
+
+#: lms/templates/certificates/_accomplishment-rendering.html:50
+msgid "has successfully completed the course"
+msgstr "completed the course"
+
+#: lms/templates/certificates/_accomplishment-rendering.html:61
+msgid "Date of certification"
+msgstr "Date of certification"
+
+#: lms/templates/certificates/_accomplishment-rendering.html:66
+msgid "This document confirms the completion of the"
+msgstr "This document confirms the completion of the course"
+
+#: lms/templates/certificates/_accomplishment-rendering.html:66
+msgid "offered by"
+msgstr "offered by"
+
+#: lms/templates/certificates/_accomplishment-rendering.html:66
+msgid "through Navoica."
+msgstr "through Navoica."
+
+#: lms/templates/certificates/_accomplishment-rendering.html:67
+msgid "verification"
+msgstr "verification"
+
+#: lms/templates/certificates/_accomplishment-rendering.html:73
+msgid "experts"
+msgstr "experts"
+
+#: lms/templates/certificates/_accomplishment-rendering.html:96
+msgid "Download Certificate"
+msgstr "Download Certificate"
+
 #: lms/templates/certificates/_edx-accomplishment-print-help.html:10
 msgid ""
 "For tips and tricks on printing your certificate, view the {link_start}Web "
@@ -4125,8 +4244,8 @@ msgstr "{span_start}current section{span_end}"
 
 #: lms/templates/courseware/accordion.html:46
 #: lms/templates/courseware/progress.html:191
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:97
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:242
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:99
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:246
 msgid "due {date}"
 msgstr "due {date}"
 
@@ -4135,18 +4254,18 @@ msgid "{section_format} due {{date}}"
 msgstr "{section_format} due {{date}}"
 
 #: lms/templates/courseware/accordion.html:69
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:114
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:281
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:116
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:285
 msgid "This content is graded"
 msgstr "This content is graded"
 
-#: lms/templates/courseware/course_about.html:47
-#: lms/templates/courseware/course_about.html:85
-#: lms/templates/courseware/course_about.html:104
+#: lms/templates/courseware/course_about.html:52
+#: lms/templates/courseware/course_about.html:90
+#: lms/templates/courseware/course_about.html:109
 msgid "An error occurred. Please try again later."
 msgstr "An error occurred. Please try again later."
 
-#: lms/templates/courseware/course_about.html:69
+#: lms/templates/courseware/course_about.html:74
 msgid ""
 "The currently logged-in user account does not have permission to enroll in "
 "this course. You may need to {start_logout_tag}log out{end_tag} then try the"
@@ -4158,91 +4277,91 @@ msgstr ""
 " enroll button again. Please visit the {start_help_tag}help page{end_tag} "
 "for a possible solution."
 
-#: lms/templates/courseware/course_about.html:141
+#: lms/templates/courseware/course_about.html:146
 msgid "You are enrolled in this course"
 msgstr "You are enrolled in this course"
 
-#: lms/templates/courseware/course_about.html:142
+#: lms/templates/courseware/course_about.html:147
 #: lms/templates/shoppingcart/registration_code_receipt.html:80
 msgid "View Course"
 msgstr "View Course"
 
-#: lms/templates/courseware/course_about.html:145
+#: lms/templates/courseware/course_about.html:150
 msgid "Register for the course"
 msgstr "Register for the course"
 
-#: lms/templates/courseware/course_about.html:147
+#: lms/templates/courseware/course_about.html:152
 msgid "Take the course"
 msgstr "Take the course"
 
-#: lms/templates/courseware/course_about.html:154
+#: lms/templates/courseware/course_about.html:160
 msgid "This course is in your <a href=\"{cart_link}\">cart</a>."
 msgstr "This course is in your <a href=\"{cart_link}\">cart</a>."
 
-#: lms/templates/courseware/course_about.html:158
+#: lms/templates/courseware/course_about.html:164
 msgid "Course is full"
 msgstr "Course is full"
 
-#: lms/templates/courseware/course_about.html:161
+#: lms/templates/courseware/course_about.html:167
 msgid "Enrollment in this course is by invitation only"
 msgstr "Enrollment in this course is by invitation only"
 
-#: lms/templates/courseware/course_about.html:166
+#: lms/templates/courseware/course_about.html:172
 msgid "Enrollment is Closed"
 msgstr "Enrollment is Closed"
 
-#: lms/templates/courseware/course_about.html:181
+#: lms/templates/courseware/course_about.html:187
 msgid "Add {course_name} to Cart <span>({price} USD)</span>"
 msgstr "Add {course_name} to Cart <span>({price} USD)</span>"
 
-#: lms/templates/courseware/course_about.html:197
+#: lms/templates/courseware/course_about.html:203
 msgid "Enroll in {course_name}"
 msgstr "Enroll in {course_name}"
 
-#: lms/templates/courseware/course_about.html:236
+#: lms/templates/courseware/course_about.html:243
 msgid " Instructor list "
-msgstr ""
+msgstr " Instructor list "
 
-#: lms/templates/courseware/course_about.html:244
-#: lms/templates/courseware/course_about.html:431
+#: lms/templates/courseware/course_about.html:251
+#: lms/templates/courseware/course_about.html:444
 msgid "Organizer"
-msgstr ""
+msgstr "Organizer"
 
-#: lms/templates/courseware/course_about.html:321
+#: lms/templates/courseware/course_about.html:334
 msgid "Classes Start"
 msgstr "Classes Start"
 
-#: lms/templates/courseware/course_about.html:347
+#: lms/templates/courseware/course_about.html:360
 msgid "Classes End"
 msgstr "Classes End"
 
-#: lms/templates/courseware/course_about.html:371
+#: lms/templates/courseware/course_about.html:384
 msgid "Enrollment start"
 msgstr "Enrollment start"
 
-#: lms/templates/courseware/course_about.html:394
+#: lms/templates/courseware/course_about.html:407
 msgid "Enrollment end"
 msgstr "Enrollment end"
 
-#: lms/templates/courseware/course_about.html:418
+#: lms/templates/courseware/course_about.html:431
 msgid "Hours of effort per week"
-msgstr ""
+msgstr "Hours of effort per week"
 
-#: lms/templates/courseware/course_about.html:419
+#: lms/templates/courseware/course_about.html:432
 msgid "{effort} hour"
 msgid_plural "{effort} hours"
 msgstr[0] "{effort} hour"
 msgstr[1] "{effort} hours"
 
-#: lms/templates/courseware/course_about.html:469
+#: lms/templates/courseware/course_about.html:476
 msgid "Fill all fields in Schedule & Details Settings!"
-msgstr ""
+msgstr "Fill all fields in Schedule & Details Settings!"
 
-#: lms/templates/courseware/course_about.html:487
+#: lms/templates/courseware/course_about.html:493
 msgid "Additional Resources"
 msgstr "Additional Resources"
 
-#: lms/templates/courseware/course_about.html:515
+#: lms/templates/courseware/course_about.html:517
 msgctxt "self"
 msgid "enroll"
 msgstr "enroll"
@@ -4289,6 +4408,14 @@ msgstr "current location"
 msgid "needs attention"
 msgstr "needs attention"
 
+#: lms/templates/courseware/course_navigation.html:78
+msgid "Course progress"
+msgstr "Course progress"
+
+#: lms/templates/courseware/course_navigation.html:78
+msgid "finished lessons"
+msgstr "finished lessons"
+
 #: lms/templates/courseware/course_updates.html:9
 #: lms/templates/courseware/course_updates.html:39
 msgid "Hide"
@@ -4303,10 +4430,18 @@ msgstr "Show"
 msgid "Show Earlier Course Updates"
 msgstr "Show Earlier Course Updates"
 
-#: lms/templates/courseware/courses.html:36
-#: lms/templates/courseware/courses.html:73
+#: lms/templates/courseware/courses.html:52
+#: lms/templates/courseware/courses.html:96
 msgid "List of Courses"
 msgstr "List of Courses"
+
+#: lms/templates/courseware/courses.html:90
+msgid "Oldest to Newest "
+msgstr "Oldest to Newest "
+
+#: lms/templates/courseware/courses.html:91
+msgid "Newest to Oldest"
+msgstr "Newest to Oldest"
 
 #: lms/templates/courseware/courseware-chromeless.html:12
 #: lms/templates/courseware/courseware.html:21
@@ -4355,26 +4490,27 @@ msgid "Gradebook"
 msgstr "Gradebook"
 
 #: lms/templates/courseware/gradebook.html:52
+#: lms/templates/courseware/gradebook.html:53
 msgid "Search students"
 msgstr "Search students"
 
-#: lms/templates/courseware/gradebook.html:92
-#: lms/templates/courseware/gradebook.html:117
+#: lms/templates/courseware/gradebook.html:93
+#: lms/templates/courseware/gradebook.html:118
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html:30
 #: lms/templates/shoppingcart/billing_details.html:41
 #: lms/templates/shoppingcart/receipt.html:358
 msgid "Total"
 msgstr "Total"
 
-#: lms/templates/courseware/gradebook.html:127
+#: lms/templates/courseware/gradebook.html:128
 msgid "previous page"
 msgstr "previous page"
 
-#: lms/templates/courseware/gradebook.html:131
+#: lms/templates/courseware/gradebook.html:132
 msgid "of"
 msgstr "of"
 
-#: lms/templates/courseware/gradebook.html:136
+#: lms/templates/courseware/gradebook.html:137
 msgid "next page"
 msgstr "next page"
 
@@ -4853,7 +4989,7 @@ msgstr "This link will open the certificate web view"
 #: lms/templates/dashboard/_dashboard_certificate_information.html:83
 #: lms/templates/dashboard/_dashboard_certificate_information.html:138
 msgid "Certificate"
-msgstr "Zaświadczenie"
+msgstr "Honor Code Certificate"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html:87
 #: lms/templates/dashboard/_dashboard_certificate_information.html:92
@@ -4902,59 +5038,60 @@ msgstr ""
 "{cert_name_long} was generated, we could not grant you a verified "
 "{cert_name_short}. An honor code {cert_name_short} has been granted instead."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:91
+#: lms/templates/dashboard/_dashboard_course_listing.html:82
+#: lms/templates/dashboard/_dashboard_course_listing.html:111
 msgid "Course organizer"
 msgstr "Course organizer"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:114
+#: lms/templates/dashboard/_dashboard_course_listing.html:132
 msgid "Coming Soon"
 msgstr "Coming Soon"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:119
+#: lms/templates/dashboard/_dashboard_course_listing.html:137
 msgid "Ended - {date}"
 msgstr "Ended - {date}"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:122
+#: lms/templates/dashboard/_dashboard_course_listing.html:140
 msgid "Started - {date}"
 msgstr "Started - {date}"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:125
-#: lms/templates/dashboard/_dashboard_course_listing.html:129
+#: lms/templates/dashboard/_dashboard_course_listing.html:143
+#: lms/templates/dashboard/_dashboard_course_listing.html:147
 msgid "Starts - {date}"
 msgstr "Starts - {date}"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:147
+#: lms/templates/dashboard/_dashboard_course_listing.html:165
 msgid "You must select a session by {expiration_date} to access the course."
 msgstr "You must select a session by {expiration_date} to access the course."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:149
+#: lms/templates/dashboard/_dashboard_course_listing.html:167
 msgid "You must select a session to access the course."
 msgstr "You must select a session to access the course."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:156
+#: lms/templates/dashboard/_dashboard_course_listing.html:174
 msgid "Change or Leave Session"
 msgstr "Change or Leave Session"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:164
+#: lms/templates/dashboard/_dashboard_course_listing.html:182
 msgid "You can no longer change sessions."
 msgstr "You can no longer change sessions."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:166
+#: lms/templates/dashboard/_dashboard_course_listing.html:184
 msgid "You can change sessions until {entitlement_expiration_date}."
 msgstr "You can change sessions until {entitlement_expiration_date}."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:205
-#: lms/templates/dashboard/_dashboard_course_listing.html:207
+#: lms/templates/dashboard/_dashboard_course_listing.html:222
+#: lms/templates/dashboard/_dashboard_course_listing.html:224
 #: lms/templates/dashboard/_dashboard_entitlement_actions.html:56
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:112
 msgid "Email Settings"
 msgstr "Email Settings"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:243
+#: lms/templates/dashboard/_dashboard_course_listing.html:260
 msgid "Related Programs"
 msgstr "Related Programs"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:268
+#: lms/templates/dashboard/_dashboard_course_listing.html:285
 msgid ""
 "You can no longer access this course because payment has not yet been "
 "received. You can contact the account holder to request payment, or you can "
@@ -4964,7 +5101,7 @@ msgstr ""
 "received. You can contact the account holder to request payment, or you can "
 "unenroll from this course"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:272
+#: lms/templates/dashboard/_dashboard_course_listing.html:289
 msgid ""
 "You can no longer access this course because payment has not yet been "
 "received. You can {contact_link_start}contact the account "
@@ -4976,33 +5113,33 @@ msgstr ""
 "holder{contact_link_end} to request payment, or you can "
 "{unenroll_link_start}unenroll{unenroll_link_end} from this course"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:301
+#: lms/templates/dashboard/_dashboard_course_listing.html:318
 msgid "Verification not yet complete."
 msgstr "Verification not yet complete."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:302
+#: lms/templates/dashboard/_dashboard_course_listing.html:319
 msgid "You only have {days} day left to verify for this course."
 msgid_plural "You only have {days} days left to verify for this course."
 msgstr[0] "You only have {days} day left to verify for this course."
 msgstr[1] "You only have {days} days left to verify for this course."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:308
+#: lms/templates/dashboard/_dashboard_course_listing.html:325
 msgid "Almost there!"
 msgstr "Almost there!"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:309
+#: lms/templates/dashboard/_dashboard_course_listing.html:326
 msgid "You still need to verify for this course."
 msgstr "You still need to verify for this course."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:313
+#: lms/templates/dashboard/_dashboard_course_listing.html:330
 msgid "Verify Now"
 msgstr "Verify Now"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:316
+#: lms/templates/dashboard/_dashboard_course_listing.html:333
 msgid "You have submitted your verification information."
 msgstr "You have submitted your verification information."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:317
+#: lms/templates/dashboard/_dashboard_course_listing.html:334
 msgid ""
 "You will see a message on your dashboard when the verification process is "
 "complete (usually within 1-2 days)."
@@ -5010,11 +5147,11 @@ msgstr ""
 "You will see a message on your dashboard when the verification process is "
 "complete (usually within 1-2 days)."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:319
+#: lms/templates/dashboard/_dashboard_course_listing.html:336
 msgid "Your current verification will expire soon!"
 msgstr "Your current verification will expire soon!"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:320
+#: lms/templates/dashboard/_dashboard_course_listing.html:337
 msgid ""
 "You have submitted your reverification information. You will see a message "
 "on your dashboard when the verification process is complete (usually within "
@@ -5024,38 +5161,38 @@ msgstr ""
 "on your dashboard when the verification process is complete (usually within "
 "1-2 days)."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:322
+#: lms/templates/dashboard/_dashboard_course_listing.html:339
 msgid "You have successfully verified your ID with edX"
 msgstr "You have successfully verified your ID with edX"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:324
+#: lms/templates/dashboard/_dashboard_course_listing.html:341
 msgid "Your current verification is effective until {date}."
 msgstr "Your current verification is effective until {date}."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:327
+#: lms/templates/dashboard/_dashboard_course_listing.html:344
 msgid "Your current verification will expire soon."
 msgstr "Your current verification will expire soon."
 
 #. Translators: start_link and end_link will be replaced with HTML tags;
 #. please do not translate these.
-#: lms/templates/dashboard/_dashboard_course_listing.html:330
-msgid ""
-"Your current verification will expire in {days} days. {start_link}Re-verify "
-"your identity now{end_link} using a webcam and a government-issued photo ID."
-msgstr ""
-"Your current verification will expire in {days} days. {start_link}Re-verify "
-"your identity now{end_link} using a webcam and a government-issued photo ID."
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:345
-msgid ""
-"Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
-"this course."
-msgstr ""
-"Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
-"this course."
-
 #: lms/templates/dashboard/_dashboard_course_listing.html:347
 msgid ""
+"Your current verification will expire in {days} days. {start_link}Re-verify "
+"your identity now{end_link} using a webcam and a government-issued photo ID."
+msgstr ""
+"Your current verification will expire in {days} days. {start_link}Re-verify "
+"your identity now{end_link} using a webcam and a government-issued photo ID."
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:362
+msgid ""
+"Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
+"this course."
+msgstr ""
+"Pursue a {cert_name_long} to highlight the knowledge and skills you gain in "
+"this course."
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:364
+msgid ""
 "It's official. It's easily shareable. It's a proven motivator to complete "
 "the course. {line_break}{link_start}Learn more about the verified "
 "{cert_name_long}{link_end}."
@@ -5064,11 +5201,11 @@ msgstr ""
 "the course. {line_break}{link_start}Learn more about the verified "
 "{cert_name_long}{link_end}."
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:367
+#: lms/templates/dashboard/_dashboard_course_listing.html:384
 msgid "Upgrade to Verified"
 msgstr "Upgrade to Verified"
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:382
+#: lms/templates/dashboard/_dashboard_course_listing.html:399
 msgid ""
 "You must successfully complete {link_start}{prc_display}{link_end} before "
 "you begin this course."
@@ -6228,11 +6365,11 @@ msgstr ""
 "Our system indicates that you are trying to enroll in this {platform_name} "
 "course from a country or region in which it is not currently available."
 
-#: lms/templates/enrollment/course_enrollment_message.html:8
+#: lms/templates/enrollment/course_enrollment_message.html:11
 msgid "Enrollment Successful"
 msgstr "Enrollment Successful"
 
-#: lms/templates/enrollment/course_enrollment_message.html:11
+#: lms/templates/enrollment/course_enrollment_message.html:14
 msgid ""
 "Congratulations! You are now a course {course_names} participant and have "
 "access to course materials. We wish you pleasant learning!"
@@ -6240,7 +6377,7 @@ msgstr ""
 "Congratulations! You are now a course {course_names} participant and have "
 "access to course materials. We wish you pleasant learning!"
 
-#: lms/templates/enrollment/course_enrollment_message.html:16
+#: lms/templates/enrollment/course_enrollment_message.html:19
 msgid ""
 "Thank you for enrolling on the course {course_names}. This course will be "
 "accessible from {course_date_start}. Don't forget to save the date in your "
@@ -6250,7 +6387,7 @@ msgstr ""
 "accessible from {course_date_start}. Don't forget to save the date in your "
 "calendar!"
 
-#: lms/templates/enrollment/course_enrollment_message.html:20
+#: lms/templates/enrollment/course_enrollment_message.html:23
 msgid ""
 "{platform_name} is a nonprofit bringing high-quality education to everyone, "
 "everywhere. Your help allows us to continuously improve the learning "
@@ -6260,7 +6397,7 @@ msgstr ""
 "everywhere. Your help allows us to continuously improve the learning "
 "experience for millions and make a better future one learner at a time."
 
-#: lms/templates/enrollment/course_enrollment_message.html:29
+#: lms/templates/enrollment/course_enrollment_message.html:32
 msgid "Donation Actions"
 msgstr "Donation Actions"
 
@@ -6351,11 +6488,11 @@ msgstr "{platform_name} Home Page"
 msgid "Navoica logo"
 msgstr "Navoica logo"
 
-#: lms/templates/header/header.html:96
+#: lms/templates/header/header.html:97
 msgid "My Account"
 msgstr "My Account"
 
-#: lms/templates/header/header.html:132
+#: lms/templates/header/header.html:133
 #: lms/templates/navigation/navigation.html:93
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
@@ -6377,15 +6514,6 @@ msgstr "News"
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html:43
 msgid "Programs"
 msgstr "Programs"
-
-#: lms/templates/header/navbar-authenticated.html:33
-#: lms/templates/header/user_dropdown.html:24
-#: lms/templates/header/user_dropdown.html:72
-#: lms/templates/navigation/navbar-authenticated.html:38
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html:55
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html:49
-msgid "Profile"
-msgstr "Profile"
 
 #: lms/templates/header/navbar-authenticated.html:39
 #: lms/templates/header/navbar-not-authenticated.html:32
@@ -9137,6 +9265,304 @@ msgstr ""
 "{link_start}homepage{link_end} or let us know about any pages that may have "
 "been moved at {email}."
 
+#: lms/templates/static_templates/accessibility.html:7
+msgid "Accessibility Statement"
+msgstr "Accessibility Statement"
+
+#: lms/templates/static_templates/accessibility.html:14
+msgid "Declaration of Availability of the NAVOICA Educational Platform"
+msgstr "Declaration of Availability of the NAVOICA Educational Platform"
+
+#: lms/templates/static_templates/accessibility.html:21
+msgid ""
+"The owner of the NAVOICA Educational Platform is the Ministry of Science and"
+" Higher Education headquartered in Warsaw, Poland, at the following address:"
+" ul. Wspólna 1/3. The operator of the Platform is the National Information "
+"Processing Institute (OPI PIB)"
+msgstr ""
+"The owner of the NAVOICA Educational Platform is the Ministry of Science and"
+" Higher Education headquartered in Warsaw, Poland, at the following address:"
+" ul. Wspólna 1/3. The operator of the Platform is the National Information "
+"Processing Institute (OPI PIB)"
+
+#: lms/templates/static_templates/accessibility.html:23
+msgid ""
+"{span_start}The National Information Processing Institute{span_end} "
+"undertakes to make its website available under the Act of 4 April 2019 on "
+"digital accessibility of websites and mobile applications of public "
+"entities. The declaration of availability applies to the "
+"{link_start}Navoica.pl{link_end} website."
+msgstr ""
+"{span_start}The National Information Processing Institute{span_end} "
+"undertakes to make its website available under the Act of 4 April 2019 on "
+"digital accessibility of websites and mobile applications of public "
+"entities. The declaration of availability applies to the "
+"{link_start}Navoica.pl{link_end} website."
+
+#: lms/templates/static_templates/accessibility.html:32
+msgid "Date of publication of the website: "
+msgstr "Date of publication of the website: "
+
+#: lms/templates/static_templates/accessibility.html:33
+msgid "Date of the last major update: "
+msgstr "Date of the last major update: "
+
+#: lms/templates/static_templates/accessibility.html:35
+msgid "Compliance with the Act"
+msgstr "Compliance with the Act"
+
+#: lms/templates/static_templates/accessibility.html:36
+msgid ""
+"The website {strong_start}partially complies{strong_end} with the Act on "
+"digital accessibility of websites and mobile applications of public entities"
+" due to non-compliance or exclusions listed below."
+msgstr ""
+"The website {strong_start}partially complies{strong_end} with the Act on "
+"digital accessibility of websites and mobile applications of public entities"
+" due to non-compliance or exclusions listed below."
+
+#: lms/templates/static_templates/accessibility.html:42
+msgid "Unavailable content"
+msgstr "Unavailable content"
+
+#: lms/templates/static_templates/accessibility.html:45
+msgid "contrast of some elements is inadequate,"
+msgstr "contrast of some elements is inadequate,"
+
+#: lms/templates/static_templates/accessibility.html:48
+msgid "some forms have no labels,"
+msgstr "some forms have no labels,"
+
+#: lms/templates/static_templates/accessibility.html:51
+msgid "focus is invisible,"
+msgstr "focus is invisible,"
+
+#: lms/templates/static_templates/accessibility.html:54
+msgid "alternative texts for some pictures may be missing,"
+msgstr "alternative texts for some pictures may be missing,"
+
+#: lms/templates/static_templates/accessibility.html:57
+msgid "not all video materials are subtitled,"
+msgstr "not all video materials are subtitled,"
+
+#: lms/templates/static_templates/accessibility.html:60
+msgid "subtitles cannot be downloaded,"
+msgstr "subtitles cannot be downloaded,"
+
+#: lms/templates/static_templates/accessibility.html:63
+msgid "audiodescription is unavailable."
+msgstr "audiodescription is unavailable."
+
+#: lms/templates/static_templates/accessibility.html:68
+msgid ""
+"The platform is being modified to make it more available. With enhancements "
+"introduced on a regular basis, the availability will be gradually improving "
+"over time. As from the end of October 2020 the websites, before logging in, "
+"will meet the WCAG 2.1 level AA requirements. Websites available after "
+"logging in will be adapted in the next step. We are also working on a "
+"solution allowing to make the courses available electronically."
+msgstr ""
+"The platform is being modified to make it more available. With enhancements "
+"introduced on a regular basis, the availability will be gradually improving "
+"over time. As from the end of October 2020 the websites, before logging in, "
+"will meet the WCAG 2.1 level AA requirements. Websites available after "
+"logging in will be adapted in the next step. We are also working on a "
+"solution allowing to make the courses available electronically."
+
+#: lms/templates/static_templates/accessibility.html:72
+msgid "Exclusions"
+msgstr "Exclusions"
+
+#: lms/templates/static_templates/accessibility.html:75
+msgid "Courses that have not been created by OPI PIB,"
+msgstr "Courses that have not been created by OPI PIB,"
+
+#: lms/templates/static_templates/accessibility.html:78
+msgid "Multimedia published before "
+msgstr "Multimedia published before "
+
+#: lms/templates/static_templates/accessibility.html:82
+msgid "Preparation of the Declaration of Availability"
+msgstr "Preparation of the Declaration of Availability"
+
+#: lms/templates/static_templates/accessibility.html:84
+msgid "The Declaration was made on: "
+msgstr "The Declaration was made on: "
+
+#: lms/templates/static_templates/accessibility.html:85
+msgid "The Declaration was last reviewed and updated on: "
+msgstr "The Declaration was last reviewed and updated on: "
+
+#: lms/templates/static_templates/accessibility.html:88
+msgid ""
+"The Declaration was made on the basis of a self-assessment of a public "
+"entity."
+msgstr ""
+"The Declaration was made on the basis of a self-assessment of a public "
+"entity."
+
+#: lms/templates/static_templates/accessibility.html:91
+msgid "Feedback and contact data"
+msgstr "Feedback and contact data"
+
+#: lms/templates/static_templates/accessibility.html:93
+msgid "Person responsible for handling applications and queries: "
+msgstr "Person responsible for handling applications and queries: "
+
+#: lms/templates/static_templates/accessibility.html:94
+#: lms/templates/static_templates/accessibility.html:118
+msgid "E-mail: "
+msgstr "E-mail: "
+
+#: lms/templates/static_templates/accessibility.html:95
+#: lms/templates/static_templates/accessibility.html:119
+msgid "Telephone: "
+msgstr "Telephone: "
+
+#: lms/templates/static_templates/accessibility.html:95
+msgid ""
+" (please note that by dialing this number you will reach our reception desk "
+"and that e-mail is our preferred contact method)"
+msgstr ""
+" (please note that by dialing this number you will reach our reception desk "
+"and that e-mail is our preferred contact method)"
+
+#: lms/templates/static_templates/accessibility.html:98
+msgid "Each person has the right to:"
+msgstr "Each person has the right to:"
+
+#: lms/templates/static_templates/accessibility.html:100
+msgid ""
+"report any problems with digital access to the website or to any element "
+"thereof,"
+msgstr ""
+"report any problems with digital access to the website or to any element "
+"thereof,"
+
+#: lms/templates/static_templates/accessibility.html:101
+msgid ""
+"make a request for digital access to the website or to any element thereof,"
+msgstr ""
+"make a request for digital access to the website or to any element thereof,"
+
+#: lms/templates/static_templates/accessibility.html:102
+msgid ""
+"make a request to make unavailable information available in an alternative "
+"form."
+msgstr ""
+"make a request to make unavailable information available in an alternative "
+"form."
+
+#: lms/templates/static_templates/accessibility.html:104
+msgid "All requests must include:"
+msgstr "All requests must include:"
+
+#: lms/templates/static_templates/accessibility.html:106
+msgid "contact data of a person making a request,"
+msgstr "contact data of a person making a request,"
+
+#: lms/templates/static_templates/accessibility.html:107
+msgid ""
+"information about the webpage or any element thereof to which the request "
+"pertains,"
+msgstr ""
+"information about the webpage or any element thereof to which the request "
+"pertains,"
+
+#: lms/templates/static_templates/accessibility.html:108
+msgid ""
+"indication on the preferred form of making information available if the "
+"request concerns making unavailable information available in an alternative "
+"form."
+msgstr ""
+"indication on the preferred form of making information available if the "
+"request concerns making unavailable information available in an alternative "
+"form."
+
+#: lms/templates/static_templates/accessibility.html:110
+msgid ""
+"All requests should be handled as soon as possible, but not later than "
+"within 7 days. If it proves impossible to make the website or elements "
+"thereof available or to make them available in an alternative form within "
+"the deadline referred to above, the problem should be solved within 2 months"
+" after the request."
+msgstr ""
+"All requests should be handled as soon as possible, but not later than "
+"within 7 days. If it proves impossible to make the website or elements "
+"thereof available or to make them available in an alternative form within "
+"the deadline referred to above, the problem should be solved within 2 months"
+" after the request."
+
+#: lms/templates/static_templates/accessibility.html:112
+msgid "Complaints and appeals"
+msgstr "Complaints and appeals"
+
+#: lms/templates/static_templates/accessibility.html:113
+msgid ""
+"Complaints and appeals pertaining to failure to meet the said deadlines and "
+"requests may be filed by mail or e-mail with the supervising authority to "
+"the following address:"
+msgstr ""
+"Complaints and appeals pertaining to failure to meet the said deadlines and "
+"requests may be filed by mail or e-mail with the supervising authority to "
+"the following address:"
+
+#: lms/templates/static_templates/accessibility.html:115
+msgid ""
+"Supervising authority: Director of the National Information Processing "
+"Institute"
+msgstr ""
+"Supervising authority: Director of the National Information Processing "
+"Institute"
+
+#: lms/templates/static_templates/accessibility.html:116
+msgid "Address: al. Niepodleg\\u0142o\\u015bci 188 B"
+msgstr "Address: al. Niepodleg\\u0142o\\u015bci 188 B"
+
+#: lms/templates/static_templates/accessibility.html:117
+msgid "00-608 Warsaw, Poland"
+msgstr "00-608 Warsaw, Poland"
+
+#: lms/templates/static_templates/accessibility.html:122
+msgid ""
+"Your complaint can also be filed with the {link_start}Commissioner for Human"
+" Rights{link_end}."
+msgstr ""
+"Your complaint can also be filed with the {link_start}Commissioner for Human"
+" Rights{link_end}."
+
+#: lms/templates/static_templates/accessibility.html:129
+msgid "Architectural accessibility"
+msgstr "Architectural accessibility"
+
+#: lms/templates/static_templates/accessibility.html:130
+msgid ""
+"National Information Processing Institute, al. Niepodleg\\u0142o\\u015bci "
+"188B, 00-608 Warsaw, Poland."
+msgstr ""
+"National Information Processing Institute, al. Niepodleg\\u0142o\\u015bci "
+"188B, 00-608 Warsaw, Poland."
+
+#: lms/templates/static_templates/accessibility.html:131
+msgid ""
+"The entrance to the building is accessed via steps or a wheelchair ramp. The"
+" reception desk is located opposite the front door. Entering other parts of "
+"the building is not possible without a door opening badge. Wheelchair users "
+"can access only the corridor and the rooms on the ground floor. There is no "
+"elevator in the building. The disabled toilet is located on the ground "
+"floor, opposite the staircase. There are 2 parking places for the disabled "
+"in front of the building. Assistance dogs are allowed in all rooms of the "
+"building."
+msgstr ""
+"The entrance to the building is accessed via steps or a wheelchair ramp. The"
+" reception desk is located opposite the front door. Entering other parts of "
+"the building is not possible without a door opening badge. Wheelchair users "
+"can access only the corridor and the rooms on the ground floor. There is no "
+"elevator in the building. The disabled toilet is located on the ground "
+"floor, opposite the staircase. There are 2 parking places for the disabled "
+"in front of the building. Assistance dogs are allowed in all rooms of the "
+"building."
+
 #: lms/templates/static_templates/blog.html:5
 #: lms/templates/static_templates/blog.html:10
 msgid "Blog"
@@ -9165,19 +9591,19 @@ msgstr ""
 "Online learning platform owned by the Polish Ministry of Science and Higher "
 "Education"
 
-#: lms/templates/static_templates/contact.html:29
+#: lms/templates/static_templates/contact.html:27
 msgid "Address"
 msgstr "Address"
 
-#: lms/templates/static_templates/contact.html:32
+#: lms/templates/static_templates/contact.html:30
 msgid "National Information Processing Institute"
 msgstr "National Information Processing Institute"
 
-#: lms/templates/static_templates/contact.html:39
+#: lms/templates/static_templates/contact.html:37
 msgid "General questions"
 msgstr "General questions"
 
-#: lms/templates/static_templates/contact.html:40
+#: lms/templates/static_templates/contact.html:38
 msgid ""
 "Questions, comments and contact with universities and institutions regarding"
 " publishing courses on the platform"
@@ -9185,13 +9611,280 @@ msgstr ""
 "Questions, comments and contact with universities and institutions regarding"
 " publishing courses on the platform"
 
-#: lms/templates/static_templates/contact.html:42
+#: lms/templates/static_templates/contact.html:40
 msgid "Help center"
 msgstr "Help center"
 
-#: lms/templates/static_templates/contact.html:43
+#: lms/templates/static_templates/contact.html:41
 msgid "Issues, errors, technical comments"
 msgstr "Issues, errors, technical comments"
+
+#: lms/templates/static_templates/cookies.html:6
+#: lms/templates/static_templates/cookies.html:13
+msgid "Cookies Policy"
+msgstr "Cookies Policy"
+
+#: lms/templates/static_templates/cookies.html:20
+msgid ""
+"The National Information Processing Institute (OPI BIP) attaches particular "
+"importance to respecting the privacy of users visiting the NAVOICA "
+"Educational Platform (hereinafter referred to as 'Website'). Data collected "
+"from users' terminal devices are used only for the purpose of administering "
+"the Website. We do not identify website users."
+msgstr ""
+"The National Information Processing Institute (OPI PIB) attaches particular "
+"importance to respecting the privacy of users visiting the NAVOICA Platform "
+"(hereinafter referred to as 'Website'). Data collected from users' terminal "
+"devices are used only for the purpose of administering the Website. We do "
+"not identify website users."
+
+#: lms/templates/static_templates/cookies.html:22
+msgid ""
+"The entity saving cookie files on Website users' terminal device and gaining"
+" access to such files is the Website operator, i.e. O\\u015brodek "
+"Przetwarzania Informacji \\u2013 Pa\\u0144stwowy Instytut Badawczy (National"
+" Information Processing Institute) headquartered at the following address: "
+"al. Niepodleg\\u0142o\\u015bci 188 b, 00-608 Warszawa."
+msgstr ""
+"The entity saving cookie files on Website users' terminal device and gaining"
+" access to such files is the Website operator, i.e. O\\u015brodek "
+"Przetwarzania Informacji \\u2013 Pa\\u0144stwowy Instytut Badawczy (National"
+" Information Processing Institute) headquartered at the following address: "
+"al. Niepodleg\\u0142o\\u015bci 188 b, 00-608 Warszawa."
+
+#: lms/templates/static_templates/cookies.html:24
+msgid "Cookie files"
+msgstr "Cookie files"
+
+#: lms/templates/static_templates/cookies.html:26
+msgid ""
+"Cookies are small text files installed on the device of the user browsing "
+"the Website. Cookies collect information facilitating the use of the "
+"website, e.g. by remembering the User's visits to the Website and the "
+"activities performed by the User."
+msgstr ""
+"Cookies are small text files installed on the device of the user browsing "
+"the Website. Cookies collect information facilitating the use of the "
+"website, e.g. by remembering the User's visits to the Website and the "
+"activities performed by the User."
+
+#: lms/templates/static_templates/cookies.html:28
+msgid ""
+"Cookie files (so-called 'cookies') constitute IT data, text files in "
+"particular, which are stored in the terminal device of the Website user and "
+"designated for using the webpages of the website. Cookies usually contain "
+"the webpage name, from which they originate, the time of their storage on "
+"the terminal device, as well as a unique number."
+msgstr ""
+"Cookie files (so-called 'cookies') constitute IT data, text files in "
+"particular, which are stored in the terminal device of the Website user and "
+"designated for using the webpages of the website. Cookies usually contain "
+"the webpage name, from which they originate, the time of their storage on "
+"the terminal device, as well as a unique number."
+
+#: lms/templates/static_templates/cookies.html:30
+msgid ""
+"The Website automatically gathers information in two ways: by using the "
+"Google Analytics/Facebook Pixel tool and through cookie files."
+msgstr ""
+"The Website automatically gathers information in two ways: by using the "
+"Google Analytics/Facebook Pixel tool and through cookie files."
+
+#: lms/templates/static_templates/cookies.html:32
+msgid "Use of data"
+msgstr "Use of data"
+
+#: lms/templates/static_templates/cookies.html:34
+msgid ""
+"OPI PIB uses the so-called service cookies primarily to provide users with "
+"an electronic service and to improve the quality thereof. In view of the "
+"above, OPI PIB and other entities providing analytical and statistical "
+"services to OPI PIB use cookies by storing information or accessing "
+"information already stored in the user's telecommunications terminal device "
+"(computer, phone, tablet, etc.). The cookies used for this purpose include:"
+msgstr ""
+"OPI PIB uses the so-called service cookies primarily to provide users with "
+"an electronic service and to improve the quality thereof. In view of the "
+"above, OPI PIB and other entities providing analytical and statistical "
+"services to OPI PIB use cookies by storing information or accessing "
+"information already stored in the user's telecommunications terminal device "
+"(computer, phone, tablet, etc.). The cookies used for this purpose include:"
+
+#: lms/templates/static_templates/cookies.html:37
+msgid ""
+"cookies with data entered by the user (session ID) for the duration of the "
+"session (user input cookies),"
+msgstr ""
+"cookies with data entered by the user (session ID) for the duration of the "
+"session (user input cookies),"
+
+#: lms/templates/static_templates/cookies.html:38
+msgid ""
+"cookies used to ensure security, e.g. to detect unauthorized authentication "
+"(user centric security cookies),"
+msgstr ""
+"cookies used to ensure security, e.g. to detect unauthorized authentication "
+"(user centric security cookies),"
+
+#: lms/templates/static_templates/cookies.html:39
+msgid ""
+"session cookies for multimedia players (e.g. flash player cookies) for the "
+"duration of the session (multimedia player session cookies),"
+msgstr ""
+"session cookies for multimedia players (e.g. flash player cookies) for the "
+"duration of the session (multimedia player session cookies),"
+
+#: lms/templates/static_templates/cookies.html:40
+msgid ""
+"persistent cookies used to personalize the user interface for the duration "
+"of the session or for a slightly longer period of time (user interface "
+"customization cookies),"
+msgstr ""
+"persistent cookies used to personalize the user interface for the duration "
+"of the session or for a slightly longer period of time (user interface "
+"customization cookies),"
+
+#: lms/templates/static_templates/cookies.html:41
+msgid ""
+"cookies used to monitor website traffic, i.e. data analytics, including "
+"Google Analytics cookies (files used by Google to analyze how the Website is"
+" used by the user, to create statistics and reports on the functioning of "
+"the Website). Google does not use the data collected to identify the user "
+"and does not combine this information to enable identification. Detailed "
+"information on the scope and principles of data collection in connection "
+"with this service can be found at: "
+msgstr ""
+"cookies used to monitor website traffic, i.e. data analytics, including "
+"Google Analytics cookies (files used by Google to analyze how the Website is"
+" used by the user, to create statistics and reports on the functioning of "
+"the Website). Google does not use the data collected to identify the user "
+"and does not combine this information to enable identification. Detailed "
+"information on the scope and principles of data collection in connection "
+"with this service can be found at: "
+
+#: lms/templates/static_templates/cookies.html:44
+msgid "Cookies are also used to:"
+msgstr "Cookies are also used to:"
+
+#: lms/templates/static_templates/cookies.html:47
+msgid ""
+"adjust the content stored on the webpages of the Website to user preferences"
+" and to optimize the use of the webpages; in particular, the files allow to "
+"recognize the device of Website users and to properly display a webpage "
+"adjusted to users' individual needs,"
+msgstr ""
+"adjust the content stored on the webpages of the Website to user preferences"
+" and to optimize the use of the webpages; in particular, the files allow to "
+"recognize the device of Website users and to properly display a webpage "
+"adjusted to users' individual needs,"
+
+#: lms/templates/static_templates/cookies.html:48
+msgid ""
+"create statistics which can help understand how Website users use the "
+"webpages, which makes it possible to improve their structure and content."
+msgstr ""
+"create statistics which can help understand how Website users use the "
+"webpages, which makes it possible to improve their structure and content."
+
+#: lms/templates/static_templates/cookies.html:51
+msgid ""
+"The data collected are not associated with any specific people browsing the "
+"Website, are not combined with other data and are not processed as personal "
+"data."
+msgstr ""
+"The data collected are not associated with any specific people browsing the "
+"Website, are not combined with other data and are not processed as personal "
+"data."
+
+#: lms/templates/static_templates/cookies.html:53
+msgid ""
+"The Website uses two basic types of cookie files: session cookies and "
+"persistent cookies. Session cookies are temporary files which are stored on "
+"the final device of the user up until the user  leaves the website or closes"
+" the software (web browser).  Persistent cookie files are stored on the "
+"final device of the user for a specified time as indicated in the parameters"
+" of cookie files or until they are deleted by the user."
+msgstr ""
+"The Website uses two basic types of cookie files: session cookies and "
+"persistent cookies. Session cookies are temporary files which are stored on "
+"the final device of the user up until the user  leaves the website or closes"
+" the software (web browser).  Persistent cookie files are stored on the "
+"final device of the user for a specified time as indicated in the parameters"
+" of cookie files or until they are deleted by the user."
+
+#: lms/templates/static_templates/cookies.html:55
+msgid ""
+"The data collected during the process described above are stored "
+"indefinitely as support material used to administer the Website. The "
+"information included therein is not disclosed to anyone except the persons "
+"authorized to administer the server and providing services to OPI PIB."
+msgstr ""
+"The data collected during the process described above are stored "
+"indefinitely as support material used to administer the Website. The "
+"information included therein is not disclosed to anyone except the persons "
+"authorized to administer the server and providing services to OPI PIB."
+
+#: lms/templates/static_templates/cookies.html:57
+msgid "Cookies used on the Website store no personal data."
+msgstr "Cookies used on the Website store no personal data."
+
+#: lms/templates/static_templates/cookies.html:59
+msgid "Links to other pages"
+msgstr "Links to other pages"
+
+#: lms/templates/static_templates/cookies.html:61
+msgid ""
+"The Website contains links to other websites. We cannot be held responsible "
+"for privacy practices of those websites. Before browsing other websites, we "
+"would recommend to read their privacy policy. This policy applies to the "
+"Website only."
+msgstr ""
+"The Website contains links to other websites. We cannot be held responsible "
+"for privacy practices of those websites. Before browsing other websites, we "
+"would recommend to read their privacy policy. This policy applies to the "
+"Website only."
+
+#: lms/templates/static_templates/cookies.html:63
+msgid "Turning off cookies"
+msgstr "Turning off cookies"
+
+#: lms/templates/static_templates/cookies.html:65
+msgid ""
+"The Website (web browser) allows cookies to be stored on the user's terminal"
+" device by default. Website Users can change cookie settings at any time. "
+"Specifically, the user may decide to block the automatic control of cookies "
+"in the settings of their web browser or to be informed at any one time about"
+" a cookie being saved on their device.  Detailed information on the "
+"possibilities and ways to control cookie files can be found in the software "
+"(web browser) settings."
+msgstr ""
+"The Website (web browser) allows cookies to be stored on the user's terminal"
+" device by default. Website Users can change cookie settings at any time. "
+"Specifically, the user may decide to block the automatic control of cookies "
+"in the settings of their web browser or to be informed at any one time about"
+" a cookie being saved on their device.  Detailed information on the "
+"possibilities and ways to control cookie files can be found in the software "
+"(web browser) settings."
+
+#: lms/templates/static_templates/cookies.html:67
+msgid ""
+"OPI PIB informs that the limitations in using cookie files may impact some "
+"of the functionalities of the Website."
+msgstr ""
+"OPI PIB informs that the limitations in using cookie files may impact some "
+"of the functionalities of the Website."
+
+#: lms/templates/static_templates/cookies.html:69
+msgid "Amendments"
+msgstr "Amendments"
+
+#: lms/templates/static_templates/cookies.html:71
+msgid ""
+"Should the current privacy policy be amended in any way, appropriate "
+"modifications to the provision above shall be made."
+msgstr ""
+"Should the current privacy policy be amended in any way, appropriate "
+"modifications to the provision above shall be made."
 
 #: lms/templates/static_templates/donate.html:5
 #: lms/templates/static_templates/donate.html:10
@@ -9216,15 +9909,538 @@ msgstr ""
 msgid "FAQ"
 msgstr "FAQ"
 
+#: lms/templates/static_templates/faq.html:24
+msgid "FAQ_Category1"
+msgstr "About"
+
+#: lms/templates/static_templates/faq.html:27
+msgid "FAQ_Question1.1"
+msgstr "What is Navoica?"
+
+#: lms/templates/static_templates/faq.html:27
+msgid "FAQ_Answer1.1"
+msgstr ""
+"Navoica is a Polish online learning platform offering free Massive Open "
+"Online Courses (MOOCs) taught by instructors from top universities and "
+"institutions. Navoica’s aim is to reach anyone willing to learn – regardless"
+" of age or place of residence."
+
+#: lms/templates/static_templates/faq.html:28
+msgid "FAQ_Question1.2"
+msgstr "Who is Navoica’s owner?"
+
+#: lms/templates/static_templates/faq.html:28
+msgid "FAQ_Answer1.2"
+msgstr ""
+"The Ministry of Science and Higher Education with headquarters in Warsaw, "
+"Wspólna 1/3."
+
+#: lms/templates/static_templates/faq.html:29
+msgid "FAQ_Question1.3"
+msgstr "Does Navoica offer online studies?"
+
+#: lms/templates/static_templates/faq.html:29
+msgid "FAQ_Answer1.3"
+msgstr ""
+"At present, Navoica offers only open online courses. We do not rule out the "
+"possibility that one day courses will be included in universities’ "
+"curricula. "
+
+#: lms/templates/static_templates/faq.html:30
+msgid "FAQ_Question1.4"
+msgstr "Where does the name \"Navoica\" come from?"
+
+#: lms/templates/static_templates/faq.html:30
+msgid "FAQ_Answer1.4"
+msgstr ""
+"The name of the platform comes from Nawojka who, according to the legend, "
+"was the first female student to ever attend a university in Poland. She "
+"attended the Academy of Cracow in 15th century.  "
+
+#: lms/templates/static_templates/faq.html:33
+msgid "FAQ_Category2"
+msgstr "Courses"
+
+#: lms/templates/static_templates/faq.html:36
+msgid "FAQ_Question2.1"
+msgstr "How can I sign up for a course?"
+
+#: lms/templates/static_templates/faq.html:36
+msgid "FAQ_Answer2.1"
+msgstr ""
+"To sign up for a course, you must register and then log in to Navoica "
+"platform, search for a course and then in the course label (a tab with a "
+"description and information about the course), click on a large red button "
+"\"Take a course\". Bear in mind that you can only sign up for a given course"
+" when the enrolment is open."
+
+#: lms/templates/static_templates/faq.html:37
+msgid "FAQ_Question2.2"
+msgstr "How much does it cost to take a course?"
+
+#: lms/templates/static_templates/faq.html:37
+msgid "FAQ_Answer2.2"
+msgstr ""
+"All of the courses on Navoica are free. We do not charge for registration, "
+"enrolment, participation or issuing certificates. "
+
+#: lms/templates/static_templates/faq.html:38
+msgid "FAQ_Question2.3"
+msgstr ""
+"Do I need to provide any documents (such as graduation certificate) to "
+"attend a course?"
+
+#: lms/templates/static_templates/faq.html:38
+msgid "FAQ_Answer2.3"
+msgstr ""
+"No, you can attend courses regardless of your age, education and "
+"professional status. You do not have to provide any documents."
+
+#: lms/templates/static_templates/faq.html:39
+msgid "FAQ_Question2.4"
+msgstr ""
+"I missed the deadline for enrolling on a course. Will the course be "
+"available in the future?"
+
+#: lms/templates/static_templates/faq.html:39
+msgid "FAQ_Answer2.4"
+msgstr ""
+"All courses are available in more than one edition, so we recommend "
+"regularly checking the course catalogue or follow our social media to learn "
+"about a course’s next editions’ dates."
+
+#: lms/templates/static_templates/faq.html:40
+msgid "FAQ_Question2.5"
+msgstr "I signed up for a course but I don't see its content. Why?"
+
+#: lms/templates/static_templates/faq.html:40
+msgid "FAQ_Answer2.5"
+msgstr ""
+"Typically, enrolments for a course are open before the course start date to "
+"allow as many participants as possible to attend it. It is worth checking "
+"the start date on the course subpage."
+
+#: lms/templates/static_templates/faq.html:41
+msgid "FAQ_Question2.6"
+msgstr "How many courses can I attend simultaneously?"
+
+#: lms/templates/static_templates/faq.html:41
+msgid "FAQ_Answer2.6"
+msgstr ""
+"There are no restrictions on the number of courses you can attend. However, "
+"it is worth enrolling only for as many courses as you can actually finish."
+
+#: lms/templates/static_templates/faq.html:42
+msgid "FAQ_Question2.7"
+msgstr ""
+"I am interested in a course in a specific field. Can I count on increasing "
+"the course offer?"
+
+#: lms/templates/static_templates/faq.html:42
+msgid "FAQ_Answer2.7"
+msgstr ""
+"We are constantly working to expand the number of courses, so we encourage "
+"you to look at the course catalogue or follow Navoica on social media to "
+"stay up to date. "
+
+#: lms/templates/static_templates/faq.html:43
+msgid "FAQ_Question2.8"
+msgstr "Can I contact course staff by phone or email?"
+
+#: lms/templates/static_templates/faq.html:43
+msgid "FAQ_Answer2.8"
+msgstr ""
+"Courses on Navoica are massive – there is no limit of enrolled students. "
+"Therefore, we do not provide direct phone number nor email to contact course"
+" staffs. However, you may contact the course trainers by posting your "
+"question in the Discussion forum of every course. "
+
+#: lms/templates/static_templates/faq.html:44
+msgid "FAQ_Question2.9"
+msgstr "What should I do if I found an error in the content of a course?"
+
+#: lms/templates/static_templates/faq.html:44
+msgid "FAQ_Answer2.9"
+msgstr ""
+"If you find a substantive or technical error in the content of the course, "
+"we would appreciate you informing the course staff in the Discussion forum "
+"of the course."
+
 #: lms/templates/static_templates/faq.html:45
+msgid "FAQ_Question2.10"
+msgstr ""
+"What should I do if I don’t understand an issue from a course and I need "
+"help?"
+
+#: lms/templates/static_templates/faq.html:45
+msgid "FAQ_Answer2.10"
+msgstr ""
+"Questions about the course and its content should be published in the "
+"Discussion forum of the course."
+
+#: lms/templates/static_templates/faq.html:46
+msgid "FAQ_Question2.11"
+msgstr ""
+"Does participation in a course and/or a final examination require arriving "
+"at a university?  "
+
+#: lms/templates/static_templates/faq.html:46
+msgid "FAQ_Answer2.11"
+msgstr "No, all of courses are held online via Navoica platform."
+
+#: lms/templates/static_templates/faq.html:47
+msgid "FAQ_Question2.12"
+msgstr "Can I unenroll from a course?"
+
+#: lms/templates/static_templates/faq.html:47
+msgid "FAQ_Answer2.12"
+msgstr ""
+"Yes, you can. To leave a course, you go to “My courses” and then select a "
+"red button “Unenroll” (bottom right corner of the label). "
+
+#: lms/templates/static_templates/faq.html:48
+msgid "FAQ_Question2.13"
+msgstr ""
+"Can I copy and use parts of a course content such as videos, photos, texts?"
+
+#: lms/templates/static_templates/faq.html:48
+msgid "FAQ_Answer2.13"
+msgstr ""
+"In the bottom right corner of each screen with the content of the course, "
+"you may find information about the content license and whether it is allowed"
+" to copy course parts. Please note that in most cases, the content is "
+"copyrighted and cannot be copied or distributed."
+
+#: lms/templates/static_templates/faq.html:51
+msgid "FAQ_Category3"
+msgstr "Technical issues"
+
+#: lms/templates/static_templates/faq.html:54
+msgid "FAQ_Question3.1"
+msgstr "Something isn’t working on Navoica. How can I get help?"
+
+#: lms/templates/static_templates/faq.html:54
+msgid "FAQ_Answer3.1"
+msgstr ""
+"Our specialists from Help Center are at your disposal and will help you "
+"solve any technical problem related to using the platform. We also accept "
+"your comments, ideas and feedback. Send us an e-mail at "
+"mooc_help@opi.org.pl."
+
+#: lms/templates/static_templates/faq.html:55
+msgid "FAQ_Question3.2"
+msgstr ""
+"I registered on the platform, but I did not receive an activation email. "
+
+#: lms/templates/static_templates/faq.html:55
+msgid "FAQ_Answer3.2"
+msgstr ""
+"Please check the spam folder. If you didn’t receive the message, please "
+"contact our Help Center by sending us an e-mail at mooc_help@opi.org.pl. "
+"Alternatively, you may try solving the problem yourself: enter the “Log in” "
+"page, click “Forgot password?” button and type the e-mail address you "
+"registered with. You will most likely receive a message asking you to reset "
+"your password and after typing a new password, you will activate your "
+"account at Navoica. "
+
+#: lms/templates/static_templates/faq.html:56
+msgid "FAQ_Question3.3"
+msgstr ""
+"When I enter Navoica, I see a message that my web browser is unsupported or "
+"is in the out-of-date version. What can I do?"
+
+#: lms/templates/static_templates/faq.html:56
+msgid "FAQ_Answer3.3"
+msgstr ""
+"We recommend browsing Navoica in Chrome, Firefox, Edge or Safari (all updated to the latest version). We do not recommend using Opera or Internet Explorer because they are currently unsupported. We also advise against older versions of Chrome, Firefox, Edge, and Safari. Using unsupported browsers can cause technical problems in platform’s functionalities. \n"
+"Supported browsers: Edge 43 or higher, Google Chrome 70 or higher, Mozilla Firefox 61 or higher, Safari 12 or higher."
+
+#: lms/templates/static_templates/faq.html:57
+msgid "FAQ_Question3.4"
+msgstr ""
+"Videos in the course content keep “freezing”. What can I do make the videos "
+"play smoothly? "
+
+#: lms/templates/static_templates/faq.html:57
+msgid "FAQ_Answer3.4"
+msgstr ""
+"By default, videos in the course content are played in the highest available"
+" quality which requires higher Internet speed. You can change the quality to"
+" lower by clicking on the \"Quality\" button in the bottom bar and choosing "
+"a lower quality (for example, instead of HD720p choose 480p)."
+
+#: lms/templates/static_templates/faq.html:60
+msgid "FAQ_Category4"
+msgstr "Certificates"
+
+#: lms/templates/static_templates/faq.html:63
+msgid "FAQ_Question4.1"
+msgstr ""
+"Will I receive a diploma, a certificate or a document confirming my "
+"knowledge after completing the course?"
+
+#: lms/templates/static_templates/faq.html:63
+msgid "FAQ_Answer4.1"
+msgstr ""
+"Completing a course and meeting all the course criteria allows you to "
+"receive an electronically generated certificate, which is also a "
+"downloadable PDF file and can be printed. "
+
+#: lms/templates/static_templates/faq.html:64
+msgid "FAQ_Question4.2"
+msgstr "I completed a course. When will I receive a certificate?"
+
+#: lms/templates/static_templates/faq.html:64
+msgid "FAQ_Answer4.2"
+msgstr ""
+"Certificates are usually generated within 24 hours (up to 30 days) after "
+"completing the course and reaching the examination pass mark. Information on"
+" the assessment and credit policy of a given course – including certificate "
+"generation – is included in each course’s label."
+
+#: lms/templates/static_templates/faq.html:65
+msgid "FAQ_Question4.3"
+msgstr "I completed a course. Where can I find my certificate?"
+
+#: lms/templates/static_templates/faq.html:65
+msgid "FAQ_Answer4.3"
+msgstr ""
+"If the certificate has already been generated, it is available in \"My "
+"Courses\" under the \"View course\" button."
+
+#: lms/templates/static_templates/faq.html:66
+msgid "FAQ_Question4.4"
+msgstr "What should I do if there are errors on my certificate?"
+
+#: lms/templates/static_templates/faq.html:66
+msgid "FAQ_Answer4.4"
+msgstr ""
+"If there is an error in your name or last name, verify whether the personal "
+"data you provided during registration is correct. If you see a different "
+"type of error, contact our Help Center by sending an email at "
+"mooc_help@opi.org.pl."
+
+#: lms/templates/static_templates/faq.html:67
+msgid "FAQ_Question4.5"
+msgstr "Can I receive a printed certificate? "
+
+#: lms/templates/static_templates/faq.html:67
+msgid "FAQ_Answer4.5"
+msgstr ""
+"All the certificates on the Navoica are electronically generated but you can"
+" download your certificate as a PDF file and print it yourself."
+
+#: lms/templates/static_templates/faq.html:70
+msgid "FAQ_Category5"
+msgstr "Account"
+
+#: lms/templates/static_templates/faq.html:73
+msgid "FAQ_Question5.1"
+msgstr "How do I delete my account on Navoica?"
+
+#: lms/templates/static_templates/faq.html:73
+msgid "FAQ_Answer5.1"
+msgstr ""
+"Due to technical circumstances, we do not provide the possibility to delete "
+"your account by yourself for the time being. To delete your account, please "
+"contact our Help Center at mooc_help@opi.org.pl. Provide your email address "
+"and username. Be sure to use the email address you registered with on the "
+"platform so that we can verify that you own the account you want to delete."
+
+#: lms/templates/static_templates/faq.html:76
+msgid "FAQ_Category6"
+msgstr "Contact"
+
+#: lms/templates/static_templates/faq.html:79
+msgid "FAQ_Question6.1"
+msgstr "I have a technical problem, how can I get help?"
+
+#: lms/templates/static_templates/faq.html:79
+msgid "FAQ_Answer6.1"
+msgstr ""
+"You can contact us about technical issues via e-mail: mooc_help@opi.org.pl"
+
+#: lms/templates/static_templates/faq.html:80
+msgid "FAQ_Question6.2"
+msgstr "I have a general question, how can I get help?"
+
+#: lms/templates/static_templates/faq.html:80
+msgid "FAQ_Answer6.2"
+msgstr ""
+"All general questions can be sent to the following e-mail address: "
+"navoica@opi.org.pl"
+
+#: lms/templates/static_templates/faq.html:93
+#: lms/templates/static_templates/faq.html:112
+msgid "Category"
+msgstr "Category"
+
+#: lms/templates/static_templates/faq.html:112
 msgid "show answers"
 msgstr "show answers"
 
-#: lms/templates/static_templates/honor.html:5
-#: themes/stanford-style/lms/templates/footer.html:20
-#: themes/stanford-style/lms/templates/static_templates/tos.html:18
-msgid "Honor Code"
-msgstr "Honor Code"
+#: lms/templates/static_templates/honor.html:13
+msgid ""
+"By enrolling in a course offered on Navoica platform you join the "
+"international community of learners. Our aspiration is to enable every user "
+"in the world who has access to the Internet to take part in courses prepared"
+" by the best universities and educational institutions from Poland and "
+"provide top quality teaching. By logging in to Navoica platform you become a"
+" part of this community. Our success depends to a large extent on your "
+"motivation to learn and your fully honest and fair use of the Platform's "
+"resources. A prerequisite for joining any course is that you accept the "
+"terms of this Code of Honour and any additional terms and conditions set out"
+" for your specific course or study programme. This Code of Honour, like any "
+"additional regulations accompanying the course, is published on the course's"
+" page."
+msgstr ""
+"By enrolling in a course offered on Navoica Platform you join the "
+"international community of learners. Our aspiration is to enable every user "
+"in the world who has access to the Internet to take part in courses prepared"
+" by the best universities and educational institutions from Poland and "
+"provide top quality teaching. By logging in to Navoica Platform you become a"
+" part of this community. Our success depends to a large extent on your "
+"motivation to learn and your fully honest and fair use of the Platform's "
+"resources. A prerequisite for joining any course is that you accept the "
+"terms of this Code of Honor and any additional terms and conditions set out "
+"for your specific course or study programme. This Code of Honor, like any "
+"additional regulations accompanying the course, is published on the course's"
+" page."
+
+#: lms/templates/static_templates/honor.html:16
+msgid "My pledge"
+msgstr "My pledge"
+
+#: lms/templates/static_templates/honor.html:19
+msgid "By enrolling in a course on the Navoica platform I undertake:"
+msgstr "By enrolling in a course on the Navoica Platform I undertake:"
+
+#: lms/templates/static_templates/honor.html:22
+msgid ""
+"to carry out all activities designed to test my knowledge and skills on my "
+"own, without any participation or assistance of third parties, except when "
+"the activity will allow for group work."
+msgstr ""
+"to carry out all activities designed to test my knowledge and skills on my "
+"own, without any participation or assistance of third parties, except when "
+"the activity will allow for group work."
+
+#: lms/templates/static_templates/honor.html:23
+msgid ""
+"to keep only one account on Navoica platform and not to share my login and "
+"password with anyone."
+msgstr ""
+"to keep only one account on Navoica Platform and not to share my login and "
+"password with anyone."
+
+#: lms/templates/static_templates/honor.html:24
+msgid ""
+"not to engage in any activity that could unfairly or dishonestly impact my "
+"academic performance or the performance of other users of the platform."
+msgstr ""
+"not to engage in any activity that could unfairly or dishonestly impact my "
+"academic performance or the performance of other users of the Platform."
+
+#: lms/templates/static_templates/honor.html:25
+msgid ""
+"not to provide public access by any means to the answers to the evaluation "
+"tasks used to evaluate Navoica students' performance on their courses."
+msgstr ""
+"not to provide public access by any means to the answers to the evaluation "
+"tasks used to evaluate Navoica students' performance on their courses."
+
+#: lms/templates/static_templates/honor.html:28
+msgid "Consequences of violation of the Code of Honour"
+msgstr "Consequences of violation of the Code of Honor"
+
+#: lms/templates/static_templates/honor.html:31
+msgid ""
+"The following actions may be taken against any Navoica platform user who "
+"violates the Code of Honour:"
+msgstr ""
+"The following actions may be taken against any Navoica platform user who "
+"violates the Code of Honor:"
+
+#: lms/templates/static_templates/honor.html:34
+msgid ""
+"No points awarded to the user for solving a task as part of the course."
+msgstr ""
+"No points awarded to the user for solving a task as part of the course."
+
+#: lms/templates/static_templates/honor.html:35
+msgid ""
+"Withholding or withdrawing a certificate received at the end of a course or "
+"course programme."
+msgstr ""
+"Withholding or withdrawing a certificate received at the end of a course or "
+"course programme."
+
+#: lms/templates/static_templates/honor.html:36
+msgid ""
+"Removal of the user in breach of the Code of Honour from the course or "
+"programme of courses."
+msgstr ""
+"Removal of the user in breach of the Code of Honor from the course or "
+"programme of courses."
+
+#: lms/templates/static_templates/honor.html:37
+msgid "Deletion of the user's Navoica platform account."
+msgstr "Deletion of the user's Navoica Platform account."
+
+#: lms/templates/static_templates/honor.html:38
+msgid ""
+"Additional actions may be taken by the Navoica platform operator or the "
+"course provider."
+msgstr ""
+"Additional actions may be taken by the Navoica Platform operator or the "
+"course provider."
+
+#: lms/templates/static_templates/honor.html:39
+msgid ""
+"In the event of a breach of the Code of Honour, no refund will be granted to"
+" the user for any costs they may have incurred in connection with the "
+"course."
+msgstr ""
+"In the event of a breach of the Code of Honor, no refund will be granted to "
+"the user for any costs they may have incurred in connection with the course."
+
+#: lms/templates/static_templates/honor.html:40
+msgid ""
+"Any violations of the Code of Honour will be communicated to the relevant "
+"course provider in a private and confidential message. At the same time, the"
+" violating user will be informed that his/her breach of the provisions of "
+"the Code of Honour has been detected, and that actions have been taken in "
+"connection with the breach."
+msgstr ""
+"Any violations of the Code of Honor will be communicated to the relevant "
+"course provider in a private and confidential message. At the same time, the"
+" violating user will be informed that his/her breach of the provisions of "
+"the Code of Honor has been detected, and that actions have been taken in "
+"connection with the breach."
+
+#: lms/templates/static_templates/honor.html:43
+msgid "Changes to this Code of Honour"
+msgstr "Changes to this Code of Honor"
+
+#: lms/templates/static_templates/honor.html:46
+msgid ""
+"As the operator of Navoica platform, we reserve the right to amend the "
+"provisions of this Code of Honour. Any changes will take effect immediately "
+"after they are posted on the Navoica website together with their date of "
+"implementation. By expressing consent to the provisions of the Code of "
+"Honour before entering the course, the user also agrees to comply with "
+"prospective provisions. Please check the current version of the Code of "
+"Honour, especially in situations where there may be any concerns about the "
+"activities to be undertaken as part of the course."
+msgstr ""
+"As the operator of Navoica platform, we reserve the right to amend the "
+"provisions of this Code of Honor. Any changes will take effect immediately "
+"after they are posted on the Navoica website together with their date of "
+"implementation. By expressing consent to the provisions of the Code of Honor"
+" before entering the course, the user also agrees to comply with prospective"
+" provisions. Please check the current version of the Code of Honor, "
+"especially in situations where there may be any concerns about the "
+"activities to be undertaken as part of the course."
 
 #: lms/templates/static_templates/jobs.html:5
 #: lms/templates/static_templates/jobs.html:10
@@ -9232,14 +10448,14 @@ msgstr "Honor Code"
 msgid "Jobs"
 msgstr "Jobs"
 
-#: lms/templates/static_templates/legend.html:5
-#: lms/templates/static_templates/legend.html:10
-#: lms/templates/static_templates/legend.html:17
+#: lms/templates/static_templates/legend.html:6
+#: lms/templates/static_templates/legend.html:11
+#: lms/templates/static_templates/legend.html:21
 msgid "Legend_title"
 msgstr "The legend of Nawojka"
 
-#: lms/templates/static_templates/legend.html:11
-#: lms/templates/static_templates/legend.html:21
+#: lms/templates/static_templates/legend.html:12
+#: lms/templates/static_templates/legend.html:25
 msgid "Legend_quotation"
 msgstr ""
 "In the fall of 1414, fifteen-year-old Jakub, the son of Dominik, enrolled in"
@@ -9247,18 +10463,18 @@ msgstr ""
 "revealed after three years. Nawojka – because that was the inhabitant of "
 "Great Poland’s real name – was the first Polish female student."
 
-#: lms/templates/static_templates/legend.html:23
+#: lms/templates/static_templates/legend.html:27
 msgid "Legend_author"
 msgstr ""
 "Leszek Mazdan and Mieczysław Czuma “Pępek świata nazywa się Kraków” (“The "
 "hub of the universe is called Kraków”)"
 
-#: lms/templates/static_templates/legend.html:25
-#: lms/templates/static_templates/legend.html:30
+#: lms/templates/static_templates/legend.html:29
+#: lms/templates/static_templates/legend.html:34
 msgid "Navoica avatar"
 msgstr "Navoica avatar"
 
-#: lms/templates/static_templates/legend.html:27
+#: lms/templates/static_templates/legend.html:31
 msgid "Legend_paragraph_1"
 msgstr ""
 "Legend has it, Nawojka received basic education at home where she learned "
@@ -9273,7 +10489,7 @@ msgstr ""
 "and an explanation that she had committed this sin \"out of love for "
 "learning\". To atone for her actions, she was sent to a monastery."
 
-#: lms/templates/static_templates/legend.html:28
+#: lms/templates/static_templates/legend.html:32
 msgid "Legend_paragraph_2"
 msgstr ""
 "According to a different version of the legend, Nawojka came from Płomiany "
@@ -9285,7 +10501,7 @@ msgstr ""
 "not particularly fond of books, but because Nawojka was an extremely "
 "talented student, Jakub did not mind his sister to impersonate him."
 
-#: lms/templates/static_templates/legend.html:29
+#: lms/templates/static_templates/legend.html:33
 msgid "Legend_paragraph_3"
 msgstr ""
 "The newspaper “Słowo Polskie” called her “the first Polish suffragette” in "
@@ -9304,6 +10520,547 @@ msgstr "Media Kit"
 #: lms/templates/static_templates/press.html:11
 msgid "In the Press"
 msgstr "In the Press"
+
+#: lms/templates/static_templates/privacy.html:14
+msgid "Privacy policy of the NAVOICA Educational Platform"
+msgstr "Privacy policy of the NAVOICA Educational Platform"
+
+#: lms/templates/static_templates/privacy.html:21
+msgid "General provisions"
+msgstr "General provisions"
+
+#: lms/templates/static_templates/privacy.html:24
+msgid ""
+"Protection of natural persons in connection with processing of their "
+"personal data is one of the basic rights of each data subject. The National "
+"Information Processing Institute pays particular attention to respecting the"
+" privacy of data subjects whose data are processed, regardless of whether "
+"the data have been acquired directly from a data subject or from other "
+"sources. This privacy policy (hereinafter referred to as 'Policy') provides "
+"persons whose data are processed in connection with the use of the NAVOICA "
+"Educational Platform with information on how their data are acquired, "
+"processed and secured. The Policy contains basic information on data "
+"processing and data protection.If other rules than those specified in the "
+"Policy are applied, you will be informed about them on a case by case basis."
+msgstr ""
+"Protection of natural persons in connection with processing of their "
+"personal data is one of the basic rights of each data subject. The National "
+"Information Processing Institute pays particular attention to respecting the"
+" privacy of data subjects whose data are processed, regardless of whether "
+"the data have been acquired directly from a data subject or from other "
+"sources. This privacy policy (hereinafter referred to as 'Policy') provides "
+"persons whose data are processed in connection with the use of the NAVOICA "
+"Platform with information on how their data are acquired, processed and "
+"secured. The Policy contains basic information on data processing and data "
+"protection.If other rules than those specified in the Policy are applied, "
+"you will be informed about them on a case by case basis."
+
+#: lms/templates/static_templates/privacy.html:27
+msgid "Personal data controller"
+msgstr "Personal data controller"
+
+#: lms/templates/static_templates/privacy.html:30
+msgid ""
+"The personal data controller responsible for the data processed in "
+"connection with the service related to the user's account on the NAVOICA "
+"Educational Platform or in connection with any sent or received "
+"correspondence shall be the National Information Processing Institute "
+"(hereinafter referred to as 'OPI PIB') headquartered in Warsaw at the "
+"following address: al. Niepodleg\\u0142o\\u015bci 188b, entered in the "
+"Register of Entrepreneurs maintained by the Regional Court for the capital "
+"city of Warsaw, Commercial Court, 12th Commercial Division of the National "
+"Court Register, under No. 0000127372, tax identification number (NIP): "
+"525-000-91-40, business entity statistical number (REGON): 006746090."
+msgstr ""
+"The personal data controller responsible for the data processed in "
+"connection with the service related to the user's account on the NAVOICA "
+"Platform or in connection with any sent or received correspondence shall be "
+"the National Information Processing Institute (hereinafter referred to as "
+"'OPI PIB') headquartered in Warsaw at the following address: al. "
+"Niepodleg\\u0142o\\u015bci 188b, entered in the Register of Entrepreneurs "
+"maintained by the Regional Court for the capital city of Warsaw, Commercial "
+"Court, 12th Commercial Division of the National Court Register, under No. "
+"0000127372, tax identification number (NIP): 525-000-91-40, business entity "
+"statistical number (REGON): 006746090."
+
+#: lms/templates/static_templates/privacy.html:34
+msgid "The personal data administrator may be contacted by e-mail: "
+msgstr "The personal data administrator may be contacted by e-mail: "
+
+#: lms/templates/static_templates/privacy.html:36
+msgid ""
+"by phone: 22 570 14 00 or by post: O\\u015brodek Przetwarzania Informacji "
+"\\u2013 Pa\\u0144stwowy Instytut Badawczy, al. Niepodleg\\u0142o\\u015bci "
+"188b, 00-608 Warszawa."
+msgstr ""
+"by phone: 22 570 14 00 or by post: O\\u015brodek Przetwarzania Informacji "
+"\\u2013 Pa\\u0144stwowy Instytut Badawczy, al. Niepodleg\\u0142o\\u015bci "
+"188b, 00-608 Warszawa."
+
+#: lms/templates/static_templates/privacy.html:40
+msgid ""
+"The personal data administrators responsible for the data that concern "
+"participants and that are processed in connection with their participation "
+"in the courses offered on the platform shall be the entities that have "
+"uploaded the information on such courses and that organize such courses, "
+"e.g. universities, research institutes, entities uploading the information "
+"on the courses (so-called educational units within the meaning of the terms "
+"of use of the NAVOICA platform).In the case of these data OPI PIB shall be "
+"identified as the processor."
+msgstr ""
+"The personal data administrators responsible for the data that concern "
+"participants and that are processed in connection with their participation "
+"in the courses offered on the platform shall be the entities that have "
+"uploaded the information on such courses and that organize such courses, "
+"e.g. universities, research institutes, entities uploading the information "
+"on the courses (so-called educational units within the meaning of the terms "
+"of use of the NAVOICA platform).In the case of these data OPI PIB shall be "
+"identified as the processor."
+
+#: lms/templates/static_templates/privacy.html:43
+msgid "Data protection officer"
+msgstr "Data protection officer"
+
+#: lms/templates/static_templates/privacy.html:46
+msgid ""
+"The personal data controller has appointed the data protection officer. The "
+"data protection officer may be contacted by e-mail:"
+msgstr ""
+"The personal data controller has appointed the data protection officer. The "
+"data protection officer may be contacted by e-mail:"
+
+#: lms/templates/static_templates/privacy.html:48
+msgid ""
+"or by post: O\\u015brodek Przetwarzania Informacji \\u2013 Pa\\u0144stwowy "
+"Instytut Badawczy, 'IOD', al. Niepodleg\\u0142o\\u015bci 188b, 00-608 "
+"Warszawa."
+msgstr ""
+"or by post: O\\u015brodek Przetwarzania Informacji \\u2013 Pa\\u0144stwowy "
+"Instytut Badawczy, 'IOD', al. Niepodleg\\u0142o\\u015bci 188b, 00-608 "
+"Warszawa."
+
+#: lms/templates/static_templates/privacy.html:51
+msgid "Legal regulations, grounds for data processing"
+msgstr "Legal regulations, grounds for data processing"
+
+#: lms/templates/static_templates/privacy.html:53
+msgid ""
+"The OPI PIB privacy policy of the NAVOICA Educational Platform is based on "
+"the following legal documents:"
+msgstr ""
+"The OPI PIB privacy policy of the NAVOICA Platform is based on the following"
+" legal documents:"
+
+#: lms/templates/static_templates/privacy.html:58
+msgid ""
+"Regulation (EU) 2016/679 of the European Parliament and of the Council of 27"
+" April 2016 on the protection of natural persons with regard to the "
+"processing of personal data and on the free movement of such data, and "
+"repealing Directive 95/46/EC (General Data Protection Regulation) (OJ L No. "
+"119, p. 1) \\u2013 hereinafter referred to as 'GDPR',"
+msgstr ""
+"Regulation (EU) 2016/679 of the European Parliament and of the Council of 27"
+" April 2016 on the protection of natural persons with regard to the "
+"processing of personal data and on the free movement of such data, and "
+"repealing Directive 95/46/EC (General Data Protection Regulation) (OJ L No. "
+"119, p. 1) \\u2013 hereinafter referred to as 'GDPR',"
+
+#: lms/templates/static_templates/privacy.html:61
+msgid ""
+"Act of 10 May 2018 on Personal Data Protection (Polish Journal of Laws of "
+"2019, item 1781),"
+msgstr ""
+"Act of 10 May 2018 on Personal Data Protection (Polish Journal of Laws of "
+"2019, item 1781),"
+
+#: lms/templates/static_templates/privacy.html:64
+msgid ""
+"Telecommunications Act of 16 July 2004 (Polish Journal of Laws of 2019, item"
+" 2460, as amended),"
+msgstr ""
+"Telecommunications Act of 16 July 2004 (Polish Journal of Laws of 2019, item"
+" 2460, as amended),"
+
+#: lms/templates/static_templates/privacy.html:67
+msgid ""
+"Electronic Services Act of 18 July 2002 (Polish Journal of Laws of 2020, "
+"item 344, as amended),"
+msgstr ""
+"Electronic Services Act of 18 July 2002 (Polish Journal of Laws of 2020, "
+"item 344, as amended),"
+
+#: lms/templates/static_templates/privacy.html:70
+msgid ""
+"Act on Higher Education and Science of 20 July 2018 (Polish Journal of Laws "
+"of 2020, item 85, as amended),"
+msgstr ""
+"Act on Higher Education and Science of 20 July 2018 (Polish Journal of Laws "
+"of 2020, item 85, as amended),"
+
+#: lms/templates/static_templates/privacy.html:73
+msgid ""
+"Act on Research Institutes of 30 April 2010 (Polish Journal of Laws of 2018,"
+" item 736)."
+msgstr ""
+"Act on Research Institutes of 30 April 2010 (Polish Journal of Laws of 2018,"
+" item 736)."
+
+#: lms/templates/static_templates/privacy.html:78
+msgid ""
+"All personal data processed in connection with the use of the NAVOICA "
+"Educational Platform shall be processed under Article 6 paragraph 1 point "
+"(b) of GDPR - the data are necessary to conclude and to perform the contract"
+" related to the use of the NAVOICA Educational Platform services (provision "
+"of the service in accordance with the Terms of Use of the NAVOICA platform)."
+" Personal data of Users representing an Educational unit are processed on "
+"the basis of the premise specified in Article 6 paragraph 1 point (f) of "
+"GDPR, as the controller's legitimate interest to perform the contract."
+msgstr ""
+"All personal data processed in connection with the use of the NAVOICA "
+"Platform shall be processed under Article 6 paragraph 1 point (b) of GDPR - "
+"the data are necessary to conclude and to perform the contract related to "
+"the use of the NAVOICA Platform services (provision of the service in "
+"accordance with the Terms of Use of the NAVOICA Platform). Personal data of "
+"Users representing an Educational unit are processed on the basis of the "
+"premise specified in Article 6 paragraph 1 point (f) of GDPR, as the "
+"controller's legitimate interest to perform the contract."
+
+#: lms/templates/static_templates/privacy.html:81
+msgid "Categories, scope and purpose of data processing"
+msgstr "Categories, scope and purpose of data processing"
+
+#: lms/templates/static_templates/privacy.html:84
+msgid ""
+"Personal data on the NAVOICA Educational Platform are processed only for "
+"specific and lawful purposes referred to in detail in the 'Terms of Use of "
+"the NAVOICA Platform' and the 'Code of Honor'. The main purpose of the "
+"processing is to make it possible for every user in the world who has access"
+" to the Internet to take part in courses prepared by the best universities "
+"and educational institutions in Poland and to provide top quality education "
+"services. The scope of personal data, including the name and surname as well"
+" as the e-mail address, is necessary for registration of an account on the "
+"NAVOICA Educational Platform, provision of the services offered by the "
+"Platform, possible establishment, assertion or defense of claims, explaining"
+" the circumstances of unauthorized use of the services provided "
+"electronically, making copies and storing data. Providing other data, e.g. "
+"country of origin, level of education, gender or year of birth, is not "
+"obligatory and is used only for statistical purposes. Data are also "
+"collected automatically in the case of data contained in system logs and "
+"cookies."
+msgstr ""
+"Personal data on the NAVOICA Platform are processed only for specific and "
+"lawful purposes referred to in detail in the 'Terms of Use of the NAVOICA "
+"Platform' and the 'Code of Honor'. The main purpose of the processing is to "
+"make it possible for every user in the world who has access to the Internet "
+"to take part in courses prepared by the best universities and educational "
+"institutions in Poland and to provide top quality education services. The "
+"scope of personal data, including the name and surname as well as the e-mail"
+" address, is necessary for registration of an account on the NAVOICA "
+"Platform, provision of the services offered by the Platform, possible "
+"establishment, assertion or defense of claims, explaining the circumstances "
+"of unauthorized use of the services provided electronically, making copies "
+"and storing data. Providing other data, e.g. country of origin, level of "
+"education, gender or year of birth, is not obligatory and is used only for "
+"statistical purposes. Data are also collected automatically in the case of "
+"data contained in system logs and cookies."
+
+#: lms/templates/static_templates/privacy.html:88
+msgid "Data recipients"
+msgstr "Data recipients"
+
+#: lms/templates/static_templates/privacy.html:91
+msgid ""
+"Under relevant agreements, the controller may transfer your data or entrust "
+"the task of their  processing to recipients providing advisory, legal, "
+"auditing or IT services, as well as substantive and technical support for "
+"the NAVOICA Educational Platform. Furthermore, the data may be made "
+"available to public administration authorities in connection with their "
+"tasks performed under the rules of law. The data may also be made available "
+"to educational units to confirm participation in the course."
+msgstr ""
+"Under relevant agreements, the controller may transfer your data or entrust "
+"the task of their  processing to recipients providing advisory, legal, "
+"auditing or IT services, as well as substantive and technical support for "
+"the NAVOICA Platform. Furthermore, the data may be made available to public "
+"administration authorities in connection with their tasks performed under "
+"the rules of law. The data may also be made available to educational units "
+"to confirm participation in the course."
+
+#: lms/templates/static_templates/privacy.html:94
+msgid "Data storage period"
+msgstr "Data storage period"
+
+#: lms/templates/static_templates/privacy.html:97
+msgid ""
+"The data processed in connection with the use of the account service on the "
+"NAVOICA Educational Platform will be stored throughout the period during "
+"which this service is provided, but no longer than until the claims under "
+"this title are time barred. In the case of correspondence sent by e-mail or "
+"via the contact form the data will be stored until either the objection is "
+"raised, or the consent is withdrawn, or the purpose of the processing "
+"ceases, but for no longer than 3 years."
+msgstr ""
+"The data processed in connection with the use of the account service on the "
+"NAVOICA Platform will be stored throughout the period during which this "
+"service is provided, but no longer than until the claims under this title "
+"are time barred. In the case of correspondence sent by e-mail or via the "
+"contact form the data will be stored until either the objection is raised, "
+"or the consent is withdrawn, or the purpose of the processing ceases, but "
+"for no longer than 3 years."
+
+#: lms/templates/static_templates/privacy.html:100
+msgid "Rights of data subjects"
+msgstr "Rights of data subjects"
+
+#: lms/templates/static_templates/privacy.html:103
+msgid ""
+"A data subject whose personal data are processed on the NAVOICA Educational "
+"Platform, excluding the exceptions as stated in the rules of law, is "
+"entitled to:"
+msgstr ""
+"A data subject whose personal data are processed on the NAVOICA Platform, "
+"excluding the exceptions as stated in the rules of law, is entitled to:"
+
+#: lms/templates/static_templates/privacy.html:108
+msgid "withdraw their consent"
+msgstr "withdraw their consent"
+
+#: lms/templates/static_templates/privacy.html:109
+msgid ""
+"to process their personal data at any time only if the consent is the legal "
+"basis of data processing"
+msgstr ""
+"to process their personal data at any time only if the consent is the legal "
+"basis of data processing"
+
+#: lms/templates/static_templates/privacy.html:112
+msgid "access the data"
+msgstr "access the data"
+
+#: lms/templates/static_templates/privacy.html:113
+msgid ""
+"i.e. the data subject has the right to receive information from OPI PIB "
+"confirming that their personal data are processed by OPI PIB and stating the"
+" purpose for which they are processed, how they are processed and for how "
+"long they have been or will be processed,"
+msgstr ""
+"i.e. the data subject has the right to receive information from OPI PIB "
+"confirming that their personal data are processed by OPI PIB and stating the"
+" purpose for which they are processed, how they are processed and for how "
+"long they have been or will be processed,"
+
+#: lms/templates/static_templates/privacy.html:116
+msgid "clarify"
+msgstr "clarify"
+
+#: lms/templates/static_templates/privacy.html:117
+msgid ""
+"out-of-date or incomplete personal data, as well as complete them if they "
+"are incomplete,"
+msgstr ""
+"out-of-date or incomplete personal data, as well as complete them if they "
+"are incomplete,"
+
+#: lms/templates/static_templates/privacy.html:120
+msgid "object"
+msgstr "object"
+
+#: lms/templates/static_templates/privacy.html:121
+msgid ""
+"to the processing of personal data if OPI PIB processes personal data based "
+"on a legitimate interest (e.g. for analytical, statistical, evidence or "
+"archiving purposes). In the case of objection, OPI PIB shall cease to "
+"process data, unless OPI PIB demonstrates relevant, legitimate grounds for "
+"processing which, objectively, ought to have priority over the interest of "
+"the data subject, or are essential to determine, assert or defend claims "
+"(e.g. for evidence purposes or assertion of claims),"
+msgstr ""
+"to the processing of personal data if OPI PIB processes personal data based "
+"on a legitimate interest (e.g. for analytical, statistical, evidence or "
+"archiving purposes). In the case of objection, OPI PIB shall cease to "
+"process data, unless OPI PIB demonstrates relevant, legitimate grounds for "
+"processing which, objectively, ought to have priority over the interest of "
+"the data subject, or are essential to determine, assert or defend claims "
+"(e.g. for evidence purposes or assertion of claims),"
+
+#: lms/templates/static_templates/privacy.html:124
+msgid "delete their personal data ('the right to be forgotten')"
+msgstr "delete their personal data ('the right to be forgotten')"
+
+#: lms/templates/static_templates/privacy.html:125
+msgid ""
+"As a rule, the controller requests to immediately delete their personal data"
+" under Article 17 of GDPR. However, there are exceptions to this rule "
+"(particularly in the case of determining, asserting or defending claims),"
+msgstr ""
+"As a rule, the controller requests to immediately delete their personal data"
+" under Article 17 of GDPR. However, there are exceptions to this rule "
+"(particularly in the case of determining, asserting or defending claims),"
+
+#: lms/templates/static_templates/privacy.html:128
+msgid "restrict the processing of personal data"
+msgstr "restrict the processing of personal data"
+
+#: lms/templates/static_templates/privacy.html:129
+msgid ""
+"which, in practice, may consist in temporarily blocking the access to the "
+"data or in transferring the data to another system,"
+msgstr ""
+"which, in practice, may consist in temporarily blocking the access to the "
+"data or in transferring the data to another system,"
+
+#: lms/templates/static_templates/privacy.html:132
+msgid "transfer the data"
+msgstr "transfer the data"
+
+#: lms/templates/static_templates/privacy.html:133
+msgid ""
+"i.e. the data subject is entitled to receive backup copies they have "
+"provided to OPI PIB if their data are processed on the basis of their "
+"consent, on the basis of a contract, or in an automated manner,"
+msgstr ""
+"i.e. the data subject is entitled to receive backup copies they have "
+"provided to OPI PIB if their data are processed on the basis of their "
+"consent, on the basis of a contract, or in an automated manner,"
+
+#: lms/templates/static_templates/privacy.html:138
+msgid ""
+"All applications or requests pertaining to the processing of personal data, "
+"including the ones pertaining to enforcement of rights should be sent by "
+"e-mail to:"
+msgstr ""
+"All applications or requests pertaining to the processing of personal data, "
+"including the ones pertaining to enforcement of rights should be sent by "
+"e-mail to:"
+
+#: lms/templates/static_templates/privacy.html:142
+msgid "or by mail to the following address:"
+msgstr "or by mail to the following address:"
+
+#: lms/templates/static_templates/privacy.html:144
+msgid ""
+"O\\u015brodek Przetwarzania Informacji \\u2013 Pa\\u0144stwowy Instytut "
+"Badawczy, al. Niepodleg\\u0142o\\u015bci 188b, 00-608 Warszawa"
+msgstr ""
+"O\\u015brodek Przetwarzania Informacji \\u2013 Pa\\u0144stwowy Instytut "
+"Badawczy, al. Niepodleg\\u0142o\\u015bci 188b, 00-608 Warszawa"
+
+#: lms/templates/static_templates/privacy.html:149
+msgid ""
+"OPI PIB shall reply to the applications/requests without unreasonable delay,"
+" but in no event later than within 30 days as from the moment of receiving "
+"the application/request.  The above deadline may be extended by another two "
+"months if a particular request proves complex or if there are many requests,"
+" of which the applicant shall be notified."
+msgstr ""
+"OPI PIB shall reply to the applications/requests without unreasonable delay,"
+" but in no event later than within 30 days as from the moment of receiving "
+"the application/request.  The above deadline may be extended by another two "
+"months if a particular request proves complex or if there are many requests,"
+" of which the applicant shall be notified."
+
+#: lms/templates/static_templates/privacy.html:153
+msgid ""
+"The applications/requests ought to include the name and surname of the "
+"applicant as well as other contact data (their telephone number, e-mail "
+"address and, in the case of application/requests in writing, correspondence "
+"address). If the applications/requests pertain to the use of websites, "
+"please provide the address of the website or the information about the "
+"Service provided by our websites and additional clarifications supplementing"
+" the submitted application (in order to speed up the application handling "
+"process). In the case of handing some applications/requests, OPI PIB may ask"
+" for additional information to confirm the identity of the applicant."
+msgstr ""
+"The applications/requests ought to include the name and surname of the "
+"applicant as well as other contact data (their telephone number, e-mail "
+"address and, in the case of application/requests in writing, correspondence "
+"address). If the applications/requests pertain to the use of websites, "
+"please provide the address of the website or the information about the "
+"Service provided by our websites and additional clarifications supplementing"
+" the submitted application (in order to speed up the application handling "
+"process). In the case of handing some applications/requests, OPI PIB may ask"
+" for additional information to confirm the identity of the applicant."
+
+#: lms/templates/static_templates/privacy.html:157
+msgid ""
+"Each of the data subjects whose data are processed in OPI PIB is also "
+"entitled to"
+msgstr ""
+"Each of the data subjects whose data are processed in OPI PIB is also "
+"entitled to"
+
+#: lms/templates/static_templates/privacy.html:159
+msgid "submit a complaint to the supervisory body"
+msgstr "submit a complaint to the supervisory body"
+
+#: lms/templates/static_templates/privacy.html:161
+msgid ""
+"i.e. to the President of the Personal Data Protection Office headquartered "
+"in Warsaw at the following address: ul. Stawki 2."
+msgstr ""
+"i.e. to the President of the Personal Data Protection Office headquartered "
+"in Warsaw at the following address: ul. Stawki 2."
+
+#: lms/templates/static_templates/privacy.html:164
+msgid "Transferring data to third countries and international organizations"
+msgstr "Transferring data to third countries and international organizations"
+
+#: lms/templates/static_templates/privacy.html:167
+msgid ""
+"We do not transfer your personal data processed on the NAVOICA Educational "
+"Platform to third countries or to international organizations."
+msgstr ""
+"We do not transfer your personal data processed on the NAVOICA Platform to "
+"third countries or to international organizations."
+
+#: lms/templates/static_templates/privacy.html:170
+msgid "Automatic processing (including profiling) of personal data"
+msgstr "Automatic processing (including profiling) of personal data"
+
+#: lms/templates/static_templates/privacy.html:173
+msgid ""
+"Personal data processed on the NAVOICA Educational Platform will not be "
+"subject to automated decision making, including decision making based on "
+"profiling."
+msgstr ""
+"Personal data processed on the NAVOICA Platform will not be subject to "
+"automated decision making, including decision making based on profiling."
+
+#: lms/templates/static_templates/privacy.html:176
+msgid "Amendments to the Privacy policy"
+msgstr "Amendments to the Privacy policy"
+
+#: lms/templates/static_templates/privacy.html:179
+msgid ""
+"OPI PIB reserves the right to amend this Policy, which may result from the "
+"need to adapt to changes in legal regulations or in applicable privacy "
+"standards. OPI PIB will publish relevant notifications on any amendments on "
+"the website of the NAVOICA Educational Platform."
+msgstr ""
+"OPI PIB reserves the right to amend this Policy, which may result from the "
+"need to adapt to changes in legal regulations or in applicable privacy "
+"standards. OPI PIB will publish relevant notifications on any amendments on "
+"the website of the NAVOICA Platform."
+
+#: lms/templates/static_templates/privacy.html:182
+msgid ""
+"Data processing with the use of cookies and other Internet technologies"
+msgstr ""
+"Data processing with the use of cookies and other Internet technologies"
+
+#: lms/templates/static_templates/privacy.html:185
+msgid ""
+"Whenever a person uses the website of the NAVOICA Educational Platform, we "
+"are collecting data contained in system logs and cookies; we may also use "
+"other similar Internet technologies. For more information regarding the use "
+"of cookies and other Internet technologies go to the cookies policy of the "
+"NAVOICA Educational Platform at. "
+msgstr ""
+"Whenever a person uses the website of the NAVOICA Platform, we are "
+"collecting data contained in system logs and cookies; we may also use other "
+"similar Internet technologies. For more information regarding the use of "
+"cookies and other Internet technologies go to the cookies policy of the "
+"NAVOICA Platform at. "
 
 #: lms/templates/static_templates/server-down.html:16
 msgid "Currently the {platform_name} servers are down"
@@ -9334,934 +11091,936 @@ msgstr ""
 msgid "Currently the {platform_name} servers are overloaded"
 msgstr "Currently the {platform_name} servers are overloaded"
 
-#: lms/templates/static_templates/tos.html:147
-#: lms/templates/static_templates/tos.html:329
-#: lms/templates/static_templates/tos.html:486
-#: lms/templates/static_templates/tos.html:670
+#: lms/templates/static_templates/tos.html:148
+#: lms/templates/static_templates/tos.html:330
+#: lms/templates/static_templates/tos.html:488
+#: lms/templates/static_templates/tos.html:672
+#: lms/templates/static_templates/tos.html:824
+#: lms/templates/static_templates/tos.html:1006
 msgid "mooc_help@opi.org.pl"
 msgstr "mooc_help@opi.org.pl"
 
-#: lms/templates/static_templates/tos.html:345
+#: lms/templates/static_templates/tos.html:347
 msgid "tos_intro_1"
 msgstr "tos_intro_1"
 
-#: lms/templates/static_templates/tos.html:346
+#: lms/templates/static_templates/tos.html:348
 msgid "tos_intro_2"
 msgstr "tos_intro_2"
 
-#: lms/templates/static_templates/tos.html:348
+#: lms/templates/static_templates/tos.html:350
 msgid "tos_definitions_header"
 msgstr "tos_definitions_header"
 
-#: lms/templates/static_templates/tos.html:350
+#: lms/templates/static_templates/tos.html:352
 msgid "tos_definitions_email_title"
 msgstr "tos_definitions_email_title"
 
-#: lms/templates/static_templates/tos.html:351
+#: lms/templates/static_templates/tos.html:353
 msgid "tos_definitions_email_text"
 msgstr "tos_definitions_email_text"
 
-#: lms/templates/static_templates/tos.html:352
+#: lms/templates/static_templates/tos.html:354
 msgid "tos_definitions_registration_form_title"
 msgstr "tos_definitions_registration_form_title"
 
-#: lms/templates/static_templates/tos.html:353
+#: lms/templates/static_templates/tos.html:355
 msgid "tos_definitions_registration_form_text"
 msgstr "tos_definitions_registration_form_text"
 
-#: lms/templates/static_templates/tos.html:354
+#: lms/templates/static_templates/tos.html:356
 msgid "tos_definitions_password_title"
 msgstr "tos_definitions_password_title"
 
-#: lms/templates/static_templates/tos.html:355
+#: lms/templates/static_templates/tos.html:357
 msgid "tos_definitions_password_text"
 msgstr "tos_definitions_password_text"
 
-#: lms/templates/static_templates/tos.html:356
+#: lms/templates/static_templates/tos.html:358
 msgid "tos_definitions_service_information_title"
 msgstr "tos_definitions_service_information_title"
 
-#: lms/templates/static_templates/tos.html:357
+#: lms/templates/static_templates/tos.html:359
 msgid "tos_definitions_service_information_text"
 msgstr "tos_definitions_service_information_text"
 
-#: lms/templates/static_templates/tos.html:358
+#: lms/templates/static_templates/tos.html:360
 msgid "tos_definitions_educational_unit_title"
 msgstr "tos_definitions_educational_unit_title"
 
-#: lms/templates/static_templates/tos.html:359
+#: lms/templates/static_templates/tos.html:361
 msgid "tos_definitions_educational_unit_text"
 msgstr "tos_definitions_educational_unit_text"
 
-#: lms/templates/static_templates/tos.html:360
+#: lms/templates/static_templates/tos.html:362
 msgid "tos_definitions_account_title"
 msgstr "tos_definitions_account_title"
 
-#: lms/templates/static_templates/tos.html:361
+#: lms/templates/static_templates/tos.html:363
 msgid "tos_definitions_account_text"
 msgstr "tos_definitions_account_text"
 
-#: lms/templates/static_templates/tos.html:362
+#: lms/templates/static_templates/tos.html:364
 msgid "tos_definitions_course_title"
 msgstr "tos_definitions_course_title"
 
-#: lms/templates/static_templates/tos.html:363
+#: lms/templates/static_templates/tos.html:365
 msgid "tos_definitions_course_text"
 msgstr "tos_definitions_course_text"
 
-#: lms/templates/static_templates/tos.html:364
+#: lms/templates/static_templates/tos.html:366
 msgid "tos_definitions_substantive_operator_title"
 msgstr "tos_definitions_substantive_operator_title"
 
-#: lms/templates/static_templates/tos.html:365
+#: lms/templates/static_templates/tos.html:367
 msgid "tos_definitions_substantive_operator_text"
 msgstr "tos_definitions_substantive_operator_text"
 
-#: lms/templates/static_templates/tos.html:366
+#: lms/templates/static_templates/tos.html:368
 msgid "tos_definitions_technical_operator_title"
 msgstr "tos_definitions_technical_operator_title"
 
-#: lms/templates/static_templates/tos.html:367
+#: lms/templates/static_templates/tos.html:369
 msgid "tos_definitions_technical_operator_text"
 msgstr "tos_definitions_technical_operator_text"
 
-#: lms/templates/static_templates/tos.html:368
+#: lms/templates/static_templates/tos.html:370
 msgid "tos_definitions_platform_title"
 msgstr "tos_definitions_platform_title"
 
-#: lms/templates/static_templates/tos.html:369
+#: lms/templates/static_templates/tos.html:371
 msgid "tos_definitions_platform_text"
 msgstr "tos_definitions_platform_text"
 
-#: lms/templates/static_templates/tos.html:370
+#: lms/templates/static_templates/tos.html:372
 msgid "tos_definitions_tos_title"
 msgstr "tos_definitions_tos_title"
 
-#: lms/templates/static_templates/tos.html:371
+#: lms/templates/static_templates/tos.html:373
 msgid "tos_definitions_tos_text"
 msgstr "tos_definitions_tos_text"
 
-#: lms/templates/static_templates/tos.html:372
+#: lms/templates/static_templates/tos.html:374
 msgid "tos_definitions_rodo_title"
 msgstr "tos_definitions_rodo_title"
 
-#: lms/templates/static_templates/tos.html:373
+#: lms/templates/static_templates/tos.html:375
 msgid "tos_definitions_rodo_text"
 msgstr "tos_definitions_rodo_text"
 
-#: lms/templates/static_templates/tos.html:374
+#: lms/templates/static_templates/tos.html:376
 msgid "tos_definitions_services_title"
 msgstr "tos_definitions_services_title"
 
-#: lms/templates/static_templates/tos.html:375
+#: lms/templates/static_templates/tos.html:377
 msgid "tos_definitions_services_text"
 msgstr "tos_definitions_services_text"
 
-#: lms/templates/static_templates/tos.html:376
+#: lms/templates/static_templates/tos.html:378
 msgid "tos_definitions_participant_title"
 msgstr "tos_definitions_participant_title"
 
-#: lms/templates/static_templates/tos.html:377
+#: lms/templates/static_templates/tos.html:379
 msgid "tos_definitions_participant_text"
 msgstr "tos_definitions_participant_text"
 
-#: lms/templates/static_templates/tos.html:378
+#: lms/templates/static_templates/tos.html:380
 msgid "tos_definitions_user_title"
 msgstr "tos_definitions_user_title"
 
-#: lms/templates/static_templates/tos.html:379
+#: lms/templates/static_templates/tos.html:381
 msgid "tos_definitions_user_text"
 msgstr "tos_definitions_user_text"
 
-#: lms/templates/static_templates/tos.html:380
+#: lms/templates/static_templates/tos.html:382
 msgid "tos_definitions_guidelines_title"
 msgstr "tos_definitions_guidelines_title"
 
-#: lms/templates/static_templates/tos.html:381
+#: lms/templates/static_templates/tos.html:383
 msgid "tos_definitions_guidelines_text"
 msgstr "tos_definitions_guidelines_text"
 
-#: lms/templates/static_templates/tos.html:385
+#: lms/templates/static_templates/tos.html:387
 msgid "tos_main_title"
 msgstr "tos_main_title"
 
-#: lms/templates/static_templates/tos.html:387
+#: lms/templates/static_templates/tos.html:389
 msgid "tos_main_paragraph_1"
 msgstr "tos_main_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:388
+#: lms/templates/static_templates/tos.html:390
 msgid "tos_main_paragraph_2"
 msgstr "tos_main_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:389
+#: lms/templates/static_templates/tos.html:391
 msgid "tos_main_paragraph_3"
 msgstr "tos_main_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:390
+#: lms/templates/static_templates/tos.html:392
 msgid "tos_main_paragraph_4"
 msgstr "tos_main_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:391
+#: lms/templates/static_templates/tos.html:393
 msgid "tos_main_paragraph_5"
 msgstr "tos_main_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:392
+#: lms/templates/static_templates/tos.html:394
 msgid "tos_main_paragraph_6"
 msgstr "tos_main_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:393
+#: lms/templates/static_templates/tos.html:395
 msgid "tos_main_paragraph_7"
 msgstr "tos_main_paragraph_7"
 
-#: lms/templates/static_templates/tos.html:394
+#: lms/templates/static_templates/tos.html:396
 msgid "tos_main_paragraph_8"
 msgstr "tos_main_paragraph_8"
 
-#: lms/templates/static_templates/tos.html:395
+#: lms/templates/static_templates/tos.html:397
 msgid "tos_main_paragraph_9"
 msgstr "tos_main_paragraph_9"
 
-#: lms/templates/static_templates/tos.html:396
+#: lms/templates/static_templates/tos.html:398
 msgid "tos_main_paragraph_10"
 msgstr "tos_main_paragraph_10"
 
-#: lms/templates/static_templates/tos.html:400
+#: lms/templates/static_templates/tos.html:402
 msgid "tos_technical_title"
 msgstr "tos_technical_title"
 
-#: lms/templates/static_templates/tos.html:403
+#: lms/templates/static_templates/tos.html:405
 msgid "tos_technical_paragraph_1"
 msgstr "tos_technical_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:405
+#: lms/templates/static_templates/tos.html:407
 msgid "tos_technical_paragraph_1_section_1"
 msgstr "tos_technical_paragraph_1_section_1"
 
-#: lms/templates/static_templates/tos.html:406
+#: lms/templates/static_templates/tos.html:408
 msgid "tos_technical_paragraph_1_section_2"
 msgstr "tos_technical_paragraph_1_section_2"
 
-#: lms/templates/static_templates/tos.html:407
+#: lms/templates/static_templates/tos.html:409
 msgid "tos_technical_paragraph_1_section_3"
 msgstr "tos_technical_paragraph_1_section_3"
 
-#: lms/templates/static_templates/tos.html:410
+#: lms/templates/static_templates/tos.html:412
 msgid "tos_technical_paragraph_2"
 msgstr "tos_technical_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:411
+#: lms/templates/static_templates/tos.html:413
 msgid "tos_technical_paragraph_3"
 msgstr "tos_technical_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:412
+#: lms/templates/static_templates/tos.html:414
 msgid "tos_technical_paragraph_4"
 msgstr "tos_technical_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:414
+#: lms/templates/static_templates/tos.html:416
 msgid "tos_technical_paragraph_5"
 msgstr "tos_technical_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:416
+#: lms/templates/static_templates/tos.html:418
 msgid "tos_technical_paragraph_5_section_1"
 msgstr "tos_technical_paragraph_5_section_1"
 
-#: lms/templates/static_templates/tos.html:417
+#: lms/templates/static_templates/tos.html:419
 msgid "tos_technical_paragraph_5_section_2"
 msgstr "tos_technical_paragraph_5_section_2"
 
-#: lms/templates/static_templates/tos.html:418
+#: lms/templates/static_templates/tos.html:420
 msgid "tos_technical_paragraph_5_section_3"
 msgstr "tos_technical_paragraph_5_section_3"
 
-#: lms/templates/static_templates/tos.html:421
+#: lms/templates/static_templates/tos.html:423
 msgid "tos_technical_paragraph_6"
 msgstr "tos_technical_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:422
+#: lms/templates/static_templates/tos.html:424
 msgid "tos_technical_paragraph_7"
 msgstr "tos_technical_paragraph_7"
 
-#: lms/templates/static_templates/tos.html:426
+#: lms/templates/static_templates/tos.html:428
 msgid "tos_ros_title"
 msgstr "tos_ros_title"
 
-#: lms/templates/static_templates/tos.html:428
+#: lms/templates/static_templates/tos.html:430
 msgid "tos_ros_paragraph_1"
 msgstr "tos_ros_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:430
+#: lms/templates/static_templates/tos.html:432
 msgid "tos_ros_paragraph_2"
 msgstr "tos_ros_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:432
+#: lms/templates/static_templates/tos.html:434
 msgid "tos_ros_paragraph_2_section_1"
 msgstr "tos_ros_paragraph_2_section_1"
 
-#: lms/templates/static_templates/tos.html:433
+#: lms/templates/static_templates/tos.html:435
 msgid "tos_ros_paragraph_2_section_2"
 msgstr "tos_ros_paragraph_2_section_2"
 
-#: lms/templates/static_templates/tos.html:434
+#: lms/templates/static_templates/tos.html:436
 msgid "tos_ros_paragraph_2_section_3"
 msgstr "tos_ros_paragraph_2_section_3"
 
-#: lms/templates/static_templates/tos.html:435
+#: lms/templates/static_templates/tos.html:437
 msgid "tos_ros_paragraph_2_section_4"
 msgstr "tos_ros_paragraph_2_section_4"
 
-#: lms/templates/static_templates/tos.html:436
+#: lms/templates/static_templates/tos.html:438
 msgid "tos_ros_paragraph_2_section_5"
 msgstr "tos_ros_paragraph_2_section_5"
 
-#: lms/templates/static_templates/tos.html:437
+#: lms/templates/static_templates/tos.html:439
 msgid "tos_ros_paragraph_2_section_6"
 msgstr "tos_ros_paragraph_2_section_6"
 
-#: lms/templates/static_templates/tos.html:438
+#: lms/templates/static_templates/tos.html:440
 msgid "tos_ros_paragraph_2_section_7"
 msgstr "tos_ros_paragraph_2_section_7"
 
-#: lms/templates/static_templates/tos.html:439
+#: lms/templates/static_templates/tos.html:441
 msgid "tos_ros_paragraph_2_section_8"
 msgstr "tos_ros_paragraph_2_section_8"
 
-#: lms/templates/static_templates/tos.html:440
+#: lms/templates/static_templates/tos.html:442
 msgid "tos_ros_paragraph_2_section_9"
 msgstr "tos_ros_paragraph_2_section_9"
 
-#: lms/templates/static_templates/tos.html:444
+#: lms/templates/static_templates/tos.html:446
 msgid "tos_ros_paragraph_3"
 msgstr "tos_ros_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:446
+#: lms/templates/static_templates/tos.html:448
 msgid "tos_ros_paragraph_3_section_1"
 msgstr "tos_ros_paragraph_3_section_1"
 
-#: lms/templates/static_templates/tos.html:447
+#: lms/templates/static_templates/tos.html:449
 msgid "tos_ros_paragraph_3_section_2"
 msgstr "tos_ros_paragraph_3_section_2"
 
-#: lms/templates/static_templates/tos.html:448
+#: lms/templates/static_templates/tos.html:450
 msgid "tos_ros_paragraph_3_section_3"
 msgstr "tos_ros_paragraph_3_section_3"
 
-#: lms/templates/static_templates/tos.html:449
+#: lms/templates/static_templates/tos.html:451
 msgid "tos_ros_paragraph_3_section_4"
 msgstr "tos_ros_paragraph_3_section_4"
 
-#: lms/templates/static_templates/tos.html:450
+#: lms/templates/static_templates/tos.html:452
 msgid "tos_ros_paragraph_3_section_5"
 msgstr "tos_ros_paragraph_3_section_5"
 
-#: lms/templates/static_templates/tos.html:451
+#: lms/templates/static_templates/tos.html:453
 msgid "tos_ros_paragraph_3_section_6"
 msgstr "tos_ros_paragraph_3_section_6"
 
-#: lms/templates/static_templates/tos.html:452
+#: lms/templates/static_templates/tos.html:454
 msgid "tos_ros_paragraph_3_section_7"
 msgstr "tos_ros_paragraph_3_section_7"
 
-#: lms/templates/static_templates/tos.html:453
+#: lms/templates/static_templates/tos.html:455
 msgid "tos_ros_paragraph_3_section_8"
 msgstr "tos_ros_paragraph_3_section_8"
 
-#: lms/templates/static_templates/tos.html:459
+#: lms/templates/static_templates/tos.html:461
 msgid "tos_user_registration_title"
 msgstr "tos_user_registration_title"
 
-#: lms/templates/static_templates/tos.html:461
+#: lms/templates/static_templates/tos.html:463
 msgid "tos_user_registration_paragraph_1"
 msgstr "tos_user_registration_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:462
+#: lms/templates/static_templates/tos.html:464
 msgid "tos_user_registration_paragraph_2"
 msgstr "tos_user_registration_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:464
+#: lms/templates/static_templates/tos.html:466
 msgid "tos_user_registration_paragraph_3"
 msgstr "tos_user_registration_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:466
+#: lms/templates/static_templates/tos.html:468
 msgid "tos_user_registration_paragraph_3_section_1"
 msgstr "tos_user_registration_paragraph_3_section_1"
 
-#: lms/templates/static_templates/tos.html:467
+#: lms/templates/static_templates/tos.html:469
 msgid "tos_user_registration_paragraph_3_section_2"
 msgstr "tos_user_registration_paragraph_3_section_2"
 
-#: lms/templates/static_templates/tos.html:468
+#: lms/templates/static_templates/tos.html:470
 msgid "tos_user_registration_paragraph_3_section_3"
 msgstr "tos_user_registration_paragraph_3_section_3"
 
-#: lms/templates/static_templates/tos.html:469
+#: lms/templates/static_templates/tos.html:471
 msgid "tos_user_registration_paragraph_3_section_4"
 msgstr "tos_user_registration_paragraph_3_section_4"
 
-#: lms/templates/static_templates/tos.html:472
+#: lms/templates/static_templates/tos.html:474
 msgid "tos_user_registration_paragraph_4"
 msgstr "tos_user_registration_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:473
+#: lms/templates/static_templates/tos.html:475
 msgid "tos_user_registration_paragraph_5"
 msgstr "tos_user_registration_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:474
+#: lms/templates/static_templates/tos.html:476
 msgid "tos_user_registration_paragraph_6"
 msgstr "tos_user_registration_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:475
+#: lms/templates/static_templates/tos.html:477
 msgid "tos_user_registration_paragraph_7"
 msgstr "tos_user_registration_paragraph_7"
 
-#: lms/templates/static_templates/tos.html:476
+#: lms/templates/static_templates/tos.html:478
 msgid "tos_user_registration_paragraph_8"
 msgstr "tos_user_registration_paragraph_8"
 
-#: lms/templates/static_templates/tos.html:480
+#: lms/templates/static_templates/tos.html:482
 msgid "tos_contract_and_termination_title"
 msgstr "tos_contract_and_termination_title"
 
-#: lms/templates/static_templates/tos.html:482
+#: lms/templates/static_templates/tos.html:484
 msgid "tos_contract_and_termination_paragraph_1"
 msgstr "tos_contract_and_termination_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:483
+#: lms/templates/static_templates/tos.html:485
 msgid "tos_contract_and_termination_paragraph_2"
 msgstr "tos_contract_and_termination_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:484
+#: lms/templates/static_templates/tos.html:486
 msgid "tos_contract_and_termination_paragraph_3"
 msgstr "tos_contract_and_termination_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:485
+#: lms/templates/static_templates/tos.html:487
 msgid "tos_contract_and_termination_paragraph_4"
 msgstr "tos_contract_and_termination_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:486
+#: lms/templates/static_templates/tos.html:488
 msgid "tos_contract_and_termination_paragraph_5"
 msgstr "tos_contract_and_termination_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:486
+#: lms/templates/static_templates/tos.html:488
 msgid "tos_contract_and_termination_paragraph_5_1"
 msgstr "tos_contract_and_termination_paragraph_5_1"
 
-#: lms/templates/static_templates/tos.html:488
+#: lms/templates/static_templates/tos.html:490
 msgid "tos_contract_and_termination_paragraph_6"
 msgstr "tos_contract_and_termination_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:490
+#: lms/templates/static_templates/tos.html:492
 msgid "tos_contract_and_termination_paragraph_6_section_1"
 msgstr "tos_contract_and_termination_paragraph_6_section_1"
 
-#: lms/templates/static_templates/tos.html:491
+#: lms/templates/static_templates/tos.html:493
 msgid "tos_contract_and_termination_paragraph_6_section_2"
 msgstr "tos_contract_and_termination_paragraph_6_section_2"
 
-#: lms/templates/static_templates/tos.html:492
+#: lms/templates/static_templates/tos.html:494
 msgid "tos_contract_and_termination_paragraph_6_section_3"
 msgstr "tos_contract_and_termination_paragraph_6_section_3"
 
-#: lms/templates/static_templates/tos.html:493
+#: lms/templates/static_templates/tos.html:495
 msgid "tos_contract_and_termination_paragraph_6_section_4"
 msgstr "tos_contract_and_termination_paragraph_6_section_4"
 
-#: lms/templates/static_templates/tos.html:494
+#: lms/templates/static_templates/tos.html:496
 msgid "tos_contract_and_termination_paragraph_6_section_5"
 msgstr "tos_contract_and_termination_paragraph_6_section_5"
 
-#: lms/templates/static_templates/tos.html:497
+#: lms/templates/static_templates/tos.html:499
 msgid "tos_contract_and_termination_paragraph_7"
 msgstr "tos_contract_and_termination_paragraph_7"
 
-#: lms/templates/static_templates/tos.html:501
+#: lms/templates/static_templates/tos.html:503
 msgid "tos_rules_for_using_services_title"
 msgstr "tos_rules_for_using_services_title"
 
-#: lms/templates/static_templates/tos.html:503
+#: lms/templates/static_templates/tos.html:505
 msgid "tos_rules_for_using_services_paragraph_1"
 msgstr "tos_rules_for_using_services_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:504
+#: lms/templates/static_templates/tos.html:506
 msgid "tos_rules_for_using_services_paragraph_2"
 msgstr "tos_rules_for_using_services_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:505
+#: lms/templates/static_templates/tos.html:507
 msgid "tos_rules_for_using_services_paragraph_3"
 msgstr "tos_rules_for_using_services_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:506
+#: lms/templates/static_templates/tos.html:508
 msgid "tos_rules_for_using_services_paragraph_4"
 msgstr "tos_rules_for_using_services_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:507
+#: lms/templates/static_templates/tos.html:509
 msgid "tos_rules_for_using_services_paragraph_5"
 msgstr "tos_rules_for_using_services_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:508
+#: lms/templates/static_templates/tos.html:510
 msgid "tos_rules_for_using_services_paragraph_6"
 msgstr "tos_rules_for_using_services_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:510
+#: lms/templates/static_templates/tos.html:512
 msgid "tos_rules_for_using_services_paragraph_7"
 msgstr "tos_rules_for_using_services_paragraph_7"
 
-#: lms/templates/static_templates/tos.html:512
+#: lms/templates/static_templates/tos.html:514
 msgid "tos_rules_for_using_services_paragraph_7_section_1"
 msgstr "tos_rules_for_using_services_paragraph_7_section_1"
 
-#: lms/templates/static_templates/tos.html:513
+#: lms/templates/static_templates/tos.html:515
 msgid "tos_rules_for_using_services_paragraph_7_section_2"
 msgstr "tos_rules_for_using_services_paragraph_7_section_2"
 
-#: lms/templates/static_templates/tos.html:514
+#: lms/templates/static_templates/tos.html:516
 msgid "tos_rules_for_using_services_paragraph_7_section_3"
 msgstr "tos_rules_for_using_services_paragraph_7_section_3"
 
-#: lms/templates/static_templates/tos.html:515
+#: lms/templates/static_templates/tos.html:517
 msgid "tos_rules_for_using_services_paragraph_7_section_4"
 msgstr "tos_rules_for_using_services_paragraph_7_section_4"
 
-#: lms/templates/static_templates/tos.html:518
+#: lms/templates/static_templates/tos.html:520
 msgid "tos_rules_for_using_services_paragraph_8"
 msgstr "tos_rules_for_using_services_paragraph_8"
 
-#: lms/templates/static_templates/tos.html:519
+#: lms/templates/static_templates/tos.html:521
 msgid "tos_rules_for_using_services_paragraph_9"
 msgstr "tos_rules_for_using_services_paragraph_9"
 
-#: lms/templates/static_templates/tos.html:521
+#: lms/templates/static_templates/tos.html:523
 msgid "tos_rules_for_using_services_paragraph_10"
 msgstr "tos_rules_for_using_services_paragraph_10"
 
-#: lms/templates/static_templates/tos.html:523
+#: lms/templates/static_templates/tos.html:525
 msgid "tos_rules_for_using_services_paragraph_10_section_1"
 msgstr "tos_rules_for_using_services_paragraph_10_section_1"
 
-#: lms/templates/static_templates/tos.html:524
+#: lms/templates/static_templates/tos.html:526
 msgid "tos_rules_for_using_services_paragraph_10_section_2"
 msgstr "tos_rules_for_using_services_paragraph_10_section_2"
 
-#: lms/templates/static_templates/tos.html:525
+#: lms/templates/static_templates/tos.html:527
 msgid "tos_rules_for_using_services_paragraph_10_section_3"
 msgstr "tos_rules_for_using_services_paragraph_10_section_3"
 
-#: lms/templates/static_templates/tos.html:526
+#: lms/templates/static_templates/tos.html:528
 msgid "tos_rules_for_using_services_paragraph_10_section_4"
 msgstr "tos_rules_for_using_services_paragraph_10_section_4"
 
-#: lms/templates/static_templates/tos.html:527
+#: lms/templates/static_templates/tos.html:529
 msgid "tos_rules_for_using_services_paragraph_10_section_5"
 msgstr "tos_rules_for_using_services_paragraph_10_section_5"
 
-#: lms/templates/static_templates/tos.html:528
+#: lms/templates/static_templates/tos.html:530
 msgid "tos_rules_for_using_services_paragraph_10_section_6"
 msgstr "tos_rules_for_using_services_paragraph_10_section_6"
 
-#: lms/templates/static_templates/tos.html:531
+#: lms/templates/static_templates/tos.html:533
 msgid "tos_rules_for_using_services_paragraph_11"
 msgstr "tos_rules_for_using_services_paragraph_11"
 
-#: lms/templates/static_templates/tos.html:535
+#: lms/templates/static_templates/tos.html:537
 msgid "tos_operators_rights_and_onligations_title"
 msgstr "tos_operators_rights_and_onligations_title"
 
-#: lms/templates/static_templates/tos.html:538
+#: lms/templates/static_templates/tos.html:540
 msgid "tos_operators_rights_and_onligations_paragraph_1"
 msgstr "tos_operators_rights_and_onligations_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:539
+#: lms/templates/static_templates/tos.html:541
 msgid "tos_operators_rights_and_onligations_paragraph_2"
 msgstr "tos_operators_rights_and_onligations_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:540
+#: lms/templates/static_templates/tos.html:542
 msgid "tos_operators_rights_and_onligations_paragraph_3"
 msgstr "tos_operators_rights_and_onligations_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:542
+#: lms/templates/static_templates/tos.html:544
 msgid "tos_operators_rights_and_onligations_paragraph_4"
 msgstr "tos_operators_rights_and_onligations_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:544
+#: lms/templates/static_templates/tos.html:546
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_1"
 msgstr "tos_operators_rights_and_onligations_paragraph_4_section_1"
 
-#: lms/templates/static_templates/tos.html:545
+#: lms/templates/static_templates/tos.html:547
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_2"
 msgstr "tos_operators_rights_and_onligations_paragraph_4_section_2"
 
-#: lms/templates/static_templates/tos.html:546
+#: lms/templates/static_templates/tos.html:548
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_3"
 msgstr "tos_operators_rights_and_onligations_paragraph_4_section_3"
 
-#: lms/templates/static_templates/tos.html:547
+#: lms/templates/static_templates/tos.html:549
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_4"
 msgstr "tos_operators_rights_and_onligations_paragraph_4_section_4"
 
-#: lms/templates/static_templates/tos.html:548
+#: lms/templates/static_templates/tos.html:550
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_5"
 msgstr "tos_operators_rights_and_onligations_paragraph_4_section_5"
 
-#: lms/templates/static_templates/tos.html:549
+#: lms/templates/static_templates/tos.html:551
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_6"
 msgstr "tos_operators_rights_and_onligations_paragraph_4_section_6"
 
-#: lms/templates/static_templates/tos.html:550
+#: lms/templates/static_templates/tos.html:552
 msgid "tos_operators_rights_and_onligations_paragraph_4_section_7"
 msgstr "tos_operators_rights_and_onligations_paragraph_4_section_7"
 
-#: lms/templates/static_templates/tos.html:553
+#: lms/templates/static_templates/tos.html:555
 msgid "tos_operators_rights_and_onligations_paragraph_5"
 msgstr "tos_operators_rights_and_onligations_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:554
+#: lms/templates/static_templates/tos.html:556
 msgid "tos_operators_rights_and_onligations_paragraph_6"
 msgstr "tos_operators_rights_and_onligations_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:555
+#: lms/templates/static_templates/tos.html:557
 msgid "tos_operators_rights_and_onligations_paragraph_7"
 msgstr "tos_operators_rights_and_onligations_paragraph_7"
 
-#: lms/templates/static_templates/tos.html:556
+#: lms/templates/static_templates/tos.html:558
 msgid "tos_operators_rights_and_onligations_paragraph_8"
 msgstr "tos_operators_rights_and_onligations_paragraph_8"
 
-#: lms/templates/static_templates/tos.html:560
+#: lms/templates/static_templates/tos.html:562
 msgid "tos_services_payment_title"
 msgstr "tos_services_payment_title"
 
-#: lms/templates/static_templates/tos.html:562
+#: lms/templates/static_templates/tos.html:564
 msgid "tos_services_payment_paragraph_1"
 msgstr "tos_services_payment_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:563
+#: lms/templates/static_templates/tos.html:565
 msgid "tos_services_payment_paragraph_2"
 msgstr "tos_services_payment_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:564
+#: lms/templates/static_templates/tos.html:566
 msgid "tos_services_payment_paragraph_3"
 msgstr "tos_services_payment_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:568
+#: lms/templates/static_templates/tos.html:570
 msgid "tos_responsibility_title"
 msgstr "tos_responsibility_title"
 
-#: lms/templates/static_templates/tos.html:570
+#: lms/templates/static_templates/tos.html:572
 msgid "tos_responsibility_paragraph_1"
 msgstr "tos_responsibility_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:571
+#: lms/templates/static_templates/tos.html:573
 msgid "tos_responsibility_paragraph_2"
 msgstr "tos_responsibility_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:573
+#: lms/templates/static_templates/tos.html:575
 msgid "tos_responsibility_paragraph_3"
 msgstr "tos_responsibility_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:575
+#: lms/templates/static_templates/tos.html:577
 msgid "tos_responsibility_paragraph_3_section_1"
 msgstr "tos_responsibility_paragraph_3_section_1"
 
-#: lms/templates/static_templates/tos.html:576
+#: lms/templates/static_templates/tos.html:578
 msgid "tos_responsibility_paragraph_3_section_2"
 msgstr "tos_responsibility_paragraph_3_section_2"
 
-#: lms/templates/static_templates/tos.html:577
+#: lms/templates/static_templates/tos.html:579
 msgid "tos_responsibility_paragraph_3_section_3"
 msgstr "tos_responsibility_paragraph_3_section_3"
 
-#: lms/templates/static_templates/tos.html:578
+#: lms/templates/static_templates/tos.html:580
 msgid "tos_responsibility_paragraph_3_section_4"
 msgstr "tos_responsibility_paragraph_3_section_4"
 
-#: lms/templates/static_templates/tos.html:579
+#: lms/templates/static_templates/tos.html:581
 msgid "tos_responsibility_paragraph_3_section_5"
 msgstr "tos_responsibility_paragraph_3_section_5"
 
-#: lms/templates/static_templates/tos.html:580
+#: lms/templates/static_templates/tos.html:582
 msgid "tos_responsibility_paragraph_3_section_6"
 msgstr "tos_responsibility_paragraph_3_section_6"
 
-#: lms/templates/static_templates/tos.html:581
+#: lms/templates/static_templates/tos.html:583
 msgid "tos_responsibility_paragraph_3_section_7"
 msgstr "tos_responsibility_paragraph_3_section_7"
 
-#: lms/templates/static_templates/tos.html:582
+#: lms/templates/static_templates/tos.html:584
 msgid "tos_responsibility_paragraph_3_section_8"
 msgstr "tos_responsibility_paragraph_3_section_8"
 
-#: lms/templates/static_templates/tos.html:583
+#: lms/templates/static_templates/tos.html:585
 msgid "tos_responsibility_paragraph_3_section_9"
 msgstr "tos_responsibility_paragraph_3_section_9"
 
-#: lms/templates/static_templates/tos.html:584
+#: lms/templates/static_templates/tos.html:586
 msgid "tos_responsibility_paragraph_3_section_10"
 msgstr "tos_responsibility_paragraph_3_section_10"
 
-#: lms/templates/static_templates/tos.html:587
+#: lms/templates/static_templates/tos.html:589
 msgid "tos_responsibility_paragraph_4"
 msgstr "tos_responsibility_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:588
+#: lms/templates/static_templates/tos.html:590
 msgid "tos_responsibility_paragraph_5"
 msgstr "tos_responsibility_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:589
+#: lms/templates/static_templates/tos.html:591
 msgid "tos_responsibility_paragraph_6"
 msgstr "tos_responsibility_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:593
+#: lms/templates/static_templates/tos.html:595
 msgid "tos_copyrights_title"
 msgstr "tos_copyrights_title"
 
-#: lms/templates/static_templates/tos.html:595
+#: lms/templates/static_templates/tos.html:597
 msgid "tos_copyrights_paragraph_1"
 msgstr "tos_copyrights_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:596
+#: lms/templates/static_templates/tos.html:598
 msgid "tos_copyrights_paragraph_2"
 msgstr "tos_copyrights_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:597
+#: lms/templates/static_templates/tos.html:599
 msgid "tos_copyrights_paragraph_3"
 msgstr "tos_copyrights_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:598
+#: lms/templates/static_templates/tos.html:600
 msgid "tos_copyrights_paragraph_4"
 msgstr "tos_copyrights_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:599
+#: lms/templates/static_templates/tos.html:601
 msgid "tos_copyrights_paragraph_5"
 msgstr "tos_copyrights_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:603
+#: lms/templates/static_templates/tos.html:605
 msgid "tos_courses_storage_title"
 msgstr "tos_courses_storage_title"
 
-#: lms/templates/static_templates/tos.html:605
+#: lms/templates/static_templates/tos.html:607
 msgid "tos_courses_storage_paragraph_1"
 msgstr "tos_courses_storage_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:606
+#: lms/templates/static_templates/tos.html:608
 msgid "tos_courses_storage_paragraph_2"
 msgstr "tos_courses_storage_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:607
+#: lms/templates/static_templates/tos.html:609
 msgid "tos_courses_storage_paragraph_3"
 msgstr "tos_courses_storage_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:608
+#: lms/templates/static_templates/tos.html:610
 msgid "tos_courses_storage_paragraph_4"
 msgstr "tos_courses_storage_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:609
+#: lms/templates/static_templates/tos.html:611
 msgid "tos_courses_storage_paragraph_5"
 msgstr "tos_courses_storage_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:610
+#: lms/templates/static_templates/tos.html:612
 msgid "tos_courses_storage_paragraph_6"
 msgstr "tos_courses_storage_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:611
+#: lms/templates/static_templates/tos.html:613
 msgid "tos_courses_storage_paragraph_7"
 msgstr "tos_courses_storage_paragraph_7"
 
-#: lms/templates/static_templates/tos.html:612
+#: lms/templates/static_templates/tos.html:614
 msgid "tos_courses_storage_paragraph_8"
 msgstr "tos_courses_storage_paragraph_8"
 
-#: lms/templates/static_templates/tos.html:616
+#: lms/templates/static_templates/tos.html:618
 msgid "tos_personal_data_protection_title"
 msgstr "tos_personal_data_protection_title"
 
-#: lms/templates/static_templates/tos.html:618
+#: lms/templates/static_templates/tos.html:620
 msgid "tos_personal_data_protection_paragraph_1"
 msgstr "tos_personal_data_protection_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:619
+#: lms/templates/static_templates/tos.html:621
 msgid "tos_personal_data_protection_paragraph_2"
 msgstr "tos_personal_data_protection_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:620
+#: lms/templates/static_templates/tos.html:622
 msgid "tos_personal_data_protection_paragraph_3"
 msgstr "tos_personal_data_protection_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:621
+#: lms/templates/static_templates/tos.html:623
 msgid "tos_personal_data_protection_paragraph_4"
 msgstr "tos_personal_data_protection_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:622
+#: lms/templates/static_templates/tos.html:624
 msgid "tos_personal_data_protection_paragraph_5"
 msgstr "tos_personal_data_protection_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:623
+#: lms/templates/static_templates/tos.html:625
 msgid "tos_personal_data_protection_paragraph_6"
 msgstr "tos_personal_data_protection_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:625
+#: lms/templates/static_templates/tos.html:627
 msgid "tos_personal_data_protection_paragraph_7"
 msgstr "tos_personal_data_protection_paragraph_7"
 
-#: lms/templates/static_templates/tos.html:627
+#: lms/templates/static_templates/tos.html:629
 msgid "tos_personal_data_protection_paragraph_7_section_1"
 msgstr "tos_personal_data_protection_paragraph_7_section_1"
 
-#: lms/templates/static_templates/tos.html:628
+#: lms/templates/static_templates/tos.html:630
 msgid "tos_personal_data_protection_paragraph_7_section_2"
 msgstr "tos_personal_data_protection_paragraph_7_section_2"
 
-#: lms/templates/static_templates/tos.html:629
+#: lms/templates/static_templates/tos.html:631
 msgid "tos_personal_data_protection_paragraph_7_section_3"
 msgstr "tos_personal_data_protection_paragraph_7_section_3"
 
-#: lms/templates/static_templates/tos.html:630
+#: lms/templates/static_templates/tos.html:632
 msgid "tos_personal_data_protection_paragraph_7_section_4"
 msgstr "tos_personal_data_protection_paragraph_7_section_4"
 
-#: lms/templates/static_templates/tos.html:631
+#: lms/templates/static_templates/tos.html:633
 msgid "tos_personal_data_protection_paragraph_7_section_5"
 msgstr "tos_personal_data_protection_paragraph_7_section_5"
 
-#: lms/templates/static_templates/tos.html:632
+#: lms/templates/static_templates/tos.html:634
 msgid "tos_personal_data_protection_paragraph_7_section_6"
 msgstr "tos_personal_data_protection_paragraph_7_section_6"
 
-#: lms/templates/static_templates/tos.html:635
+#: lms/templates/static_templates/tos.html:637
 msgid "tos_personal_data_protection_paragraph_8"
 msgstr "tos_personal_data_protection_paragraph_8"
 
-#: lms/templates/static_templates/tos.html:636
+#: lms/templates/static_templates/tos.html:638
 msgid "tos_personal_data_protection_paragraph_9"
 msgstr "tos_personal_data_protection_paragraph_9"
 
-#: lms/templates/static_templates/tos.html:637
+#: lms/templates/static_templates/tos.html:639
 msgid "tos_personal_data_protection_paragraph_10"
 msgstr "tos_personal_data_protection_paragraph_10"
 
-#: lms/templates/static_templates/tos.html:638
+#: lms/templates/static_templates/tos.html:640
 msgid "tos_personal_data_protection_paragraph_11"
 msgstr "tos_personal_data_protection_paragraph_11"
 
-#: lms/templates/static_templates/tos.html:639
+#: lms/templates/static_templates/tos.html:641
 msgid "tos_personal_data_protection_paragraph_12"
 msgstr "tos_personal_data_protection_paragraph_12"
 
-#: lms/templates/static_templates/tos.html:640
+#: lms/templates/static_templates/tos.html:642
 msgid "tos_personal_data_protection_paragraph_13"
 msgstr "tos_personal_data_protection_paragraph_13"
 
-#: lms/templates/static_templates/tos.html:641
+#: lms/templates/static_templates/tos.html:643
 msgid "tos_personal_data_protection_paragraph_14"
 msgstr "tos_personal_data_protection_paragraph_14"
 
-#: lms/templates/static_templates/tos.html:642
+#: lms/templates/static_templates/tos.html:644
 msgid "tos_personal_data_protection_paragraph_15"
 msgstr "tos_personal_data_protection_paragraph_15"
 
-#: lms/templates/static_templates/tos.html:646
+#: lms/templates/static_templates/tos.html:648
 msgid "tos_data_protection_title"
 msgstr "tos_data_protection_title"
 
-#: lms/templates/static_templates/tos.html:648
+#: lms/templates/static_templates/tos.html:650
 msgid "tos_data_protection_paragraph_1"
 msgstr "tos_data_protection_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:649
+#: lms/templates/static_templates/tos.html:651
 msgid "tos_data_protection_paragraph_2"
 msgstr "tos_data_protection_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:653
+#: lms/templates/static_templates/tos.html:655
 msgid "tos_user_support_title"
 msgstr "tos_user_support_title"
 
-#: lms/templates/static_templates/tos.html:655
+#: lms/templates/static_templates/tos.html:657
 msgid "tos_user_support_paragraph_1"
 msgstr "tos_user_support_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:656
+#: lms/templates/static_templates/tos.html:658
 msgid "tos_user_support_paragraph_2"
 msgstr "tos_user_support_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:657
+#: lms/templates/static_templates/tos.html:659
 msgid "tos_user_support_paragraph_3"
 msgstr "tos_user_support_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:658
+#: lms/templates/static_templates/tos.html:660
 msgid "tos_user_support_paragraph_4"
 msgstr "tos_user_support_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:658
+#: lms/templates/static_templates/tos.html:660
 msgid "tos_user_support_paragraph_4_1"
 msgstr "tos_user_support_paragraph_4_1"
 
-#: lms/templates/static_templates/tos.html:659
+#: lms/templates/static_templates/tos.html:661
 msgid "tos_user_support_paragraph_5"
 msgstr "tos_user_support_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:660
+#: lms/templates/static_templates/tos.html:662
 msgid "tos_user_support_paragraph_6"
 msgstr "tos_user_support_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:661
+#: lms/templates/static_templates/tos.html:663
 msgid "tos_user_support_paragraph_7"
 msgstr "tos_user_support_paragraph_7"
 
-#: lms/templates/static_templates/tos.html:662
+#: lms/templates/static_templates/tos.html:664
 msgid "tos_user_support_paragraph_8"
 msgstr "tos_user_support_paragraph_8"
 
-#: lms/templates/static_templates/tos.html:666
+#: lms/templates/static_templates/tos.html:668
 msgid "tos_final_provisions_title"
 msgstr "tos_final_provisions_title"
 
-#: lms/templates/static_templates/tos.html:668
+#: lms/templates/static_templates/tos.html:670
 msgid "tos_final_provisions_paragraph_1"
 msgstr "tos_final_provisions_paragraph_1"
 
-#: lms/templates/static_templates/tos.html:669
+#: lms/templates/static_templates/tos.html:671
 msgid "tos_final_provisions_paragraph_2"
 msgstr "tos_final_provisions_paragraph_2"
 
-#: lms/templates/static_templates/tos.html:670
+#: lms/templates/static_templates/tos.html:672
 msgid "tos_final_provisions_paragraph_3"
 msgstr "tos_final_provisions_paragraph_3"
 
-#: lms/templates/static_templates/tos.html:670
+#: lms/templates/static_templates/tos.html:672
 msgid "tos_final_provisions_paragraph_3_1"
 msgstr "tos_final_provisions_paragraph_3_1"
 
-#: lms/templates/static_templates/tos.html:671
+#: lms/templates/static_templates/tos.html:673
 msgid "tos_final_provisions_paragraph_4"
 msgstr "tos_final_provisions_paragraph_4"
 
-#: lms/templates/static_templates/tos.html:672
+#: lms/templates/static_templates/tos.html:674
 msgid "tos_final_provisions_paragraph_5"
 msgstr "tos_final_provisions_paragraph_5"
 
-#: lms/templates/static_templates/tos.html:673
+#: lms/templates/static_templates/tos.html:675
 msgid "tos_final_provisions_paragraph_6"
 msgstr "tos_final_provisions_paragraph_6"
 
-#: lms/templates/static_templates/tos.html:674
+#: lms/templates/static_templates/tos.html:676
 msgid "tos_final_provisions_paragraph_7"
 msgstr "tos_final_provisions_paragraph_7"
 
-#: lms/templates/static_templates/tos.html:675
+#: lms/templates/static_templates/tos.html:677
 msgid "tos_final_provisions_paragraph_8"
 msgstr "tos_final_provisions_paragraph_8"
 
-#: lms/templates/static_templates/tos.html:676
+#: lms/templates/static_templates/tos.html:678
 msgid "tos_final_provisions_paragraph_9"
 msgstr "tos_final_provisions_paragraph_9"
 
-#: lms/templates/static_templates/tos.html:677
+#: lms/templates/static_templates/tos.html:679
 msgid "tos_final_provisions_paragraph_10"
 msgstr "tos_final_provisions_paragraph_10"
 
-#: lms/templates/static_templates/tos.html:678
+#: lms/templates/static_templates/tos.html:680
 msgid "tos_final_provisions_paragraph_11"
 msgstr "tos_final_provisions_paragraph_11"
 
-#: lms/templates/static_templates/tos.html:679
+#: lms/templates/static_templates/tos.html:681
 msgid "tos_final_provisions_paragraph_12"
 msgstr "tos_final_provisions_paragraph_12"
 
@@ -10645,7 +12404,7 @@ msgid "Table of Contents"
 msgstr "Table of Contents"
 
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html:191
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:166
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:171
 msgid "Expand All"
 msgstr "Expand All"
 
@@ -10653,13 +12412,13 @@ msgstr "Expand All"
 msgid "Update,"
 msgstr "Update,"
 
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:65
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:209
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:67
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:213
 msgid "Prerequisite: "
 msgstr "Prerequisite: "
 
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:99
-#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:244
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:101
+#: openedx/features/course_experience/templates/course_experience/course-outline-fragment.html:248
 msgid "{subsection_format} due {{date}}"
 msgstr "{subsection_format} due {{date}}"
 
