@@ -5,14 +5,15 @@
 # 
 # Translators:
 # krystianlygas <krystian.lygas@gmail.com>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-09-07 11:48+0000\n"
+"POT-Creation-Date: 2020-10-01 12:53+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
-"Last-Translator: krystianlygas <krystian.lygas@gmail.com>, 2020\n"
+"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1133,13 +1134,25 @@ msgstr "Starts: %(start_date)s"
 
 #: lms/templates/discovery/facet.underscore:9
 #: lms/templates/discovery/facet_select.underscore:3
-msgid "Wybierz"
+msgid "Select"
 msgstr "Select"
 
 #: lms/templates/discovery/facet.underscore:24
 #: lms/templates/edxnotes/note-item.underscore:7
 msgid "Less"
 msgstr "Less"
+
+#: lms/templates/discovery/filter_bar.underscore:2
+msgid "Filter By"
+msgstr "Filter By"
+
+#: lms/templates/discovery/filter_bar.underscore:3
+msgid "Filters"
+msgstr "Filters"
+
+#: lms/templates/discovery/filter_bar.underscore:4
+msgid "reset filters"
+msgstr "reset filters"
 
 #: lms/templates/edxnotes/note-item.underscore:3
 msgid "Highlighted text"
