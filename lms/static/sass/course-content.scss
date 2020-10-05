@@ -11785,4 +11785,10 @@ div.equation {
   }
 }
 
+div[id^="oa_response_block"] .response__submission__content .submission__answer__part__prompt__copy label {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
 @import 'elements/_creative-commons';
