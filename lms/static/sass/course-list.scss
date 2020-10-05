@@ -14218,6 +14218,12 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   }
 }
 
+div[id^="oa_response_block"] .response__submission__content .submission__answer__part__prompt__copy label {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
 /** SELECT LANGUAGE **/
 #language-settings-form {
   align-items: center;
