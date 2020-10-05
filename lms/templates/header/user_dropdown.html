@@ -20,6 +20,7 @@ resume_block = retrieve_last_sitewide_block_completed(username)
 displayname = get_enterprise_learner_generic_name(request) or username
 %>
 
+
 <div class="mobile-menu" role="menuitem" aria-labelledby="my-account"><a class="dropdown-item" href="${reverse('dashboard')}">${_("My Courses")}</a></div>
 ## <div class="mobile-menu" role="menuitem" aria-labelledby="my-account"><a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}">${_("Profile")}</a></div>
 <div class="mobile-menu" role="menuitem" aria-labelledby="my-account"><a class="dropdown-item" href="${reverse('account_settings')}">${_("Account")}</a></div>
@@ -32,8 +33,8 @@ displayname = get_enterprise_learner_generic_name(request) or username
     <a class="dropdown-item" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
 </div>
 
-<!--<hr class="dropdown-divider mobile-menu my-0" />
-<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu" id="language">${_("Choose Language")}</div>
+<hr class="dropdown-divider mobile-menu my-0" />
+<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu mobile-language" id="language">${_("Choose Language")}</div>
 <div class="mobile-menu" role="menuitem" aria-labelledby="language">
     <a class="dropdown-item text-capitalize"
        href="#"
@@ -53,7 +54,7 @@ displayname = get_enterprise_learner_generic_name(request) or username
              aria-hidden="true"
              alt="English language"
              height="32">${_('English')}
-    </a></div>-->
+    </a></div>
 
 <hr class="dropdown-divider mobile-menu my-0" />
 
