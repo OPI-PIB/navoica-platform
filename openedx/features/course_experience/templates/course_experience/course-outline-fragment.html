@@ -132,7 +132,7 @@ today = timezone.now()
                                     aria-labelledby="${ subsection['id'] }"
                                 >
                     % for vertical in subsection.get('children', []):
-                        % if vertical['start'] >= today:
+                        % if vertical.get('start', date(2001,1,1)) >= today:
                             <p class="list-group-item">${ vertical['display_name'] }</p>
                         % else:
                         
