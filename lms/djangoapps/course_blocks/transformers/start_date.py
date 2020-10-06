@@ -69,9 +69,8 @@ class StartDateTransformer(FilteringTransformerMixin, BlockStructureTransformer)
 
     def transform_block_filters(self, usage_info, block_structure):
         # Users with staff access bypass the Start Date check.
-        # if usage_info.has_staff_access:
-        # Dirty Hack
-        return [block_structure.create_universal_filter()]
+        if usage_info.has_staff_access:
+            return [block_structure.create_universal_filter()]
 
         removal_condition = lambda block_key: not check_start_date(
             usage_info.user,
