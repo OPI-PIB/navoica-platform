@@ -6,7 +6,6 @@
 
 <%!
 from datetime import date
-from django.utils import timezone
 
 from django.utils.translation import ugettext as _
 
@@ -15,7 +14,6 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <%
 course_sections = blocks.get('children')
-today = timezone.now()
 %>
 
 
@@ -132,20 +130,17 @@ today = timezone.now()
                                     aria-labelledby="${ subsection['id'] }"
                                 >
                     % for vertical in subsection.get('children', []):
-                        % if vertical['start'] >= today:
-                            <p class="list-group-item">${ vertical['display_name'] }</p>
-                        % else:
-                        
-                            <a class="list-group-item list-group-item-action"
-                                href="${ vertical['lms_web_url'] }"
-                                id="${ vertical['id'] }">
-                                ${ vertical['display_name'] }
-                         
-                            % if vertical.get('complete'):
-                                                    <span class="complete-checkmark fa fa-check"></span>
-                            % endif
-                            </a>
-                        % endif        
+                                    
+                                        <a class="list-group-item list-group-item-action"
+                                            href="${ vertical['lms_web_url'] }"
+                                            id="${ vertical['id'] }">
+                                            ${ vertical['display_name'] }
+                                               
+                        % if vertical.get('complete'):
+                                                <span class="complete-checkmark fa fa-check"></span>
+                        % endif
+                                        </a>
+                                    
                     % endfor 
                                   </div>
                                 </div>
