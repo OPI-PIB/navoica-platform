@@ -85,27 +85,8 @@ $(document).ready(function() {
       value++;
       $('.select-options').attr('aria-activedescendant', $(this).attr('id'));
       $('#settings-language-value').find('option').eq(indexOpt).prop('selected', true).trigger('change');
-      //$('.languageButton').attr('aria-expanded' , 'true');
       return false;
     });
-
-    $("[role=listbox]").on("focus", function () {
-      // If no selected element, select the first by default
-      if (!$(this).find("[aria-selected=true]").length) {
-        $(this).find("[role=option]:first").attr("aria-selected", "true").focus();
-      } else {
-        $(this).find("[aria-selected=true]");
-      }
-    });
-
-  //  $("[role=option]").on("focus", function (e) {
-  //    $(this).parent().attr("tabindex", "-1");
-  //  });
-
-  //  $("[role=option]").on("blur", function (e) {
-  //    $(this).parent().attr("tabindex", "0");
-  //  });
-
 
     $("[role=listbox]").on("keydown", function (e) {
       var currentItem = $(this).find("[aria-selected=true]");
