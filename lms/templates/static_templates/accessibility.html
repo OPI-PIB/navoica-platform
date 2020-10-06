@@ -1,5 +1,7 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
+<%! from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML, Text
+%>
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("Accessibility Statement")}</%block>
@@ -9,108 +11,126 @@
         <header id="page-header">
             <div class="jumbotron">
                 <div class="container">
-                    <h1 id="a11y-deklaracja" class="display-2 text-darkblack text-24">${_("Accessibility Statement for educational platform NAVOICA")}</h1>
+                    <h1 id="a11y-deklaracja" class="display-2 text-darkblack text-24">${_("Declaration of Availability of the NAVOICA Educational Platform")}</h1>
                 </div>
             </div>
         </header>
 
         <div id="content">
             <main class="container d-block">
-                <p>Właścicielem platformy NAVOICA jest Ministerstwo Nauki i Szkolnictwa Wyższego z siedzibą w Warszawie, ul. Wspólna 1/3. Operatorem platformy jest Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy.</p>
-                <p id="a11y-wstep"><span id="a11y-podmiot">Ośrodek Przetwarzania Informacji - Państwowy Instytut Badawczy</span> zobowiązuje się zapewnić dostępność swojej strony internetowej zgodnie z przepisami ustawy z dnia 4&nbsp;kwietnia 2019&nbsp;r. o&nbsp;dostępności cyfrowej stron internetowych i&nbsp;aplikacji mobilnych podmiotów publicznych. Oświadczenie w sprawie dostępności ma zastosowanie do strony internetowej <a id="a11y-url" href="https://www.navoica.pl">Navoica.pl</a>.</p>
-                <ul>
-                    <li>Data publikacji strony internetowej: <time id="a11y-data-publikacja" datetime="2018-10-30">2018-10-30</time></li>
-                    <li>Data ostatniej istotnej aktualizacji: <time id="a11y-data-aktualizacja" datetime="2020-09-21">2020-09-21</time></li>
-                </ul>
-                <h2>Status pod względem zgodności z ustawą</h2>
-                <p>Strona internetowa jest <strong id="a11y-status">częściowo zgodna</strong> z&nbsp;ustawą o&nbsp;dostępności cyfrowej stron internetowych i&nbsp;aplikacji mobilnych podmiotów publicznych z&nbsp;powodu niezgodności lub wyłączeń wymienionych poniżej.</p>
+                <p class="text-justify">${_("The owner of the NAVOICA Educational Platform is the Ministry of Science and Higher Education headquartered in Warsaw, Poland, at the following address: ul. Wspolna 1/3. The operator of the Platform is the National Information Processing Institute (OPI PIB)")}.</p>
 
-                <h3>Treści niedostępne</h3>
+                <p class="text-justify" id="a11y-wstep">${Text(_("{span_start}The National Information Processing Institute{span_end} undertakes to make its website available under the Act of 4 April 2019 on digital accessibility of websites and mobile applications of public entities. The declaration of availability applies to the {link_start}Navoica.pl{link_end} website.")).format(
+                            link_start=HTML('<a id="a11y-url" href="https://www.navoica.pl">'),
+                            link_end=HTML('</a>'),
+                            span_start=HTML('<span id="a11y-podmiot">'),
+                            span_end=HTML('</span>'),
+                        )}
+                </p>
+
+                <ul>
+                    <li>${_("Date of publication of the website: ")}<time id="a11y-data-publikacja" datetime="2018-10-30">2018-10-30</time></li>
+                    <li>${_("Date of the last major update: ")}<time id="a11y-data-aktualizacja" datetime="2020-09-21">2020-09-21</time></li>
+                </ul>
+                <h2>${_("Compliance with the Act")}</h2>
+                <p class="text-justify">${Text(_("The website {strong_start}partially complies{strong_end} with the Act on digital accessibility of websites and mobile applications of public entities due to non-compliance or exclusions listed below.")).format(
+                    strong_start=HTML('<strong id="a11y-status">'),
+                    strong_end=HTML('</strong>'),
+                )}
+                </p>
+
+                <h3>${_("Unavailable content")}</h3>
                 <ul>
                     <li>
-                        niektóre elementy mają nieodpowiedni kontrast,
+                        ${_("contrast of some elements is inadequate,")}
                     </li>
                     <li>
-                        niektóre formularze nie mają etykiet,
+                        ${_("some forms have no labels,")}
                     </li>
                     <li>
-                        focus jest niewidoczny,
+                        ${_("focus is invisible,")}
                     </li>
                     <li>
-                        może brakować tekstów alternatywnych do obrazów,
+                        ${_("alternative texts for some pictures may be missing,")}
                     </li>
                     <li>
-                        nie wszystkie filmy zawierają napisy,
+                        ${_("not all video materials are subtitled,")}
                     </li>
                     <li>
-                        napisów nie można pobrać,
+                        ${_("subtitles cannot be downloaded,")}
                     </li>
                     <li>
-                        nie jest dostępna audiodeskrypcja.
+                        ${_("audiodescription is unavailable.")}
                     </li>
 
                 </ul>
-                <p>
-                Platforma jest w trakcie modyfikacji, które mają uczynić ją bardziej dostępną. Prace są prowadzone i sukcesywnie dostępność będzie ulegała poprawie. Do końca października 2020 strony przed zalogowaniem będą spełniały wytyczne WCAG 2.1 na poziomie AA. Strony dostępne po zalogowaniu będą dostosowywane w następnym kroku. Równocześnie pracujemy też nad tym, aby w przyszłości powstawały kursy dostępne cyfrowo.
+                <p class="text-justify">
+                ${_("The platform is being modified to make it more available. With enhancements introduced on a regular basis, the availability will be gradually improving over time. As from the end of October 2020 the websites, before logging in, will meet the WCAG 2.1 level AA requirements. Websites available after logging in will be adapted in the next step. We are also working on a solution allowing to make the courses available electronically.")}
                 </p>
 
 
-                <h3>Wyłączenia</h3>
+                <h3>${_("Exclusions")}</h3>
                 <ul>
                     <li>
-                        Kursy, które nie zostały wytworzone przez OPI PIB,
+                        ${_("Courses that have not been created by OPI PIB,")}
                     </li>
                     <li>
-                        Multimedia opublikowane przed dniem <time datetime="2020-09-23">2020-09-23</time>.
+                        ${_("Multimedia published before ")}<time datetime="2020-09-23">2020-09-23</time>.
                     </li>
                 </ul>
 
-                <h3> Przygotowanie deklaracji w sprawie dostępności</h3>
+                <h3>${_("Preparation of the Declaration of Availability")}</h3>
                 <ul>
-                    <li>Deklarację sporządzono dnia:  <time id="a11y-data-sporzadzenie" datetime="2020-09-22">2020-09-22</time></li>
-                    <li>Deklaracja została ostatnio poddana przeglądowi i aktualizacji dnia:  <time id="a11y-data-deklaracja-przeglad" datetime="2020-09-22">2020-09-22</time></li>
+                    <li>${_("The Declaration was made on: ")}<time id="a11y-data-sporzadzenie" datetime="2020-09-22">2020-09-22</time></li>
+                    <li>${_("The Declaration was last reviewed and updated on: ")}<time id="a11y-data-deklaracja-przeglad" datetime="2020-09-22">2020-09-22</time></li>
                 </ul>
 
-                <p>Deklarację sporządzono na podstawie samooceny przeprowadzonej przez podmiot publiczny. </p>
+                <p class="text-justify">${_("The Declaration was made on the basis of a self-assessment of a public entity.")}</p>
 
 
-                <h2 id="a11y-kontakt">Informacje zwrotne i dane kontaktowe</h2>
+                <h2 id="a11y-kontakt">${_("Feedback and contact data")}</h2>
                 <ul>
-                    <li>Za rozpatrywanie uwag i wniosków odpowiada:  <span id="a11y-osoba">Agata Miszkurka</span></li>
-                    <li>E-mail: <a id="a11y-email" href="mailto:agata.miszkurka@opi.org.pl">agata.miszkurka@opi.org.pl</a></li>
-                    <li>Telefon: <a id="a11y-telefon" href="tel:+48225701400">+48 22 570 14 00</a> (telefon do centrali, preferowany kontakt mailowy)</li>
+                    <li>${_("Person responsible for handling applications and queries: ")}<span id="a11y-osoba">Agata Miszkurka</span></li>
+                    <li>${_("E-mail: ")}<a id="a11y-email" href="mailto:agata.miszkurka@opi.org.pl">agata.miszkurka@opi.org.pl</a></li>
+                    <li>${_("Telephone: ")}<a id="a11y-telefon" href="tel:+48225701400">+48 22 570 14 00</a>${_(" (please note that by dialing this number you will reach our reception desk and that e-mail is our preferred contact method)")}</li>
                 </ul>
 
-                <p id="a11y-procedura">Każdy ma prawo:</p>
+                <p id="a11y-procedura">${_("Each person has the right to:")}</p>
                 <ul>
-                    <li>zgłosić uwagi dotyczące dostępności cyfrowej strony lub jej elementu,</li>
-                    <li>zgłosić żądanie zapewnienia dostępności cyfrowej strony lub jej elementu,</li>
-                    <li>wnioskować o udostępnienie niedostępnej informacji w innej alternatywnej formie.</li>
+                    <li>${_("report any problems with digital access to the website or to any element thereof,")}</li>
+                    <li>${_("make a request for digital access to the website or to any element thereof,")}</li>
+                    <li>${_("make a request to make unavailable information available in an alternative form.")}</li>
                 </ul>
-                <p>Żądanie musi zawierać:</p>
+                <p>${_("All requests must include:")}</p>
                 <ul>
-                    <li>dane kontaktowe osoby zgłaszającej,</li>
-                    <li>wskazanie strony lub elementu strony, której dotyczy żądanie,</li>
-                    <li>wskazanie dogodnej formy udostępnienia informacji, jeśli żądanie dotyczy udostępnienia w formie alternatywnej informacji niedostępnej.</li>
+                    <li>${_("contact data of a person making a request,")}</li>
+                    <li>${_("information about the webpage or any element thereof to which the request pertains,")}</li>
+                    <li>${_("indication on the preferred form of making information available if the request concerns making unavailable information available in an alternative form.")}</li>
                 </ul>
-                <p>Rozpatrzenie zgłoszenia powinno nastąpić niezwłocznie, najpóźniej w ciągu 7 dni. Jeśli w tym terminie zapewnienie dostępności albo zapewnienie dostępu w alternatywnej formie nie jest możliwe, powinno nastąpić najdalej w ciągu 2 miesięcy od daty zgłoszenia.</p>
+                <p class="text-justify">${_("All requests should be handled as soon as possible, but not later than within 7 days. If it proves impossible to make the website or elements thereof available or to make them available in an alternative form within the deadline referred to above, the problem should be solved within 2 months after the request.")}</p>
 
-                <h3>Skargi i odwołania</h3>
-                <p>Na niedotrzymanie tych terminów oraz na odmowę realizacji żądania można złożyć skargę do organu nadzorującego pocztą lub drogą elektroniczną na adres:</p>
+                <h3>${_("Complaints and appeals")}</h3>
+                <p class="text-justify">${_("Complaints and appeals pertaining to failure to meet the said deadlines and requests may be filed by mail or e-mail with the supervising authority to the following address:")}</p>
                 <ul>
-                    <li>Organ nadzorujący: Dyrektor Ośrodka Przetwarzania Informacji – Państwowego Instytutu Badawczego</li>
-                    <li>Adres: al. Niepodległości 188 B<br />
-                    00-608 Warszawa</li>
-                    <li>E-mail: <a href="mailto:opi@opi.org.pl">opi@opi.org.pl</a></li>
-                    <li>Telefon: <a href="tel:+48225701400">+48 22 570 14 00</a></li>
+                    <li>${_("Supervising authority: Director of the National Information Processing Institute")}</li>
+                    <li>${_("Address: al. Niepodleglosci 188 B")}<br />
+                    ${_("00-608 Warsaw, Poland")}</li>
+                    <li>${_("E-mail: ")}<a href="mailto:opi@opi.org.pl">opi@opi.org.pl</a></li>
+                    <li>${_("Telephone: ")}<a href="tel:+48225701400">+48 22 570 14 00</a></li>
                 </ul>
-                <p>Skargę można złożyć również do  <a href="https://www.rpo.gov.pl/content/jak-zglosic-sie-do-rzecznika-praw-obywatelskich" target="_blank">Rzecznika Praw Obywatelskich<span class="sr">open in a new window</span></a>.</p>
+                <p class="text-justify">
+                    ${Text(_("Your complaint can also be filed with the {link_start}Commissioner for Human Rights{link_end}.")).format(
+                        link_start=HTML('<a href="https://www.rpo.gov.pl/content/jak-zglosic-sie-do-rzecznika-praw-obywatelskich" target="_blank">'),
+                        link_end=HTML('</a>'),
+                        )}
+                    <span class="sr">${_("open in a new window")}</span>
+                </p>
 
-                <h2 id="a11y-architektura">Dostępność architektoniczna</h2>
-                <p>Ośrodek Przetwarzania Informacji - PIB, al. Niepodległości 188B, 00-608 Warszawa.</p>
-                <p>Do budynku prowadzą schody. Przy schodach do wejścia znajduje się podjazd dla w&oacute;zk&oacute;w. Recepcja znajduje się naprzeciwko wejścia. Dalsze przejście wymaga użycia karty umożliwiającej otwarcie drzwi. Dla os&oacute;b na w&oacute;zkach dostępny jest tylko korytarz i pomieszczenia na parterze. W budynku nie ma windy. Toaleta dla os&oacute;b niepełnosprawnych znajduje się na parterze, na wprost klatki schodowej. Przed budynkiem wyznaczono 2 miejsca parkingowe dla os&oacute;b niepełnosprawnych. Do budynku i wszystkich jego pomieszczeń można wejść z psem asystującym.</p>
-
+                <h2 id="a11y-architektura">${_("Architectural accessibility")}</h2>
+                <p class="text-justify">${_("National Information Processing Institute, al. Niepodleglosci 188B, 00-608 Warsaw, Poland.")}</p>
+                <p class="text-justify">${_("The entrance to the building is accessed via steps or a wheelchair ramp. The reception desk is located opposite the front door. Entering other parts of the building is not possible without a door opening badge. Wheelchair users can access only the corridor and the rooms on the ground floor. There is no elevator in the building. The disabled toilet is located on the ground floor, opposite the staircase. There are 2 parking places for the disabled in front of the building. Assistance dogs are allowed in all rooms of the building.")}</p>
             </main>
         </div>
     </div>
 </div>
+

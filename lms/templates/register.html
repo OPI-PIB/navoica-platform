@@ -13,7 +13,7 @@ from third_party_auth import pipeline, provider
 import calendar
 %>
 
-<%block name="pagetitle">${_("Register")}</%block>
+<%block name="pagetitle">${_("Register for {platform_name}").format(platform_name=platform_name)}</%block>
 
 <%block name="bodyclass">view-register</%block>
 
@@ -37,7 +37,7 @@ import calendar
         }).blur(function () {
             $("label").parent().removeClass("is-focused");
         });
-        
+
         $("#confirm_password").on("focusout", function() {
 			if ($("#password").val()!=$("#confirm_password").val()) {
 				$("#confirm_password").get(0).setCustomValidity("${_('Passwords Don\'t Match')}");
@@ -47,6 +47,7 @@ import calendar
 		});
 
     });
+
 
     (function () {
         toggleSubmitButton(true);
@@ -71,35 +72,120 @@ import calendar
             }
         });
 
+        let validationPattern = {
+            email: {
+                message: "${_('A properly formatted e-mail is required')}",
+                field: "${_('E-mail')}",
+                pattern: /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/,
+            },
+            name: {
+                message: "${_('Your legal name must be a minimum of two characters long')}",
+                field: "${_('Full Name')}",
+                pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,255}$/,
+            },
+            username: {
+                message: "${_('Usernames can only contain letters (A-Z, a-z), numerals (0-9), underscores (_), and hyphens (-) and must be between 2 and 255 characters long.')}",
+                field: "${_('Public Username')}",
+                pattern: /^[a-zA-Z0-9_-]{2,30}$/,
+            },
+            password: {
+                message: "${_('A valid password is required')}",
+                field: "${_('Password')}",
+                pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,75}$/,
+            },
+            confirm_password: {
+                message: "${_('Passwords Don\'t Match')}",
+                field: "${_('Confirm Password')}",
+                pattern: function(passwordVal, passwordConfirmVal) { return passwordVal === passwordConfirmVal }
+            },
+            terms_of_service: {
+                message: "${_('You must accept the terms of service.')}",
+                field: "${_('Terms of Service')}",
+            },
+            honor_code: {
+                message: "${_('To enroll, you must follow the honor code.')}",
+                field: "${_('Honor Code')}",
+            }
+        };
+
+        function addMsgError(key, msg) {
+            $('#' + key).attr('aria-invalid', true).addClass('error-field');
+            $('.js-' + key.replace(/_/g, '-') + '-field').find('.js-error-message').text(msg || validationPattern[key].message);
+        }
+
+        function removeMsgError($this) {
+            $this.removeAttr('aria-invalid').removeClass('error-field');
+            $('.js-' + $this.attr('id').replace(/_/g, '-') + '-field').find('.js-error-message').text('');
+        }
+
+        function addMessageAlert(field, errorMsg, key) {
+            $("<p/>").attr('id', 'text-' + key).text(errorMsg).prepend('<span class="font-weight-bolder">' + field + ': ' + '</span>').appendTo('.js-alert-error-message');
+        }
+
+        function validateForm() {
+            $('input.js-register-field').each(function() {
+                for (let key in validationPattern) {
+
+                    if (validationPattern.hasOwnProperty(key) && $(this).prop('name') === key) {
+
+                        if ($(this).prop('name') === 'confirm_password') {
+                            let $confirmPassword = $('#confirm_password');
+                            if ($confirmPassword.val() !== '' && validationPattern && validationPattern[key] && validationPattern[key].pattern($('#password').val(), $(this).val())) {
+                                let $this = $(this);
+                                removeMsgError($this);
+                                $('.js-alert-error-message').find('#text-' + key).remove();
+                            } else {
+                                if ($confirmPassword.val() === '') {
+                                    let confirmPasswordTranslation = "${_('A valid confirm password is required')}";
+                                    addMsgError(key, confirmPasswordTranslation);
+                                    const field = validationPattern && validationPattern[key] && validationPattern[key].field;
+                                    addMessageAlert(field, confirmPasswordTranslation, key);
+                                } else {
+                                    addMsgError(key);
+                                    const field = validationPattern && validationPattern[key] && validationPattern[key].field;
+                                    const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
+                                    addMessageAlert(field, msg, key);
+                                }
+                            }
+                        } else {
+                            if ($(this).prop('type') !== 'checkbox') {
+                                if (validationPattern && validationPattern[key] && validationPattern[key].pattern.test($(this).val())) {
+                                    let $this = $(this);
+                                    removeMsgError($this);
+                                    $('.js-alert-error-message').find('#text-' + key).remove();
+                                } else {
+                                    addMsgError(key);
+                                    const field = validationPattern && validationPattern[key] && validationPattern[key].field;
+                                    const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
+                                    addMessageAlert(field, msg, key);
+                                }
+                            } else {
+                                if ($(this).is(':checked')) {
+                                    let $this = $(this);
+                                    removeMsgError($this);
+                                    $('.js-alert-error-message').find('#text-' + key).remove();
+                                } else {
+                                    addMsgError(key);
+                                    const field = validationPattern && validationPattern[key] && validationPattern[key].field;
+                                    const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
+                                    addMessageAlert(field, msg, key);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
         $('#register-form').on('ajax:error', function (event, jqXHR, textStatus) {
             toggleSubmitButton(true);
             json = $.parseJSON(jqXHR.responseText);
             $('.status.message.submission-error').addClass('is-shown').focus();
-            $('.status.message.submission-error .message-copy').html(json.value).stop().css("display", "block");
+            $('.status.message.submission-error .message-copy').css("display", "block");
             $(".field-error").removeClass('field-error');
             $("[data-field='" + json.field + "']").addClass('field-error');
-
-            if (json.field) {
-                $('#' + json.field).attr('aria-invalid', true).addClass('error-field');
-                $('.js-' + json.field.replace(/_/g, '-') + '-field').find('.js-error-message').text(json.value);
-
-                $('input.js-register-field').each(function() {
-
-                    if ($(this).prop('type') !== 'checkbox') {
-                        if ($(this).val() !== '') {
-                            $(this).removeAttr('aria-invalid').removeClass('error-field');
-                            $('.js-' + $(this).attr('id').replace(/_/g, '-') + '-field').find('.js-error-message').text('');
-                        }
-                    } else {
-                        if ($(this).is(':checked')) {
-                            $(this).removeAttr('aria-invalid').removeClass('error-field');
-                            $('.js-' + $(this).attr('id').replace(/_/g, '-') + '-field').find('.js-error-message').text('');
-                        }
-                    }
-                });
-            }
-
-
+            $('.js-alert-error-message').empty();
+            validateForm();
         });
     })(this);
 
@@ -123,7 +209,7 @@ import calendar
 
 
 <div id="content" class="border-top">
-  <section class="register container login">
+  <section class="register container login" id="skip-main">
     <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
     <div class="d-flex">
@@ -136,7 +222,7 @@ import calendar
             <h1><strong>${_("Welcome!")}</strong><br> ${_("Register below to create your {platform_name} account").format(platform_name=platform_name)}</h1>
 
             <section role="main">
-                <form role="form" id="register-form" method="post" data-remote="true" action="/create_account" novalidate>
+                <form id="register-form" method="post" data-remote="true" action="/create_account" novalidate aria-label="${_('Registration form')}">
                     <%
                     # allow for theming override on the registration form
                     registration_form = static.get_template_path('register-form.html')
@@ -144,7 +230,7 @@ import calendar
                     <%include file="${registration_form}" />
                 </form>
              </section>
-           
+
         </article>
 
         <aside id="filter" class="sidebar">

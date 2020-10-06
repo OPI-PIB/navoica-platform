@@ -25,15 +25,15 @@ from openedx.features.course_experience import ENABLE_GDPR_COMPAT_FLAG
     </section>
 % endif
 
-<header id="header-course" class="bg-light">
+<header class="header-course bg-light course-container-heading">
     <div class="jumbotron">
         <div class="container">
-            <h2 class="display-2 text-center">${_("Account Settings")}</h2>
+            <h1 class="display-2 text-center">${_("Account Settings")}</h1>
         </div>
     </div>
 </header>
 
-<div class="wrapper-account-settings"></div>
+<div class="wrapper-account-settings" id="skip-main"></div>
 <%block name="headextra">
     <%static:css group='style-course'/>
     <link type="text/css" rel="stylesheet" href="${STATIC_URL}paragon/static/paragon.min.css">

@@ -12,5 +12,7 @@ from openedx.core.djangolib.markup import HTML
 <%block name="bodyclass">program-details</%block>
 
 <main id="main" aria-label="Content" tabindex="-1">
-    ${HTML(program_fragment.body_html())}
+    <div id="skip-main">
+        ${HTML(program_fragment.body_html())}
+    </div>
 </main>

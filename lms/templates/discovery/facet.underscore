@@ -6,14 +6,16 @@
 	</div>
 <% if (listIsHuge) { %>
 	<div data-facet="<%- name %>" class="facet-group">
-	<select class="custom-select list-group-item"data-text=<%- gettext('Wybierz') %>>
+	<label for="<%- name %>" class="sr-only"><%- gettext('Select') %> <%- gettext(displayName) %></label>
+	<span class="sr-only" id="<%- name %>-sorted-list" aria-live="polite"><%- gettext('Sorted course list') %></span>
+	<select id="<%- name %>" name="<%- name %>" class="custom-select list-group-item"data-text=<%- gettext('Select') %> aria-controls="<%- name %>-sorted-list">
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
-	</select>	
+	</select>
 	</div>
 <% } else { %>
-	<div data-facet="<%- name %>" class="facet-list">
+	<ul role="list" aria-labelledby="filtering <%- name %>" data-facet="<%- name %>" class="facet-list px-0">
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
-	</div>
+	</ul>
 <% } %>
 <% if (listIsHuge) { %>
     <div class="toggle collapse">

@@ -27,7 +27,7 @@ ${HTML(fragment.foot_html())}
 <!-- <header class="bg-light">
 	  <div class="jumbotron" id="header_jumbotron">
 	    <div class="container">
-	      <h2 class="display-2 text-center">${_(tab['name'])}</h2>
+	      <h1 class="display-2 text-center">${_(tab['name'])}</h1>
 	    </div>
 	  </div>
 	</header> -->
@@ -38,7 +38,7 @@ ${HTML(fragment.foot_html())}
 
 <main id="main" style="margin: 0;" aria-label="Content" tabindex="-1">
 
-    <section class="container"
+    <section id="skip-main" class="container"
     % if getattr(course, 'language'):
       lang=${course.language}
     % endif

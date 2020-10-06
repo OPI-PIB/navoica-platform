@@ -18,7 +18,7 @@ from openedx.core.djangolib.js_utils import (
 <!-- <header class="bg-light">
 	  <div class="jumbotron" id="header_jumbotron">
 	    <div class="container">
-	      <h2 class="display-2 text-center">${textbook['tab_title']}</h2>
+	      <h1 class="display-2 text-center">${textbook['tab_title']}</h1>
 	    </div>
 	  </div>
 	</header> -->
@@ -42,7 +42,7 @@ $(function(){
 <div class="border-top" id="content">
 
 <main style="margin: 0;" id="main" aria-label="${_('Content')}" tabindex="-1">
-    <div class="book-wrapper">
+    <div class="book-wrapper" id="skip-main">
     %if 'chapters' in textbook:
     <section class="book-sidebar" aria-label="${_('Textbook Navigation')}">
         <ul id="booknav">

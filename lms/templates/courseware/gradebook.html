@@ -48,8 +48,9 @@ from six import text_type
       <thead>
         <tr>
           <th>
-            <form class="student-search">
-              <input type="search" class="student-search-field form-control" placeholder="${_('Search students')}" />
+            <form class="student-search" role="search">
+              <label for="search-students" class="sr-only">${_('Search students')}</label>
+              <input type="search" id="search-students" class="student-search-field form-control" placeholder="${_('Search students')}"/>
             </form>
           </th>
         </tr>

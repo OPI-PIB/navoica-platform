@@ -16,17 +16,16 @@ from openedx.core.djangolib.markup import HTML, Text
             <h1 class="display-1 text-center text-uppercase text-darkblack">${_('ACCESSIBLE KNOWLEDGE')}</h1>
             <p class="lead text-center my-3">${_('Free online courses offered by Polish universities and institutions')}</p>
 	      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-				<form method="get" action="/courses">
-					<div class="input-group my-2 p-2">
-					  <input class="form-control form-control-lg" type="search" name="search_query" placeholder="${_('What do you want to learn?')}">
-					  <button class="btn btn-outline-secondary btn-lg" type="submit" id="button-addon2">${_('Search')}</button>
-					  </div>
+            <form method="get" action="/courses" role="search">
+                <div class="input-group my-2 p-2 d-flex flex-row flex-nowrap">
+                    <label for="search-query" class="sr-only">${_('Search courses')}</label>
+                    <input id="search-query" class="form-control form-control-lg" type="search" name="search_query" placeholder="${_('Search courses...')}">
+                    <button class="btn btn-outline-secondary btn-lg" type="submit" id="button-addon2" title="${_('Search')}"><i class="fa fa-search mx-0" aria-hidden="true"></i><span class="sr-only">${_('Search courses')}</span></button>
+				</div>
 			  </form>
 		   % endif
 		</div>
 	  </div>
-	</div>
-</section>
 <%include file="index_promo_video.html" />
 </header>
 
@@ -43,7 +42,7 @@ from openedx.core.djangolib.markup import HTML, Text
                         <img class="mx-auto" src="/static/images/navoica-wirtualne-kursy.png" alt="">
                     </figure>
                     <div class="text-sm-left text-md-center">
-                        <h4 class="card-title">${_('Wide range of online courses ')}</h4>
+                        <h3 class="card-title">${_('Wide range of online courses ')}</h3>
                         <p class="card-text">${_('A broad spectrum of courses with varying levels of expertise. Everyone can find an interesting course for themselves.')}</p>
                     </div>
                 </div>
@@ -54,7 +53,7 @@ from openedx.core.djangolib.markup import HTML, Text
                         <img class="mx-auto" src="/static/images/navoica-platforma-ksztalcenia.png" alt="">
                     </figure>
                     <div class="text-sm-left text-md-center">
-                        <h4 class="card-title">${_('Publicly available learning platform')}</h4>
+                        <h3 class="card-title">${_('Publicly available learning platform')}</h3>
                         <p class="card-text">${_('We reach anyone who wants to learn \\u2013 regardless of their age or place of residence.')}</p>
                     </div>
                 </div>
@@ -65,7 +64,7 @@ from openedx.core.djangolib.markup import HTML, Text
                         <img class="mx-auto" src="/static/images/navoica-siec-wspolpracy.png" alt="">
                     </figure>
                     <div class="text-sm-left text-md-center">
-                        <h4 class="card-title">${_('Network of universities and institutions ')}</h4>
+                        <h3 class="card-title">${_('Network of universities and institutions ')}</h3>
                         <p class="card-text">${_('New online learning ecosystem brings together: universities, research institutes, businesses and NGOs. Find out more about Navoica')}</p>
                     </div>
                 </div>
@@ -89,7 +88,7 @@ from openedx.core.djangolib.markup import HTML, Text
 % endif
 
 <%block name="js_extra">
-   <script type="text/javascript">
+   <script>
       $(window).load(function() {
          if(getParameterByName('next')) {
               $('#login').trigger("click");

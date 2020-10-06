@@ -37,8 +37,9 @@
                     data['org_text'] = organizer_list[+data['organizer']];
                 }
 
-                var userLanguage = 'pl',
-                    userTimezone = 'Europe/Warsaw';
+                var userLanguage = this.model.userPreferences.userLanguage || 'pl';
+                var userTimezone = this.model.userPreferences.userTimezone || 'Europe/Warsaw';
+
                 if (data.advertised_start !== undefined) {
                     data.start = data.advertised_start;
                 } else {

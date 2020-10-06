@@ -1,0 +1,75 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Cookies Policy")}</%block>
+
+<div id="skip-main">
+    <div class="cookies">
+        <header id="page-header">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-2 text-darkblack text-24">${_("Cookies Policy")}</h1>
+                </div>
+            </div>
+        </header>
+
+        <section class="container about">
+
+            <p class="text-justify">${_("The National Information Processing Institute (OPI BIP) attaches particular importance to respecting the privacy of users visiting the NAVOICA Educational Platform (hereinafter referred to as 'Website'). Data collected from users' terminal devices are used only for the purpose of administering the Website. We do not identify website users.")}</p>
+
+            <p class="text-justify">${_("The entity saving cookie files on Website users' terminal device and gaining access to such files is the Website operator, i.e. Osrodek Przetwarzania Informacji \u2013 Panstwowy Instytut Badawczy (National Information Processing Institute) headquartered at the following address: al. Niepodleglosci 188b, 00-608 Warszawa.")}</p>
+
+            <h3>${_("Cookie files")}</h3>
+
+            <p class="text-justify">${_("Cookies are small text files installed on the device of the user browsing the Website. Cookies collect information facilitating the use of the website, e.g. by remembering the User's visits to the Website and the activities performed by the User.")}</p>
+
+            <p class="text-justify">${_("Cookie files (so-called 'cookies') constitute IT data, text files in particular, which are stored in the terminal device of the Website user and designated for using the webpages of the website. Cookies usually contain the webpage name, from which they originate, the time of their storage on the terminal device, as well as a unique number.")}</p>
+
+            <p class="text-justify">${_("The Website automatically gathers information in two ways: by using the Google Analytics/Facebook Pixel tool and through cookie files.")}</p>
+
+            <h3>${_("Use of data")}</h3>
+
+            <p class="text-justify">${_("OPI PIB uses the so-called service cookies primarily to provide users with an electronic service and to improve the quality thereof. In view of the above, OPI PIB and other entities providing analytical and statistical services to OPI PIB use cookies by storing information or accessing information already stored in the user's telecommunications terminal device (computer, phone, tablet, etc.). The cookies used for this purpose include:")}</p>
+
+            <ul>
+                <li>${_("cookies with data entered by the user (session ID) for the duration of the session (user input cookies),")}</li>
+                <li>${_("cookies used to ensure security, e.g. to detect unauthorized authentication (user centric security cookies),")}</li>
+                <li>${_("session cookies for multimedia players (e.g. flash player cookies) for the duration of the session (multimedia player session cookies),")}</li>
+                <li>${_("persistent cookies used to personalize the user interface for the duration of the session or for a slightly longer period of time (user interface customization cookies),")}</li>
+                <li>${_("cookies used to monitor website traffic, i.e. data analytics, including Google Analytics cookies (files used by Google to analyze how the Website is used by the user, to create statistics and reports on the functioning of the Website). Google does not use the data collected to identify the user and does not combine this information to enable identification. Detailed information on the scope and principles of data collection in connection with this service can be found at: ")}<a href="https://www.google.com/intl/pl/policies/privacy/partners" target="_blank">https://www.google.com/intl/pl/policies/privacy/partners</a>.</li>
+            </ul>
+
+            <p>${_("Cookies are also used to:")}</p>
+
+            <ul>
+                <li>${_("adjust the content stored on the webpages of the Website to user preferences and to optimize the use of the webpages; in particular, the files allow to recognize the device of Website users and to properly display a webpage adjusted to users' individual needs,")}</li>
+                <li>${_("create statistics which can help understand how Website users use the webpages, which makes it possible to improve their structure and content.")}</li>
+            </ul>
+
+            <p class="text-justify">${_("The data collected are not associated with any specific people browsing the Website, are not combined with other data and are not processed as personal data.")}</p>
+
+            <p class="text-justify">${_("The Website uses two basic types of cookie files: session cookies and persistent cookies. Session cookies are temporary files which are stored on the final device of the user up until the user  leaves the website or closes the software (web browser).  Persistent cookie files are stored on the final device of the user for a specified time as indicated in the parameters of cookie files or until they are deleted by the user.")}</p>
+
+            <p class="text-justify">${_("The data collected during the process described above are stored indefinitely as support material used to administer the Website. The information included therein is not disclosed to anyone except the persons authorized to administer the server and providing services to OPI PIB.")}</p>
+
+            <p class="text-justify">${_("Cookies used on the Website store no personal data.")}</p>
+
+            <h3>${_("Links to other pages")}</h3>
+
+            <p class="text-justify">${_("The Website contains links to other websites. We cannot be held responsible for privacy practices of those websites. Before browsing other websites, we would recommend to read their privacy policy. This policy applies to the Website only.")}</p>
+
+            <h3>${_("Turning off cookies")}</h3>
+
+            <p class="text-justify">${_("The Website (web browser) allows cookies to be stored on the user's terminal device by default. Website Users can change cookie settings at any time. Specifically, the user may decide to block the automatic control of cookies in the settings of their web browser or to be informed at any one time about a cookie being saved on their device.  Detailed information on the possibilities and ways to control cookie files can be found in the software (web browser) settings.")} </p>
+
+            <p class="text-justify">${_("OPI PIB informs that the limitations in using cookie files may impact some of the functionalities of the Website.")} </p>
+
+            <h3>${_("Amendments")}</h3>
+
+            <p class="text-justify">${_("Should the current privacy policy be amended in any way, appropriate modifications to the provision above shall be made.")}</p>
+
+        </section>
+    </div>
+</div>

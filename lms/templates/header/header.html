@@ -34,7 +34,7 @@ HeaderFactory();
 <!-- Navigation -->
 
 
-<div id="header-navigation" class="bg-white">
+<nav id="header-navigation" class="bg-white">
     % if use_cookie_banner and ENABLE_GDPR_COMPAT_FLAG.is_enabled_without_course_context():
     ${static.renderReact(
     component="CookiePolicyBanner",
@@ -52,7 +52,7 @@ HeaderFactory();
 
             % if course and user.is_authenticated():
 
-            <span id="" class="course-preview-title d-flex flex-column flex-wrap mr-auto">
+            <span class="course-preview-title d-flex flex-column flex-wrap mr-auto">
               % if course.organizer:
                           <span class="provider w-100 font-weight-bold" title="${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</span><br>
 
@@ -67,11 +67,12 @@ HeaderFactory();
 
 
             % if request.path != '/':
-            <form method="GET" action="/courses" class="form-inline mr-auto d-none d-xl-block">
+            <form method="GET" action="/courses" class="form-inline mr-auto d-none d-xl-block" role="search">
                 <div class="input-group w-100">
-                    <input class="form-control search-input" type="search" name="search_query" placeholder="${_('What do you want to learn?')}">
+                    <label for="search-course" class="sr-only">${_('Search courses')}</label>
+                    <input class="form-control search-input" id="search-course" type="search" name="search_query" placeholder="${_('Search courses...')}">
                     <div class="input-group-append">
-                        <button class="btn btn-light btn-outline-secondary" type="submit">${_('Search')}</button>
+                        <button class="btn btn-light btn-outline-secondary" type="submit" title="${_('Search')}"><i class="fa fa-search mx-0" aria-hidden="true"></i><span class="sr-only">${_('Search courses')}</span></button>
                     </div>
                 </div>
             </form>
@@ -81,7 +82,45 @@ HeaderFactory();
 
             % endif
 
-            <nav  role= "navigation" aria-label="Nawiguj do wybranych stron platformy Nawojka">
+            <nav class="d-flex" role= "navigation" aria-label="Menu">
+
+                % if header_language_selector_is_enabled():
+                <% languages = settings.LANGUAGES %>
+                % if len(languages) > 1:
+                <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
+                    <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
+                    % if user.is_authenticated():
+                    <input title="preference api" type="hidden" class="url-endpoint"
+                           value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
+                    % else:
+                    <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}"
+                           data-user-is-authenticated="false">
+                    % endif
+                    <!--<label><span class="sr">${_("Choose Language")}</span>
+                        <select class="custom-select language-selector" id="settings-language-value" name="language">
+                            % for language in languages:
+                                % if language[0] == LANGUAGE_CODE:
+                                <option value="${language[0]}" class="${language[0]}" selected="selected">${language[1]}</option>
+                                % else:
+                                <option value="${language[0]}" class="${language[0]}">${language[1]}</option>
+                                % endif
+                            % endfor
+                        </select>
+                    </label>-->
+                    <label><span class="sr">${_("Język / Language")}</span>
+                        <select class="custom-select language-selector" id="settings-language-value" name="language">
+                            % for language in languages:
+                                % if language[0] == LANGUAGE_CODE:
+                                    <option value="${language[0]}" class="${language[0]}" selected="selected">${language[1]}</option>
+                                % else:
+                                <option value="${language[0]}" class="${language[0]}">${language[1]}</option>
+                                % endif
+                            % endfor
+                        </select>
+                    </label>
+                </form>
+                % endif
+                % endif  
 
                 <div class="dropdown ml-auto">
                     <button id="mooc-my-mooc"
@@ -116,13 +155,13 @@ HeaderFactory();
                     </div>
                 </div>
 
-            </nav>
+            </div>
 
 
         </div>
 
     </div>
-</div>
+</nav>
 
 
 
@@ -159,31 +198,4 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
   </script>
 % if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False):
 <%include file="../widgets/cookie-consent.html" />
-% endif
-
-% if header_language_selector_is_enabled():
-<% languages = settings.LANGUAGES %>
-% if len(languages) > 1:
-<form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
-    <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-    % if user.is_authenticated():
-    <input title="preference api" type="hidden" class="url-endpoint"
-           value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-    % else:
-    <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}"
-           data-user-is-authenticated="false">
-    % endif
-    <label><span class="sr">${_("Choose Language")}</span>
-        <select class="input select language-selector" id="settings-language-value" name="language">
-            % for language in languages:
-                % if language[0] == LANGUAGE_CODE:
-                <option value="${language[0]}" selected="selected">${language[1]}</option>
-                % else:
-                <option value="${language[0]}">${language[1]}</option>
-                % endif
-            % endfor
-        </select>
-    </label>
-</form>
-% endif
 % endif

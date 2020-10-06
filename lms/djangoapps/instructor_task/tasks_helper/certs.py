@@ -26,6 +26,9 @@ from urlparse import urlparse
 from bs4 import BeautifulSoup
 from django.conf import settings
 
+from ...certificates.views import render_pdf
+
+
 def generate_students_certificates(
         _xmodule_instance_args, _entry_id, course_id, task_input, action_name):
 
@@ -128,45 +131,20 @@ def merging_all_course_certificates(
     # Generate certificate for each student
     for certificate in certificates:
         task_progress.attempted += 1
+        current_step = {'step': certificate.verify_uuid}
 
         output = render_cert_by_uuid(fake_request, certificate.verify_uuid)
 
-        soup = BeautifulSoup(output.content, "html.parser")
+        pdf_content = render_pdf(output.content, True)
 
-        if settings.INTERNAL_HOST_IP:
-            for img in soup.find_all(['img', 'script']):
-                if img.get("src", None):
-                    img_src = img['src']
-                    o = urlparse(img_src)
-                    img['src'] = o._replace(netloc=settings.INTERNAL_HOST_IP,
-                                            scheme="http").geturl()
+        if pdf_content:
+            with open(path_tmp+certificate.verify_uuid+".pdf", 'wb') as f:
+                f.write(pdf_content)
+            task_progress.succeeded += 1
+        else:
+            task_progress.failed += 1
 
-            for href in soup.find_all('link'):
-                link_href = href['href']
-                o = urlparse(link_href)
-                href['href'] = o._replace(netloc=settings.INTERNAL_HOST_IP,
-                                          scheme="http").geturl()
-
-        multipart_form_data = {
-            'file': ('index.html', unicode(soup)),
-            'marginTop': (None, '0',),
-            'marginBottom': (None, '0',),
-            'marginLeft': (None, '0',),
-            'marginRight': (None, '0',),
-            'landscape': (None, 'true',),
-        }
-
-        # $ docker run --rm -p 3000:3000 thecodingmachine/gotenberg:5
-        r = requests.post('http://gotenberg:3000/convert/html',
-                          files=multipart_form_data)
-
-        with open(path_tmp+certificate.verify_uuid+".pdf", 'wb') as f:
-            f.write(r.content)
-
-        current_step = {'step': certificate.verify_uuid}
         task_progress.update_task_state(extra_meta=current_step)
-
-        task_progress.succeeded += 1
 
     cert_genereted_history, created = CertificateGenerationMergeHistory.objects.get_or_create(
         instructor_task=InstructorTask.objects.get(task_id=_xmodule_instance_args['task_id']),

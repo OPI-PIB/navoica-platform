@@ -29,7 +29,7 @@ course_sections = blocks.get('children')
             %>
                 <div class="card" role="heading">
                   <div class="card-header">
-                    <button id="section" class="section-name accordion-trigger bg1"
+                    <button class="accordion-section section-name accordion-trigger bg1"
                             aria-expanded="${ 'true' if section_is_auto_opened else 'false' }"
                             aria-controls="${ section['id'] }_contents"
                             id="${ section['id'] }">
@@ -70,7 +70,7 @@ course_sections = blocks.get('children')
                                             ${ prerequisite_name }
                                     </div>
                 % else:
-                                    <button id="section" class="subsection-text accordion-trigger bg1"
+                                    <button class="accordion-section subsection-text accordion-trigger bg1"
                                             id="${ subsection['id'] }"
                                             aria-expanded="${ 'true' if subsection_is_auto_opened else 'false' }"
                                             aria-controls="${ subsection['id'] }_contents">
@@ -82,7 +82,7 @@ course_sections = blocks.get('children')
                                         <span class="complete-checkmark fa fa-check"></span>
                     % endif
                 % endif
-                                        <div class="details">
+                                        <span class="details">
 
                 ## There are behavior differences between rendering of subsections which have
                 ## exams (timed, graded, etc) and those that do not.
@@ -116,7 +116,7 @@ course_sections = blocks.get('children')
                     % endif
                                             </span>
                 % endif
-                                        </div> <!-- /details -->
+                                        </span> <!-- /details -->
                                     </button> <!-- /subsection-text -->
                 % if gated_subsection and not completed_prereqs:
                                 </a>
@@ -156,7 +156,7 @@ course_sections = blocks.get('children')
 
 
 
-<main style="display:none;" role="main" class="course-outline" id="main" tabindex="-1">
+<div style="display:none;" role="main" class="course-outline" id="main" tabindex="-1">
     % if course_sections is not None:
         <button class="btn btn-primary"
                 id="expand-collapse-outline-all-button"
@@ -173,20 +173,19 @@ course_sections = blocks.get('children')
             <%
             section_is_auto_opened = section.get('resume_block') is True
             %>
-                <li class="outline-item section" role="heading">
+                <li class="outline-item section">
                     <button class="section-name accordion-trigger bg1"
                             aria-expanded="${ 'true' if section_is_auto_opened else 'false' }"
                             aria-controls="${ section['id'] }_contents"
                             id="${ section['id'] }">
                         <span class="fa fa-chevron-right ${ 'fa-rotate-90' if section_is_auto_opened else '' }" aria-hidden="true"></span>
-                        <h3 class="section-title">${ section['display_name'] }</h3>
+                        <span class="section-title">${ section['display_name'] }</span>
             % if section.get('complete'):
                             <span class="complete-checkmark fa fa-check"></span>
             % endif
                     </button>
                     <ol class="outline-item accordion-panel ${ '' if section_is_auto_opened else 'is-hidden' }"
                         id="${ section['id'] }_contents"
-                        role="region"
                         aria-labelledby="${ section['id'] }">
             % for subsection in section.get('children', []):
                 <%
@@ -194,7 +193,7 @@ course_sections = blocks.get('children')
                 completed_prereqs = gated_content[subsection['id']]['completed_prereqs'] if gated_subsection else False
                 subsection_is_auto_opened = subsection.get('resume_block') is True
                 %>
-                            <li class="subsection accordion ${ 'current' if subsection['resume_block'] else '' }" role="heading">
+                            <li class="subsection accordion ${ 'current' if subsection['resume_block'] else '' }">
                 % if gated_subsection and not completed_prereqs:
                                 <a href="${ subsection['lms_web_url'] }">
                                     <button class="subsection-text prerequisite-button"
@@ -227,7 +226,7 @@ course_sections = blocks.get('children')
                                         <span class="complete-checkmark fa fa-check"></span>
                     % endif
                 % endif
-                                        <div class="details">
+                                        <span class="details">
 
                 ## There are behavior differences between rendering of subsections which have
                 ## exams (timed, graded, etc) and those that do not.
@@ -283,7 +282,7 @@ course_sections = blocks.get('children')
                     % endif
                                             </span>
                 % endif
-                                        </div> <!-- /details -->
+                                        </span> <!-- /details -->
                                     </button> <!-- /subsection-text -->
                 % if gated_subsection and not completed_prereqs:
                                 </a>
@@ -291,7 +290,6 @@ course_sections = blocks.get('children')
                 % if not gated_subsection or (gated_subsection and completed_prereqs):
                                 <ol class="outline-item accordion-panel ${ '' if subsection_is_auto_opened else 'is-hidden' }"
                                     id="${ subsection['id'] }_contents"
-                                    role="region"
                                     aria-labelledby="${ subsection['id'] }"
                                 >
                     % for vertical in subsection.get('children', []):
@@ -319,7 +317,7 @@ course_sections = blocks.get('children')
         % endfor
         </ol>
     % endif
-</main>
+</div>
 
 
 <%static:webpack entry="CourseOutline">

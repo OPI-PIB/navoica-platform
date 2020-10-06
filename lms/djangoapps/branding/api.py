@@ -218,6 +218,7 @@ def _footer_navigation_links():
             ("contact", marketing_link("CONTACT"), _("Contact")),
             #("careers", marketing_link("CAREERS"), _("Careers")),
             #("donate", marketing_link("DONATE"), _("Donate")),
+            ("cookies", marketing_link("COOKIES"), _("Cookies Policy")),
         ]
         if link_url and link_url != "#"
     ]
