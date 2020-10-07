@@ -9908,7 +9908,7 @@ body > header {
   background-position: center center;
   background-size: cover;
   box-sizing: border-box;
-  margin: 4rem 0 0;
+  margin: 0;
 }
 
 header .jumbotron {
@@ -13498,9 +13498,6 @@ span.complete-checkmark.fa.fa-check {
     order: 1;
     width: 960px;
   }
-  #header-course, .header-course, .course-container-heading {
-    margin-top: 8rem;
-  }
 }
 
 #nav-tab {
@@ -14086,8 +14083,23 @@ span.complete-checkmark.fa.fa-check {
 }
 
 #header-navigation .course-preview-title {
-  max-width: 50%;
   line-height: 0;
+}
+
+@media screen and (min-width: 1280px) {
+  #header-navigation .course-preview-title {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  #header-navigation .course-preview-title {
+    max-width: 40%;
+  }
+
+  #search-course.search-input {
+    max-width: 235px;
+  }
 }
 
 @media (min-width: 480px) {
