@@ -176,7 +176,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
             % endif
             <div class="form-actions">
                 % if resume_course_url:
-                    <a class="btn btn-primary action-resume-course" href="${resume_course_url}">
+                    <a class="btn btn-primary action-resume-course btn-w-100" href="${resume_course_url}">
                     % if has_visited_course:
                     <span data-action-type="resume">${_("Resume Course")}</span>
                     % else:
@@ -184,7 +184,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                     % endif
                     </a>
                 % endif
-                <button class="btn btn-link action-resume-course float-right"
+                <button class="btn btn-link action-resume-course float-right btn-w-100"
                       id="expand-collapse-outline-all-button"
                       aria-expanded="false"
                       aria-controls="course-outline-block-tree">

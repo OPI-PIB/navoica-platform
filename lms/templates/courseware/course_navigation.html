@@ -54,7 +54,7 @@ if course is not None:
                     <%
                     tab_is_active = tab.tab_id in (active_page, default_tab)
                     %>
-                    <a href="${tab.link_func(course, reverse)}" class="nav-link ${'active' if tab_is_active else ''}">
+                    <a href="${tab.link_func(course, reverse)}" class="nav-link f-15 ${'active' if tab_is_active else ''}">
                             ${_(tab.name)}
                             % if tab_is_active:
                                 <span class="sr-only">, ${_('current location')}</span>

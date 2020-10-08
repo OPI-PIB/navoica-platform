@@ -27,7 +27,7 @@ course_sections = blocks.get('children')
             <%
             section_is_auto_opened = section.get('resume_block') is True
             %>
-                <div class="card" role="heading">
+                <div class="card 14" role="heading">
                   <div class="card-header">
                     <button class="accordion-section section-name accordion-trigger bg1"
                             aria-expanded="${ 'true' if section_is_auto_opened else 'false' }"
@@ -70,7 +70,7 @@ course_sections = blocks.get('children')
                                             ${ prerequisite_name }
                                     </div>
                 % else:
-                                    <button class="accordion-section subsection-text accordion-trigger bg1"
+                                    <button class="accordion-section subsection-text accordion-trigger bg1 f-14"
                                             id="${ subsection['id'] }"
                                             aria-expanded="${ 'true' if subsection_is_auto_opened else 'false' }"
                                             aria-controls="${ subsection['id'] }_contents">
@@ -213,7 +213,7 @@ course_sections = blocks.get('children')
                                             ${ prerequisite_name }
                                     </div>
                 % else:
-                                    <button class="subsection-text accordion-trigger bg1"
+                                    <button class="subsection-text accordion-trigger bg1 f-14"
                                             id="${ subsection['id'] }"
                                             aria-expanded="${ 'true' if subsection_is_auto_opened else 'false' }"
                                             aria-controls="${ subsection['id'] }_contents">
