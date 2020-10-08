@@ -91,7 +91,7 @@ import calendar
             password: {
                 message: "${_('A valid password is required')}",
                 field: "${_('Password')}",
-                pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,75}$/,
+                pattern: /^[A-Za-z\d@$!%*?&_]{8,75}$/,
             },
             confirm_password: {
                 message: "${_('Passwords Don\'t Match')}",
@@ -122,7 +122,8 @@ import calendar
             $("<p/>").attr('id', 'text-' + key).text(errorMsg).prepend('<span class="font-weight-bolder">' + field + ': ' + '</span>').appendTo('.js-alert-error-message');
         }
 
-        function validateForm() {
+        function validateForm(json) {
+            let isValidForm = false;
             $('input.js-register-field').each(function() {
                 for (let key in validationPattern) {
 
@@ -140,11 +141,13 @@ import calendar
                                     addMsgError(key, confirmPasswordTranslation);
                                     const field = validationPattern && validationPattern[key] && validationPattern[key].field;
                                     addMessageAlert(field, confirmPasswordTranslation, key);
+                                    isValidForm = false;
                                 } else {
                                     addMsgError(key);
                                     const field = validationPattern && validationPattern[key] && validationPattern[key].field;
                                     const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
                                     addMessageAlert(field, msg, key);
+                                    isValidForm = true;
                                 }
                             }
                         } else {
@@ -153,28 +156,37 @@ import calendar
                                     let $this = $(this);
                                     removeMsgError($this);
                                     $('.js-alert-error-message').find('#text-' + key).remove();
+                                    isValidForm = true;
                                 } else {
                                     addMsgError(key);
                                     const field = validationPattern && validationPattern[key] && validationPattern[key].field;
                                     const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
                                     addMessageAlert(field, msg, key);
+                                    isValidForm = false;
                                 }
                             } else {
                                 if ($(this).is(':checked')) {
                                     let $this = $(this);
                                     removeMsgError($this);
                                     $('.js-alert-error-message').find('#text-' + key).remove();
+                                    isValidForm = true;
                                 } else {
                                     addMsgError(key);
                                     const field = validationPattern && validationPattern[key] && validationPattern[key].field;
                                     const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
                                     addMessageAlert(field, msg, key);
+                                    isValidForm = false;
                                 }
                             }
                         }
                     }
                 }
             });
+
+            if (isValidForm && json.field) {
+                addMsgError(json.field, json.value);
+                addMessageAlert(json.field, json.value, json.field);
+            }
         }
 
         $('#register-form').on('ajax:error', function (event, jqXHR, textStatus) {
@@ -185,7 +197,7 @@ import calendar
             $(".field-error").removeClass('field-error');
             $("[data-field='" + json.field + "']").addClass('field-error');
             $('.js-alert-error-message').empty();
-            validateForm();
+            validateForm(json);
         });
     })(this);
 
