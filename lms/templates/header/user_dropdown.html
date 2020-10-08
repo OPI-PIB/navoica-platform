@@ -9,6 +9,7 @@ from django.utils.translation import ugettext as _
 from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
 from openedx.core.djangoapps.user_api.accounts.utils import retrieve_last_sitewide_block_completed
 from openedx.features.enterprise_support.utils import get_enterprise_learner_generic_name
+from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled
 %>
 
 <%
@@ -32,29 +33,25 @@ displayname = get_enterprise_learner_generic_name(request) or username
     <a class="dropdown-item" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
 </div>
 
-<hr class="dropdown-divider mobile-menu my-0" />
-<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu language-selector" id="language-mobile">${_("Język / Language")}</div>
-
+% if header_language_selector_is_enabled():
+<%include file="navbar-language-mobile.html"/>
+% endif
 <hr class="dropdown-divider mobile-menu my-0" />
 
 <div role="menuitem" class="mobile-menu"><a class="dropdown-item" href="${reverse('logout')}">${_("Sign Out")}</a></div>
 
 
-<div class="nav-item dropdown my-account desktop-menu">
-            <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="${username} Menu">
-             <!--
-             <img class="mr-2 rounded-circle" src="${profile_image_url}" width="32" height="32">
-	     -->
-             ${displayname}
-             </button>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" role="menu">
-                <a class="dropdown-item" href="${reverse('dashboard')}" role="menuitem">${_("My Courses")}</a>
-                ## <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a>
-                <a class="dropdown-item" href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a>
-            </div>
-
+<div class="nav-item dropdown my-account desktop-menu" role="menuitem">
+    <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="${username} Menu">
+        ${displayname}
+        </button>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" role="menu">
+        <a class="dropdown-item" href="${reverse('dashboard')}" role="menuitem">${_("My Courses")}</a>
+        ## <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a>
+        <a class="dropdown-item" href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a>
+    </div>
 </div>
 
 

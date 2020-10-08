@@ -45,26 +45,6 @@ $select-height: calc(1.625em + 0.75rem + 2px);
 $select-border: #ced4da;
 $color-navoica: #e41d37;
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #ced4da;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: teal;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: teal;
-}
-
 #sorting-form .select-options, #sorting-form .select-styled {
   font-size: 0.875rem;
   font-weight: normal;
@@ -73,7 +53,7 @@ $color-navoica: #e41d37;
   &:focus {
     outline: 2px black solid;
     outline-offset: 2px;
-  }  
+  }
 }
 
 button.select-styled {
@@ -131,7 +111,7 @@ button.select-styled {
   &:focus {
     outline: solid 2px #919191;
     outline-offset: 2px;
-  }  
+  }
   &:active, &.active {
     box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
     &:after {
@@ -3243,7 +3223,7 @@ input {
 
   &::after {
     display: inline-block;
-    margin-left: 0.255em;
+  //  margin-left: 0.255em;
     vertical-align: 0.255em;
     content: "";
     border-top: 0.3em solid;
@@ -13855,6 +13835,13 @@ span.complete-checkmark.fa.fa-check {
 
 }
 
+#header-navigation .dropdown-menu.show {
+  min-width: 8em;
+  border: 1px solid #dee2e6;
+  margin: 0;
+  padding: 0;
+}
+
 #header-navigation .navbar {
   box-shadow: 0 0 0 0 transparent;
 }
@@ -13900,6 +13887,9 @@ span.complete-checkmark.fa.fa-check {
 
 #header-navigation .btn-outline-primary.dropdown-toggle {
   margin: 0;
+  i {
+    margin: 0;
+  }
 }
 
 #header-navigation .navbar {
@@ -13924,6 +13914,17 @@ span.complete-checkmark.fa.fa-check {
     }
   }
 }
+
+@media (max-width: 1279.98px) {
+  #header-navigation nav {
+    .dropdown {
+      &-toggle,
+      &-menu {
+        font-size: 1rem;
+      }
+    }
+  }
+}  
 
 @media screen and (min-width: 960px) {
   #header-navigation {
@@ -13993,7 +13994,7 @@ span.complete-checkmark.fa.fa-check {
   }
 
   #header-navigation #mooc-my-mooc::after {
-    border: 0;
+  //  border: 0;
     margin: 0;
   }
 
@@ -14218,159 +14219,14 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   }
 }
 
-/** SELECT LANGUAGE **/
-#language-settings-form {
-  align-items: center;
-  display: flex;
-  min-width: 8em;
-  transition: unset;
-  .btn i {
-    margin-right: .5rem;
-    margin-left: .2rem;
-  }
-  label {
-//    height: inherit;
-    margin: 0;
-  }
-  .select {
-    border: none;
-    height: calc(1.25em + 0.75rem + 2px);
-    color: transparent;
-  
-    .select-options {
-      min-width: 7em;
-      box-shadow: unset;
-      right: unset;
-      left: unset;
-    }
-    li {
-      font-size: 1.1rem;
-      padding: 0.5rem 0.75rem;
-      border-left: 5px transparent solid;
-      font-weight: 600;
-      text-indent: 0;
-      border-top: unset;
-      transition: unset;
-      &:hover, &:focus {
-        color: #000000;
-        text-decoration: none;
-        background-color: #eeeeee;
-        border-left: 5px #b8162b solid;
+.navbar {
+  #navbarResponsive {
+    .navbar-nav {
+      flex-wrap: wrap;
+      .btn {
+        white-space: nowrap;
       }
     }
-  }
-  .custom-select {
-    color: transparent;
-    border-color: transparent;
-    background: transparent;
-    padding: 0;
-  }
- .select-styled {
-    border:1px solid $color-navoica;
-    line-height: 1.7143;
-    text-align: center;
-    &::after {
-      display: inline-block;
-      margin-left: 0.255em;
-      vertical-align: 0.255em;
-      content: "";
-      border-top: 0.3em solid;
-      border-right: 0.3em solid transparent;
-      border-bottom: 0;
-      border-left: 0.3em solid transparent;
-      position: unset;
-    }
-    &:focus{
-      outline: 2px black solid;
-      outline-offset: 1px;
-      box-shadow: unset;
-    } 
-    &:hover {
-      box-shadow: unset;
-      border-color: $select-color transparent transparent transparent;
-    } 
-    &:hover::after {
-      border-color: $select-color transparent transparent transparent;
-    }
-  }  
-  .select-styled.active{
-    box-shadow: unset;
-    transition: all 0.2s ease-in;
-    &::after {
-      top: 10px;
-      border-color: transparent transparent $select-color transparent;
-      border-top: 0;
-      border-right: 0.3em solid transparent;
-      border-bottom: 0.3em solid;
-      border-left: 0.3em solid transparent;
-    }
-    &:hover::after {
-      border-color: transparent transparent $select-color transparent;
-    }
-  }  
-
-  .select-hidden {
-    display: none;
-    padding: 0;
-  }
-}
-
-@media (max-width: 959px) {
-  #language-settings-form {
-    display: none;
-    border: none;
-    height: inherit;
-    color: transparent;
-  }  
-  #mooc-my-mooc-menu {
-    label {
-      height: inherit;
-    }
-    .select {
-      border:none;
-    }
-    .select-options {
-      width: auto;
-      display: block !important;
-      border: none;
-      box-shadow: none;
-      position: unset;
-    }
-    li {
-      text-indent: 0;
-      border: none;
-      border-left: 5px transparent solid;
-      font-size: 1.1rem;
-      font-weight: 600;
-      padding: 0.5rem 0.75rem;
-      &:hover,  &:focus{
-        color: #000000;
-        text-decoration: none;
-        background-color: #eeeeee;
-        border-left: 5px #b8162b solid;
-      }
-    }
-    .select-styled {
-      display: none;
-    }  
-    .select-hidden {
-      display: none;
-      width: 0;
-    }
-  } 
-}  
-
-@media (max-width: 1279.98px) {
-  #language-settings-form{
-    .select-styled {
-      font-size: 1rem;
-      margin-right: 1rem;
-      position: unset;
-    } 
-    .select {
-      height: calc(1.4em + 0.75rem + 2px);
-      position: unset;
-    } 
   }
 }
 
@@ -14413,3 +14269,4 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
     width: 100%;
   }
 }
+

@@ -49,11 +49,11 @@ from student.models import CourseEnrollment
         changeEmailSettings: "${reverse('change_email_settings') | n, js_escaped_string}"
       });
 
-        document.onkeydown = function(e) {
+        $('#filters input[type="checkbox"]').on('keydown', function(e) {
             if(e.keyCode === 13) {
                 document.activeElement.click();
             }
-        };
+        });
 
       let MaxSignsNumber = 150;
       $('.course-text').each(function(index, el) {
