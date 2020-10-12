@@ -71,7 +71,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
   % if show_courseware_link and not is_unfulfilled_entitlement:
     % if not is_course_blocked:
     <a class="card-color font-weight-normal custom-hover" href="${course_target}">
-      <div class="card-body d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+      <div class="card-body d-flex flex-column">
         <figure>
           <img src="${course_overview.image_urls['small']}" alt="" class="card-img-top">
         </figure>
