@@ -179,8 +179,17 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
           </div>
           <hr class="divide" />
         % endif
-
-        % if not settings.PRODUCTION or GlobalStaff().has_user(request.user):
+        % if settings.PRODUCTION and not GlobalStaff().has_user(request.user):
+        <script>
+            $( document ).ready(function() {
+              var scheduleInputSelectors = $('.group-settings.schedule input');
+              scheduleInputSelectors.each(function(index,scheduleInput){
+                  $(scheduleInput).attr("disabled", true).css('background-color','#e9ecef');
+              });
+              $('.group-settings.schedule header').after("<p class='msg'><strong>${_('You can no longer make schedule changes by yourself. If you think such a change is necessary, please contact us by sending an e-mail to')}: <a href='mailto:navoica@opi.org.pl'>navoica@opi.org.pl</a></strong></p>");
+            });
+        </script>
+        % endif
         <div class="group-settings schedule">
           <header>
             <h2 class="title-2">${_('Course Schedule')}</h2>
@@ -284,7 +293,8 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
           </div>
           % endif
         </div>
-        % endif
+
+
         % if about_page_editable:
         <div class="group-settings course_details">
           <header>
