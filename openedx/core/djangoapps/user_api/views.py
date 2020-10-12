@@ -85,7 +85,7 @@ class LoginSessionView(APIView):
         from student.views import login_user
         return shim_student_view(login_user, check_logged_in=True)(request)
 
-    @method_decorator(sensitive_post_parameters("password"))
+    @method_decorator(sensitive_post_parameters("password", "confirm_password"))
     def dispatch(self, request, *args, **kwargs):
         return super(LoginSessionView, self).dispatch(request, *args, **kwargs)
 
@@ -181,7 +181,7 @@ class RegistrationView(APIView):
         return response
 
     @method_decorator(transaction.non_atomic_requests)
-    @method_decorator(sensitive_post_parameters("password"))
+    @method_decorator(sensitive_post_parameters("password", "confirm_password"))
     def dispatch(self, request, *args, **kwargs):
         return super(RegistrationView, self).dispatch(request, *args, **kwargs)
 
