@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-05 13:09+0000\n"
-"PO-Revision-Date: 2020-10-05 13:10:10.049376\n"
+"POT-Creation-Date: 2020-10-12 09:45+0000\n"
+"PO-Revision-Date: 2020-10-12 09:46:24.030354\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -377,7 +377,6 @@ msgid "Updates"
 msgstr ""
 
 #: cms/templates/widgets/header.html lms/templates/header/header.html
-#: lms/templates/header/navbar-language.html
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
@@ -980,6 +979,11 @@ msgstr ""
 msgid "Terms of use"
 msgstr ""
 
+#: lms/templates/footer.html lms/templates/static_templates/cookies.html
+#: lms/templates/static_templates/cookies.html
+msgid "Cookies Policy"
+msgstr ""
+
 #: lms/templates/footer.html
 msgid "Honor code "
 msgstr ""
@@ -1365,6 +1369,14 @@ msgstr ""
 #: lms/templates/header/navbar-not-authenticated.html
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid "Log in"
+msgstr ""
+
+#: lms/templates/login.html
+msgid "Fill e-mail address"
+msgstr ""
+
+#: lms/templates/login.html
+msgid "Fill password"
 msgstr ""
 
 #: lms/templates/login.html lms/templates/login.html
@@ -4078,7 +4090,6 @@ msgid "Course Tools"
 msgstr ""
 
 #: lms/templates/courseware/info.html
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Course Handouts"
 msgstr ""
 
@@ -5771,7 +5782,7 @@ msgstr ""
 msgid "Navoica logo"
 msgstr ""
 
-#: lms/templates/header/header.html lms/templates/header/navbar-language.html
+#: lms/templates/header/header.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/user_dropdown.html
 msgid "J\\u0119zyk / Language"
@@ -8592,11 +8603,6 @@ msgstr ""
 
 #: lms/templates/static_templates/contact.html
 msgid "Issues, errors, technical comments"
-msgstr ""
-
-#: lms/templates/static_templates/cookies.html
-#: lms/templates/static_templates/cookies.html
-msgid "Cookies Policy"
 msgstr ""
 
 #: lms/templates/static_templates/cookies.html
