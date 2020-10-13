@@ -1,6 +1,7 @@
-from .aws import *
-from logging.handlers import SysLogHandler
 import os
+from logging.handlers import SysLogHandler
+
+from .aws import *
 
 LOGGING['handlers']['local'] = {
     'level': 'INFO',
@@ -11,7 +12,7 @@ LOGGING['handlers']['tracking'] = {
     'level': 'DEBUG',
     'class': 'logging.handlers.SysLogHandler',
     'address': ('192.168.51.52', 514),
-    'facility': SysLogHandler.LOG_LOCAL1,
+    'facility': SysLogHandler.LOG_LOCAL0,
     'formatter': 'raw',
 }
 
