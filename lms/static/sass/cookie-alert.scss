@@ -29,6 +29,10 @@
       text-decoration: none;
       color: white;
     }
+
+    &:focus{
+      border: 2px white solid;
+    }
   }
 
   &.acceptcookies {

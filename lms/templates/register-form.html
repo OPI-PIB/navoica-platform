@@ -76,48 +76,54 @@ from student.models import UserProfile
 
     <div class="list-input">
         <div class="field text form-group form-group-required js-email-field" id="field-email">
-            <label for="email">${_('E-mail')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="text-navoica-red f-14">(${_('required')})</span></sup></label>
+            <label for="email">${_('E-mail')} <sup></i><span class="visible-hidden f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="email" type="email" name="email" value="${email}" placeholder="${_('example: username@domain.com')}" spellcheck="false" autocomplete="on" required aria-required="true"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
+            <i id="email-error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
         </div>
 
         <div class="field text form-group form-group-required js-name-field" id="field-name">
-            <label for="name">${_('Full Name')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="text-navoica-red f-14">(${_('required')})</span></sup></label>
+            <label for="name">${_('Full Name')} <sup><span class="visible-hidden f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="name" type="text" name="name" value="${name}" placeholder="${_('example: Jane Doe')}" required aria-required="true" aria-describedby="name-tip"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
-            <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
+            <i id="name-error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
+            <span class="tip tip-input text-darkgrey f-14 font-italic d-flex" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
         <div class="field text form-group form-group-required js-username-field" id="field-username">
-            <label for="username">${_('Public Username')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="text-navoica-red f-14">(${_('required')})</span></sup></label>
+            <label for="username">${_('Public Username')} <sup><span class="visible-hidden f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="username" type="text" name="username" value="${username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
-            <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
+            <i id="username-error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
+            <span class="tip tip-input text-darkgrey f-14 font-italic d-flex" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
         % if third_party_auth.is_enabled() and running_pipeline:
 
         <div class="is-disabled field optional password form-group form-group-required field-password js-password-field" hidden>
-            <label for="password">${_('Password')}</label>
+            <label for="password">${_('Password')} </label>
             <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" disabled required aria-required="true"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
+            <i id="error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
         </div>
 
         % else:
 
         <div class="field form-group form-group-required field-password js-password-field">
-            <label for="password">${_('Password')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="text-navoica-red f-14">(${_('required')})</span></sup></label>
+            <label for="password">${_('Password')} <sup><span class="visible-hidden f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" required aria-required="true" aria-describedby="password-tip"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
-            <span class="tip tip-input" id="password-tip">
+            <i id="pass-error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
+            <span class="tip tip-input text-darkgrey f-14 font-italic d-flex" id="password-tip">
 				<% min_length = 8 %>
                 ${_("Your password must be at least {num} characters long.").format(num=min_length)}
 			</span>
         </div>
 
         <div class="field password form-group form-group-required field-password js-confirm-password-field">
-            <label for="confirm_password">${_('Confirm Password')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="text-navoica-red f-14">(${_('required')})</span></sup></label>
+            <label for="confirm_password">${_('Confirm Password')} <sup></i><span class="visible-hidden f-14">(${_('required')})</span></sup></label>
             <input class="form-control js-register-field" id="confirm_password" type="password" value="" spellcheck="false" required aria-required="true" name="confirm_password" />
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
+            <i id="confirm-pass-error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
         </div>
 
         % endif
@@ -135,27 +141,30 @@ from student.models import UserProfile
         % if ask_for_email:
 
         <div class="field text js-email-field" id="field-email">
-            <label for="email">${_("E-mail")}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="text-navoica-red f-14">(${_('required')})</span></sup></label>
+            <label for="email">${_("E-mail")} <sup><span class="visible-hidden f-14">(${_('required')})</span></sup></label>
             <input class="js-register-field" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" spellcheck="false" required aria-required="true"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
+            <i id="error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
         </div>
 
         % endif
 
         <div class="field text js-username-field" id="field-username">
-            <label for="username">${_('Public Display Name')}<sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="text-navoica-red f-14">(${_('required')})</span></sup></label>
+            <label for="username">${_('Public Display Name')} <sup><span class="visible-hidden f-14">(${_('required')})</span></sup></label>
             <input class="js-register-field" id="username" type="text" name="username" value="${extauth_username}" placeholder="${_('example: JaneDoe')}" required aria-required="true" aria-describedby="username-tip"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
-            <span class="tip tip-input" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
+            <i id="error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
+            <span class="tip tip-input text-darkgrey f-14 font-italic d-flex" id="username-tip">${_('Will be shown in any discussions or forums you participate in')} <strong>(${_('cannot be changed later')})</strong></span>
         </div>
 
         % if ask_for_fullname:
 
         <div class="field text js-name-field" id="field-name">
-            <label for="name">${_('Full Name')} <sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="text-navoica-red f-14">(${_('required')})</span></sup></label>
+            <label for="name">${_('Full Name')} <sup><span class="visible-hidden f-14">(${_('required')})</span></sup></label>
             <input class="js-register-field" id="name" type="text" name="name" value="" placeholder="$_('example: Jane Doe')}" aria-describedby="name-tip"/>
-            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
-            <span class="tip tip-input" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
+            <i id="error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+            <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
+            <span class="tip tip-input text-darkgrey f-14 font-italic d-flex" id="name-tip">${_("Your legal name, used for any certificates you earn.")}</span>
         </div>
 
         % endif
@@ -165,7 +174,7 @@ from student.models import UserProfile
     % endif
 </div>
 
-<div class="group group-form group-form-secondary group-form-personalinformation">
+<div class="group group-form group-form-secondary group-form-personalinformation my-5">
     <h2 class="sr">${_("Additional Personal Information")}</h2>
 
     <div class="list-input">
@@ -177,9 +186,9 @@ from student.models import UserProfile
         % endif
         % if settings.REGISTRATION_EXTRA_FIELDS['country'] != 'hidden':
         <div class="field-group form-group form-group-${settings.REGISTRATION_EXTRA_FIELDS['country']}">
-            <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['country']} select" id="field-country">
-                <label for="country">${_("Country")}</label>
-                <select class="custom-select ${settings.REGISTRATION_EXTRA_FIELDS['country']}" id="country" name="country" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['country'] == 'required' else ''}>
+            <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['country']} w-100" id="field-country">
+                <label for="country" class="w-100">${_("Country")}</label>
+                <select class="form-control ${settings.REGISTRATION_EXTRA_FIELDS['country']} w-100" id="country" name="country" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['country'] == 'required' else ''}>
                 <option value="PL">${_("Poland")}</option>
                 %for code, country_name in countries:
                 <option value="${code}">${ unicode(country_name) }</option>
@@ -190,9 +199,9 @@ from student.models import UserProfile
         % endif
         % if settings.REGISTRATION_EXTRA_FIELDS['level_of_education'] != 'hidden':
         <div class="field-group field-education-level  form-group form-group-${settings.REGISTRATION_EXTRA_FIELDS['level_of_education']}">
-            <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['level_of_education']} select" id="field-education-level">
-                <label for="education-level">${_("Highest Level of Education Completed")}</label>
-                <select class="custom-select" id="education-level" name="level_of_education" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['level_of_education'] == 'required' else ''}>
+            <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['level_of_education']} w-100" id="field-education-level">
+                <label for="education-level" class="w-100">${_("Highest Level of Education Completed")}</label>
+                <select class="form-control w-100" id="education-level" name="level_of_education" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['level_of_education'] == 'required' else ''}>
                 <option value="">--</option>
                 %for code, ed_level in UserProfile.LEVEL_OF_EDUCATION_CHOICES:
                 <option value="${code}">${_(ed_level)}</option>
@@ -206,8 +215,8 @@ from student.models import UserProfile
             <div class="col-md-6">
                 % if settings.REGISTRATION_EXTRA_FIELDS['gender'] != 'hidden':
                 <div class="field-group field-gender form-group form-group-${settings.REGISTRATION_EXTRA_FIELDS['gender']}">
-                    <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['gender']} select" id="field-gender">
-                        <label for="gender">${_("Gender")}</label>
+                    <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['gender']} w-100" id="field-gender">
+                        <label for="gender" class="w-100">${_("Gender")}</label>
                         <select class="form-control" id="gender" name="gender" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['gender'] == 'required' else ''}>
                         <option value="">--</option>
                         %for code, gender in UserProfile.GENDER_CHOICES:
@@ -221,8 +230,8 @@ from student.models import UserProfile
             % if settings.REGISTRATION_EXTRA_FIELDS['year_of_birth'] != 'hidden':
             <div class="col-md-6">
                 <div class="field-group field-yob form-group form-group-${settings.REGISTRATION_EXTRA_FIELDS['year_of_birth']}">
-                    <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['year_of_birth']} select" id="field-yob">
-                        <label for="yob">${_("Year of Birth")}</label>
+                    <div class="field ${settings.REGISTRATION_EXTRA_FIELDS['year_of_birth']} w-100" id="field-yob">
+                        <label for="yob" class="w-100">${_("Year of Birth")}</label>
                         <select class="form-control" id="yob" name="year_of_birth" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['year_of_birth'] == 'required' else ''}>
                         <option value="">--</option>
                         %for year in UserProfile.VALID_YEARS:
@@ -258,7 +267,7 @@ from student.models import UserProfile
     % endif
 </div>
 
-<div class="group group-form group-form-accountacknowledgements">
+<div class="group group-form group-form-accountacknowledgements my-5">
     <h2 class="sr">${_("Account Acknowledgements")}</h2>
 
 
@@ -270,9 +279,10 @@ from student.models import UserProfile
             <input type="checkbox" name="terms_of_service" class="custom-control-input js-register-field" id="terms_of_service" value="true" required aria-required="true">
             <label class="custom-control-label" for="terms_of_service">${_('I agree to the {link_start}Terms of Service{link_end}').format(
                 link_start='<a href="{url}" class="new-vp text-navoica-red">'.format(url=marketing_link('TOS')),
-                    link_end='</a>')} <sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="text-navoica-red f-14">(${_('required')})</span></sup></label>
+                    link_end='</a>')} <sup><span class="visible-hidden f-14">(${_('required')})</span></sup></label>
         </div>
-        <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
+        <i id="terms-error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+        <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
     </div>
     % endif
 
@@ -288,9 +298,10 @@ from student.models import UserProfile
             %>
             <label class="custom-control-label" for="honor_code">${_('I agree to the {link_start}Honor Code{link_end}').format(
                 link_start='<a href="{url}" class="new-vp text-navoica-red">'.format(url=honor_code_path),
-                    link_end='</a>')} <sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="text-navoica-red f-14">(${_('required')})</span></sup></label>
+                    link_end='</a>')} <sup><span class="visible-hidden f-14">(${_('required')})</span></sup></label>
         </div>
-        <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red d-flex"></small>
+        <i id="honor-error-icon" class="fa fa-exclamation-triangle text-navoica-red mr-1 d-none"></i>
+        <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
     </div>
 
 

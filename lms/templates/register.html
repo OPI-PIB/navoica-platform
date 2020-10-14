@@ -77,41 +77,49 @@ import calendar
                 message: "${_('A properly formatted e-mail is required')}",
                 field: "${_('E-mail')}",
                 pattern: /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/,
+                error: "#email-error-icon",
             },
             name: {
                 message: "${_('Your legal name must be a minimum of two characters long')}",
                 field: "${_('Full Name')}",
                 pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,255}$/,
+                error: "#name-error-icon",
             },
             username: {
                 message: "${_('Usernames can only contain letters (A-Z, a-z), numerals (0-9), underscores (_), and hyphens (-) and must be between 2 and 255 characters long.')}",
                 field: "${_('Public Username')}",
                 pattern: /^[a-zA-Z0-9_-]{2,30}$/,
+                error: "#username-error-icon",
             },
             password: {
                 message: "${_('A valid password is required')}",
                 field: "${_('Password')}",
                 pattern: /^[A-Za-z\d@$!%*?&_]{8,75}$/,
+                error: "#pass-error-icon",
             },
             confirm_password: {
                 message: "${_('Passwords Don\'t Match')}",
                 field: "${_('Confirm Password')}",
-                pattern: function(passwordVal, passwordConfirmVal) { return passwordVal === passwordConfirmVal }
+                pattern: function(passwordVal, passwordConfirmVal) { return passwordVal === passwordConfirmVal },
+                error: "#confirm-pass-error-icon",
             },
             terms_of_service: {
                 message: "${_('You must accept the terms of service.')}",
                 field: "${_('Terms of Service')}",
+                error: "#terms-error-icon",
             },
             honor_code: {
                 message: "${_('To enroll, you must follow the honor code.')}",
                 field: "${_('Honor Code')}",
+                error: "#honor-error-icon",
             }
         };
 
         function addMsgError(key, msg) {
             $('#' + key).attr('aria-invalid', true).addClass('error-field');
             $('.js-' + key.replace(/_/g, '-') + '-field').find('.js-error-message').text(msg || validationPattern[key].message);
-        }
+            $(validationPattern[key].error).removeClass('d-none');
+         }
 
         function removeMsgError($this) {
             $this.removeAttr('aria-invalid').removeClass('error-field');
@@ -142,6 +150,7 @@ import calendar
                                     const field = validationPattern && validationPattern[key] && validationPattern[key].field;
                                     addMessageAlert(field, confirmPasswordTranslation, key);
                                     isValidForm = false;
+                               
                                 } else {
                                     addMsgError(key);
                                     const field = validationPattern && validationPattern[key] && validationPattern[key].field;
@@ -163,6 +172,7 @@ import calendar
                                     const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
                                     addMessageAlert(field, msg, key);
                                     isValidForm = false;
+
                                 }
                             } else {
                                 if ($(this).is(':checked')) {

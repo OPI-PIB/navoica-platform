@@ -81,9 +81,18 @@
 
         .btn-link {
           color: #212529;
-
-          &:focus, &:hover {
+              border: 1px solid rgba(0,0,0,0.125);
+    
+          &:focus {
             text-decoration: none;
+            border: 2px black solid;
+            background-color: #ffffff;
+          }
+
+          &:hover {
+            background-color: #eeeeee;
+            text-decoration: none;
+            outline: none;
           }
         }
 
@@ -353,6 +362,8 @@
 
         &:hover {
           cursor: pointer;
+          box-shadow: 0px 0px 8px 3px rgba(71,79,89,0.6);
+          background-color: #ffffff;
         }
 
         i {
@@ -400,6 +411,11 @@
           margin: 0 1% 8px 0;
           // min-height: 88px;
         }
+
+        > .list-group-item:focus {
+          outline: 2px black solid;
+          outline-offset: 1px;
+        }
       }
     }
 
@@ -420,6 +436,10 @@
     .accordion-switch > div {
       display: flex;
     }
+
+  .custom-control-label:focus::before {
+    outline: 2px black solid;
+  }
 
     /**
        End of FAQ Categories
