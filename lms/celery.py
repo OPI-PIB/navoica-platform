@@ -6,22 +6,17 @@ Taken from: http://celery.readthedocs.org/en/latest/django/first-steps-with-djan
 """
 from __future__ import absolute_import
 
-import os
-
 from celery import Celery
-from django.conf import settings
+from django.apps import apps
 
 from openedx.core.lib.celery.routers import AlternateEnvironmentRouter
 
-# set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proj.settings')
-
-APP = Celery('proj')
+APP = Celery('lms')
 
 # Using a string here means the worker will not have to
 # pickle the object when using Windows.
 APP.config_from_object('django.conf:settings')
-APP.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
+APP.autodiscover_tasks(lambda: [n.name for n in apps.get_app_configs()])
 
 
 class Router(AlternateEnvironmentRouter):
