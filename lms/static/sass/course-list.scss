@@ -9998,6 +9998,7 @@ section .display-2 {
   line-height: 1.5rem;
   margin: 0 0 0.5rem 0;
   width: 100%;
+  word-break: break-word;
 }
 
 .card-footer {
@@ -14404,7 +14405,9 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
 
 @media (min-width: 320px) and (max-width: 960px) {
   .card-img-top {
-    width: auto;
+    max-height: 11rem;
+    height: auto;
+    object-fit: scale-down;
   }
 }
 
@@ -14413,3 +14416,4 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
     width: 100%;
   }
 }
+
