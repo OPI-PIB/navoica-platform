@@ -16,36 +16,10 @@ show_sysadmin_dashboard = settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') 
 self.real_user = getattr(user, 'real_user', user)
 %>
 
-<!--
-% if show_dashboard_tabs:
-<li class="nav-item">
-    <a class="nav-link" href="${marketing_link('BLOG')}">${_("News")}</a>
-</li>
-% if show_program_listing:
-<li class="mobile-nav-item hidden-mobile nav-item">
-    <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-        ${_("Programs")}
-    </a>
-</li>
-% endif
-## <li class="mobile-nav-item hidden-mobile nav-item">
-##     <a class="${'active ' if '/u/' in request.path  else ''}nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">
-##         ${_("Profile")}
-##     </a>
-## </li>
-% endif
-
-<li class="nav-item">
-    <a class="btn btn-outline-primary" href="" target="_blank">${_("About")}</a>
-</li>
--->
-
-<!--% if show_explore_courses:-->
-
-<div class="nav-item desktop-menu ml-0" role="menuitem">
+<div class="nav-item desktop-menu" role="menuitem">
     <a class="btn btn-outline-primary btn-sm" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
 </div>
-<!--% endif-->
+
 % if show_sysadmin_dashboard:
 <div class="mobile-nav-item hidden-mobile nav-item" role="menuitem">
     ## Translators: This is short for "System administration".
@@ -60,12 +34,6 @@ self.real_user = getattr(user, 'real_user', user)
     </a>
 </div>
 % endif
-
-<!--
-<li class="nav-item">
-    <a class="btn btn-outline-primary" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
-</li>
--->
 
 <%include file="user_dropdown.html"/>
 

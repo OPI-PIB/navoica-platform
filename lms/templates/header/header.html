@@ -83,45 +83,6 @@ HeaderFactory();
             % endif
 
             <nav class="d-flex" role= "navigation" aria-label="Menu">
-
-                % if header_language_selector_is_enabled():
-                <% languages = settings.LANGUAGES %>
-                % if len(languages) > 1:
-                <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
-                    <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-                    % if user.is_authenticated():
-                    <input title="preference api" type="hidden" class="url-endpoint"
-                           value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-                    % else:
-                    <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}"
-                           data-user-is-authenticated="false">
-                    % endif
-                    <!--<label><span class="sr">${_("Choose Language")}</span>
-                        <select class="custom-select language-selector" id="settings-language-value" name="language">
-                            % for language in languages:
-                                % if language[0] == LANGUAGE_CODE:
-                                <option value="${language[0]}" class="${language[0]}" selected="selected">${language[1]}</option>
-                                % else:
-                                <option value="${language[0]}" class="${language[0]}">${language[1]}</option>
-                                % endif
-                            % endfor
-                        </select>
-                    </label>-->
-                    <label><span class="sr">${_("Język / Language")}</span>
-                        <select class="custom-select language-selector" id="settings-language-value" name="language">
-                            % for language in languages:
-                                % if language[0] == LANGUAGE_CODE:
-                                    <option value="${language[0]}" class="${language[0]}" selected="selected">${language[1]}</option>
-                                % else:
-                                <option value="${language[0]}" class="${language[0]}">${language[1]}</option>
-                                % endif
-                            % endfor
-                        </select>
-                    </label>
-                </form>
-                % endif
-                % endif  
-
                 <div class="dropdown ml-auto">
                     <button id="mooc-my-mooc"
                             class="btn btn-outline-primary border-secondary dropdown-toggle"
@@ -139,27 +100,32 @@ HeaderFactory();
                         <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
                         % endif
                     </div>
-
                 </div>
-
                 <div class="collapse navbar-collapse desktop-menu" id="navbarResponsive">
-
                     <div class="navbar-nav ml-auto" role="menu">
+                        % if header_language_selector_is_enabled():
+                        <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
+                            <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
+                            % if user.is_authenticated():
+                            <input title="preference api" type="hidden" class="url-endpoint"
+                                value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
+                            % else:
+                            <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}"
+                                data-user-is-authenticated="false">
+                            % endif
+                            <input name="language" type="hidden" value="" />
+                        </form>
+                        <%include file="navbar-language-desktop.html"/>
+                        % endif
                         % if user.is_authenticated():
                         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
                         % else:
                         <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
                         % endif
-
-
                     </div>
                 </div>
-
-            </div>
-
-
+            </nav>
         </div>
-
     </div>
 </nav>
 

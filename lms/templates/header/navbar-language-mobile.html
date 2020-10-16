@@ -1,0 +1,17 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='../static_content.html'/>
+<%!
+from openedx.core.djangoapps.lang_pref.api import released_languages
+from django.utils.translation import ugettext as _
+%>
+
+<% languages = released_languages() %>
+<hr class="dropdown-divider mobile-menu my-0" />
+<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu language-selector" id="language-mobile">${_("Język / Language")}</div>
+    % if len(languages) > 1:
+    % for language in languages:
+    <div role="menuitem" class="mobile-menu">
+    <a class="dropdown-item language-button" data-lang="${language[0]}" href>${language[1]}</a>
+    </div>
+    % endfor
+    % endif

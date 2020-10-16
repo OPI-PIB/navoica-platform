@@ -1,0 +1,21 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='../static_content.html'/>
+<%!
+from openedx.core.djangoapps.lang_pref.api import released_languages
+from django.utils.translation import ugettext as _
+%>
+
+<% languages = released_languages() %>
+% if len(languages) > 1:
+<div class="dropdown desktop-menu" role="menuitem">
+    <button class="btn btn-sm btn-outline-primary dropdown-toggle" id="navbarDropdownMenuLangLink" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="${dict(languages).get(LANGUAGE_CODE)}, Select language / Wybierz język">
+        <i class="fas fa-globe"></i>
+        <span>${dict(languages).get(LANGUAGE_CODE)}</span>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLangLink" role="menu">
+        % for language in languages:
+        <a class="dropdown-item language-button" data-lang="${language[0]}" role="menuitem" href="" lang="${language[0]}">${language[1]}</a>
+        % endfor
+    </div>
+</div>
+% endif
