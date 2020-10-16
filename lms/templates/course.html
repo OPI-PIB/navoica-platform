@@ -9,7 +9,7 @@ from six import text_type
 
 <div class="col-lg-3 col-md-6 mb-3">
 	<a href="${reverse('about_course', args=[text_type(course.id)])}" class="card h-100">
-		<div class="card-body d-flex flex-column flex-sm-row flex-md-row flex-lg-column">
+		<div class="card-body d-flex flex-column">
 		 <%
 			  course_start_date = course.advertised_start or course.start
 	 	 %>
