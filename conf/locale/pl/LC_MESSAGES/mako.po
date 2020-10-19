@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-05 13:09+0000\n"
+"POT-Creation-Date: 2020-10-12 09:45+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -384,7 +384,6 @@ msgid "Updates"
 msgstr "Aktualności"
 
 #: cms/templates/widgets/header.html lms/templates/header/header.html
-#: lms/templates/header/navbar-language.html
 #: lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
@@ -1005,6 +1004,11 @@ msgstr "Informacje prawne"
 msgid "Terms of use"
 msgstr "Warunki Korzystania z Serwisu"
 
+#: lms/templates/footer.html lms/templates/static_templates/cookies.html
+#: lms/templates/static_templates/cookies.html
+msgid "Cookies Policy"
+msgstr "Polityka cookies"
+
 #: lms/templates/footer.html
 msgid "Honor code "
 msgstr "Kodeks honorowy"
@@ -1446,6 +1450,14 @@ msgstr "mooc_help@opi.org.pl."
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid "Log in"
 msgstr "Zaloguj się"
+
+#: lms/templates/login.html
+msgid "Fill e-mail address"
+msgstr "Wpisz adres e-mail"
+
+#: lms/templates/login.html
+msgid "Fill password"
+msgstr "Wpisz hasło"
 
 #: lms/templates/login.html lms/templates/login.html
 #: lms/templates/header/navbar-not-authenticated.html
@@ -2085,7 +2097,7 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "A valid password is required"
-msgstr "Wymagane jest prawidłowe hasło"
+msgstr "Wymagane jest prawidłowe hasło."
 
 #: lms/templates/register.html
 msgid "You must accept the terms of service."
@@ -2093,7 +2105,7 @@ msgstr "Musisz zaakceptować Warunki Korzystania z Serwisu."
 
 #: lms/templates/register.html
 msgid "To enroll, you must follow the honor code."
-msgstr "Aby się zapisać, musisz zaakceptować zasady Kodeksu Honorowego."
+msgstr "Musisz zaakceptować zasady Kodeksu Honorowego."
 
 #: lms/templates/register.html lms/templates/static_templates/honor.html
 #: lms/templates/static_templates/honor.html
@@ -2104,7 +2116,7 @@ msgstr "Kodeks Honorowy"
 
 #: lms/templates/register.html
 msgid "A valid confirm password is required"
-msgstr "Wymagane jest prawidłowe hasło potwierdzające"
+msgstr "Wymagane jest prawidłowe hasło potwierdzające."
 
 #: lms/templates/register.html lms/templates/register.html
 msgid "Registration form"
@@ -4562,7 +4574,6 @@ msgid "Course Tools"
 msgstr "Narzędzia kursu"
 
 #: lms/templates/courseware/info.html
-#: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 msgid "Course Handouts"
 msgstr "Notatki z kursu"
 
@@ -6538,7 +6549,7 @@ msgstr "Strona główna {platform_name}"
 msgid "Navoica logo"
 msgstr "Logo Navoica"
 
-#: lms/templates/header/header.html lms/templates/header/navbar-language.html
+#: lms/templates/header/header.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/user_dropdown.html
 msgid "J\\u0119zyk / Language"
@@ -9699,11 +9710,6 @@ msgstr "Centrum Pomocy"
 #: lms/templates/static_templates/contact.html
 msgid "Issues, errors, technical comments"
 msgstr "Problemy, błędy, uwagi techniczne"
-
-#: lms/templates/static_templates/cookies.html
-#: lms/templates/static_templates/cookies.html
-msgid "Cookies Policy"
-msgstr "Polityka cookies"
 
 #: lms/templates/static_templates/cookies.html
 msgid ""
