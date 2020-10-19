@@ -10963,14 +10963,25 @@ main.container aside h6 {
   }
 
   .choicegroup_correct .status-icon::after {
-    color: #008100;
+    color: green;
     font-size: 1.2em;
-    content: "";
+    content: "\f00c";
     font-family: FontAwesome;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     speak: none;
   }
+
+  .choicegroup_incorrect .status-icon::after {
+    color: red;
+    font-size: 1.2em;
+    content: "\f00d";
+    font-family: FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    speak: none;
+  }
+
 
 
   .problem .action {
@@ -11783,6 +11794,20 @@ div.equation {
       margin-bottom: 1em;
     }
   }
+}
+
+.xmodule_display.xmodule_CapaModule div.problem .indicator-container .status.incorrect .status-icon::after {
+    color: red;
+    font-size: 1.2em;
+    content: "\f00d";
+    font-family: FontAwesome;
+}
+
+.xmodule_display.xmodule_CapaModule div.problem .indicator-container .status.correct .status-icon::after {
+    color: green;
+    font-size: 1.2em;
+    content: "\f00c";
+    font-family: FontAwesome;
 }
 
 @import 'elements/_creative-commons';
