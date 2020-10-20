@@ -81,7 +81,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
         <div class="course-meta text-card">
           <p><strong>${_("Course organizer")}</strong>
           % if course_overview.organizer in (None,'') :
-            <${course_overview.display_name_with_default}
+            ${course_overview.display_name_with_default}
           % else:
             ${settings.ALL_COURSE_ORGANIZER_DICT[course_overview.organizer]}
           % endif
