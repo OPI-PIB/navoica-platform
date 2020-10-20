@@ -57,7 +57,9 @@ module.exports = {
         CookiePolicyBanner: './common/static/js/src/CookiePolicyBanner.jsx',
 
         // Common
-        ReactRenderer: './common/static/js/src/ReactRenderer.jsx'
+        ReactRenderer: './common/static/js/src/ReactRenderer.jsx',
+
+        GetCourseProgress: './lms/static/js/courseware/get_course_progress.js',
     },
 
     output: {

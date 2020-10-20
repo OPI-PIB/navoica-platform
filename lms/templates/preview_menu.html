@@ -17,8 +17,11 @@ from courseware.courses import get_course_about_section
 show_preview_menu = course and staff_access and supports_preview_menu
 %>
 
+% if course:
+<script src="${static.url('js/course_info.js')}"></script>
 
-<script type="module" src="${static.url('js/course_info.js')}"></script>
+% endif
+
 
 % if request.path.endswith("course/"):
 
@@ -118,7 +121,6 @@ show_preview_menu = course and staff_access and supports_preview_menu
   </div>
   </div>
 </header>
-
 
     <%
     preview_options = {
@@ -244,4 +246,13 @@ show_preview_menu = course and staff_access and supports_preview_menu
     <%static:require_module_async module_name="lms/js/preview/preview_factory" class_name="PreviewFactory">
         PreviewFactory(${preview_options | n, dump_js_escaped_json});
     </%static:require_module_async>
+
 % endif
+
+%if course:
+
+<%static:webpack entry="GetCourseProgress">
+new GetCourseProgress();
+</%static:webpack>
+
+%endif
