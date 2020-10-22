@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-12 09:45+0000\n"
-"PO-Revision-Date: 2020-10-12 09:46:24.030354\n"
+"POT-Creation-Date: 2020-10-23 08:01+0000\n"
+"PO-Revision-Date: 2020-10-23 08:02:23.906233\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -376,8 +376,7 @@ msgstr ""
 msgid "Updates"
 msgstr ""
 
-#: cms/templates/widgets/header.html lms/templates/header/header.html
-#: lms/templates/navigation/navigation.html
+#: cms/templates/widgets/header.html lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
 msgstr ""
@@ -5783,12 +5782,6 @@ msgid "Navoica logo"
 msgstr ""
 
 #: lms/templates/header/header.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: lms/templates/header/user_dropdown.html
-msgid "J\\u0119zyk / Language"
-msgstr ""
-
-#: lms/templates/header/header.html
 msgid "My Account"
 msgstr ""
 
@@ -5796,33 +5789,6 @@ msgstr ""
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
 "strongly recommend using {chrome_link} or {ff_link}."
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "News"
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/learner_dashboard/programs.html
-#: lms/templates/navigation/navbar-authenticated.html
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html
-msgid "Programs"
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: lms/templates/static_templates/about.html
-#: lms/templates/static_templates/about.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-msgid "About"
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html
@@ -5847,13 +5813,8 @@ msgstr ""
 msgid "Shopping Cart"
 msgstr ""
 
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: lms/templates/static_templates/contact.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-msgid "Contact"
+#: lms/templates/header/navbar-language-mobile.html
+msgid "J\\u0119zyk / Language"
 msgstr ""
 
 #: lms/templates/header/navbar-not-authenticated.html
@@ -6198,6 +6159,14 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Download profile information as a CSV"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Click to download a list of all generated certificates"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Download a list of generated certificates as a CSV file"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
@@ -7569,6 +7538,13 @@ msgstr ""
 msgid "Program Details"
 msgstr ""
 
+#: lms/templates/learner_dashboard/programs.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header/navbar-authenticated.html
+msgid "Programs"
+msgstr ""
+
 #: lms/templates/learner_dashboard/text-me-fragment.html
 msgid "Get the {platform_name} Mobile App!"
 msgstr ""
@@ -8310,6 +8286,17 @@ msgid ""
 "been moved at {email}."
 msgstr ""
 
+#: lms/templates/static_templates/about.html
+#: lms/templates/static_templates/about.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+msgid "About"
+msgstr ""
+
 #: lms/templates/static_templates/accessibility.html
 msgid "Accessibility Statement"
 msgstr ""
@@ -8567,6 +8554,13 @@ msgstr ""
 #: lms/templates/static_templates/news.html
 #: lms/templates/static_templates/press.html
 msgid "This page left intentionally blank. Feel free to add your own content."
+msgstr ""
+
+#: lms/templates/static_templates/contact.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+msgid "Contact"
 msgstr ""
 
 #: lms/templates/static_templates/contact.html
@@ -11240,6 +11234,10 @@ msgstr ""
 
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
 msgid "Schools & Partners"
+msgstr ""
+
+#: themes/red-theme/lms/templates/footer.html
+msgid "News"
 msgstr ""
 
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
