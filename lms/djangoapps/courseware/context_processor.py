@@ -28,8 +28,8 @@ def user_timezone_locale_prefs(request):
     cached_value = get_cache(CACHE_NAME)
     if not cached_value:
         user_prefs = {
-            'user_timezone': None,
-            'user_language': None,
+            'user_timezone': "Europe/Warsaw",
+            'user_language': "pl",
         }
         if hasattr(request, 'user') and request.user.is_authenticated():
             try:
