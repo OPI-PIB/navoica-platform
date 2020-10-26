@@ -44,10 +44,16 @@ from django.core.urlresolvers import reverse
          </div>
        </li>
      </ul>
-    <a href="https://www.facebook.com/NAVOICA/" target="_blank" class="fb-link-icon-big center">
-        <i class="fab fa-facebook-f m-auto" title="${_('Navoica page on Facebook')}"></i>
-        <span class="sr">${_('open in a new window')}</span>
-    </a>
+     <div class="d-flex justify-content-center align-items-center">
+        <a href="https://www.facebook.com/NAVOICA/" target="_blank" class="fb-link-icon">
+            <i class="fab fa-facebook-f m-auto" title="${_('Navoica page on Facebook')}"></i>
+            <span class="sr">${_('open in a new window')}</span>
+        </a>    
+        <a href="https://twitter.com/navoica_pl" target="_blank">
+          <i class="fab fa-twitter-square fa-3x ml-2" title="${_('Navoica page on Twitter')}"></i>
+          <span class="sr">${_('open in a new window')}</span>
+        </a>
+      </div>
    </div>
   % endif
 </aside>

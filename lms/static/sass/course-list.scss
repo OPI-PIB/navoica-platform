@@ -13738,7 +13738,10 @@ span.complete-checkmark.fa.fa-check {
   height: 2.5rem;
   width: 2.5rem;
   &:hover {
-    color:#fff;
+    background: #a11326;
+    border: 1px solid #a11326;
+    color: #fff;
+    text-decoration: none;
   }
 
   i {
