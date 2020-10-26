@@ -308,7 +308,6 @@ a {
     &:focus {
       color: inherit;
       text-decoration: none;
-      outline: 0;
     }
   }
 }
@@ -1840,8 +1839,6 @@ margin-top: 4rem !important;
   &:focus {
     color: #212529;
     background-color: #fff;
-    border-color: #f28f9c;
-    outline: 0;
     box-shadow: 0 0 0 0.2rem #dee2e6;
   }
 
@@ -3851,14 +3848,12 @@ input {
     }
 
     &:not(:checked) ~ .custom-control-label::before {
-      border-color: #f28f9c;
+      //border-color: #f28f9c;
     }
   }
 
   &:not(:disabled):active ~ .custom-control-label::before {
     color: #fff;
-    background-color: #f7bcc4;
-    border-color: #f7bcc4;
   }
 
   &:disabled ~ .custom-control-label {
@@ -4010,9 +4005,6 @@ input {
   text-overflow: '';
 
   &:focus {
-    border-color: #f28f9c;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(228, 29, 55, 0.25);
 
     &::-ms-value {
       color: #212529;
@@ -11197,10 +11189,11 @@ article .display-3 {
   }
 
   #login-form, #register-form {
-    background-color: #f8f9fa;
+    background-color: #fcfcfc;
     border: 1px solid #e9ecef;
     margin: 0 0 -1px;
     padding: 1rem;
+    box-shadow: 0 0 12px 2px #dee2e6;
   }
 
   #login-form .message, #register-form .message {
@@ -11300,6 +11293,16 @@ article .display-3 {
 
   #login-form .form-actions button[type="submit"], #register-form .form-actions button[type="submit"] {
     flex: 1;
+  }
+}
+
+.custom-select:focus {
+  outline: 2px solid #000000;
+}
+
+#register-form {
+  input:focus, input[type="checkbox"]:focus, select:focus, button[type="submit"]:focus, a:focus, .custom-control-input:focus ~ .custom-control-label::before, .custom-select:focus {
+    outline: 2px solid #000000;
   }
 }
 
@@ -12088,9 +12091,6 @@ label {
 #email:focus, #password:focus {
      color: #212529 !important;
      background-color: #fff !important;
-     border-color: #f28f9c !important;
-     outline: 0;
-     box-shadow: 0 0 0 0.2rem #dee2e6;
 }
 
 @media (min-width: 960px) {
@@ -14127,7 +14127,7 @@ span.complete-checkmark.fa.fa-check {
 
 /** ERROR FIELD **/
 input.form-control.form-control.error-field, .error-field, .error-field ~ .custom-control-label::before {
-  border: 2px solid #e41d37;
+  border: 3px solid #e41d37;
 }
 
 .f-10 {

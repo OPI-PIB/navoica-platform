@@ -110,7 +110,8 @@ import calendar
 
         function addMsgError(key, msg) {
             $('#' + key).attr('aria-invalid', true).addClass('error-field');
-            $('.js-' + key.replace(/_/g, '-') + '-field').find('.js-error-message').text(msg || validationPattern[key].message);
+            const errorIcon = '<i class="fas fa-exclamation-triangle align-self-center mr-1 text-navoica-red"></i>'
+            $('.js-' + key.replace(/_/g, '-') + '-field').find('.js-error-message').text(msg || validationPattern[key].message).prepend(errorIcon);
         }
 
         function removeMsgError($this) {
