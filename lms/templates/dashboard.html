@@ -49,11 +49,11 @@ from student.models import CourseEnrollment
         changeEmailSettings: "${reverse('change_email_settings') | n, js_escaped_string}"
       });
 
-        document.onkeydown = function(e) {
+        $('#filters input[type="checkbox"]').on('keydown', function(e) {
             if(e.keyCode === 13) {
                 document.activeElement.click();
             }
-        };
+        });
 
       let MaxSignsNumber = 150;
       $('.course-text').each(function(index, el) {
@@ -328,7 +328,7 @@ from student.models import CourseEnrollment
     %endif
 
 </div>
-        <div class="d-inline-flex flex-wrap flex-md-nowrap">
+        <div class="d-md-inline-flex flex-wrap">
         <div id="filters" class="aside-block sidebar">
             <div class="bg-brand rounded search-facets">
                 <h2 id="filter-bar" class="list-group filters hide-phone d-none d-md-block is-animated is-collapsed">

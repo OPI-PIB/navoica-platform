@@ -54,7 +54,7 @@ if course is not None:
                     <%
                     tab_is_active = tab.tab_id in (active_page, default_tab)
                     %>
-                    <a href="${tab.link_func(course, reverse)}" class="nav-link ${'active' if tab_is_active else ''}">
+                    <a href="${tab.link_func(course, reverse)}" class="nav-link f-15 ${'active' if tab_is_active else ''}">
                             ${_(tab.name)}
                             % if tab_is_active:
                                 <span class="sr-only">, ${_('current location')}</span>
@@ -73,7 +73,7 @@ if course is not None:
 </div>
 %endif
 
-<div class="container d-flex justify-content-center align-items-center my-3 w-100" style="display: none !important;">
+<div class="container d-flex justify-content-center align-items-center my-3 w-100">
     <div class="course-progress d-flex justify-content-center align-items-center flex-wrap w-75" data-user="${request.user}" data-courseid="${course.id}">
         <p class="w-100">${_('Course progress')}: <strong><span class="js-percentage-progress"></span> ${_('finished lessons')}</strong></p>
         <div class="w-100 d-flex justify-content-around">
@@ -84,3 +84,4 @@ if course is not None:
         </div>
     </div>
 </div>
+

@@ -23,7 +23,7 @@
 
             tagName: 'div',
             templateId: '#course_card-tpl',
-            className: 'col-lg-4 mb-2',
+            className: 'col-lg-4 mb-2 col-md-6',
 
             initialize: function() {
                 this.tpl = _.template($(this.templateId).html());

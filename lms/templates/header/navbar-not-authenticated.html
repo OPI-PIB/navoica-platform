@@ -9,6 +9,7 @@
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from six import text_type
+from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled
 %>
 
 <%
@@ -22,67 +23,49 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 
 
 % if courses_are_browsable:
-<div role="menuitem" class="nav-item desktop-menu ml-0">
+<div role="menuitem" class="nav-item desktop-menu">
     <a href="${marketing_link('COURSES')}" class="btn btn-outline-primary btn-sm">${_("Discover New")}</a>
 </div>
 % endif
 
-<!--
-<li class="nav-item">
-    <a class="btn btn-outline-primary" href="http://polskimooc.edu.pl" target="_blank">${_("About")}</a>
-</li>
-
-<li class="nav-item">
-    <a class="btn btn-outline-primary" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
-</li>
-
-
-<li class="nav-item">
-    <a class="nav-link" href="${marketing_link('BLOG')}">${_("News")}</a>
-</li>
--->
 % if mktg_site_enabled:
-
-
-<div role="menuitem" class="nav-item">
-    <a class="nav-link" href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
-</div>
-
-<div role="menuitem" class="nav-item">
-    <a class="nav-link" href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
-</div>
+    <div role="menuitem" class="nav-item">
+        <a class="nav-link" href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
+    </div>
+    <div role="menuitem" class="nav-item">
+        <a class="nav-link" href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
+    </div>
 % endif
 
 % if allows_login:
-        % if restrict_enroll_for_course:
-<div role="menuitem" class="nav-item desktop-menu">
-    <a class="btn btn-primary btn-sm" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
-</div>
-<div role="menuitem" class="mobile-menu">
-    <a class="dropdown-item" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register")}</a>
-</div>
-<div role="menuitem" class="nav-item">
-    <a href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}" class="btn btn-outline-primary btn-sm">${_("Sign in")}</a>
-</div>
+    % if restrict_enroll_for_course:
+    <div role="menuitem" class="nav-item desktop-menu">
+        <a class="btn btn-primary btn-sm" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
+    </div>
+    <div role="menuitem" class="mobile-menu">
+        <a class="dropdown-item" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register")}</a>
+    </div>
+    <div role="menuitem" class="nav-item">
+        <a href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}" class="btn btn-outline-primary btn-sm">${_("Sign in")}</a>
+    </div>
+    % else:
+    <div role="menuitem" class="nav-item desktop-menu">
+        <a href="/login${login_query()}" class="btn btn-outline-primary btn-sm">${_("Log in")}</a>
+    </div>
+    <div role="menuitem" class="mobile-menu">
+        <a class="dropdown-item" href="/login${login_query()}">${_("Log in")}</a>
+    </div>
+        % if allow_public_account_creation:
+        <div role="menuitem" class="nav-item desktop-menu">
+            <a class="btn btn-primary btn-sm" href="/register${login_query()}">${_("Register")}</a>
+        </div>
+        <div role="menuitem" class="mobile-menu">
+            <a class="dropdown-item" href="/register${login_query()}">${_("Register")}</a>
+        </div>
+        % endif
+    % endif
+% endif
 
-% else:
-<div role="menuitem" class="nav-item desktop-menu">
-    <a href="/login${login_query()}" class="btn btn-outline-primary btn-sm">${_("Log in")}</a>
-</div>
-<div role="menuitem" class="mobile-menu">
-    <a class="dropdown-item" href="/login${login_query()}">${_("Log in")}</a>
-</div>
-% if allow_public_account_creation:
-<div role="menuitem" class="nav-item desktop-menu">
-    <a class="btn btn-primary btn-sm" href="/register${login_query()}">${_("Register")}</a>
-</div>
-<div role="menuitem" class="mobile-menu">
-    <a class="dropdown-item" href="/register${login_query()}">${_("Register")}</a>
-</div>
-% endif
-% endif
-% endif
-<!--</ul>-->
 
 <hr class="dropdown-divider mobile-menu my-0" />
 <div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu">${_("Courses")}</div>
@@ -91,6 +74,6 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
     <a class="dropdown-item" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
 </div>
 
-<hr class="dropdown-divider mobile-menu my-0" />
-<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu language-selector" id="language-mobile">${_("Język / Language")}</div>
-       
+% if header_language_selector_is_enabled():
+<%include file="navbar-language-mobile.html"/>
+% endif

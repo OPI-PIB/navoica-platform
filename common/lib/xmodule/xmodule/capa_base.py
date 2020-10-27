@@ -773,6 +773,7 @@ class CapaMixin(ScorableXBlockMixin, CapaFields):
          Arguments:
              render_notifications (bool): If false the method will return an None for type and message
         """
+        _ = self.runtime.service(self, "i18n").ugettext
         answer_notification_message = None
         answer_notification_type = None
 

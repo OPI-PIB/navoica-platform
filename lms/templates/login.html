@@ -93,12 +93,12 @@ from third_party_auth import provider, pipeline
 			  $('.message.submission-error').addClass('is-shown').focus();
 			  $('.message.submission-error .message-copy').html(json.value);
 			  $loginInput.attr('aria-invalid', true).addClass('error-field');
-			  $('.js-error-message').text(json.value);
+			  $('.js-error-message').html(json.value);
 		  } else {
 			  if ($email.val() === '') {
 				  $('.message.submission-error').removeClass('is-shown');
 				  $jsEmailField.find('#email').attr('aria-invalid', true).addClass('error-field');
-				  $jsEmailField.find('.js-error-message').text(_("Fill e-mail address"));
+				  $jsEmailField.find('.js-error-message').text("${_('Fill e-mail address')}");
 			  } else {
 				  $jsEmailField.find('#email').removeAttr('aria-invalid').removeClass('error-field');
 				  $jsEmailField.find('.js-error-message').text('');
@@ -107,7 +107,7 @@ from third_party_auth import provider, pipeline
 			  if ($password.val() === '') {
 				  $('.message.submission-error').removeClass('is-shown');
 				  $jsPasswordField.find('#password').attr('aria-invalid', true).addClass('error-field');
-				  $jsPasswordField.find('.js-error-message').text(_("Fill password"));
+				  $jsPasswordField.find('.js-error-message').text("${_('Fill password')}");
 			  } else {
 				  $jsPasswordField.find('#password').removeAttr('aria-invalid').removeClass('error-field');
 				  $jsPasswordField.find('.js-error-message').text('');

@@ -1,10 +1,10 @@
 var Language = (function() {
     'use strict';
-    var $settings_language_selector,
+    var $settings_language_buttons,
         self = null;
     return {
         init: function() {
-            $settings_language_selector = $('#settings-language-value');
+            $settings_language_buttons = $('.language-button');
             self = this;
             this.listenForLanguagePreferenceChange();
         },
@@ -14,10 +14,11 @@ var Language = (function() {
              * Send an ajax request to save user language preferences.
              */
         listenForLanguagePreferenceChange: function() {
-            $settings_language_selector.change(function(event) {
-                var language = this.value,
+            $settings_language_buttons.click(function(event) {
+                var language = $(this).data("lang"),
                     url = $('.url-endpoint').val(),
                     is_user_authenticated = JSON.parse($('.url-endpoint').data('user-is-authenticated'));
+                $("[name='language']").val(language);
                 event.preventDefault();
                 self.submitAjaxRequest(language, url, function() {
                     if (is_user_authenticated) {

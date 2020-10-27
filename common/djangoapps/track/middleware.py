@@ -61,7 +61,7 @@ class TrackMiddleware(object):
             # files when we change this.
 
             censored_strings = ['password', 'newpassword', 'new_password',
-                                'oldpassword', 'old_password', 'new_password1', 'new_password2']
+                                'oldpassword', 'old_password', 'new_password1', 'new_password2', 'confirm_password']
             post_dict = dict(request.POST)
             get_dict = dict(request.GET)
             for string in censored_strings:
