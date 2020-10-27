@@ -83,6 +83,7 @@
             'backbone.paginator': 'common/js/vendor/backbone.paginator',
             'underscore': 'common/js/vendor/underscore',
             'underscore.string': 'common/js/vendor/underscore.string',
+            whatInput: 'common/js/vendor/what-input.js',
             // The jquery-migrate library was added in upgrading from
             // jQuery 1.7.x to 2.2.x.  This config allows developers
             // to depend on 'jquery' which opaquely requires both
@@ -124,7 +125,7 @@
             'tinymce': 'js/vendor/tinymce/js/tinymce/tinymce.full.min',
             'jquery.tinymce': 'js/vendor/tinymce/js/tinymce/jquery.tinymce.min',
             'picturefill': 'common/js/vendor/picturefill',
-            'hls': 'common/js/vendor/hls'
+            'hls': 'common/js/vendor/hls',
             // end of files needed by OVA
         },
         shim: {
