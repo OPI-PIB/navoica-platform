@@ -1380,6 +1380,7 @@ base_application_js = [
     'js/src/accessibility_tools.js',
     'js/toggle_login_modal.js',
     'js/src/lang_edx.js',
+    'common/js/vendor/what-input.js',
 ]
 
 dashboard_js = (
