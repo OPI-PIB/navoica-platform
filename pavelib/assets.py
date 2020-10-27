@@ -71,8 +71,7 @@ NPM_INSTALLED_LIBRARIES = [
     'summernote/dist/summernote-lite.css',
     'summernote/dist/font/',
     '@fortawesome/fontawesome-free',
-
-
+    'what-input/dist/what-input.js'
 ]
 
 # A list of NPM installed developer libraries that should be copied into the common
