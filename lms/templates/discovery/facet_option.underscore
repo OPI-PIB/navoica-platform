@@ -1,5 +1,5 @@
 <li class="filter-list" role="listitem">
-    <button id="<%- term %>" aria-pressed="<%- selected ? 'true' : 'false' %>" data-facet="<%- facet %>" data-value="<%- term %>" data-text="<%- name %>" class="js-filter-btn list-group-item list-group-item-action d-flex facet-option discovery-button <%- selected ? 'selected' : '' %>">
+    <button aria-pressed="<%- selected ? 'true' : 'false' %>" data-facet="<%- facet %>" data-value="<%- term %>" data-text="<%- name %>" class="js-filter-btn list-group-item list-group-item-action d-flex facet-option discovery-button <%- selected ? 'selected' : '' %>">
         <span class="label flex-fill"><%- gettext(name) %></span>
         <span class="count-number"><span class="sr-only"></span><%- count %></span>
     </button>

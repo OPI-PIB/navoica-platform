@@ -18,7 +18,7 @@
 
 	  <div class="card-footer small">
 	  	<p class="card-text"><%- gettext(org_text) %></p>
-		<p><time class="course-card-start"><i class="icon-calendar"></i> <%- interpolate(gettext("Starts: %(start_date)s"),{ start_date: start }, true) %></time></p>
+		<p><span class="course-card-start"><i class="icon-calendar"></i> <%- interpolate(gettext("Starts: %(start_date)s"),{ start_date: start }, true) %></span></p>
 	  </div>
 	</a>
 

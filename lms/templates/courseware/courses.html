@@ -60,10 +60,10 @@
         <div id="filters" class="aside-block sidebar">
           <div class="bg-brand rounded search-facets">
             <h2 class="course-list-filters-header list-group filters hide-phone is-collapsed d-none d-md-block">
-                <div class="d-flex justify-content-between align-items-center" id="filtering">
+                <span class="d-flex justify-content-between align-items-center" id="filtering">
                     <span class="d-none d-md-block" id="h2">${_("Filter By")}</span>
-                    <a id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true">${_("FILTERS")}</a>
-                </div>
+                    <a href="#" id="discovery-message" data-toggle="collapse" class="d-md-none" aria-expanded="true">${_("FILTERS")}</a>
+                </span>
             </h2>
                <a href="#search-facets-lists" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none">${_("FILTERS")}</a>
 
@@ -77,7 +77,7 @@
         <section>
            <div id="header_results" class="row d-flex justify-content-md-between align-items-md-center mx-1">
               <div id="discovery-form" role="search" aria-label="course" class="col my-0 px-0">
-				<h2 id="filter-count" class="discovery-message js-discovery-message search-status-label position-md-absolute fixed-md-bottom my-md-0" role="status" aria-live="polite"></h2>
+				<span id="filter-count" class="discovery-message js-discovery-message search-status-label position-md-absolute fixed-md-bottom my-md-0" role="status" aria-live="polite"></span>
 	          </div>
 
                <div id="sorting-form" class="col my-0 justify-content-md-end px-0">
