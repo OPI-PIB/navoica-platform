@@ -1,0 +1,185 @@
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin null-margins {
+  > :first-child {
+    margin-top: 0 !important;
+  }
+
+  > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+@mixin hover {
+  &:focus,
+  &:hover {
+    @content;
+  }
+}
+
+@mixin a11y-focus {
+  &:active,
+  &:focus {
+    outline: 2px black solid;
+    outline-offset: 1px;
+    z-index: 1;
+  }
+
+  [data-whatintent='mouse'] &:active,
+  [data-whatintent='mouse'] &:focus,
+  [data-whatintent='touch'] &:active,
+  [data-whatintent='touch'] &:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0.2rem rgba(228, 29, 55, 0.5);
+  }
+}
+
+@mixin input-style {
+  &:active, 
+  &:focus {
+    outline: 2px #626C7A solid;
+    outline-offset: 3px;
+  }
+
+  [data-whatintent='mouse'] &:active,
+  [data-whatintent='mouse'] &:focus,
+  [data-whatintent='touch'] &:active,
+  [data-whatintent='touch'] &:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0.2rem #dee2e6;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+    z-index: 1000;
+  }
+}
+
+@mixin input-email {
+  &:active, 
+  &:focus {
+    outline: 2px #919191 solid;
+    outline-offset: 3px;
+    box-shadow: none;
+  }
+
+  [data-whatintent='mouse'] &:active,
+  [data-whatintent='mouse'] &:focus,
+  [data-whatintent='touch'] &:active,
+  [data-whatintent='touch'] &:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0.2rem #dee2e6;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 13px 5px rgba(71,79,89,0.9);
+    z-index: 1000;
+  }
+}
+
+@mixin checkbox {
+  &:focus {
+    ~ .custom-control-label::before {
+      outline: 2px black solid;
+      outline-offset: 1px;
+      box-shadow: none;
+    }
+  }  
+
+  [data-whatintent='mouse'] &:active,
+  [data-whatintent='mouse'] &:focus,
+  [data-whatintent='touch'] &:active,
+  [data-whatintent='touch'] &:focus {
+    ~ .custom-control-label::before {
+      outline: none !important;
+      box-shadow: 0 0 0 0.2rem #dee2e6;
+    }  
+  }
+
+  &:hover {
+    border-left: solid 3px #E41D37;
+  }
+}
+
+@mixin filter-btn {
+  &:active,
+  &:focus {
+    outline: 2px black solid;
+    box-shadow: none;
+  }
+
+  [data-whatintent='mouse'] &:active,
+  [data-whatintent='mouse'] &:focus,
+  [data-whatintent='touch'] &:active,
+  [data-whatintent='touch'] &:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0.2rem #dee2e6;
+  }
+
+  &:hover {
+    border-left: solid 3px #E41D37;
+    box-shadow: none !important;
+  }
+}
+
+@mixin btn-a-navoica {
+  &:active,
+  &:focus {
+    outline: 2px black solid;
+    outline-offset: -2px;
+    box-shadow: none;
+    background-color: none;
+  }
+
+  [data-whatintent='mouse'] &:active,
+  [data-whatintent='mouse'] &:focus,
+  [data-whatintent='touch'] &:active,
+  [data-whatintent='touch'] &:focus {
+    outline: none !important;
+    background-color: none !important;
+  }
+
+  &:hover {
+    box-shadow: none !important;
+    background-color: #eeeeee;
+  }
+}
+
+@mixin input-style-base {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #555;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  height: ($unit * 4);
+  margin: 0;
+  padding: 0 $unit;
+  width: 100%;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    // Chrome/Opera/Safari
+  border-radius: 4px;
+  color: #555;
+    @content;
+  }
+
+  &::-moz-placeholder {
+    // Firefox 19+
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    // IE 10+
+    @content;
+  }
+}

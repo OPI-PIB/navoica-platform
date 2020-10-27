@@ -229,10 +229,13 @@ button {
   border-radius: 0;
 }
 
+//in whatinput
+/*
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+*/
 
 input,
 button,
@@ -2037,6 +2040,8 @@ textarea.form-control {
   }
 }
 
+//in whatinput
+/*
 .btn:hover {
   color: #212529;
   text-decoration: none;
@@ -2044,8 +2049,9 @@ textarea.form-control {
 
 .btn:focus, .btn.focus {
   outline: 0;
-//  box-shadow: 0 0 0 0.2rem #dee2e6;
+  box-shadow: 0 0 0 0.2rem #dee2e6;
 }
+*/
 
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
@@ -2531,9 +2537,12 @@ fieldset:disabled a.btn {
   border-color: #f8f9fa;
 }
 
+//in whatinput
+/*
 .btn-outline-light:focus, .btn-outline-light.focus {
   box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
 }
+*/
 
 .btn-outline-light.disabled, .btn-outline-light:disabled {
   color: #f8f9fa;
@@ -3375,11 +3384,14 @@ input[type="button"].btn-block {
   appearance: none;
 }
 
+//in whatinput
+/*
 .custom-select:focus {
   border-color: #e89ca1;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(208, 53, 63, 0.25);
 }
+*/
 
 .custom-select:focus::-ms-value {
   color: #212529;
@@ -9217,7 +9229,7 @@ main.container aside h6 {
 @media (min-width: 960px) {
   #content {
     margin: 0;
-    padding: 0;
+  //  padding: 0;
   }
   .jumbotron > .container .d-flex {
     align-items: stretch;
@@ -11813,5 +11825,6 @@ div.equation {
     width: 100%;
   }
 }
+
 
 @import 'elements/_creative-commons';
