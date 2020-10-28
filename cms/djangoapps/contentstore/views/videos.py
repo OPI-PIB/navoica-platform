@@ -49,7 +49,7 @@ from util.json_request import JsonResponse, expect_json
 
 from .course import get_course_and_check_access
 
-import subprocess
+from ..tasks import encode_videos
 
 __all__ = [
     'videos_handler',
@@ -825,10 +825,8 @@ def send_video_status_update(updates):
                 'VIDEOS: Processing video [%s]',
                 update.get('edxVideoId')
             )
-            dir = "/edx/videos/"
-            if not os.path.exists(dir):
-                os.makedirs(dir)
-            os.mknod(dir+"%s" % update.get('edxVideoId'))
+
+            encode_videos.delay(update.get('edxVideoId'))
 
     return JsonResponse()
 
