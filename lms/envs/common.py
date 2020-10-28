@@ -2651,6 +2651,12 @@ MAX_FAILED_LOGIN_ATTEMPTS_LOCKOUT_PERIOD_SECS = 15 * 60
 ##### LMS DEADLINE DISPLAY TIME_ZONE #######
 TIME_ZONE_DISPLAYED_FOR_DEADLINES = 'UTC'
 
+
+########################## VIDEOS ENCODING ###############################
+
+VIDEO_RESOLUTIONS = ["1280x720", "858x480", "640x360"]
+VIDEO_PUBLIC_URL = 'https://objectstorage.eu-frankfurt-1.oraclecloud.com/n/opiopc/b/OPI_public_1/o/'
+
 ########################## VIDEO IMAGE STORAGE ############################
 
 VIDEO_IMAGE_SETTINGS = dict(
