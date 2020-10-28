@@ -67,6 +67,12 @@ from edxval.api import (
     create_external_video,
 )
 
+import requests
+import urllib
+import shutil
+import ffmpeg
+from urllib import urlretrieve
+
 User = get_user_model()
 
 LOGGER = get_task_logger(__name__)
@@ -80,6 +86,55 @@ RETRY_DELAY_SECONDS = 30
 COURSE_LEVEL_TIMEOUT_SECONDS = 1200
 VIDEO_LEVEL_TIMEOUT_SECONDS = 300
 
+@task()
+def upload_video(full_path, path):
+    LOGGER.info("[Encode videos] Uploading: %s" % path)
+    with open(full_path, 'rb') as data:
+        requests.put(settings.VIDEO_UPLOAD_PREAUTH_URL + urllib.quote(path), data=data, headers={'content-type': 'video/mp4'})
+    os.remove(full_path)
+    LOGGER.info("[Encode videos] Uploaded and deleted: %s" % full_path)
+
+def encode_video(local_file, video_id, resolution):
+    #ffmpeg -i $videoid -strict -2 -s $size $videoid.mp4
+
+    dir = "/tmp/" + resolution
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+
+    path = "%s/%s" % (resolution, video_id)
+    full_path = "/tmp/" + path + ".mp4"
+
+    LOGGER.info("[Encode videos] Starting: %s" % path)
+
+    stream = ffmpeg.input(local_file)
+    stream = ffmpeg.output(stream, full_path, **{'s': resolution, 'strict': '-2'})
+    ffmpeg.run(stream)
+
+    upload_video.delay(full_path, path)
+
+@task()
+def encode_videos(video_id):
+    LOGGER.info("[Encode videos] Start encoding for: %s" % video_id)
+
+    local_file = "/tmp/" + video_id
+    video_url = settings.VIDEO_PUBLIC_URL + settings.VIDEO_UPLOAD_PIPELINE["BUCKET"] + urllib.quote('/' + video_id)
+    LOGGER.info("[Encode videos] Downloading: %s" % video_url)
+
+    urlretrieve(video_url, local_file)
+
+    LOGGER.info("[Encode videos] Finished and saved: %s" % local_file)
+
+    for resolution in settings.VIDEO_RESOLUTIONS:
+
+        encode_video(
+            local_file,
+            video_id,
+            resolution
+        )
+
+    os.remove(local_file)
+
+    LOGGER.info("[Encode videos] Finsished encoding for: %s" % video_id)
 
 def enqueue_async_migrate_transcripts_tasks(
         course_keys,

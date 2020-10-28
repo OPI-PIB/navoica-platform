@@ -142,6 +142,8 @@ from lms.envs.common import (
     # Methods to derive settings
     _make_mako_template_dirs,
     _make_locale_paths,
+    VIDEO_PUBLIC_URL,
+    VIDEO_RESOLUTIONS
 )
 from path import Path as path
 
