@@ -342,7 +342,7 @@ from student.models import CourseEnrollment
 
                 <div id="search-facets-lists" class="search-facets-lists collapse">
 
-                    <div class="list-group" data-facet="availability" aria-controls="filter-count">
+                    <div class="list-group" data-facet="availability">
 
                         <div class="list-group-item">
                             <div class="header-facet" id="course-status">
@@ -350,43 +350,43 @@ from student.models import CourseEnrollment
                             </div>
                         </div>
 
-                        <ul role="list" data-facet="availability" class="facet-list col-12 px-0 js-course-enrollment-filters" aria-labelledby="course-status">
+                        <ul data-facet="availability" class="facet-list col-12 px-0 js-course-enrollment-filters" aria-labelledby="course-status">
 
-                            <li class="filter-list" role="listitem">
+                            <li class="filter-list">
                                 <div data-facet="availability" data-value="Upcoming" data-text="${_('Upcoming')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="upcoming" id="upcoming" aria-describedby="filter-upcoming" aria-controls="filter-upcoming">
-                                        <label class="form-check-label label flex-fill d-flex" for="upcoming">${_("Starting Soon")} <span class="sr-only">${_('Courses')} </span><div class="count-number ml-auto"></div></label>
+                                        <label class="form-check-label label flex-fill d-flex" for="upcoming">${_("Starting Soon")} <span class="sr-only">${_('Courses')} </span><span class="count-number ml-auto"></span></label>
                                         <span class="sr-only" id="filter-upcoming" aria-live="polite" aria-atomic="true" aria-busy="true">${_('Found courses')} <span class="js-found-courses-count"></span></span>
                                     </div>
                                 </div>
                             </li>
 
-                            <li class="filter-list" role="listitem">
+                            <li class="filter-list">
                                 <div data-facet="availability" data-value="Now" data-text="${_('Now')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="now" id="now" aria-controls="filter-now">
-                                        <label class="form-check-label label flex-fill d-flex" for="now">${_("Current")} <span class="sr-only">${_('Found courses')} </span><div class="count-number ml-auto"></div></label>
+                                        <label class="form-check-label label flex-fill d-flex" for="now">${_("Current")} <span class="sr-only">${_('Found courses')} </span><span class="count-number ml-auto"></span></label>
                                         <span class="sr-only" id="filter-now" aria-live="polite" aria-atomic="true" aria-busy="true">${_('Found courses')} <span class="js-found-courses-count"></span></span>
                                     </div>
                                 </div>
                             </li>
 
-                            <li class="filter-list" role="listitem">
+                            <li class="filter-list">
                                 <div data-facet="availability" data-value="Ended" data-text="${_('Ended')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="finished" id="finished" aria-controls="filter-finished">
-                                        <label class="form-check-label label flex-fill d-flex" for="finished">${_("Archived")} <span class="sr-only">${_('Found courses')} </span><div class="count-number ml-auto"></div></label>
+                                        <label class="form-check-label label flex-fill d-flex" for="finished">${_("Archived")} <span class="sr-only">${_('Found courses')} </span><span class="count-number ml-auto"></span></label>
                                         <span class="sr-only" id="filter-finished" aria-live="polite" aria-atomic="true" aria-busy="true">${_('Found courses')} <span class="js-found-courses-count"></span></span>
                                     </div>
                                 </div>
                             </li>
 
-                            <li class="filter-list" role="listitem">
+                            <li class="filter-list">
                                 <div data-facet="availability" data-value="Certificated" data-text="${_('Certificated')}" class="list-group-item list-group-item-action d-flex facet-option discovery-button">
                                     <div class="form-group form-check my-0 d-flex w-100 flex-row align-items-center">
                                         <input type="checkbox" class="form-check-input my-0" name="certificated" id="certificated" aria-controls="filter-certificated">
-                                        <label class="form-check-label label flex-fill d-flex" for="certificated">${_("My certificates")} <span class="sr-only">${_('Found courses')} </span><div class="count-number ml-auto"></div></label>
+                                        <label class="form-check-label label flex-fill d-flex" for="certificated">${_("My certificates")} <span class="sr-only">${_('Found courses')} </span><span class="count-number ml-auto"></span></label>
                                         <span class="sr-only" id="filter-certificated" aria-live="polite" aria-atomic="true" aria-busy="true">${_('Found courses')} <span class="js-found-courses-count"></span></span>
                                     </div>
                                 </div>
