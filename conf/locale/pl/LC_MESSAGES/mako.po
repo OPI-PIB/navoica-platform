@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-12 09:45+0000\n"
+"POT-Creation-Date: 2020-10-23 08:01+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -383,8 +383,7 @@ msgstr "Kurs"
 msgid "Updates"
 msgstr "Aktualności"
 
-#: cms/templates/widgets/header.html lms/templates/header/header.html
-#: lms/templates/navigation/navigation.html
+#: cms/templates/widgets/header.html lms/templates/navigation/navigation.html
 #: lms/templates/widgets/footer-language-selector.html
 msgid "Choose Language"
 msgstr "Wybierz język"
@@ -1053,7 +1052,7 @@ msgstr "Twój adres e-mail"
 
 #: lms/templates/forgot_password_modal.html
 msgid "Enter your E-mail Address to reset your password"
-msgstr "Enter your E-mail Address to reset your password"
+msgstr "Wprowadź swój adres e-mail, aby zresetować hasło"
 
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
 msgid "This is the e-mail address you used to register with {platform}"
@@ -6550,12 +6549,6 @@ msgid "Navoica logo"
 msgstr "Logo Navoica"
 
 #: lms/templates/header/header.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: lms/templates/header/user_dropdown.html
-msgid "J\\u0119zyk / Language"
-msgstr "Język / Language"
-
-#: lms/templates/header/header.html
 msgid "My Account"
 msgstr "Moje konto"
 
@@ -6566,33 +6559,6 @@ msgid ""
 msgstr ""
 "{begin_strong}Ostrzeżenie:{end_strong} Twoja przeglądarka internetowa nie "
 "jest w pełni wspierana. Zalecamy korzystanie z {chrome_link} lub {ff_link}."
-
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "News"
-msgstr "Aktualności"
-
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/learner_dashboard/programs.html
-#: lms/templates/navigation/navbar-authenticated.html
-#: lms/templates/navigation/bootstrap/navbar-authenticated.html
-#: themes/edx.org/lms/templates/header/navbar-authenticated.html
-msgid "Programs"
-msgstr "Programy"
-
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: lms/templates/static_templates/about.html
-#: lms/templates/static_templates/about.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-msgid "About"
-msgstr "O nas"
 
 #: lms/templates/header/navbar-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
@@ -6616,14 +6582,9 @@ msgstr "Sysadmin"
 msgid "Shopping Cart"
 msgstr "Koszyk"
 
-#: lms/templates/header/navbar-authenticated.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: lms/templates/static_templates/contact.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-msgid "Contact"
-msgstr "Kontakt"
+#: lms/templates/header/navbar-language-mobile.html
+msgid "J\\u0119zyk / Language"
+msgstr "Język / Language"
 
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/navigation/navbar-not-authenticated.html
@@ -7014,6 +6975,14 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Download profile information as a CSV"
 msgstr "Pobierz informacje profilowe jako CSV"
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Click to download a list of all generated certificates"
+msgstr "Kliknij, aby pobrać listę wszystkich wygenerowanych zaświadczeń"
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Download a list of generated certificates as a CSV file"
+msgstr "Pobierz listę wygenerowanych zaświadczeń jako plik CSV"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid ""
@@ -8542,6 +8511,13 @@ msgstr "Pokaż status czynności zgłoszonych z tego ćwiczenia."
 msgid "Program Details"
 msgstr "Szczegóły programu"
 
+#: lms/templates/learner_dashboard/programs.html
+#: lms/templates/navigation/navbar-authenticated.html
+#: lms/templates/navigation/bootstrap/navbar-authenticated.html
+#: themes/edx.org/lms/templates/header/navbar-authenticated.html
+msgid "Programs"
+msgstr "Programy"
+
 #: lms/templates/learner_dashboard/text-me-fragment.html
 msgid "Get the {platform_name} Mobile App!"
 msgstr "Pobierz aplikację mobilną {platform_name}!"
@@ -9365,6 +9341,17 @@ msgstr ""
 "głównej{link_end} i jeśli chcesz, poinformuj nas o brakującej podstronie, "
 "wysyłając e-mail na adres {email}."
 
+#: lms/templates/static_templates/about.html
+#: lms/templates/static_templates/about.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+msgid "About"
+msgstr "O nas"
+
 #: lms/templates/static_templates/accessibility.html
 msgid "Accessibility Statement"
 msgstr "Deklaracja Dostępności"
@@ -9671,6 +9658,13 @@ msgid "This page left intentionally blank. Feel free to add your own content."
 msgstr ""
 "Ta strona celowo pozostała pusta. Jeśli chcesz, możesz dodać na nią własną "
 "treść."
+
+#: lms/templates/static_templates/contact.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+msgid "Contact"
+msgstr "Kontakt"
 
 #: lms/templates/static_templates/contact.html
 msgid "Contact us"
@@ -13372,6 +13366,10 @@ msgstr "Przeglądaj kursy"
 #: themes/edx.org/lms/templates/header/navbar-authenticated.html
 msgid "Schools & Partners"
 msgstr "Uczelnie i partnerzy"
+
+#: themes/red-theme/lms/templates/footer.html
+msgid "News"
+msgstr "Aktualności"
 
 #. Translators: 'EdX', 'edX', and 'Open edX' are trademarks of 'edX Inc.'.
 #. Please do not translate any of these trademarks and company names.
