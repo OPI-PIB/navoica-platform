@@ -207,7 +207,7 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
               <div class="field time" id="field-course-start-time">
                 <label for="course-start-time">${_("Course Start Time")}</label>
                 <input type="text" class="time start timepicker" id="course-start-time" value="" placeholder="HH:MM" autocomplete="off" />
-                <span class="tip tip-stacked timezone">${_("(UTC)")}</span>
+                ## <span class="tip tip-stacked timezone">${_("(UTC)")}</span>
               </div>
             </li>
 
@@ -221,7 +221,7 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
               <div class="field time" id="field-course-end-time">
                 <label for="course-end-time">${_("Course End Time")}</label>
                 <input type="text" class="time end" id="course-end-time" value="" placeholder="HH:MM" autocomplete="off" />
-                <span class="tip tip-stacked timezone">${_("(UTC)")}</span>
+                ## <span class="tip tip-stacked timezone">${_("(UTC)")}</span>
               </div>
             </li>
           </ol>
@@ -249,7 +249,7 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
               <div class="field time" id="field-enrollment-start-time">
                 <label for="course-enrollment-start-time">${_("Enrollment Start Time")}</label>
                 <input type="text" class="time start" id="course-enrollment-start-time" value="" placeholder="HH:MM" autocomplete="off" />
-                <span class="tip tip-stacked timezone">${_("(UTC)")}</span>
+                ## <span class="tip tip-stacked timezone">${_("(UTC)")}</span>
               </div>
             </li>
             <%
@@ -271,7 +271,7 @@ CMS.URL.UPLOAD_ASSET = '${upload_asset_url | n, js_escaped_string}'
               <div class="field time ${enrollment_end_editable_class}" id="field-enrollment-end-time">
                 <label for="course-enrollment-end-time">${_("Enrollment End Time")}</label>
                 <input type="text" class="time end" id="course-enrollment-end-time" value="" placeholder="HH:MM" autocomplete="off" ${enrollment_end_readonly} />
-                <span class="tip tip-stacked timezone">${_("(UTC)")}</span>
+                ## <span class="tip tip-stacked timezone">${_("(UTC)")}</span>
               </div>
             </li>
           </ol>
