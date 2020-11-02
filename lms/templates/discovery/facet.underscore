@@ -13,7 +13,7 @@
 	</select>
 	</div>
 <% } else { %>
-	<ul role="list" aria-label="<%- gettext('filtering') %> <%- name %>" data-facet="<%- name %>" class="facet-list px-0">
+	<ul role="list" aria-label="<%- gettext('filtering') %> <%- gettext(displayName) %>" data-facet="<%- name %>" class="facet-list px-0">
 		<%= HtmlUtils.ensureHtml(optionsHtml) %>
 	</ul>
 <% } %>
