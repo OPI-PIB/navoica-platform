@@ -51,6 +51,8 @@ from xmodule.modulestore.modulestore_settings import update_module_store_setting
 from xmodule.modulestore.edit_info import EditInfoMixin
 from lms.djangoapps.lms_xblock.mixin import LmsBlockMixin
 
+from celery.schedules import crontab
+
 # sys.setdefaultencoding() does not exist, here!
 reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('UTF8')
@@ -1920,6 +1922,14 @@ CELERY_QUEUES = {
 
 # let logging work as configured:
 CELERYD_HIJACK_ROOT_LOGGER = False
+
+
+CELERYBEAT_SCHEDULE = {
+    'generate-certificates-at-midnight': {
+        'task': 'certificates.tasks.generate_missing_certificates',
+        'schedule': crontab(minute=0, hour=0),
+    },
+}
 
 ################################ Block Structures ###################################
 
