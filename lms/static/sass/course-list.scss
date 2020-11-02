@@ -1840,7 +1840,6 @@ margin-top: 4rem !important;
   &:focus {
     color: #212529;
     background-color: #fff;
-    border-color: #f28f9c;
     outline: 0;
     box-shadow: 0 0 0 0.2rem #dee2e6;
   }
@@ -4010,9 +4009,9 @@ input {
   text-overflow: '';
 
   &:focus {
-    border-color: #f28f9c;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(228, 29, 55, 0.25);
+    box-shadow: 0 0 0 0.2rem #dee2e6;
+    background-color: #fff;
 
     &::-ms-value {
       color: #212529;
@@ -12088,7 +12087,6 @@ label {
 #email:focus, #password:focus {
      color: #212529 !important;
      background-color: #fff !important;
-     border-color: #f28f9c !important;
      outline: 0;
      box-shadow: 0 0 0 0.2rem #dee2e6;
 }
