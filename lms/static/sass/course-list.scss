@@ -13899,7 +13899,7 @@ span.complete-checkmark.fa.fa-check {
 #header-navigation .navbar {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0.625rem;
@@ -14226,7 +14226,7 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
 .navbar {
   #navbarResponsive {
     .navbar-nav {
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       .btn {
         white-space: nowrap;
       }
