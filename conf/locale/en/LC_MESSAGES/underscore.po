@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-03 09:15+0000\n"
-"PO-Revision-Date: 2020-11-03 09:16:05.492350\n"
+"POT-Creation-Date: 2020-11-03 13:24+0000\n"
+"PO-Revision-Date: 2020-11-03 13:25:14.428790\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -1084,7 +1084,11 @@ msgstr ""
 msgid "Hide Timer"
 msgstr ""
 
-#: lms/templates/discovery/course_card.underscore:11
+#: lms/templates/discovery/course_card.underscore:7
+msgid "New course"
+msgstr ""
+
+#: lms/templates/discovery/course_card.underscore:9
 #: lms/templates/learner_dashboard/program_card.underscore:16
 #: lms/templates/learner_dashboard/program_card.underscore:24
 #: lms/templates/learner_dashboard/program_card.underscore:32
@@ -1094,7 +1098,7 @@ msgid_plural "Courses"
 msgstr[0] ""
 msgstr[1] ""
 
-#: lms/templates/discovery/course_card.underscore:21
+#: lms/templates/discovery/course_card.underscore:19
 #, python-format
 msgid "Starts: %(start_date)s"
 msgstr ""
