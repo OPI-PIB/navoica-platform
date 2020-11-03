@@ -12,7 +12,7 @@
 
 % if course_discovery_enabled:
 <%block name="header_extras">
-  % for template_name in ["course_card", "filter", "filter_bar", "facet", "facet_option", "facet_select", "filter_bar"]:
+  % for template_name in ["course_card", "filter", "facet", "facet_option", "facet_select", "filter_bar"]:
   <script type="text/template" id="${template_name}-tpl">
       <%static:include path="discovery/${template_name}.underscore" />
   </script>
