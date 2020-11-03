@@ -3,9 +3,11 @@ on:
   push:
     branches: [ develop ]
 jobs:
-    deployment
-        - name: Trigger Gitlab Transifex Pipeline
-            uses: fjogeleit/http-request-action@master
-            with:
-                url: "https://gitlab.navoica.pl/api/v4/projects/2/ref/transifex/trigger/pipeline?token=f2669fa4b17c18b638a650a2d6b22c&variables[PULL]=true"
-                method: 'POST'
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Gitlab Transifex Pipeline
+        uses: fjogeleit/http-request-action@master
+        with:
+            url: "https://gitlab.navoica.pl/api/v4/projects/2/ref/transifex/trigger/pipeline?token=f2669fa4b17c18b638a650a2d6b22c&variables[PULL]=true"
+            method: 'POST'
