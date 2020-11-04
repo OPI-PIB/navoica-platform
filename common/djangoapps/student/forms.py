@@ -146,6 +146,14 @@ def validate_name(name):
     if contains_html(name):
         raise forms.ValidationError(_('Full Name cannot contain the following characters: < >'))
 
+def name_editable(existing_user_profile):
+    """
+    Check if a Full_Name is editable, raises a ValidationError otherwise.
+    Args:
+        existing_user_profile: UserProfile model
+    """
+    if existing_user_profile.name_change_count > 0:
+        raise forms.ValidationError(_('You can no longer change full name by yourself. If you think such a change is necessary, please contact us by sending an e-mail to mooc_help@opi.org.pl'))
 
 class UsernameField(forms.CharField):
     """
