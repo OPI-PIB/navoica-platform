@@ -11,9 +11,3 @@ from django.conf import settings
 <%namespace name='static' file='static_content.html'/>
 <%include file="${static.get_template_path(relative_path='header/header.html')}"  args="online_help_token=online_help_token"  />
 
-<div class="alert text-center cookiealert" role="alert">
-    <div>${_('We use cookies and similar technologies to provide services and to gather information for statistical and other purposes. You can change the way you want the '
-    'cookies to be stored or accessed on your device in the settings of your browser. If you do not agree, change the settings of your browser. For more information, '
-    'refer to our')} <a href="/cookies">${_('Cookies policy')}</a>.</div>
-    <a href="javascript://" class="acceptcookies">${_('Close')}</a>
-</div>
