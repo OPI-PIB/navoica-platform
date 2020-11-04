@@ -29,9 +29,6 @@ from student.models import CourseEnrollment
 
 <%block name="pagetitle">${_("Dashboard")}</%block>
 <%block name="bodyclass">view-dashboard is-authenticated</%block>
-<%static:webpack entry="CustomSelectAccessibility">
-new CustomSelectAccessibility();
-</%static:webpack>
 <%block name="header_extras">
 % for template_name in ["donation"]:
 <script type="text/template" id="${template_name}-tpl">
