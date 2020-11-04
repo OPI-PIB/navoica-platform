@@ -12771,7 +12771,12 @@ fieldset {
     position: relative;
     width: 100%;
     }
-    .card-body > figure .course-card-label {
+
+    .course-card-image {
+      position: relative;
+    }
+
+    /**.card-body .course-card-label {
       align-items: center;
       background: teal;
       border: 0;
@@ -12780,7 +12785,6 @@ fieldset {
       flex: 0 0 auto;
       font-size: 0.75rem;
       font-weight: 600;
-      left: -9px;
       letter-spacing: .05em;
       line-height: 1;
       margin-right: 1rem;
@@ -12788,7 +12792,9 @@ fieldset {
       padding: 8px 8px 10px;
       position: absolute;
       text-transform: uppercase;
-      bottom: 10px; }
+      bottom: 0;
+      transform: translate(-17px, 0);
+    }
       .card-body > figure .course-card-label::after {
         background: transparent;
         border-bottom: 10px solid transparent;
@@ -12799,7 +12805,8 @@ fieldset {
         left: 0;
         position: absolute;
         top: 100%;
-        width: 9px; }
+        width: 9px;
+      }**/
   .card-body figure + div {
     position: relative; }
      .card-body figure + div {
@@ -12808,36 +12815,37 @@ fieldset {
     flex: 0 0 8rem;
     margin: 0 1rem 0 0; }
 
-.card-body > .course-card-label {
-  align-items: center;
-  background: teal;
-  border: 0;
-  color: #fff;
-  display: flex;
-  flex: 0 0 auto;
-  font-weight: 600;
-  left: -9px;
-  letter-spacing: .05em;
-  line-height: 1;
-  margin-right: 1rem;
-  min-width: auto;
-  padding: 8px 8px 10px;
-  position: absolute;
-  text-transform: uppercase;
-  top: 145px;
-}
-.card-body > .course-card-label::after {
-  background: transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 9px solid #008f8f;
-  content: "";
-  display: block;
-  height: 10px;
-  left: 0;
-  position: absolute;
-  top: 100%;
-  width: 9px;
-}
+  .course-card-label {
+    align-items: center;
+    background: teal;
+    border: 0;
+    color: #fff;
+    display: flex;
+    flex: 0 0 auto;
+    font-weight: 600;
+    letter-spacing: .05em;
+    line-height: 1;
+    margin-right: 1rem;
+    min-width: auto;
+    padding: 0.5rem 0.5rem 0.625rem;
+    position: absolute;
+    text-transform: uppercase;
+    transform: translate(-19%, 50%);
+    bottom: 0;
+  }
+
+  .course-card-label::after {
+    background: transparent;
+    border-bottom: 0.625rem solid transparent;
+    border-right: 0.5625rem solid #008f8f;
+    content: "";
+    display: block;
+    height: 0.625rem;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 0.5625rem;
+  }
 
 .center {
   display: block;
