@@ -14154,6 +14154,24 @@ span.complete-checkmark.fa.fa-check {
   font-size: 1.125rem;
 }
 
+// courseware header about link
+.course-about {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  a {
+    font-size: 1rem;
+    color: teal;
+    border-bottom: 2px solid teal;
+  
+    &:hover{
+      text-decoration: none;
+    }
+    i {
+      font-size: 0.8rem;
+    }
+  }
+}
 
 /** ERROR FIELD **/
 input.form-control.form-control.error-field, .error-field, .error-field ~ .custom-control-label::before {
