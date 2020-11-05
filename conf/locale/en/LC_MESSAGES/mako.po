@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-23 08:01+0000\n"
-"PO-Revision-Date: 2020-10-23 08:02:23.906233\n"
+"POT-Creation-Date: 2020-11-05 10:37+0000\n"
+"PO-Revision-Date: 2020-11-05 10:37:51.658767\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -804,8 +804,8 @@ msgstr ""
 #. interface (a menu or piece of UI that takes the full focus of the screen)
 #: lms/templates/dashboard.html lms/templates/dashboard.html
 #: lms/templates/forgot_password_modal.html
-#: lms/templates/forgot_password_modal.html lms/templates/header.html
-#: lms/templates/help_modal.html lms/templates/signup_modal.html
+#: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
+#: lms/templates/main.html lms/templates/signup_modal.html
 #: lms/templates/staff_problem_info.html lms/templates/staff_problem_info.html
 #: lms/templates/ccx/schedule.html
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
@@ -961,9 +961,14 @@ msgstr ""
 
 #: lms/templates/footer.html lms/templates/footer.html
 #: lms/templates/footer.html lms/templates/footer.html
-#: lms/templates/footer.html lms/templates/login-sidebar.html
+#: lms/templates/footer.html lms/templates/footer.html
+#: lms/templates/login-sidebar.html lms/templates/login-sidebar.html
 #: lms/templates/static_templates/accessibility.html
 msgid "open in a new window"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "Navoica page on Twitter"
 msgstr ""
 
 #: lms/templates/footer.html
@@ -1038,19 +1043,6 @@ msgstr ""
 #: lms/templates/forgot_password_modal.html
 #: lms/templates/forgot_password_modal.html
 msgid "Email is incorrect."
-msgstr ""
-
-#: lms/templates/header.html
-msgid ""
-"We use cookies and similar technologies to provide services and to gather "
-"information for statistical and other purposes. You can change the way you "
-"want the cookies to be stored or accessed on your device in the settings of "
-"your browser. If you do not agree, change the settings of your browser. For "
-"more information, refer to our"
-msgstr ""
-
-#: lms/templates/header.html lms/templates/static_templates/privacy.html
-msgid "Cookies policy"
 msgstr ""
 
 #: lms/templates/help_modal.html
@@ -1522,6 +1514,23 @@ msgstr ""
 msgid "Navoica.pl - Polish MOOC platform"
 msgstr ""
 
+#: lms/templates/main.html
+msgid ""
+"We use cookies and similar technologies to provide services and to gather "
+"information for statistical and other purposes. You can change the way you "
+"want the cookies to be stored or accessed on your device in the settings of "
+"your browser. If you do not agree, change the settings of your browser. For "
+"more information, refer to our"
+msgstr ""
+
+#: lms/templates/main.html lms/templates/static_templates/privacy.html
+msgid "Cookies policy"
+msgstr ""
+
+#: lms/templates/main.html
+msgid "Close the notice about use of cookies"
+msgstr ""
+
 #: lms/templates/manage_user_standing.html
 msgid "Manage student accounts"
 msgstr ""
@@ -1955,10 +1964,6 @@ msgstr ""
 msgid "Register for {platform_name}"
 msgstr ""
 
-#: lms/templates/register.html lms/templates/register.html
-msgid "Passwords Don't Match"
-msgstr ""
-
 #: lms/templates/register.html
 msgid "A properly formatted e-mail is required"
 msgstr ""
@@ -1975,6 +1980,10 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "A valid password is required"
+msgstr ""
+
+#: lms/templates/register.html
+msgid "Passwords Don't Match"
 msgstr ""
 
 #: lms/templates/register.html
