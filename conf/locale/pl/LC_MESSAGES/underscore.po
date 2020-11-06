@@ -7,14 +7,15 @@
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
+# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-01 12:53+0000\n"
+"POT-Creation-Date: 2020-11-03 13:24+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
-"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
+"Last-Translator: Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -312,7 +313,7 @@ msgstr "Głosuj na ten wpis,"
 
 #: common/static/common/templates/discussion/forum-actions.underscore:6
 #: common/static/common/templates/discussion/forum-actions.underscore:7
-#: lms/templates/discovery/facet.underscore:21
+#: lms/templates/discovery/facet.underscore:23
 #: lms/templates/edxnotes/note-item.underscore:9
 msgid "More"
 msgstr "Więcej"
@@ -1126,7 +1127,11 @@ msgstr "Zakończ mój egzamin"
 msgid "Hide Timer"
 msgstr "Ukryj zegar"
 
-#: lms/templates/discovery/course_card.underscore:11
+#: lms/templates/discovery/course_card.underscore:7
+msgid "New course"
+msgstr "Nowy kurs"
+
+#: lms/templates/discovery/course_card.underscore:9
 #: lms/templates/learner_dashboard/program_card.underscore:16
 #: lms/templates/learner_dashboard/program_card.underscore:24
 #: lms/templates/learner_dashboard/program_card.underscore:32
@@ -1138,30 +1143,35 @@ msgstr[1] "Kursy"
 msgstr[2] "Kursów"
 msgstr[3] "Kursów"
 
-#: lms/templates/discovery/course_card.underscore:21
+#: lms/templates/discovery/course_card.underscore:19
 #, python-format
 msgid "Starts: %(start_date)s"
 msgstr "Rozpoczęcie: %(start_date)s"
 
 #: lms/templates/discovery/facet.underscore:9
+#: lms/templates/discovery/facet.underscore:11
 #: lms/templates/discovery/facet_select.underscore:3
 msgid "Select"
 msgstr "Wybierz"
 
-#: lms/templates/discovery/facet.underscore:24
+#: lms/templates/discovery/facet.underscore:10
+msgid "Sorted course list"
+msgstr "Posortowana lista kursów"
+
+#: lms/templates/discovery/facet.underscore:16
+msgid "filtering"
+msgstr "filtrowanie"
+
+#: lms/templates/discovery/facet.underscore:26
 #: lms/templates/edxnotes/note-item.underscore:7
 msgid "Less"
 msgstr "Mniej"
 
+#: lms/templates/discovery/facet_option.underscore:4
+msgid "reset filter"
+msgstr "usuń filtr"
+
 #: lms/templates/discovery/filter_bar.underscore:2
-msgid "Filter By"
-msgstr "Sortuj według"
-
-#: lms/templates/discovery/filter_bar.underscore:3
-msgid "Filters"
-msgstr "Filtry"
-
-#: lms/templates/discovery/filter_bar.underscore:4
 msgid "reset filters"
 msgstr "wyczyść filtry "
 
