@@ -7,7 +7,7 @@ from django.utils.translation import ugettext as _
 
 <% languages = released_languages() %>
 <hr class="dropdown-divider mobile-menu my-0" />
-<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu language-selector" id="language-mobile">${_("Język / Language")}</div>
+<div role="heading" aria-level="6" aria-hidden="true" class="dropdown-header text-uppercase mobile-menu language-selector">${_("Język / Language")}</div>
     % if len(languages) > 1:
     % for language in languages:
     <div role="menuitem" class="mobile-menu">

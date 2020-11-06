@@ -38,14 +38,6 @@ import calendar
             $("label").parent().removeClass("is-focused");
         });
 
-        $("#confirm_password").on("focusout", function() {
-			if ($("#password").val()!=$("#confirm_password").val()) {
-				$("#confirm_password").get(0).setCustomValidity("${_('Passwords Don\'t Match')}");
-				$("#confirm_password").get(0).reportValidity();
-				$("#confirm_password").blur();
-			}
-		});
-
     });
 
 
@@ -74,35 +66,42 @@ import calendar
 
         let validationPattern = {
             email: {
+                isValid: false,
                 message: "${_('A properly formatted e-mail is required')}",
                 field: "${_('E-mail')}",
                 pattern: /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/,
             },
             name: {
+                isValid: false,
                 message: "${_('Your legal name must be a minimum of two characters long')}",
                 field: "${_('Full Name')}",
                 pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,255}$/,
             },
             username: {
+                isValid: false,
                 message: "${_('Usernames can only contain letters (A-Z, a-z), numerals (0-9), underscores (_), and hyphens (-) and must be between 2 and 255 characters long.')}",
                 field: "${_('Public Username')}",
                 pattern: /^[a-zA-Z0-9_-]{2,30}$/,
             },
             password: {
+                isValid: false,
                 message: "${_('A valid password is required')}",
                 field: "${_('Password')}",
                 pattern: /^[A-Za-z\d@$!%*?&_]{8,75}$/,
             },
             confirm_password: {
+                isValid: false,
                 message: "${_('Passwords Don\'t Match')}",
                 field: "${_('Confirm Password')}",
                 pattern: function(passwordVal, passwordConfirmVal) { return passwordVal === passwordConfirmVal }
             },
             terms_of_service: {
+                isValid: false,
                 message: "${_('You must accept the terms of service.')}",
                 field: "${_('Terms of Service')}",
             },
             honor_code: {
+                isValid: false,
                 message: "${_('To enroll, you must follow the honor code.')}",
                 field: "${_('Honor Code')}",
             }
@@ -123,65 +122,75 @@ import calendar
         }
 
         function validateForm(json) {
-            let isValidForm = false;
+            let isValidForm = [];
             $('input.js-register-field').each(function() {
                 for (let key in validationPattern) {
 
                     if (validationPattern.hasOwnProperty(key) && $(this).prop('name') === key) {
 
-                        if ($(this).prop('name') === 'confirm_password') {
-                            let $confirmPassword = $('#confirm_password');
-                            if ($confirmPassword.val() !== '' && validationPattern && validationPattern[key] && validationPattern[key].pattern($('#password').val(), $(this).val())) {
-                                let $this = $(this);
-                                removeMsgError($this);
-                                $('.js-alert-error-message').find('#text-' + key).remove();
-                            } else {
-                                if ($confirmPassword.val() === '') {
-                                    let confirmPasswordTranslation = "${_('A valid confirm password is required')}";
-                                    addMsgError(key, confirmPasswordTranslation);
-                                    const field = validationPattern && validationPattern[key] && validationPattern[key].field;
-                                    addMessageAlert(field, confirmPasswordTranslation, key);
-                                    isValidForm = false;
-                                } else {
-                                    addMsgError(key);
-                                    const field = validationPattern && validationPattern[key] && validationPattern[key].field;
-                                    const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
-                                    addMessageAlert(field, msg, key);
-                                    isValidForm = true;
-                                }
-                            }
-                        } else {
-                            if ($(this).prop('type') !== 'checkbox') {
-                                if (validationPattern && validationPattern[key] && validationPattern[key].pattern.test($(this).val())) {
+                            if ($(this).prop('type') !== 'checkbox' && $(this).prop('name') !== 'confirm_password') {
+                                    if (validationPattern && validationPattern[key] && typeof validationPattern[key].pattern !== 'function' && validationPattern[key].pattern.test($(this).val())) {
+                                        let $this = $(this);
+                                        removeMsgError($this);
+                                        $('.js-alert-error-message').find('#text-' + key).remove();
+                                        validationPattern[key].isValid = true;
+                                    } else {
+                                        addMsgError(key);
+                                        const field = validationPattern && validationPattern[key] && validationPattern[key].field;
+                                        const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
+                                        addMessageAlert(field, msg, key);
+                                        validationPattern[key].isValid = false;
+                                    }
+                            } else if ($(this).prop('name') === 'confirm_password') {
+                                let $confirmPassword = $('#confirm_password');
+                                if ($confirmPassword.val() !== '' && validationPattern && validationPattern[key] && validationPattern[key].pattern($('#password').val(), $(this).val())) {
                                     let $this = $(this);
                                     removeMsgError($this);
                                     $('.js-alert-error-message').find('#text-' + key).remove();
-                                    isValidForm = true;
+                                    validationPattern[key].isValid = true;
                                 } else {
-                                    addMsgError(key);
-                                    const field = validationPattern && validationPattern[key] && validationPattern[key].field;
-                                    const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
-                                    addMessageAlert(field, msg, key);
-                                    isValidForm = false;
+                                    if ($confirmPassword.val() === '') {
+                                        let confirmPasswordTranslation = "${_('A valid confirm password is required')}";
+                                        addMsgError(key, confirmPasswordTranslation);
+                                        const field = validationPattern && validationPattern[key] && validationPattern[key].field;
+                                        addMessageAlert(field, confirmPasswordTranslation, key);
+                                        validationPattern[key].isValid = false;
+                                    } else {
+                                        addMsgError(key);
+                                        const field = validationPattern && validationPattern[key] && validationPattern[key].field;
+                                        const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
+                                        addMessageAlert(field, msg, key);
+                                        validationPattern[key].isValid = false;
+                                    }
                                 }
                             } else {
                                 if ($(this).is(':checked')) {
                                     let $this = $(this);
                                     removeMsgError($this);
                                     $('.js-alert-error-message').find('#text-' + key).remove();
-                                    isValidForm = true;
+                                    validationPattern[key].isValid = true;
                                 } else {
                                     addMsgError(key);
                                     const field = validationPattern && validationPattern[key] && validationPattern[key].field;
                                     const msg = validationPattern && validationPattern[key] && validationPattern[key].message;
                                     addMessageAlert(field, msg, key);
-                                    isValidForm = false;
+                                    validationPattern[key].isValid = false;
                                 }
                             }
-                        }
                     }
                 }
             });
+
+            $('input.js-register-field').each(function() {
+                for (let key in validationPattern) {
+                    let validField = validationPattern && validationPattern[key] && validationPattern[key].isValid;
+                    isValidForm.push(validField)
+                }
+            });
+
+            isValidForm = isValidForm && isValidForm.every(function(elem) {
+                return elem === true;
+            })
 
             if (isValidForm && json.field) {
                 addMsgError(json.field, json.value);

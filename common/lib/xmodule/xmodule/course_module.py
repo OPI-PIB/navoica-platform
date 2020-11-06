@@ -487,6 +487,14 @@ class CourseFields(object):
         help=_("Enter the external login method students can use for the course."),
         scope=Scope.settings
     )
+
+    certificates_generate_daily = Boolean(
+        display_name=_("Generate certificates for students who passed."),
+        scope=Scope.settings,
+        default=False,
+        help=_("daily at midnight")
+    )
+
     certificates_show_before_end = Boolean(
         display_name=_("Certificates Downloadable Before End"),
         help=_(
@@ -1133,7 +1141,7 @@ class CourseDescriptor(CourseFields, SequenceDescriptor, LicenseMixin):
         Returns False if there is no end date specified.
         """
         return course_metadata_utils.has_course_ended(self.end)
-        
+
     def has_ended2(self, when=None):
         """
         Returns:
@@ -1297,7 +1305,7 @@ class CourseDescriptor(CourseFields, SequenceDescriptor, LicenseMixin):
             return flag.lower() in ['true', 'yes', 'y']
         else:
             return bool(flag)
-            
+
     @property
     def availability(self):
         """
@@ -1305,7 +1313,7 @@ class CourseDescriptor(CourseFields, SequenceDescriptor, LicenseMixin):
         """
         now = datetime.now(utc)
         upcoming_cutoff = now + timedelta(days=60)
-        
+
         if self.has_ended2(now):
             return _('Archived')
         elif self.start and (self.start <= now):

@@ -24,7 +24,7 @@ from six import text_type
 	<footer class="course-card-footer">
 	  <ul>
 		% if course.advertised_start is not None:
-			<li><time class="course-card-start"><i class="icon-calendar"></i> ${_("Starts")}: ${course.advertised_start}</time></li>
+			<li><span class="course-card-start"><i class="icon-calendar"></i> ${_("Starts")}: ${course.advertised_start}</span></li>
 		% endif
 		<li><span class="course-card-more">${_("Read more")}</span></li>
 	  </ul>

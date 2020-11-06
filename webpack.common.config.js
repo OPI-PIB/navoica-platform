@@ -60,6 +60,7 @@ module.exports = {
         ReactRenderer: './common/static/js/src/ReactRenderer.jsx',
 
         GetCourseProgress: './lms/static/js/courseware/get_course_progress.js',
+        // CustomSelectAccessibility: './lms/static/js/customSelectAccessibility.js',
     },
 
     output: {

@@ -45,6 +45,27 @@ $select-height: calc(1.625em + 0.75rem + 2px);
 $select-border: #ced4da;
 $color-navoica: #e41d37;
 
+.fa-twitter.twitter-icon {
+  background: #E41D37;
+  border: 1px solid #E41D37;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-size: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-twitter.twitter-icon:hover {
+  background: #a11326;
+  border: 1px solid #a11326;
+  color: #fff;
+  text-decoration: none;
+}
+
 #sorting-form .select-options, #sorting-form .select-styled {
   font-size: 0.875rem;
   font-weight: normal;
@@ -1840,7 +1861,6 @@ margin-top: 4rem !important;
   &:focus {
     color: #212529;
     background-color: #fff;
-    border-color: #f28f9c;
     outline: 0;
     box-shadow: 0 0 0 0.2rem #dee2e6;
   }
@@ -4010,9 +4030,9 @@ input {
   text-overflow: '';
 
   &:focus {
-    border-color: #f28f9c;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(228, 29, 55, 0.25);
+    box-shadow: 0 0 0 0.2rem #dee2e6;
+    background-color: #fff;
 
     &::-ms-value {
       color: #212529;
@@ -12088,7 +12108,6 @@ label {
 #email:focus, #password:focus {
      color: #212529 !important;
      background-color: #fff !important;
-     border-color: #f28f9c !important;
      outline: 0;
      box-shadow: 0 0 0 0.2rem #dee2e6;
 }
@@ -12752,7 +12771,12 @@ fieldset {
     position: relative;
     width: 100%;
     }
-    .card-body > figure .course-card-label {
+
+    .course-card-image {
+      position: relative;
+    }
+
+    /**.card-body .course-card-label {
       align-items: center;
       background: teal;
       border: 0;
@@ -12761,7 +12785,6 @@ fieldset {
       flex: 0 0 auto;
       font-size: 0.75rem;
       font-weight: 600;
-      left: -9px;
       letter-spacing: .05em;
       line-height: 1;
       margin-right: 1rem;
@@ -12769,7 +12792,9 @@ fieldset {
       padding: 8px 8px 10px;
       position: absolute;
       text-transform: uppercase;
-      bottom: 10px; }
+      bottom: 0;
+      transform: translate(-17px, 0);
+    }
       .card-body > figure .course-card-label::after {
         background: transparent;
         border-bottom: 10px solid transparent;
@@ -12780,7 +12805,8 @@ fieldset {
         left: 0;
         position: absolute;
         top: 100%;
-        width: 9px; }
+        width: 9px;
+      }**/
   .card-body figure + div {
     position: relative; }
      .card-body figure + div {
@@ -12789,36 +12815,37 @@ fieldset {
     flex: 0 0 8rem;
     margin: 0 1rem 0 0; }
 
-.card-body > .course-card-label {
-  align-items: center;
-  background: teal;
-  border: 0;
-  color: #fff;
-  display: flex;
-  flex: 0 0 auto;
-  font-weight: 600;
-  left: -9px;
-  letter-spacing: .05em;
-  line-height: 1;
-  margin-right: 1rem;
-  min-width: auto;
-  padding: 8px 8px 10px;
-  position: absolute;
-  text-transform: uppercase;
-  top: 145px;
-}
-.card-body > .course-card-label::after {
-  background: transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 9px solid #008f8f;
-  content: "";
-  display: block;
-  height: 10px;
-  left: 0;
-  position: absolute;
-  top: 100%;
-  width: 9px;
-}
+  .course-card-label {
+    align-items: center;
+    background: teal;
+    border: 0;
+    color: #fff;
+    display: flex;
+    flex: 0 0 auto;
+    font-weight: 600;
+    letter-spacing: .05em;
+    line-height: 1;
+    margin-right: 1rem;
+    min-width: auto;
+    padding: 0.5rem 0.5rem 0.625rem;
+    position: absolute;
+    text-transform: uppercase;
+    transform: translate(-19%, 50%);
+    bottom: 0;
+  }
+
+  .course-card-label::after {
+    background: transparent;
+    border-bottom: 0.625rem solid transparent;
+    border-right: 0.5625rem solid #008f8f;
+    content: "";
+    display: block;
+    height: 0.625rem;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 0.5625rem;
+  }
 
 .center {
   display: block;
@@ -13738,7 +13765,10 @@ span.complete-checkmark.fa.fa-check {
   height: 2.5rem;
   width: 2.5rem;
   &:hover {
-    color:#fff;
+    background: #a11326;
+    border: 1px solid #a11326;
+    color: #fff;
+    text-decoration: none;
   }
 
   i {
@@ -13896,7 +13926,7 @@ span.complete-checkmark.fa.fa-check {
 #header-navigation .navbar {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0.625rem;
@@ -14223,7 +14253,7 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
 .navbar {
   #navbarResponsive {
     .navbar-nav {
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       .btn {
         white-space: nowrap;
       }
