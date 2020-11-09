@@ -1,25 +1,25 @@
-# edX translation file.
+# edX community translations have been downloaded from English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/).
 # Copyright (C) 2020 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2020.
-# 
+#
 # Translators:
-# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
+# Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
+# Navoica Navoica <navoica@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-09 15:21+0000\n"
-"PO-Revision-Date: 2020-08-19 11:04+0000\n"
-"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
+"POT-Creation-Date: 2020-11-02 13:51+0000\n"
+"PO-Revision-Date: 2019-10-24 13:46+0000\n"
+"Last-Translator: krystianlygas <krystian.lygas@gmail.com>, 2020\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: 'Discussion' refers to the tab in the courseware that leads to
@@ -3007,6 +3007,14 @@ msgstr "External Login Domain"
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enter the external login method students can use for the course."
 msgstr "Enter the external login method students can use for the course."
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid "Generate certificates for students who passed."
+msgstr "Generate certificates for students who passed."
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid "daily at midnight"
+msgstr "daily at midnight"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificates Downloadable Before End"
