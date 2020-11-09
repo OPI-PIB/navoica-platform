@@ -182,6 +182,7 @@ def update_account_settings(requesting_user, update, username=None):
     if changing_full_name:
         try:
             student_forms.validate_name(update['name'])
+            student_forms.name_editable(existing_user_profile)
         except ValidationError as err:
             field_errors["name"] = {
                 "developer_message": u"Error thrown from validate_name: '{}'".format(err.message),
@@ -232,6 +233,7 @@ def update_account_settings(requesting_user, update, username=None):
                 datetime.datetime.now(UTC).isoformat()
             ])
             existing_user_profile.set_meta(meta)
+            existing_user_profile.name_change_count += 1
             existing_user_profile.save()
 
         # updating extended user profile info
