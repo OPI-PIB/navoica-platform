@@ -286,13 +286,6 @@
                     window.MathJax.Hub.Configured();
                 }
             },
-            'moment': {
-                exports: 'moment'
-            },
-            'moment-timezone': {
-                exports: 'moment',
-                deps: ['moment']
-            },
             'URI': {
                 exports: 'URI'
             },

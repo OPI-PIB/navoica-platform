@@ -1,5 +1,5 @@
-define(['jquery', 'date', 'js/utils/regional_pl' ,'moment', 'moment-timezone' ,'js/utils/change_on_enter', 'jquery.ui', 'jquery.timepicker'],
-function($, date, RegionalPl,  moment, momentTz ,TriggerChangeEventOnEnter) {
+define(['jquery', 'date', 'js/utils/regional_pl' ,'moment' ,'js/utils/change_on_enter', 'jquery.ui', 'jquery.timepicker'],
+function($, date, RegionalPl,  moment, TriggerChangeEventOnEnter) {
     'use strict';
     var setupDatePicker = function(fieldName, view, index) {
         var cacheModel;
@@ -67,11 +67,10 @@ function($, date, RegionalPl,  moment, momentTz ,TriggerChangeEventOnEnter) {
             time = $(timepickerInput).timepicker('getTime');
         }
         if (date && time) {
-            time.setFullYear(date.getFullYear());
-            time.setMonth(date.getMonth());
-            time.setDate(date.getDate());
-            return time;
-
+            return new Date(Date.UTC(
+                date.getFullYear(), date.getMonth(), date.getDate(),
+                time.getHours(), time.getMinutes()
+            ));
         } else if (date) {
             return new Date(Date.UTC(
                 date.getFullYear(), date.getMonth(), date.getDate()));
@@ -83,7 +82,7 @@ function($, date, RegionalPl,  moment, momentTz ,TriggerChangeEventOnEnter) {
     var setDate = function(datepickerInput, timepickerInput, datetime) {
         // given a pair of inputs (datepicker and timepicker) and the date as an
         // ISO-formatted date string.
-        datetime = moment(datetime).toDate();
+        datetime = date.parse(datetime);
         if (datetime) {
             $(datepickerInput).datepicker('setDate', datetime);
             if (timepickerInput.length > 0) {
@@ -98,7 +97,7 @@ function($, date, RegionalPl,  moment, momentTz ,TriggerChangeEventOnEnter) {
         var date = new Date(dateArg);
         return date.toLocaleString(
             [],
-            {timeZone: 'Europe/Warsaw', timeZoneName: 'short'}
+            {timeZone: 'UTC', timeZoneName: 'short'}
         );
     };
 

@@ -5,9 +5,9 @@ Convenience methods for working with datetime objects
 import re
 from datetime import datetime, timedelta
 
-from django.conf import settings
 from django.utils.translation import pgettext, ugettext
 from pytz import UnknownTimeZoneError, timezone, utc
+
 
 def get_default_time_display(dtime):
     """
@@ -24,18 +24,14 @@ def get_default_time_display(dtime):
         return u""
     if dtime.tzinfo is not None:
         try:
-            timezone_str = u" " + dtime.tzinfo.tzname(dtime)
+            timezone = u" " + dtime.tzinfo.tzname(dtime)
         except NotImplementedError:
-            timezone_str = dtime.strftime('%z')
+            timezone = dtime.strftime('%z')
     else:
-        timezone_str = u" UTC"
+        timezone = u" UTC"
 
-    if settings.USE_TZ and settings.TIME_ZONE:
-        return strftime_localized(dtime.astimezone(timezone(settings.TIME_ZONE)), "DATE_TIME")
-    else:
-        localized = strftime_localized(dtime, "DATE_TIME")
-        return (localized + timezone_str).strip()
-
+    localized = strftime_localized(dtime, "DATE_TIME")
+    return (localized + timezone).strip()
 
 
 def get_time_display(dtime, format_string=None, coerce_tz=None):
