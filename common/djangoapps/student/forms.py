@@ -153,7 +153,9 @@ def name_editable(existing_user_profile):
         existing_user_profile: UserProfile model
     """
     if existing_user_profile.name_change_count > 0:
-        raise forms.ValidationError(_('You can no longer change full name by yourself. If you think such a change is necessary, please contact us by sending an e-mail to mooc_help@opi.org.pl'))
+        raise forms.ValidationError(_('You can no longer change full name by yourself. If you think such a change is necessary, please contact us by sending an e-mail to {email_help}').format(
+            email_help=settings.TECH_SUPPORT_EMAIL
+        ))
 
 class UsernameField(forms.CharField):
     """
@@ -297,7 +299,7 @@ class AccountCreationForm(forms.Form):
         if self.enforce_password_policy:
             validate_password(password, username=self.cleaned_data.get('username'))
         return password
-    
+
     def clean_confirm_password(self):
         """Enforce password policies (if applicable)"""
         confirm_password = self.cleaned_data["confirm_password"]
