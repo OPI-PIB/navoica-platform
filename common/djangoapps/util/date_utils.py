@@ -30,7 +30,7 @@ def get_default_time_display(dtime):
     else:
         timezone_str = u" UTC"
 
-    if settings.USE_TZ and settings.TIME_ZONE:
+    if settings.USE_TZ and settings.TIME_ZONE and dtime.tzinfo:
         return strftime_localized(dtime.astimezone(timezone(settings.TIME_ZONE)), "DATE_TIME")
     else:
         localized = strftime_localized(dtime, "DATE_TIME")
