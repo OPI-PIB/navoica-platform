@@ -37,6 +37,16 @@ $(function(){
     $('#viewer-frame').focus();
     Logger.log("textbook.pdf.chapter.navigated", {"name": "textbook.pdf.chapter.navigated", "chapter": url, "chapter_title": $(this).text()});
     });
+
+    $.urlParam = function(name){
+      var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      if (results) return results[1];
+      else return false;
+    }
+
+    if($.urlParam('id') !== 0) {
+      $("#book"+$.urlParam('id')).click();
+    }
 });
 </script>
 <div class="border-top" id="content">
@@ -48,7 +58,7 @@ $(function(){
         <ul id="booknav">
           % for (index, entry) in enumerate(textbook['chapters']):
           <li>
-            <a class="chapter" rel="${entry['url']}" href="#viewer-frame">${entry.get('title')}</a>
+            <a class="chapter" rel="${entry['url']}" href="#viewer-frame&id=${index}" id="book${index}">${entry.get('title')}</a>
           </li>
           % endfor
         </ul>
