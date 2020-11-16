@@ -14160,15 +14160,17 @@ span.complete-checkmark.fa.fa-check {
   margin-bottom: 2rem;
 
   a {
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: teal;
-    border-bottom: 2px solid teal;
+    border-bottom: 1px solid teal;
   
     &:hover{
       text-decoration: none;
     }
     i {
-      font-size: 0.8rem;
+      padding-left: 0.5rem;
+      font-size: 0.625rem;
+      margin-right: 0.125rem;
     }
   }
 }
