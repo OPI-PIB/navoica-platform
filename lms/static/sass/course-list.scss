@@ -10219,7 +10219,7 @@ footer {
   margin: 0 0 4rem;
 
 .login {
-  margin-top: 30px;
+//  margin-top: 30px;
 }
   /*
   padding: 3*$font-size-base 0;
@@ -11501,6 +11501,7 @@ main.container {
  }
 }
 
+
 @media (min-width: 960px) {
   #content1 {
    #discovery-message, .discovery-message {
@@ -11999,7 +12000,7 @@ aside {
 }
 
 .login {
-  margin-top: 30px;
+//  margin-top: 30px;
   width: 100%;
   padding-right: 8px;
   padding-left: 8px;
@@ -12263,10 +12264,6 @@ fieldset {
   main.container > aside, .jumbotron > .container > aside {
     flex: 0 0 426px;
   }
-}
-
-#content {
-  padding-top: 4rem;
 }
 
 #track-info {
@@ -12912,13 +12909,14 @@ main.container nav .nav-tabs .nav-item.active,
 
 @media (max-width: 960px) {
   #courses, .about-us {
-  padding: 2rem !important;
+    padding: 2rem !important;
   }
   #content {
-  padding-top: 30px !important;
-  margin: 0;
-  border-top: 0 !important
-}
+    padding-top: 30px;
+    margin: 0;
+    border-top: 0 !important
+  } 
+
 .container .has-breadcrumbs {
   margin-bottom: 0 !important;}
 
@@ -13314,10 +13312,6 @@ img.message-author {
         }
       }
     }
-  }
-
-     .faq-page {
-    padding-top: 2rem;
   }
 
   .legend,
