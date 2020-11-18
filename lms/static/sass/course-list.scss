@@ -45,7 +45,7 @@ $select-height: calc(1.625em + 0.75rem + 2px);
 $select-border: #ced4da;
 $color-navoica: #e41d37;
 
-.fa-twitter.twitter-icon {
+.fa-twitter.social-icon, .fa-linkedin-in.social-icon {
   background: #E41D37;
   border: 1px solid #E41D37;
   border-radius: 50%;
@@ -59,7 +59,7 @@ $color-navoica: #e41d37;
   align-items: center;
 }
 
-.fa-twitter.twitter-icon:hover {
+.fa-twitter.social-icon:hover, .fa-linkedin-in.social-icon:hover {
   background: #a11326;
   border: 1px solid #a11326;
   color: #fff;
