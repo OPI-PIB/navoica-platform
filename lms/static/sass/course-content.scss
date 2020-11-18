@@ -11810,4 +11810,10 @@ div.equation {
     font-family: FontAwesome;
 }
 
+#seq_content {
+  .xblock iframe, .xblock object {
+    width: 100%;
+  }
+}
+
 @import 'elements/_creative-commons';
