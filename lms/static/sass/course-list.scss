@@ -10543,7 +10543,7 @@ main.container aside {
 @media (min-width: 960px) {
   #content {
     margin: 0!important;
-    padding: 3rem 0;
+    padding: 0;
   }
 
   .jumbotron > .container .d-flex {
@@ -11525,7 +11525,7 @@ main.container {
 @media (min-width: 960px) {
   #content_course {
     margin: 0 0 4rem;
-    padding: 3rem 0;
+    padding: 0;
   }
 
 main.container > aside {
@@ -12266,7 +12266,7 @@ fieldset {
 }
 
 #content {
-  padding-top: 4rem;
+  padding-top: 0;
 }
 
 #track-info {
@@ -14216,15 +14216,25 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
 }
 
 .course-progress .progress {
-  background-color: #eeeeee;
-  height: 2.8rem;
-  border-radius: 30px;
+  background-color: #DEE2E6;
+  height: 0.3125rem;
+  border-radius: 0;
 }
 
 .course-progress .progress-bar {
-  background-color: #158467;
-  height: 1.3rem;
-  border-radius: 30px;
+  background-color: #008080;
+  height: 0.3125rem;
+  border-radius: 0;
+}
+
+.course-progress__text {
+  font-size: 0.8125rem;
+  color: #737373;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.semi-bold-text {
+  font-weight: 600;
 }
 
 .card-color {
