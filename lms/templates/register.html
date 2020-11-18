@@ -240,7 +240,7 @@ import calendar
               <span class="d-none d-md-block">${_("Registration form")}</span>
             </h2>
           </header>
-            <h1><strong>${_("Welcome!")}</strong><br> ${_("Register below to create your {platform_name} account").format(platform_name=platform_name)}</h1>
+            <h1 class="mt-0"><strong>${_("Welcome!")}</strong><br> ${_("Register below to create your {platform_name} account").format(platform_name=platform_name)}</h1>
 
             <section role="main">
                 <form id="register-form" method="post" data-remote="true" action="/create_account" novalidate aria-label="${_('Registration form')}">
@@ -254,7 +254,7 @@ import calendar
 
         </article>
 
-        <aside id="filter" class="sidebar">
+        <aside>
           <div class="header-login">
             <h2 id="h2">
               <span class="d-none d-md-block">${_("Helpful Information")}</span>
