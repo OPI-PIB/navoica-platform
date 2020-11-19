@@ -242,7 +242,7 @@ from third_party_auth import provider, pipeline
 			${_('Please provide the following information to log into your {platform_name} account. Required fields are noted by <strong class="indicator">an asterisk (*)</strong>.').format(platform_name=platform_name)}
 		  </p>
 
-		  <div class="group group-form group-form-requiredinformation">
+		  <div class="group ml-2">
 			<h2 class="sr">${_('Required Information')}</h2>
 			
 			<div class="form-group form-group-required field text js-email-field">
@@ -259,7 +259,7 @@ from third_party_auth import provider, pipeline
 				<small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
             </div>
 		  </div>
-		  <div class="form-group d-flex justify-between flex-sm-row">
+		  <div class="ml-2 form-group d-flex justify-between flex-sm-row">
               <div class="custom-control custom-checkbox mr-auto">
 				<label for="customCheck1">
                 	<input type="checkbox" class="custom-control-input" id="customCheck1" name="remember" aria-label="${_('Remember me')}">
