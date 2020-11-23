@@ -202,7 +202,7 @@ from pipeline_mako import render_require_js_path_overrides
 % if not disable_window_wrap:
   <div class="window-wrap" dir="${static.dir_rtl()}">
 % endif
-      <div class="alert text-center cookiealert" role="alert" aria-describedby="cookie-alert-description" tabindex="0" style="opacity: 1; visibility: visible;">
+      <div class="alert text-center cookiealert" role="alert" aria-describedby="cookie-alert-description" tabindex="0">
           <div id="cookie-alert-description">${_('We use cookies and similar technologies to provide services and to gather information for statistical and other purposes. You can change the way you want the '
               'cookies to be stored or accessed on your device in the settings of your browser. If you do not agree, change the settings of your browser. For more information, '
               'refer to our')} <a href="/cookies">${_('Cookies policy')}</a>.</div>
