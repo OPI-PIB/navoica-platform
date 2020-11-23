@@ -11,7 +11,7 @@ LOGGING['handlers']['local'] = {
 LOGGING['handlers']['tracking'] = {
     'level': 'DEBUG',
     'class': 'logging.handlers.SysLogHandler',
-    'address': ('192.168.51.52', 514),
+    'address': ('edx-syslog', 514),
     'facility': SysLogHandler.LOG_LOCAL0,
     'formatter': 'raw',
 }
