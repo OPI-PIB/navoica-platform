@@ -1926,7 +1926,7 @@ CELERYD_HIJACK_ROOT_LOGGER = False
 
 CELERYBEAT_SCHEDULE = {
     'generate-certificates-at-midnight': {
-        'task': 'certificates.tasks.generate_missing_certificates',
+        'task': 'lms.djangoapps.certificates.tasks.generate_missing_certificates',
         'schedule': crontab(minute=0, hour=0),
     },
 }
@@ -2755,7 +2755,8 @@ ALL_COURSE_ORGANIZER = [
     [u"41", _(u"Copernicus Science Centre")],
     [u"42", _(u"Pomeranian University in Słupsk")],
     [u"43", _(u"Collegium Humanum – Warsaw Management University")],
-    [u"44", _(u"Parlament Studentów Rzeczypospolitej Polskiej")]
+    [u"44", _(u"Parlament Studentów Rzeczypospolitej Polskiej")],
+    [u"45", _("The Warsaw Institute of Banking")]
 ]
 
 ALL_COURSE_ORGANIZER_DICT = dict(ALL_COURSE_ORGANIZER)

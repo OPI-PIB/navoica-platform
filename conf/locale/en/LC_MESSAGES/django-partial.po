@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-02 13:51+0000\n"
-"PO-Revision-Date: 2020-11-02 13:51:25.538694\n"
+"POT-Creation-Date: 2020-11-24 09:16+0000\n"
+"PO-Revision-Date: 2020-11-24 09:17:14.716967\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -303,72 +303,79 @@ msgstr ""
 msgid "Full Name cannot contain the following characters: < >"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:185
+#: common/djangoapps/student/forms.py:156
+#, python-brace-format
+msgid ""
+"You can no longer change full name by yourself. If you think such a change "
+"is necessary, please contact us by sending an e-mail to {email_help}"
+msgstr ""
+
+#: common/djangoapps/student/forms.py:195
 msgid "A properly formatted e-mail is required"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:186
+#: common/djangoapps/student/forms.py:196
 msgid "A valid password is required"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:187
+#: common/djangoapps/student/forms.py:197
 msgid "Your legal name must be a minimum of two characters long"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:199
+#: common/djangoapps/student/forms.py:209
 #, python-format
 msgid "Email cannot be more than %(limit_value)s characters long"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:244
+#: common/djangoapps/student/forms.py:254
 msgid "You must accept the terms of service."
 msgstr ""
 
-#: common/djangoapps/student/forms.py:249
+#: common/djangoapps/student/forms.py:259
 msgid "A level of education is required"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:250
+#: common/djangoapps/student/forms.py:260
 msgid "Your gender is required"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:251
+#: common/djangoapps/student/forms.py:261
 msgid "Your year of birth is required"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:252
+#: common/djangoapps/student/forms.py:262
 msgid "Your mailing address is required"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:253
+#: common/djangoapps/student/forms.py:263
 msgid "A description of your goals is required"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:254
+#: common/djangoapps/student/forms.py:264
 msgid "A city is required"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:255
+#: common/djangoapps/student/forms.py:265
 msgid "A country is required"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:263
+#: common/djangoapps/student/forms.py:273
 msgid "To enroll, you must follow the honor code."
 msgstr ""
 
-#: common/djangoapps/student/forms.py:271
+#: common/djangoapps/student/forms.py:281
 msgid "You are missing one or more required fields"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:301
+#: common/djangoapps/student/forms.py:311
 msgid "Passwords Don't Match"
 msgstr ""
 
-#: common/djangoapps/student/forms.py:318
+#: common/djangoapps/student/forms.py:328
 msgid "Unauthorized email address."
 msgstr ""
 
-#: common/djangoapps/student/forms.py:322
+#: common/djangoapps/student/forms.py:332
 #, python-brace-format
 msgid ""
 "It looks like {email} belongs to an existing account. Try again with a "
@@ -489,127 +496,127 @@ msgstr ""
 msgid "Disabled Account"
 msgstr ""
 
-#: common/djangoapps/student/models.py:344
+#: common/djangoapps/student/models.py:345
 msgid "Male"
 msgstr ""
 
-#: common/djangoapps/student/models.py:345
+#: common/djangoapps/student/models.py:346
 msgid "Female"
 msgstr ""
 
 #. Translators: 'Other' refers to the student's gender
-#: common/djangoapps/student/models.py:347
+#: common/djangoapps/student/models.py:348
 msgid "Other/Prefer Not to Say"
 msgstr ""
 
-#: common/djangoapps/student/models.py:358
+#: common/djangoapps/student/models.py:359
 msgid "Doctorate"
 msgstr ""
 
-#: common/djangoapps/student/models.py:359
+#: common/djangoapps/student/models.py:360
 msgid "Master's or professional degree"
 msgstr ""
 
-#: common/djangoapps/student/models.py:360
+#: common/djangoapps/student/models.py:361
 msgid "Bachelor's degree"
 msgstr ""
 
-#: common/djangoapps/student/models.py:361
+#: common/djangoapps/student/models.py:362
 msgid "Associate degree"
 msgstr ""
 
-#: common/djangoapps/student/models.py:362
+#: common/djangoapps/student/models.py:363
 msgid "Secondary/high school"
 msgstr ""
 
-#: common/djangoapps/student/models.py:363
+#: common/djangoapps/student/models.py:364
 msgid "Junior secondary/junior high/middle school"
 msgstr ""
 
-#: common/djangoapps/student/models.py:364
+#: common/djangoapps/student/models.py:365
 msgid "Elementary/primary school"
 msgstr ""
 
 #. Translators: 'None' refers to the student's level of education
-#: common/djangoapps/student/models.py:366
+#: common/djangoapps/student/models.py:367
 msgid "No formal education"
 msgstr ""
 
 #. Translators: 'Other' refers to the student's level of education
-#: common/djangoapps/student/models.py:368
+#: common/djangoapps/student/models.py:369
 msgid "Other education"
-msgstr ""
-
-#: common/djangoapps/student/models.py:2382
-#, python-brace-format
-msgid "{platform_name} Honor Code Certificate for {course_name}"
 msgstr ""
 
 #: common/djangoapps/student/models.py:2383
 #, python-brace-format
-msgid "{platform_name} Verified Certificate for {course_name}"
+msgid "{platform_name} Honor Code Certificate for {course_name}"
 msgstr ""
 
 #: common/djangoapps/student/models.py:2384
-#: common/djangoapps/student/models.py:2386
+#, python-brace-format
+msgid "{platform_name} Verified Certificate for {course_name}"
+msgstr ""
+
+#: common/djangoapps/student/models.py:2385
+#: common/djangoapps/student/models.py:2387
 #, python-brace-format
 msgid "{platform_name} Professional Certificate for {course_name}"
 msgstr ""
 
-#: common/djangoapps/student/models.py:2392
+#: common/djangoapps/student/models.py:2393
 msgid ""
 "The company identifier for the LinkedIn Add-to-Profile button e.g "
 "0_0dPSPyS070e0HsE9HNz_13_d11_"
 msgstr ""
 
-#: common/djangoapps/student/models.py:2405
+#: common/djangoapps/student/models.py:2406
 msgid ""
 "Short identifier for the LinkedIn partner used in the tracking code.  "
 "(Example: 'edx')  If no value is provided, tracking codes will not be sent "
 "to LinkedIn."
 msgstr ""
 
-#: common/djangoapps/student/models.py:2454
+#: common/djangoapps/student/models.py:2455
 #, python-brace-format
 msgid "{platform_name} Certificate for {course_name}"
 msgstr ""
 
-#: common/djangoapps/student/models.py:2552
-#: common/djangoapps/student/models.py:2581
+#: common/djangoapps/student/models.py:2553
+#: common/djangoapps/student/models.py:2582
 msgid "The ISO 639-1 language code for this language."
 msgstr ""
 
-#: common/djangoapps/student/models.py:2607
+#: common/djangoapps/student/models.py:2608
 msgid "Namespace of enrollment attribute"
 msgstr ""
 
-#: common/djangoapps/student/models.py:2611
+#: common/djangoapps/student/models.py:2612
 msgid "Name of the enrollment attribute"
 msgstr ""
 
-#: common/djangoapps/student/models.py:2615
+#: common/djangoapps/student/models.py:2616
 msgid "Value of the enrollment attribute"
 msgstr ""
 
-#: common/djangoapps/student/models.py:2686
+#: common/djangoapps/student/models.py:2687
 msgid ""
 "The window of time after enrolling during which users can be granted a "
 "refund, represented in microseconds. The default is 14 days."
 msgstr ""
 
-#: common/djangoapps/student/models.py:2708
+#: common/djangoapps/student/models.py:2709
 msgid "Name of the UTM cookie"
 msgstr ""
 
-#: common/djangoapps/student/models.py:2713
+#: common/djangoapps/student/models.py:2714
 msgid "Name of the affiliate cookie"
 msgstr ""
 
-#: common/djangoapps/student/models.py:2734
+#: common/djangoapps/student/models.py:2735
 msgid "Name of this user attribute."
 msgstr ""
 
-#: common/djangoapps/student/models.py:2735
+#: common/djangoapps/student/models.py:2736
 msgid "Value of this user attribute."
 msgstr ""
 
@@ -726,7 +733,7 @@ msgstr ""
 
 #: common/djangoapps/student/views/login.py:652
 #: common/djangoapps/student/views/management.py:980
-#: openedx/core/djangoapps/user_api/accounts/api.py:316
+#: openedx/core/djangoapps/user_api/accounts/api.py:318
 #: openedx/core/djangoapps/user_api/views.py:177
 msgid "Account creation not allowed."
 msgstr ""
@@ -8736,200 +8743,204 @@ msgstr ""
 msgid "Subscribe to the {platform_name} YouTube channel"
 msgstr ""
 
-#: lms/envs/common.py:2705
+#: lms/envs/common.py:2704
 msgid "Polish"
 msgstr ""
 
-#: lms/envs/common.py:2706
+#: lms/envs/common.py:2705
 msgid "English"
 msgstr ""
 
-#: lms/envs/common.py:2710
+#: lms/envs/common.py:2709
 msgid "introductory"
 msgstr ""
 
-#: lms/envs/common.py:2711
+#: lms/envs/common.py:2710
 msgid "intermediate"
 msgstr ""
 
-#: lms/envs/common.py:2712
+#: lms/envs/common.py:2711
 msgid "advanced"
 msgstr ""
 
-#: lms/envs/common.py:2716
+#: lms/envs/common.py:2715
 msgid "Young Science Foundation"
 msgstr ""
 
-#: lms/envs/common.py:2717
+#: lms/envs/common.py:2716
 msgid "Warsaw University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2718
+#: lms/envs/common.py:2717
 msgid "Lodz University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2719
+#: lms/envs/common.py:2718
 msgid "National Information Processing Institute"
 msgstr ""
 
-#: lms/envs/common.py:2720
+#: lms/envs/common.py:2719
 msgid "Helena Chodkowska University of Technology and Economics"
 msgstr ""
 
-#: lms/envs/common.py:2721
+#: lms/envs/common.py:2720
 msgid "Vistula University "
 msgstr ""
 
-#: lms/envs/common.py:2722
+#: lms/envs/common.py:2721
 msgid "Akademia Ignatianum w Krakowie"
 msgstr ""
 
-#: lms/envs/common.py:2723
+#: lms/envs/common.py:2722
 msgid "War Studies University"
 msgstr ""
 
-#: lms/envs/common.py:2724
+#: lms/envs/common.py:2723
 msgid "WSB University"
 msgstr ""
 
-#: lms/envs/common.py:2725
+#: lms/envs/common.py:2724
 msgid "The Witelon State University of Applied Sciences in Legnica"
 msgstr ""
 
-#: lms/envs/common.py:2726
+#: lms/envs/common.py:2725
 msgid "Bialystok University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2727
+#: lms/envs/common.py:2726
 msgid "Czestochowa University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2728
+#: lms/envs/common.py:2727
 msgid "Gdansk University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2729
+#: lms/envs/common.py:2728
 msgid "Cracow University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2730
+#: lms/envs/common.py:2729
 msgid "Public Univerity of Humanities ‘POMERANIA’"
 msgstr ""
 
-#: lms/envs/common.py:2731
+#: lms/envs/common.py:2730
 msgid "Paweł Włodkowic University College in Płock"
 msgstr ""
 
-#: lms/envs/common.py:2732
+#: lms/envs/common.py:2731
 msgid "Poznań University of Economics and Business "
 msgstr ""
 
-#: lms/envs/common.py:2733
+#: lms/envs/common.py:2732
 msgid "Jan Długosz University in Częstochowa "
 msgstr ""
 
-#: lms/envs/common.py:2734
+#: lms/envs/common.py:2733
 msgid "Adam Mickiewicz University in Poznań"
 msgstr ""
 
-#: lms/envs/common.py:2735
+#: lms/envs/common.py:2734
 msgid "Jagiellonian University in Kraków"
 msgstr ""
 
-#: lms/envs/common.py:2736
+#: lms/envs/common.py:2735
 msgid "Cardinal Wyszyński University in Warsaw"
 msgstr ""
 
-#: lms/envs/common.py:2737
+#: lms/envs/common.py:2736
 msgid "Nicolaus Copernicus University in Toruń"
 msgstr ""
 
-#: lms/envs/common.py:2738
+#: lms/envs/common.py:2737
 msgid "Pedagogical University of Krakow"
 msgstr ""
 
-#: lms/envs/common.py:2739
+#: lms/envs/common.py:2738
 msgid "Uniwersytet Szczeciński"
 msgstr ""
 
-#: lms/envs/common.py:2740
+#: lms/envs/common.py:2739
 msgid "University of Silesia in Katowice"
 msgstr ""
 
-#: lms/envs/common.py:2741
+#: lms/envs/common.py:2740
 msgid "UTP University of Science and Technology"
 msgstr ""
 
-#: lms/envs/common.py:2742
+#: lms/envs/common.py:2741
 msgid "Kazimierz Pułaski University of Technology and Humanities in Radom"
 msgstr ""
 
-#: lms/envs/common.py:2743
+#: lms/envs/common.py:2742
 msgid "Military University of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2744
+#: lms/envs/common.py:2743
 msgid "College of Business and Entrepreneurship in Ostrowiec Świętokrzyski"
 msgstr ""
 
-#: lms/envs/common.py:2745
+#: lms/envs/common.py:2744
 msgid "Lipinski University"
 msgstr ""
 
-#: lms/envs/common.py:2746
+#: lms/envs/common.py:2745
 msgid "University of Economy in Bydgoszcz"
 msgstr ""
 
-#: lms/envs/common.py:2747
+#: lms/envs/common.py:2746
 msgid "University of Business in Wrocław"
 msgstr ""
 
-#: lms/envs/common.py:2748
+#: lms/envs/common.py:2747
 msgid "TWP Higher School of Humanities"
 msgstr ""
 
-#: lms/envs/common.py:2749
+#: lms/envs/common.py:2748
 msgid "Humanitas University in Sosnowiec"
 msgstr ""
 
-#: lms/envs/common.py:2750
+#: lms/envs/common.py:2749
 msgid "The University of Information Technology and Management in Rzeszów"
 msgstr ""
 
-#: lms/envs/common.py:2751
+#: lms/envs/common.py:2750
 msgid "Academy of European Integration in Szczecin"
 msgstr ""
 
-#: lms/envs/common.py:2752
+#: lms/envs/common.py:2751
 msgid "WSPiA University of Rzeszow"
 msgstr ""
 
-#: lms/envs/common.py:2753
+#: lms/envs/common.py:2752
 msgid "Katowice School of Technology"
 msgstr ""
 
-#: lms/envs/common.py:2754
+#: lms/envs/common.py:2753
 msgid "West Pomeranian Business School"
 msgstr ""
 
-#: lms/envs/common.py:2755
+#: lms/envs/common.py:2754
 msgid "West Pomeranian University of Technology in Szczecin"
 msgstr ""
 
-#: lms/envs/common.py:2756
+#: lms/envs/common.py:2755
 msgid "Copernicus Science Centre"
 msgstr ""
 
-#: lms/envs/common.py:2757
+#: lms/envs/common.py:2756
 msgid "Pomeranian University in Słupsk"
 msgstr ""
 
-#: lms/envs/common.py:2758
+#: lms/envs/common.py:2757
 msgid "Collegium Humanum – Warsaw Management University"
 msgstr ""
 
-#: lms/envs/common.py:2759
+#: lms/envs/common.py:2758
 msgid "Parlament Studentów Rzeczypospolitej Polskiej"
+msgstr ""
+
+#: lms/envs/common.py:2759
+msgid "The Warsaw Institute of Banking"
 msgstr ""
 
 #: lms/envs/common.py:2765

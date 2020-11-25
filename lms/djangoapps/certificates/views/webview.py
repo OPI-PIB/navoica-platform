@@ -505,8 +505,13 @@ def render_pdf(html,return_content=False):
             o = urlparse(link_href)
             href['href'] = o._replace(netloc=settings.INTERNAL_HOST_IP, scheme="http").geturl()
 
+    html = unicode(soup)
+    log.info(
+        "Cert [PDF]: %s", html
+    )
+
     multipart_form_data = {
-        'file': ('index.html', unicode(soup)),
+        'file': ('index.html', html),
         'marginTop': (None, '0',),
         'marginBottom': (None, '0',),
         'marginLeft': (None, '0',),
