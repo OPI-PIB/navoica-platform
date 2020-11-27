@@ -6,6 +6,7 @@ import urllib
 
 from django.core.urlresolvers import reverse
 from rest_framework import serializers
+from django.conf import settings
 
 from openedx.core.djangoapps.models.course_details import CourseDetails
 from openedx.core.lib.api.fields import AbsoluteURLField
@@ -73,6 +74,7 @@ class CourseSerializer(serializers.Serializer):  # pylint: disable=abstract-meth
     pacing = serializers.CharField()
     mobile_available = serializers.BooleanField()
     hidden = serializers.SerializerMethodField()
+    organizer = serializers.SerializerMethodField()
     invitation_only = serializers.BooleanField()
 
     # 'course_id' is a deprecated field, please use 'id' instead.
@@ -85,6 +87,12 @@ class CourseSerializer(serializers.Serializer):  # pylint: disable=abstract-meth
         """
         catalog_visibility = course_overview.catalog_visibility
         return catalog_visibility in ['about', 'none']
+
+    def get_organizer(self, course_overview):
+        try:
+            return settings.ALL_COURSE_ORGANIZER_DICT[course_overview.organizer]
+        except KeyError:
+            return ""
 
     def get_blocks_url(self, course_overview):
         """
