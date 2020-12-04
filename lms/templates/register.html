@@ -206,6 +206,7 @@ import calendar
             $(".field-error").removeClass('field-error');
             $("[data-field='" + json.field + "']").addClass('field-error');
             $('.js-alert-error-message').empty();
+            $('.login-error').addClass('is-shown').focus();
             validateForm(json);
         });
     })(this);
@@ -219,57 +220,55 @@ import calendar
         var $submitButton = $('form .form-actions #submit');
 
         if (enable) {
-            $submitButton.removeClass('is-disabled').attr('aria-disabled', false).removeProp('disabled').removeAttr('disabled').html("<i class='fas fa-check' aria-hidden='true'></i> ${_('Register')}");
+            $submitButton.removeClass('is-disabled').attr('aria-disabled', false).removeProp('disabled').removeAttr('disabled').html("${_('Register')}");
         }
         else {
             $submitButton.addClass('is-disabled').prop('disabled', true).text("${_('Processing your account information')}");
         }
     }
+
+    $(".toggle-password").click(function() {
+
+      $(this).toggleClass("far fa-eye-slash");
+      var input = $($(this).attr("toggle"));
+      if (input.attr("type") == "password") {
+        input.attr("type", "text");
+      } else {
+        input.attr("type", "password");
+      }
+    });
+
 </script>
 </%block>
 
 
-<div id="content" class="border-top py-5">
-  <section class="register container login" id="skip-main">
-    <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
-    <div class="d-flex">
-       <article id="result">
-           <header class="header-login">
-             <h2 class="custom-h2">
-              <span class="d-none d-md-block">${_("Registration form")}</span>
-            </h2>
-          </header>
-            <h1 class="mt-0"><strong>${_("Welcome!")}</strong><br> ${_("Register below to create your {platform_name} account").format(platform_name=platform_name)}</h1>
+<div class="content-login border-top bg-login"> <!--div1 -->
+     <main class="login" id="skip-main">
+        <div class="tab-content" id="nav-tabContent"> <!-- div tab-content -->
+             <div class="d-flex"> <!-- div d-flex -->
+                <article id="result">
+                    <section class="section-header-login"> <!-- section section-header-login -->
+                      <header>
+                        <h1 class="login-header f-22 h-26">${_("Zarejestruj się")}</h1>
+                      </header>
 
-            <section role="main">
-                <form id="register-form" method="post" data-remote="true" action="/create_account" novalidate aria-label="${_('Registration form')}">
-                    <%
-                    # allow for theming override on the registration form
-                    registration_form = static.get_template_path('register-form.html')
-                    %>
-                    <%include file="${registration_form}" />
-                </form>
-             </section>
+                      <p class="instructions f-14 h-20">
+                        ${_("Uzyskasz dostęp do bezpłatnych kursów na {platform_name}. </br> <strong> Pola obowiązkowe zostały oznaczone gwiazdką.</strong>").format(platform_name=platform_name)}
+                      </p>
+                    </section> <!-- section section-header-login -->
 
-        </article>
-
-        <aside>
-          <div class="header-login">
-            <h2 id="h2">
-              <span class="d-none d-md-block">${_("Helpful Information")}</span>
-            </h2>
-          </div>
-            <%
-            # allow for theming overrides on the registration sidebars, otherwise default to pre-existing ones
-            sidebar_file = static.get_template_path('register-sidebar.html')
-            %>
-
-            <%include file="${sidebar_file}" />
-        </aside>
-
-      </div>
-   </div>
-   </div>
-  </section>
- </div>
+                    <section class="login-form" role="main">
+                        <form id="register-form" method="post" data-remote="true" action="/create_account" novalidate aria-label="${_('Registration form')}">
+                            <%
+                            # allow for theming override on the registration form
+                            registration_form = static.get_template_path('register-form.html')
+                            %>
+                            <%include file="${registration_form}"/>
+                        </form>
+                        <p class="login-problem f-14 h-19">${_("Masz problem z rejestracją? Wyślij wiadomość e-mail na adres: ")}<a href="mailto:mooc_help@opi.org.pl"> ${_("mooc_help@opi.org.pl.")}</a></p>
+                    </section>
+                </article>  
+            </div> <!-- div d-flex -->
+        </div> <!-- div tab-content -->
+    </main>
+</div> <!--div1 -->
