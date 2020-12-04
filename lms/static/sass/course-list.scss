@@ -13668,20 +13668,19 @@ span.complete-checkmark.fa.fa-check {
   margin: 0 1.875rem 0 1.875rem;
 }
 .error-code-info {
+  background: transparent url('/static/images/404.png') 0% 0% no-repeat padding-box;
+  padding-left: 0px;
+  padding-right: 0px;
   padding-bottom: 2rem;
 }
-.error-code-info-title-gray {
-  font-weight: 800;
-  font-size: 3.75rem;
-  color: #2F5DAB;
-  opacity: 11%;
-}
+
 .error-code-info-title {
   font: normal normal bold 2.1875rem/2.625rem Open Sans;
   letter-spacing: 0px;
   color: #413F3F;
   opacity: 1;
   margin-bottom: 1rem;
+  margin-top: 5.125rem;
 }
 .error-code-info-text {
   font: normal normal normal 1rem/1.5625 Open Sans;
@@ -13696,7 +13695,7 @@ span.complete-checkmark.fa.fa-check {
   color: #2F5DAB;
   opacity: 1;
   margin-right: 2rem;
-  border-bottom: 2px solid #2F5DAB;
+  border-bottom: 1px solid #2F5DAB;
   
   &:hover {
     text-decoration: none;
@@ -13711,12 +13710,11 @@ span.complete-checkmark.fa.fa-check {
   }
 
   .error-code-info {
-    width: 60%;
     padding-bottom: 5.6875rem;
   }
 
   .error-code-image {
-    width: 70%;
+    max-width: 410px;
     margin: 0 auto 0 auto;
   }
 
