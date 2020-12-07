@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-01 12:53+0000\n"
-"PO-Revision-Date: 2020-10-01 12:53:52.724498\n"
+"POT-Creation-Date: 2020-12-07 12:25+0000\n"
+"PO-Revision-Date: 2020-12-07 12:25:58.500314\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -126,31 +126,31 @@ msgid ""
 ". Course directory must already be a git repository. Usage:  git_export <course_loc> <git_url>"
 msgstr ""
 
-#: cms/djangoapps/contentstore/tasks.py:478
-#: cms/djangoapps/contentstore/tasks.py:609
+#: cms/djangoapps/contentstore/tasks.py:533
+#: cms/djangoapps/contentstore/tasks.py:664
 #, python-brace-format
 msgid "Unknown User ID: {0}"
 msgstr ""
 
-#: cms/djangoapps/contentstore/tasks.py:482
-#: cms/djangoapps/contentstore/tasks.py:613
+#: cms/djangoapps/contentstore/tasks.py:537
+#: cms/djangoapps/contentstore/tasks.py:668
 msgid "Permission denied"
 msgstr ""
 
-#: cms/djangoapps/contentstore/tasks.py:637
+#: cms/djangoapps/contentstore/tasks.py:692
 #: cms/djangoapps/contentstore/views/import_export.py:132
 msgid "We only support uploading a .tar.gz file."
 msgstr ""
 
-#: cms/djangoapps/contentstore/tasks.py:650
+#: cms/djangoapps/contentstore/tasks.py:705
 msgid "Tar file not found"
 msgstr ""
 
-#: cms/djangoapps/contentstore/tasks.py:696
+#: cms/djangoapps/contentstore/tasks.py:751
 msgid "Unsafe tar file. Aborting import."
 msgstr ""
 
-#: cms/djangoapps/contentstore/tasks.py:729
+#: cms/djangoapps/contentstore/tasks.py:784
 #, python-brace-format
 msgid "Could not find the {0} file in the package."
 msgstr ""
@@ -217,11 +217,15 @@ msgstr ""
 msgid "Embedded Answers"
 msgstr ""
 
-#: cms/djangoapps/contentstore/views/component.py:276
+#: cms/djangoapps/contentstore/views/component.py:249
+msgid "Self-reflection question with feedback answer"
+msgstr ""
+
+#: cms/djangoapps/contentstore/views/component.py:277
 msgid "Blank"
 msgstr ""
 
-#: cms/djangoapps/contentstore/views/component.py:411
+#: cms/djangoapps/contentstore/views/component.py:412
 msgid "Video"
 msgstr ""
 
@@ -690,11 +694,11 @@ msgstr ""
 msgid "Incorrect format for field '{name}'. {detailed_message}"
 msgstr ""
 
-#: cms/envs/common.py:173
+#: cms/envs/common.py:175
 msgid "Navoica.pl Studio"
 msgstr ""
 
-#: cms/envs/common.py:174 cms/templates/board_base.html:47
+#: cms/envs/common.py:176 cms/templates/board_base.html:47
 msgid "Studio"
 msgstr ""
 

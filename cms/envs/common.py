@@ -1374,8 +1374,12 @@ ADVANCED_PROBLEM_TYPES = [
         'boilerplate_name': None
         #'boilerplate_name': _('Inline Dropdown')
     },
-        {
+    {
         'component': 'embedded_answers',
+        'boilerplate_name': None
+    },
+    {
+        'component': 'donewithanswer',
         'boilerplate_name': None
     }
 ]

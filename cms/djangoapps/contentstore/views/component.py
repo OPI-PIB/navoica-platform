@@ -246,6 +246,7 @@ def get_component_templates(courselike, library=False):
         'videojs': _("Video from cloud"),
         'inline_dropdown': _('Inline Dropdown'),
         'embedded_answers': _('Embedded Answers'),
+        'donewithanswer': _('Self-reflection question with feedback answer'),
     }
 
     component_templates = []
