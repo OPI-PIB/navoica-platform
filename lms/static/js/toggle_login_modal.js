@@ -12,7 +12,7 @@
      */
         leanModal: function(options) {
             var defaults = {
-                top: 100,
+                top: 64,
                 overlay: 0.5,
                 closeButton: null,
                 position: 'fixed'
@@ -78,15 +78,14 @@
                             position: o.position,
                             opacity: 0,
                             'z-index': 11000,
-                            left: 50 + '%',
-                            'margin-left': -(modal_width / 2) + 'px',
                             top: o.top + 'px'
                         });
                     }
-
+                    $('body').addClass('modal-open');
                     $(modal_id).show().fadeTo(200, 1);
                     $(modal_id).find('.notice').hide().html('');
                     window.scrollTo(0, 0);
+
                     e.preventDefault();
                 });
             });
@@ -94,6 +93,7 @@
             function close_modal(modal_id, e) {
                 $('#lean_overlay').fadeOut(200);
                 $('iframe', modal_id).attr('src', '');
+                $('body').removeClass('modal-open');
                 $(modal_id).css({display: 'none'});
                 if (modal_id == '#modal_clone') {
                     $(modal_id).remove();
@@ -109,7 +109,7 @@
                 closeButton = $link.data('modalCloseButtonSelector') || '.close-modal',
                 embed;
 
-            $link.leanModal({top: 120, overlay: 1, closeButton: closeButton, position: 'absolute'});
+            $link.leanModal({overlay: 1, closeButton: closeButton, position: 'fixed'});
             embed = $($link.attr('href')).find('iframe');
             if (embed.length > 0 && embed.attr('src')) {
                 var sep = (embed.attr('src').indexOf('?') > 0) ? '&' : '?';

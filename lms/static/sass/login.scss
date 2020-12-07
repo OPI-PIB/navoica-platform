@@ -1,0 +1,533 @@
+/** LOGIN PAGE **/
+
+.content-login {
+  padding: 4rem 0 8rem 0;
+  background: var(--color-fcfcfc);
+}
+
+.content-login .dashboard-banner {
+  margin: auto;
+  max-width: 1280px;
+}  
+
+.content-login .dashboard-banner .wrapper-msg {
+  padding: 60px 107px;
+  background: var(--color-ffffff);
+  border: 1px solid var(--color-dedfdf);
+  box-shadow: 0px 10px 30px #E0E0E080;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  .title {
+    color: var(--color-374049);
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: unset;
+  }
+}
+
+.content-login .dashboard-banner .activation-message {
+  display: flex;
+  align-items: center;
+  color: var(--color-374049);
+}
+
+.content-login .dashboard-banner .activation-message p {
+  color: var(--color-686970);
+  padding-top: 16px;
+}
+
+.content-login .dashboard-banner .activation-message img {
+  margin: 0 35px 0 8px;
+}
+
+@media (max-width: 360px) {
+  .content-login .dashboard-banner .activation-message img {
+    display: none;
+  }
+
+  .content-login .dashboard-banner {
+    max-width: 328px;
+  }
+} 
+
+.login {
+  margin: auto;
+  max-width: 35.25rem;
+  width: auto;
+  background: var(--color-ffffff);
+  box-shadow: 5px 10px 30px #B3B3B326;
+  border: 1px solid #E1E1E1;
+  position: inherit;
+  padding: 4rem 5rem;
+}
+
+.login p {
+  margin: 0;
+}
+
+.login .section-header-login{
+  margin-bottom: 20px;
+
+}
+
+.login-header {
+  color: var(--color-374049);
+  font-weight: bold;
+  letter-spacing: -0.44px;
+  margin-bottom: 8px;
+}
+
+.login .instructions {
+  color: var(--color-686970);
+  margin: 0;
+}
+
+.login .login-problem {
+  color: rgba(104, 105, 112, 1);
+  margin: unset;
+  margin-top: 30px;
+}
+
+.login a{
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-008080);
+  text-decoration: underline;
+}
+
+.login label {
+  color: var(--color-212529);
+  text-align: left;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.login #login-form .status.message, .login #register-form .status.message {
+   display: none;
+}
+
+.login #login-form  .status.message.is-shown{
+  display: inline-flex;
+  flex-wrap: wrap;
+  color: var(--color-d71932);
+   ul {
+      list-style: none;
+   }
+} 
+
+.login #register-form .status.message.is-shown {
+  display: inline-flex;
+  flex-wrap: wrap;
+  color: var(--color-d71932);
+   ul {
+      list-style: none;
+   }
+} 
+
+.login .error-in-login.is-shown{
+  background: rgba(228, 29, 55, 0.08);
+  margin: 0 -5rem 1.813rem -5rem;
+  padding: 0.688rem 5rem;
+  display: flex;
+  align-items: center;
+  min-height: 4.125rem;
+}
+
+.login {
+  .message, .message-title, .message-copy, ul {
+    margin: 0;
+  }
+}
+
+.login .error-in-login.is-shown .error-bold {
+  font-weight: 600;
+}
+
+.login #alert-info, .login #alert-primary {
+  color: unset;
+  background: unset;
+  padding: unset;
+  border: unset;
+}
+
+.login .login-button {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.login .login-button button {
+  width: 100%;
+  min-height: 34px;
+  background: var(--color-e41d37);
+  color: var(--color-ffffff);
+  text-align: center;
+  font-weight: 600;
+  border: unset;
+  padding: 0.375rem 0 ;
+
+  &:hover {
+    background: var(--color-a11326);
+  }
+}
+
+.login input{
+  height: 2.375rem;
+  background-color: var(--color-ffffff);
+  border: 1px solid var(--color-919191);
+  display: block;
+  width: 100%;
+  text-indent: 12px;
+  padding: 0;
+
+  &:hover {
+    border: 2px solid var(--color-919191);
+  }
+
+  &:active {
+    border: 1px solid var(--color-008080);
+    outline: 3px solid #bfdfdf;
+  }  
+}
+
+.login input.error-field {
+  border: 1px solid var(--color-5b5b5b);
+  border-bottom: 2px solid var(--color-e41d37);
+
+  &:hover {
+    border: 2px solid var(--color-919191);
+  }
+}
+
+.login .form-group.email {
+  margin-bottom: 16px;
+}
+
+.login .form-group.password {
+  margin-bottom: 30px;
+}
+
+.forgot-password-modal .inner-wrapper {
+  padding: 30px;
+}
+
+.login .custom-control-label p {
+  padding-left: 0.25rem;
+}
+
+.login .custom-control-label::before{
+  position: absolute;
+  left: -1.5rem;
+  background: var(--color-ffffff);
+  border: 1px solid var(--color-919191);
+  top: 0.11rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.login .custom-control-label::after{
+  top: 0.11rem;
+}
+
+.login .custom-control-input:not(:checked) ~ .custom-control-label:hover::after {
+  border: 11px #F4F4F4;
+  border-radius: 50%;
+  box-shadow: 0 0 0 11px #F4F4F4;
+  z-index: 1;
+}
+
+
+.login .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+  background: transparent url("/static/images/check-solid.svg") no-repeat 50%/50% 50%;
+  z-index: 2;
+  background-size: 0.625rem;
+}
+
+.login .custom-control-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &:checked ~ .custom-control-label::before {
+    background: var(--color-008080);
+    border: 1px solid var(--color-008080);
+    opacity: 1;
+  }
+
+  &:not(:checked) ~ .custom-control-label::before {
+    border: 1px solid var(--color-919191);
+    z-index: 2;
+  }
+
+
+  &:hover {
+   &:checked ~ .custom-control-label::after {
+      border: unset;
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    ~ .custom-control-label::before {
+      box-shadow: none
+    }
+
+    &:not(:checked) ~ .custom-control-label::before {
+      box-shadow: none
+    }
+  }
+}  
+
+.login .custom-control label {
+  margin: 0;
+}
+
+.login .field.text {
+  line-height: 1;
+}
+
+.login .row {
+  display: flex;
+  flex-wrap: unset;
+}
+
+.login .select-wrapper {
+  position: relative;
+}
+
+.login .select-wrapper:after {
+    content: '\f078';
+    color: var(--color-686970);
+    font: normal normal normal 12px/17px FontAwesome;
+    right: 12px;
+    top: 12px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.login {
+  #education-level, #gender, #yob {
+    color: var(--color-686970);
+  }
+}
+
+.login .form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* For IE10 */
+.login .form-control::-ms-expand {
+  display: none;
+}
+
+.login .p-year {
+  padding-left: 24px;
+}
+
+.login .terms-of-service label {
+  padding-left: 0.25rem;
+}
+
+.login .honor-code label {
+  padding-left: 0.25rem;
+}
+
+.login #register-form .form-group.password {
+  margin-bottom: 24px;
+}
+
+.login #register-form .form-group {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 360px) {
+  .content-login {
+    padding: 19px 0;
+  }  
+  .login {
+    padding: 1rem 1rem 1.5rem 1rem;
+    width: auto;
+  }
+}
+
+/** END LOGIN PAGE **/
+
+/** FORGOT PASSWORD MODAL **/
+
+#forgot-password-modal .inner-wrapper {
+  max-width: 26rem;
+  padding: 1.875rem;
+  border: unset;
+  margin: 178.5px auto 0 auto;
+}
+
+#forgot-password-modal .inner-wrapper.restore {
+  max-width: 38.625rem;
+}
+
+#forgot-password-modal .inner-wrapper .modal-header {
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--color-d1d6dc);
+  margin-bottom: 0.969rem;
+  align-items: center;
+}
+
+#forgot-password-modal .inner-wrapper .modal-header button {
+  color: var(--color-374049);
+  text-align: left;
+  opacity: 1;
+}
+
+#forgot-password-modal .inner-wrapper .modal-body {
+  padding: unset;
+}
+
+#forgot-password-modal .inner-wrapper .modal-body .form-group {
+  margin: 0;
+}
+
+#forgot-password-modal .inner-wrapper .modal-body .group.group-form.group-form-requiredinformation {
+  background-color: unset;
+  box-shadow: unset;
+  padding: unset;
+  margin: unset;
+}
+
+#forgot-password-modal .inner-wrapper .modal-footer {
+  border-top: unset;
+  padding: 0;
+  margin: 2.5rem 0 1.906rem;
+}  
+
+#forgot-password-modal .inner-wrapper .modal-footer button {
+  font-size: 600;
+  color: var(--color-f8f9fa);
+}
+
+#forgot-password-modal .inner-wrapper a{
+  font-weight: 600;
+  color: var(--color-008080);
+  text-decoration: underline;
+}
+
+#forgot-password-modal .inner-wrapper .login-problem {
+  color: var(--color-686970);
+}
+
+#forgot-password-modal .inner-wrapper .message {
+  display: flex;
+  align-items: center;
+}
+
+#forgot-password-modal .inner-wrapper p {
+  margin: 0;
+  color: var(--color-212529);
+}
+
+#forgot-password-modal .inner-wrapper label {
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--color-212529);
+}
+
+#forgot-password-modal .inner-wrapper img {
+  margin: 0 35px 0 8px;
+}
+
+#forgot-password-modal .inner-wrapper .modal-title {
+  color: var(--color-374049);
+}
+
+
+#forgot-password-modal .inner-wrapper.restore {
+  padding-bottom: 40px;
+  margin-top: 0;
+}
+
+#forgot-password-modal .inner-wrapper.restore .modal-header {
+  margin-bottom: 30px;
+}
+
+#forgot-password-modal .inner-wrapper input {
+  height: 38px;
+  background-color: var(--color-ffffff);
+  border: 1px solid var(--color-919191);
+  opacity: 1;
+  display: block;
+  width: 100%;
+  text-indent: 12px;
+
+  &:hover {
+    border: 2px solid var(--color-919191);
+    opacity: 1;
+  }
+
+  &:active {
+    border: 1px solid var(--color-008080);
+    outline: 3px solid #bfdfdf;
+  }  
+}
+
+#forgot-password-modal .inner-wrapper input.error-field {
+  border: 1px solid var(--color-5b5b5b);
+  border-bottom: 2px solid var(--color-e41d37);
+
+  &:hover {
+    border: 2px solid var(--color-919191);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  #forgot-password-modal .inner-wrapper img {
+    display: none;
+  }
+
+  #forgot-password-modal .inner-wrapper {
+    max-width: 328px;
+    margin: 34px auto 0 auto;
+  }
+
+  #forgot-password-modal .inner-wrapper.restore {
+    padding: 16px 16px 25px 16px;
+  }
+
+  #forgot-password-modal .inner-wrapper {
+    padding: 16px;
+ 
+  }
+}
+
+@media (max-width: 650px) {
+  #forgot-password-modal .inner-wrapper.restore {
+    margin: 0 16px;
+    width: auto;
+  }
+}
+
+/** END FORGOT PASSWORD MODAL **/
+
+/** REGISTER PAGE **/
+.login .password .field-icon{
+  cursor: pointer;
+  color: var(--color-686970);
+  float: right;
+  margin-right: 0.75rem;
+  margin-top: -1.8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.login .tip-input {
+  color: var(--color-686970);
+  padding-top: 5px;
+}
+
+.login #login-form .tip-input {
+  padding-top: unset;
+  color: unset;
+}
+
+
+/** END REGISTER PAGE **/
