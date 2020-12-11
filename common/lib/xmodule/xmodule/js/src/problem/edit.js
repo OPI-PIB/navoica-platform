@@ -73,6 +73,8 @@
             };
             this.element = element;
             if ($('.markdown-box', this.element).length !== 0) {
+                var textAreaValue = $('.markdown-box').text()
+                $('.markdown-box').text(rewriteStaticLinks(textAreaValue, '/static/', this.base_asset_url));
                 this.markdown_editor = CodeMirror.fromTextArea($('.markdown-box', element)[0], {
                     lineWrapping: true,
                     mode: null
@@ -254,11 +256,13 @@
             this.element.off('click', '.xml-tab', this.changeEditor);
             this.element.off('click', '.format-buttons button', this.onToolbarButton);
             this.element.off('click', '.cheatsheet-toggle', this.toggleCheatsheet);
+            var rewritedMarkdownValue = rewriteStaticLinks(this.markdown_editor.getValue(), this.base_asset_url, '/static/');
+
             if (this.current_editor === this.markdown_editor) {
                 return {
-                    data: MarkdownEditingDescriptor.markdownToXml(this.markdown_editor.getValue()),
+                    data: MarkdownEditingDescriptor.markdownToXml(rewritedMarkdownValue),
                     metadata: {
-                        markdown: this.markdown_editor.getValue()
+                        markdown: rewritedMarkdownValue
                     }
                 };
             } else {
@@ -338,7 +342,6 @@
                 MarkdownEditingDescriptor.explanationTemplate
             );
         };
-
         MarkdownEditingDescriptor.openModal = function(selectedText, base_asset_url, imageModal ) {
             var imgAttrs = {
                 baseAssetUrl: base_asset_url,
