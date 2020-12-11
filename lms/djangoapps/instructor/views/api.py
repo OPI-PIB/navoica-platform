@@ -2898,7 +2898,7 @@ def start_certificate_generation(request, course_id):
 @transaction.non_atomic_requests
 @ensure_csrf_cookie
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)
-@require_global_staff
+@require_level('staff')
 @require_POST
 @common_exceptions_400
 def start_merge_certificates(request, course_id):
