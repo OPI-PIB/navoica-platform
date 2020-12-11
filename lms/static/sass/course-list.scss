@@ -10543,7 +10543,7 @@ main.container aside {
 @media (min-width: 960px) {
   #content {
     margin: 0!important;
-    padding: 0;
+    padding: 3rem 0 3rem 0;
   }
 
   .jumbotron > .container .d-flex {
@@ -11216,10 +11216,9 @@ article .display-3 {
     }
   }
 
-  #login-form, #register-form {
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
-    margin: 0 0 -1px;
+  #register-form, #login-form {
+    box-shadow: 0 0 12px 2px #DEE2E6;
+    background-color: #FCFCFC;
     padding: 1rem;
   }
 
@@ -14326,3 +14325,7 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   }
 }
 
+.mbt-4 {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
