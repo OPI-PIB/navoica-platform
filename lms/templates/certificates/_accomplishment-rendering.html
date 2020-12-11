@@ -1,5 +1,5 @@
 <%page expression_filter="h"/>
-<%! 
+<%!
 from django.utils.translation import ugettext as _
 from django.conf import settings
 from django.utils import translation
@@ -30,14 +30,14 @@ course_mode_class = course_mode if course_mode else ''
                                 def get_translation_in(language, s):
                                     with translation.override(language):
                                         return translation.gettext(s)
-                                
+
                                 organizer_logo_name = organizer
-                                
+
                                 if not finders.find('images/org/{}.png'.format(organizer)):
                                     organizer_logo_name = get_translation_in('pl', organizer)
 
                             %>
-                            
+
                             <img src="${settings.LMS_ROOT_URL}/static/images/org/${organizer_logo_name}.png" alt="${organizer}">
                         </div>
                     </div>
@@ -88,8 +88,12 @@ course_mode_class = course_mode if course_mode else ''
                         </div>
                         % endif
                     </div>
+                    % if append_logos:
+                            <img style="width:100%;" src="${settings.LMS_ROOT_URL}/static/images/certificates/eu_logos.png">
+                        % endif
                 </div>
-                <footer></footer>
+                <footer>
+                </footer>
             </div>
             % if request:
                 <div class="mt-4 text-center d-print-none">

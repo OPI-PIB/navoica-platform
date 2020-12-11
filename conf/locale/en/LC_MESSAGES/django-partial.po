@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-24 09:16+0000\n"
-"PO-Revision-Date: 2020-11-24 09:17:14.716967\n"
+"POT-Creation-Date: 2020-12-11 14:33+0000\n"
+"PO-Revision-Date: 2020-12-11 14:33:49.096006\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -2499,42 +2499,46 @@ msgid "Course Display Name"
 msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py:286
+msgid "Append EU logos to certificate template"
+msgstr ""
+
+#: common/lib/xmodule/xmodule/course_module.py:292
 msgid "Enable external enroll"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:291
+#: common/lib/xmodule/xmodule/course_module.py:297
 msgid "Use format: https://enroll.navoica.pl/"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:293
+#: common/lib/xmodule/xmodule/course_module.py:299
 msgid "External enroll url"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:297
+#: common/lib/xmodule/xmodule/course_module.py:303
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py:54
 msgid "Course Editor"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:298
+#: common/lib/xmodule/xmodule/course_module.py:304
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py:55
 msgid "Enter the method by which this course is edited (\"XML\" or \"Studio\")."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:305
+#: common/lib/xmodule/xmodule/course_module.py:311
 msgid "Course Survey URL"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:306
+#: common/lib/xmodule/xmodule/course_module.py:312
 msgid ""
 "Enter the URL for the end-of-course survey. If your course does not have a "
 "survey, enter null."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:311
+#: common/lib/xmodule/xmodule/course_module.py:317
 msgid "Discussion Blackout Dates"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:313
+#: common/lib/xmodule/xmodule/course_module.py:319
 msgid ""
 "Enter pairs of dates between which students cannot post to discussion "
 "forums. Inside the provided brackets, enter an additional set of square "
@@ -2547,11 +2551,11 @@ msgid ""
 "\"2015-10-08\"]] "
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:323
+#: common/lib/xmodule/xmodule/course_module.py:329
 msgid "Discussion Topic Mapping"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:325
+#: common/lib/xmodule/xmodule/course_module.py:331
 msgid ""
 "Enter discussion categories in the following format: \"CategoryName\": "
 "{\"id\": \"i4x-InstitutionName-CourseNumber-course-CourseRun\"}. For "
@@ -2564,115 +2568,115 @@ msgid ""
 "UniversityX-MUS101-course-2015_T1\", \"default\": true}."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:337
+#: common/lib/xmodule/xmodule/course_module.py:343
 msgid "Discussion Sorting Alphabetical"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:340
+#: common/lib/xmodule/xmodule/course_module.py:346
 msgid ""
 "Enter true or false. If true, discussion categories and subcategories are "
 "sorted alphabetically. If false, they are sorted chronologically by creation"
 " date and time."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:345
+#: common/lib/xmodule/xmodule/course_module.py:351
 msgid "Course Announcement Date"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:346
+#: common/lib/xmodule/xmodule/course_module.py:352
 msgid "Enter the date to announce your course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:350
+#: common/lib/xmodule/xmodule/course_module.py:356
 msgid "Cohort Configuration"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:352
+#: common/lib/xmodule/xmodule/course_module.py:358
 msgid ""
 "Enter policy keys and values to enable the cohort feature, define automated "
 "student assignment to groups, or identify any course-wide discussion topics "
 "as private to cohort members."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:358
+#: common/lib/xmodule/xmodule/course_module.py:364
 msgid "Course Is New"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:360
+#: common/lib/xmodule/xmodule/course_module.py:366
 msgid ""
 "Enter true or false. If true, the course appears in the list of new courses "
 "on edx.org, and a New! badge temporarily appears next to the course image."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:366
+#: common/lib/xmodule/xmodule/course_module.py:372
 msgid "Show course on main page."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:368
+#: common/lib/xmodule/xmodule/course_module.py:374
 msgid ""
 "Enter true or false. If true, the course appears on the section 'New "
 "Courses' on main page."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:374
+#: common/lib/xmodule/xmodule/course_module.py:380
 msgid "Mobile Course Available"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:375
+#: common/lib/xmodule/xmodule/course_module.py:381
 msgid ""
 "Enter true or false. If true, the course will be available to mobile "
 "devices."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:380
+#: common/lib/xmodule/xmodule/course_module.py:386
 msgid "Video Upload Credentials"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:381
+#: common/lib/xmodule/xmodule/course_module.py:387
 msgid ""
 "Enter the unique identifier for your course's video files provided by edX."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:386
+#: common/lib/xmodule/xmodule/course_module.py:392
 msgid "Course Not Graded"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:387
+#: common/lib/xmodule/xmodule/course_module.py:393
 msgid "Enter true or false. If true, the course will not be graded."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:392
+#: common/lib/xmodule/xmodule/course_module.py:398
 msgid "Disable Progress Graph"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:393
+#: common/lib/xmodule/xmodule/course_module.py:399
 msgid "Enter true or false. If true, students cannot view the progress graph."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:398
+#: common/lib/xmodule/xmodule/course_module.py:404
 msgid "PDF Textbooks"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:399
+#: common/lib/xmodule/xmodule/course_module.py:405
 msgid "List of dictionaries containing pdf_textbook configuration"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:402
+#: common/lib/xmodule/xmodule/course_module.py:408
 msgid "HTML Textbooks"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:404
+#: common/lib/xmodule/xmodule/course_module.py:410
 msgid ""
 "For HTML textbooks that appear as separate tabs in the course, enter the "
 "name of the tab (usually the title of the book) as well as the URLs and "
 "titles of each chapter in the book."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:410
+#: common/lib/xmodule/xmodule/course_module.py:416
 msgid "Remote Gradebook"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:412
+#: common/lib/xmodule/xmodule/course_module.py:418
 msgid ""
 "Enter the remote gradebook mapping. Only use this setting when "
 "REMOTE_GRADEBOOK_URL has been specified."
@@ -2683,7 +2687,7 @@ msgstr ""
 #. a role created by a course Instructor to enable a person (the "Coach") to
 #. manage the custom course for
 #. his students.
-#: common/lib/xmodule/xmodule/course_module.py:421
+#: common/lib/xmodule/xmodule/course_module.py:427
 msgid "Enable CCX"
 msgstr ""
 
@@ -2692,7 +2696,7 @@ msgstr ""
 #. a role created by a course Instructor to enable a person (the "Coach") to
 #. manage the custom course for
 #. his students.
-#: common/lib/xmodule/xmodule/course_module.py:426
+#: common/lib/xmodule/xmodule/course_module.py:432
 msgid ""
 "Allow course instructors to assign CCX Coach roles, and allow coaches to "
 "manage Custom Courses on edX. When false, Custom Courses cannot be created, "
@@ -2701,109 +2705,109 @@ msgstr ""
 
 #. Translators: Custom Courses for edX (CCX) is an edX feature for re-using
 #. course content.
-#: common/lib/xmodule/xmodule/course_module.py:434
+#: common/lib/xmodule/xmodule/course_module.py:440
 msgid "CCX Connector URL"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:437
+#: common/lib/xmodule/xmodule/course_module.py:443
 msgid ""
 "URL for CCX Connector application for managing creation of CCXs. (optional)."
 " Ignored unless 'Enable CCX' is set to 'true'."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:443
+#: common/lib/xmodule/xmodule/course_module.py:449
 msgid "Allow Anonymous Discussion Posts"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:444
+#: common/lib/xmodule/xmodule/course_module.py:450
 msgid ""
 "Enter true or false. If true, students can create discussion posts that are "
 "anonymous to all users."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:448
+#: common/lib/xmodule/xmodule/course_module.py:454
 msgid "Allow Anonymous Discussion Posts to Peers"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:450
+#: common/lib/xmodule/xmodule/course_module.py:456
 msgid ""
 "Enter true or false. If true, students can create discussion posts that are "
 "anonymous to other students. This setting does not make posts anonymous to "
 "course staff."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:456
+#: common/lib/xmodule/xmodule/course_module.py:462
 #: common/lib/xmodule/xmodule/library_root_xblock.py:34
 msgid "Advanced Module List"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:457
+#: common/lib/xmodule/xmodule/course_module.py:463
 msgid "Enter the names of the advanced modules to use in your course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:463
+#: common/lib/xmodule/xmodule/course_module.py:469
 msgid "Course Home Sidebar Name"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:465
+#: common/lib/xmodule/xmodule/course_module.py:471
 msgid ""
 "Enter the heading that you want students to see above your course handouts "
 "on the Course Home page. Your course handouts appear in the right panel of "
 "the page."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:469
+#: common/lib/xmodule/xmodule/course_module.py:475
 msgid "Course Handouts"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:472
+#: common/lib/xmodule/xmodule/course_module.py:478
 msgid ""
 "True if timezones should be shown on dates in the course. Deprecated in "
 "favor of due_date_display_format."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:478
+#: common/lib/xmodule/xmodule/course_module.py:484
 msgid "Due Date Display Format"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:480
+#: common/lib/xmodule/xmodule/course_module.py:486
 msgid ""
 "Enter the format for due dates. The default is Mon DD, YYYY. Enter "
 "\"%m-%d-%Y\" for MM-DD-YYYY, \"%d-%m-%Y\" for DD-MM-YYYY, \"%Y-%m-%d\" for "
 "YYYY-MM-DD, or \"%Y-%d-%m\" for YYYY-DD-MM."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:486
+#: common/lib/xmodule/xmodule/course_module.py:492
 msgid "External Login Domain"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:487
+#: common/lib/xmodule/xmodule/course_module.py:493
 msgid "Enter the external login method students can use for the course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:492
+#: common/lib/xmodule/xmodule/course_module.py:498
 msgid "Generate certificates for students who passed."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:495
+#: common/lib/xmodule/xmodule/course_module.py:501
 msgid "daily at midnight"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:499
+#: common/lib/xmodule/xmodule/course_module.py:505
 msgid "Certificates Downloadable Before End"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:501
+#: common/lib/xmodule/xmodule/course_module.py:507
 msgid ""
 "Enter true or false. If true, students can download certificates before the "
 "course ends, if they've met certificate requirements."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:510
+#: common/lib/xmodule/xmodule/course_module.py:516
 msgid "Certificates Display Behavior"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:512
+#: common/lib/xmodule/xmodule/course_module.py:518
 msgid ""
 "Enter end, early_with_info, or early_no_info. After certificate generation, "
 "students who passed see a link to their certificates on the dashboard and "
@@ -2815,86 +2819,86 @@ msgid ""
 "certificates are generated, enter early_no_info."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:523
+#: common/lib/xmodule/xmodule/course_module.py:529
 msgid "Course About Page Image"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:525
+#: common/lib/xmodule/xmodule/course_module.py:531
 msgid ""
 "Edit the name of the course image file. You must upload this file on the "
 "Files & Uploads page. You can also set the course image on the Settings & "
 "Details page."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:533
+#: common/lib/xmodule/xmodule/course_module.py:539
 msgid "Course Banner Image"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:535
+#: common/lib/xmodule/xmodule/course_module.py:541
 msgid ""
 "Edit the name of the banner image file. You can set the banner image on the "
 "Settings & Details page."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:543
+#: common/lib/xmodule/xmodule/course_module.py:549
 msgid "Course Video Thumbnail Image"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:545
+#: common/lib/xmodule/xmodule/course_module.py:551
 msgid ""
 "Edit the name of the video thumbnail image file. You can set the video "
 "thumbnail image on the Settings & Details page."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:553
+#: common/lib/xmodule/xmodule/course_module.py:559
 msgid "Issue Open Badges"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:555
+#: common/lib/xmodule/xmodule/course_module.py:561
 msgid ""
 "Issue Open Badges badges for this course. Badges are generated when "
 "certificates are created."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:563
+#: common/lib/xmodule/xmodule/course_module.py:569
 msgid ""
 "Use this setting only when generating PDF certificates. Between quotation "
 "marks, enter the short name of the type of certificate that students receive"
 " when they complete the course. For instance, \"Certificate\"."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:567
+#: common/lib/xmodule/xmodule/course_module.py:573
 msgid "Certificate Name (Short)"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:573
+#: common/lib/xmodule/xmodule/course_module.py:579
 msgid ""
 "Use this setting only when generating PDF certificates. Between quotation "
 "marks, enter the long name of the type of certificate that students receive "
 "when they complete the course. For instance, \"Certificate of Achievement\"."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:577
+#: common/lib/xmodule/xmodule/course_module.py:583
 msgid "Certificate Name (Long)"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:582
+#: common/lib/xmodule/xmodule/course_module.py:588
 msgid "Certificate Web/HTML View Enabled"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:583
+#: common/lib/xmodule/xmodule/course_module.py:589
 msgid "If true, certificate Web/HTML views are enabled for the course."
 msgstr ""
 
 #. Translators: This field is the container for course-specific certificate
 #. configuration values
-#: common/lib/xmodule/xmodule/course_module.py:590
+#: common/lib/xmodule/xmodule/course_module.py:596
 msgid "Certificate Web/HTML View Overrides"
 msgstr ""
 
 #. Translators: These overrides allow for an alternative configuration of the
 #. certificate web view
-#: common/lib/xmodule/xmodule/course_module.py:592
+#: common/lib/xmodule/xmodule/course_module.py:598
 msgid ""
 "Enter course-specific overrides for the Web/HTML template parameters here "
 "(JSON format)"
@@ -2902,47 +2906,47 @@ msgstr ""
 
 #. Translators: This field is the container for course-specific certificate
 #. configuration values
-#: common/lib/xmodule/xmodule/course_module.py:599
+#: common/lib/xmodule/xmodule/course_module.py:605
 msgid "Certificate Configuration"
 msgstr ""
 
 #. Translators: These overrides allow for an alternative configuration of the
 #. certificate web view
-#: common/lib/xmodule/xmodule/course_module.py:601
+#: common/lib/xmodule/xmodule/course_module.py:607
 msgid "Enter course-specific configuration information here (JSON format)"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:615
+#: common/lib/xmodule/xmodule/course_module.py:621
 msgid "CSS Class for Course Reruns"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:616
+#: common/lib/xmodule/xmodule/course_module.py:622
 msgid ""
 "Allows courses to share the same css class across runs even if they have "
 "different numbers."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:627
+#: common/lib/xmodule/xmodule/course_module.py:633
 msgid "Discussion Forum External Link"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:628
+#: common/lib/xmodule/xmodule/course_module.py:634
 msgid "Allows specification of an external link to replace discussion forums."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:637
+#: common/lib/xmodule/xmodule/course_module.py:643
 msgid "Hide Progress Tab"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:638
+#: common/lib/xmodule/xmodule/course_module.py:644
 msgid "Allows hiding of the progress tab."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:644
+#: common/lib/xmodule/xmodule/course_module.py:650
 msgid "Course Organization Display String"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:646
+#: common/lib/xmodule/xmodule/course_module.py:652
 msgid ""
 "Enter the course organization that you want to appear in the course. This "
 "setting overrides the organization that you entered when you created the "
@@ -2950,11 +2954,11 @@ msgid ""
 "course, enter null."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:654
+#: common/lib/xmodule/xmodule/course_module.py:660
 msgid "Course Number Display String"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:656
+#: common/lib/xmodule/xmodule/course_module.py:662
 msgid ""
 "Enter the course number that you want to appear in the course. This setting "
 "overrides the course number that you entered when you created the course. To"
@@ -2962,58 +2966,58 @@ msgid ""
 "null."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:665
+#: common/lib/xmodule/xmodule/course_module.py:671
 msgid "Course Maximum Student Enrollment"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:667
+#: common/lib/xmodule/xmodule/course_module.py:673
 msgid ""
 "Enter the maximum number of students that can enroll in the course. To allow"
 " an unlimited number of students, enter null."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:674
+#: common/lib/xmodule/xmodule/course_module.py:680
 msgid "Allow Public Wiki Access"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:676
+#: common/lib/xmodule/xmodule/course_module.py:682
 msgid ""
 "Enter true or false. If true, edX users can view the course wiki even if "
 "they're not enrolled in the course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:684
+#: common/lib/xmodule/xmodule/course_module.py:690
 msgid "Invitation Only"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:685
+#: common/lib/xmodule/xmodule/course_module.py:691
 msgid "Whether to restrict enrollment to invitation by the course staff."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:691
+#: common/lib/xmodule/xmodule/course_module.py:697
 msgid "Pre-Course Survey Name"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:692
+#: common/lib/xmodule/xmodule/course_module.py:698
 msgid "Name of SurveyForm to display as a pre-course survey to the user."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:699
+#: common/lib/xmodule/xmodule/course_module.py:705
 msgid "Pre-Course Survey Required"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:701
+#: common/lib/xmodule/xmodule/course_module.py:707
 msgid ""
 "Specify whether students must complete a survey before they can view your "
 "course content. If you set this value to true, you must add a name for the "
 "survey to the Course Survey Name setting above."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:710
+#: common/lib/xmodule/xmodule/course_module.py:716
 msgid "Course Visibility In Catalog"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:712
+#: common/lib/xmodule/xmodule/course_module.py:718
 msgid ""
 "Defines the access permissions for showing the course in the course catalog."
 " This can be set to one of three values: 'both' (show in catalog and allow "
@@ -3021,54 +3025,54 @@ msgid ""
 " not show in catalog and do not allow access to an about page)."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:719
+#: common/lib/xmodule/xmodule/course_module.py:725
 msgid "Both"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:720
+#: common/lib/xmodule/xmodule/course_module.py:726
 #: lms/djangoapps/branding/api.py:269
 msgid "About"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:721
+#: common/lib/xmodule/xmodule/course_module.py:727
 msgid "None"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:725
+#: common/lib/xmodule/xmodule/course_module.py:731
 msgid "Entrance Exam Enabled"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:727
+#: common/lib/xmodule/xmodule/course_module.py:733
 msgid ""
 "Specify whether students must complete an entrance exam before they can view"
 " your course content. Note, you must enable Entrance Exams for this course "
 "setting to take effect."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:738
+#: common/lib/xmodule/xmodule/course_module.py:744
 msgid "Entrance Exam Minimum Score (%)"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:740
+#: common/lib/xmodule/xmodule/course_module.py:746
 msgid ""
 "Specify a minimum percentage score for an entrance exam before students can "
 "view your course content. Note, you must enable Entrance Exams for this "
 "course setting to take effect."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:748
+#: common/lib/xmodule/xmodule/course_module.py:754
 msgid "Entrance Exam ID"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:749
+#: common/lib/xmodule/xmodule/course_module.py:755
 msgid "Content module identifier (location) of entrance exam."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:755
+#: common/lib/xmodule/xmodule/course_module.py:761
 msgid "Social Media Sharing URL"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:757
+#: common/lib/xmodule/xmodule/course_module.py:763
 msgid ""
 "If dashboard social sharing and custom course URLs are enabled, you can "
 "provide a URL (such as the URL to a course About page) that social media "
@@ -3076,51 +3080,51 @@ msgid ""
 "http://www.edx.org/course/Introduction-to-MOOCs-ITM001"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:765
+#: common/lib/xmodule/xmodule/course_module.py:771
 msgid "Course Language"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:766
+#: common/lib/xmodule/xmodule/course_module.py:772
 msgid "Specify the language of your course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:772
+#: common/lib/xmodule/xmodule/course_module.py:778
 msgid "Course Difficulty"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:773
+#: common/lib/xmodule/xmodule/course_module.py:779
 msgid "Specify the difficulty of your course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:779
+#: common/lib/xmodule/xmodule/course_module.py:785
 msgid "Course Organizer"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:780
+#: common/lib/xmodule/xmodule/course_module.py:786
 msgid "Specify the organizer of your course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:786
+#: common/lib/xmodule/xmodule/course_module.py:792
 msgid "Course Category"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:787
+#: common/lib/xmodule/xmodule/course_module.py:793
 msgid "Specify the Category of your course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:793
+#: common/lib/xmodule/xmodule/course_module.py:799
 msgid "Course Timetable"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:794
+#: common/lib/xmodule/xmodule/course_module.py:800
 msgid "Specify the timetable of your course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:800
+#: common/lib/xmodule/xmodule/course_module.py:806
 msgid "Teams Configuration"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:803
+#: common/lib/xmodule/xmodule/course_module.py:809
 #, python-brace-format
 msgid ""
 "Specify the maximum team size and topics for teams inside the provided set "
@@ -3133,22 +3137,22 @@ msgid ""
 "are underscore, hyphen, and period."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:823
+#: common/lib/xmodule/xmodule/course_module.py:829
 msgid "Enable Proctored Exams"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:825
+#: common/lib/xmodule/xmodule/course_module.py:831
 msgid ""
 "Enter true or false. If this value is true, proctored exams are enabled in "
 "your course. Note that enabling proctored exams will also enable timed "
 "exams."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:833
+#: common/lib/xmodule/xmodule/course_module.py:839
 msgid "Allow Opting Out of Proctored Exams"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:835
+#: common/lib/xmodule/xmodule/course_module.py:841
 msgid ""
 "Enter true or false. If this value is true, learners can choose to take "
 "proctored exams without proctoring. If this value is false, all learners "
@@ -3156,43 +3160,43 @@ msgid ""
 "exams are enabled for the course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:844
+#: common/lib/xmodule/xmodule/course_module.py:850
 msgid "Create Zendesk Tickets For Suspicious Proctored Exam Attempts"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:846
+#: common/lib/xmodule/xmodule/course_module.py:852
 msgid ""
 "Enter true or false. If this value is true, a Zendesk ticket will be created"
 " for suspicious attempts."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:853
+#: common/lib/xmodule/xmodule/course_module.py:859
 msgid "Enable Timed Exams"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:855
+#: common/lib/xmodule/xmodule/course_module.py:861
 msgid ""
 "Enter true or false. If this value is true, timed exams are enabled in your "
 "course. Regardless of this setting, timed exams are enabled if Enable "
 "Proctored Exams is set to true."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:863
+#: common/lib/xmodule/xmodule/course_module.py:869
 msgid "Minimum Grade for Credit"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:865
+#: common/lib/xmodule/xmodule/course_module.py:871
 msgid ""
 "The minimum grade that a learner must earn to receive credit in the course, "
 "as a decimal between 0.0 and 1.0. For example, for 75%, enter 0.75."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:873
+#: common/lib/xmodule/xmodule/course_module.py:879
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py:237
 msgid "Self Paced"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:875
+#: common/lib/xmodule/xmodule/course_module.py:881
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py:239
 msgid ""
 "Set this to \"true\" to mark this course as self-paced. Self-paced courses "
@@ -3200,47 +3204,47 @@ msgid ""
 " course at any rate before the course ends."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:884
+#: common/lib/xmodule/xmodule/course_module.py:890
 msgid "Bypass Course Home"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:886
+#: common/lib/xmodule/xmodule/course_module.py:892
 msgid ""
 "Bypass the course home tab when students arrive from the dashboard, sending "
 "them directly to course content."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:895
+#: common/lib/xmodule/xmodule/course_module.py:901
 msgid "Enable Subsection Prerequisites"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:897
+#: common/lib/xmodule/xmodule/course_module.py:903
 msgid ""
 "Enter true or false. If this value is true, you can hide a subsection until "
 "learners earn a minimum score in another, prerequisite subsection."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:906
+#: common/lib/xmodule/xmodule/course_module.py:912
 msgid "Course Learning Information"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:907
+#: common/lib/xmodule/xmodule/course_module.py:913
 msgid "Specify what student can learn from the course."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:927
+#: common/lib/xmodule/xmodule/course_module.py:933
 msgid "Course Instructor"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:928
+#: common/lib/xmodule/xmodule/course_module.py:934
 msgid "Enter the details for Course Instructor"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:935
+#: common/lib/xmodule/xmodule/course_module.py:941
 msgid "Add Unsupported Problems and Tools"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:937
+#: common/lib/xmodule/xmodule/course_module.py:943
 msgid ""
 "Enter true or false. If true, you can add unsupported problems and tools to "
 "your course in Studio. Unsupported problems and tools are not recommended "
@@ -3249,33 +3253,33 @@ msgid ""
 "documentation."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:944
+#: common/lib/xmodule/xmodule/course_module.py:950
 msgid "Highlights Enabled for Messaging"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:946
+#: common/lib/xmodule/xmodule/course_module.py:952
 msgid ""
 "Enter true or false. If true, any highlights associated with content in the "
 "course will be messaged to learners at their scheduled time."
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:1003
+#: common/lib/xmodule/xmodule/course_module.py:1009
 msgid "General"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:1318 lms/envs/common.py:2812
+#: common/lib/xmodule/xmodule/course_module.py:1324 lms/envs/common.py:2812
 msgid "Archived"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:1320
+#: common/lib/xmodule/xmodule/course_module.py:1326
 msgid "Current"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:1322
+#: common/lib/xmodule/xmodule/course_module.py:1328
 msgid "Starting Soon"
 msgstr ""
 
-#: common/lib/xmodule/xmodule/course_module.py:1324 lms/envs/common.py:2809
+#: common/lib/xmodule/xmodule/course_module.py:1330 lms/envs/common.py:2809
 msgid "Upcoming"
 msgstr ""
 
@@ -5112,7 +5116,7 @@ msgid "{platform_name} acknowledges the following student accomplishment"
 msgstr ""
 
 #. Translators:  This text represents the description of course
-#: lms/djangoapps/certificates/views/webview.py:248
+#: lms/djangoapps/certificates/views/webview.py:249
 #, python-brace-format
 msgid ""
 "a course of study offered by {partner_short_name}, an online learning "
@@ -5120,37 +5124,37 @@ msgid ""
 msgstr ""
 
 #. Translators:  This text represents the description of course
-#: lms/djangoapps/certificates/views/webview.py:256
+#: lms/djangoapps/certificates/views/webview.py:257
 #, python-brace-format
 msgid "a course of study offered by {partner_short_name}."
 msgstr ""
 
-#: lms/djangoapps/certificates/views/webview.py:271
+#: lms/djangoapps/certificates/views/webview.py:272
 #, python-brace-format
 msgid "I completed the {course_title} course on {platform_name}."
 msgstr ""
 
-#: lms/djangoapps/certificates/views/webview.py:279
+#: lms/djangoapps/certificates/views/webview.py:280
 #, python-brace-format
 msgid ""
 "I completed a course at {platform_name}. Take a look at my certificate."
 msgstr ""
 
-#: lms/djangoapps/certificates/views/webview.py:319
+#: lms/djangoapps/certificates/views/webview.py:320
 #, python-brace-format
 msgid "More Information About {user_name}'s Certificate:"
 msgstr ""
 
 #. Translators: This line is displayed to a user who has completed a course
 #. and achieved a certification
-#: lms/djangoapps/certificates/views/webview.py:323
+#: lms/djangoapps/certificates/views/webview.py:324
 #, python-brace-format
 msgid "{fullname}, you earned a certificate!"
 msgstr ""
 
 #. Translators: This line congratulates the user and instructs them to share
 #. their accomplishment on social networks
-#: lms/djangoapps/certificates/views/webview.py:328
+#: lms/djangoapps/certificates/views/webview.py:329
 msgid ""
 "Congratulations! This page summarizes what you accomplished. Show it off to "
 "family, friends, and colleagues in your social and professional networks."
@@ -5158,7 +5162,7 @@ msgstr ""
 
 #. Translators: This line leads the reader to understand more about the
 #. certificate that a student has been awarded
-#: lms/djangoapps/certificates/views/webview.py:333
+#: lms/djangoapps/certificates/views/webview.py:334
 #, python-brace-format
 msgid "More about {fullname}'s accomplishment"
 msgstr ""
