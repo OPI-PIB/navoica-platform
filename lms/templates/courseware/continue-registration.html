@@ -1,0 +1,69 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='../static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML, Text
+%>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Continue Registration")}</%block>
+
+<main id="skip-main" class="container">
+    <section class="continue-registration">
+        <h1 class="continue-registration__title pb-2">${_("Register for a course:")} <a href="#" class="continue-registration__link">${_("Introduction to the analysis of metrological measurements")}</a></h1>
+        <div class="continue-registration__block">
+            <div class="continue-registration__block__content d-flex flex-lg-row flex-column justify-content-lg-around">
+                <img src="/static/images/continue-registration-image.svg" alt="${_('Continue Registration')}" class="continue-registration__block__img col-lg-3 col-md-6 col-12 mx-auto" />
+                <div class="col-lg-8 col-12 mx-md-4 mx-lg-0">
+                    <h2 class="continue-registration__block__title pb-2">${_("Attention!")}</h2>
+                    <p class="continue-registration__block__description">${_("Aby zapisać się na wybrany kurs musisz wypełnić dodatkowy formularz rejestracyjny. Jeśli wyrażasz na to zgodę, <strong>zostaniesz przekierowany na zewnętrzną stronę</strong> rejestracji należącą do uczelni, która organizuje kurs.")}</p>
+                    <p class="continue-registration__block__more-info">${_("More information")}: <a href="#" data-toggle="modal" data-target="#modal-continue-registration-video" class="continue-registration__link">${_("Why is the collection of user data necessary?")}</a></p>
+                </div>
+            </div>
+            <div class="continue-registration__block__footer d-flex flex-column flex-wrap flex-md-row justify-content-end align-items-center">
+                <a href="#" class="btn btn__cancel text-semi-bold mr-md-4 mr-0 px-md-4 px-0 order-md-1 order-2">${_("Cancel")}</a>
+                <a href="#" class="btn btn__continue-registration text-semi-bold px-md-5 order-md-2 order-1" data-toggle="modal" data-target="#modal-continue">${_("Continue registration")}</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div class="modal fade" id="modal-continue-registration-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title modal__title" id="modal-video-title">${_("Why is the collection of user data necessary?")}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="pt-3 pb-4 modal__description">${_("The course is funded by the European Union and the Polish state budget. The conditions of funding oblige the university, the organizer of the course, to collect data about the participants. Personal data from the registration form, will be collected, processed and verified by the course organizer. Filling in the form is a prerequisite to join the course.")}</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-continue" tabindex="-1" role="dialog" aria-labelledby="modal-continue-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title modal__title" id="modal-continue-title">${_("Czy zgadzasz się aby formularz rejestracyjny:")}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body py-4">
+                <p class="modal__description my-0">${_("Odczytywał twój profil użytkownika")}</p>
+                <p class="modal__description">${_("Odczytywał twój adres e-mail")}</p>
+            </div>
+            <div class="modal-footer border-0 flex-column flex-wrap flex-md-row">
+                <a href="#" class="btn btn__cancel text-semi-bold mr-md-4 mr-0 order-md-1 order-2" data-dismiss="modal">${_("Cancel")}</a>
+                <a href="#" class="btn btn__continue-registration text-semi-bold order-md-2 order-1">${_("Continue registration")}</a>
+            </div>
+        </div>
+    </div>
+</div>
