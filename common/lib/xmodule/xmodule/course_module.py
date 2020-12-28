@@ -280,6 +280,12 @@ class CourseFields(object):
         display_name=_("Course Display Name"),
         scope=Scope.settings
     )
+    append_eu_logos_certificate = Boolean(
+        help="",
+        default=False,
+        display_name=_("Append EU logos to certificate template"),
+        scope=Scope.settings
+    )
     external_enroll = Boolean(
         help="",
         default=False,

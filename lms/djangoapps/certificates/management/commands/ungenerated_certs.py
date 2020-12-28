@@ -16,6 +16,7 @@ from lms.djangoapps.certificates.api import generate_user_certificates
 from lms.djangoapps.certificates.models import CertificateStatuses, certificate_status_for_student
 from xmodule.modulestore.django import modulestore
 from lms.djangoapps.grades.course_grade_factory import CourseGradeFactory
+from lms.djangoapps.certificates.models import GeneratedCertificate
 
 LOGGER = logging.getLogger(__name__)
 
@@ -184,6 +185,25 @@ class Command(BaseCommand):
                         cert_status,
                         text_type(valid_statuses)
                     )
+
+                    cert = GeneratedCertificate.objects.get(
+                        user=student,
+                        course_id=course_key
+                    )
+
+                    LOGGER.info(
+                        (
+                            u"Regenerate student %s grades on the certificate from %s to %s"
+                        ),
+                        student.id,
+                        cert.grade,
+                        course_grade.percent
+                    )
+
+                    cert.grade = course_grade.percent
+                    cert.save()
+
+
 
             LOGGER.info(
                 (

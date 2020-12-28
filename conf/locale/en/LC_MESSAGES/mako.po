@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-17 08:31+0000\n"
-"PO-Revision-Date: 2020-11-17 08:32:06.996532\n"
+"POT-Creation-Date: 2020-12-14 10:10+0000\n"
+"PO-Revision-Date: 2020-12-14 10:10:58.134664\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -20,11 +20,8 @@ msgstr ""
 
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
+#: lms/templates/static_templates/404.html
 msgid "Page Not Found"
-msgstr ""
-
-#: cms/templates/404.html lms/templates/static_templates/404.html
-msgid "Page not found"
 msgstr ""
 
 #: cms/templates/asset_index.html cms/templates/course_info.html
@@ -139,7 +136,8 @@ msgid "Course Run:"
 msgstr ""
 
 #: cms/templates/index.html lms/templates/dashboard.html
-#: lms/templates/sysadmin_dashboard.html
+#: lms/templates/dashboard.html lms/templates/dashboard.html
+#: lms/templates/dashboard.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
 #: lms/templates/header/navbar-not-authenticated.html
@@ -694,13 +692,6 @@ msgstr ""
 msgid "Starting Soon"
 msgstr ""
 
-#: lms/templates/dashboard.html lms/templates/dashboard.html
-#: lms/templates/dashboard.html lms/templates/dashboard.html
-#: lms/templates/dashboard.html lms/templates/dashboard.html
-#: lms/templates/dashboard.html
-msgid "Found courses"
-msgstr ""
-
 #: lms/templates/dashboard.html
 msgid "Now"
 msgstr ""
@@ -734,7 +725,7 @@ msgid "reset filters"
 msgstr ""
 
 #: lms/templates/dashboard.html
-msgid "Course List"
+msgid "Found courses"
 msgstr ""
 
 #: lms/templates/dashboard.html lms/templates/courseware/courses.html
@@ -3960,10 +3951,6 @@ msgstr ""
 msgid "Course progress"
 msgstr ""
 
-#: lms/templates/courseware/course_navigation.html
-msgid "finished lessons"
-msgstr ""
-
 #: lms/templates/courseware/course_updates.html
 #: lms/templates/courseware/course_updates.html
 msgid "Hide"
@@ -3978,8 +3965,9 @@ msgstr ""
 msgid "Show Earlier Course Updates"
 msgstr ""
 
-#: lms/templates/courseware/courses.html lms/templates/courseware/courses.html
-msgid "List of Courses"
+#: lms/templates/courseware/courses.html
+#: lms/templates/static_templates/404.html
+msgid "Course List"
 msgstr ""
 
 #: lms/templates/courseware/courses.html
@@ -3988,6 +3976,10 @@ msgstr ""
 
 #: lms/templates/courseware/courses.html
 msgid "Newest to Oldest"
+msgstr ""
+
+#: lms/templates/courseware/courses.html
+msgid "List of Courses"
 msgstr ""
 
 #: lms/templates/courseware/courseware-chromeless.html
@@ -8296,9 +8288,12 @@ msgstr ""
 
 #: lms/templates/static_templates/404.html
 msgid ""
-"The page that you were looking for was not found. Go back to the "
-"{link_start}homepage{link_end} or let us know about any pages that may have "
-"been moved at {email}."
+"404 Not Found. Check the website URL. If you have not found what you are "
+"looking for, try the links below:"
+msgstr ""
+
+#: lms/templates/static_templates/404.html
+msgid "Home"
 msgstr ""
 
 #: lms/templates/static_templates/about.html
@@ -9649,13 +9644,13 @@ msgid ""
 msgstr ""
 
 #: lms/templates/static_templates/server-error.html
-msgid "There has been a 500 error on the {platform_name} servers"
+msgid "Sorry, something went wrong..."
 msgstr ""
 
 #: lms/templates/static_templates/server-error.html
 msgid ""
-"Please wait a few seconds and then reload the page. If the problem persists,"
-" please email us at {tech_support_email}."
+"Error 500. Please refresh the page or try again later. If the problem "
+"persists, send us an e-mail at: {tech_support_email}."
 msgstr ""
 
 #: lms/templates/static_templates/server-overloaded.html

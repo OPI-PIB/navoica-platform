@@ -8,31 +8,21 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <%block name="pagetitle">${_("Internal Server Error")}</%block>
 
-<main id="main" aria-label="Content" tabindex="-1">
-    <section class="outside-app" id="skip-main">
-        <h1>
-            <%block name="pageheader">
-                % if page_header:
-                    ${page_header}
-                % else:
-                    ${Text(_(u"There has been a 500 error on the {platform_name} servers")).format(
-                    platform_name=HTML("<em>{platform_name}</em>").format(platform_name=Text(static.get_platform_name()))
-                    )}
-                % endif
-            </%block>
-        </h1>
-        <p>
-            <%block name="pagecontent">
-                % if page_content:
-                    ${page_content}
-                % else:
-                    ${Text(_('Please wait a few seconds and then reload the page. If the problem persists, please email us at {tech_support_email}.')).format(
-                    tech_support_email=HTML('<a href="mailto:{tech_support_email}">{tech_support_email}</a>').format(
-                    tech_support_email=Text(static.get_tech_support_email_address())
-                    )
-                    )}
-                % endif
-            </%block>
-        </p>
-    </section>
-</main>
+<div class="error-code-main">
+    <main id="main" aria-label="Content" tabindex="-1">
+        <section class="outside-app error-page" id="skip-main">
+            <div class="error-code-content row">
+                <div class="error-code-info col-md-6">
+                    <h1 class="error-code-info-title-gray">500</h1>
+                    <h2 class="error-code-info-title">${_("Sorry, something went wrong...")}</h2>
+                    <p class="error-code-info-text">${Text(_('Error 500. Please refresh the page or try again later. If the problem persists, send us an e-mail at: {tech_support_email}.')).format(
+                        tech_support_email=HTML('<a href="mailto:{tech_support_email}">{tech_support_email}</a>').format(
+                        tech_support_email=Text(static.get_tech_support_email_address())
+                        )
+                        )}</p>
+                </div>
+                <img class="error-code-image col-md-6" src="/static/images/500.svg" alt="500 image">
+            </div>
+        </section>
+    </main>
+</div>

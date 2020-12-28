@@ -7,24 +7,20 @@ from openedx.core.djangolib.markup import HTML, Text
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("Page Not Found")}</%block>
-
-<main id="main" aria-label="Content" tabindex="-1">
-    <section class="outside-app" id="skip-main">
-        <h1>
-            <%block name="pageheader">${page_header or _("Page not found")}</%block>
-        </h1>
-        <p>
-            <%block name="pagecontent">
-                % if page_content:
-                    ${page_content}
-                % else:
-                    ${Text(_('The page that you were looking for was not found. Go back to the {link_start}homepage{link_end} or let us know about any pages that may have been moved at {email}.')).format(
-                    link_start=HTML('<a href="/">'),
-                    link_end=HTML('</a>'),
-                    email=HTML('<a href="mailto:{email}">{email}</a>').format(email=Text(static.get_tech_support_email_address()))
-                    )}
-                % endif
-            </%block>
-        </p>
-    </section>
-</main>
+<div class="error-code-main">
+    <main id="main" aria-label="Content" tabindex="-1">
+        <section class="outside-app error-page" id="skip-main">
+            <div class="error-code-content row">
+                <div class="error-code-info col-md-6">
+                    <h1 class="error-code-info-title-gray">404</h1>
+                    <h2 class="error-code-info-title">${_("Page Not Found")}</h2>
+                    <p class="error-code-info-text">${_("404 Not Found. Check the website URL. If you have not found what you are looking for, try the links below:")}</p>
+                    <a class="error-code-info-link" href="/">${_("Home")}</a>
+                    <a class="error-code-info-link" href="/courses">${_("Course List")}</a>
+                </div>
+                <img class="error-code-image col-md-6" src="/static/images/404.svg" alt="404 image">
+            </div>
+        </section>
+    </main>
+</div>
+    
