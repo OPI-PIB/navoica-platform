@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-17 08:31+0000\n"
+"POT-Creation-Date: 2020-12-14 10:10+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -26,12 +26,9 @@ msgstr ""
 
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
+#: lms/templates/static_templates/404.html
 msgid "Page Not Found"
 msgstr "Nie odnaleziono strony"
-
-#: cms/templates/404.html lms/templates/static_templates/404.html
-msgid "Page not found"
-msgstr "Nie znaleziono strony"
 
 #: cms/templates/asset_index.html cms/templates/course_info.html
 #: cms/templates/course_outline.html cms/templates/edit-tabs.html
@@ -145,7 +142,8 @@ msgid "Course Run:"
 msgstr "Edycja kursu:"
 
 #: cms/templates/index.html lms/templates/dashboard.html
-#: lms/templates/sysadmin_dashboard.html
+#: lms/templates/dashboard.html lms/templates/dashboard.html
+#: lms/templates/dashboard.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
 #: lms/templates/header/navbar-not-authenticated.html
@@ -715,13 +713,6 @@ msgstr "W przygotowaniu"
 msgid "Starting Soon"
 msgstr "Nadchodzący"
 
-#: lms/templates/dashboard.html lms/templates/dashboard.html
-#: lms/templates/dashboard.html lms/templates/dashboard.html
-#: lms/templates/dashboard.html lms/templates/dashboard.html
-#: lms/templates/dashboard.html
-msgid "Found courses"
-msgstr "Znalezionych kursów"
-
 #: lms/templates/dashboard.html
 msgid "Now"
 msgstr "Trwający"
@@ -755,8 +746,8 @@ msgid "reset filters"
 msgstr "wyczyść filtry "
 
 #: lms/templates/dashboard.html
-msgid "Course List"
-msgstr "Katalog kursów"
+msgid "Found courses"
+msgstr "Znalezionych kursów"
 
 #: lms/templates/dashboard.html lms/templates/courseware/courses.html
 msgid "Sort By"
@@ -4442,10 +4433,6 @@ msgstr "wymaga uwagi"
 msgid "Course progress"
 msgstr "Postęp w kursie"
 
-#: lms/templates/courseware/course_navigation.html
-msgid "finished lessons"
-msgstr "ukończonych lekcji"
-
 #: lms/templates/courseware/course_updates.html
 #: lms/templates/courseware/course_updates.html
 msgid "Hide"
@@ -4460,9 +4447,10 @@ msgstr "Pokaż"
 msgid "Show Earlier Course Updates"
 msgstr "Pokaż wcześniejsze aktualizacje kursu"
 
-#: lms/templates/courseware/courses.html lms/templates/courseware/courses.html
-msgid "List of Courses"
-msgstr "Lista kursów"
+#: lms/templates/courseware/courses.html
+#: lms/templates/static_templates/404.html
+msgid "Course List"
+msgstr "Katalog kursów"
 
 #: lms/templates/courseware/courses.html
 msgid "Oldest to Newest "
@@ -4471,6 +4459,10 @@ msgstr "Data rozpoczęcia rosnąco"
 #: lms/templates/courseware/courses.html
 msgid "Newest to Oldest"
 msgstr "Data rozpoczęcia malejąco"
+
+#: lms/templates/courseware/courses.html
+msgid "List of Courses"
+msgstr "Lista kursów"
 
 #: lms/templates/courseware/courseware-chromeless.html
 #: lms/templates/courseware/courseware.html
@@ -9349,13 +9341,15 @@ msgstr "Potwierdzenie"
 
 #: lms/templates/static_templates/404.html
 msgid ""
-"The page that you were looking for was not found. Go back to the "
-"{link_start}homepage{link_end} or let us know about any pages that may have "
-"been moved at {email}."
+"404 Not Found. Check the website URL. If you have not found what you are "
+"looking for, try the links below:"
 msgstr ""
-"Strona, której szukasz, nie została odnaleziona. Wróć do {link_start}strony "
-"głównej{link_end} i jeśli chcesz, poinformuj nas o brakującej podstronie, "
-"wysyłając e-mail na adres {email}."
+"Błąd 404. Sprawdź adres URL strony. Jeśli nie znalazłeś/aś tego, czego "
+"szukasz, spróbuj poniższych linków:"
+
+#: lms/templates/static_templates/404.html
+msgid "Home"
+msgstr "Strona główna"
 
 #: lms/templates/static_templates/about.html
 #: lms/templates/static_templates/about.html
@@ -9467,10 +9461,10 @@ msgid ""
 msgstr ""
 "Platforma jest w trakcie modyfikacji, które mają uczynić ją bardziej "
 "dostępną. Prace są prowadzone i sukcesywnie dostępność będzie ulegała "
-"poprawie. Do końca października 2020 strony przed zalogowaniem będą "
-"spełniały wytyczne WCAG 2.1 na poziomie AA. Strony dostępne po zalogowaniu "
-"będą dostosowywane w następnym kroku. Równocześnie pracujemy też nad tym, "
-"aby w przyszłości powstawały kursy dostępne cyfrowo."
+"poprawie. Do końca 2020 strony przed zalogowaniem będą spełniały wytyczne "
+"WCAG 2.1 na poziomie AA. Strony dostępne po zalogowaniu będą dostosowywane w"
+" następnym kroku. Równocześnie pracujemy też nad tym, aby w przyszłości "
+"powstawały kursy dostępne cyfrowo."
 
 #: lms/templates/static_templates/accessibility.html
 msgid "Exclusions"
@@ -11191,16 +11185,16 @@ msgstr ""
 "e-mail na adres {tech_support_email}."
 
 #: lms/templates/static_templates/server-error.html
-msgid "There has been a 500 error on the {platform_name} servers"
-msgstr "Wystąpił błąd 500 na serwerach {platform_name}"
+msgid "Sorry, something went wrong..."
+msgstr "Przepraszamy, coś poszło nie tak..."
 
 #: lms/templates/static_templates/server-error.html
 msgid ""
-"Please wait a few seconds and then reload the page. If the problem persists,"
-" please email us at {tech_support_email}."
+"Error 500. Please refresh the page or try again later. If the problem "
+"persists, send us an e-mail at: {tech_support_email}."
 msgstr ""
-"Odczekaj kilka sekund, a następnie odśwież stronę. Jeśli problem nie ustąpi,"
-" wyślij e-mail na {tech_support_email}."
+"Błąd 500. Odśwież stronę lub spróbuj ponownie później. Jeśli problem się "
+"powtarza napisz do nas na:{tech_support_email}."
 
 #: lms/templates/static_templates/server-overloaded.html
 msgid "Currently the {platform_name} servers are overloaded"
