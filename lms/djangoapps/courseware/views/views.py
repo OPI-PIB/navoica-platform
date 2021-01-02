@@ -307,6 +307,19 @@ def jump_to(_request, course_id, location):
 
     return redirect(redirect_url)
 
+@ensure_csrf_cookie
+@ensure_valid_course_key
+@data_sharing_consent_required
+def enroll_redirect(request, course_id):
+    course_key = CourseKey.from_string(course_id)
+    with modulestore().bulk_operations(course_key):
+        course = get_course_with_access(request.user, 'load', course_key)
+        context = {
+            'request': request,
+            'course': course
+        }
+        return render_to_response('courseware/enroll_redirect.html', context)
+
 
 @ensure_csrf_cookie
 @ensure_valid_course_key
@@ -596,10 +609,7 @@ class CourseTabView(EdxFragmentView):
                             request,
                             Text(enroll_message).format(
                                 enroll_link_start=HTML(
-                                    '<a href="' + build_url(
-                                        course.external_enroll_url,
-                                        "/registration_form/{}/course".format(
-                                            course_key), {}) + '">'),
+                                    '<a href="' + reverse('enroll_redirect', args=[unicode(course.id)]) + '">'),
                                 enroll_link_end=HTML('</a>')
                             )
                         )
@@ -834,7 +844,7 @@ def course_about(request, course_id):
 
         if configuration_helpers.get_value('ENABLE_MKTG_SITE',
                                            settings.FEATURES.get(
-                                                   'ENABLE_MKTG_SITE', False)):
+                                               'ENABLE_MKTG_SITE', False)):
             return redirect(reverse(course_home_url_name(course.id),
                                     args=[text_type(course.id)]))
 

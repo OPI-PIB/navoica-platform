@@ -156,7 +156,7 @@ def index(request, extra_context=None, user=AnonymousUser()):
     if extra_context is None:
         extra_context = {}
 
-    
+
 
     if configuration_helpers.get_value(
             "ENABLE_MAIN_PAGE_PROMOTION",
@@ -165,8 +165,8 @@ def index(request, extra_context=None, user=AnonymousUser()):
         courses = get_courses(user, None, {'main_page':True})
     else:
         courses = get_courses(user)
-        
-        
+
+
     if configuration_helpers.get_value(
             "ENABLE_COURSE_SORTING_BY_START_DATE",
             settings.FEATURES["ENABLE_COURSE_SORTING_BY_START_DATE"],
@@ -433,7 +433,7 @@ def change_enrollment(request, check_access=True):
             # Check if external enroll is active. If enabled than dont enroll user and redirect
             course = modulestore().get_course(course_id)
             if course.external_enroll:
-                url = build_url(course.external_enroll_url, "/registration_form/{}/course".format(course_id), {})
+                url = reverse('enroll_redirect', args=[unicode(course_id)])
                 return HttpResponse(
                     url
                 )
@@ -769,7 +769,7 @@ def create_account_with_params(request, params):
                 new_user.save()
                 AUDIT_LOG.info(
                     u"Login activated on extauth account - {0} ({1})".format(new_user.username, new_user.email))
-                    
+
 
     # Check if system is configured to skip activation email for the current user.
     #skip_email = skip_activation_email(
@@ -1000,7 +1000,7 @@ def create_account(request, post_override=None):
         )
 
     redirect_url = 'login'  # The AJAX method calling should know the default destination upon success
-    
+
     messages.success(
                 request,
                 HTML(_("There's just one more step: Before you enroll in a course, you need to "
