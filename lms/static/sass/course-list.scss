@@ -14437,3 +14437,238 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   margin-bottom: 4rem;
   margin-top: 4rem;
 }
+
+/** -- CONTINUE REGISTRATION COURSE -- **/
+.enroll-redirect {
+  background-color: #F8F9FA;
+}
+.continue-registration {
+  margin-top: 70px;
+  margin-bottom: 85px;
+}
+
+.continue-registration a:focus, .continue-registration .btn:focus, .modal a:focus, .modal .btn:focus, .modal .close:focus {
+  outline: 2px solid #000000;
+}
+
+.continue-registration .btn__cancel, .modal .btn__cancel {
+  background-color: #ffffff;
+  border: 1px solid #5B5B5B;
+  color: #212529;
+  border-radius: 0;
+  text-align: center;
+  order: 1;
+  margin-right: 1.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.continue-registration .btn__continue-registration, .modal .btn__continue-registration {
+  background-color: #E41D37;
+  border: 1px solid #E41D37;
+  color: #ffffff;
+  border-radius: 0;
+  text-align: center;
+  order: 2;
+  padding-right: 3rem;
+  padding-left: 3rem
+}
+
+.continue-registration__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #212529;
+}
+
+.continue-registration__block__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  color: #212529;
+  font-weight: bold;
+}
+
+.continue-registration__block__description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #212529;
+}
+
+.continue-registration__block__more-info {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #212529;
+}
+
+.continue-registration__link {
+  font-family: 'Open Sans', sans-serif;
+  font-size: inherit;
+  line-height: inherit;
+  color: #008080;
+  text-decoration: none;
+  border-bottom: 1px solid #008080;
+}
+
+.continue-registration__link:hover {
+  color: #008080;
+  text-decoration: none;
+  border-bottom: 1px solid #008080;
+}
+
+.continue-registration__block {
+  background-color: #ffffff;
+  border: 1px solid #DEDFDF;
+  border-radius: 3px;
+  box-shadow: 0 10px 30px #B3B3B326;
+}
+
+.continue-registration__block__content {
+  border-bottom: 1px solid #DEDFDF;
+  margin: 60px 33px 0 33px;
+  padding-bottom: 60px;
+}
+
+.continue-registration__block__footer {
+  padding: 30px 33px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal__title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: #212529;
+}
+
+.modal__description {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #212529;
+}
+
+.modal .close {
+  opacity: 1;
+  color: #212529;
+}
+
+
+.modal-content {
+  padding: 1.875rem;
+}
+
+.modal-header {
+  padding: 0 0 15px 0;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.text-semi-bold {
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    max-width: 752px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .continue-registration {
+    margin-top: 15px;
+  }
+
+  .continue-registration .btn, .modal .btn {
+    width: 100%;
+  }
+
+  .continue-registration__block .continue-registration__block__footer {
+    padding: 30px 15px;
+  }
+
+  .continue-registration__block__footer {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .modal-footer {
+    padding: 0;
+  }
+
+  .modal .btn {
+    margin-left: 0;
+  }
+
+  .modal .btn:last-child, .continue-registration__block__footer .btn:last-child {
+    margin-bottom: 15px;
+  }
+
+  .continue-registration__title, .continue-registration__block__title {
+    font-size: 1.125rem;
+  }
+
+  .continue-registration__block__description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .continue-registration__block__img {
+    display: none;
+  }
+
+  #modal-continue .modal-body {
+    font-size: 0.875rem;
+    line-height: 1.313rem;
+  }
+
+  #modal-continue .modal-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #modal-continue-registration-video .modal-title, #modal-continue-registration-video .modal-body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .continue-registration .btn__cancel, .modal .btn__cancel {
+    order: 2;
+    margin-right: 0;
+  }
+
+  .continue-registration .btn__continue-registration, .modal .btn__continue-registration {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .continue-registration__block__content {
+    border-bottom: none;
+    padding: 24px 0 0 0;
+    margin: 0;
+  }
+
+  .continue-registration__block__img {
+    margin-bottom: 30px;
+    max-width: 300px;
+  }
+
+  .continue-registration__block {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+}
+/** -- CONTINUE REGISTRATION COURSE END -- **/
