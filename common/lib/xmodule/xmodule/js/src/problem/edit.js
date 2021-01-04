@@ -256,9 +256,9 @@
             this.element.off('click', '.xml-tab', this.changeEditor);
             this.element.off('click', '.format-buttons button', this.onToolbarButton);
             this.element.off('click', '.cheatsheet-toggle', this.toggleCheatsheet);
-            var rewritedMarkdownValue = rewriteStaticLinks(this.markdown_editor.getValue(), this.base_asset_url, '/static/');
 
             if (this.current_editor === this.markdown_editor) {
+                var rewritedMarkdownValue = rewriteStaticLinks(this.markdown_editor.getValue(), this.base_asset_url, '/static/');
                 return {
                     data: MarkdownEditingDescriptor.markdownToXml(rewritedMarkdownValue),
                     metadata: {
