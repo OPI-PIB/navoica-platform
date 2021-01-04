@@ -61,9 +61,8 @@ if settings.DEBUG or settings.FEATURES.get('ENABLE_DJANGO_ADMIN_SITE'):
     admin.site.site_header = _('LMS Administration')
     admin.site.site_title = admin.site.site_header
 
-
 urlpatterns = [
-    url(r'^$', branding_views.index, name='root'),   # Main marketing page, or redirect to courseware
+    url(r'^$', branding_views.index, name='root'),  # Main marketing page, or redirect to courseware
 
     url(r'', include('student.urls')),
     # TODO: Move lms specific student views out of common code
@@ -142,13 +141,14 @@ urlpatterns = [
 
     url(r'^dashboard/', include('learner_dashboard.urls')),
     url(r'^api/experiments/', include('experiments.urls', namespace='api_experiments')),
-    url(r'^sitemap\.xml$', sitemap,  {'sitemaps': {'courses': CourseOverviewSitemap() }},name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': {'courses': CourseOverviewSitemap()}},
+        name='django.contrib.sitemaps.views.sitemap'),
 
     # URLs API
     url(r'^api/navoica/', include('navoica_api.api.urls', namespace='navoica_api')),
 
 ]
-#robots.txt
+# robots.txt
 robots_file = 'robots.txt'
 if settings.LMS_BASE == "navoica.pl":
     robots_file = 'robots-allow.txt'
@@ -188,7 +188,6 @@ if settings.FEATURES.get('ENABLE_OPENBADGES'):
 urlpatterns += [
     url(r'^openassessment/fileupload/', include('openassessment.fileupload.urls')),
 ]
-
 
 # sysadmin dashboard, to see what courses are loaded, to delete & load courses
 if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD'):
@@ -241,6 +240,10 @@ COURSE_URLS = [
     ),
 ]
 urlpatterns += [
+
+    url(r'^enroll_redirect/{}/'.format(settings.COURSE_ID_PATTERN, ), courseware_views.enroll_redirect,
+        name='enroll_redirect', ),
+
     # jump_to URLs for direct access to a location in the course
     url(
         r'^courses/{}/jump_to/(?P<location>.*)$'.format(
@@ -317,7 +320,7 @@ urlpatterns += [
 
     url(r'^courses/?$', branding_views.courses, name='courses'),
 
-    #About the course
+    # About the course
     url(
         r'^courses/{}/about$'.format(
             settings.COURSE_ID_PATTERN,
@@ -334,7 +337,7 @@ urlpatterns += [
         name='enroll_staff',
     ),
 
-    #Inside the course
+    # Inside the course
     url(
         r'^courses/{}/$'.format(
             settings.COURSE_ID_PATTERN,
@@ -490,7 +493,6 @@ urlpatterns += [
         instructor_dashboard_views.instructor_dashboard_2,
         name='instructor_dashboard',
     ),
-
 
     url(
         r'^courses/{}/set_course_mode_price$'.format(
@@ -858,7 +860,6 @@ if configuration_helpers.get_value('ENABLE_BULK_ENROLLMENT_VIEW', settings.FEATU
         url(r'^api/bulk_enroll/v1/', include('bulk_enroll.urls')),
     ]
 
-
 # Shopping cart
 urlpatterns += [
     url(r'^shoppingcart/', include('shoppingcart.urls')),
@@ -967,7 +968,6 @@ urlpatterns += [
     url(r'^debug/show_parameters$', debug_views.show_parameters),
 ]
 
-
 # Third-party auth.
 if settings.FEATURES.get('ENABLE_THIRD_PARTY_AUTH'):
     urlpatterns += [
@@ -1051,10 +1051,10 @@ urlpatterns += [
 
 if 'debug_toolbar' in settings.INSTALLED_APPS:
     import debug_toolbar
+
     urlpatterns += [
         url(r'^__debug__/', include(debug_toolbar.urls)),
     ]
-
 
 # Custom error pages
 # These are used by Django to render these error codes. Do not remove.
