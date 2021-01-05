@@ -1,0 +1,209 @@
+<%namespace name='static' file='../static_content.html'/>
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("#FerieBezNudy")}</%block>
+
+<%block name="og_meta">
+  ## OG (Open Graph) title and description added below to give social media info to display
+  ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
+  <meta property="og:title" content="${_('#FerieBezNudy')}" />
+  <meta property="og:description" content="${_('CHANGE_ME')}" />
+  <meta property="og:image" content="${static.url('CHANGE_ME')}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="628" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</%block>
+
+
+<section class="webinar__ferie-bez-nudy" id="skip-main">
+  <div class="container">
+    <h1 class="webinar__title text-center py-5 my-0">Navoica dla dzieci i młodzieży</h1>
+  </div>
+  <div class="container-fluid webinar__cover-gradient py-3 py-lg-0">
+    <div class="container d-flex justify-content-between py-lg-4">
+      <div class="webinar__description">
+        <h2 class="ff-Signika pb-2">#FerieBezNudy</h2>
+        <p class="ff-OpenSans">
+            Na tegoroczne ferie zimowe przygotowaliśmy dla Ciebie coś wyjątkowego! Jeśli jesteś, uczniem szkoły podstawowej, wybierz się z nami w podróż do świata Minecrafta. Dowiesz się, jak tworzyć w nim różne przedmioty dzięki programowi <strong>Scratch</strong>. <br>Uczniów szkół ponadpodstawowych czeka jeszcze więcej atrakcji! Jeśli nazwy <strong>Java, Arduino, Python</strong> czy <strong>sztuczna inteligencja</strong> niewiele Ci mówią, obejrzyj poniższe webinaria, a przed Tobą otworzy się świat programowania. Jeśli zaś bliższe Ci są tematy humanistyczne, zachęcamy do obejrzenia dwóch webinariów z <strong>podstaw prawa</strong>.
+        </p>
+        <p class="ff-OpenSans">
+            Webinaria są zapowiedzią <strong>kursów online</strong>, które tej wiosny pojawią się na platformie NAVOICA. <br><strong>Podaj swój e-mail</strong>, a wyślemy Ci wiadomość w dniu startu zapisów.
+        </p>
+        <form method="" action="" class="webinar-subscription">
+           <div class="input-group my-2 pt-2 d-flex flex-row flex-nowrap">
+               <label for="email" class="sr-only">${_('E-mail')}</label>
+               <input id="email" class="form-control form-control-lg webinar-subscription__input" type="search" name="search_query" placeholder="Podaj swój adres e-mail">
+               <button class="btn webinar-subscription__submit-btn btn-lg" type="submit">Wyślij</button>
+           </div>
+        </form>
+      </div>
+      <img class="webinar__image d-none d-lg-flex" src="/static/images/ferie-bez-nudy.svg" alt="#FerieBezNudy - cykl webinarów" />
+    </div>
+  </div>
+  <div class="container">
+    <h2 class="webinar__subtitle text-center ff-Signika pt-5 pb-3 my-0">Webinary:</h2>
+    <div class="webinar__mini-blocks-container d-flex justify-content-between flex-wrap mb-5">
+
+        <div class="webinar__mini-block d-flex flex-column col py-4 justify-content-center align-items-center">
+          <img src="/static/images/ferie-bez-nudy-ikona-1.svg" alt="Programowanie dla uczniów szkół podstawowych" />
+          <p class="m-auto text-center pt-2">
+              <a href="#programowanie-szkola-podstawowa" class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Programowanie dla uczniów szkół podstawowych</a>
+          </p>
+        </div>
+
+        <div class="webinar__mini-block d-flex flex-column col py-4 justify-content-center align-items-center">
+          <img src="/static/images/ferie-bez-nudy-ikona-2.svg" alt="Programowanie dla uczniów szkół ponadpodstawowych" />
+            <p class="m-auto text-center pt-2">
+                <a href="#pogramowanie-szkola-ponadpodstawowa" class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Programowanie dla uczniów szkół ponadpodstawowych</a>
+            </p>
+        </div>
+
+        <div class="webinar__mini-block d-flex flex-column col py-4 justify-content-center align-items-center">
+          <img src="/static/images/ferie-bez-nudy-ikona-3.svg" alt="Prawo dla uczniów szkół ponadpodstawowych" />
+            <p class="m-auto text-center pt-2">
+                <a href="#prawo-szkola-ponadpostawowa" class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Prawo dla uczniów szkół ponadpodstawowych</a>
+            </p>
+        </div>
+
+    </div>
+
+          <!-- Programowanie dla uczniów szkół podstawowych -->
+          <div class="webinar__block" id="programowanie-szkola-podstawowa">
+              <div class="webinar__block__header d-flex justify-content-center align-items-center">
+                  <img src="/static/images/ferie-bez-nudy-ikona-1.svg" alt="Image" />
+                  <h2 class="webinar__block__title text-md-center text-left ff-Signika py-5 my-0 ml-2">Programowanie dla uczniów szkół podstawowych</h2>
+              </div>
+
+              <!-- BLOCK -->
+              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap">
+                  <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-1" style="background-image: url('/static/images/webinars/podstawy-programowania-scratch.png');">
+                      <h4 class="available-soon">Dostępny wkrótce</h4>
+                  </div>
+                  <div class="webinar__block__content-description col p-3">
+                      <span class="webinar__block__content-description--date font-weight-bold">środa,12 sty., 12:00</span>
+                      <h3 class="webinar__block__content-description--title my-1">Podstawy programowania w Scratch</h3>
+                      <p class="webinar__block__content-description--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at</p>
+                      <ul class="webinar__block__content-description--organization px-0">prowadzący: <span class="font-weight-bold">Maciej Kowalski</span>
+                          <li>Ośrodek Przetwarzania Informacji - PIB</li>
+                      </ul>
+                      <p class="webinar__block__content-more m-0">
+                          <a class="webinar__block-link ff-OpenSans font-weight-bold" data-toggle="collapse" href="#collapse-webinar-1" role="button" aria-expanded="false" aria-controls="collapse-webinar-1">Więcej informacji</a><i class="fas fa-chevron-down ml-1"></i>
+                      </p>
+                  </div>
+                  <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-1">
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Opis:</h4>
+                          <p class="webinar__block__content--more-info-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at</p>
+                      </div>
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Przydatne linki:</h4>
+                          <ul class="webinar__block__content--more-info-links px-3">
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                          </ul>
+                      </div>
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Materiały do pobrania:</h4>
+                          <ul class="webinar__block__content--more-info-files px-0">
+                              <li><i class="far fa-file-powerpoint mr-1"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><i class="far fa-file-archive mr-1"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <!-- END BLOCK -->
+
+          </div>
+
+          <!-- Programowanie dla uczniów szkół ponadpodstawowych -->
+          <div class="webinar__block" id="pogramowanie-szkola-ponadpodstawowa">
+              <div class="webinar__block__header d-flex justify-content-center align-items-center">
+                  <img src="/static/images/ferie-bez-nudy-ikona-2.svg" alt="Image" />
+                  <h2 class="webinar__block__title text-md-center text-left ff-Signika py-5 my-0 ml-2">Programowanie dla uczniów szkół ponadpodstawowych</h2>
+              </div>
+              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap">
+                  <div class="webinar__block__content-description col px-0 py-3">
+                      <span class="webinar__block__content-description--date font-weight-bold px-3">środa,12 sty., 12:00</span>
+                      <h3 class="webinar__block__content-description--title my-1 px-3">Podstawy programowania w Scratch</h3>
+                      <p class="webinar__block__content-description--text m-0 py-3 px-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at</p>
+                      <ul class="webinar__block__content-description--organization px-0 px-3">prowadzący: <span class="font-weight-bold">Maciej Kowalski</span>
+                          <li>Ośrodek Przetwarzania Informacji - PIB</li>
+                      </ul>
+                      <p class="webinar__block__content-more m-0 px-3">
+                          <a class="webinar__block-link ff-OpenSans font-weight-bold" data-toggle="collapse" href="#collapse-webinar-2" role="button" aria-expanded="false" aria-controls="collapse-webinar-2">Więcej informacji</a>
+                          <i class="fas fa-chevron-down ml-1"></i>
+                      </p>
+                  </div>
+                  <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-2" style="background-image: url('/static/images/webinars/podstawy-programowania-scratch.png');">
+                      <h4 class="available-soon">Dostępny wkrótce</h4>
+                  </div>
+
+                  <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-2">
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Opis:</h4>
+                          <p class="webinar__block__content--more-info-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at</p>
+                      </div>
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Przydatne linki:</h4>
+                          <ul class="webinar__block__content--more-info-links px-3">
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                          </ul>
+                      </div>
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Materiały do pobrania:</h4>
+                          <ul class="webinar__block__content--more-info-files px-0">
+                              <li><i class="far fa-file-powerpoint mr-1"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><i class="far fa-file-archive mr-1"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+    </div>
+
+    <!-- VIDEO MODAL START -->
+    <div class="modal fade" id="modal-webinar-video-1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-webinar-video-2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VIDEO MODAL END -->
+
+</section>
+
