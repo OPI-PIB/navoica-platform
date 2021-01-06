@@ -3547,20 +3547,10 @@ msgstr ""
 msgid "Date of certification"
 msgstr ""
 
-#: lms/templates/certificates/_accomplishment-rendering.html
-msgid "This document confirms the completion of the"
-msgstr ""
-
-#: lms/templates/certificates/_accomplishment-rendering.html
-msgid "offered by"
-msgstr ""
-
-#: lms/templates/certificates/_accomplishment-rendering.html
-msgid "through Navoica."
-msgstr ""
-
-#: lms/templates/certificates/_accomplishment-rendering.html
-msgid "verification"
+#: lms/templates/certificates/_accomplishment-rendering.html:66
+msgid ""
+"This document confirms the completion of the <strong>{course_name}</strong> "
+"offered by {organizer} through Navoica. <a href={cert_url}>verification</a>"
 msgstr ""
 
 #: lms/templates/certificates/_accomplishment-rendering.html

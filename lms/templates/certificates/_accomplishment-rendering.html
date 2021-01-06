@@ -63,8 +63,7 @@ course_mode_class = course_mode if course_mode else ''
                             </div>
                             <div id="authentication-note">
                                 <div class="hr"></div>
-                                <p>${_("This document confirms the completion of the")} <strong> ${accomplishment_copy_course_name}</strong> ${_("offered by")} ${organizer} ${_("through Navoica.")}</p>
-                                <a href="${settings.LMS_ROOT_URL}${certificate_absolute_url}">${_("verification")}</a>
+                                <p>${_("This document confirms the completion of the <strong>{course_name}</strong> offered by {organizer} through Navoica. <a href={cert_url}>verification</a>").format(course_name=accomplishment_copy_course_name,organizer=organizer,cert_url=settings.LMS_ROOT_URL+certificate_absolute_url)|n}</p>
                             </div>
                         </div>
                         % if certificate_data:
