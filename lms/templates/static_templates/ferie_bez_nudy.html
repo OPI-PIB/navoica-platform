@@ -33,10 +33,14 @@
         <p class="ff-OpenSans">
             Webinaria są zapowiedzią <strong>kursów online</strong>, które tej wiosny pojawią się na platformie NAVOICA. <br><strong>Podaj swój e-mail</strong>, a wyślemy Ci wiadomość w dniu startu zapisów.
         </p>
-        <form method="" action="" class="webinar-subscription">
+        % if saved:
+            <p>Dziękujemy! Wyślemy Ci wiadomość, gdy kursy będą dostępne.</p>
+        % endif
+        <form method="post" action=" " class="webinar-subscription">
            <div class="input-group my-2 pt-2 d-flex flex-row flex-nowrap">
                <label for="email" class="sr-only">${_('E-mail')}</label>
-               <input id="email" class="form-control form-control-lg webinar-subscription__input" type="search" name="search_query" placeholder="Podaj swój adres e-mail">
+               <input id="email" class="form-control form-control-lg webinar-subscription__input" type="email" name="email" placeholder="Podaj swój adres e-mail">
+               <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }" />
                <button class="btn webinar-subscription__submit-btn btn-lg" type="submit">Wyślij</button>
            </div>
         </form>
@@ -65,7 +69,7 @@
         <div class="webinar__mini-block d-flex flex-column col py-4 justify-content-center align-items-center">
           <img src="/static/images/ferie-bez-nudy-ikona-3.svg" alt="Prawo dla uczniów szkół ponadpodstawowych" />
             <p class="m-auto text-center pt-2">
-                <a href="#prawo-szkola-ponadpostawowa" class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Prawo dla uczniów szkół ponadpodstawowych</a>
+                <a href="#prawo-szkola-ponadpodstawowa" class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Prawo dla uczniów szkół ponadpodstawowych</a>
             </p>
         </div>
 
@@ -74,44 +78,52 @@
           <!-- Programowanie dla uczniów szkół podstawowych -->
           <div class="webinar__block" id="programowanie-szkola-podstawowa">
               <div class="webinar__block__header d-flex justify-content-center align-items-center">
-                  <img src="/static/images/ferie-bez-nudy-ikona-1.svg" alt="Image" />
+                  <img src="/static/images/ferie-bez-nudy-ikona-1.svg" alt="Programowanie dla uczniów szkół podstawowych" />
                   <h2 class="webinar__block__title text-md-center text-left ff-Signika py-5 my-0 ml-2">Programowanie dla uczniów szkół podstawowych</h2>
               </div>
 
               <!-- BLOCK -->
               <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap">
+                  <!-- add at the end class "webinar__block__content-video" new class "inactive" for deactivate webinar to available soon -->
                   <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-1" style="background-image: url('/static/images/webinars/podstawy-programowania-scratch.png');">
                       <h4 class="available-soon">Dostępny wkrótce</h4>
                   </div>
                   <div class="webinar__block__content-description col p-3">
                       <span class="webinar__block__content-description--date font-weight-bold">środa,12 sty., 12:00</span>
-                      <h3 class="webinar__block__content-description--title my-1">Podstawy programowania w Scratch</h3>
-                      <p class="webinar__block__content-description--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at</p>
-                      <ul class="webinar__block__content-description--organization px-0">prowadzący: <span class="font-weight-bold">Maciej Kowalski</span>
-                          <li>Ośrodek Przetwarzania Informacji - PIB</li>
-                      </ul>
-                      <p class="webinar__block__content-more m-0">
-                          <a class="webinar__block-link ff-OpenSans font-weight-bold" data-toggle="collapse" href="#collapse-webinar-1" role="button" aria-expanded="false" aria-controls="collapse-webinar-1">Więcej informacji</a><i class="fas fa-chevron-down ml-1"></i>
+                      <h3 class="webinar__block__content-description--title my-1">Podstawy programowania Scratch</h3>
+                      <p class="webinar__block__content-description--text">
+                          Podstawy programowania to wirtualny warsztat dla dzieci zainteresowanych technologią. Zajęcia prowadzi Maciej Kowalski – znawca programowania i fan dobrej jakości kodu. Wspólnie z uczniami szkół podstawowych pobawi się językiem Scratch i krok po kroku stworzy różne obiekty w świecie kultowego Minecrafta. <br>Gwarantujemy dużą dawkę wiedzy i dobrego humoru, a na zakończenie radość i satysfakcję. Gotowi na zabawę w programistę?
+                      </p>
+                      <!-- add at the end class "webinar__block__content-more" new class "inactive" for deactivate webinar to available soon -->
+                      <p class="webinar__block__content-more">
+                          <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-1" role="button" aria-expanded="false" aria-controls="collapse-webinar-1">Więcej informacji</a><i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
                       </p>
                   </div>
                   <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-1">
-                      <div>
+                      <div class="d-flex flex-row flex-wrap mb-1">
+                          <h4 class="webinar__block__content--more-info-h4 mr-2">Prowadzący: </h4><span><strong>Maciej Kowalski</strong>, Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy</span>
+                      </div>
+                      <div class="invisible">
                           <h4 class="webinar__block__content--more-info-h4">Opis:</h4>
-                          <p class="webinar__block__content--more-info-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at</p>
+                          <p class="webinar__block__content--more-info-descr">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus.
+                          </p>
                       </div>
                       <div>
                           <h4 class="webinar__block__content--more-info-h4">Przydatne linki:</h4>
                           <ul class="webinar__block__content--more-info-links px-3">
-                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
-                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
-                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="https://www.minecraft.net/pl-pl/download" target="_blank" class="webinar__block-link">https://www.minecraft.net/pl-pl/download (Minecraft w najnowszej wersji)</a></li>
+                              <li><a href="http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html" target="_blank" class="webinar__block-link">http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html (Minecraft Forge, w wersji 1.12.2)</a></li>
+                              <li><a href="https://github.com/arpruss/raspberryjammod/releases" target="_blank" class="webinar__block-link">https://github.com/arpruss/raspberryjammod/releases (mod pozwalający na programowanie w Minecraft'a)</a></li>
+                              <li><a href="https://www.curseforge.com/minecraft/mc-mods/freecam" target="_blank" class="webinar__block-link">https://www.curseforge.com/minecraft/mc-mods/freecam (mod pozwalający na 'fruwanie' kamerą)</a></li>
+                              <li><a href="https://sheeptester.github.io/scratch-gui/?load_plugin=https://pruss.mobi/js/rjm.js" target="_blank" class="webinar__block-link">https://sheeptester.github.io/scratch-gui/?load_plugin=https://pruss.mobi/js/rjm.js (edytor Scratch'a z opcją łączenia do Minecraft'a)</a></li>
                           </ul>
                       </div>
                       <div>
                           <h4 class="webinar__block__content--more-info-h4">Materiały do pobrania:</h4>
                           <ul class="webinar__block__content--more-info-files px-0">
-                              <li><i class="far fa-file-powerpoint mr-1"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
-                              <li><i class="far fa-file-archive mr-1"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><i class="far fa-file-powerpoint mr-1" aria-hidden="true"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><i class="far fa-file-archive mr-1" aria-hidden="true"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
                           </ul>
                       </div>
                   </div>
@@ -123,20 +135,20 @@
           <!-- Programowanie dla uczniów szkół ponadpodstawowych -->
           <div class="webinar__block" id="pogramowanie-szkola-ponadpodstawowa">
               <div class="webinar__block__header d-flex justify-content-center align-items-center">
-                  <img src="/static/images/ferie-bez-nudy-ikona-2.svg" alt="Image" />
+                  <img src="/static/images/ferie-bez-nudy-ikona-2.svg" alt="Programowanie dla uczniów szkół ponadpodstawowych" />
                   <h2 class="webinar__block__title text-md-center text-left ff-Signika py-5 my-0 ml-2">Programowanie dla uczniów szkół ponadpodstawowych</h2>
               </div>
+
               <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap">
                   <div class="webinar__block__content-description col px-0 py-3">
                       <span class="webinar__block__content-description--date font-weight-bold px-3">środa,12 sty., 12:00</span>
-                      <h3 class="webinar__block__content-description--title my-1 px-3">Podstawy programowania w Scratch</h3>
-                      <p class="webinar__block__content-description--text m-0 py-3 px-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at</p>
-                      <ul class="webinar__block__content-description--organization px-0 px-3">prowadzący: <span class="font-weight-bold">Maciej Kowalski</span>
-                          <li>Ośrodek Przetwarzania Informacji - PIB</li>
-                      </ul>
-                      <p class="webinar__block__content-more m-0 px-3">
-                          <a class="webinar__block-link ff-OpenSans font-weight-bold" data-toggle="collapse" href="#collapse-webinar-2" role="button" aria-expanded="false" aria-controls="collapse-webinar-2">Więcej informacji</a>
-                          <i class="fas fa-chevron-down ml-1"></i>
+                      <h3 class="webinar__block__content-description--title my-1 px-3">Sztuczna inteligencja w świecie rzeczywistym</h3>
+                      <p class="webinar__block__content-description--text m-0 pb-3 px-3">
+                          Sztuczna inteligencja może okazać się jedną z najważniejszych technologii przyszłości. Jednak czym ona jest naprawdę i w jaki sposób możemy z niej skorzystać? Przygotowane warsztaty pozwolą na uzyskanie odpowiedzi na powyższe pytania oraz pokażą jak w prosty sposób w języku Python można skonstruować własny model rozwiązujący pozornie prosty problem - rozróżnienia psa od ciastka na podstawie ich zdjęć. Zajęcia przeznaczone są dla młodzieży znającej podstawowe struktury programistyczne.
+                      </p>
+                      <p class="webinar__block__content-more px-3">
+                          <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-2" role="button" aria-expanded="false" aria-controls="collapse-webinar-2">Więcej informacji</a>
+                          <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
                       </p>
                   </div>
                   <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-2" style="background-image: url('/static/images/webinars/podstawy-programowania-scratch.png');">
@@ -144,9 +156,14 @@
                   </div>
 
                   <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-2">
-                      <div>
+                      <div class="d-flex flex-row flex-wrap mb-1">
+                          <h4 class="webinar__block__content--more-info-h4 mr-2">Prowadzący: </h4><span><strong>mgr inż. Sylwia Majchrowska</strong>, Wydział Podstawowych Problemów Techniki Politechniki Wrocławskiej</span>
+                      </div>
+                      <div class="invisible">
                           <h4 class="webinar__block__content--more-info-h4">Opis:</h4>
-                          <p class="webinar__block__content--more-info-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at</p>
+                          <p class="webinar__block__content--more-info-descr">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus.
+                          </p>
                       </div>
                       <div>
                           <h4 class="webinar__block__content--more-info-h4">Przydatne linki:</h4>
@@ -159,13 +176,242 @@
                       <div>
                           <h4 class="webinar__block__content--more-info-h4">Materiały do pobrania:</h4>
                           <ul class="webinar__block__content--more-info-files px-0">
-                              <li><i class="far fa-file-powerpoint mr-1"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
-                              <li><i class="far fa-file-archive mr-1"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><i class="fas fa-file-alt mr-1" aria-hidden="true"></i><a href="/static/files/webinars/sztuczna-inteligencja-readme.md" download class="webinar__block-link">Instrukcja - Sztuczna inteligencja w świecie rzeczywistym</a></li>
+                              <li><i class="fas fa-file-download mr-1" aria-hidden="true"></i><a href="/static/files/webinars/Sztuczna_inteligencja_w_świecie_rzeczywistym.ipynb" download class="webinar__block-link">Sztuczna inteligencja w świecie rzeczywistym</a></li>
                           </ul>
                       </div>
                   </div>
               </div>
+
+              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap">
+                  <div class="webinar__block__content-description col px-0 py-3">
+                      <span class="webinar__block__content-description--date font-weight-bold px-3">środa,12 sty., 12:00</span>
+                      <h3 class="webinar__block__content-description--title my-1 px-3">Podstawowe metody numeryczne w Javie: algorytm Euklidesa, funkcje rekurencyjne, bisekcja, metoda Newtona</h3>
+                      <p class="webinar__block__content-description--text m-0 pb-3 px-3">
+                          Webinarium pokazuje - na przykładzie Javy, jednego z najpopularniejszych języków programowania - działanie podstawowych konstrukcji programistycznych, takich jak instrukcje warunkowe, pętle czy funkcje. Za ich pomocą można rozwiązać szereg zagadnień obliczeniowych, takich jak znalezienie największego wspólnego dzielnika dwóch liczb (algorytm Euklidesa), pierwiastka kwadratowego z liczby dodatniej (metoda Newtona) czy miejsca zerowego funkcji (bisekcja).
+                      </p>
+                      <p class="webinar__block__content-more px-3">
+                          <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-3" role="button" aria-expanded="false" aria-controls="collapse-webinar-3">Więcej informacji</a>
+                          <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+                      </p>
+                  </div>
+                  <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-3" style="background-image: url('/static/images/webinars/podstawowe-metody-numeryczne-w-javie.jpg');">
+                      <h4 class="available-soon">Dostępny wkrótce</h4>
+                  </div>
+
+                  <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-3">
+                      <div class="d-flex flex-row flex-wrap mb-1">
+                          <h4 class="webinar__block__content--more-info-h4 mr-2">Prowadzący: </h4><span><strong>dr inż. Piotr Kowalski</strong>, Wydział Podstawowych Problemów Techniki Politechniki Wrocławskiej</span>
+                      </div>
+                      <div class="invisible">
+                          <h4 class="webinar__block__content--more-info-h4">Opis:</h4>
+                          <p class="webinar__block__content--more-info-descr">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus.
+                          </p>
+                      </div>
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Przydatne linki:</h4>
+                          <ul class="webinar__block__content--more-info-links px-3">
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                          </ul>
+                      </div>
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Materiały do pobrania:</h4>
+                          <ul class="webinar__block__content--more-info-files px-0">
+                              <li><i class="far fa-file-powerpoint mr-1" aria-hidden="true"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><i class="far fa-file-archive mr-1" aria-hidden="true"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap">
+                  <div class="webinar__block__content-description col px-0 py-3">
+                      <span class="webinar__block__content-description--date font-weight-bold px-3">środa,12 sty., 12:00</span>
+                      <h3 class="webinar__block__content-description--title my-1 px-3">Podstawy programowania mikrokontrolerów; wprowadzenie do platformy Arduino</h3>
+                      <p class="webinar__block__content-description--text m-0 pb-3 px-3">
+                          Jeśli chcesz rozpocząć przygodę z robotyką to ten film jest właśnie dla Ciebie! Kompilacja najważniejszych informacji niezbędnych do rozpoczęcia przygody z programowaniem mikrokontrolerów. W miarę poznawania kolejnych funkcjonalności platformy Arduino, realizujemy projekt stanowiska do pomiarów temperatury i wilgotności.
+                      </p>
+                      <p class="webinar__block__content-more px-3">
+                          <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-4" role="button" aria-expanded="false" aria-controls="collapse-webinar-3">Więcej informacji</a>
+                          <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+                      </p>
+                  </div>
+                  <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-4" style="background-image: url('/static/images/webinars/podstawy-programowania-mikrokontrolerow.jpg');">
+                      <h4 class="available-soon">Dostępny wkrótce</h4>
+                  </div>
+
+                  <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-4">
+                      <div class="d-flex flex-row flex-wrap mb-1">
+                          <h4 class="webinar__block__content--more-info-h4 mr-2">Prowadzący: </h4><span><strong>dr Bartosz Krajnik</strong>, Wydział Podstawowych Problemów Techniki Politechniki Wrocławskiej</span>
+                      </div>
+                      <div class="invisible">
+                          <h4 class="webinar__block__content--more-info-h4">Opis:</h4>
+                          <p class="webinar__block__content--more-info-descr">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus.
+                          </p>
+                      </div>
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Przydatne linki:</h4>
+                          <ul class="webinar__block__content--more-info-links px-3">
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                          </ul>
+                      </div>
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Materiały do pobrania:</h4>
+                          <ul class="webinar__block__content--more-info-files px-0">
+                              <li><i class="far fa-file-powerpoint mr-1" aria-hidden="true"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><i class="far fa-file-archive mr-1" aria-hidden="true"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap">
+                  <div class="webinar__block__content-description col px-0 py-3">
+                      <span class="webinar__block__content-description--date font-weight-bold px-3">środa,12 sty., 12:00</span>
+                      <h3 class="webinar__block__content-description--title my-1 px-3">Wstęp do analizy danych z internetu z językiem Python</h3>
+                      <p class="webinar__block__content-description--text m-0 pb-3 px-3">
+                          Na wykładzie zaprezentowano jak z wykorzystaniem prostych narzędzi języka Python można analizować duże zbiory danych pochodzących na przykład z Internetu. Z jednej strony wyjaśnione zostały niezbędne elementy związane z programowaniem w Pythonie, z drugiej zaś poruszone zostały podstawowe zagadnienia związane z pozyskiwaniem, przetwarzaniem, filtrowaniem i wizualizacją danych.
+                      </p>
+                      <p class="webinar__block__content-more px-3">
+                          <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-5" role="button" aria-expanded="false" aria-controls="collapse-webinar-3">Więcej informacji</a>
+                          <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+                      </p>
+                  </div>
+                  <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-5" style="background-image: url('/static/images/webinars/wstep-do-analizy-danych-z-internetu-z-jezykiem-python.jpg');">
+                      <h4 class="available-soon">Dostępny wkrótce</h4>
+                  </div>
+
+                  <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-5">
+                      <div class="d-flex flex-row flex-wrap mb-1">
+                          <h4 class="webinar__block__content--more-info-h4 mr-2">Prowadzący: </h4><span><strong>dr inż. Dariusz Gąsior</strong>, Wydział Informatyki i Zarządzania Politechniki Wrocławskiej (na podstawie materiałów dr Jarosława Drapały)</span>
+                      </div>
+                      <div class="invisible">
+                          <h4 class="webinar__block__content--more-info-h4">Opis:</h4>
+                          <p class="webinar__block__content--more-info-descr">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus.
+                          </p>
+                      </div>
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Przydatne linki:</h4>
+                          <ul class="webinar__block__content--more-info-links px-3">
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><a href="#" target="_blank" class="webinar__block-link">sfafhgfsi</a></li>
+                          </ul>
+                      </div>
+                      <div>
+                          <h4 class="webinar__block__content--more-info-h4">Materiały do pobrania:</h4>
+                          <ul class="webinar__block__content--more-info-files px-0">
+                              <li><i class="far fa-file-powerpoint mr-1" aria-hidden="true"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                              <li><i class="far fa-file-archive mr-1" aria-hidden="true"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+
           </div>
+
+
+      <!-- Prawo dla uczniów szkół ponadpodstawowych -->
+      <div class="webinar__block" id="prawo-szkola-ponadpodstawowa">
+          <div class="webinar__block__header d-flex justify-content-center align-items-center">
+              <img src="/static/images/ferie-bez-nudy-ikona-3.svg" alt="Prawo dla uczniów szkół ponadpodstawowych" />
+              <h2 class="webinar__block__title text-md-center text-left ff-Signika py-5 my-0 ml-2">Prawo dla uczniów szkół ponadpodstawowych</h2>
+          </div>
+
+          <!-- BLOCK -->
+          <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap">
+              <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-prawo-video-1" style="background-image: url('/static/images/webinars/podstawy-prawa-karnego-i-cywilnego.jpg');">
+                  <h4 class="available-soon">Dostępny wkrótce</h4>
+              </div>
+              <div class="webinar__block__content-description col p-3">
+                  <span class="webinar__block__content-description--date font-weight-bold">środa,12 sty., 12:00</span>
+                  <h3 class="webinar__block__content-description--title my-1">Podstawy prawa karnego i cywilnego</h3>
+                  <p class="webinar__block__content-description--text">
+                      W trakcie wykładu zaprezentowano podstawy prawa karnego oraz prawa cywilnego. W części dotyczącej prawa karnego omówione zostały funkcje prawa karnego oraz zasady postępowania w sprawach nieletnich. Wykład z prawa cywilnego dotyczył przede wszystkim praw konsumentów oraz podstawowych zagadnień prawa rodzinnego.
+                  </p>
+                  <p class="webinar__block__content-more">
+                      <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-prawo-1" role="button" aria-expanded="false" aria-controls="collapse-webinar-prawo-1">Więcej informacji</a><i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+                  </p>
+              </div>
+              <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-prawo-1">
+                  <div class="d-flex flex-row flex-wrap mb-1">
+                      <h4 class="webinar__block__content--more-info-h4 mr-2">Prowadzący: </h4><span><strong>dr Krzysztof Szczucki</strong>, Wydział Prawa i Administracji Uniwersytetu Warszawskiego</span>
+                  </div>
+                  <div class="invisible">
+                      <h4 class="webinar__block__content--more-info-h4">Opis:</h4>
+                      <p class="webinar__block__content--more-info-descr">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus.
+                      </p>
+                  </div>
+                  <div class="invisible">
+                      <h4 class="webinar__block__content--more-info-h4">Przydatne linki:</h4>
+                      <ul class="webinar__block__content--more-info-links px-3">
+                          <li><a href="#" target="_blank" class="webinar__block-link">test link</a></li>
+                      </ul>
+                  </div>
+                  <div>
+                      <h4 class="webinar__block__content--more-info-h4">Materiały do pobrania:</h4>
+                      <ul class="webinar__block__content--more-info-files px-0">
+                          <li><i class="far fa-file-powerpoint mr-1" aria-hidden="true"></i><a href="/static/files/webinars/podstawy-prawa-karnego.pptx" download class="webinar__block-link">Podstawy prawa karnego</a></li>
+                          <li><i class="far fa-file-powerpoint mr-1" aria-hidden="true"></i><a href="/static/files/webinars/podstawy-prawa-cywilnego.pptx" download class="webinar__block-link">Podstawy prawa cywilnego</a></li>
+                          <li class="invisible"><i class="far fa-file-archive mr-1" aria-hidden="true"></i><a href="" download class="webinar__block-link"></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <!-- END BLOCK -->
+
+          <!-- BLOCK -->
+          <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap">
+              <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-prawo-video-2" style="background-image: url('/static/images/webinars/podstawy-prawa-panstwo-prawo-konstytucja.jpg');">
+                  <h4 class="available-soon">Dostępny wkrótce</h4>
+              </div>
+              <div class="webinar__block__content-description col p-3">
+                  <span class="webinar__block__content-description--date font-weight-bold">środa,12 sty., 12:00</span>
+                  <h3 class="webinar__block__content-description--title my-1">Państwo, prawo, konstytucja</h3>
+                  <p class="webinar__block__content-description--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus. Fusce vitae diam pharetra tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at</p>
+                  <ul class="webinar__block__content-description--organization px-0 invisible">prowadzący: <span class="font-weight-bold">prof. Bogumił Szmulik</span>
+                      <li>Wydział Prawa i Administracji UKSW</li>
+                  </ul>
+                  <p class="webinar__block__content-more">
+                      <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-prawo-2" role="button" aria-expanded="false" aria-controls="collapse-webinar-prawo-2">Więcej informacji</a><i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+                  </p>
+              </div>
+              <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-prawo-2">
+                  <div class="d-flex flex-row flex-wrap mb-1">
+                      <h4 class="webinar__block__content--more-info-h4 mr-2">Prowadzący: </h4><span><strong>prof. Bogumił Szmulik</strong>, Wydział Prawa i Administracji UKSW</span>
+                  </div>
+                  <div class="invisible">
+                      <h4 class="webinar__block__content--more-info-h4">Opis:</h4>
+                      <p class="webinar__block__content--more-info-descr">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non erat at quam rutrum pulvinar sit amet quis tellus. Sed eu congue lacus.
+                      </p>
+                  </div>
+                  <div>
+                      <h4 class="webinar__block__content--more-info-h4">Przydatne linki:</h4>
+                      <ul class="webinar__block__content--more-info-links px-3">
+                          <li><a href="#" target="_blank" class="webinar__block-link">test link</a></li>
+                      </ul>
+                  </div>
+                  <div>
+                      <h4 class="webinar__block__content--more-info-h4">Materiały do pobrania:</h4>
+                      <ul class="webinar__block__content--more-info-files px-0">
+                          <li><i class="far fa-file-powerpoint mr-1" aria-hidden="true"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                          <li><i class="far fa-file-archive mr-1" aria-hidden="true"></i><a href="#" download class="webinar__block-link">sfafhgfsi</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <!-- END BLOCK -->
+
+      </div>
 
     </div>
 
@@ -180,7 +426,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fgFwpQZYfio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -203,6 +449,92 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modal-webinar-video-3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-webinar-video-4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-webinar-video-5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-webinar-prawo-video-1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-webinar-prawo-video-2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- VIDEO MODAL END -->
 
 </section>

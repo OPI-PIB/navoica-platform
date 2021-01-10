@@ -4,6 +4,7 @@
 # security reasons.
 
 import mimetypes
+import requests
 
 from django.conf import settings
 from django.http import Http404, HttpResponseNotFound, HttpResponseServerError
@@ -17,6 +18,7 @@ from edxmako.shortcuts import render_to_response, render_to_string
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from util.cache import cache_if_anonymous
 from util.views import fix_crum_request
+from models import Newsletter_emailsForm
 
 valid_templates = []
 
@@ -54,6 +56,13 @@ def render(request, template):
         # This is necessary for the dialog presented with the TOS in /register
         if template == 'honor.html':
             context['allow_iframing'] = True
+        elif template == 'ferie_bez_nudy.html':
+            if request.method == 'POST':
+                form = Newsletter_emailsForm(request.POST)
+                if form.is_valid():
+                    if form.save():
+                        context['saved'] = True
+
         # Format Examples: static_template_about_header
         configuration_base = 'static_template_' + template.replace('.html', '').replace('-', '_')
         page_header = configuration_helpers.get_value(configuration_base + '_header')

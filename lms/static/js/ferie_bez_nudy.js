@@ -43,6 +43,24 @@ export class FerieBezNudy {
                         }
                     }
                 });
+
+            $(function(){
+                $('.modal').on('hidden.bs.modal', function () {
+                    let $iframe = $(this).find("iframe");
+                    $iframe.attr("src", $iframe.attr("src"));
+                });
+            });
+
+            $(function(){
+                $('.js-toogle-more').on('click', function () {
+                    if ($(this).text() === "Mniej informacji") {
+                        $(this).text("Więcej informacji");
+                    } else {
+                        $(this).text("Mniej informacji");
+                    }
+                });
+            });
+
         });
     }
 }
