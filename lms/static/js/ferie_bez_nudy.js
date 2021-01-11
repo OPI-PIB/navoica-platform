@@ -61,6 +61,19 @@ export class FerieBezNudy {
                 });
             });
 
+            $('.webinar__block__content').each(function(){
+                let currentDate = new Date();
+                let webinarStartDate = new Date($(this).data("start"));
+
+                if (currentDate && currentDate.getTime() >= webinarStartDate && new webinarStartDate.getTime()) {
+                    $(this).find(".webinar__block__content-video").removeClass("inactive");
+                    $(this).find(".webinar__block__content-more").removeClass("inactive");
+                } else {
+                    $(this).find(".webinar__block__content-video").addClass("inactive");
+                    $(this).find(".webinar__block__content-more").addClass("inactive");
+                }
+            });
+
         });
     }
 }
