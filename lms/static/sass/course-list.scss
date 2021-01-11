@@ -14513,6 +14513,29 @@ $background: #F3F5F6;
         min-width: 832px;
       }
     }
+
+    #pogramowanie-szkola-ponadpodstawowa {
+
+      & .webinar__block__content-video {
+        order: 2;
+
+        @media screen and (max-width: 959px) {
+          order: 1;
+        }
+      }
+
+      & .webinar__block__content-description {
+        order: 1;
+
+        @media screen and (max-width: 959px) {
+          order: 2;
+        }
+      }
+
+      & .webinar__block__content--more-info {
+        order: 3;
+      }
+    }
   }
 
   &__title {
@@ -14822,6 +14845,7 @@ $background: #F3F5F6;
     align-self: flex-end;
     margin-top: auto;
     margin-right: auto;
+    margin-bottom: 0;
   }
 
   &__block__content-more.inactive {
