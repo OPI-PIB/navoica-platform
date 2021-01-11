@@ -14634,10 +14634,6 @@ $background: #F3F5F6;
     font-weight: bold;
   }
 
-  &__image {
-
-  }
-
   &__block__header {
     & img {
       width: 50px;
@@ -14741,6 +14737,10 @@ $background: #F3F5F6;
       display: flex;
       justify-content: center;
       align-content: center;
+
+      @media screen and (max-width: 767px) {
+        background-size: 62px;
+      }
     }
 
     &.inactive {
