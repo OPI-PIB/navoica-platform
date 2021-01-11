@@ -14448,6 +14448,16 @@ $background: #F3F5F6;
 
   &-subscription {
 
+    & p.success-email--alert {
+      color: #BBFBB6;
+      background-color: rgba(216,216,216, 0.18);
+      font-size: 0.875rem;
+      line-height: 1.1875rem;
+      border: 1px solid transparent;
+      padding: 0.46875rem 0.53125rem;
+      font-family: 'Open Sans', sans-serif;
+    }
+
     & .input-group {
       background: transparent;
 
@@ -14470,9 +14480,17 @@ $background: #F3F5F6;
     }
 
     &__input:focus, #email:focus {
-      border: 1px solid #ffffff;
+      border: 1px solid rgba(216,216,216, 0.7) !important;
       color: #162037 !important;
-      background-color: #ffffff;
+      background-color: rgba(216,216,216, 0.7) !important;
+      outline: 0;
+      box-shadow: none;
+    }
+
+    &__input:hover, #email:hover {
+      border: 1px solid #CED4DA !important;
+      color: #162037 !important;
+      background-color: #CED4DA !important;
       outline: 0;
       box-shadow: none;
     }
