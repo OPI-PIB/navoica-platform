@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-08 08:07+0000\n"
+"POT-Creation-Date: 2021-01-12 12:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -409,7 +409,9 @@ msgstr ""
 #: cms/templates/course-create-rerun.html
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/index.html cms/templates/manage_users.html
-#: cms/templates/manage_users_lib.html lms/templates/provider/authorize.html
+#: cms/templates/manage_users_lib.html
+#: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Cancel"
 msgstr ""
 
@@ -4202,24 +4204,27 @@ msgid ""
 msgstr ""
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
-msgid "Navoica page on Facebook"
-msgstr ""
-
-#: lms/templates/footer.html lms/templates/footer.html
-#: lms/templates/footer.html lms/templates/footer.html
-#: lms/templates/footer.html lms/templates/footer.html
-#: lms/templates/footer.html lms/templates/login-sidebar.html
-#: lms/templates/login-sidebar.html lms/templates/login-sidebar.html
-#: lms/templates/static_templates/accessibility.html
-msgid "open in a new window"
+msgid "Facebook - Navoica page on Facebook"
 msgstr ""
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
-msgid "Navoica page on Twitter"
+msgid "Facebook - Navoica page on Facebook (open in a new window)"
 msgstr ""
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
-msgid "Navoica page on LinkedIn"
+msgid "Twitter - Navoica page on Twitter"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "Twitter - Navoica page on Twitter (open in a new window)"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "LinkedIn - Navoica page on LinkedIn"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "LinkedIn - Navoica page on LinkedIn (open in a new window)"
 msgstr ""
 
 #: lms/templates/footer.html
@@ -4245,6 +4250,12 @@ msgstr ""
 
 #: lms/templates/footer.html
 msgid "Ministry of Education and Science"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/footer.html
+#: lms/templates/footer.html lms/templates/footer.html
+#: lms/templates/static_templates/accessibility.html
+msgid "open in a new window"
 msgstr ""
 
 #: lms/templates/footer.html
@@ -6801,7 +6812,7 @@ msgstr ""
 msgid "Date of certification"
 msgstr ""
 
-#: lms/templates/certificates/_accomplishment-rendering.html:66
+#: lms/templates/certificates/_accomplishment-rendering.html
 msgid ""
 "This document confirms the completion of the <strong>{course_name}</strong> "
 "offered by {organizer} through Navoica. <a href={cert_url}>verification</a>"
@@ -7070,6 +7081,7 @@ msgid "View Course"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/enroll_redirect.html
 msgid "Register for the course"
 msgstr ""
 
@@ -7264,6 +7276,10 @@ msgstr ""
 
 #: lms/templates/courseware/courseware.html
 msgid "Your score is {current_score}%. You have passed the entrance exam."
+msgstr ""
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid "Continue registration"
 msgstr ""
 
 #: lms/templates/courseware/gradebook.html

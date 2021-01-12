@@ -34,7 +34,7 @@ HeaderFactory();
 <!-- Navigation -->
 
 
-<nav id="header-navigation" class="bg-white">
+<nav id="header-navigation" class="bg-white" role="navigation">
     % if use_cookie_banner and ENABLE_GDPR_COMPAT_FLAG.is_enabled_without_course_context():
     ${static.renderReact(
     component="CookiePolicyBanner",
