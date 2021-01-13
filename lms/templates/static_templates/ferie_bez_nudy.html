@@ -33,7 +33,7 @@
         <p class="ff-OpenSans">
             Webinaria są zapowiedzią <strong>kursów online</strong>, które tej wiosny pojawią się na platformie NAVOICA. <br><strong>Podaj swój e-mail</strong>, a wyślemy Ci wiadomość w dniu startu zapisów.
         </p>
-          <form method="post" action=" " class="webinar-subscription">
+          <form method="post" class="webinar-subscription">
           % if saved:
               <p class="success-email--alert input-group my-2" role="alert" aria-live="assertive" aria-atomic="true">Dziękujemy! Wyślemy Ci wiadomość, gdy kursy będą dostępne.</p>
           % else:
@@ -53,26 +53,26 @@
     <h2 class="webinar__subtitle text-center ff-Signika pt-5 pb-3 my-0">Webinary:</h2>
     <div class="webinar__mini-blocks-container d-flex justify-content-between flex-wrap mb-5">
 
-        <div class="webinar__mini-block d-flex flex-column col py-4 justify-content-center align-items-center">
+        <a href="#programowanie-szkola-podstawowa" class="webinar__mini-block d-flex flex-column col py-4 justify-content-center align-items-center">
           <img src="/static/images/ferie-bez-nudy-ikona-1.svg" alt="Programowanie dla uczniów szkół podstawowych" />
-          <p class="m-auto text-center pt-2">
-              <a href="#programowanie-szkola-podstawowa" class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Programowanie dla uczniów szkół podstawowych</a>
-          </p>
-        </div>
+          <span class="m-auto text-center pt-2">
+              <span class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Programowanie dla uczniów szkół podstawowych</span>
+          </span>
+        </a>
 
-        <div class="webinar__mini-block d-flex flex-column col py-4 justify-content-center align-items-center">
+        <a href="#pogramowanie-szkola-ponadpodstawowa" class="webinar__mini-block d-flex flex-column col py-4 justify-content-center align-items-center">
           <img src="/static/images/ferie-bez-nudy-ikona-2.svg" alt="Programowanie dla uczniów szkół ponadpodstawowych" />
-            <p class="m-auto text-center pt-2">
-                <a href="#pogramowanie-szkola-ponadpodstawowa" class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Programowanie dla uczniów szkół ponadpodstawowych</a>
-            </p>
-        </div>
+            <span class="m-auto text-center pt-2">
+                <span class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Programowanie dla uczniów szkół ponadpodstawowych</span>
+            </span>
+        </a>
 
-        <div class="webinar__mini-block d-flex flex-column col py-4 justify-content-center align-items-center">
+        <a href="#prawo-szkola-ponadpodstawowa" class="webinar__mini-block d-flex flex-column col py-4 justify-content-center align-items-center">
           <img src="/static/images/ferie-bez-nudy-ikona-3.svg" alt="Prawo dla uczniów szkół ponadpodstawowych" />
-            <p class="m-auto text-center pt-2">
-                <a href="#prawo-szkola-ponadpodstawowa" class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Prawo dla uczniów szkół ponadpodstawowych</a>
-            </p>
-        </div>
+            <span class="m-auto text-center pt-2">
+                <span class="webinar__block-link ff-Signika font-weight-bold js-scroll-to-webinar">Prawo dla uczniów szkół ponadpodstawowych</span>
+            </span>
+        </a>
 
     </div>
 
@@ -84,11 +84,11 @@
               </div>
 
               <!-- BLOCK -->
-              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 12, 2021 12:00:00">
+              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 12, 2021 12:00:00" tabindex="0">
                   <!-- add at the end class "webinar__block__content-video" new class "inactive" for deactivate webinar to available soon -->
-                  <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-1" style="background-image: url('/static/images/webinars/podstawy-programowania-scratch.png');">
-                      <h4 class="available-soon">Dostępny wkrótce</h4>
-                  </div>
+                  <button class="webinar__block__content-video col" type="button" aria-pressed="false" aria-label="Otwórz webinar Podstawy programowania Scratch" data-toggle="modal" data-target="#modal-webinar-video-1" style="background-image: url('/static/images/webinars/podstawy-programowania-scratch.png');">
+                      <span class="available-soon">Dostępny wkrótce</span>
+                  </button>
                   <div class="webinar__block__content-description col p-3">
                       <span class="webinar__block__content-description--date font-weight-bold">wtorek,12 sty., 12:00</span>
                       <h3 class="webinar__block__content-description--title my-1">Podstawy programowania Scratch</h3>
@@ -97,7 +97,7 @@
                       </p>
                       <!-- add at the end class "webinar__block__content-more" new class "inactive" for deactivate webinar to available soon -->
                       <p class="webinar__block__content-more">
-                          <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-1" role="button" aria-expanded="false" aria-controls="collapse-webinar-1">Więcej informacji</a><i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+                          <button class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" data-target="#collapse-webinar-1" type="button" aria-expanded="false" aria-controls="collapse-webinar-1" aria-describedby="collapse-webinar-1">Więcej informacji <span class="sr-only">o Podstawy programowania Scratch</span></button><i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
                       </p>
                   </div>
                   <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-1">
@@ -140,10 +140,10 @@
                   <h2 class="webinar__block__title text-md-center text-left ff-Signika py-5 my-0 ml-2">Programowanie dla uczniów szkół ponadpodstawowych</h2>
               </div>
 
-              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 13, 2021 12:00:00">
-                  <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-2" style="background-image: url('/static/images/webinars/sztuczna-inteligencja-w-swiecie-rzeczywistym.jpg');">
-                      <h4 class="available-soon">Dostępny wkrótce</h4>
-                  </div>
+              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 13, 2021 12:00:00" tabindex="0">
+                  <button class="webinar__block__content-video col" type="button" aria-pressed="false" aria-label="Otwórz webinar Sztuczna inteligencja w świecie rzeczywistym" data-toggle="modal" data-target="#modal-webinar-video-2" style="background-image: url('/static/images/webinars/sztuczna-inteligencja-w-swiecie-rzeczywistym.jpg');">
+                      <span class="available-soon">Dostępny wkrótce</span>
+                  </button>
                   <div class="webinar__block__content-description col px-0 py-3">
                       <span class="webinar__block__content-description--date font-weight-bold px-3">środa,13 sty., 12:00</span>
                       <h3 class="webinar__block__content-description--title my-1 px-3">Sztuczna inteligencja w świecie rzeczywistym</h3>
@@ -151,7 +151,7 @@
                           Sztuczna inteligencja może okazać się jedną z najważniejszych technologii przyszłości. Jednak czym ona jest naprawdę i w jaki sposób możemy z niej skorzystać? Przygotowane warsztaty pozwolą na uzyskanie odpowiedzi na powyższe pytania oraz pokażą jak w prosty sposób w języku Python można skonstruować własny model rozwiązujący pozornie prosty problem - rozróżnienia psa od ciastka na podstawie ich zdjęć. Zajęcia przeznaczone są dla młodzieży znającej podstawowe struktury programistyczne.
                       </p>
                       <p class="webinar__block__content-more px-3">
-                          <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-2" role="button" aria-expanded="false" aria-controls="collapse-webinar-2">Więcej informacji</a>
+                          <button class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" data-target="#collapse-webinar-2" type="button" aria-expanded="false" aria-controls="collapse-webinar-2" aria-describedby="collapse-webinar-2">Więcej informacji <span class="sr-only">o Sztuczna inteligencja w świecie rzeczywistym</span></button>
                           <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
                       </p>
                   </div>
@@ -184,10 +184,10 @@
                   </div>
               </div>
 
-              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 13, 2021 12:00:00">
-                  <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-3" style="background-image: url('/static/images/webinars/podstawowe-metody-numeryczne-w-javie.jpg');">
-                      <h4 class="available-soon">Dostępny wkrótce</h4>
-                  </div>
+              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 13, 2021 12:00:00" tabindex="0">
+                  <button class="webinar__block__content-video col" type="button" aria-pressed="false" aria-label="Otwórz webinar Podstawowe metody numeryczne w Javie: algorytm Euklidesa, funkcje rekurencyjne, bisekcja, metoda Newtona" data-toggle="modal" data-target="#modal-webinar-video-3" style="background-image: url('/static/images/webinars/podstawowe-metody-numeryczne-w-javie.jpg');">
+                      <span class="available-soon">Dostępny wkrótce</span>
+                  </button>
                   <div class="webinar__block__content-description col px-0 py-3">
                       <span class="webinar__block__content-description--date font-weight-bold px-3">środa,13 sty., 12:00</span>
                       <h3 class="webinar__block__content-description--title my-1 px-3">Podstawowe metody numeryczne w Javie: algorytm Euklidesa, funkcje rekurencyjne, bisekcja, metoda Newtona</h3>
@@ -195,7 +195,7 @@
                           Webinarium pokazuje - na przykładzie Javy, jednego z najpopularniejszych języków programowania - działanie podstawowych konstrukcji programistycznych, takich jak instrukcje warunkowe, pętle czy funkcje...
                       </p>
                       <p class="webinar__block__content-more px-3">
-                          <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-3" role="button" aria-expanded="false" aria-controls="collapse-webinar-3">Więcej informacji</a>
+                          <button class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" data-target="#collapse-webinar-3" type="button" aria-expanded="false" aria-controls="collapse-webinar-3" aria-describedby="collapse-webinar-3">Więcej informacji <span class="sr-only">o Podstawowe metody numeryczne w Javie: algorytm Euklidesa, funkcje rekurencyjne, bisekcja, metoda Newtona</span></button>
                           <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
                       </p>
                   </div>
@@ -228,10 +228,10 @@
                   </div>
               </div>
 
-              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 13, 2021 12:00:00">
-                  <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-4" style="background-image: url('/static/images/webinars/podstawy-programowania-mikrokontrolerow.jpg');">
-                      <h4 class="available-soon">Dostępny wkrótce</h4>
-                  </div>
+              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 13, 2021 12:00:00" tabindex="0">
+                  <button class="webinar__block__content-video col" type="button" aria-pressed="false" aria-label="Otwórz webinar Podstawy programowania mikrokontrolerów; wprowadzenie do platformy Arduino" data-toggle="modal" data-target="#modal-webinar-video-4" style="background-image: url('/static/images/webinars/podstawy-programowania-mikrokontrolerow.jpg');">
+                      <span class="available-soon">Dostępny wkrótce</span>
+                  </button>
                   <div class="webinar__block__content-description col px-0 py-3">
                       <span class="webinar__block__content-description--date font-weight-bold px-3">środa,13 sty., 12:00</span>
                       <h3 class="webinar__block__content-description--title my-1 px-3">Podstawy programowania mikrokontrolerów; wprowadzenie do platformy Arduino</h3>
@@ -239,7 +239,7 @@
                           Jeśli chcesz rozpocząć przygodę z robotyką to ten film jest właśnie dla Ciebie! Kompilacja najważniejszych informacji niezbędnych do rozpoczęcia przygody z programowaniem mikrokontrolerów. W miarę poznawania kolejnych funkcjonalności platformy Arduino, realizujemy projekt stanowiska do pomiarów temperatury i wilgotności.
                       </p>
                       <p class="webinar__block__content-more px-3">
-                          <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-4" role="button" aria-expanded="false" aria-controls="collapse-webinar-3">Więcej informacji</a>
+                          <button class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" data-target="#collapse-webinar-4" type="button" aria-expanded="false" aria-controls="collapse-webinar-4" aria-describedby="collapse-webinar-4">Więcej informacji <span class="sr-only">o Podstawy programowania mikrokontrolerów; wprowadzenie do platformy Arduino</span></button>
                           <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
                       </p>
                   </div>
@@ -272,10 +272,10 @@
                   </div>
               </div>
 
-              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 13, 2021 12:00:00">
-                  <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-video-5" style="background-image: url('/static/images/webinars/wstep-do-analizy-danych-z-internetu-z-jezykiem-python.jpg');">
-                      <h4 class="available-soon">Dostępny wkrótce</h4>
-                  </div>
+              <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 13, 2021 12:00:00" tabindex="0">
+                  <button class="webinar__block__content-video col" type="button" aria-pressed="false" aria-label="Otwórz webinar Wstęp do analizy danych z internetu z językiem Python" data-toggle="modal" data-target="#modal-webinar-video-5" style="background-image: url('/static/images/webinars/wstep-do-analizy-danych-z-internetu-z-jezykiem-python.jpg');">
+                      <span class="available-soon">Dostępny wkrótce</span>
+                  </button>
                   <div class="webinar__block__content-description col px-0 py-3">
                       <span class="webinar__block__content-description--date font-weight-bold px-3">środa,13 sty., 12:00</span>
                       <h3 class="webinar__block__content-description--title my-1 px-3">Wstęp do analizy danych z internetu z językiem Python</h3>
@@ -283,7 +283,7 @@
                           Na wykładzie zaprezentowano jak z wykorzystaniem prostych narzędzi języka Python można analizować duże zbiory danych pochodzących na przykład z Internetu. Z jednej strony wyjaśnione zostały niezbędne elementy związane z programowaniem w Pythonie, z drugiej zaś poruszone zostały podstawowe zagadnienia związane z pozyskiwaniem, przetwarzaniem, filtrowaniem i wizualizacją danych.
                       </p>
                       <p class="webinar__block__content-more px-3">
-                          <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-5" role="button" aria-expanded="false" aria-controls="collapse-webinar-3">Więcej informacji</a>
+                          <button class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" data-target="#collapse-webinar-5" type="button" aria-expanded="false" aria-controls="collapse-webinar-5" aria-describedby="collapse-webinar-5">Więcej informacji <span class="sr-only">o Wstęp do analizy danych z internetu z językiem Python</span></button>
                           <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
                       </p>
                   </div>
@@ -327,10 +327,10 @@
           </div>
 
           <!-- BLOCK -->
-          <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 11, 2021 12:00:00">
-              <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-prawo-video-1" style="background-image: url('/static/images/webinars/podstawy-prawa-karnego-i-cywilnego.jpg');">
-                  <h4 class="available-soon">Dostępny wkrótce</h4>
-              </div>
+          <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 11, 2021 12:00:00" tabindex="0">
+              <button class="webinar__block__content-video col" type="button" aria-pressed="false" aria-label="Otwórz webinar Podstawy prawa karnego i cywilnego" data-toggle="modal" data-target="#modal-webinar-prawo-video-1" style="background-image: url('/static/images/webinars/podstawy-prawa-karnego-i-cywilnego.jpg');">
+                  <span class="available-soon">Dostępny wkrótce</span>
+              </button>
               <div class="webinar__block__content-description col p-3">
                   <span class="webinar__block__content-description--date font-weight-bold">poniedziałek,11 sty., 12:00</span>
                   <h3 class="webinar__block__content-description--title my-1">Podstawy prawa karnego i cywilnego</h3>
@@ -338,7 +338,8 @@
                       W trakcie wykładu zaprezentowano podstawy prawa karnego oraz prawa cywilnego. W części dotyczącej prawa karnego omówione zostały funkcje prawa karnego oraz zasady postępowania w sprawach nieletnich. Wykład z prawa cywilnego dotyczył przede wszystkim praw konsumentów oraz podstawowych zagadnień prawa rodzinnego.
                   </p>
                   <p class="webinar__block__content-more">
-                      <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-prawo-1" role="button" aria-expanded="false" aria-controls="collapse-webinar-prawo-1">Więcej informacji</a><i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+                      <button class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" data-target="#collapse-webinar-prawo-1" type="button" aria-expanded="false" aria-controls="collapse-webinar-prawo-1" aria-describedby="collapse-webinar-prawo-1">Więcej informacji <span class="sr-only">o Podstawy prawa karnego i cywilnego</span></button>
+                      <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
                   </p>
               </div>
               <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-prawo-1">
@@ -370,21 +371,19 @@
           <!-- END BLOCK -->
 
           <!-- BLOCK -->
-          <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 11, 2021 12:00:00">
-              <div class="webinar__block__content-video col" data-toggle="modal" data-target="#modal-webinar-prawo-video-2" style="background-image: url('/static/images/webinars/podstawy-prawa-panstwo-prawo-konstytucja.jpg');">
-                  <h4 class="available-soon">Dostępny wkrótce</h4>
-              </div>
+          <div class="webinar__block__content my-3 d-flex justify-content-between flex-wrap" data-start="January 11, 2021 12:00:00" tabindex="0">
+              <button class="webinar__block__content-video col" type="button" aria-pressed="false" aria-label="Otwórz webinar Podstawy prawa Państwo, prawo, konstytucja" data-toggle="modal" data-target="#modal-webinar-prawo-video-2" style="background-image: url('/static/images/webinars/podstawy-prawa-panstwo-prawo-konstytucja.jpg');">
+                  <span class="available-soon">Dostępny wkrótce</span>
+              </button>
               <div class="webinar__block__content-description col p-3">
                   <span class="webinar__block__content-description--date font-weight-bold">poniedziałek,11 sty., 12:00</span>
                   <h3 class="webinar__block__content-description--title my-1">Państwo, prawo, konstytucja</h3>
                   <p class="webinar__block__content-description--text">
                       Wykład dotyczy pojęcia, istoty oraz genezy państwa, jak też pojęcia prawa oraz jego relacji z innymi funkcjonującymi w państwie normami postępowania. Ostatnia, część trzecia wykładu poświęcona została miejscu konstytucji w hierarchii źródeł prawa.
                   </p>
-                  <ul class="webinar__block__content-description--organization px-0 invisible">prowadzący: <span class="font-weight-bold">prof. Bogumił Szmulik</span>
-                      <li>Wydział Prawa i Administracji UKSW</li>
-                  </ul>
                   <p class="webinar__block__content-more">
-                      <a class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" href="#collapse-webinar-prawo-2" role="button" aria-expanded="false" aria-controls="collapse-webinar-prawo-2">Więcej informacji</a><i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
+                      <button class="webinar__block-link ff-OpenSans font-weight-bold js-toogle-more" data-toggle="collapse" data-target="#collapse-webinar-prawo-2" type="button" aria-expanded="false" aria-controls="collapse-webinar-prawo-2" aria-describedby="collapse-webinar-prawo-2">Więcej informacji <span class="sr-only">o Podstawy prawa Państwo, prawo, konstytucja</span></button>
+                      <i class="fas fa-chevron-down ml-1" aria-hidden="true"></i>
                   </p>
               </div>
               <div class="webinar__block__content--more-info p-3 col-12 collapse" id="collapse-webinar-prawo-2">
@@ -419,11 +418,12 @@
     </div>
 
     <!-- VIDEO MODAL START -->
-    <div class="modal fade" id="modal-webinar-video-1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modal-webinar-video-1" tabindex="-1" role="dialog" aria-labelledby="dialog-title-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h1 id="dialog-title-1" class="sr-only">Podstawy programowania Scratch</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="${_('Close')}">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -436,11 +436,12 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-webinar-video-2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modal-webinar-video-2" tabindex="-1" role="dialog" aria-labelledby="dialog-title-2" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h1 id="dialog-title-2" class="sr-only">Sztuczna inteligencja w świecie rzeczywistym</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="${_('Close')}">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -453,11 +454,12 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-webinar-video-3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modal-webinar-video-3" tabindex="-1" role="dialog" aria-labelledby="dialog-title-3" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h1 id="dialog-title-3" class="sr-only">Podstawowe metody numeryczne w Javie: algorytm Euklidesa, funkcje rekurencyjne, bisekcja, metoda Newtona</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="${_('Close')}">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -470,11 +472,12 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-webinar-video-4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modal-webinar-video-4" tabindex="-1" role="dialog" aria-labelledby="dialog-title-4" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h1 id="dialog-title-4" class="sr-only">Podstawy programowania mikrokontrolerów; wprowadzenie do platformy Arduino</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="${_('Close')}">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -487,11 +490,12 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-webinar-video-5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modal-webinar-video-5" tabindex="-1" role="dialog" aria-labelledby="dialog-title-5" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h1 id="dialog-title-5" class="sr-only">Wstęp do analizy danych z internetu z językiem Python</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="${_('Close')}">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -504,11 +508,12 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-webinar-prawo-video-1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modal-webinar-prawo-video-1" tabindex="-1" role="dialog" aria-labelledby="dialog-title-6" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h1 id="dialog-title-6" class="sr-only">Podstawy prawa karnego i cywilnego</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="${_('Close')}">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -521,11 +526,12 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-webinar-prawo-video-2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="modal-webinar-prawo-video-2" tabindex="-1" role="dialog" aria-labelledby="dialog-title-7" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h1 id="dialog-title-7" class="sr-only">Podstawy prawa Państwo, prawo, konstytucja</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="${_('Close')}">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>

@@ -65,12 +65,17 @@ export class FerieBezNudy {
                 let currentDate = new Date();
                 let webinarStartDate = new Date($(this).data("start"));
 
-                if (currentDate && currentDate.getTime() >= webinarStartDate && new webinarStartDate.getTime()) {
-                    $(this).find(".webinar__block__content-video").removeClass("inactive");
-                    $(this).find(".webinar__block__content-more").removeClass("inactive");
+                let $webinarVideo = $(this).find(".webinar__block__content-video");
+                let $webinarMore = $(this).find(".webinar__block__content-more");
+
+                if (currentDate && currentDate.getTime() >= webinarStartDate && webinarStartDate.getTime()) {
+                    $webinarVideo.removeClass("inactive");
+                    $webinarVideo.removeAttr("disabled", "true");
+                    $webinarMore.removeClass("inactive");
                 } else {
-                    $(this).find(".webinar__block__content-video").addClass("inactive");
-                    $(this).find(".webinar__block__content-more").addClass("inactive");
+                    $webinarVideo.addClass("inactive");
+                    $webinarVideo.attr("disabled", "true");
+                    $webinarMore.addClass("inactive");
                 }
             });
 

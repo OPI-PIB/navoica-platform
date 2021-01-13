@@ -14518,8 +14518,16 @@ $background: #F3F5F6;
       padding-bottom: 50px;
     }
 
+    *:focus {
+      outline: 3px solid $lightblue;
+    }
+
     & .far, & .fas, & i {
       color: $lightblue;
+    }
+
+    & a {
+      text-decoration: none;
     }
 
     .invisible {
@@ -14625,6 +14633,11 @@ $background: #F3F5F6;
     border-bottom: 1px solid $lightblue;
     color: $lightblue;
     font-weight: inherit;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 0;
   }
 
   &__block-link:hover, &__block-link:focus, &__block-link:active {
@@ -14632,6 +14645,12 @@ $background: #F3F5F6;
     color: $lightblue;
     text-decoration: none;
     font-weight: bold;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+    outline: 0;
   }
 
   &__block__header {
@@ -14662,6 +14681,12 @@ $background: #F3F5F6;
       @media screen and (max-width: 767px) {
         margin: 1.5rem 0;
       }
+    }
+
+    &:focus, &:hover, &:active {
+      text-decoration: none;
+      outline: 0;
+      box-shadow: 0 1px 6px $lightblue;
     }
 
     & .webinar__block-link {
@@ -14718,6 +14743,7 @@ $background: #F3F5F6;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    border: none;
 
     @media screen and (min-width: 1280px) {
       min-height: 354px;
