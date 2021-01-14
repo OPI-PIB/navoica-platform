@@ -25,7 +25,8 @@ from courseware.courses import (
     get_permission_for_course_about,
     get_studio_url,
     sort_by_announcement,
-    sort_by_start_date
+    sort_by_start_date,
+    get_course_by_id
 )
 from courseware.masquerade import setup_masquerade
 from courseware.model_data import FieldDataCache
@@ -313,7 +314,7 @@ def jump_to(_request, course_id, location):
 def enroll_redirect(request, course_id):
     course_key = CourseKey.from_string(course_id)
     with modulestore().bulk_operations(course_key):
-        course = get_course_with_access(request.user, 'load', course_key)
+        course = get_course_by_id(course_key)
         context = {
             'request': request,
             'course': course
