@@ -276,7 +276,7 @@ def compose_and_send_activation_email(user, profile, user_registration=None):
     subject = render_to_string('emails/activation_email_subject.txt', context)
     # Email subject *must not* contain newlines
     subject = ''.join(subject.splitlines())
-    message_for_activation = render_to_string('emails/activation_email.txt', context)
+    message_for_activation = render_to_string('emails/activation_email.html', context)
     from_address = configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
     from_address = configuration_helpers.get_value('ACTIVATION_EMAIL_FROM_ADDRESS', from_address)
     if settings.FEATURES.get('REROUTE_ACTIVATION_EMAIL'):
