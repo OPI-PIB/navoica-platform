@@ -11,19 +11,68 @@ from django.contrib.staticfiles import finders
 
 <%inherit file="../main.html" />
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
-<section id="skip-main">
-    <div id="content" class="border-top bg-white py-5">
+
+<section id="skip-main" class="enroll-redirect">
         <main class="container">
-            <div class="row">
-                <h1>${_("Register for the course")}: ${course.display_name}</h1>
-                <div class="col-lg-12">
-                    <a href="${reverse('about_course', args=[text_type(course.id)])}"
-                       class="btn btn-secondary btn-icon external_enroll">${_("Cancel")}</a>
-                    <a href="${course.external_enroll_url}registration_form/${course.id}/course"
-                       class="btn  btn-primary btn-icon external_enroll">${_("Continue registration")}</a>
-                </div>
+            <div class="continue-registration col-12">
+                    <h1 class="continue-registration__title pb-2">${_("Register for the course:")} <a href="${reverse('about_course', args=[text_type(course.id)])}" class="continue-registration__link">${course.display_name}</a></h1>
+                    <div class="continue-registration__block">
+                        <div class="continue-registration__block__content d-flex flex-lg-row flex-column justify-content-lg-around">
+                            <img src="/static/images/continue-registration-image.svg" alt="${_('Continue Registration')}" class="continue-registration__block__img col-lg-3 col-md-6 col-12 mx-auto" />
+                            <div class="col-lg-8 col-12 mx-md-4 mx-lg-0">
+                                <h2 class="continue-registration__block__title pb-2 col-12">${_("Warning!")}</h2>
+                                <p class="continue-registration__block__description col-12">${_("To enroll in a chosen course you have to fill in an additional registration form. If you agree, you will be <strong>redirected</strong> to an external registration page <strong>belonging to the course organizer</strong>.")}</p>
+                                <p class="continue-registration__block__more-info col-12">${_("More information")}: <a href="#" data-toggle="modal" data-target="#modal-continue-registration-video" class="continue-registration__link">${_("Why is collecting the user data necessary?")}</a></p>
+                            </div>
+                        </div>
+                        <div class="continue-registration__block__footer">
+                            <a href="${reverse('about_course', args=[text_type(course.id)])}" class="btn btn__cancel text-semi-bold">${_("Cancel")}</a>
+                            <a href="#" class="btn btn__continue-registration text-semi-bold" data-toggle="modal" data-target="#modal-continue">${_("Continue")}</a>
+                        </div>
+                    </div>
+
             </div>
         </main>
-    </div>
 
-</section>
+        <div class="modal fade" id="modal-continue-registration-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title modal__title" id="modal-video-title">${_("Why is collecting the user data necessary?")}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="pt-3 pb-4 modal__description">${_("The course is funded by the European Union and the Polish state budget. The conditions of funding oblige the university, the organizer of the course, to collect data about the participants. Personal data from the registration form, will be collected, processed and verified by the course organizer. Filling in the form is a prerequisite to join the course.")}</p>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-continue" tabindex="-1" role="dialog" aria-labelledby="modal-continue-title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title modal__title" id="modal-continue-title">${_("Do you agree that the registration form can read:")}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="${_('Close')}">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body py-3">
+                        <ul class="px-3">
+                            <li class="modal__description my-0">${_("Your user profile at navoica.pl")}</li>
+                            <li class="modal__description">${_("Your e-mail address")}</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer border-0 d-flex flex-wrap">
+                        <a href="${reverse('about_course', args=[text_type(course.id)])}" class="btn btn__cancel text-semi-bold external_enroll" data-dismiss="modal">${_("Cancel")}</a>
+                        <a href="${course.external_enroll_url}registration_form/${course.id}/course" class="btn btn__continue-registration text-semi-bold external_enroll">${_("I agree")}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
