@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-01-15 12:53+0000\n"
-"PO-Revision-Date: 2021-01-15 12:54:27.805167\n"
+"POT-Creation-Date: 2021-01-15 12:16+0000\n"
+"PO-Revision-Date: 2021-01-15 12:17:09.320607\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -68,7 +68,6 @@ msgstr ""
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/index.html cms/templates/manage_users.html
 #: cms/templates/manage_users_lib.html
-#: lms/templates/courseware/enroll_redirect.html
 #: lms/templates/courseware/enroll_redirect.html
 #: lms/templates/provider/authorize.html
 msgid "Cancel"
@@ -803,7 +802,6 @@ msgstr ""
 #: lms/templates/main.html lms/templates/signup_modal.html
 #: lms/templates/staff_problem_info.html lms/templates/staff_problem_info.html
 #: lms/templates/ccx/schedule.html
-#: lms/templates/courseware/enroll_redirect.html
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
@@ -3829,6 +3827,7 @@ msgid "View Course"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/enroll_redirect.html
 msgid "Register for the course"
 msgstr ""
 
@@ -4026,61 +4025,7 @@ msgid "Your score is {current_score}%. You have passed the entrance exam."
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
-msgid "Register for the course:"
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-msgid "Continue Registration"
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-msgid "Warning!"
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-msgid ""
-"To enroll in a chosen course you have to fill in an additional registration "
-"form. If you agree, you will be <strong>redirected</strong> to an external "
-"registration page <strong>belonging to the course organizer</strong>."
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-msgid "More information"
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-#: lms/templates/courseware/enroll_redirect.html
-msgid "Why is collecting the user data necessary?"
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-#: lms/templates/peer_grading/peer_grading_problem.html
-msgid "Continue"
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-msgid ""
-"The course is funded by the European Union and the Polish state budget. The "
-"conditions of funding oblige the university, the organizer of the course, to"
-" collect data about the participants. Personal data from the registration "
-"form, will be collected, processed and verified by the course organizer. "
-"Filling in the form is a prerequisite to join the course."
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-msgid "Do you agree that the registration form can read:"
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-msgid "Your user profile at navoica.pl"
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-msgid "Your e-mail address"
-msgstr ""
-
-#: lms/templates/courseware/enroll_redirect.html
-msgid "I agree"
+msgid "Continue registration"
 msgstr ""
 
 #: lms/templates/courseware/gradebook.html
@@ -7786,6 +7731,10 @@ msgstr ""
 
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "How did I do?"
+msgstr ""
+
+#: lms/templates/peer_grading/peer_grading_problem.html
+msgid "Continue"
 msgstr ""
 
 #: lms/templates/peer_grading/peer_grading_problem.html
