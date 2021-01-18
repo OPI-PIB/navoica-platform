@@ -3,12 +3,12 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 
-<%block name="pagetitle">${_("#FerieBezNudy")}</%block>
+<%block name="pagetitle">${_("Navoica dla dzieci i młodzieży")}</%block>
 
 <%block name="og_meta">
 ## OG (Open Graph) title and description added below to give social media info to display
 ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
-<meta property="og:title" content="Navoica dla młodzieży" />
+<meta property="og:title" content="Navoica dla dzieci i młodzieży" />
 <meta property="og:description" content="Webinary dla uczniów - programowanie i prawo" />
 <meta property="og:type" content="website" />
 <meta property="og:image:width" content="1200" />
@@ -25,9 +25,8 @@
     <div class="container-fluid webinar__cover-gradient py-3 py-lg-0">
         <div class="container d-flex justify-content-between py-lg-4">
             <div class="webinar__description">
-                <h2 class="ff-Signika pb-2">#FerieBezNudy</h2>
                 <p class="ff-OpenSans">
-                    Na tegoroczne ferie zimowe przygotowaliśmy dla Ciebie coś wyjątkowego! Jeśli jesteś, uczniem szkoły podstawowej, wybierz się z nami w podróż do świata Minecrafta. Dowiesz się, jak tworzyć w nim różne przedmioty dzięki programowi <strong>Scratch</strong>. <br>Uczniów szkół ponadpodstawowych czeka jeszcze więcej atrakcji! Jeśli nazwy <strong>Java, Arduino, Python</strong> czy <strong>sztuczna inteligencja</strong> niewiele Ci mówią, obejrzyj poniższe webinaria, a przed Tobą otworzy się świat programowania. Jeśli zaś bliższe Ci są tematy humanistyczne, zachęcamy do obejrzenia dwóch webinariów z <strong>podstaw prawa</strong>.
+                    Na początek nowego roku przygotowaliśmy dla Ciebie coś wyjątkowego! Jeśli jesteś, uczniem szkoły podstawowej, wybierz się z nami w podróż do świata Minecrafta. Dowiesz się, jak tworzyć w nim różne przedmioty dzięki programowi <strong>Scratch</strong>. <br>Uczniów szkół ponadpodstawowych czeka jeszcze więcej atrakcji! Jeśli nazwy <strong>Java, Arduino, Python</strong> czy <strong>sztuczna inteligencja</strong> niewiele Ci mówią, obejrzyj poniższe webinaria, a przed Tobą otworzy się świat programowania. Jeśli zaś bliższe Ci są tematy humanistyczne, zachęcamy do obejrzenia dwóch webinariów z <strong>podstaw prawa</strong>.
                 </p>
                 <p class="ff-OpenSans">
                     Webinaria są zapowiedzią <strong>kursów online</strong>, które tej wiosny pojawią się na platformie NAVOICA. <br><strong>Podaj swój e-mail</strong>, a wyślemy Ci wiadomość w dniu startu zapisów.
@@ -48,7 +47,7 @@
                     % endif
                 </form>
             </div>
-            <img class="webinar__image d-none d-lg-flex" src="${static.url('/images/ferie-bez-nudy.svg')}" alt="#FerieBezNudy - cykl webinarów" />
+            <img class="webinar__image d-none d-lg-flex" src="${static.url('/images/ferie-bez-nudy.svg')}" alt="Navoica dla dzieci i młodzieży - cykl webinarów" />
         </div>
     </div>
     <div class="container">
