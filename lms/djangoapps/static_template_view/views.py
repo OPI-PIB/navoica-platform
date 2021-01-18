@@ -110,4 +110,5 @@ class FerieBezNudyCreateView(CreateView):
     template_name = 'static_templates/ferie_bez_nudy.html'
 
     def form_valid(self, form):
+        form.save()
         return self.render_to_response(self.get_context_data(form=form))
