@@ -2,7 +2,7 @@ export class FerieBezNudy {
     constructor() {
         $(document).ready(function() {
             if (!$('html').is(':lang(pl)')) {
-                let hrefSelector = $('a[href="/FerieBezNudy"]')
+                let hrefSelector = $('a[href="/dla-dzieci-i-mlodziezy"]')
                 if (hrefSelector.length > 0 ){
                     hrefSelector.closest('li').hide();
                 }
