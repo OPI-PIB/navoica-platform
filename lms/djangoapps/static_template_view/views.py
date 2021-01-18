@@ -4,11 +4,13 @@
 # security reasons.
 
 import mimetypes
+import requests
 
 from django.conf import settings
 from django.http import Http404, HttpResponseNotFound, HttpResponseServerError
 from django.shortcuts import redirect
 from django.template import TemplateDoesNotExist
+from django.urls import reverse
 from django.utils.safestring import mark_safe
 from django.views.decorators.csrf import ensure_csrf_cookie
 
@@ -17,6 +19,8 @@ from edxmako.shortcuts import render_to_response, render_to_string
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from util.cache import cache_if_anonymous
 from util.views import fix_crum_request
+from models import Newsletter_emails
+from django.views.generic.edit import CreateView
 
 valid_templates = []
 
@@ -97,3 +101,13 @@ def render_404(request):
 @fix_crum_request
 def render_500(request):
     return HttpResponseServerError(render_to_string('static_templates/server-error.html', {}, request=request))
+
+
+class FerieBezNudyCreateView(CreateView):
+    model = Newsletter_emails
+    fields = ['email']
+    template_engine = 'mako'
+    template_name = 'static_templates/ferie_bez_nudy.html'
+
+    def form_valid(self, form):
+        return self.render_to_response(self.get_context_data(form=form))
