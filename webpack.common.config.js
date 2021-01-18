@@ -60,6 +60,7 @@ module.exports = {
         ReactRenderer: './common/static/js/src/ReactRenderer.jsx',
 
         GetCourseProgress: './lms/static/js/courseware/get_course_progress.js',
+        FerieBezNudy: './lms/static/js/ferie_bez_nudy.js',
         // CustomSelectAccessibility: './lms/static/js/customSelectAccessibility.js',
     },
 
