@@ -12913,7 +12913,7 @@ main.container nav .nav-tabs .nav-item.active,
   #content {
     margin: 0;
     border-top: 0 !important
-  } 
+  }
 
 .container .has-breadcrumbs {
   margin-bottom: 0 !important;}
@@ -13664,7 +13664,7 @@ span.complete-checkmark.fa.fa-check {
 
 .error-code-content {
   padding-top: 8.5rem;
-  padding-bottom: 6.25rem; 
+  padding-bottom: 6.25rem;
   margin: 0 1.875rem 0 1.875rem;
 }
 .error-code-info {
@@ -13696,7 +13696,7 @@ span.complete-checkmark.fa.fa-check {
   opacity: 1;
   margin-right: 2rem;
   border-bottom: 1px solid #2F5DAB;
-  
+
   &:hover {
     text-decoration: none;
     color: #2F5DAB;
@@ -14053,7 +14053,7 @@ span.complete-checkmark.fa.fa-check {
       }
     }
   }
-}  
+}
 
 @media screen and (min-width: 960px) {
   #header-navigation {
@@ -14261,7 +14261,7 @@ span.complete-checkmark.fa.fa-check {
     font-size: 0.875rem;
     color: teal;
     border-bottom: 1px solid teal;
-  
+
     &:hover{
       text-decoration: none;
     }
@@ -14393,13 +14393,13 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   #navbarResponsive .language-menu{
     display: none !important;
   }
-}  
+}
 
 @media (max-width: 1024px) {
   .btn-w-100 {
     width: 100%
   }
- } 
+ }
 
 @media (max-width: 960px) {
   .card .course-meta {
@@ -14684,6 +14684,16 @@ $background: #F3F5F6;
     & p.success-email--alert {
       color: #BBFBB6;
       background-color: rgba(216,216,216, 0.18);
+      font-size: 0.875rem;
+      line-height: 1.1875rem;
+      border: 1px solid transparent;
+      padding: 0.46875rem 0.53125rem;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    & p.error-email--alert {
+      color: #ffffff;
+      background-color: rgb(255, 102, 102);
       font-size: 0.875rem;
       line-height: 1.1875rem;
       border: 1px solid transparent;

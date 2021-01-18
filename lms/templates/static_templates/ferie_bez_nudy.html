@@ -33,12 +33,15 @@
                     Webinaria są zapowiedzią <strong>kursów online</strong>, które tej wiosny pojawią się na platformie NAVOICA. <br><strong>Podaj swój e-mail</strong>, a wyślemy Ci wiadomość w dniu startu zapisów.
                 </p>
                 <form method="post" class="webinar-subscription">
-                    % if saved:
+                    % if form.is_valid():
                     <p class="success-email--alert input-group my-2" role="alert" aria-live="assertive" aria-atomic="true">Dziękujemy! Wyślemy Ci wiadomość, gdy kursy będą dostępne.</p>
                     % else:
+                    % if form['email'].errors:
+                    <p class="error-email--alert input-group my-2" role="alert" aria-live="assertive" aria-atomic="true">${form['email'].errors[0] | n}</p>
+                    % endif
                     <div class="input-group my-2 pt-2 d-flex flex-row flex-nowrap">
-                        <label for="email" class="sr-only">${_('E-mail')}</label>
-                        <input id="email" class="form-control form-control-lg webinar-subscription__input" type="email" name="email" placeholder="Podaj swój adres e-mail">
+                        <label for="${form['email'].id_for_label}" class="sr-only">${form['email'].label}</label>
+                        <input id="${form['email'].id_for_label}" class="form-control form-control-lg webinar-subscription__input" type="email" name="email" placeholder="Podaj swój adres e-mail">
                         <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }" />
                         <button class="btn webinar-subscription__submit-btn btn-lg" type="submit">Wyślij</button>
                     </div>

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from django.forms import ModelForm
+from django.contrib import admin
 
 class Newsletter_emails(models.Model):
     class Meta(object):
@@ -9,7 +9,4 @@ class Newsletter_emails(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     email = models.EmailField(max_length=254)
 
-class Newsletter_emailsForm(ModelForm):
-    class Meta:
-        model = Newsletter_emails
-        fields = ['email']
+admin.site.register(Newsletter_emails)

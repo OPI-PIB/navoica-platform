@@ -10,6 +10,7 @@ from django.conf import settings
 from django.http import Http404, HttpResponseNotFound, HttpResponseServerError
 from django.shortcuts import redirect
 from django.template import TemplateDoesNotExist
+from django.urls import reverse
 from django.utils.safestring import mark_safe
 from django.views.decorators.csrf import ensure_csrf_cookie
 
@@ -18,7 +19,8 @@ from edxmako.shortcuts import render_to_response, render_to_string
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from util.cache import cache_if_anonymous
 from util.views import fix_crum_request
-from models import Newsletter_emailsForm
+from models import Newsletter_emails
+from django.views.generic.edit import CreateView
 
 valid_templates = []
 
@@ -56,13 +58,6 @@ def render(request, template):
         # This is necessary for the dialog presented with the TOS in /register
         if template == 'honor.html':
             context['allow_iframing'] = True
-        elif template == 'ferie_bez_nudy.html':
-            if request.method == 'POST':
-                form = Newsletter_emailsForm(request.POST)
-                if form.is_valid():
-                    if form.save():
-                        context['saved'] = True
-
         # Format Examples: static_template_about_header
         configuration_base = 'static_template_' + template.replace('.html', '').replace('-', '_')
         page_header = configuration_helpers.get_value(configuration_base + '_header')
@@ -107,40 +102,12 @@ def render_404(request):
 def render_500(request):
     return HttpResponseServerError(render_to_string('static_templates/server-error.html', {}, request=request))
 
-@ensure_csrf_cookie
-def render_no_cache(request, template):
-    """
-    This view function renders the template sent without checking that it
-    exists. Do not expose template as a regex part of the url. The user should
-    not be able to ender any arbitray template name. The correct usage would be:
 
-    url(r'^jobs$', 'static_template_view.views.render', {'template': 'jobs.html'}, name="jobs")
-    """
+class FerieBezNudyCreateView(CreateView):
+    model = Newsletter_emails
+    fields = ['email']
+    template_engine = 'mako'
+    template_name = 'static_templates/ferie_bez_nudy.html'
 
-    # Guess content type from file extension
-    content_type, __ = mimetypes.guess_type(template)
-
-    try:
-        context = {}
-        # This is necessary for the dialog presented with the TOS in /register
-        if template == 'ferie_bez_nudy.html':
-            if request.method == 'POST':
-                form = Newsletter_emailsForm(request.POST)
-                if form.is_valid():
-                    if form.save():
-                        context['saved'] = True
-
-        # Format Examples: static_template_about_header
-        configuration_base = 'static_template_' + template.replace('.html', '').replace('-', '_')
-        page_header = configuration_helpers.get_value(configuration_base + '_header')
-        page_content = configuration_helpers.get_value(configuration_base + '_content')
-        if page_header:
-            context['page_header'] = mark_safe(page_header)
-        if page_content:
-            context['page_content'] = mark_safe(page_content)
-        result = render_to_response('static_templates/' + template, context, content_type=content_type)
-        return result
-    except TopLevelLookupException:
-        raise Http404
-    except TemplateDoesNotExist:
-        raise Http404
+    def form_valid(self, form):
+        return self.render_to_response(self.get_context_data(form=form))
