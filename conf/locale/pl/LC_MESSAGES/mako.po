@@ -1,37 +1,39 @@
 # edX translation file
-# Copyright (C) 2020 edX
+# Copyright (C) 2021 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2020.
-#
+# EdX Team <info@edx.org>, 2021.
+# 
 # Translators:
-# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
+# Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
+# Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
-# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020
+# Jaroslaw Maka <Jaroslaw.Maka@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
-#
+# Navoica Navoica <navoica@opi.org.pl>, 2020
+# Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020
+# Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2021
+# Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2021
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-17 08:31+0000\n"
-"PO-Revision-Date: 2020-08-19 11:04+0000\n"
-"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
+"POT-Creation-Date: 2021-01-19 13:31+0000\n"
+"PO-Revision-Date: 2019-10-24 13:47+0000\n"
+"Last-Translator: Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 "Generated-By: Babel 1.3\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
+#: lms/templates/static_templates/404.html
 msgid "Page Not Found"
 msgstr "Nie odnaleziono strony"
-
-#: cms/templates/404.html lms/templates/static_templates/404.html
-msgid "Page not found"
-msgstr "Nie znaleziono strony"
 
 #: cms/templates/asset_index.html cms/templates/course_info.html
 #: cms/templates/course_outline.html cms/templates/edit-tabs.html
@@ -76,7 +78,10 @@ msgstr "Edytuj"
 #: cms/templates/course-create-rerun.html
 #: cms/templates/course-create-rerun.html cms/templates/index.html
 #: cms/templates/index.html cms/templates/manage_users.html
-#: cms/templates/manage_users_lib.html lms/templates/provider/authorize.html
+#: cms/templates/manage_users_lib.html
+#: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Cancel"
 msgstr "Anuluj"
 
@@ -145,7 +150,8 @@ msgid "Course Run:"
 msgstr "Edycja kursu:"
 
 #: cms/templates/index.html lms/templates/dashboard.html
-#: lms/templates/sysadmin_dashboard.html
+#: lms/templates/dashboard.html lms/templates/dashboard.html
+#: lms/templates/dashboard.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/courseware/courses.html
 #: lms/templates/header/navbar-not-authenticated.html
@@ -715,13 +721,6 @@ msgstr "W przygotowaniu"
 msgid "Starting Soon"
 msgstr "Nadchodzący"
 
-#: lms/templates/dashboard.html lms/templates/dashboard.html
-#: lms/templates/dashboard.html lms/templates/dashboard.html
-#: lms/templates/dashboard.html lms/templates/dashboard.html
-#: lms/templates/dashboard.html
-msgid "Found courses"
-msgstr "Znalezionych kursów"
-
 #: lms/templates/dashboard.html
 msgid "Now"
 msgstr "Trwający"
@@ -755,8 +754,8 @@ msgid "reset filters"
 msgstr "wyczyść filtry "
 
 #: lms/templates/dashboard.html
-msgid "Course List"
-msgstr "Katalog kursów"
+msgid "Found courses"
+msgstr "Znalezionych kursów"
 
 #: lms/templates/dashboard.html lms/templates/courseware/courses.html
 msgid "Sort By"
@@ -830,6 +829,7 @@ msgstr "Historia zamówień"
 #: lms/templates/main.html lms/templates/signup_modal.html
 #: lms/templates/staff_problem_info.html lms/templates/staff_problem_info.html
 #: lms/templates/ccx/schedule.html
+#: lms/templates/courseware/enroll_redirect.html
 #: lms/templates/dashboard/_dashboard_entitlement_unenrollment_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/edit_coupon_modal.html
@@ -838,6 +838,13 @@ msgstr "Historia zamówień"
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
 #: lms/templates/modal/_modal-settings-language.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
 #: themes/edx.org/lms/templates/dashboard.html
@@ -983,25 +990,28 @@ msgstr ""
 " i dla każdego zarejestrowanego użytkownika."
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
-msgid "Navoica page on Facebook"
-msgstr "Strona Navoica na Facebooku"
-
-#: lms/templates/footer.html lms/templates/footer.html
-#: lms/templates/footer.html lms/templates/footer.html
-#: lms/templates/footer.html lms/templates/footer.html
-#: lms/templates/footer.html lms/templates/login-sidebar.html
-#: lms/templates/login-sidebar.html lms/templates/login-sidebar.html
-#: lms/templates/static_templates/accessibility.html
-msgid "open in a new window"
-msgstr "otwórz w nowym oknie"
+msgid "Facebook - Navoica page on Facebook"
+msgstr ""
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
-msgid "Navoica page on Twitter"
-msgstr "Strona Navoica na Twitterze"
+msgid "Facebook - Navoica page on Facebook (open in a new window)"
+msgstr ""
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
-msgid "Navoica page on LinkedIn"
-msgstr "Strona Navoica na LinkedIn"
+msgid "Twitter - Navoica page on Twitter"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "Twitter - Navoica page on Twitter (open in a new window)"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "LinkedIn - Navoica page on LinkedIn"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/login-sidebar.html
+msgid "LinkedIn - Navoica page on LinkedIn (open in a new window)"
+msgstr ""
 
 #: lms/templates/footer.html
 msgid "About us"
@@ -1025,8 +1035,14 @@ msgid "Honor code "
 msgstr "Kodeks honorowy"
 
 #: lms/templates/footer.html
-msgid "Ministry of Science and Higher Education"
-msgstr "Ministerstwo Nauki i Szkolnictwa Wyższego"
+msgid "Ministry of Education and Science"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/footer.html
+#: lms/templates/footer.html lms/templates/footer.html
+#: lms/templates/static_templates/accessibility.html
+msgid "open in a new window"
+msgstr "otwórz w nowym oknie"
 
 #: lms/templates/footer.html
 msgid "The Conference of Rectors of Academic Schools in Poland"
@@ -1289,7 +1305,7 @@ msgstr "Szukaj"
 
 #: lms/templates/index.html lms/templates/header/header.html
 msgid "Search courses..."
-msgstr "Szukaj..."
+msgstr "Wyszukaj kurs"
 
 #: lms/templates/index.html
 msgid "About Navoica"
@@ -3989,20 +4005,10 @@ msgid "Date of certification"
 msgstr "data uzyskania zaświadczenia"
 
 #: lms/templates/certificates/_accomplishment-rendering.html
-msgid "This document confirms the completion of the"
-msgstr "Dokument poświadcza ukończenie kursu"
-
-#: lms/templates/certificates/_accomplishment-rendering.html
-msgid "offered by"
-msgstr "którego organizatorem jest"
-
-#: lms/templates/certificates/_accomplishment-rendering.html
-msgid "through Navoica."
-msgstr "na platformie Navoica,"
-
-#: lms/templates/certificates/_accomplishment-rendering.html
-msgid "verification"
-msgstr "weryfikacja"
+msgid ""
+"This document confirms the completion of the <strong>{course_name}</strong> "
+"offered by {organizer} through Navoica. <a href={cert_url}>verification</a>"
+msgstr ""
 
 #: lms/templates/certificates/_accomplishment-rendering.html
 msgid "experts"
@@ -4442,10 +4448,6 @@ msgstr "wymaga uwagi"
 msgid "Course progress"
 msgstr "Postęp w kursie"
 
-#: lms/templates/courseware/course_navigation.html
-msgid "finished lessons"
-msgstr "ukończonych lekcji"
-
 #: lms/templates/courseware/course_updates.html
 #: lms/templates/courseware/course_updates.html
 msgid "Hide"
@@ -4460,9 +4462,10 @@ msgstr "Pokaż"
 msgid "Show Earlier Course Updates"
 msgstr "Pokaż wcześniejsze aktualizacje kursu"
 
-#: lms/templates/courseware/courses.html lms/templates/courseware/courses.html
-msgid "List of Courses"
-msgstr "Lista kursów"
+#: lms/templates/courseware/courses.html
+#: lms/templates/static_templates/404.html
+msgid "Course List"
+msgstr "Katalog kursów"
 
 #: lms/templates/courseware/courses.html
 msgid "Oldest to Newest "
@@ -4471,6 +4474,10 @@ msgstr "Data rozpoczęcia rosnąco"
 #: lms/templates/courseware/courses.html
 msgid "Newest to Oldest"
 msgstr "Data rozpoczęcia malejąco"
+
+#: lms/templates/courseware/courses.html
+msgid "List of Courses"
+msgstr "Lista kursów"
 
 #: lms/templates/courseware/courseware-chromeless.html
 #: lms/templates/courseware/courseware.html
@@ -4513,6 +4520,74 @@ msgstr ""
 #: lms/templates/courseware/courseware.html
 msgid "Your score is {current_score}%. You have passed the entrance exam."
 msgstr "Twój wynik to {current_score}%. Zdałeś egzamin wstępny."
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid "Register for the course:"
+msgstr "Rejestracja na kurs:"
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid "Continue Registration"
+msgstr "Kontynuuj"
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid "Warning!"
+msgstr "Uwaga!"
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid ""
+"To enroll in a chosen course you have to fill in an additional registration "
+"form. If you agree, you will be <strong>redirected</strong> to an external "
+"registration page <strong>belonging to the course organizer</strong>."
+msgstr ""
+"Aby zapisać się na wybrany kurs musisz wypełnić dodatkowy formularz "
+"rejestracyjny. Jeśli wyrażasz na to zgodę, zostaniesz "
+"<strong>przekierowany/a</strong> na zewnętrzną stronę rejestracji "
+"<strong>należącą do uczelni, która organizuje kurs</strong>."
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid "More information"
+msgstr "Więcej informacji"
+
+#: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/courseware/enroll_redirect.html
+msgid "Why is collecting the user data necessary?"
+msgstr "Dlaczego gromadzenie danych o użytkownikach jest niezbędne?"
+
+#: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/peer_grading/peer_grading_problem.html
+msgid "Continue"
+msgstr "Kontynuuj"
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid ""
+"The course is funded by the European Union and the Polish state budget. The "
+"conditions of funding oblige the university, the organizer of the course, to"
+" collect data about the participants. Personal data from the registration "
+"form, will be collected, processed and verified by the course organizer. "
+"Filling in the form is a prerequisite to join the course."
+msgstr ""
+"Kurs został sfinansowany ze środków Unii Europejskiej i środków budżetu "
+"państwa. Warunki dofinansowania obligują uczelnię - organizatora kursu do "
+"zbierania danych o uczestnikach. Dane osobowe, które zostaną przesłane za "
+"pośrednictwem formularza rejestracyjnego, będą gromadzone, przetwarzane oraz"
+" weryfikowane przez organizatora kursu. Wypełnienie formularza jest "
+"warunkiem przystąpienia do kursu."
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid "Do you agree that the registration form can read:"
+msgstr "Czy zgadzasz się, aby formularz rejestracyjny odczytywał:"
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid "Your user profile at navoica.pl"
+msgstr "Twój profil użytkownika na Navoica.pl"
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid "Your e-mail address"
+msgstr "Twój adres e-mail"
+
+#: lms/templates/courseware/enroll_redirect.html
+msgid "I agree"
+msgstr "Zgadzam się"
 
 #: lms/templates/courseware/gradebook.html
 msgid "Gradebook"
@@ -8681,10 +8756,6 @@ msgid "How did I do?"
 msgstr "Jak mi poszło?"
 
 #: lms/templates/peer_grading/peer_grading_problem.html
-msgid "Continue"
-msgstr "Kontynuuj"
-
-#: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Ready to grade!"
 msgstr "Gotowy do oceny!"
 
@@ -9349,13 +9420,13 @@ msgstr "Potwierdzenie"
 
 #: lms/templates/static_templates/404.html
 msgid ""
-"The page that you were looking for was not found. Go back to the "
-"{link_start}homepage{link_end} or let us know about any pages that may have "
-"been moved at {email}."
+"404 Not Found. Check the website URL. If you have not found what you are "
+"looking for, try the links below:"
 msgstr ""
-"Strona, której szukasz, nie została odnaleziona. Wróć do {link_start}strony "
-"głównej{link_end} i jeśli chcesz, poinformuj nas o brakującej podstronie, "
-"wysyłając e-mail na adres {email}."
+
+#: lms/templates/static_templates/404.html
+msgid "Home"
+msgstr "Strona główna"
 
 #: lms/templates/static_templates/about.html
 #: lms/templates/static_templates/about.html
@@ -9467,10 +9538,10 @@ msgid ""
 msgstr ""
 "Platforma jest w trakcie modyfikacji, które mają uczynić ją bardziej "
 "dostępną. Prace są prowadzone i sukcesywnie dostępność będzie ulegała "
-"poprawie. Do końca października 2020 strony przed zalogowaniem będą "
-"spełniały wytyczne WCAG 2.1 na poziomie AA. Strony dostępne po zalogowaniu "
-"będą dostosowywane w następnym kroku. Równocześnie pracujemy też nad tym, "
-"aby w przyszłości powstawały kursy dostępne cyfrowo."
+"poprawie. Do końca stycznia 2021 strony przed zalogowaniem będą spełniały "
+"wytyczne WCAG 2.1 na poziomie AA. Strony dostępne po zalogowaniu będą "
+"dostosowywane w następnym kroku. Równocześnie pracujemy też nad tym, aby w "
+"przyszłości powstawały kursy dostępne cyfrowo."
 
 #: lms/templates/static_templates/accessibility.html
 msgid "Exclusions"
@@ -9688,10 +9759,9 @@ msgstr "Kontakt"
 
 #: lms/templates/static_templates/contact.html
 msgid ""
-"Online learning platform owned by the Polish Ministry of Science and Higher "
-"Education"
+"Online learning platform owned by the Polish Ministry of Education and "
+"Science"
 msgstr ""
-"Platforma kształcenia na odległość Ministerstwa Nauki i Szkolnictwa Wyższego"
 
 #: lms/templates/static_templates/contact.html
 msgid "Address"
@@ -10392,6 +10462,10 @@ msgstr "Kategoria"
 #: lms/templates/static_templates/faq.html
 msgid "show answers"
 msgstr "pokaż odpowiedzi"
+
+#: lms/templates/static_templates/ferie_bez_nudy.html
+msgid "Navoica dla dzieci i m\\u0142odzie\\u017cy"
+msgstr ""
 
 #: lms/templates/static_templates/honor.html
 msgid ""
@@ -11191,16 +11265,14 @@ msgstr ""
 "e-mail na adres {tech_support_email}."
 
 #: lms/templates/static_templates/server-error.html
-msgid "There has been a 500 error on the {platform_name} servers"
-msgstr "Wystąpił błąd 500 na serwerach {platform_name}"
+msgid "Sorry, something went wrong..."
+msgstr ""
 
 #: lms/templates/static_templates/server-error.html
 msgid ""
-"Please wait a few seconds and then reload the page. If the problem persists,"
-" please email us at {tech_support_email}."
+"Error 500. Please refresh the page or try again later. If the problem "
+"persists, send us an e-mail at: {tech_support_email}."
 msgstr ""
-"Odczekaj kilka sekund, a następnie odśwież stronę. Jeśli problem nie ustąpi,"
-" wyślij e-mail na {tech_support_email}."
 
 #: lms/templates/static_templates/server-overloaded.html
 msgid "Currently the {platform_name} servers are overloaded"
@@ -13522,14 +13594,3 @@ msgstr "Umieść tutaj swój Kodeks Honorowy!"
 #: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Put your Copyright Text here!"
 msgstr "Umieść tutaj tekst swojego Prawa Autorskiego!"
-
-#: lms/templates/static_templates/contact.html
-msgid ""
-"Online learning platform owned by the Polish Ministry of Education and "
-"Science"
-msgstr "Platforma kształcenia na odległość Ministerstwa Edukacji i "
-"Nauki"
-
-#: lms/templates/footer.html
-msgid "Ministry of Education and Science"
-msgstr "Ministerstwo Edukacji i Nauki"
