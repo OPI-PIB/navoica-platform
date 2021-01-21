@@ -1,12 +1,15 @@
 export class FerieBezNudy {
     constructor() {
         $(document).ready(function() {
-            if (!$('html').is(':lang(pl)')) {
+            let $html = $('html');
+            if (!$html.is(':lang(pl)')) {
                 let hrefSelector = $('a[href="/dla-dzieci-i-mlodziezy"]')
                 if (hrefSelector.length > 0 ){
                     hrefSelector.closest('li').hide();
                 }
             }
+
+            $html.css("font-size", "1rem");
 
             $('a[href*="#"]')
                 // Remove links that don't actually link to anything
@@ -51,17 +54,9 @@ export class FerieBezNudy {
                 });
             });
 
-            $(function(){
-                $('.js-toogle-more').on('click', function () {
-                    if ($(this).text() === "Mniej informacji") {
-                        $(this).text("Więcej informacji");
-                    } else {
-                        $(this).text("Mniej informacji");
-                    }
-                });
-            });
+            let $webinarBlock = $('.webinar__block__content');
 
-            $('.webinar__block__content').each(function(){
+            $webinarBlock.each(function(){
                 let currentDate = new Date();
                 let webinarStartDate = new Date($(this).data("start"));
 
@@ -77,6 +72,20 @@ export class FerieBezNudy {
                     $webinarVideo.attr("disabled", "true");
                     $webinarMore.addClass("inactive");
                 }
+            });
+
+            $(function(){
+                $webinarBlock.on('shown.bs.collapse', function () {
+                    let $more = $(this).find(".js-toogle-more");
+                    $more.text("Mniej informacji");
+                    $more.next('.fas').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+                });
+
+                $webinarBlock.on('hidden.bs.collapse', function () {
+                    let $more = $(this).find(".js-toogle-more");
+                    $more.text("Więcej informacji");
+                    $more.next('.fas').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+                });
             });
 
         });
