@@ -3389,3 +3389,12 @@ ELASTIC_FIELD_MAPPINGS = {
     'is_new': {'type': 'boolean'},
     'availability': {'type': 'string'}
 }
+
+## override custom openedx module to navoica version
+try:
+    #if navoica_api.tasks.student.tasks exist than override student.tasks module
+    import navoica_api.tasks.student.tasks
+    sys.modules['student.tasks'] = navoica_api.tasks.student.tasks
+except ImportError:
+    pass
+
