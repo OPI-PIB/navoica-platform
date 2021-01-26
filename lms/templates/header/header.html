@@ -44,7 +44,7 @@ HeaderFactory();
     % endif
     <div class="container">
 
-        <div class="navbar navbar-expand-md justify-content-between">
+        <div class="navbar navbar-expand-md justify-content-between flex-wrap">
 
             <a class="navbar-brand mr-3" href="/">
                 <img src="${static.url(settings.HEADER_NAVOICA_LOGO_IMAGE)}" alt="${_('Navoica logo')}">
@@ -68,7 +68,7 @@ HeaderFactory();
 
             % if request.path != '/':
             <form method="GET" action="/courses" class="form-inline mr-auto d-none d-xl-block" role="search">
-                <div class="input-group w-100">
+                <div class="input-group w-100 d-flex flex-nowrap">
                     <label for="search-course" class="sr-only">${_('Search courses')}</label>
                     <input class="form-control search-input" id="search-course" type="search" name="search_query" placeholder="${_('Search courses...')}">
                     <div class="input-group-append">
@@ -82,7 +82,7 @@ HeaderFactory();
 
             % endif
 
-            <nav class="d-flex" role= "navigation" aria-label="Menu">
+            <nav class="d-flex header-navigation__menu" role= "navigation" aria-label="Menu">
                 <div class="dropdown ml-auto">
                     <button id="mooc-my-mooc"
                             class="btn btn-outline-primary border-secondary dropdown-toggle"
@@ -102,7 +102,7 @@ HeaderFactory();
                     </div>
                 </div>
                 <div class="collapse navbar-collapse desktop-menu" id="navbarResponsive">
-                    <div class="navbar-nav ml-auto" role="menu">
+                    <div class="navbar-nav ml-auto flex-wrap justify-content-center" role="menu">
                         % if header_language_selector_is_enabled():
                         <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
                             <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">

@@ -14213,6 +14213,7 @@ span.complete-checkmark.fa.fa-check {
 
   #search-course.search-input {
     max-width: 235px;
+    width: calc(1/2*100vh + (2.1rem)) !important;
   }
 }
 
@@ -15255,4 +15256,10 @@ $background: #F3F5F6;
 
 .text-lightblue {
   color: $lightblue;
+}
+
+.header-navigation {
+  &__menu {
+    padding: 0.358rem 0;
+  }
 }
