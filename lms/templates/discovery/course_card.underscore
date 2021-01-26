@@ -1,5 +1,5 @@
 
-	<a href="/courses/<%- course %>/about" class="card h-100">
+	<a href="/courses/<%- course %>/about" class="card card__course h-100">
 	  <div class="card-body d-flex flex-column">
 	    <figure class="course-card-image">
 			<img class="card-img-top" src="<%- image_url %>" alt="" />

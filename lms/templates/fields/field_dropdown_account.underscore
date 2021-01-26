@@ -17,7 +17,7 @@
         <span class="sr"><%- screenReaderTitle %></span>
         <span class="u-field-value-readonly"></span>
     <% } else { %>
-        <select name="select" id="u-field-select-<%- id %>" aria-describedby="u-field-help-message-<%- id %>">
+        <select class="input-base" name="select" id="u-field-select-<%- id %>" aria-describedby="u-field-help-message-<%- id %>">
             <% _.each(groupOptions, function(groupOption) { %>
                 <% if (showBlankOption) { %>
                     <% if (groupOption.nullValueOptionLabel) { %>
@@ -35,7 +35,7 @@
             <% }); %>
         </select>
         <span class="icon-caret-down" aria-hidden="true"></span>
-        <button class="u-field-value-display">
+        <button class="u-field-value-display" tabindex="-1">
             <span class="sr"><%- screenReaderTitle %> &nbsp;</span>
             <span class="u-field-value-readonly"></span>
             <span class="sr"><%- gettext('Click to edit') %></span>
