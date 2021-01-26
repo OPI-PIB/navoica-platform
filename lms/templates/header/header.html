@@ -205,7 +205,7 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
 
             let activeElement;
 
-            function addTabPressFocus(e) {
+            /*function addTabPressFocus(e) {
                 e = e || event;
 
                 if (e.keyCode === 9) {
@@ -241,7 +241,7 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
             body.addEventListener('keydown', removeTabPressFocus);
             body.addEventListener('mousedown', removeTabPressFocus);
 
-            $searchInput.on("mousedown", function() {
+           $searchInput.on("mousedown", function() {
                 $searchContainer.addClass('focus-on-mouse');
             });
 
@@ -252,7 +252,7 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
             $searchInput.on("blur", function() {
                 $searchContainer.removeClass('focus-on-mouse');
                 $searchContainer.removeClass('focus-on-keyboard');
-            });
+            });*/
 
             if (typeof navigator !== "undefined") {
                 let getBrowserFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('font-size');

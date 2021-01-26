@@ -1486,6 +1486,7 @@ PIPELINE_CSS = {
             'css/course-list.css',
             'css/faq.css',
             'css/cookie-alert.css',
+            'css/what-input/index.css',
             'js/vendor/tinymce/js/tinymce/plugins/codesample/css/prism.css',
             #'css/course-content.css',
             #'css/polipedia.css',
