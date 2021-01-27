@@ -13661,33 +13661,47 @@ span.complete-checkmark.fa.fa-check {
 .error-code-main{
   background-color: #f8f9fa;
 }
-
 .error-code-content {
   padding-top: 8.5rem;
   padding-bottom: 6.25rem;
-  margin: 0 1.875rem 0 1.875rem;
+  margin: 0 1.875rem;
 }
 .error-code-info {
-  background: transparent url('/static/images/404.png') 0% 0% no-repeat padding-box;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: 2rem;
 }
-
+.error-code-info-title-gray {
+  font: normal normal bold 2.1875rem/2.9375rem Open Sans;
+  color: #6E8EC4;
+  opacity: 1;
+  margin-top: 5.125rem;
+}
 .error-code-info-title {
   font: normal normal bold 2.1875rem/2.625rem Open Sans;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #413F3F;
   opacity: 1;
   margin-bottom: 1rem;
-  margin-top: 5.125rem;
 }
 .error-code-info-text {
   font: normal normal normal 1rem/1.5625 Open Sans;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #413F3F;
   opacity: 1;
   margin-bottom: 1.875rem;
+  a {
+    font: normal normal 600 0.875rem/1.1875rem Open Sans;
+    letter-spacing: 0.7px;
+    color: #2F5DAB;
+    opacity: 1;
+    border-bottom: 1px solid #2F5DAB;
+
+    &:hover {
+      text-decoration: none;
+      color: #2F5DAB;
+    }
+  }
 }
 .error-code-info-link {
   font: normal normal 600 0.875rem/1.1875rem Open Sans;
@@ -13704,8 +13718,15 @@ span.complete-checkmark.fa.fa-check {
 }
 
 @media (max-width: 960px) {
+  .error-code-info-title-gray {
+    font: normal normal bold 2.1875rem/2.9375rem Open Sans;
+    color: #6E8EC4;
+    opacity: 1;
+    margin-top: 4.0625rem;
+  }
+  
   .error-code-content {
-    margin: 0 1.875rem 0 1.875rem;
+    margin: 0 1.875rem;
     padding-top: 1.875rem;
   }
 
@@ -13715,14 +13736,7 @@ span.complete-checkmark.fa.fa-check {
 
   .error-code-image {
     max-width: 410px;
-    margin: 0 auto 0 auto;
-  }
-
-  .error-code-info-title-gray {
-    font-weight: 800;
-    font-size: 3.75rem;
-    color: #2F5DAB;
-    opacity: 11%;
+    margin: 0 auto;
   }
 
   .error-code-info-link {
@@ -13732,7 +13746,7 @@ span.complete-checkmark.fa.fa-check {
 
 @media (max-width: 360px) {
   .error-code-content {
-    margin: 0 1rem 0 1rem;
+    margin: 0 1rem;
     padding-top: 1rem;
   }
 
@@ -13743,12 +13757,16 @@ span.complete-checkmark.fa.fa-check {
 
   .error-code-image {
     width: 90%;
-    margin: 0 auto 0 auto;
+    margin: 0;
   }
 
   .error-code-info-title-gray {
-    font-size: 2.5rem;
+    font: normal normal bold 1.875rem/2.5625rem Open Sans;
+    color: #6E8EC4;
+    opacity: 1;
+    margin-top: 1rem;
   }
+
   .error-code-info-title {
     font: normal normal bold 1.5rem/2.0625rem Open Sans;
     margin-bottom: 0.5rem;
