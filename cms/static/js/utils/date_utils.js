@@ -67,9 +67,7 @@ function($, date, RegionalPl,  moment, momentTz ,TriggerChangeEventOnEnter) {
             time = $(timepickerInput).timepicker('getTime');
         }
         if (date && time) {
-            time.setFullYear(date.getFullYear());
-            time.setMonth(date.getMonth());
-            time.setDate(date.getDate());
+            time.setFullYear(date.getFullYear(), date.getMonth(), date.getDate());
             return time;
 
         } else if (date) {
