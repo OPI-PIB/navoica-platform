@@ -59,7 +59,7 @@
                 if (sort === 'enrollmentStart') {
                     courses.sort(
                         function (a, b) {
-                            return (a.data.enrollment_start > b.data.enrollment_start) ? 1 : -1
+                            return (a.data.enrollment_start < b.data.enrollment_start) ? 1 : -1
                         }
                     );
                 }
