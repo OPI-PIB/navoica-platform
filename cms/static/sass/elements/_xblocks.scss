@@ -1017,3 +1017,48 @@ div.wrapper-comp-editor.is-inactive ~ div.launch-latex-compiler {
     padding: ($baseline / 2) 0 ($baseline * 0.4);
   }
 }
+
+/** VIDEO EDIT **/
+.wrapper-comp-setting #add_lang_btn {
+  border: 1px solid #b43f37;
+  background: #fff;
+  color: #b43f37;
+  font-weight: 600;
+  height: 48px;
+  border-radius: 4px;
+  padding: 5px 20px 6.66667px !important;
+}
+
+.wrapper-comp-setting #add_lang_btn:hover, .wrapper-comp-setting #add_lang_btn:focus {
+  border: 1px solid #b43f37;
+  background-color: #b43f37;
+  color: #fff;
+  box-shadow: none;
+}
+
+.wrapper-comp-setting #select_add_language {
+  height: 48px;
+  background-color: #ffffff;
+}
+.wrapper-comp-setting #select_add_language:focus, .wrapper-comp-setting #select_add_language:active, .wrapper-comp-setting #select_add_language:hover {
+  background-color: #ffffff;
+}
+
+.wrapper-comp-setting .remove_lang_btn {
+  border: 1px solid #b43f37;
+  background: #ffffff;
+  color: #b43f37;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 4px 20px 5px;
+}
+
+.wrapper-comp-setting .remove_lang_btn:hover, .wrapper-comp-setting .remove_lang_btn:focus {
+  border: 1px solid #b43f37;
+  background: #b43f37;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 4px 20px 5px;
+}
+/** VIDEO EDIT END **/
