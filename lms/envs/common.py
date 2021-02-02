@@ -1925,10 +1925,6 @@ CELERYD_HIJACK_ROOT_LOGGER = False
 
 
 CELERYBEAT_SCHEDULE = {
-    'generate-certificates-at-midnight': {
-        'task': 'lms.djangoapps.certificates.tasks.generate_missing_certificates',
-        'schedule': crontab(minute=0, hour="*/6"),
-    },
 }
 
 ################################ Block Structures ###################################

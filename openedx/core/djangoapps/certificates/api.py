@@ -104,4 +104,4 @@ def display_date_for_certificate(course, certificate):
     ):
         return course.certificate_available_date
 
-    return certificate.modified_date
+    return certificate.created_date
