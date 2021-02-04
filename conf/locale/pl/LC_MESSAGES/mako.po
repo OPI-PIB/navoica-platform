@@ -2,18 +2,18 @@
 # Copyright (C) 2021 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2021.
-#
+# 
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-01-13 15:04+0000\n"
+"POT-Creation-Date: 2021-02-02 13:12+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -4542,7 +4542,7 @@ msgstr "Więcej informacji"
 #: lms/templates/courseware/enroll_redirect.html
 #: lms/templates/courseware/enroll_redirect.html
 msgid "Why is collecting the user data necessary?"
-msgstr "Dlaczego gromadzenie danych o użytkownikach jest niezbędne?"
+msgstr "Dlaczego gromadzenia danych o użytkownikach jest niezbędne?"
 
 #: lms/templates/courseware/enroll_redirect.html
 #: lms/templates/peer_grading/peer_grading_problem.html
@@ -5776,6 +5776,49 @@ msgstr "Zalecamy zmianę hasła."
 #: lms/templates/emails/account_creation_and_enroll_emailMessage.txt
 msgid "Sincerely yours,The {course_name} Team"
 msgstr "Z poważaniem, kadra kursu \"{course_name}\""
+
+#: lms/templates/emails/activation_email.html
+msgid "Dear user"
+msgstr "Drogi Użytkowniku,"
+
+#: lms/templates/emails/activation_email.html
+msgid ""
+"You have just registered on the NAVOICA platform. Thank you for joining us!"
+msgstr ""
+"właśnie zarejestrowałeś/aś się na platformie edukacyjnej NAVOICA. Dziękujemy"
+" za to, że chcesz się uczyć razem z nami!"
+
+#: lms/templates/emails/activation_email.html
+msgid "To activate your account, please click the button below:"
+msgstr "Aby aktywować swoje konto, kliknij poniższy przycisk:"
+
+#: lms/templates/emails/activation_email.html
+#: lms/templates/emails/activation_email.html
+msgid "Verify e-mail address"
+msgstr "Potwierdź adres e-mail"
+
+#: lms/templates/emails/activation_email.html
+msgid "Enjoy learning with Navoica.pl!"
+msgstr "Życzymy przyjemnej nauki!"
+
+#: lms/templates/emails/activation_email.html
+msgid "NAVOICA team"
+msgstr "Zespół platformy NAVOICA"
+
+#: lms/templates/emails/activation_email.html
+msgid ""
+"This is an automatically generated e-mail \\u2013 please do not reply to it."
+msgstr ""
+"Wiadomość została wygenerowana automatycznie \\u2013 prosimy na nią nie "
+"odpowiadać."
+
+#: lms/templates/emails/activation_email.html
+msgid "If you have any questions or comments, please"
+msgstr "W przypadku pytań lub uwag, prosimy o"
+
+#: lms/templates/emails/activation_email.html
+msgid "contact us"
+msgstr "kontakt"
 
 #: lms/templates/emails/activation_email.txt
 msgid ""
@@ -9411,11 +9454,11 @@ msgstr "Potwierdzenie"
 
 #: lms/templates/static_templates/404.html
 msgid ""
-"404 Not Found. Check the website URL. If you have not found what you are "
-"looking for, try the links below:"
+"Check the website URL. If you have not found what you are looking for, try "
+"the links below:"
 msgstr ""
-"Błąd 404. Sprawdź adres URL strony. Jeśli nie znalazłeś/aś tego, czego "
-"szukasz, spróbuj poniższych linków:"
+"Sprawdź adres URL strony. Jeśli nie znalazłeś/aś tego, czego szukasz, "
+"spróbuj poniższych linków:"
 
 #: lms/templates/static_templates/404.html
 msgid "Home"
@@ -11259,11 +11302,11 @@ msgstr "Przepraszamy, coś poszło nie tak..."
 
 #: lms/templates/static_templates/server-error.html
 msgid ""
-"Error 500. Please refresh the page or try again later. If the problem "
-"persists, send us an e-mail at: {tech_support_email}."
+"Please refresh the page or try again later. If the problem persists, send us"
+" an e-mail at: {tech_support_email}."
 msgstr ""
-"Błąd 500. Odśwież stronę lub spróbuj ponownie później. Jeśli problem się "
-"powtarza napisz do nas na:{tech_support_email}."
+"Odśwież stronę lub spróbuj ponownie później. Jeśli problem się powtarza "
+"napisz do nas na:{tech_support_email}."
 
 #: lms/templates/static_templates/server-overloaded.html
 msgid "Currently the {platform_name} servers are overloaded"
