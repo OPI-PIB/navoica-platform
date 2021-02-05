@@ -10,7 +10,7 @@ from django.contrib.staticfiles import finders
 %>
 
 <%inherit file="../main.html" />
-<%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
+<%block name="pagetitle">${_("Go to registration form")} | ${course.display_name_with_default_escaped} | Navoica.pl</%block>
 
 <section id="skip-main" class="enroll-redirect">
         <main class="container">
@@ -27,7 +27,7 @@ from django.contrib.staticfiles import finders
                         </div>
                         <div class="continue-registration__block__footer">
                             <a href="${reverse('about_course', args=[text_type(course.id)])}" class="btn btn__cancel text-semi-bold">${_("Cancel")}</a>
-                            <a href="#" class="btn btn__continue-registration text-semi-bold" data-toggle="modal" data-target="#modal-continue">${_("Continue")}</a>
+                            <a href="${course.external_enroll_url}registration_form/${course.id}/course" class="btn btn__continue-registration text-semi-bold">${_("Continue")}</a>
                         </div>
                     </div>
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-02-03 09:44+0000\n"
-"PO-Revision-Date: 2021-02-03 09:45:38.374737\n"
+"POT-Creation-Date: 2021-02-09 12:29+0000\n"
+"PO-Revision-Date: 2021-02-09 12:30:07.262290\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -4024,6 +4024,10 @@ msgid "Your score is {current_score}%. You have passed the entrance exam."
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
+msgid "Go to registration form"
+msgstr ""
+
+#: lms/templates/courseware/enroll_redirect.html
 msgid "Register for the course:"
 msgstr ""
 
@@ -4066,18 +4070,22 @@ msgid ""
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Do you agree that the registration form can read:"
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Your user profile at navoica.pl"
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Your e-mail address"
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "I agree"
 msgstr ""
 
@@ -7849,20 +7857,11 @@ msgid "Go Back"
 msgstr ""
 
 #: lms/templates/provider/authorize.html
-msgid ""
-"Application would like to access your data with the following permissions:"
+msgid "Authorization"
 msgstr ""
 
 #: lms/templates/provider/authorize.html
 msgid "Read your user ID"
-msgstr ""
-
-#: lms/templates/provider/authorize.html
-msgid "Read your user profile"
-msgstr ""
-
-#: lms/templates/provider/authorize.html
-msgid "Read your email address"
 msgstr ""
 
 #: lms/templates/provider/authorize.html
@@ -7879,10 +7878,6 @@ msgstr ""
 
 #: lms/templates/provider/authorize.html
 msgid "Manage your data: {permission}"
-msgstr ""
-
-#: lms/templates/provider/authorize.html
-msgid "Authorize"
 msgstr ""
 
 #: lms/templates/registration/account_activation_sidebar_notice.html
