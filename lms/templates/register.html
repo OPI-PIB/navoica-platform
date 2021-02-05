@@ -38,7 +38,16 @@ import calendar
             $("label").parent().removeClass("is-focused");
         });
 
+/*
+        $(".toggle-password").focus(function () {
+            $(".toggle-password").addClass("is-focused");
+        }).blur(function () {
+            $(".toggle-password").removeClass("is-focused");
+        })
+*/
     });
+
+
 
 
     (function () {
@@ -104,6 +113,7 @@ import calendar
                 isValid: false,
                 message: "${_('To enroll, you must follow the honor code.')}",
                 field: "${_('Honor Code')}",
+
             }
         };
 
@@ -201,6 +211,7 @@ import calendar
         $('#register-form').on('ajax:error', function (event, jqXHR, textStatus) {
             toggleSubmitButton(true);
             json = $.parseJSON(jqXHR.responseText);
+            $('.error-in-login').addClass('is-shown').focus();
             $('.status.message.submission-error').addClass('is-shown').focus();
             $('.status.message.submission-error .message-copy').css("display", "block");
             $(".field-error").removeClass('field-error');
@@ -219,57 +230,78 @@ import calendar
         var $submitButton = $('form .form-actions #submit');
 
         if (enable) {
-            $submitButton.removeClass('is-disabled').attr('aria-disabled', false).removeProp('disabled').removeAttr('disabled').html("<i class='fas fa-check' aria-hidden='true'></i> ${_('Register')}");
+            $submitButton.removeClass('is-disabled').attr('aria-disabled', false).removeProp('disabled').removeAttr('disabled').text("${_('Register')}");
         }
         else {
             $submitButton.addClass('is-disabled').prop('disabled', true).text("${_('Processing your account information')}");
         }
     }
+
+/*
+    function passShowHide() {
+
+      $(this).toggleClass("fa-eye-slash");
+
+      var input = $($(this).attr("toggle"));
+      var span = $(this).find("span");
+
+      span.attr("aria-live", "assertive");
+
+      if (input.attr("type") === "password") {
+        input.attr("type", "text");
+        span.text("hide");
+      } else {
+        input.attr("type", "password");
+        span.text("show");
+      }
+    }
+
+    $(".toggle-password").on('click', passShowHide);
+
+    $(".toggle-password").on('keypress', function(event) {
+        if(event.which === 13) {
+            passShowHide.call(this);
+        }    
+    });
+
+
+    $(".toggle-password").focusout(function(){
+        $(".toggle-password").find("span").removeAttr("aria-live");
+    });
+
+*/   
+
 </script>
 </%block>
 
 
-<div id="content" class="border-top py-5">
-  <section class="register container login" id="skip-main">
-    <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
-    <div class="d-flex">
-       <article id="result">
-           <header class="header-login">
-             <h2 class="custom-h2">
-              <span class="d-none d-md-block">${_("Registration form")}</span>
-            </h2>
-          </header>
-            <h1 class="mt-0"><strong>${_("Welcome!")}</strong><br> ${_("Register below to create your {platform_name} account").format(platform_name=platform_name)}</h1>
+<div class="content-login border-top bg-login"> <!--div1 -->
+     <main class="login" id="skip-main">
+        <div class="tab-content" id="nav-tabContent"> <!-- div tab-content -->
+             <div class="d-flex"> <!-- div d-flex -->
+                <article id="result">
+                    <section class="section-header-login"> <!-- section section-header-login -->
+                      <header>
+                        <h1 class="login-header f-22 h-26">${_("Register")}</h1>
+                      </header>
 
-            <section role="main">
-                <form id="register-form" method="post" data-remote="true" action="/create_account" novalidate aria-label="${_('Registration form')}">
-                    <%
-                    # allow for theming override on the registration form
-                    registration_form = static.get_template_path('register-form.html')
-                    %>
-                    <%include file="${registration_form}" />
-                </form>
-             </section>
+                      <p class="instructions f-14 h-20">
+                        ${_("You will get access to free courses at {platform_name}. </br> <strong> Required fields are noted by an asterisk.</strong>").format(platform_name=platform_name)}
+                      </p>
+                    </section> <!-- section section-header-login -->
 
-        </article>
-
-        <aside>
-          <div class="header-login">
-            <h2 id="h2">
-              <span class="d-none d-md-block">${_("Helpful Information")}</span>
-            </h2>
-          </div>
-            <%
-            # allow for theming overrides on the registration sidebars, otherwise default to pre-existing ones
-            sidebar_file = static.get_template_path('register-sidebar.html')
-            %>
-
-            <%include file="${sidebar_file}" />
-        </aside>
-
-      </div>
-   </div>
-   </div>
-  </section>
- </div>
+                    <section class="section-register" role="main">
+                        <form id="register-form" method="post" data-remote="true" action="/create_account" novalidate aria-label="${_('Registration form')}">
+                            <%
+                            # allow for theming override on the registration form
+                            registration_form = static.get_template_path('register-form.html')
+                            %>
+                            <%include file="${registration_form}"/>
+                        </form>
+                        <p class="login-problem f-14 h-19">${_("You can't register? Send an e-mail to: ")}<a href="mailto:mooc_help@opi.org.pl"> ${_("mooc_help@opi.org.pl.")}</a></p>
+                    </section>
+                </article>  
+            </div> <!-- div d-flex -->
+        </div> <!-- div tab-content -->
+    </main>
+</div> <!--div1 -->

@@ -7,6 +7,24 @@
 
 
 :root {
+/* LOGIN Colors: */
+--color-d71932: #D71932;
+--color-f8f9fa: #F8F9FA;
+--color-d1d6dc: #D1D6DC;
+--color-5b5b5b: #5B5B5B;
+--color-008080: #008080;
+--color-3f3d56: #3F3D56;
+--color-fcfcfc: #FCFCFC;
+--color-dedfdf: #DEDFDF;
+--color-212529: #212529;
+--color-374049: #374049;
+--color-686970: #686970;
+--color-919191: #919191;
+--color-3c4043: #3C4043;
+--color-ffffff: #FFFFFF;
+--color-e41d37: #E41D37;
+--color-a11326: #A11326;
+
   --blue:#007bff;
   --indigo:#6610f2;
   --purple:#6f42c1;
@@ -694,10 +712,13 @@ pre {
 }
 
 .login-register {
-  margin: 6rem 0 0 !important;
+  padding: 6rem 0 0 !important;
   display: flex;
   justify-content: center;
+  .submission-error {
+    padding: 0 16px;
   }
+ }
 
  .paragon__btn:not(:disabled):not(.paragon__disabled) {
   margin-bottom: 3rem;
@@ -3875,12 +3896,6 @@ input {
     }
   }
 
-  &:not(:disabled):active ~ .custom-control-label::before {
-    color: #fff;
-    background-color: #f7bcc4;
-    border-color: #f7bcc4;
-  }
-
   &:disabled ~ .custom-control-label {
     color: #6c757d;
 
@@ -6214,7 +6229,6 @@ a.close.disabled {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 1rem;
   border-top: 1px solid #dee2e6;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -10218,13 +10232,6 @@ footer {
   border-color: #ced4da !important;
   margin: 0 0 4rem;
 
-.login {
-//  margin-top: 30px;
-}
-  /*
-  padding: 3*$font-size-base 0;
-  */
-
   .display-2 {
     margin: 0 0 2rem;
   }
@@ -11998,29 +12005,8 @@ aside {
   }
 }
 
-.login {
-//  margin-top: 30px;
-  width: 100%;
-  padding-right: 8px;
-  padding-left: 8px;
-  margin-right: auto;
-  margin-left: auto;
-  .d-flex {
-    flex-flow: column;
-  }
-}
 
 @media (min-width: 960px) {
-  .login {
-    max-width: 960px;
-    .d-flex {
-      align-items: stretch;
-      flex-flow: row wrap;
-    }
-    #results {
-      flex: 1 1;
-    }
-  }
   #basic-data-facets {
     display: block !important;
     .list-group-item {
@@ -12035,12 +12021,6 @@ aside {
   //  margin-left: 0;
   //  padding-left: 0;
   // border-left: none;
-  }
-}
-
-@media (min-width: 1280px) {
-  .login {
-    max-width: 1280px;
   }
 }
 
@@ -12064,13 +12044,7 @@ label {
   text-transform: none;
 }
 
-.login #login-form .status.message {
-   display: none;
-}
 
-.login #login-form .status.message.is-shown {
-   display: block;
-}
 
 #alert-info {
     color: #0c5460;
@@ -12103,13 +12077,6 @@ label {
     box-shadow: 0 0 4px inset #ced4da;
     margin-bottom: 2rem;
     padding: 1rem;
-}
-
-#email:focus, #password:focus {
-     color: #212529 !important;
-     background-color: #fff !important;
-     outline: 0;
-     box-shadow: 0 0 0 0.2rem #dee2e6;
 }
 
 @media (min-width: 960px) {
@@ -12184,7 +12151,7 @@ fieldset {
 }
 
 .modal-footer {
-  padding: 1rem 0 0 0 !important;
+  padding: 1rem 0 0 0;
 }
 
 #group-form-login {
@@ -12192,9 +12159,8 @@ fieldset {
 }
 
 #forgot-password-modal {
-  verflow-x: hidden;
+  overflow-x: hidden;
   overflow-y: auto;
-  padding-right: 19px;
 }
 
 
@@ -12721,7 +12687,6 @@ fieldset {
     background-color: #fad2d7;
     border: 1px solid #f7c0c7;
     .title {
-      font-size: 2rem;
       font-weight: 600;
     }
     .copy {
@@ -12951,10 +12916,6 @@ main.container .d-flex {
 .nav-link {
   width: 50%;
   flex: auto;
-}
-.field-gender, .field-yob {
-  margin-left: -4px;
-  margin-right: -4px;
 }
 .dashboard-banner, .activation-message-container {
   padding-top: 8px;
@@ -13829,14 +13790,14 @@ span.complete-checkmark.fa.fa-check {
 }
 
 #lean_overlay {
-    background-image: radial-gradient(circle at 50% 30%, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    background: rgba(60, 64, 67, 0.6);;
     display: none;
     height: 100%;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 1100;
 }
 
 #email_settings_form {
@@ -14293,9 +14254,6 @@ span.complete-checkmark.fa.fa-check {
 }
 
 /** ERROR FIELD **/
-input.form-control.form-control.error-field, .error-field, .error-field ~ .custom-control-label::before {
-  border: 2px solid #e41d37;
-}
 
 .f-10 {
   font-size: 0.625rem;
@@ -14313,8 +14271,16 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   font-size: 0.9375rem;
 }
 
+.f-16 {
+  font-size: 1rem;
+}
+
 .f-18 {
   font-size: 1.125rem;
+}
+
+.f-22{
+  font-size: 1.375rem;
 }
 
 .message.message-status.course-status-certavailable.is-shown {
@@ -14689,6 +14655,7 @@ input.form-control.form-control.error-field, .error-field, .error-field ~ .custo
   }
 }
 /** -- CONTINUE REGISTRATION COURSE END -- **/
+
 
 /*** WEBINAR FERIE BEZ NUDY ***/
 
@@ -15281,3 +15248,33 @@ $background: #F3F5F6;
     padding: 0.358rem 0;
   }
 }
+
+/** line height **/
+
+.h-0 {
+  line-height: unset;
+}
+
+.h-18 {
+  line-height: 1.125rem;
+}
+
+.h-19 {
+  line-height: 1.1875rem;
+}
+
+.h-20 {
+  line-height: 1.25rem;
+}
+
+.h-26 {
+  line-height: 1.625rem;
+}
+
+.h-35 {
+  line-height: 2.188rem;
+}
+
+/** end line height **/
+
+@import "../login.scss";

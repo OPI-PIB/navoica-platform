@@ -282,7 +282,7 @@ def _handle_failed_authentication(user):
         else:
             AUDIT_LOG.warning(u"Login failed - password for {0} is invalid".format(user.email))
 
-    raise AuthFailedError(_('Email or password is incorrect.'))
+    raise AuthFailedError(_('Please try again.'))
 
 
 def _handle_successful_authentication_and_login(user, request):
