@@ -1060,7 +1060,9 @@ msgstr "Wszelkie prawa zastrzeżone"
 msgid ""
 "Enter the e-mail address you registered with and we'll send you a link to "
 "change your password."
-msgstr "Wprowadź swój adres e-mail, a prześlemy Ci link do zmiany hasła."
+msgstr ""
+"Podaj adres e-mail, na który założyłeś/aś konto w platformie Navoica, abyśmy"
+" mogli wysłać Ci link do zmiany hasła."
 
 #: lms/templates/forgot_password_modal.html
 msgid "Enter your E-mail Address to reset your password"
@@ -1068,7 +1070,7 @@ msgstr "Wprowadź swój adres e-mail, aby zresetować hasło"
 
 #: lms/templates/forgot_password_modal.html
 msgid "Having trouble changing your password? Send an e-mail to: "
-msgstr "Nie możesz zmienić hasła? Wyślij wiadomość e-mail na adres:"
+msgstr "Nie możesz zresetować hasła? Wyślij wiadomość e-mail na adres: "
 
 #: lms/templates/forgot_password_modal.html lms/templates/login-sidebar.html
 #: lms/templates/login.html lms/templates/register-sidebar.html
@@ -1078,7 +1080,7 @@ msgstr "mooc_help@opi.org.pl."
 
 #: lms/templates/forgot_password_modal.html
 msgid "Check your e-mail"
-msgstr "Sprawdź pocztę e-mail"
+msgstr "Sprawdź swoją pocztę"
 
 #: lms/templates/forgot_password_modal.html
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
@@ -1472,8 +1474,8 @@ msgid ""
 "You will get access to free courses on {platform_name} </br> No account yet?"
 " "
 msgstr ""
-"Otrzymasz dostęp do bezpłatnych kursów na {platform_name} </br> "
-"Niezarejestrowany?"
+"Uzyskasz dostęp do bezpłatnych kursów na {platform_name}</br> Nie masz "
+"jeszcze konta?"
 
 #: lms/templates/login.html lms/templates/register-form.html
 #: lms/templates/register.html lms/templates/register.html
@@ -1524,9 +1526,7 @@ msgstr "Zapamiętaj mnie"
 
 #: lms/templates/login.html
 msgid " Can't log in? Send an e-mail to: "
-msgstr ""
-"Nie możesz się zalogować? Prosimy o kontakt z Centrum Pomocy wysyłając "
-"wiadomość e-mail na adres:"
+msgstr "Nie możesz się zalogować? Wyślij wiadomość e-mail na adres:"
 
 #. Translators: this is the last choice of a number of choices of how to log
 #. in
@@ -1877,13 +1877,13 @@ msgstr "Kliknij, aby wyświetlić hasło"
 
 #: lms/templates/register-form.html
 msgid "Use at least {num} characters"
-msgstr "Użyj co najmniej {num} znaków"
+msgstr "Co najmniej {num} znaków"
 
 #: lms/templates/register-form.html lms/templates/register-form.html
 msgid "Full name is be displayed on certificates you obtain"
 msgstr ""
-"Twoje dane osobowe nanoszone na każde uzyskane przez ciebie zaświadczenie o "
-"ukończeniu kursu."
+"Będą nanoszone na każde uzyskane przez Ciebie zaświadczenie o ukończeniu "
+"kursu"
 
 #: lms/templates/register-form.html lms/templates/register-form.html
 msgid "User profile is visible in discussions and forums you participate in"
@@ -2137,8 +2137,8 @@ msgid ""
 "You will get access to free courses at {platform_name}. </br> <strong> "
 "Required fields are noted by an asterisk.</strong>"
 msgstr ""
-"Otrzymasz dostęp do bezpłatnych kursów na {platform_name}. </br> <strong> "
-"Pola obowiązkowe zostały oznaczone gwiazdką (*).</strong>"
+"Uzyskasz dostęp do bezpłatnych kursów na {platform_name}. </br> <strong> "
+"Pola obowiązkowe zostały oznaczone gwiazdką.</strong>"
 
 #: lms/templates/register.html
 msgid "Registration form"
@@ -2146,9 +2146,7 @@ msgstr "Formularz rejestracji"
 
 #: lms/templates/register.html
 msgid "You can't register? Send an e-mail to: "
-msgstr ""
-"Nie możesz się zarejestrować? Prosimy o kontakt z Centrum Pomocy wysyłając "
-"wiadomość e-mail na adres:"
+msgstr "Masz problem z rejestracją? Wyślij wiadomość e-mail na adres:"
 
 #: lms/templates/resubscribe.html
 msgid "Re-subscribe Successful!"
@@ -8963,8 +8961,8 @@ msgid ""
 "If there is an account associated with the given address, an e-mail with a "
 "link to change the password was sent to it."
 msgstr ""
-"Jeśli istnieje konto powiązane z podanym adresem e-mail, to wysłaliśmy na "
-"niego link do zmiany hasła. "
+"Jeśli istnieje konto powiązane z podanym adresem e-mail, została na niego "
+"wysłana wiadomość z linkiem do strony, na której ustalisz swoje nowe hasło."
 
 #: lms/templates/shoppingcart/billing_details.html
 #: lms/templates/shoppingcart/receipt.html
@@ -11310,7 +11308,7 @@ msgid ""
 "Please refresh the page or try again later. If the problem persists, send us"
 " an e-mail at: {tech_support_email}."
 msgstr ""
-"Odśwież stronę lub spróbuj ponownie później. Jeśli problem się powtarza "
+"Odśwież stronę lub spróbuj ponownie później. Jeśli problem się powtarza, "
 "napisz do nas na: {tech_support_email}."
 
 #: lms/templates/static_templates/server-overloaded.html
