@@ -86,7 +86,9 @@ RETRY_DELAY_SECONDS = 30
 COURSE_LEVEL_TIMEOUT_SECONDS = 1200
 VIDEO_LEVEL_TIMEOUT_SECONDS = 300
 
-@task()
+BASE_UPLOAD_VIDEO_TMP = "/edx/var/edxapp/tmp/"
+
+@task(routing_key=settings.HIGH_PRIORITY_QUEUE)
 def upload_video(full_path, path):
     LOGGER.info("[Encode videos] Uploading: %s" % path)
     with open(full_path, 'rb') as data:
@@ -97,12 +99,12 @@ def upload_video(full_path, path):
 def encode_video(local_file, video_id, resolution):
     #ffmpeg -i $videoid -strict -2 -s $size $videoid.mp4
 
-    dir = "/tmp/" + resolution
+    dir = BASE_UPLOAD_VIDEO_TMP + resolution
     if not os.path.exists(dir):
         os.makedirs(dir)
 
     path = "%s/%s" % (resolution, video_id)
-    full_path = "/tmp/" + path + ".mp4"
+    full_path = BASE_UPLOAD_VIDEO_TMP + path + ".mp4"
 
     LOGGER.info("[Encode videos] Starting: %s" % path)
 
@@ -112,11 +114,14 @@ def encode_video(local_file, video_id, resolution):
 
     upload_video.delay(full_path, path)
 
-@task()
+@task(routing_key=settings.HIGH_PRIORITY_QUEUE)
 def encode_videos(video_id):
     LOGGER.info("[Encode videos] Start encoding for: %s" % video_id)
 
-    local_file = "/tmp/" + video_id
+    if not os.path.exists(BASE_UPLOAD_VIDEO_TMP):
+        os.makedirs(BASE_UPLOAD_VIDEO_TMP)
+
+    local_file = BASE_UPLOAD_VIDEO_TMP + video_id
     video_url = settings.VIDEO_PUBLIC_URL + settings.VIDEO_UPLOAD_PIPELINE["BUCKET"] + urllib.quote('/' + video_id)
     LOGGER.info("[Encode videos] Downloading: %s" % video_url)
 
