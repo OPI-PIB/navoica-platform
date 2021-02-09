@@ -7,7 +7,7 @@
 
 .content-login .dashboard-banner {
   margin: auto;
-  max-width: 1280px;
+  max-width: 1260px;
 }  
 
 .content-login .dashboard-banner .wrapper-msg {
@@ -17,11 +17,13 @@
   box-shadow: 0px 10px 30px #E0E0E080;
   border-radius: 3px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
   .title {
     color: var(--color-374049);
     padding-bottom: 20px;
-    font-weight: 600;
-    font-size: unset;
+    font-weight: bold;
   }
 }
 
@@ -40,13 +42,16 @@
   margin: 0 35px 0 8px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 767px) {
   .content-login .dashboard-banner .activation-message img {
-    display: none;
+    margin: 0 auto;
+    display: block;
   }
-
-  .content-login .dashboard-banner {
-    max-width: 328px;
+  .content-login .dashboard-banner .wrapper-msg .title {
+    padding-top: 35.79px;
+  }
+  .content-login .dashboard-banner .activation-message {
+    display: block;
   }
 } 
 
@@ -341,13 +346,17 @@
   margin-bottom: 24px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 767px) {
   .content-login {
-    padding: 19px 0;
+    padding: 19px 8px;
   }  
   .login {
     padding: 1rem 1rem 1.5rem 1rem;
     width: auto;
+  }
+  .content-login .dashboard-banner .wrapper-msg {
+    padding: 1rem 1rem 1.5rem 1rem;
+    max-width: 35.25rem;
   }
 }
 
@@ -479,31 +488,34 @@
   }
 }
 
-@media (max-width: 360px) {
-  #forgot-password-modal .inner-wrapper img {
-    display: none;
-  }
-
+@media (max-width: 767px) {
   #forgot-password-modal .inner-wrapper {
-    max-width: 328px;
     margin: 34px auto 0 auto;
+    width: auto;
+    max-width: 328px;
+    padding: 16px;
   }
 
   #forgot-password-modal .inner-wrapper.restore {
     padding: 16px 16px 25px 16px;
-  }
-
-  #forgot-password-modal .inner-wrapper {
-    padding: 16px;
- 
+    margin: 34px auto 0 auto;
+    width: auto;
+    max-width: 328px;
   }
 }
 
-@media (max-width: 650px) {
-  #forgot-password-modal .inner-wrapper.restore {
-    margin: 0 16px;
+@media (max-width: 360px) {
+  #forgot-password-modal .inner-wrapper img {
+    display: none;
+  }
+  #forgot-password-modal .inner-wrapper {
+    margin: 34px 16px 0 16px;
     width: auto;
   }
+  #forgot-password-modal .inner-wrapper.restore {
+    margin: 34px 16px 0 16px;
+    width: auto;
+  }  
 }
 
 /** END FORGOT PASSWORD MODAL **/
