@@ -47,7 +47,6 @@ from third_party_auth import provider, pipeline
         $("label").parent().removeClass("is-focused");
       });
 
-      $email.focus();
     });
 
     (function() {
@@ -315,3 +314,19 @@ from third_party_auth import provider, pipeline
   	</div> <!-- div tab-content -->
   </main>
 </div> <!-- div1 -->
+%if banner_account_activation_message:
+<script>
+    $(function() {
+        let $email = $('#email');
+        $email.blur();
+    });
+
+</script>
+%else:
+<script>
+    $(function() {
+        let $email = $('#email');
+        $email.focus();
+    });
+</script>
+%endif
