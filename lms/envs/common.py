@@ -2752,7 +2752,8 @@ ALL_COURSE_ORGANIZER = [
     [u"42", _(u"Pomeranian University in Słupsk")],
     [u"43", _(u"Collegium Humanum – Warsaw Management University")],
     [u"44", _(u"Parlament Studentów Rzeczypospolitej Polskiej")],
-    [u"45", _("The Warsaw Institute of Banking")]
+    [u"45", _("The Warsaw Institute of Banking")],
+    [u"46", _("University of Economics and Human Sciences in Warsaw")]
 ]
 
 ALL_COURSE_ORGANIZER_DICT = dict(ALL_COURSE_ORGANIZER)
