@@ -55,6 +55,14 @@
                 var $target = $("#sorting-form");
                 $target = $target.find('option:selected');
                 var sort = $target.val();
+                
+                if (sort === 'enrollmentStart') {
+                    courses.sort(
+                        function (a, b) {
+                            return (a.data.enrollment_start < b.data.enrollment_start) ? 1 : -1
+                        }
+                    );
+                }
 
                 if (sort === 'name') {
                     courses.sort(

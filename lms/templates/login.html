@@ -1,4 +1,5 @@
 <%inherit file="main.html" />
+<%namespace file='main.html' import="login_query"/>
 <%namespace name='static' file='static_content.html'/>
 
 <%!
@@ -20,6 +21,7 @@ from third_party_auth import provider, pipeline
 	  let $jsEmailField = $('.js-email-field');
 	  let $jsPasswordField = $('.js-password-field');
 	  let $loginForm = $('#login-form');
+    let $iconPassword = $('#pass-visible');
 
     $(function() {
 
@@ -45,7 +47,6 @@ from third_party_auth import provider, pipeline
         $("label").parent().removeClass("is-focused");
       });
 
-      $email.focus();
     });
 
     (function() {
@@ -62,10 +63,12 @@ from third_party_auth import provider, pipeline
           $('.message.submission-error').removeClass('is-shown');
           $('.third-party-signin.message').addClass('is-shown').focus();
           $('.third-party-signin.message .instructions').html(request.responseText);
+          
         } else {
+          $('.error-in-login').addClass('is-shown').focus();
           $('.third-party-signin.message').removeClass('is-shown');
           $('.message.submission-error').addClass('is-shown').focus();
-          $('.message.submission-error').html(gettext("Your request could not be completed.  Please try again."));
+          $('.message.submission-error').html(gettext("Your request could not be completed. Please try again."));
         }
       });
 
@@ -88,32 +91,35 @@ from third_party_auth import provider, pipeline
           } // else we just remain on this page, which is fine since this particular path implies a login failure
             // that has been generated via packet tampering (json.redirect has been messed with).
         } else {
+          $('.error-in-login').addClass('is-shown').focus();
           toggleSubmitButton(true);
           if ($email.val() !== '' && $('#password').val() !== '') {
 			  $('.message.submission-error').addClass('is-shown').focus();
 			  $('.message.submission-error .message-copy').html(json.value);
 			  $loginInput.attr('aria-invalid', true).addClass('error-field');
-			  $('.js-error-message').html(json.value);
+			  $jsEmailField.find('.js-error-message').text("${_('Enter a valid e-mail address')}");
+        $jsPasswordField.find('.js-error-message').text("${_('Enter the correct password')}");
 		  } else {
+   $('.message.submission-error').addClass('is-shown').focus();
 			  if ($email.val() === '') {
-				  $('.message.submission-error').removeClass('is-shown');
+				
 				  $jsEmailField.find('#email').attr('aria-invalid', true).addClass('error-field');
-				  $jsEmailField.find('.js-error-message').text("${_('Fill e-mail address')}");
+				  $jsEmailField.find('.js-error-message').text("${_('Enter a valid e-mail address')}");
 			  } else {
 				  $jsEmailField.find('#email').removeAttr('aria-invalid').removeClass('error-field');
 				  $jsEmailField.find('.js-error-message').text('');
 			  }
 
 			  if ($password.val() === '') {
-				  $('.message.submission-error').removeClass('is-shown');
+			
 				  $jsPasswordField.find('#password').attr('aria-invalid', true).addClass('error-field');
-				  $jsPasswordField.find('.js-error-message').text("${_('Fill password')}");
+				  $jsPasswordField.find('.js-error-message').text("${_('Enter the correct password')}");
 			  } else {
 				  $jsPasswordField.find('#password').removeAttr('aria-invalid').removeClass('error-field');
 				  $jsPasswordField.find('.js-error-message').text('');
 			  }
 		  }
-
+      
         }
       });
 
@@ -134,7 +140,7 @@ from third_party_auth import provider, pipeline
           attr('aria-disabled', false).
           removeProp('disabled').
           removeAttr('disabled').
-          html("<i class='fas fa-check' aria-hidden='true'></i> ${_('Sign in')}");
+          html("${_('Sign in')}");
       }
       else {
         $submitButton.
@@ -159,161 +165,168 @@ from third_party_auth import provider, pipeline
 		   $loginForm.submit();
        }
     })(${pipeline_running})
+
   </script>
 </%block>
 
 <%include file="forgot_password_modal.html" />
 
+<div class="content-login border-top bg-login"> <!-- div1 -->
 
-
-
-
-<div id="content" class="border-top py-5">
-  <main class="login" id="skip-main">
-  
   %if banner_account_activation_message:
-	<div class="dashboard-banner">
-		<div class="wrapper-msg urgency-high">
-		  <div class="msg">
-			<div class="msg-content">
-			  <h2 class="title">${_("You're almost there!")}</h2>
-			  <div class="copy">
-				<p class='activation-message'>
-					${ banner_account_activation_message | n, decode.utf8 }
-				</p>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	</div>
-%endif
-
-%if account_activation_messages:
-  <div class="activation-message-container">
-	% for account_activation_message in account_activation_messages:
-	  <div class="account-activation ${account_activation_message.tags}" role="alert" aria-label="Account Activation Message" tabindex="-1">
-		<div class="message-copy nomargin" >
-		  ${ account_activation_message | n, decode.utf8 }
-		</div>
-	  </div>
-	% endfor
-  </div>
-%endif
-
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
-        <div class="d-flex">
-          <article id="result">
-           <header class="header-login">
-             <h2 class="custom-h2">
-               <span class="d-none d-md-block">${_("Login form")}</span>
-             </h2>
-            </header>
-            <h1 class="mt-0"><strong>${_("Please log in")}</strong><br>${_("to access your account and courses")}</h1>
-      
-      <form id="login-form" method="post" data-remote="true" action="/login_ajax" novalidate autocomplete="off">
-
-		  <!-- status messages -->
-		  <div role="alert" class="status message" id="alert-info" tabindex="-1">
-			<h3 class="message-title">${_("We're Sorry, {platform_name} accounts are unavailable currently").format(platform_name=platform_name)}</h3>
-		  </div>
-
-		  <div role="alert" class="status message submission-error" id="alert-primary" tabindex="-1">
-			<h3 class="message-title">${_("We couldn't log you in.")} </h3>
-			<ul class="message-copy">
-			  <li>${_("Your email or password is incorrect")}</li>
-			</ul>
-		  </div>
-
-		  <div role="alert" class="third-party-signin message" tabindex="-1">
-			<p class="instructions"> </p>
-		  </div>
-
-		  % if third_party_auth_error:
-			<div role="alert" class="status message third-party-auth-error is-shown" tabindex="-1">
-			  <h3 class="message-title">${_("An error occurred when signing you in to {platform_name}.").format(platform_name=platform_name)} </h3>
-			  <ul class="message-copy">
-				<li>${third_party_auth_error}</li>
-			  </ul>
-			</div>
-		  % endif
-
-		  <p class="instructions">
-			${_('Please provide the following information to log into your {platform_name} account. Required fields are noted by <strong class="indicator">an asterisk (*)</strong>.').format(platform_name=platform_name)}
-		  </p>
-
-		  <div class="group ml-2">
-			<h2 class="sr">${_('Required Information')}</h2>
-			
-			<div class="form-group form-group-required field text js-email-field">
-              <label for="email">E-mail <sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
-              <input class="form-control js-input-login" id="email" type="email" name="email" value="" spellcheck="false" placeholder="${_('example: username@domain.com')}" autocomplete="on" required aria-required="true" aria-describedby="emailHelp">
-				<small id="error-email" aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
-				<small id="emailHelp" class="tip tip-input form-text text-darkgrey">${_("This is the e-mail address you used to register with {platform}").format(platform=platform_name)}</small>
-			</div>
-            <div class="form-group form-group-required field password js-password-field">
-              <div class="d-flex justify-content-between align-items-center">
-                <label for="password">${_('Password')} <sup><i class="fa fa-asterisk text-navoica-red pr-1 f-10" aria-hidden="true"></i><span class="visible-hidden text-navoica-red f-14">(${_('required')})</span></sup></label>
+    <div class="dashboard-banner"> <!-- div dashboard-baner -->    
+      <div class="wrapper-msg urgency-high">     
+        <div class="msg">         
+          <div class="msg-content">           
+            <div class="copy">            
+              <div class='activation-message'>            
+              ${ banner_account_activation_message | n, decode.utf8 }         
               </div>
-              <input type="password" class="form-control js-input-login" id="password" name="password" value="" spellcheck="false" autocapitalize="off" required aria-required="true">
-				<small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
             </div>
-		  </div>
-		  <div class="ml-2 form-group d-flex justify-between flex-sm-row">
-              <div class="custom-control custom-checkbox mr-auto">
-				<label for="customCheck1">
-                	<input type="checkbox" class="custom-control-input" id="customCheck1" name="remember" aria-label="${_('Remember me')}">
-				  	<span class="custom-control-label font-weight-normal">${_('Remember me')}</span>
-                </label>
-              </div>
-			  <div class="tip tip-input">
-				  <a href="#forgot-password-modal" data-toggle="modal" data-target="forgot-password-modal" rel="leanModal" class="pwd-reset action action-forgotpw text-navoica-red js-forgot-password-link" role="button" aria-haspopup="true">${_('Forgot password?')}</a>
-			  </div>
-            </div>
-          <div class="form-actions login-button">
-            <button type="submit" class="btn btn-primary action action-primary action-update" name="submit" id="submit"><i class="fas fa-check" aria-hidden="true"></i> ${_('Sign in')}</button>
           </div>
-		</form>
-		% if third_party_auth.is_enabled():
+        </div>
+      </div>
+    </div> <!-- div dashboard-baner -->
+    %endif
 
-		  <span class="deco-divider">
-			## Developers: this is a sentence fragment, which is usually frowned upon.  The design of the pags uses this fragment to provide an "else" clause underneath a number of choices.  It's OK to leave it.
-			## Translators: this is the last choice of a number of choices of how to log in to the site.
-			<!--<span class="copy">${_('or')}</span>-->
-		  </span>
+    %if account_activation_messages:
+    <div class="activation-message-container"> <!-- div activation-message-container -->
+    % for account_activation_message in account_activation_messages:
+      <div class="account-activation ${account_activation_message.tags}" role="alert" aria-label="Account Activation Message" tabindex="-1">      
+        <div class="message-copy nomargin" >        
+          ${ account_activation_message | n, decode.utf8 }
+        </div>
+      </div>
+    % endfor
+    </div> <!-- div activation-message-container -->
+    %endif
 
-		<div class="form-actions form-third-party-auth">
+  <main class="login" id="skip-main">
 
+     <div class="tab-content" id="nav-tabContent"> <!-- div tab-content -->
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel"> <!-- div tab-pane -->
+        <div class="d-flex"> <!-- div d-flex -->
+          <article id="result">
+            <section class="section-header-login"> <!-- section section-header-login -->
+              <header>
+                <h1 class="login-header f-22 h-26">${_("Log in")}</h1>
+              </header>
 
-		% for enabled in provider.Registry.displayed_for_login():
-		  ## Translators: provider_name is the name of an external, third-party user authentication provider (like Google or LinkedIn).
-		  <button type="submit" class="button button-primary button-${enabled.provider_id} login-${enabled.provider_id}" onclick="thirdPartySignin(event, '${pipeline_url[enabled.provider_id]}');">
-			% if enabled.icon_class:
-			<span class="icon fa ${enabled.icon_class}" aria-hidden="true"></span>
-			% else:
-			<span class="icon" aria-hidden="true"><img class="icon-image" src="${enabled.icon_image.url}" alt="${enabled.name} icon" /></span>
-			% endif
-			${_('Sign in with {provider_name}').format(provider_name=enabled.name)}
-		  </button>
-		% endfor
+              <p class="instructions f-14 h-20">
+                ${_('You will get access to free courses on {platform_name} </br> No account yet? ').format(platform_name=platform_name)}<a href="/register${login_query()}"> ${_("Register")}</a>
+              </p>
+            </section> <!-- section section-header-login -->
 
-		</div>
+            <section class="section-login"> <!-- section section-login -->
 
-		% endif
+              <form id="login-form" method="post" data-remote="true" action="/login_ajax" novalidate autocomplete="off"> <!-- form -->
 
+                <!-- status messages -->
+                <div class = "error-in-login">
+                    <div role="alert" class="status message" id="alert-info" tabindex="-1">
+                    <p class="error-bold f-16 h-24">${_("We're Sorry, {platform_name} accounts are unavailable currently").format(platform_name=platform_name)}</p>
+              	  </div>
+                  
+              	  <div role="alert" class="status message submission-error" id="alert-primary" tabindex="-1">
+                    <p class="message-title error-bold f-16 h-24">${_("Login failed.")}&nbsp</p>
+                    <ul class="message-copy error-bold f-16 h-24">
+                      <li>${_("Please try again.")}</li>
+              		  </ul>
+              	  </div>
 
-       </article>
+              	  <div role="alert" class="login-error third-party-signin message" tabindex="-1">
+              		  <p class="instructions"> </p>
+              	  </div>
 
-	<%
-	  # allow for theming overrides on the registration sidebars, otherwise default to pre-existing ones
-	  sidebar_file = static.get_template_path('login-sidebar.html')
-	%>
+              	  % if third_party_auth_error:
+              		<div role="alert" class="status message third-party-auth-error" tabindex="-1">
+              		  <p class="message-title  error-bold f-16 h-24">${_("An error occurred when signing you in to {platform_name}.").format(platform_name=platform_name)} </p>
+                    <ul class="message-copy error-bold f-16 h-24">
+                      <li>${third_party_auth_error}</li>
+              		  </ul>
+              		</div>
+              	  % endif
+                 </div><!-- div error-in-login -->
 
-		<%include file="${sidebar_file}" />
+        		 		<h2 class="sr">${_('Required Information')}</h2>
+        			
+            		<div class="form-group form-group-required field email js-email-field">
+                  <label for="email" class="f-16 h-26">E-mail</label>
+                  <input class="js-input-login" id="email" type="email" name="email" value="" spellcheck="false" autocomplete="on" required aria-required="true" aria-describedby="emailHelp">
+            			<small id="error-email" aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
+            		</div>
 
+                <div class="form-group form-group-required field password js-password-field">
+                  <label for="password" class="f-16 h-26">${_('Password')}</label>
+                  <input type="password" class="js-input-login" id="password" name="password" value="" spellcheck="false" autocapitalize="off" required aria-required="true">
+                  <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
+                </div>
 
-     </div> 
-    </div>
-	</div>
+            	  <div class="form-group d-flex justify-between flex-sm-row">
+                  <div class="custom-control custom-checkbox mr-auto">
+                    <label for="customCheck1">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1" name="remember" aria-label="${_('Remember me')}">
+                      <span class="custom-control-label remember-check"><p class="f-14 h-26">${_('Remember me')}</p></span>
+                    </label>
+                  </div>
+            	    <div class="tip tip-input">
+            			  <a href="#forgot-password-modal" data-toggle="modal" data-target="forgot-password-modal" rel="leanModal" class="pwd-reset action action-forgotpw f-14 h-26 js-forgot-password-link" role="button" aria-haspopup="true">${_('Forgot password?')}</a>
+            		  </div>
+                </div>
+
+                <div class="form-actions login-button">
+                  <button type="submit" class="btn btn-primary action action-primary action-update f-16 h-26" name="submit" id="submit">${_('Sign in')}</button>
+                </div>
+        		  </form> <!-- form -->
+
+              <p class="login-problem f-14 h-19">${_(" Can't log in? Send an e-mail to: ")}<a href="mailto:mooc_help@opi.org.pl"> ${_("mooc_help@opi.org.pl.")}</a></p>
+
+        		  % if third_party_auth.is_enabled():
+
+          		<span class="deco-divider">
+          			## Developers: this is a sentence fragment, which is usually frowned upon.  The design of the pags uses this fragment to provide an "else" clause underneath a number of choices.  It's OK to leave it.
+          			## Translators: this is the last choice of a number of choices of how to log in to the site.
+          			<!--<span class="copy">${_('or')}</span>-->
+          		</span>
+
+        		  <div class="form-actions form-third-party-auth">
+
+            	% for enabled in provider.Registry.displayed_for_login():
+            		  ## Translators: provider_name is the name of an external, third-party user authentication provider (like Google or LinkedIn).
+            	  <button type="submit" class="button button-primary button-${enabled.provider_id} login-${enabled.provider_id}" onclick="thirdPartySignin(event, '${pipeline_url[enabled.provider_id]}');">
+            		% if enabled.icon_class:
+            			<span class="icon fa ${enabled.icon_class}" aria-hidden="true"></span>
+            			% else:
+            			<span class="icon" aria-hidden="true"><img class="icon-image" src="${enabled.icon_image.url}" alt="${enabled.name} icon" /></span>
+            			% endif
+            			${_('Sign in with {provider_name}').format(provider_name=enabled.name)}
+            		</button>
+            		% endfor
+
+            	</div>
+
+        		  % endif
+
+            </section> <!-- section section-login -->
+          </article>
+        </div><!-- div d-flex -->
+      </div> <!-- div tab-pane -->
+  	</div> <!-- div tab-content -->
   </main>
-</div>
+</div> <!-- div1 -->
+%if banner_account_activation_message:
+<script>
+    $(function() {
+        let $email = $('#email');
+        $email.blur();
+    });
+
+</script>
+%else:
+<script>
+    $(function() {
+        let $email = $('#email');
+        $email.focus();
+    });
+</script>
+%endif

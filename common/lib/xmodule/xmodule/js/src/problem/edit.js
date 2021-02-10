@@ -88,7 +88,7 @@
                 // Hide the XML text area
                 $(this.element.find('.xml-box')).hide();
             } else {
-                this.createXMLEditor();
+                this.createXMLEditor($('.xml-box', this.element).text());
             }
         }
 
@@ -105,6 +105,7 @@
                 lineWrapping: true
             });
             if (text) {
+                text = rewriteStaticLinks(text, this.base_asset_url, '/static/');
                 this.xml_editor.setValue(text);
             }
             this.setCurrentEditor(this.xml_editor);

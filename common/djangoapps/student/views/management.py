@@ -276,7 +276,7 @@ def compose_and_send_activation_email(user, profile, user_registration=None):
     subject = render_to_string('emails/activation_email_subject.txt', context)
     # Email subject *must not* contain newlines
     subject = ''.join(subject.splitlines())
-    message_for_activation = render_to_string('emails/activation_email.txt', context)
+    message_for_activation = render_to_string('emails/activation_email.html', context)
     from_address = configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
     from_address = configuration_helpers.get_value('ACTIVATION_EMAIL_FROM_ADDRESS', from_address)
     if settings.FEATURES.get('REROUTE_ACTIVATION_EMAIL'):
@@ -1003,14 +1003,20 @@ def create_account(request, post_override=None):
 
     messages.success(
                 request,
-                HTML(_("There's just one more step: Before you enroll in a course, you need to "
-					  "activate your account. We've sent an email message to "
-					  "{email_start}{email}{email_end} with instructions for activating your "
-					  "account. If you don't receive this message, check your spam folder."
+                HTML(_("{img_html}{div_start}{h2_start}Activate your account{h2_end}"
+                      "Before you can enroll in a course,{strong_start} you must activate your account{strong_end}. "
+                      "Please click the activation link we have sent to your e-mail."
+                      "{p_start}If you don't receive this message, check your spam folder.{p_end}{div_end}"
 				)).format(
-					email_start=HTML("<strong>"),
-					email_end=HTML("</strong>"),
-					email=user.email
+                    h2_start=HTML('<div class="title f-22 h-30">'),
+                    h2_end=HTML('</div>'),
+                    img_html=HTML('<img src="/static/images/undraw_Mail_sent_re_0ofv.svg" alt="" width="114" height="103">'),
+                    div_start=HTML('<div class="f-16 h-24">'),
+                    div_end=HTML('</div>'),
+                    strong_start=HTML('<strong>'),
+                    strong_end=HTML('</strong>'),
+                    p_start=HTML('<p>'),
+                    p_end=HTML('</p>')
 				),
                 extra_tags='dashboard-banner',
             )

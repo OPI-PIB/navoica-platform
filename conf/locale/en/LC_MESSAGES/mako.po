@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-01-13 15:04+0000\n"
-"PO-Revision-Date: 2021-01-13 15:04:44.331331\n"
+"POT-Creation-Date: 2021-02-03 09:44+0000\n"
+"PO-Revision-Date: 2021-02-03 09:45:38.374737\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -111,8 +111,9 @@ msgstr ""
 msgid "Error:"
 msgstr ""
 
-#: cms/templates/index.html lms/templates/help_modal.html
-#: lms/templates/manage_user_standing.html lms/templates/register-shib.html
+#: cms/templates/index.html lms/templates/forgot_password_modal.html
+#: lms/templates/help_modal.html lms/templates/manage_user_standing.html
+#: lms/templates/register-shib.html
 #: lms/templates/dashboard/_entitlement_reason_survey.html
 #: lms/templates/dashboard/_reason_survey.html
 #: lms/templates/peer_grading/peer_grading_problem.html
@@ -172,11 +173,12 @@ msgid "Required Information to Sign In to {studio_name}"
 msgstr ""
 
 #: cms/templates/login.html cms/templates/register.html
-#: lms/templates/help_modal.html lms/templates/provider_login.html
-#: lms/templates/provider_login.html lms/templates/register-form.html
-#: lms/templates/register-form.html lms/templates/register-shib.html
-#: lms/templates/register.html lms/templates/signup_modal.html
-#: lms/templates/signup_modal.html themes/red-theme/cms/templates/login.html
+#: lms/templates/forgot_password_modal.html lms/templates/help_modal.html
+#: lms/templates/provider_login.html lms/templates/provider_login.html
+#: lms/templates/register-form.html lms/templates/register-form.html
+#: lms/templates/register-shib.html lms/templates/register.html
+#: lms/templates/signup_modal.html lms/templates/signup_modal.html
+#: themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
@@ -188,8 +190,6 @@ msgstr ""
 #. address.
 #: cms/templates/login.html cms/templates/manage_users.html
 #: cms/templates/manage_users_lib.html cms/templates/register.html
-#: lms/templates/forgot_password_modal.html lms/templates/login.html
-#: lms/templates/register-form.html lms/templates/register-form.html
 #: lms/templates/register-shib.html themes/red-theme/cms/templates/login.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
@@ -208,8 +208,8 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: cms/templates/login.html lms/templates/login.html
-#: themes/red-theme/cms/templates/login.html
+#: cms/templates/login.html lms/templates/forgot_password_modal.html
+#: lms/templates/login.html themes/red-theme/cms/templates/login.html
 msgid "Forgot password?"
 msgstr ""
 
@@ -225,7 +225,7 @@ msgstr ""
 
 #. Translators: This is the placeholder text for a field that requests the
 #. user's full name.
-#: cms/templates/register.html lms/templates/register-form.html
+#: cms/templates/register.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "example: Jane Doe"
 msgstr ""
@@ -240,8 +240,7 @@ msgstr ""
 
 #. Translators: This is the placeholder text for a field that asks the user to
 #. pick a username
-#: cms/templates/register.html lms/templates/register-form.html
-#: lms/templates/register-form.html lms/templates/register-shib.html
+#: cms/templates/register.html lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
@@ -812,6 +811,13 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/instructor/instructor_dashboard_2/set_course_mode_price_modal.html
 #: lms/templates/modal/_modal-settings-language.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
+#: lms/templates/static_templates/ferie_bez_nudy.html
 #: openedx/features/course_experience/templates/course_experience/course-home-fragment.html
 #: themes/edx.org/lms/templates/dashboard.html
 #: themes/edx.org/lms/templates/dashboard.html
@@ -1025,34 +1031,33 @@ msgid "All rights reserved  "
 msgstr ""
 
 #: lms/templates/forgot_password_modal.html
-msgid "Password Reset"
-msgstr ""
-
-#: lms/templates/forgot_password_modal.html
 msgid ""
-"Please enter your e-mail address below, and we will e-mail instructions for "
-"setting a new password."
-msgstr ""
-
-#: lms/templates/forgot_password_modal.html
-msgid "Your E-mail Address"
+"Enter the e-mail address you registered with and we'll send you a link to "
+"change your password."
 msgstr ""
 
 #: lms/templates/forgot_password_modal.html
 msgid "Enter your E-mail Address to reset your password"
 msgstr ""
 
+#: lms/templates/forgot_password_modal.html
+msgid "Having trouble changing your password? Send an e-mail to: "
+msgstr ""
+
+#: lms/templates/forgot_password_modal.html lms/templates/login-sidebar.html
+#: lms/templates/login.html lms/templates/register-sidebar.html
+#: lms/templates/register.html
+msgid "mooc_help@opi.org.pl."
+msgstr ""
+
+#: lms/templates/forgot_password_modal.html
+msgid "Check your e-mail"
+msgstr ""
+
+#: lms/templates/forgot_password_modal.html
 #: lms/templates/forgot_password_modal.html lms/templates/login.html
-msgid "This is the e-mail address you used to register with {platform}"
-msgstr ""
-
-#: lms/templates/forgot_password_modal.html
-msgid "Reset My Password"
-msgstr ""
-
-#: lms/templates/forgot_password_modal.html
-#: lms/templates/forgot_password_modal.html
-msgid "Email is incorrect."
+#: lms/templates/login.html
+msgid "Enter a valid e-mail address"
 msgstr ""
 
 #: lms/templates/help_modal.html
@@ -1326,7 +1331,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: lms/templates/login-sidebar.html lms/templates/register.html
+#: lms/templates/login-sidebar.html
 msgid "Helpful Information"
 msgstr ""
 
@@ -1361,23 +1366,16 @@ msgstr ""
 msgid " Please contact our Help Center at "
 msgstr ""
 
-#: lms/templates/login-sidebar.html lms/templates/register-sidebar.html
-msgid "mooc_help@opi.org.pl."
-msgstr ""
-
-#: lms/templates/login.html lms/templates/register-sidebar.html
+#: lms/templates/login.html lms/templates/login.html
+#: lms/templates/register-sidebar.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid "Log in"
 msgstr ""
 
-#: lms/templates/login.html
-msgid "Fill e-mail address"
-msgstr ""
-
-#: lms/templates/login.html
-msgid "Fill password"
+#: lms/templates/login.html lms/templates/login.html
+msgid "Enter the correct password"
 msgstr ""
 
 #: lms/templates/login.html lms/templates/login.html
@@ -1397,20 +1395,23 @@ msgid "Processing your account information"
 msgstr ""
 
 #: lms/templates/login.html
-#: lms/templates/registration/activate_account_notice.html
-msgid "You're almost there!"
+msgid ""
+"You will get access to free courses on {platform_name} </br> No account yet?"
+" "
 msgstr ""
 
-#: lms/templates/login.html
-msgid "Login form"
-msgstr ""
-
-#: lms/templates/login.html
-msgid "Please log in"
-msgstr ""
-
-#: lms/templates/login.html
-msgid "to access your account and courses"
+#: lms/templates/login.html lms/templates/register-form.html
+#: lms/templates/register.html lms/templates/register.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: lms/templates/navigation/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
+#: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
+#: themes/stanford-style/lms/templates/register-form.html
+msgid "Register"
 msgstr ""
 
 #: lms/templates/login.html
@@ -1418,22 +1419,15 @@ msgid "We're Sorry, {platform_name} accounts are unavailable currently"
 msgstr ""
 
 #: lms/templates/login.html
-msgid "We couldn't log you in."
+msgid "Login failed."
 msgstr ""
 
 #: lms/templates/login.html
-msgid "Your email or password is incorrect"
+msgid "Please try again."
 msgstr ""
 
 #: lms/templates/login.html
 msgid "An error occurred when signing you in to {platform_name}."
-msgstr ""
-
-#: lms/templates/login.html
-msgid ""
-"Please provide the following information to log into your {platform_name} "
-"account. Required fields are noted by <strong class=\"indicator\">an "
-"asterisk (*)</strong>."
 msgstr ""
 
 #: lms/templates/login.html lms/templates/register-form.html
@@ -1449,16 +1443,11 @@ msgid "Required Information"
 msgstr ""
 
 #: lms/templates/login.html lms/templates/login.html
-#: lms/templates/register-form.html lms/templates/register-form.html
-#: lms/templates/register-form.html lms/templates/register-form.html
-#: lms/templates/register-form.html lms/templates/register-form.html
-#: lms/templates/register-form.html lms/templates/register-form.html
-#: lms/templates/register-form.html lms/templates/register-form.html
-msgid "required"
+msgid "Remember me"
 msgstr ""
 
-#: lms/templates/login.html lms/templates/login.html
-msgid "Remember me"
+#: lms/templates/login.html
+msgid " Can't log in? Send an e-mail to: "
 msgstr ""
 
 #. Translators: this is the last choice of a number of choices of how to log
@@ -1730,10 +1719,12 @@ msgid ""
 "using a different browser or a newer version of your browser."
 msgstr ""
 
-#: lms/templates/register-form.html lms/templates/register-shib.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-shib.html
-msgid "The following errors occurred while processing your registration:"
+#: lms/templates/register-form.html
+msgid "The form contains errors."
+msgstr ""
+
+#: lms/templates/register-form.html
+msgid "Please correct or fill in the missing information."
 msgstr ""
 
 #: lms/templates/register-form.html
@@ -1772,27 +1763,28 @@ msgid "Please complete the following fields to register for an account. "
 msgstr ""
 
 #: lms/templates/register-form.html lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-form.html
-msgid "Your legal name, used for any certificates you earn."
+#: lms/templates/register-form.html lms/templates/register-form.html
+#: lms/templates/register-form.html lms/templates/register-form.html
+#: lms/templates/register-form.html lms/templates/register-form.html
+#: lms/templates/register-form.html lms/templates/register-form.html
+#: lms/templates/register-form.html
+msgid "required"
 msgstr ""
 
 #: lms/templates/register-form.html lms/templates/register-form.html
-#: lms/templates/register-shib.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-shib.html
-msgid "Will be shown in any discussions or forums you participate in"
-msgstr ""
-
-#: lms/templates/register-form.html lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-form.html
-msgid "cannot be changed later"
+msgid "Click to show password"
 msgstr ""
 
 #: lms/templates/register-form.html
-msgid "Your password must be at least {num} characters long."
+msgid "Use at least {num} characters"
+msgstr ""
+
+#: lms/templates/register-form.html lms/templates/register-form.html
+msgid "Full name is be displayed on certificates you obtain"
+msgstr ""
+
+#: lms/templates/register-form.html lms/templates/register-form.html
+msgid "User profile is visible in discussions and forums you participate in"
 msgstr ""
 
 #: lms/templates/register-form.html
@@ -1823,11 +1815,6 @@ msgid "City"
 msgstr ""
 
 #: lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-form.html
-msgid "example: New York"
-msgstr ""
-
-#: lms/templates/register-form.html
 #: lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html
 #: lms/templates/shoppingcart/receipt.html
 #: themes/stanford-style/lms/templates/register-form.html
@@ -1839,8 +1826,11 @@ msgid "Poland"
 msgstr ""
 
 #: lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-form.html
-msgid "Highest Level of Education Completed"
+msgid "Education"
+msgstr ""
+
+#: lms/templates/register-form.html lms/templates/register-form.html
+msgid "Select..."
 msgstr ""
 
 #: lms/templates/register-form.html lms/templates/signup_modal.html
@@ -1869,31 +1859,12 @@ msgstr ""
 msgid "Account Acknowledgements"
 msgstr ""
 
-#: lms/templates/register-form.html lms/templates/register-shib.html
-#: lms/templates/signup_modal.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-shib.html
-msgid "I agree to the {link_start}Terms of Service{link_end}"
+#: lms/templates/register-form.html
+msgid "I agree to the &nbsp{link_start}Terms of Service{link_end}"
 msgstr ""
 
-#: lms/templates/register-form.html lms/templates/register-shib.html
-#: lms/templates/signup_modal.html
-#: themes/stanford-style/lms/templates/register-form.html
-#: themes/stanford-style/lms/templates/register-shib.html
-msgid "I agree to the {link_start}Honor Code{link_end}"
-msgstr ""
-
-#: lms/templates/register-form.html lms/templates/register.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: lms/templates/header/navbar-not-authenticated.html
-#: lms/templates/navigation/navbar-not-authenticated.html
-#: lms/templates/navigation/navbar-not-authenticated.html
-#: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
-#: themes/edx.org/lms/templates/header/navbar-not-authenticated.html
-#: themes/stanford-style/lms/templates/register-form.html
-msgid "Register"
+#: lms/templates/register-form.html
+msgid "I agree to the &nbsp{link_start}Honor Code{link_end}"
 msgstr ""
 
 #: lms/templates/register-shib.html
@@ -1913,6 +1884,12 @@ msgstr ""
 
 #: lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-shib.html
+msgid "The following errors occurred while processing your registration:"
+msgstr ""
+
+#: lms/templates/register-shib.html
+#: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid ""
@@ -1923,6 +1900,25 @@ msgstr ""
 #: lms/templates/register-shib.html lms/templates/signup_modal.html
 #: themes/stanford-style/lms/templates/register-shib.html
 msgid "Enter a public username:"
+msgstr ""
+
+#: lms/templates/register-shib.html
+#: themes/stanford-style/lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-shib.html
+msgid "Will be shown in any discussions or forums you participate in"
+msgstr ""
+
+#: lms/templates/register-shib.html lms/templates/signup_modal.html
+#: themes/stanford-style/lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-shib.html
+msgid "I agree to the {link_start}Terms of Service{link_end}"
+msgstr ""
+
+#: lms/templates/register-shib.html lms/templates/signup_modal.html
+#: themes/stanford-style/lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-shib.html
+msgid "I agree to the {link_start}Honor Code{link_end}"
 msgstr ""
 
 #: lms/templates/register-shib.html
@@ -2015,16 +2011,18 @@ msgstr ""
 msgid "A valid confirm password is required"
 msgstr ""
 
-#: lms/templates/register.html lms/templates/register.html
+#: lms/templates/register.html
+msgid ""
+"You will get access to free courses at {platform_name}. </br> <strong> "
+"Required fields are noted by an asterisk.</strong>"
+msgstr ""
+
+#: lms/templates/register.html
 msgid "Registration form"
 msgstr ""
 
 #: lms/templates/register.html
-msgid "Welcome!"
-msgstr ""
-
-#: lms/templates/register.html
-msgid "Register below to create your {platform_name} account"
+msgid "You can't register? Send an e-mail to: "
 msgstr ""
 
 #: lms/templates/resubscribe.html
@@ -5143,6 +5141,45 @@ msgstr ""
 msgid "Sincerely yours,The {course_name} Team"
 msgstr ""
 
+#: lms/templates/emails/activation_email.html
+msgid "Dear user"
+msgstr ""
+
+#: lms/templates/emails/activation_email.html
+msgid ""
+"You have just registered on the NAVOICA platform. Thank you for joining us!"
+msgstr ""
+
+#: lms/templates/emails/activation_email.html
+msgid "To activate your account, please click the button below:"
+msgstr ""
+
+#: lms/templates/emails/activation_email.html
+#: lms/templates/emails/activation_email.html
+msgid "Verify e-mail address"
+msgstr ""
+
+#: lms/templates/emails/activation_email.html
+msgid "Enjoy learning with Navoica.pl!"
+msgstr ""
+
+#: lms/templates/emails/activation_email.html
+msgid "NAVOICA team"
+msgstr ""
+
+#: lms/templates/emails/activation_email.html
+msgid ""
+"This is an automatically generated e-mail \\u2013 please do not reply to it."
+msgstr ""
+
+#: lms/templates/emails/activation_email.html
+msgid "If you have any questions or comments, please"
+msgstr ""
+
+#: lms/templates/emails/activation_email.html
+msgid "contact us"
+msgstr ""
+
 #: lms/templates/emails/activation_email.txt
 msgid ""
 "You're almost there! Use the link to activate your account to access "
@@ -7864,6 +7901,10 @@ msgid ""
 msgstr ""
 
 #: lms/templates/registration/activate_account_notice.html
+msgid "You're almost there!"
+msgstr ""
+
+#: lms/templates/registration/activate_account_notice.html
 msgid ""
 "There's just one more step: Before you enroll in a course, you need to "
 "activate your account. We've sent an email message to "
@@ -7893,13 +7934,9 @@ msgid "Invalid Password Reset Link"
 msgstr ""
 
 #: lms/templates/registration/password_reset_done.html
-msgid "Password reset successful"
-msgstr ""
-
-#: lms/templates/registration/password_reset_done.html
 msgid ""
-"We've e-mailed you instructions for setting your password to the e-mail "
-"address you submitted. You should be receiving it shortly."
+"If there is an account associated with the given address, an e-mail with a "
+"link to change the password was sent to it."
 msgstr ""
 
 #: lms/templates/shoppingcart/billing_details.html
@@ -8345,8 +8382,8 @@ msgstr ""
 
 #: lms/templates/static_templates/404.html
 msgid ""
-"404 Not Found. Check the website URL. If you have not found what you are "
-"looking for, try the links below:"
+"Check the website URL. If you have not found what you are looking for, try "
+"the links below:"
 msgstr ""
 
 #: lms/templates/static_templates/404.html
@@ -9135,6 +9172,10 @@ msgstr ""
 msgid "show answers"
 msgstr ""
 
+#: lms/templates/static_templates/ferie_bez_nudy.html
+msgid "Navoica dla dzieci i m\\u0142odzie\\u017cy"
+msgstr ""
+
 #: lms/templates/static_templates/honor.html
 msgid ""
 "By enrolling in a course offered on Navoica platform you join the "
@@ -9706,8 +9747,8 @@ msgstr ""
 
 #: lms/templates/static_templates/server-error.html
 msgid ""
-"Error 500. Please refresh the page or try again later. If the problem "
-"persists, send us an e-mail at: {tech_support_email}."
+"Please refresh the page or try again later. If the problem persists, send us"
+" an e-mail at: {tech_support_email}."
 msgstr ""
 
 #: lms/templates/static_templates/server-overloaded.html
@@ -11343,6 +11384,24 @@ msgstr ""
 #: themes/stanford-style/lms/templates/index.html
 #: themes/stanford-style/lms/templates/index.html
 msgid "Search for a course"
+msgstr ""
+
+#: themes/stanford-style/lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-form.html
+msgid "Your legal name, used for any certificates you earn."
+msgstr ""
+
+#: themes/stanford-style/lms/templates/register-form.html
+#: themes/stanford-style/lms/templates/register-form.html
+msgid "cannot be changed later"
+msgstr ""
+
+#: themes/stanford-style/lms/templates/register-form.html
+msgid "example: New York"
+msgstr ""
+
+#: themes/stanford-style/lms/templates/register-form.html
+msgid "Highest Level of Education Completed"
 msgstr ""
 
 #: themes/stanford-style/lms/templates/register-sidebar.html
