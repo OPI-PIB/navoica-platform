@@ -136,6 +136,11 @@
   display: flex;
   align-items: center;
   min-height: 4.125rem;
+
+  @media screen and (max-width: 767px) {
+    margin: 0 -1rem 1.813rem;
+    padding: 1rem;
+  }
 }
 
 .login {
