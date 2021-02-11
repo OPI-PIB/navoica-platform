@@ -55,7 +55,7 @@
   }
 } 
 
-.login {
+.login__section {
   margin: auto;
   max-width: 35.25rem;
   width: auto;
@@ -66,11 +66,11 @@
   padding: 4rem 5rem;
 }
 
-.login p {
+.login__section p {
   margin: 0;
 }
 
-.login .section-header-login{
+.login__section .section-header-login{
   margin-bottom: 20px;
 
 }
@@ -82,36 +82,36 @@
   margin-bottom: 8px;
 }
 
-.login .instructions {
+.login__section .instructions {
   color: var(--color-686970);
   margin: 0;
 }
 
-.login .login-problem {
+.login__section .login-problem {
   color: rgba(104, 105, 112, 1);
   margin: unset;
   margin-top: 30px;
 }
 
-.login a{
+.login__section a{
   text-align: left;
   font-weight: 600;
   color: var(--color-008080);
   text-decoration: underline;
 }
 
-.login label {
+.login__section label {
   color: var(--color-212529);
   text-align: left;
   font-weight: 600;
   margin: 0 0 4px 0;
 }
 
-.login #login-form .status.message, .login #register-form .status.message {
+.login__section #login-form .status.message, .login__section #register-form .status.message {
    display: none;
 }
 
-.login #login-form  .status.message.is-shown{
+.login__section #login-form  .status.message.is-shown{
   display: inline-flex;
   flex-wrap: wrap;
   color: var(--color-d71932);
@@ -120,7 +120,7 @@
    }
 } 
 
-.login #register-form .status.message.is-shown {
+.login__section #register-form .status.message.is-shown {
   display: inline-flex;
   flex-wrap: wrap;
   color: var(--color-d71932);
@@ -129,7 +129,7 @@
    }
 } 
 
-.login .error-in-login.is-shown{
+.login__section .error-in-login.is-shown{
   background: rgba(228, 29, 55, 0.08);
   margin: 0 -5rem 1.813rem -5rem;
   padding: 0.688rem 5rem;
@@ -138,34 +138,34 @@
   min-height: 4.125rem;
 
   @media screen and (max-width: 767px) {
-    margin: 0 -1rem 1.813rem;
+    margin: 0 -15px 1.813rem;
     padding: 1rem;
   }
 }
 
-.login {
+.login__section {
   .message, .message-title, .message-copy, ul {
     margin: 0;
   }
 }
 
-.login .error-in-login.is-shown .error-bold {
+.login__section .error-in-login.is-shown .error-bold {
   font-weight: 600;
 }
 
-.login #alert-info, .login #alert-primary {
+.login__section #alert-info, .login__section #alert-primary {
   color: unset;
   background: unset;
   padding: unset;
   border: unset;
 }
 
-.login .login-button {
+.login__section .login-button {
   margin-top: 40px;
   margin-bottom: 30px;
 }
 
-.login .login-button button {
+.login__section .login-button button {
   width: 100%;
   min-height: 34px;
   background: var(--color-e41d37);
@@ -180,7 +180,7 @@
   }
 }
 
-.login input{
+.login__section input{
   height: 2.375rem;
   background-color: var(--color-ffffff);
   border: 1px solid var(--color-919191);
@@ -199,7 +199,7 @@
   }  
 }
 
-.login input.error-field {
+.login__section input.error-field {
   border: 1px solid var(--color-5b5b5b);
   border-bottom: 2px solid var(--color-e41d37);
 
@@ -208,11 +208,11 @@
   }
 }
 
-.login .form-group.email {
+.login__section .form-group.email {
   margin-bottom: 16px;
 }
 
-.login .form-group.password {
+.login__section .form-group.password {
   margin-bottom: 30px;
 }
 
@@ -220,11 +220,11 @@
   padding: 30px;
 }
 
-.login .custom-control-label p {
+.login__section .custom-control-label p {
   padding-left: 0.25rem;
 }
 
-.login .custom-control-label::before{
+.login__section .custom-control-label::before{
   position: absolute;
   left: -1.5rem;
   background: var(--color-ffffff);
@@ -234,11 +234,11 @@
   height: 1rem;
 }
 
-.login .custom-control-label::after{
+.login__section .custom-control-label::after{
   top: 0.11rem;
 }
 
-.login .custom-control-input:not(:checked) ~ .custom-control-label:hover::after {
+.login__section .custom-control-input:not(:checked) ~ .custom-control-label:hover::after {
   border: 11px #F4F4F4;
   border-radius: 50%;
   box-shadow: 0 0 0 11px #F4F4F4;
@@ -246,13 +246,13 @@
 }
 
 
-.login .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+.login__section .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
   background: transparent url("/static/images/check-solid.svg") no-repeat 50%/50% 50%;
   z-index: 2;
   background-size: 0.625rem;
 }
 
-.login .custom-control-input {
+.login__section .custom-control-input {
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -285,26 +285,26 @@
       box-shadow: none
     }
   }
-}  
+}
 
-.login .custom-control label {
+.login__section .custom-control label {
   margin: 0;
 }
 
-.login .field.text {
+.login__section .field.text {
   line-height: 1;
 }
 
-.login .row {
+.login__section .row {
   display: flex;
   flex-wrap: unset;
 }
 
-.login .select-wrapper {
+.login__section .select-wrapper {
   position: relative;
 }
 
-.login .select-wrapper:after {
+.login__section .select-wrapper:after {
     content: '\f078';
     color: var(--color-686970);
     font: normal normal normal 12px/17px FontAwesome;
@@ -314,49 +314,49 @@
     pointer-events: none;
 }
 
-.login {
+.login__section {
   #education-level, #gender, #yob {
     color: var(--color-686970);
   }
 }
 
-.login .form-control {
+.login__section .form-control {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
 /* For IE10 */
-.login .form-control::-ms-expand {
+.login__section .form-control::-ms-expand {
   display: none;
 }
 
-.login .p-year {
+.login__section .p-year {
   padding-left: 24px;
 }
 
-.login .terms-of-service label {
+.login__section .terms-of-service label {
   padding-left: 0.25rem;
 }
 
-.login .honor-code label {
+.login__section .honor-code label {
   padding-left: 0.25rem;
 }
 
-.login #register-form .form-group.password {
+.login__section #register-form .form-group.password {
   margin-bottom: 24px;
 }
 
-.login #register-form .form-group {
+.login__section #register-form .form-group {
   margin-bottom: 24px;
 }
 
 @media (max-width: 767px) {
   .content-login {
     padding: 19px 8px;
-  }  
-  .login {
-    padding: 1rem 1rem 1.5rem 1rem;
+  }
+  .login__section {
+    padding: 15px 15px 24px 15px;
     width: auto;
   }
   .content-login .dashboard-banner .wrapper-msg {
@@ -368,6 +368,30 @@
 /** END LOGIN PAGE **/
 
 /** FORGOT PASSWORD MODAL **/
+#forgot-password-modal.modal {
+  &.fade .modal-dialog {
+    transition: none;
+    transform: none;
+  }
+
+  &.show .modal-dialog {
+    transform: none;
+  }
+}
+
+#forgot-password-modal .modal-dialog {
+  max-width: 25.375rem;
+  border: unset;
+  margin: 0 auto;
+}
+
+#forgot-password-modal .modal-content {
+  padding: 30px 34px;
+
+  @media screen and (max-width: 767px) {
+    padding: 16px;
+  }
+}
 
 #forgot-password-modal .inner-wrapper {
   max-width: 26rem;
@@ -380,91 +404,103 @@
   max-width: 38.625rem;
 }
 
-#forgot-password-modal .inner-wrapper .modal-header {
-  padding: 0 0 1rem;
+#forgot-password-modal .modal-header {
+  padding: 0 0 15px;
   border-bottom: 1px solid var(--color-d1d6dc);
-  margin-bottom: 0.969rem;
+  margin-bottom: 15px;
   align-items: center;
 }
 
-#forgot-password-modal .inner-wrapper .modal-header button {
+#forgot-password-modal .modal-header button {
   color: var(--color-374049);
   text-align: left;
   opacity: 1;
 }
 
-#forgot-password-modal .inner-wrapper .modal-body {
+#forgot-password-modal .modal-body {
   padding: unset;
 }
 
-#forgot-password-modal .inner-wrapper .modal-body .form-group {
+#forgot-password-modal .modal-body .form-group {
   margin: 0;
 }
 
-#forgot-password-modal .inner-wrapper .modal-body .group.group-form.group-form-requiredinformation {
+#forgot-password-modal .modal-body .group.group-form.group-form-requiredinformation {
   background-color: unset;
   box-shadow: unset;
   padding: unset;
   margin: unset;
 }
 
-#forgot-password-modal .inner-wrapper .modal-footer {
+#forgot-password-modal .modal-footer {
   border-top: unset;
   padding: 0;
-  margin: 2.5rem 0 1.906rem;
+  margin: 40px 0;
+
+  @media screen and (max-width: 767px) {
+    margin: 40px 0 30px;
+  }
 }  
 
-#forgot-password-modal .inner-wrapper .modal-footer button {
-  font-size: 600;
+#forgot-password-modal .modal-footer button {
+  font-weight: 600;
   color: var(--color-f8f9fa);
 }
 
-#forgot-password-modal .inner-wrapper a{
+#forgot-password-modal[style] {
+  top: 0 !important;
+}
+
+#forgot-password-modal .modal-footer #pwd_reset_button {
+  margin: 0;
+}
+
+#forgot-password-modal a {
   font-weight: 600;
   color: var(--color-008080);
   text-decoration: underline;
 }
 
-#forgot-password-modal .inner-wrapper .login-problem {
+#forgot-password-modal .login-problem {
   color: var(--color-686970);
 }
 
-#forgot-password-modal .inner-wrapper .message {
+#forgot-password-modal .message {
   display: flex;
   align-items: center;
 }
 
-#forgot-password-modal .inner-wrapper p {
+#forgot-password-modal p {
   margin: 0;
   color: var(--color-212529);
 }
 
-#forgot-password-modal .inner-wrapper label {
+#forgot-password-modal label {
   margin-top: 20px;
   font-weight: 600;
   color: var(--color-212529);
 }
 
-#forgot-password-modal .inner-wrapper img {
+#forgot-password-modal img {
   margin: 0 35px 0 8px;
 }
 
-#forgot-password-modal .inner-wrapper .modal-title {
+#forgot-password-modal .modal-title {
   color: var(--color-374049);
 }
 
 
-#forgot-password-modal .inner-wrapper.restore {
+#forgot-password-modal .restore {
   padding-bottom: 40px;
   margin-top: 0;
 }
 
-#forgot-password-modal .inner-wrapper.restore .modal-header {
+#forgot-password-modal .restore .modal-header {
   margin-bottom: 30px;
 }
 
-#forgot-password-modal .inner-wrapper input {
-  height: 38px;
+#forgot-password-modal input {
+  height: 2.375rem;
   background-color: var(--color-ffffff);
   border: 1px solid var(--color-919191);
   opacity: 1;
@@ -483,7 +519,7 @@
   }  
 }
 
-#forgot-password-modal .inner-wrapper input.error-field {
+#forgot-password-modal input.error-field {
   border: 1px solid var(--color-5b5b5b);
   border-bottom: 2px solid var(--color-e41d37);
 
@@ -510,7 +546,7 @@
 }
 
 @media (max-width: 360px) {
-  #forgot-password-modal .inner-wrapper img {
+  #forgot-password-modal img {
     display: none;
   }
   #forgot-password-modal .inner-wrapper {
@@ -526,7 +562,7 @@
 /** END FORGOT PASSWORD MODAL **/
 
 /** REGISTER PAGE **/
-.login .password .field-icon{
+.login__section .password .field-icon{
   cursor: pointer;
   color: var(--color-686970);
   float: right;
@@ -536,12 +572,12 @@
   z-index: 2;
 }
 
-.login .tip-input {
+.login__section .tip-input {
   color: var(--color-686970);
   padding-top: 5px;
 }
 
-.login #login-form .tip-input {
+.login__section #login-form .tip-input {
   padding-top: unset;
   color: unset;
 }
