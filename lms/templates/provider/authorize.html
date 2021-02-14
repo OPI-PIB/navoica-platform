@@ -10,59 +10,74 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 
 <%inherit file="../main.html"/>
-
+<%block name="pagetitle">${_("Authorization")}</%block>
 <%block name="bodyclass">oauth2</%block>
-
 <%block name="body">
 
 <header class="header-course bg-light course-container-heading"></header>
 <div class="authorization-confirmation container">
   % if not error:
-  <p>
-  ${_("Application would like to access your data with the following permissions:")}
-  </p>
-  <ul>
-    % for permission in scopes(oauth_data['scope']):
-    <li>
-      % if permission == "openid":
-        ${_("Read your user ID")}
-      % elif permission == "profile":
-        ${_("Read your user profile")}
-      % elif permission == "email":
-        ${_("Read your email address")}
-      % elif permission == "course_staff":
-        ${_("Read the list of courses in which you are a staff member.")}
-      % elif permission == "course_instructor":
-        ${_("Read the list of courses in which you are an instructor.")}
-      % elif permission == "permissions":
-        ${_("To see if you are a global staff user")}
-      % else:
-        ${_("Manage your data: {permission}").format(permission=permission)}
-      % endif
-    </li>
-    % endfor
-  </ul>
-  <form method="post" action="${reverse('oauth2:authorize')}">
-    ${form.errors}
-    ${form.non_field_errors()}
-    <fieldset>
-      <div style="display: none;">
-        <select type="select" name="scope" multiple="multiple">
-          % for scope in scopes(oauth_data['scope']):
-          <option value="${scope}" selected="selected">${scope}</option>
+  <div class="modal" tabindex="-1" role="dialog" aria-labelledby="modal-continue-title" aria-hidden="false" style="display: block; position: relative; z-index: 0;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-0">
+        <div class="modal-header">
+          <h5 class="modal-title modal__title" id="modal-continue-title">${_("Do you agree that the registration form can read:")}</h5>
+        </div>
+        <div class="modal-body py-3">
+        <ul class="px-3">
+          % for permission in scopes(oauth_data['scope']):
+          <li class="modal__description">
+            % if permission == "openid":
+              ${_("Read your user ID")}
+            % elif permission == "profile":
+              ${_("Your user profile at navoica.pl")}
+            % elif permission == "email":
+              ${_("Your e-mail address")}
+            % elif permission == "course_staff":
+              ${_("Read the list of courses in which you are a staff member.")}
+            % elif permission == "course_instructor":
+              ${_("Read the list of courses in which you are an instructor.")}
+            % elif permission == "permissions":
+              ${_("To see if you are a global staff user")}
+            % else:
+              ${_("Manage your data: {permission}").format(permission=permission)}
+            % endif
+          </li>
           % endfor
-        </select>
+        </ul>
+        </div>
+        <form method="post" action="${reverse('oauth2:authorize')}" class="modal-footer border-0 d-flex flex-wrap">
+          ${form.errors}
+          ${form.non_field_errors()}
+          <fieldset>
+            <div style="display: none;">
+              <select type="select" name="scope" multiple="multiple">
+                % for scope in scopes(oauth_data['scope']):
+                <option value="${scope}" selected="selected">${scope}</option>
+                % endfor
+              </select>
+            </div>
+            <input type="submit" class="btn btn__cancel text-semi-bold external_enroll" name="cancel" value="${_("Cancel")}" />
+            <input type="submit" class="btn btn__continue-registration text-semi-bold external_enroll" name="authorize" value="${_("I agree")}" />
+          </fieldset>
+          <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}" />
+        </form>
       </div>
-      <input type="submit" class="btn btn-primary btn-sm login large danger" name="cancel" value="${_("Cancel")}" />
-      <input type="submit" class="btn btn-primary btn-sm login large primary" name="authorize" value="${_("Authorize")}" />
-    </fieldset>
-    <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}" />
-  </form>
+    </div>
+  </div>
   % else:
-  <p class="error">
-    ${error}
-    ${error_description}
-  </p>
+  <div class="modal error" tabindex="-1" role="dialog" aria-labelledby="error-title" aria-hidden="false" style="display: block; position: relative; z-index: 0;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-0">
+        <div class="modal-header">
+          <h5 class="modal-title modal__title" id="error-title">${error}</h5>
+        </div>
+        <div class="modal-body py-3">
+          <p class="modal__description my-0">${error_description}</p>
+        </div>
+      </div>
+    </div>
+  </div>
   % endif
 </div>
 </%block>
