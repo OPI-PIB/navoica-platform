@@ -96,7 +96,7 @@ import calendar
                 isValid: false,
                 message: "${_('A valid password is required')}",
                 field: "${_('Password')}",
-                pattern: /^[A-Za-z\d@$!%*?&_]{8,75}$/,
+                pattern: /^[A-Za-z\d#@$!%*?&_]{8,75}$/,
             },
             confirm_password: {
                 isValid: false,
@@ -129,6 +129,12 @@ import calendar
 
         function addMessageAlert(field, errorMsg, key) {
             $("<p/>").attr('id', 'text-' + key).text(errorMsg).prepend('<span class="font-weight-bolder">' + field + ': ' + '</span>').appendTo('.js-alert-error-message');
+        }
+
+        function scrollToError($target) {
+            if ($target.length) {
+                $('html, body').animate({scrollTop: $target.offset().top - 100 }, 'slow');
+            }
         }
 
         function validateForm(json) {
@@ -200,7 +206,13 @@ import calendar
 
             isValidForm = isValidForm && isValidForm.every(function(elem) {
                 return elem === true;
-            })
+            });
+
+            let $errorField = $('.error-field');
+            if ($errorField) {
+                let target = $errorField.eq(0);
+                scrollToError(target);
+            }
 
             if (isValidForm && json.field) {
                 addMsgError(json.field, json.value);
@@ -276,7 +288,7 @@ import calendar
 
 
 <div class="content-login border-top bg-login"> <!--div1 -->
-     <main class="login" id="skip-main">
+     <main class="login login__section" id="skip-main">
         <div class="tab-content" id="nav-tabContent"> <!-- div tab-content -->
              <div class="d-flex"> <!-- div d-flex -->
                 <article id="result">
