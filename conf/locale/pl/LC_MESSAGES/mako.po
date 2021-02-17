@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-02-03 09:44+0000\n"
+"POT-Creation-Date: 2021-02-09 12:29+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
 "Last-Translator: Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -4513,6 +4513,10 @@ msgid "Your score is {current_score}%. You have passed the entrance exam."
 msgstr "Twój wynik to {current_score}%. Zdałeś egzamin wstępny."
 
 #: lms/templates/courseware/enroll_redirect.html
+msgid "Go to registration form"
+msgstr "Przejdź do rejestracji"
+
+#: lms/templates/courseware/enroll_redirect.html
 msgid "Register for the course:"
 msgstr "Zarejestruj się na kurs:"
 
@@ -4565,18 +4569,22 @@ msgstr ""
 "warunkiem przystąpienia do kursu. "
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Do you agree that the registration form can read:"
 msgstr "Czy zgadzasz się, aby formularz rejestracyjny odczytywał:"
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Your user profile at navoica.pl"
 msgstr "Twój profil użytkownika na navoica.pl?"
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Your e-mail address"
 msgstr "Twój adres e-mail"
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "I agree"
 msgstr "Zgadzam się"
 
@@ -8862,22 +8870,12 @@ msgid "Go Back"
 msgstr "Powrót"
 
 #: lms/templates/provider/authorize.html
-msgid ""
-"Application would like to access your data with the following permissions:"
-msgstr ""
-"Aplikacja chce uzyskać dostęp do twoich danych na następujących warunkach:"
+msgid "Authorization"
+msgstr "Autoryzacja"
 
 #: lms/templates/provider/authorize.html
 msgid "Read your user ID"
 msgstr "Odczytywać twój identyfikator użytkownika"
-
-#: lms/templates/provider/authorize.html
-msgid "Read your user profile"
-msgstr "Odczytywać twój profil użytkownika"
-
-#: lms/templates/provider/authorize.html
-msgid "Read your email address"
-msgstr "Odczytywać twój adres e-mail"
 
 #: lms/templates/provider/authorize.html
 msgid "Read the list of courses in which you are a staff member."
@@ -8894,10 +8892,6 @@ msgstr "Sprawdzać, czy jesteś członkiem globalnej kadry"
 #: lms/templates/provider/authorize.html
 msgid "Manage your data: {permission}"
 msgstr "Zarządzaj swoimi danymi: {permission}"
-
-#: lms/templates/provider/authorize.html
-msgid "Authorize"
-msgstr "Autoryzuj"
 
 #: lms/templates/registration/account_activation_sidebar_notice.html
 msgid "Account Activation Info"
