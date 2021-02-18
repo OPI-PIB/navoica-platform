@@ -254,7 +254,7 @@ import calendar
 
       $(this).toggleClass("fa-eye-slash");
 
-      var input = $($(this).attr("toggle"));
+      var input = $($(this).data("toggle"));
       var span = $(this).find("span");
 
       span.attr("aria-live", "assertive");
