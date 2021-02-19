@@ -97,11 +97,15 @@
   text-align: left;
   font-weight: 600;
   color: var(--color-008080);
-  text-decoration: underline;
+  border-bottom: 1px solid var(--color-008080);
+}
+
+.login__section a:hover {
+  text-decoration: none;
 }
 
 .login__section label {
-  color: var(--color-212529);
+  color: var(--color-374049);
   text-align: left;
   font-weight: 600;
   margin: 0 0 4px 0;
@@ -180,7 +184,9 @@
   }
 }
 
-.login__section input{
+.login__section input, 
+.login__section input.form-control,
+.login__section .select-wrapper .custom-select {
   height: 2.375rem;
   background-color: var(--color-ffffff);
   border: 1px solid var(--color-919191);
@@ -188,15 +194,23 @@
   width: 100%;
   text-indent: 12px;
   padding: 0;
+  margin-bottom: 5px;
 
   &:hover {
     border: 2px solid var(--color-919191);
+    box-shadow: none;
   }
 
-  &:active {
+  &:active, &:focus {
     border: 1px solid var(--color-008080);
     outline: 3px solid #bfdfdf;
+    box-shadow: none;
   }  
+}
+
+.login__section input.form-control,
+.login__section .select-wrapper .custom-select {
+  border: 1px solid var(--color-919191);
 }
 
 .login__section input.error-field {
@@ -458,7 +472,11 @@
 #forgot-password-modal a {
   font-weight: 600;
   color: var(--color-008080);
-  text-decoration: underline;
+  border-bottom: 1px solid var(--color-008080);
+}
+
+#forgot-password-modal a:hover {
+  text-decoration: none;
 }
 
 #forgot-password-modal .login-problem {
@@ -574,7 +592,6 @@
 
 .login__section .tip-input {
   color: var(--color-686970);
-  padding-top: 5px;
 }
 
 .login__section #login-form .tip-input {
@@ -582,5 +599,6 @@
   color: unset;
 }
 
-
 /** END REGISTER PAGE **/
+
+
