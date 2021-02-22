@@ -297,9 +297,10 @@ import calendar
                         <h1 class="login-header f-22 h-26">${_("Register")}</h1>
                       </header>
 
-                      <p class="instructions f-14 h-20">
-                        ${_("You will get access to free courses at {platform_name}. </br> <strong> Required fields are noted by an asterisk.</strong>").format(platform_name=platform_name)}
-                      </p>
+                      <div class="instructions f-14 h-20">
+                        <p>${_("You will get access to free courses at {platform_name}.").format(platform_name=platform_name)}</p>
+                        <p class='text-semi-bold'>${_("Required fields are noted by an asterisk.")}</p>
+                      </div>
                     </section> <!-- section section-header-login -->
 
                     <section class="section-register" role="main">
