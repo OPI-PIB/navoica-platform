@@ -14179,6 +14179,12 @@ span.complete-checkmark.fa.fa-check {
   line-height: 0;
 }
 
+@media screen and (max-width: 767px) {
+  #header-navigation .course-preview-title {
+    display: none !important;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   #header-navigation .course-preview-title {
     max-width: 50%;
