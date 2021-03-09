@@ -48,15 +48,19 @@
                     this.meanings[facetKey].terms &&
                     this.meanings[facetKey].terms[termKey] || termKey;
             },
-            parse: function (response) {
+            parse: function (response, options) {
                 var courses = response.results || [];
+                var searchQuery = options && options.data.search_string;
 
-                courses.reverse();
+                if (searchQuery === "") {
+                    courses.reverse();
+                }
+
                 var $target = $("#sorting-form");
                 $target = $target.find('option:selected');
                 var sort = $target.val();
-                
-                if (sort === 'enrollmentStart') {
+
+                if (sort === 'enrollmentStart' && searchQuery === "") {
                     courses.sort(
                         function (a, b) {
                             return (a.data.enrollment_start < b.data.enrollment_start) ? 1 : -1
