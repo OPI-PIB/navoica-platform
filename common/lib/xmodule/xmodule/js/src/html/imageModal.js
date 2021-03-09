@@ -99,6 +99,11 @@ var setupFullScreenModal = function() {
               } else if ($(this).hasClass('action-zoom-out')) {
                   imageModal.removeClass('image-is-zoomed').addClass('image-is-fit-to-screen');
 
+                  img.parent().css({
+                      width: "auto",
+                      height: "auto"
+                  });
+
                   currentDraggie.disable();
               }
 
