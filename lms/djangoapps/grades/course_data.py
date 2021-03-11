@@ -55,6 +55,7 @@ class CourseData(object):
                 self.user,
                 self.location,
                 collected_block_structure=self._collected_block_structure,
+                grading=True
             )
         return self._structure
 
