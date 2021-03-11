@@ -207,8 +207,8 @@ def _footer_navigation_links():
         for link_name, link_url, link_title in [
             #("about", "http://navoica.edu.pl/", _("About the project")),
             ("faq", "/faq", _("FAQ")),
-            ("legend", "/legend", _("Legend_title")),
             ("accessibility", "/accessibility", _("Accessibility Statement")),
+            ("legend", "/legend", _("Legend_title")),
             #("partners", marketing_link("PARTNERS"), _("Partners")),
             #("cooperation", marketing_link("COOPERATION"), _("Cooperation")),
             #("enterprise", marketing_link("ENTERPRISE"),
@@ -217,7 +217,7 @@ def _footer_navigation_links():
             #("news", marketing_link("NEWS"), _("News")),
             #("help-center", settings.SUPPORT_SITE_LINK, _("Help Center")),
             ("FerieBezNudy", reverse("ferie_bez_nudy"), _(u"Navoica dla dzieci i młodzieży")),
-            ("contact", marketing_link("CONTACT"), _("Contact")),
+            ##("contact", marketing_link("CONTACT"), _("Contact")),
             #("careers", marketing_link("CAREERS"), _("Careers")),
             #("donate", marketing_link("DONATE"), _("Donate")),
             ("cookies", marketing_link("COOKIES"), _("Cookies Policy")),
