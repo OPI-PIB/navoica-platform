@@ -331,8 +331,8 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: cms/templates/widgets/footer.html lms/templates/register.html
-#: lms/templates/static_templates/tos.html
+#: cms/templates/widgets/footer.html lms/templates/register-form.html
+#: lms/templates/register.html lms/templates/static_templates/tos.html
 #: themes/red-theme/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/static_templates/tos.html
@@ -1859,12 +1859,16 @@ msgstr ""
 msgid "Account Acknowledgements"
 msgstr ""
 
-#: lms/templates/register-form.html
-msgid "I agree to the &nbsp{link_start}Terms of Service{link_end}"
+#: lms/templates/register-form.html lms/templates/register-form.html
+msgid "I agree to the &nbsp"
 msgstr ""
 
-#: lms/templates/register-form.html
-msgid "I agree to the &nbsp{link_start}Honor Code{link_end}"
+#: lms/templates/register-form.html lms/templates/register.html
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/honor.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/tos.html
+msgid "Honor Code"
 msgstr ""
 
 #: lms/templates/register-shib.html
@@ -2000,21 +2004,16 @@ msgstr ""
 msgid "To enroll, you must follow the honor code."
 msgstr ""
 
-#: lms/templates/register.html lms/templates/static_templates/honor.html
-#: lms/templates/static_templates/honor.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/tos.html
-msgid "Honor Code"
-msgstr ""
-
 #: lms/templates/register.html
 msgid "A valid confirm password is required"
 msgstr ""
 
 #: lms/templates/register.html
-msgid ""
-"You will get access to free courses at {platform_name}. </br> <strong> "
-"Required fields are noted by an asterisk.</strong>"
+msgid "You will get access to free courses at {platform_name}."
+msgstr ""
+
+#: lms/templates/register.html
+msgid "Required fields are noted by an asterisk."
 msgstr ""
 
 #: lms/templates/register.html
@@ -4024,6 +4023,10 @@ msgid "Your score is {current_score}%. You have passed the entrance exam."
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
+msgid "Go to registration form"
+msgstr ""
+
+#: lms/templates/courseware/enroll_redirect.html
 msgid "Register for the course:"
 msgstr ""
 
@@ -4066,18 +4069,22 @@ msgid ""
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Do you agree that the registration form can read:"
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Your user profile at navoica.pl"
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "Your e-mail address"
 msgstr ""
 
 #: lms/templates/courseware/enroll_redirect.html
+#: lms/templates/provider/authorize.html
 msgid "I agree"
 msgstr ""
 
@@ -7848,20 +7855,11 @@ msgid "Go Back"
 msgstr ""
 
 #: lms/templates/provider/authorize.html
-msgid ""
-"Application would like to access your data with the following permissions:"
+msgid "Authorization"
 msgstr ""
 
 #: lms/templates/provider/authorize.html
 msgid "Read your user ID"
-msgstr ""
-
-#: lms/templates/provider/authorize.html
-msgid "Read your user profile"
-msgstr ""
-
-#: lms/templates/provider/authorize.html
-msgid "Read your email address"
 msgstr ""
 
 #: lms/templates/provider/authorize.html
@@ -7878,10 +7876,6 @@ msgstr ""
 
 #: lms/templates/provider/authorize.html
 msgid "Manage your data: {permission}"
-msgstr ""
-
-#: lms/templates/provider/authorize.html
-msgid "Authorize"
 msgstr ""
 
 #: lms/templates/registration/account_activation_sidebar_notice.html

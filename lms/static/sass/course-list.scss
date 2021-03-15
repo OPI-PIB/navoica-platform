@@ -63,6 +63,18 @@ $select-height: calc(1.625em + 0.75rem + 2px);
 $select-border: #ced4da;
 $color-navoica: #e41d37;
 
+/** Override browser form-filling and input highlighting **/
+input {
+  filter: none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
 .fa-twitter.social-icon, .fa-linkedin-in.social-icon {
   background: #E41D37;
   border: 1px solid #E41D37;

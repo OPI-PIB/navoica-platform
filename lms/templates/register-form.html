@@ -18,7 +18,7 @@ from student.models import UserProfile
 
     <div id="alert-primary" role="alert" class="status message submission-error">
         <h3 class="message-title error-bold f-16 h-24">${_("The form contains errors.")}</h3>
-        <ul class="message-copy f-16 h-24">${_("Please correct or fill in the missing information.")}</ul>
+        <p class="message-copy f-16 h-24">${_("Please correct or fill in the missing information.")}</p>
     </div>
 
     % if third_party_auth.is_enabled():
@@ -49,15 +49,15 @@ from student.models import UserProfile
     <span class="copy">${_('or')}</span>
   </span>-->
 
-<p class="instructions">
+<p class="instructions mb-4">
     <!--${_('Create your own {platform_name} account below').format(platform_name=platform_name)}
     <span class="note">${_('Required fields are noted by <strong class="indicator">an asterisk (*)</strong>.')}</span>-->
 </p>
 
 
 % else:
-
-<p class="instructions">
+</div><!-- div error-in-login -->
+<p class="instructions mb-4">
     ## Translators: selected_provider is the name of an external, third-party user authentication service (like Google or LinkedIn).
     ${_("You've successfully signed in with {selected_provider}.").format(selected_provider='<strong>%s</strong>' % selected_provider)}<br/>
     ${_("We just need a little more information before you start learning with {platform_name}.").format(platform_name=settings.PLATFORM_NAME)}
@@ -66,8 +66,8 @@ from student.models import UserProfile
 % endif
 
 % else:
-
-<p class="instructions">
+</div><!-- div error-in-login -->
+<p class="instructions mb-4" style="display: none">
     ${_("Please complete the following fields to register for an account. ")}<br/>
     ${_('Required fields are noted by <strong class="indicator">an asterisk (*)</strong>.')}
 </p>
@@ -81,44 +81,44 @@ from student.models import UserProfile
 
     <div class="list-input">
         <div class="field text form-group form-group-required js-email-field" id="field-email">
-            <label for="email" class="f-16 h-26 d-flex">${_('E-mail')}<p class="text-navoica-red" aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
-            <input class="form-control js-register-field" id="email" type="email" name="email" value="${email}" spellcheck="false" autocomplete="on" required aria-required="true"/>
+            <label for="email" class="f-16 h-26 d-flex">${_('E-mail')}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
+            <input class="form-control js-register-field" id="email" type="email" name="email" value="${email}" spellcheck="false" autocomplete="email" required aria-required="true"/>
                         <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
         </div>
 
         % if third_party_auth.is_enabled() and running_pipeline:
 
         <div class="is-disabled field optional password form-group form-group-required field-password js-password-field" hidden>
-            <label for="password" class="f-16 h-26 d-flex">${_('Password')}<p class="text-navoica-red" aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
+            <label for="password" class="f-16 h-26 d-flex">${_('Password')}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
             <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" disabled required aria-required="true"/>
 
-            <div toggle="#password" class="far fa-eye field-icon toggle-password f-16 h-20 invisible" tabindex="0" role="button">
+            <button type="button" data-toggle="#password" class="far fa-eye field-icon toggle-password f-16 h-20 invisible">
                 <span class="sr-only">${_('Click to show password')}</span>
-            </div>
+            </button>
 
             <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
         </div>
 
         % else:
 
-         <div class="field form-group form-group-required password field-password js-password-field">
-            <label for="password" class="f-16 h-26 d-flex ">${_('Password')}<p class="text-navoica-red" aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
-          
-            <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" required aria-required="true" aria-describedby="password-tip"/>
+         <div class="field text form-group form-group-required password field-password js-password-field">
+            <label for="password" class="f-16 h-26 d-flex ">${_('Password')}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
+            <input style="display:none" type="password">
+            <input class="form-control js-register-field" id="password" type="password" name="password" value="" spellcheck="false" required aria-required="true" aria-describedby="password-tip" autocomplete="off" />
 
-            <div toggle="#password" class="far fa-eye field-icon toggle-password f-16 h-20 invisible" tabindex="0" role="button">
+            <button type="button" data-toggle="#password" class="far fa-eye field-icon toggle-password f-16 h-20 invisible">
                 <span class="sr-only">${_('Click to show password')}</span>
-            </div>
+            </button>
 
             <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
-            <span class="tip tip-input f-14 h-19" id="password-tip" >
+            <span class="tip tip-input f-14 h-0" id="password-tip" >
                 <% min_length = 8 %>
                 ${_("Use at least {num} characters").format(num=min_length)}
             </span>
         </div>
 
         <div class="field password form-group form-group-required field-password js-confirm-password-field">
-            <label for="confirm_password" class="f-16 h-26 d-flex">${_('Confirm Password')}<p class="text-navoica-red" aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
+            <label for="confirm_password" class="f-16 h-26 d-flex">${_('Confirm Password')}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
             <input class="form-control js-register-field" id="confirm_password" type="password" value="" spellcheck="false" required aria-required="true" name="confirm_password" />
             <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
         </div>
@@ -126,14 +126,14 @@ from student.models import UserProfile
         % endif
 
           <div class="field text form-group form-group-required js-name-field" id="field-name">
-            <label for="name" class="f-16 h-26 d-flex">${_('Full Name')}<p class="text-navoica-red" aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
-            <input class="form-control js-register-field" id="name" type="text" name="name" value="${name}" required aria-required="true" aria-describedby="name-tip"/>
+            <label for="name" class="f-16 h-26 d-flex">${_('Full Name')}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
+            <input class="form-control js-register-field" id="name" type="text" name="name" value="${name}" required aria-required="true" aria-describedby="name-tip" autocomplete="name"/>
             <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
             <span class="tip tip-input f-14 h-0" id="name-tip">${_("Full name is be displayed on certificates you obtain")}</span>
         </div>
         <div class="field text form-group form-group-required js-username-field" id="field-username">
-            <label for="username" class="f-16 h-26 d-flex flex-wrap">${_('Public Username')}<p class="text-navoica-red" aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
-            <input class="form-control js-register-field" id="username" type="text" name="username" value="${username}" required aria-required="true" aria-describedby="username-tip"/>
+            <label for="username" class="f-16 h-26 d-flex flex-wrap">${_('Public Username')}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
+            <input class="form-control js-register-field" id="username" type="text" name="username" value="${username}" required aria-required="true" aria-describedby="username-tip" autocomplete="username"/>
             <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
             <span class="tip tip-input f-14 h-0" id="username-tip">${_('User profile is visible in discussions and forums you participate in')}</span>
         </div>
@@ -152,7 +152,7 @@ from student.models import UserProfile
         % if ask_for_email:
 
         <div class="field text js-email-field" id="field-email">
-            <label for="email" class="f-16 h-26 d-flex">${_("E-mail")}<p class="text-navoica-red" aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
+            <label for="email" class="f-16 h-26 d-flex">${_("E-mail")}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
             <input class="js-register-field" id="email" type="email" name="email" value="" spellcheck="false" required aria-required="true"/>
             <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
         </div>
@@ -160,7 +160,7 @@ from student.models import UserProfile
         % endif
 
         <div class="field text js-username-field" id="field-username">
-            <label for="username" class="f-16 h-26 d-flex">${_('Public Display Name')}<p class="text-navoica-red" aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
+            <label for="username" class="f-16 h-26 d-flex">${_('Public Display Name')}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
             <input class="js-register-field" id="username" type="text" name="username" value="${extauth_username}" required aria-required="true" aria-describedby="username-tip"/>
             <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
             <span class="tip tip-input f-14 h-0" id="username-tip">${_('User profile is visible in discussions and forums you participate in')}</span>
@@ -169,7 +169,7 @@ from student.models import UserProfile
         % if ask_for_fullname:
 
         <div class="field text js-name-field" id="field-name">
-             <label for="name" class="f-16 h-26 d-flex">${_('Full Name')}<p class="text-navoica-red" aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
+             <label for="name" class="f-16 h-26 d-flex">${_('Full Name')}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
             <input class="js-register-field" id="name" type="text" name="name" value="" aria-describedby="name-tip"/>
             <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
             <span class="tip tip-input f-14 h-0" id="name-tip">${_("Full name is be displayed on certificates you obtain")}</span>
@@ -248,7 +248,7 @@ from student.models import UserProfile
                         <label for="yob" class="f-16 h-26">${_("Year of Birth")}</label>
                         <div>
                             <select class="form-control" id="yob" name="year_of_birth" ${'required aria-required="true"' if settings.REGISTRATION_EXTRA_FIELDS['year_of_birth'] == 'required' else ''}>
-                                <option class=" f-16 h-26" value=""></option>
+                                <option class=" f-16 h-26" value="" label="${_('Year of Birth')}"></option>
                                 %for year in UserProfile.VALID_YEARS:
                                 <option class=" f-16 h-26" value="${year}">${year}</option>
                                 %endfor
@@ -293,9 +293,12 @@ from student.models import UserProfile
     <div class="form-group terms-of-service js-terms-of-service-field">
         <div class="custom-control custom-checkbox  d-flex align-items-center">
             <input type="checkbox" name="terms_of_service" class="custom-control-input js-register-field" id="terms_of_service" value="true" required aria-required="true">
-             <label class="custom-control-label d-flex f-14 h-24 mb-0 d-flex flex-wrap" for="terms_of_service">${_('I agree to the &nbsp{link_start}Terms of Service{link_end}').format(
-                link_start='<a href="{url}" class="new-vp">'.format(url=marketing_link('TOS')),
-                    link_end='</a>')}<p class="text-navoica-red"  aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
+             <label class="custom-control-label d-flex f-14 h-24 mb-0 flex-wrap" for="terms_of_service">${_('I agree to the &nbsp')}
+                <span class="d-inline">
+                    <a href="${marketing_link('TOS')}" class="new-vp">${_('Terms of Service')}</a>
+                    <span class="text-navoica-red d-inline"  aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span>
+                </span>
+             </label>
         </div>
         <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
     </div>
@@ -311,9 +314,12 @@ from student.models import UserProfile
             <%
             honor_code_path = marketing_link('HONOR')
             %>
-                <label class="custom-control-label d-flex f-14 h-24 mb-0 d-flex flex-wrap" for="honor_code">${_('I agree to the &nbsp{link_start}Honor Code{link_end}').format(
-                link_start='<a href="{url}" class="new-vp">'.format(url=honor_code_path),
-                    link_end='</a>')}<p class="text-navoica-red" aria-hidden="true">&nbsp;*</p><span class="sr-only">${_('required')}</span></label>
+                <label class="custom-control-label d-flex f-14 h-24 mb-0 flex-wrap" for="honor_code">${_('I agree to the &nbsp')}
+                    <span class="d-inline">
+                        <a href="${honor_code_path}" class="new-vp">${_('Honor Code')}</a>
+                        <span class="text-navoica-red d-inline"  aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span>
+                    </span>
+                </label>
         </div>
         <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
     </div>
