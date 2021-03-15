@@ -762,7 +762,7 @@ def videos_post(course, request):
             if transcript_preferences is not None:
                 metadata_list.append(('transcript_preferences', json.dumps(transcript_preferences)))
 
-        upload_url = settings.VIDEO_UPLOAD_PREAUTH_URL+edx_video_id
+        upload_url = settings.VIDEO_UPLOAD_PREAUTH_URL+settings.VIDEO_UPLOAD_PIPELINE["BUCKET"]+"/"+edx_video_id
 
         # persist edx_video_id in VAL
         create_video({
