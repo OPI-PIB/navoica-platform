@@ -10830,12 +10830,12 @@ article .display-3 {
 
     :first-child {
       &[aria-expanded="false"]::before {
-        content: "+";
+        content: "\002B";
         left: 12px;
       }
 
       &[aria-expanded="true"]::before {
-        content: "\2012";
+        content: "\2212";
         left: 12px;
       }
     }
@@ -10890,8 +10890,7 @@ article .display-3 {
 
       .list-group-item {
         border: 0;
-        padding-left: 0;
-        padding-: 1rem;
+        padding-left: 1.75rem;
 
         &:hover {
           background: transparent;
@@ -13037,15 +13036,13 @@ fieldset label {
 }
 
 button#section.subsection-text.accordion-trigger.bg1[aria-expanded="false"]::before, button.accordion-section.subsection-text.accordion-trigger.bg1[aria-expanded="false"]::before {
-        content: "+";
-        left: 12px;
-        margin-right: 5px;
+        content: "\002B";
+        padding-left: 0.875rem;
       }
 
 button#section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::before, button.accordion-section.subsection-text.accordion-trigger.bg1[aria-expanded="true"]::before {
-        content: "\2012";
-        left: 12px;
-        margin-right: 5px;
+        content: "\2212";
+        padding-left: 0.875rem;
       }
 
 #content .vert .problems-wrapper .problem [class*="inputtype"] {
