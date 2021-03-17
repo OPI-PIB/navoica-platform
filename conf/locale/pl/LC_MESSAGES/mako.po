@@ -6,16 +6,16 @@
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2021
-#
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-02-09 12:29+0000\n"
+"POT-Creation-Date: 2021-02-23 09:22+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
-"Last-Translator: Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2021\n"
+"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -339,8 +339,8 @@ msgstr "Identyfikator kursu"
 msgid "Reset"
 msgstr "Zresetuj"
 
-#: cms/templates/widgets/footer.html lms/templates/register.html
-#: lms/templates/static_templates/tos.html
+#: cms/templates/widgets/footer.html lms/templates/register-form.html
+#: lms/templates/register.html lms/templates/static_templates/tos.html
 #: themes/red-theme/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/footer.html
 #: themes/stanford-style/lms/templates/static_templates/tos.html
@@ -1963,13 +1963,17 @@ msgstr "Napisz, dlaczego chcesz się zarejestrować w {platform_name}"
 msgid "Account Acknowledgements"
 msgstr "Zaakceptowanie regulaminów platformy"
 
-#: lms/templates/register-form.html
-msgid "I agree to the &nbsp{link_start}Terms of Service{link_end}"
-msgstr "Akceptuję&nbsp{link_start} Warunki korzystania z Serwisu{link_end}"
+#: lms/templates/register-form.html lms/templates/register-form.html
+msgid "I agree to the &nbsp"
+msgstr "Zgadzam się z &nbsp"
 
-#: lms/templates/register-form.html
-msgid "I agree to the &nbsp{link_start}Honor Code{link_end}"
-msgstr "Zgadzam się z&nbsp{link_start}Kodeksem Honorowym{link_end}"
+#: lms/templates/register-form.html lms/templates/register.html
+#: lms/templates/static_templates/honor.html
+#: lms/templates/static_templates/honor.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/tos.html
+msgid "Honor Code"
+msgstr "Kodeks Honorowy"
 
 #: lms/templates/register-shib.html
 #: themes/stanford-style/lms/templates/register-shib.html
@@ -2122,24 +2126,17 @@ msgstr "Musisz zaakceptować Warunki Korzystania z Serwisu."
 msgid "To enroll, you must follow the honor code."
 msgstr "Musisz zaakceptować zasady Kodeksu Honorowego."
 
-#: lms/templates/register.html lms/templates/static_templates/honor.html
-#: lms/templates/static_templates/honor.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/tos.html
-msgid "Honor Code"
-msgstr "Kodeks Honorowy"
-
 #: lms/templates/register.html
 msgid "A valid confirm password is required"
 msgstr "Wymagane jest prawidłowe hasło potwierdzające."
 
 #: lms/templates/register.html
-msgid ""
-"You will get access to free courses at {platform_name}. </br> <strong> "
-"Required fields are noted by an asterisk.</strong>"
-msgstr ""
-"Uzyskasz dostęp do bezpłatnych kursów na {platform_name}. </br> <strong> "
-"Pola obowiązkowe zostały oznaczone gwiazdką.</strong>"
+msgid "You will get access to free courses at {platform_name}."
+msgstr "Uzyskasz dostęp do bezpłatnych kursów na {platform_name}. "
+
+#: lms/templates/register.html
+msgid "Required fields are noted by an asterisk."
+msgstr "Pola obowiązkowe zostały oznaczone gwiazdką."
 
 #: lms/templates/register.html
 msgid "Registration form"
@@ -4802,7 +4799,7 @@ msgstr "Wyświetl system oceniania w Studio"
 
 #: lms/templates/courseware/progress.html
 msgid "Course Progress for Student '{username}' ({email})"
-msgstr "Postęp w kursie studenta '{username}' ({email})"
+msgstr "Wyniki studenta '{username}' ({email})"
 
 #: lms/templates/courseware/progress.html
 msgid "View Certificate"
@@ -5816,8 +5813,7 @@ msgstr "Zespół platformy NAVOICA"
 #: lms/templates/emails/activation_email.html
 msgid "This is an automatically generated e-mail - please do not reply to it."
 msgstr ""
-"Wiadomość została wygenerowana automatycznie - prosimy na nią nie "
-"odpowiadać."
+"Wiadomość została wygenerowana automatycznie, prosimy na nią nie odpowiadać."
 
 #: lms/templates/emails/activation_email.html
 msgid "If you have any questions or comments, please"
