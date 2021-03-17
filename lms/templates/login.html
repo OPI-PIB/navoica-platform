@@ -252,7 +252,7 @@ from third_party_auth import provider, pipeline
         			
             		<div class="form-group form-group-required field email js-email-field">
                   <label for="email" class="f-16 h-26">E-mail</label>
-                  <input class="js-input-login" id="email" type="email" name="email" value="" spellcheck="false" autocomplete="on" required aria-required="true" aria-describedby="emailHelp">
+                  <input class="js-input-login" id="email" type="email" name="email" value="" spellcheck="false" autocomplete="email" required aria-required="true">
             			<small id="error-email" aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
             		</div>
 
@@ -266,7 +266,7 @@ from third_party_auth import provider, pipeline
                   <div class="custom-control custom-checkbox mr-auto">
                     <label for="customCheck1">
                       <input type="checkbox" class="custom-control-input" id="customCheck1" name="remember" aria-label="${_('Remember me')}">
-                      <span class="custom-control-label remember-check"><p class="f-14 h-26">${_('Remember me')}</p></span>
+                      <span class="custom-control-label remember-check"><span class="f-14 h-26">${_('Remember me')}</span></span>
                     </label>
                   </div>
             	    <div class="tip tip-input">
