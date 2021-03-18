@@ -73,29 +73,32 @@ class PasswordResetConfirmation extends React.Component {
 
   render() {
     return (
-      <section id="password-reset-confirm-anchor" className="form-type">
+      <section id="password-reset-confirm-anchor" className="login__section form-type">
         <div id="password-reset-confirm-form" className="form-wrapper" aria-live="polite">
-          <StatusAlert
+
+          <form id="passwordreset-form" method="post" action="">
+            <h1 className="section-title lines login-header mb-5">
+              <span className="text f-22 h-26">
+                {gettext('Reset Your Password')}
+              </span>
+            </h1>
+
+            <StatusAlert
             alertType="danger"
             dismissible={false}
             open={!!this.props.errorMessage}
-            dialog={this.props.errorMessage}
+            dialog={
+              <div class="error-in-login">
+                <h2 class="message-title error-bold f-16 h-24">{gettext('Password reset unsuccessful.')}</h2>
+                <p class="message-copy f-26 h-24">{gettext('Please correct or complete the missing information.')}</p>
+              </div>
+            } 
           />
-
-          <form id="passwordreset-form" method="post" action="">
-            <h2 className="section-title lines">
-              <span className="text">
-                {gettext('Reset Your Password')}
-              </span>
-            </h2>
-
-            <p className="action-label" id="new_password_help_text">
-              {gettext('Enter and confirm your new password.')}
-            </p>
 
             <PasswordResetInput
               name="new_password1"
               describedBy="new_password_help_text"
+              className="f-16 h-26"
               label={gettext('New Password')}
               onBlur={this.onBlurPassword1}
               isValid={this.state.isValid}
@@ -105,6 +108,7 @@ class PasswordResetConfirmation extends React.Component {
             <PasswordResetInput
               name="new_password2"
               describedBy="new_password_help_text"
+              className="f-16 h-26"
               label={gettext('Confirm Password')}
               onBlur={this.onBlurPassword2}
               isValid={!this.state.showMatchError}
@@ -120,10 +124,16 @@ class PasswordResetConfirmation extends React.Component {
 
             <Button
               type="submit"
-              className={['btn', 'btn-primary', 'action-update', 'js-reset']}
-              label={gettext('Reset My Password')}
+              className={['btn', 'btn-primary','action-update', 'js-reset']}
+              label={gettext('Reset password')}
             />
           </form>
+
+          <p className="login-problem f-14 h-19">
+          {gettext("Can't log in? Send an e-mail to: ")}
+            <a href="mailto:mooc_help@opi.org.pl"> {gettext("mooc_help@opi.org.pl")}</a>
+          </p>
+
         </div>
       </section>
     );

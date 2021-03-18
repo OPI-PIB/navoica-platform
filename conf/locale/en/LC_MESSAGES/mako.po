@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-03-23 13:32+0000\n"
-"PO-Revision-Date: 2021-03-23 13:33:02.766953\n"
+"POT-Creation-Date: 2021-04-12 11:04+0000\n"
+"PO-Revision-Date: 2021-04-12 11:04:27.133944\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -7910,12 +7910,11 @@ msgid "Your Password Reset is Complete"
 msgstr ""
 
 #: lms/templates/registration/password_reset_complete.html
-msgid "Password Reset Complete"
+msgid "Your password has been reset"
 msgstr ""
 
 #: lms/templates/registration/password_reset_complete.html
-msgid ""
-"Your password has been reset. {start_link}Sign-in to your account.{end_link}"
+msgid "{start_link}Log in{end_link}"
 msgstr ""
 
 #: lms/templates/registration/password_reset_confirm.html
@@ -7923,7 +7922,18 @@ msgid "Reset Your {platform_name} Password"
 msgstr ""
 
 #: lms/templates/registration/password_reset_confirm.html
-msgid "Invalid Password Reset Link"
+msgid "Invalid link"
+msgstr ""
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"The password reset link is no longer valid. It has probably already been "
+"used. To generate a new link, go to the login page and click "
+"{start_strong}Forgot password?{end_strong}."
+msgstr ""
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Go to the login page"
 msgstr ""
 
 #: lms/templates/registration/password_reset_done.html
