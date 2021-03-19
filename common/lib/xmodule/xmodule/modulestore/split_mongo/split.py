@@ -60,6 +60,7 @@ import logging
 import six
 
 from contracts import contract, new_contract
+from django.conf import settings
 from importlib import import_module
 from mongodb_proxy import autoretry_read
 from path import Path as path
@@ -2590,7 +2591,8 @@ class SplitMongoModuleStore(SplitBulkWriteMixin, ModuleStoreWriteBase):
             # Note that new_block_info now points to the same definition ID entry as source_block_info did
             existing_block_info = dest_structure['blocks'].get(new_block_key, BlockData())
             # Inherit the Scope.settings values from 'fields' to 'defaults'
-            new_block_info.defaults = new_block_info.fields
+            if not settings.LIBRARY_COPY_WITHOUT_OVERRIDING_FIELDS:
+                new_block_info.defaults = new_block_info.fields
 
             # <workaround>
             # CAPA modules store their 'markdown' value (an alternate representation of their content)
@@ -2605,7 +2607,8 @@ class SplitMongoModuleStore(SplitBulkWriteMixin, ModuleStoreWriteBase):
             # </workaround>
 
             # Preserve any existing overrides
-            new_block_info.fields = existing_block_info.fields
+            if not settings.LIBRARY_COPY_WITHOUT_OVERRIDING_FIELDS:
+                new_block_info.fields = existing_block_info.fields
 
             if 'children' in new_block_info.defaults:
                 del new_block_info.defaults['children']  # Will be set later

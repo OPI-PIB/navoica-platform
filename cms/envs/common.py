@@ -1597,3 +1597,7 @@ CKEDITOR_CONFIGS = {
     }
 }
 # bold
+
+
+################# Library Settings ###########################
+LIBRARY_COPY_WITHOUT_OVERRIDING_FIELDS = True
