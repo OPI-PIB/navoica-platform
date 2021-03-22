@@ -613,6 +613,9 @@ RETIREMENT_SERVICE_WORKER_USERNAME = ENV_TOKENS.get(
     RETIREMENT_SERVICE_WORKER_USERNAME
 )
 
+####################### Library Settings #########################
+LIBRARY_COPY_WITHOUT_OVERRIDING_FIELDS = ENV_TOKENS.get('LIBRARY_COPY_WITHOUT_OVERRIDING_FIELDS', LIBRARY_COPY_WITHOUT_OVERRIDING_FIELDS)
+
 ####################### Plugin Settings ##########################
 
 from openedx.core.djangoapps.plugins import plugin_settings, constants as plugin_constants
