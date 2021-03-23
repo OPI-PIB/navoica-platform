@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-02-23 09:22+0000\n"
-"PO-Revision-Date: 2021-02-23 09:22:43.128692\n"
+"POT-Creation-Date: 2021-03-23 13:32+0000\n"
+"PO-Revision-Date: 2021-03-23 13:33:02.766953\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -40,7 +40,8 @@ msgstr ""
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
 #: cms/templates/settings_graders.html cms/templates/widgets/header.html
-#: cms/templates/widgets/header.html
+#: cms/templates/widgets/header.html lms/templates/header/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Settings"
 msgstr ""
@@ -384,8 +385,7 @@ msgstr ""
 
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 #: lms/templates/user_dropdown.html lms/templates/user_dropdown.html
-#: lms/templates/user_dropdown.html lms/templates/header/user_dropdown.html
-#: lms/templates/header/user_dropdown.html
+#: lms/templates/user_dropdown.html
 msgid "Account"
 msgstr ""
 
@@ -1838,7 +1838,7 @@ msgstr ""
 msgid "Gender"
 msgstr ""
 
-#: lms/templates/register-form.html
+#: lms/templates/register-form.html lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Year of Birth"
 msgstr ""
@@ -5892,7 +5892,7 @@ msgstr ""
 msgid "Navoica logo"
 msgstr ""
 
-#: lms/templates/header/header.html
+#: lms/templates/header/header.html lms/templates/header/user_dropdown.html
 msgid "My Account"
 msgstr ""
 
@@ -8404,10 +8404,10 @@ msgstr ""
 
 #: lms/templates/static_templates/accessibility.html
 msgid ""
-"The owner of the NAVOICA Educational Platform is the Ministry of Science and"
-" Higher Education headquartered in Warsaw, Poland, at the following address:"
-" ul. Wspolna 1/3. The operator of the Platform is the National Information "
-"Processing Institute (OPI PIB)"
+"The owner of the NAVOICA Educational Platform is the Ministry of Education "
+"and Science headquartered in Warsaw, Poland, at the following address: ul. "
+"Wspolna 1/3. The operator of the Platform is the National Information "
+"Processing Institute (OPI PIB)."
 msgstr ""
 
 #: lms/templates/static_templates/accessibility.html
@@ -8443,19 +8443,25 @@ msgid "Unavailable content"
 msgstr ""
 
 #: lms/templates/static_templates/accessibility.html
-msgid "contrast of some elements is inadequate,"
-msgstr ""
-
-#: lms/templates/static_templates/accessibility.html
-msgid "some forms have no labels,"
-msgstr ""
-
-#: lms/templates/static_templates/accessibility.html
 msgid "focus is invisible,"
 msgstr ""
 
 #: lms/templates/static_templates/accessibility.html
-msgid "alternative texts for some pictures may be missing,"
+msgid "the header hierarchy is inadequate,"
+msgstr ""
+
+#: lms/templates/static_templates/accessibility.html
+msgid ""
+"some elements may have inadequate contrast (applies to pages after login),"
+msgstr ""
+
+#: lms/templates/static_templates/accessibility.html
+msgid "some forms may not have labels (applies to pages after login),"
+msgstr ""
+
+#: lms/templates/static_templates/accessibility.html
+msgid ""
+"alternative text to images may be missing (applies to pages after login),"
 msgstr ""
 
 #: lms/templates/static_templates/accessibility.html
@@ -8472,12 +8478,13 @@ msgstr ""
 
 #: lms/templates/static_templates/accessibility.html
 msgid ""
-"The platform is being modified to make it more available. With enhancements "
-"introduced on a regular basis, the availability will be gradually improving "
-"over time. As from the end of October 2020 the websites, before logging in, "
-"will meet the WCAG 2.1 level AA requirements. Websites available after "
-"logging in will be adapted in the next step. We are also working on a "
-"solution allowing to make the courses available electronically."
+"The platform is undergoing modifications to make it more accessible. Work is"
+" ongoing and accessibility is gradually being improved. The process of "
+"adapting the pre-login pages to the WCAG 2.1 guidelines at level AA is "
+"nearing completion. In the near future, the focus will be made more visible "
+"and the header hierarchy will be improved. Pages available after login will "
+"be adjusted subsequently. At the same time, we are also working to create "
+"digitally accessible courses in the future."
 msgstr ""
 
 #: lms/templates/static_templates/accessibility.html
