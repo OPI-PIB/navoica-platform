@@ -4,80 +4,184 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
-
 from openedx.core.djangolib.markup import HTML, Text
 %>
 
 <%block name="pagetitle"> ${_('Polish MOOC platform')}</%block>
 
-<header id="header">
-    <div id="jumbotron">
-        <div class="container">
-            <h1 class="display-1 text-center text-uppercase text-darkblack">${_('ACCESSIBLE KNOWLEDGE')}</h1>
-            <p class="lead text-center my-3">${_('Free online courses offered by Polish universities and institutions')}</p>
-	      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-            <form method="get" action="/courses" role="search">
-                <div class="input-group my-2 p-2 d-flex flex-row flex-nowrap">
-                    <label for="search-query" class="sr-only">${_('Search courses')}</label>
-                    <input id="search-query" class="form-control form-control-lg" type="search" name="search_query" placeholder="${_('Search courses...')}">
-                    <button class="btn btn-outline-secondary btn-lg" type="submit" id="button-addon2" title="${_('Search')}"><i class="fa fa-search mx-0" aria-hidden="true"></i><span class="sr-only">${_('Search courses')}</span></button>
-				</div>
-			  </form>
-		   % endif
-		</div>
-	  </div>
-<%include file="index_promo_video.html" />
+<header>
+    <%include file="index_promo_video.html" />
 </header>
-
-<%include file="${courses_list}" />
-<section class="about-us border-top">
-    <div class="container">
-
-        <h2 class="display-2 text-center">${_('About Navoica')}</h2>
-
-        <div class="row">
-            <div class="col-md-4 mb-3 h-100 text-center">
-                <div class="card-body d-flex flex-column flex-sm-row flex-md-column">
-                    <figure class="mb-3">
-                        <img class="mx-auto" src="/static/images/navoica-wirtualne-kursy.png" alt="">
-                    </figure>
-                    <div class="text-sm-left text-md-center">
-                        <h3 class="card-title">${_('Wide range of online courses ')}</h3>
-                        <p class="card-text">${_('A broad spectrum of courses with varying levels of expertise. Everyone can find an interesting course for themselves.')}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 h-100 text-center">
-                <div class="card-body d-flex flex-column flex-sm-row flex-md-column">
-                    <figure class="mb-3">
-                        <img class="mx-auto" src="/static/images/navoica-platforma-ksztalcenia.png" alt="">
-                    </figure>
-                    <div class="text-sm-left text-md-center">
-                        <h3 class="card-title">${_('Publicly available learning platform')}</h3>
-                        <p class="card-text">${_('We reach anyone who wants to learn \\u2013 regardless of their age or place of residence.')}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 h-100 text-center">
-                <div class="card-body d-flex flex-column flex-sm-row flex-md-column">
-                    <figure class="mb-3">
-                        <img class="mx-auto" src="/static/images/navoica-siec-wspolpracy.png" alt="">
-                    </figure>
-                    <div class="text-sm-left text-md-center">
-                        <h3 class="card-title">${_('Network of universities and institutions ')}</h3>
-                        <p class="card-text">${_('New online learning ecosystem brings together: universities, research institutes, businesses and NGOs. Find out more about Navoica')}</p>
-                    </div>
-                </div>
+<section class="main__home-page">
+    <div class="container-fluid bg-home-section-1 d-flex align-items-center">
+        <div class="container homepage__hero">
+            <div class="col-lg-6 col-sm-12">
+                <h1 class="main__home-page__title homepage__main-title">${Text(_('Accessible knowledge{break_html} for {mark_start}everyone{mark_end}')).format(
+                    mark_start=HTML('<mark class="mark__bottom-line">'),
+                    mark_end=HTML('</mark>'),
+                    break_html=HTML('<br/>')
+                    )}</h1>
+                <p class="main__home-page__description pb-md-4 pb-3">
+                    ${Text(_('Discover {strong_start}free courses{strong_end} offered by Polish universities and institutions. You will learn {strong_start}online{strong_end}, at any time and any pace. Upon completion of a course you will receive {strong_start}a certificate{strong_end}?')).format(
+                    strong_start=HTML('<strong>'),
+                    strong_end=HTML('</strong>')
+                    )}
+                </p>
+                <a href="${marketing_link('COURSES')}" class="navoica-button__primary navoica-button--big">
+                    <span class="navoica-button__label">${_('View our courses')} <span class="sr">${_('in courses')}</span><img class="navoica-button__icon" src="/static/images/double-arrow-right.svg" alt=""/></span>
+                </a>
             </div>
         </div>
-
-      <div class="mt-4 text-center" style="display: none">
-            <a class="btn btn-outline-primary btn-lg" href="" target="_blank" role="button">${_('Find out more about Navoica')}</a>
-      </div>
-
     </div>
-
 </section>
+
+<%include file="${courses_list}" />
+
+<section class="main__home-page">
+    <div class="container homepage__what-is-navoica">
+        <div class="row d-flex flex-wrap align-items-center">
+            <div class="col-lg-6 col-sm-12 homepage__text-info">
+                <span class="main__home-page__subtitle">${_('About the platform')}</span>
+                <h2 class="main__home-page__title mt-8 pb-3 mb-0">${Text(_('What is {mark_start}NAVOICA?{mark_end}')).format(
+                    mark_start=HTML('<mark class="mark__bottom-line">'),
+                        mark_end=HTML('</mark>')
+                    )}</h2>
+                <p class="main__home-page__description pb-3">
+                    ${Text(_('NAVOICA is a Polish educational platform with {strong_start}MOOC{strong_end} courses, owned by the Ministry of Education and Science and developed by {strong_start}the National Information Processing Institute (OPI PIB){strong_end}. The platform is named after {strong_start}Nawojka{strong_end} who was the first Polish female student, according to a legend.')).format(
+                    strong_start=HTML('<strong>'),
+                    strong_end=HTML('</strong>')
+                    )}
+                </p>
+                <a href="/faq" class="navoica-button__outline navoica-button--big">
+                    <span class="navoica-button__label">${_('More about the platform')} <img class="navoica-button__icon" src="/static/images/double-arrow-right-blue.svg" alt=""/></span>
+                </a>
+            </div>
+            <div class="col-lg-6 col-sm-12 mx-auto homepage-image-before-1 homepage__picture">
+                <img src="/static/images/about-navoica-image.png" alt="${_('The man is sitting in front of the desk. He has a gray beard and glasses. There are books and an open laptop on the desk. He is holding a whiteboard marker in his hand. The whiteboard rests on the cupboard behind the man.')}" class="img-fluid homepage-image homepage-image-1 mx-auto" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main__home-page">
+    <div class="container">
+        <div class="">
+            <span class="main__home-page__subtitle">${_('NAVOICA platform’s advantages')}</span>
+            <h2 class="main__home-page__title mt-8">${_('Why should you learn with us?')}</h2>
+        </div>
+        <div class="homepage__why-learn">
+            <div class="homepage__why-learn__box">
+                <img src="/static/images/laptop-icon.svg" alt="" class="" />
+                <h3 class="main__home-page__title text-center">${_('Wide range of online courses')}</h3>
+                <p class="main__home-page__description text-center">${_('A wide range of course topics with various difficulty levels. Everyone will find something interesting for themselves.')}</p>
+            </div>
+
+            <div class="homepage__why-learn__box">
+                <img src="/static/images/book-icon.svg" alt="" class="" />
+                <h3 class="main__home-page__title text-center">${_('Free open educational platform')}</h3>
+                <p class="main__home-page__description text-center">${_('You can learn anytime, anywhere and at your own pace. Using the platform is completely free of charge.')}</p>
+            </div>
+
+            <div class="homepage__why-learn__box">
+                <img src="/static/images/student-icon.svg" alt="" class="" />
+                <h3 class="main__home-page__title text-center">${_('High quality courses')}</h3>
+                <p class="main__home-page__description text-center">${_('Our courses are created by experts, lecturers and academics from Polish universities.')}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main__home-page">
+    <div class="container-fluid bg-home-section-5 d-flex align-items-center px-0 mx-0">
+        <div class="container">
+            <div class="homepage__popular-fields">
+                <h2 class="main__home-page__title pb-3 my-0">${_('You can find courses in popular areas')}:</h2>
+                <p class="main__home-page__description pb-4">${_('Programming, IT, Languages, Personal Development, Management, Business and many more.')}</p>
+                <a href="${marketing_link('COURSES')}" class="navoica-button__primary navoica-button--big">
+                    <span class="navoica-button__label">${_('View our courses')} <span class="sr">${_('in courses')}</span><img class="navoica-button__icon" src="/static/images/double-arrow-right.svg" alt=""/></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main__home-page">
+    <div class="container homepage__partners">
+        <div class="" style="position: relative;">
+        <h2 class="main__home-page__title pb-md-4 pb-3">${_('Our courses are offered by')}:</h2>
+            <button class="btn slider__arrow--left js-slider-prev-partners arrow prev"><i class="fas fa-chevron-left" aria-hidden="true"></i><span class="sr">${_('Previous partners')}</span></button>
+            <div class="homepage__partners-list">
+                <div class="slider-frame js-slide-container-partners">
+                    <img class="opacity-65 js-slider-item" src="/static/images/org/Zachodniopomorski Uniwersytet Technologiczny w Szczecinie.png" alt="Zachodniopomorski Uniwersytet Technologiczny w Szczecinie" />
+                    <img class="opacity-65 js-slider-item" src="/static/images/org/Uniwersytet Mikołaja Kopernika w Toruniu.png" alt="Uniwersytet Mikołaja Kopernika w Toruniu" />
+                    <img class="js-slider-item" src="/static/images/partners/warszawski-instytut-bankowosci.png" alt="Warszawski Instytut Bankowości" />
+                    <div class="collapse" id="more-partners">
+                    <img class="opacity-65 js-slider-item" src="/static/images/org/Politechnika Białostocka.png" alt="Politechnika Białostocka.png" />
+                    <img class="opacity-65 js-slider-item" src="/static/images/org/Uczelnia Techniczno-Handlowa im. Heleny Chodkowskiej.png" alt="Uczelnia Techniczno-Handlowa im. Heleny Chodkowskiej" />
+                    <img class="js-slider-item" src="/static/images/partners/Akademia-Sztuki-Wojennej.png" alt="Akademia Sztuki Wojennej" />
+                    <img class="js-slider-item" src="/static/images/partners/wat.png" alt="Wojskowa Akademia Techniczna" />
+                    <img class="js-slider-item" src="/static/images/partners/centrum-nauki-kopernik.png" alt="Centrum Nauki Kopernik" />
+                    <img class="js-slider-item" src="/static/images/partners/uam.png" alt="Uniwersytet im. Adama Mickiewicza w Poznaniu" />
+                    <img class="js-slider-item" src="/static/images/partners/politechnika-lodzka.png" alt="Politechnika Łódzka" />
+                    <img class="js-slider-item" src="/static/images/partners/Politechnika-Krakowska.png" alt="Politechnika Krakowska" />
+                    </div>
+                </div>
+            </div>
+            <button class="btn slider__arrow--right js-slider-next-partners arrow next"><i class="fas fa-chevron-right" aria-hidden="true"></i><span class="sr">${_('Next partners')}</span></button>
+        </div>
+        <div>
+            <button type="button" class="navoica-button__link navoica-button--small js-show-more-partners" data-toggle="collapse" data-target="#more-partners" role="button" aria-expanded="false" aria-controls="more-partners">
+                <span class="navoica-button__label">${_('More partners')}</span> <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="main__home-page">
+    <div class="container">
+        <div class="row d-flex flex-wrap align-items-center">
+            <div class="col-lg-6 col-sm-12 mx-auto homepage-image-before-2 homepage__picture">
+                <img src="/static/images/education-navoica.png" alt="${_('A woman is sitting at a desk, studying. She has a laptop and notebook in front of her. She has headphones on her head and a pen in her hand.')}" class="img-fluid homepage-image homepage-image-2 mx-auto" />
+            </div>
+            <div class="col-lg-6 col-sm-12 homepage__text-info">
+                <span class="main__home-page__subtitle">${_('Course outline')}</span>
+                <h2 class="main__home-page__title mt-8 pb-3 mb-0">${Text(_('What learning on {mark_start}Navoica.pl{mark_end} looks like?')).format(
+                    mark_start=HTML('<mark class="mark__bottom-line">'),
+                        mark_end=HTML('</mark>')
+                    )}</h2>
+                <p class="main__home-page__description pb-3">${Text(_('Our courses are entirely {strong_start}online{strong_end} and can be taken at any time, usually at your own pace. Lessons are based on {strong_start}films{strong_end}, quizzes, text material and at times also interactive content.')).format(
+                    strong_start=HTML('<strong>'),
+                        strong_end=HTML('</strong>')
+                    )}</p>
+                <a href="/faq" class="navoica-button__outline navoica-button--big">
+                    <span class="navoica-button__label">${_('More about the platform')} <img class="navoica-button__icon" src="/static/images/double-arrow-right-blue.svg" alt=""/></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main__home-page">
+    <div class="container homepage__finish-course">
+        <div class="row d-flex flex-wrap align-items-center">
+            <div class="col-lg-6 col-sm-12 homepage__text-info">
+                <span class="main__home-page__subtitle">${_('Course outline')}</span>
+                <h2 class="main__home-page__title w-400 mt-8 pb-3 mb-0">${Text(_('Upon completion of the course you will receive {mark_start}a certificate{mark_end}')).format(
+                    mark_start=HTML('<mark class="mark__bottom-line">'),
+                        mark_end=HTML('</mark>')
+                    )}</h2>
+                <p class="main__home-page__description">${Text(_('Certificates are issued {strong_start}online{strong_end}, you may download and print them. You can also share them on social media or send them to your employer. Our certificates are {strong_start}free{strong_end} of charge.')).format(
+                    strong_start=HTML('<strong>'),
+                        strong_end=HTML('</strong>')
+                    )}</p>
+            </div>
+            <div class="col-lg-6 col-sm-12 mx-auto homepage-image-before-3 certificate-image homepage__picture">
+                <img src="/static/images/certificate-navoica.png" alt="${_('Handing the course completion certificate to the student\'s hand.')}" class="img-fluid homepage-image homepage-image-3 mx-auto" />
+            </div>
+        </div>
+    </div>
+</section>
+
 
 % if show_homepage_promo_video:
   <section id="video-modal" class="modal home-page-video-modal video-modal">
@@ -93,7 +197,7 @@ from openedx.core.djangolib.markup import HTML, Text
          if(getParameterByName('next')) {
               $('#login').trigger("click");
          }
-      })
+      });
    </script>
 </%block>
 
@@ -107,3 +211,130 @@ from openedx.core.djangolib.markup import HTML, Text
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 % endif
+
+<script>
+
+    $(document).ready(function() {
+        $('html').css("font-size", "1rem");
+
+        function customSlideGallery($slidePrev, $slideNext, $slideContainer, $slideItem, slideGap, slideWidth) {
+            let start = 0;
+            let gap = slideGap;
+            let currentTranslateX = 0;
+            let totalCards = $slideItem.length;
+
+            if (Math.floor($slideContainer.width() / slideWidth) >= totalCards) {
+                $slidePrev.hide();
+                $slideNext.hide();
+            } else {
+                $slidePrev.show();
+                $slideNext.show();
+            }
+
+            $slidePrev.attr('disabled', true);
+
+            $slideNext.on('click', function () {
+                start = start + 1;
+                setTimeout(function () {
+                    let translate = "translate(-" + slideWidth + "px, 0%)";
+
+                    if (start >= totalCards || start === (totalCards - 3)) {
+                        $slideNext.attr('disabled', true);
+                        $slidePrev.attr('disabled', false);
+                    }
+
+                    if (start === totalCards || start < 0) {
+                        currentTranslateX = "translate(0px, 0%)";
+                        start = 0;
+                    }
+
+                    if (start < totalCards && start > 0 && start < (totalCards - 3)) {
+                        $slideNext.attr('disabled', false);
+                        $slidePrev.attr('disabled', false);
+                        translate = "translate(-" + (gap * start + (slideWidth * start)) + "px, 0%)";
+                        currentTranslateX = (gap * start + (slideWidth * start));
+                    }
+
+                    $slideContainer.css({'transform': translate});
+                }, 350);
+            });
+
+            $slidePrev.on('click', function () {
+                start = start - 1;
+                setTimeout(function () {
+                    let totalCards = $slideItem.length;
+                    let translate = "translate(0px, 0%)";
+
+                    if (start === 1 || start <= 0) {
+                        $slidePrev.attr('disabled', true);
+                        $slideNext.attr('disabled', false);
+                    }
+
+                    if (start === totalCards || start < 0) {
+                        currentTranslateX = "translate(0px, 0%)";
+                        start = 0;
+                    }
+
+                    if (start < totalCards && start > 0) {
+                        $slideNext.attr('disabled', false);
+                        $slidePrev.attr('disabled', false);
+                        translate = "translate(" + (currentTranslateX < 0 ? 0 : -(currentTranslateX - slideWidth) + gap * start) + "px, 0%)";
+                        currentTranslateX = currentTranslateX < 0 ? 0 : -(currentTranslateX - slideWidth) + gap * start;
+                    }
+
+                    $slideContainer.css({'transform': translate});
+                }, 350);
+            });
+
+        }
+
+        customSlideGallery($('.js-slider-prev-course'), $('.js-slider-next-course'), $('.js-slide-container-courses'), $('.course__card'), 20, 300);
+        customSlideGallery($('.js-slider-prev-partners'), $('.js-slider-next-partners'), $('.js-slide-container-partners'), $('.js-slider-item'), 20, 150);
+
+        let $showMorePartners = $('.js-show-more-partners');
+        $showMorePartners.on('click', function() {
+            $(this).attr('aria-expanded') === "true" ? $(this).find('span').text("${_('More partners')}") : $(this).find('span').text("${_('Less partners')}");
+        });
+    });
+
+    let courses = Array.from(document.querySelectorAll('.course__card'));
+
+    if (courses.length > 0) {
+        courses.map(function(el) {
+            function Clock(){
+                if (el) {
+                    let getDate = el.querySelector('.js-get-datetime') && el.querySelector('.js-get-datetime').getAttribute('data-datetime');
+                    let dateTime = getDate && new Date(getDate);
+                    let currentDateTime = new Date();
+
+                    let difference = Math.abs(dateTime - currentDateTime);
+                    let daysLeft = Math.floor(difference / ( 1000 * 60 * 60 * 24 ));
+                    let hoursLeft = Math.floor((difference / ( 1000 * 60 * 60 )) % 24);
+                    let minsLeft = Math.floor((difference / ( 1000 * 60 )) % 60);
+                    let secondsLeft = Math.floor((difference / ( 1000 )) % 60);
+
+                    let setDayLef = el.querySelector(".js-datetime-days-left");
+                    let setHourLeft = el.querySelector(".js-datetime-hours-left");
+                    let setMinsLeft = el.querySelector(".js-datetime-minutes-left");
+
+                    if (daysLeft > 0 && setDayLef) {
+                        setDayLef.textContent = String(daysLeft) + " " + "${_('days')}";
+                    }
+                    if (hoursLeft > 0 && setHourLeft) {
+                        setHourLeft.textContent = String(hoursLeft) + " " + "${_('hours')}";
+                    }
+
+                    if (daysLeft === 0 && setMinsLeft) {
+                        setMinsLeft.textContent = String(minsLeft) + " " + "${_('minutes')}";
+                    }
+                }
+            }
+
+            setInterval(Clock , 1000);
+
+            function CheckZero(myTime){
+                return myTime < 10 ? "0"+myTime : myTime;
+            }
+        });
+    }
+</script>

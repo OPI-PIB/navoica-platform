@@ -4,10 +4,55 @@
 from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
 from six import text_type
+from datetime import datetime
 %>
 <%page args="course" expression_filter="h"/>
 
-<div class="col-lg-3 col-md-6 mb-3">
+<div class="course__card">
+	<a href="${reverse('about_course', args=[text_type(course.id)])}" class="card h-100 js-slider-item">
+		<div class="course__card-image" style="background-image: url('${course.course_image_url}');"></div>
+		<div class="course__card-body">
+			<%
+			course_start_date = course.advertised_start or course.start
+			course_enrollment_end_date = course.enrollment_end
+			%>
+
+			<span class="sr">${_('Course')}</span>
+			<h3 class="course__card-body__title">${course.display_name_with_default}</h3>
+
+			<div class="d-flex flex-column justify-content-end course__card-body-info">
+			% if course.organizer:
+			<p class="course__card-body__description">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</p>
+			% endif
+			</div>
+			<div>
+			% if course_enrollment_end_date is not None:
+			<p class="course__card-footer">
+				<span>
+					<i class="far fa-clock" aria-hidden="true"></i>
+					${_('Enrollment ends in')}:
+				</span>
+				<span style="display: none;" class="localized_datetime js-get-datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="shortDate" data-datetime="${course.enrollment_end}"></span>
+				<span class="course__card-time">
+					<span class="js-datetime-days-left"></span>
+					<span class="js-datetime-hours-left"></span>
+					<span class="js-datetime-minutes-left"></span>
+				</span>
+			</p>
+			% else:
+				<p class="course__card-footer">
+					<span>
+						<i class="far fa-clock" aria-hidden="true"></i>
+						<span>${_('Enrollemnt datetime ends')}</span>
+					</span>
+				</p>
+			% endif
+			</div>
+		</div>
+	</a>
+</div>
+
+<!-- <div class="col-lg-3 col-md-6 mb-3">
 	<a href="${reverse('about_course', args=[text_type(course.id)])}" class="card h-100">
 		<div class="card-body d-flex flex-column">
 		 <%
@@ -29,7 +74,7 @@ from six import text_type
             % endif
         </div>
 	</a>
-</div>
+</div> -->
 
 <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
 DateUtilFactory.transform(iterationKey=".localized_datetime");

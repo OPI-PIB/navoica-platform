@@ -4,45 +4,55 @@
 
 <!-- Page Content -->
 % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-	<section id="courses" class="border-top bg-light">
-		<div class="container" id="skip-main">
-		  <h2 class="display-2 text-center">${ _("New courses") }</h2>
-		
 
-		<!-- Marketing Icons Section -->
-		  <div class="row">
+<section class="main__home-page">
+	<div class="container homepage__new-courses" id="skip-main">
+		<h2 class="main__home-page__title my-0">${_("New courses")}</h2>
+		<button class="btn slider__arrow--left js-slider-prev-course arrow prev"><i class="fas fa-chevron-left" aria-hidden="true"></i><span class="sr">${_('Previous courses')}</span></button>
+		<div class="homepage__new-courses-list">
+			<div class="slider-frame js-slide-container-courses">
+			<div class="homepage__new-courses-container">
 
-		    ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
-            %for course in courses[:homepage_course_max]:
-				
+				## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+				%for course in courses[:homepage_course_max]:
+
 				<%include file="course.html" args="course=course" />
-				
-			%endfor
 
-		  </div>
+				%endfor
+
+				<!--<div class="course__card" style="left: 0px;">
+					<a href="/courses/course-v1:ddd+123+2020_s1/about" class="card h-100">
+						<div class="course__card-image" style="background-image: url('/static/images/webinars/podstawy-programowania-scratch.jpg');"></div>
+
+						<div class="course__card-body">
+
+							<span class="sr">Kurs</span>
+							<h3 class="course__card-body__title">ghghfh</h3>
+
+							<div class="d-flex flex-column justify-content-end">
+
+								<p class="course__card-body__description">Powszechna Wyższa Szkoła Humanistyczna 'Pomerania'</p>
+								<p class="course__card-footer">
+									<i class="far fa-clock" aria-hidden="true"></i>
+									Zapisy kończą się za:
+									<span class="course__card-time localized_datetime" data-language="pl" data-format-language="pl" data-format="shortDate" data-datetime="2030-01-01 00:00:00+00:00">1 sty 2030</span>
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>-->
+
+			</div>
+			</div>
 		</div>
+		<button class="btn slider__arrow--right js-slider-next-course arrow next"><i class="fas fa-chevron-right" aria-hidden="true"></i><span class="sr">${_('Next courses')}</span></button>
+		## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
+		##% if homepage_course_max and len(courses) > homepage_course_max:
+		<a href="${marketing_link('COURSES')}" class="navoica-button__primary navoica-button--big">
+			<span class="navoica-button__label">${_('More courses')} <span class="sr">${_('in courses')}</span><img class="navoica-button__icon" src="/static/images/double-arrow-right.svg" alt=""/></span>
+		</a> <!-- ${_("View all Courses")} -->
+		##% endif
+	</div>
+</section>
 
-	<!--
-	<section class="index-courses-list bg-light">
-		<div class="container">
-		  <h2>${_("Popular courses")}</h2>
-		  
-		  <div class="row courses-row">
-			## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
-			%for course in courses[:homepage_course_max]:
-
-				  <%include file="course.html" args="course=course" />
-
-			%endfor
-		  </div>
-		</div>
-  </section>
-  -->
-  ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
-  ##% if homepage_course_max and len(courses) > homepage_course_max:
-	  <div class="mt-4 text-center">
-		<a class="btn btn-primary btn-lg" href="${marketing_link('COURSES')}" role="button">${_("View all Courses")}</a>
-	    </div>
- 	</section>
-  ##% endif
 % endif
