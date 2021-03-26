@@ -18,7 +18,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
         <div id="content" class="py-5">
             <main class="container d-block">
-                <p class="text-justify">${_("The owner of the NAVOICA Educational Platform is the Ministry of Science and Higher Education headquartered in Warsaw, Poland, at the following address: ul. Wspolna 1/3. The operator of the Platform is the National Information Processing Institute (OPI PIB)")}.</p>
+                <p class="text-justify">${_("The owner of the NAVOICA Educational Platform is the Ministry of Education and Science headquartered in Warsaw, Poland, at the following address: ul. Wspolna 1/3. The operator of the Platform is the National Information Processing Institute (OPI PIB).")}</p>
 
                 <p class="text-justify" id="a11y-wstep">${Text(_("{span_start}The National Information Processing Institute{span_end} undertakes to make its website available under the Act of 4 April 2019 on digital accessibility of websites and mobile applications of public entities. The declaration of availability applies to the {link_start}Navoica.pl{link_end} website.")).format(
                             link_start=HTML('<a id="a11y-url" href="https://www.navoica.pl">'),
@@ -30,7 +30,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
                 <ul>
                     <li>${_("Date of publication of the website: ")}<time id="a11y-data-publikacja" datetime="2018-10-30">2018-10-30</time></li>
-                    <li>${_("Date of the last major update: ")}<time id="a11y-data-aktualizacja" datetime="2020-09-21">2020-09-21</time></li>
+                    <li>${_("Date of the last major update: ")}<time id="a11y-data-aktualizacja" datetime="2021-03-15">2021-03-15</time></li>
                 </ul>
                 <h2>${_("Compliance with the Act")}</h2>
                 <p class="text-justify">${Text(_("The website {strong_start}partially complies{strong_end} with the Act on digital accessibility of websites and mobile applications of public entities due to non-compliance or exclusions listed below.")).format(
@@ -42,16 +42,19 @@ from openedx.core.djangolib.markup import HTML, Text
                 <h3>${_("Unavailable content")}</h3>
                 <ul>
                     <li>
-                        ${_("contrast of some elements is inadequate,")}
-                    </li>
-                    <li>
-                        ${_("some forms have no labels,")}
-                    </li>
-                    <li>
                         ${_("focus is invisible,")}
                     </li>
                     <li>
-                        ${_("alternative texts for some pictures may be missing,")}
+                        ${_("the header hierarchy is inadequate,")}
+                    </li>
+                    <li>
+                        ${_("some elements may have inadequate contrast (applies to pages after login),")}
+                    </li>
+                    <li>
+                        ${_("some forms may not have labels (applies to pages after login),")}
+                    </li>
+                    <li>
+                        ${_("alternative text to images may be missing (applies to pages after login),")}
                     </li>
                     <li>
                         ${_("not all video materials are subtitled,")}
@@ -65,7 +68,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
                 </ul>
                 <p class="text-justify">
-                ${_("The platform is being modified to make it more available. With enhancements introduced on a regular basis, the availability will be gradually improving over time. As from the end of October 2020 the websites, before logging in, will meet the WCAG 2.1 level AA requirements. Websites available after logging in will be adapted in the next step. We are also working on a solution allowing to make the courses available electronically.")}
+                ${_("The platform is undergoing modifications to make it more accessible. Work is ongoing and accessibility is gradually being improved. The process of adapting the pre-login pages to the WCAG 2.1 guidelines at level AA is nearing completion. In the near future, the focus will be made more visible and the header hierarchy will be improved. Pages available after login will be adjusted subsequently. At the same time, we are also working to create digitally accessible courses in the future.")}
                 </p>
 
 
@@ -82,7 +85,7 @@ from openedx.core.djangolib.markup import HTML, Text
                 <h3>${_("Preparation of the Declaration of Availability")}</h3>
                 <ul>
                     <li>${_("The Declaration was made on: ")}<time id="a11y-data-sporzadzenie" datetime="2020-09-22">2020-09-22</time></li>
-                    <li>${_("The Declaration was last reviewed and updated on: ")}<time id="a11y-data-deklaracja-przeglad" datetime="2020-09-22">2020-09-22</time></li>
+                    <li>${_("The Declaration was last reviewed and updated on: ")}<time id="a11y-data-deklaracja-przeglad" datetime="2021-03-23">2021-03-23</time></li>
                 </ul>
 
                 <p class="text-justify">${_("The Declaration was made on the basis of a self-assessment of a public entity.")}</p>
@@ -90,8 +93,8 @@ from openedx.core.djangolib.markup import HTML, Text
 
                 <h2 id="a11y-kontakt">${_("Feedback and contact data")}</h2>
                 <ul>
-                    <li>${_("Person responsible for handling applications and queries: ")}<span id="a11y-osoba">Agata Miszkurka</span></li>
-                    <li>${_("E-mail: ")}<a id="a11y-email" href="mailto:agata.miszkurka@opi.org.pl">agata.miszkurka@opi.org.pl</a></li>
+                    <li>${_("Person responsible for handling applications and queries: ")}<span id="a11y-osoba">Małgorzata Kaczmarczyk-Koza</span></li>
+                    <li>${_("E-mail: ")}<a id="a11y-email" href="mailto:malgorzata.kaczmarczyk@opi.org.pl">malgorzata.kaczmarczyk@opi.org.pl</a></li>
                     <li>${_("Telephone: ")}<a id="a11y-telefon" href="tel:+48225701400">+48 22 570 14 00</a>${_(" (please note that by dialing this number you will reach our reception desk and that e-mail is our preferred contact method)")}</li>
                 </ul>
 
