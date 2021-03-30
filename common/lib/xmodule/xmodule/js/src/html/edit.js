@@ -124,14 +124,14 @@
           Disable visual aid on borderless table.
            */
           visual: false,
-          plugins: "textcolor link image codemirror paste table preview importcss searchreplace autolink directionality visualblocks visualchars fullscreen media codesample charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap",
+          plugins: "textcolor link image codemirror paste table preview importcss searchreplace autolink directionality visualblocks visualchars fullscreen media codesample charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap formula",
           image_advtab: true,
 
           /*
           We may want to add "styleselect" when we collect all styles used throughout the LMS
            */
           toolbar: "undo redo | formatselect | bold italic underline strikethrough subscript superscript | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor nonbreaking removeformat wrapAsCode | " +
-            " blockquote | link unlink | table | charmap | fullscreen  preview | codesample | " +
+            " blockquote | link unlink | table | charmap | formula | fullscreen  preview | codesample | " +
             ((this.new_image_modal ? 'insertImage' : 'image') + " | code"),
           toolbar_sticky: true,
           nonbreaking_force_tab: true,
@@ -149,11 +149,15 @@
           menubar: false,
           statusbar: false,
           paste_as_text: false,
+          paste_data_images: true,
           codemirror: {
             path: baseUrl + "/js/vendor"
           },
           // Image Tools plugin options
           automatic_uploads: true,
+          images_dataimg_filter: function(img) {
+            return !($(img).hasClass('Wirisformula') || $(img).attr('src').includes('data:image/svg+xml'));
+          },
           images_upload_handler: this.imagesUploadHandler,
           images_reuse_filename: true,
           /*
@@ -905,8 +909,7 @@
           Translators: this is a message from the raw HTML editor displayed in the browser when a user needs to edit HTML
            */
           "Preview": gettext("Preview"),
-
-          /*
+                    /*
           Translators: this is a message from the raw HTML editor displayed in the browser when a user needs to edit HTML
            */
           "Print": gettext("Print"),
@@ -1199,7 +1202,10 @@
           /*
           Translators: this is a message from the raw HTML editor displayed in the browser when a user needs to edit HTML
            */
-          "Your browser doesn't support direct access to the clipboard. Please use the Ctrl+X/C/V keyboard shortcuts instead.": gettext("Your browser doesn't support direct access to the clipboard. Please use the Ctrl+X/C/V keyboard shortcuts instead.")
+          "Your browser doesn't support direct access to the clipboard. Please use the Ctrl+X/C/V keyboard shortcuts instead.": gettext("Your browser doesn't support direct access to the clipboard. Please use the Ctrl+X/C/V keyboard shortcuts instead."),
+          'Formula': gettext('Formula'),
+          'Cancel': gettext('Cancel'),
+          'Insert Formula': gettext('Insert formula')
         });
       }
     }
@@ -1362,8 +1368,29 @@
       /*
       Overriding image_upload_handler function.
       */
+
+      var hash = function(s) {
+        /* Simple hash function. */
+        var a = 1, c = 0, h, o;
+        if (s) {
+            a = 0;
+            /*jshint plusplus:false bitwise:false*/
+            for (h = s.length - 1; h >= 0; h--) {
+                o = s.charCodeAt(h);
+                a = (a<<6&268435455) + o + (o<<14);
+                c = a & 266338304;
+                a = c!==0?a^c>>21:a;
+            }
+        }
+        return String(a);
+      };
+
+      var filename = blobInfo.filename().match(/[^@]*$/g).shift();
+      if (blobInfo.filename().includes('blobid')){
+        filename = 'formula_' + hash(blobInfo.base64()) + '.png'
+      }
       visualEditor = this.getVisualEditor();
-      imageFile = new File([blobInfo.blob()], blobInfo.filename().match(/[^@]*$/g).shift(), {
+      imageFile = new File([blobInfo.blob()], filename, {
         type: blobInfo.blob()["type"],
         lastModified: new Date()
       });
@@ -1401,6 +1428,14 @@
         format: "raw",
         no_events: 1
       });
+      var visualEditorContent = $('<div>'+visualEditor.getContent()+'</div>');
+      visualEditorContent.find('img.Wirisformula').each(function(index,el){
+        var wirisComponent = visualEditorContent.find(this).clone()
+        wirisComponent.attr('data-equation',encodeURIComponent($($(this).data('mathml').replaceAll('«','<').replaceAll('»','>').replaceAll('¨','"').replaceAll('§','&')).remove('math').html()))
+        wirisComponent.addClass('fm-editor-equation').removeClass('Wirisformula').removeAttr('data-mathml').attr('data-mlang', 'mml')
+        visualEditorContent.find(this).replaceWith(wirisComponent)
+      })
+      visualEditor.setContent(visualEditorContent.html())
       return visualEditor.focus();
     };
 
