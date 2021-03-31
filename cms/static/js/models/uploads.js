@@ -19,6 +19,11 @@ define(['backbone', 'underscore', 'gettext'], function(Backbone, _, gettext) {
                 ),
                     attributes: {selectedFile: true}
                 };
+            } else if (attrs.selectedFile && attrs.selectedFile.size && attrs.selectedFile.size >= 300000 ) {
+                return {
+                    message: _.template(gettext('Size of image should be less than 0.3 MB'))(),
+                    attributes: {selectedFile: true}
+                };
             }
         },
     // Return a list of this uploader's valid file types
