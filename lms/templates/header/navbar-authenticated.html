@@ -16,9 +16,32 @@ show_sysadmin_dashboard = settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') 
 self.real_user = getattr(user, 'real_user', user)
 %>
 
-<div class="nav-item desktop-menu" role="menuitem">
-    <a class="btn btn-outline-primary btn-sm" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
+<div role="menuitem" class="nav-item desktop-menu">
+    % if request.path == '/':
+    <a href="/" class="btn btn-link active" aria-current="page">${_("Home")}</a>
+    % else:
+    <a href="/" class="btn btn-link">${_("Home")}</a>
+    % endif
 </div>
+
+<div class="nav-item desktop-menu" role="menuitem">
+    % if request.path == '/courses':
+    <a class="btn btn-link active" aria-current="page" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
+    % else:
+    <a class="btn btn-link" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
+    % endif
+</div>
+
+<div class="nav-item desktop-menu" role="menuitem">
+    % if request.path == '/dashboard':
+    <a class="btn btn-link active" aria-current="page" href="${reverse('dashboard')}">${_("My Courses")}</a>
+    % else:
+    <a class="btn btn-link" href="${reverse('dashboard')}">${_("My Courses")}</a>
+    % endif
+</div>
+
+<div class="desktop-menu header-navigation__separator"></div>
+<%include file="navbar-language-desktop.html"/>
 
 % if show_sysadmin_dashboard:
 <div class="mobile-nav-item hidden-mobile nav-item" role="menuitem">
