@@ -6,7 +6,7 @@
             <% for (var i = 0; i < availableSchemes.length; i++) { %>
                 <div class="division-scheme-item <%- availableSchemes[i].key %> <%- layoutClass %> <% if (!availableSchemes[i].enabled) { %>d-none<% } %>">
                     <label class="division-scheme-label">
-                        <input class="division-scheme <%- availableSchemes[i].key %> input-base" type="radio" name="division-scheme"
+                        <input class="division-scheme <%- availableSchemes[i].key %>" type="radio" name="division-scheme"
                                value="<%- availableSchemes[i].key %>" aria-describedby="<%- availableSchemes[i].key %>-description"
                         <% if (availableSchemes[i].selected) { %>
                         checked

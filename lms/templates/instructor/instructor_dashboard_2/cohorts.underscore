@@ -1,5 +1,5 @@
 <div class="cohorts-state-section">
-    <label> <input type="checkbox" class="cohorts-state input-base" value="Cohorts-State" <%- cohortsEnabled ? 'checked="checked"' : '' %> /> <%- gettext('Enable Cohorts') %></label>
+    <label> <input type="checkbox" class="cohorts-state" value="Cohorts-State" <%- cohortsEnabled ? 'checked="checked"' : '' %> /> <%- gettext('Enable Cohorts') %></label>
 </div>
 
 <% if (cohortsEnabled) { %>

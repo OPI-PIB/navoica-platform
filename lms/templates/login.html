@@ -213,7 +213,7 @@ from third_party_auth import provider, pipeline
               </header>
 
               <p class="instructions f-14 h-20">
-                ${_('You will get access to free courses on {platform_name} </br> No account yet? ').format(platform_name=platform_name)}<a class="link__secondary" href="/register${login_query()}"> ${_("Register")}</a>
+                ${_('You will get access to free courses on {platform_name} </br> No account yet? ').format(platform_name=platform_name)}<a href="/register${login_query()}"> ${_("Register")}</a>
               </p>
             </section> <!-- section section-header-login -->
 
@@ -252,17 +252,13 @@ from third_party_auth import provider, pipeline
         			
             		<div class="form-group form-group-required field email js-email-field">
                   <label for="email" class="f-16 h-26">E-mail</label>
-                  <div class="login-input">
-                    <input class="js-input-login input-main" id="email" type="email" name="email" value="" spellcheck="false" autocomplete="email" required aria-required="true">
-                  </div>
+                  <input class="js-input-login" id="email" type="email" name="email" value="" spellcheck="false" autocomplete="email" required aria-required="true">
             			<small id="error-email" aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
             		</div>
 
                 <div class="form-group form-group-required field password js-password-field">
                   <label for="password" class="f-16 h-26">${_('Password')}</label>
-                  <div class="login-input">
-                    <input type="password" class="js-input-login input-main" id="password" name="password" value="" spellcheck="false" autocapitalize="off" required aria-required="true">
-                  </div>
+                  <input type="password" class="js-input-login" id="password" name="password" value="" spellcheck="false" autocapitalize="off" required aria-required="true">
                   <small aria-atomic="true" aria-live="assertive" class="js-error-message text-navoica-red"></small>
                 </div>
 
@@ -274,7 +270,7 @@ from third_party_auth import provider, pipeline
                     </label>
                   </div>
             	    <div class="tip tip-input">
-            			  <a href="#forgot-password-modal" data-toggle="modal" data-target="forgot-password-modal" rel="leanModal" class="pwd-reset action action-forgotpw f-14 h-26 js-forgot-password-link link__secondary" role="button" aria-haspopup="true">${_('Forgot password?')}</a>
+            			  <a href="#forgot-password-modal" data-toggle="modal" data-target="forgot-password-modal" rel="leanModal" class="pwd-reset action action-forgotpw f-14 h-26 js-forgot-password-link" role="button" aria-haspopup="true">${_('Forgot password?')}</a>
             		  </div>
                 </div>
 
@@ -283,7 +279,7 @@ from third_party_auth import provider, pipeline
                 </div>
         		  </form> <!-- form -->
 
-              <p class="login-problem f-14 h-19">${_(" Can't log in? Send an e-mail to: ")}<a class="link__secondary" href="mailto:mooc_help@opi.org.pl"> ${_("mooc_help@opi.org.pl.")}</a></p>
+              <p class="login-problem f-14 h-19">${_(" Can't log in? Send an e-mail to: ")}<a href="mailto:mooc_help@opi.org.pl"> ${_("mooc_help@opi.org.pl.")}</a></p>
 
         		  % if third_party_auth.is_enabled():
 

@@ -10,13 +10,13 @@ from openedx.core.djangolib.markup import HTML, Text
     <label>
         ${_("Enter email addresses and/or usernames separated by new lines or commas.")}
         ${_("You will not get notification for emails that bounce, so please double-check spelling.")}
-        <textarea rows="6" name="student-ids" placeholder="${_("Email Addresses/Usernames")}" spellcheck="false" class="form-control input-base"></textarea>
+        <textarea rows="6" name="student-ids" placeholder="${_("Email Addresses/Usernames")}" spellcheck="false" class="form-control"></textarea>
     </label>
 
     <div class="role">
         <label>
             ${_("Role of the users being enrolled.")}
-            <select name="role" class="form-control input-base">
+            <select name="role" class="form-control">
                 % for role in section_data['enrollment_role_choices']:
                   <option value="${role}">${role}</option>
                 % endfor
@@ -28,11 +28,11 @@ from openedx.core.djangolib.markup import HTML, Text
         ${_("Enter the reason why the students are to be manually enrolled or unenrolled.")}
         ${_("This cannot be left blank and will be recorded and presented in Enrollment Reports.")}
         ${_("Therefore, please give enough detail to account for this action.")}
-        <textarea rows="2" id="reason-field-id" name="reason-field" placeholder="${_('Reason')}" spellcheck="false" class="form-control input-base"></textarea>
+        <textarea rows="2" id="reason-field-id" name="reason-field" placeholder="${_('Reason')}" spellcheck="false" class="form-control"></textarea>
     </label>
     <div class="enroll-option">
         <label class="has-hint">
-            <input type="checkbox" name="auto-enroll" id="auto-enroll" value="Auto-Enroll" checked="yes" aria-describedby="heading-batch-enrollment" class="input-base">
+            <input type="checkbox" name="auto-enroll" id="auto-enroll" value="Auto-Enroll" checked="yes" aria-describedby="heading-batch-enrollment">
             <span class="label-text">${_("Auto Enroll")}</span>
             <div class="hint auto-enroll-hint">
                 <span class="hint-caret"></span>
@@ -47,7 +47,7 @@ from openedx.core.djangolib.markup import HTML, Text
     </div>
     <div class="enroll-option">
         <label class="has-hint">
-          <input type="checkbox" name="email-students" id="email-students" value="Notify-students-by-email" aria-describedby="heading-batch-enrollment" class="input-base"
+          <input type="checkbox" name="email-students" id="email-students" value="Notify-students-by-email" aria-describedby="heading-batch-enrollment"
                  ${'checked="yes"' if settings.FEATURES.get('BATCH_ENROLLMENT_NOTIFY_USERS_DEFAULT') else ''}>
             <span class="label-text">${_("Notify users by email")}</span>
             <div class="hint email-students-hint">
@@ -78,11 +78,11 @@ from openedx.core.djangolib.markup import HTML, Text
         <span id="browseFile" class="enhanced-input-file"></span>
         <div class="file-browse btn btn-primary" aria-hidden="true">
             <span class="browse">${('Browse')}</span>
-            <input class="file_field input-base" id="browseBtn-auto-enroll" name="students_list" type="file" accept=".csv"/>
+            <input class="file_field" id="browseBtn-auto-enroll" name="students_list" type="file" accept=".csv"/>
         </div>
       </div>
       <button type="submit" class="btn-blue" id="submitBtn-auto_enroll_csv" name="enrollment_signup_button">${_("Upload CSV")}</button>
-      <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }" class="input-base">
+      <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
     </form>
     <div class="results"></div>
 </div>
@@ -96,11 +96,11 @@ from openedx.core.djangolib.markup import HTML, Text
     <label>
         ${_("Enter email addresses and/or usernames separated by new lines or commas.")}<br/>
         ${_("Note: Users must have an activated {platform_name} account before they can be enrolled as beta testers.").format(platform_name=settings.PLATFORM_NAME)}
-        <textarea rows="6" cols="50" name="student-ids-for-beta" placeholder="${_("Email Addresses/Usernames")}" spellcheck="false" class="form-control input-base"></textarea>
+        <textarea rows="6" cols="50" name="student-ids-for-beta" placeholder="${_("Email Addresses/Usernames")}" spellcheck="false" class="form-control"></textarea>
     </label>
     <div class="enroll-option">
         <label class="has-hint">
-            <input type="checkbox" name="auto-enroll-beta" id="auto-enroll-beta" value="Auto-Enroll" checked="yes" aria-describedby="heading-batch-beta-testers" class="input-base">
+            <input type="checkbox" name="auto-enroll-beta" id="auto-enroll-beta" value="Auto-Enroll" checked="yes" aria-describedby="heading-batch-beta-testers">
             <span class="label-text">${_("Auto Enroll")}</span>
             <div class="hint auto-enroll-beta-hint">
                 <span class="hint-caret"></span>
@@ -114,7 +114,7 @@ from openedx.core.djangolib.markup import HTML, Text
     </div>
     <div class="enroll-option">
         <label class="has-hint">
-            <input type="checkbox" name="email-students-beta" id="email-students-beta" value="Notify-students-by-email" checked="yes" aria-describedby="heading-batch-beta-testers" class="input-base">
+            <input type="checkbox" name="email-students-beta" id="email-students-beta" value="Notify-students-by-email" checked="yes" aria-describedby="heading-batch-beta-testers">
             <span class="label-text">${_("Notify users by email")}</span>
             <div class="hint email-students-beta-hint">
                 <span class="hint-caret"></span>
@@ -144,7 +144,7 @@ from openedx.core.djangolib.markup import HTML, Text
   <div class="wrapper-member-select">
     ## Translators: an "Administrator Group" is a group, such as Course Staff, that users can be added to.
     <label>${_("Select a course team role:")}
-        <select id="member-lists-selector" class="member-lists-selector form-control input-base">
+        <select id="member-lists-selector" class="member-lists-selector form-control">
           <option> ${_("Getting available lists...")} </option>
         </select>
     </label>

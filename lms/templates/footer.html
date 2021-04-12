@@ -17,9 +17,9 @@ from django.conf import settings
             <div class="col-lg-4 mr-auto">
                 <h4 class="mt-5 mb-3">${_('Navoica.pl')}</h4>
                 <p>${_('Polish MOOC platform offering free of charge online courses for every registered user.')}</p>
-                <div class="d-flex align-items-center social-link">
+                <div class="d-flex align-items-center">
                     <a href="https://www.facebook.com/NAVOICA/" class="fb-link-icon" target="_blank">
-                        <i class="fab fa-facebook-f social-icon" title="${_('Facebook - Navoica page on Facebook')}" aria-hidden="true"></i>
+                        <i class="fab fa-facebook-f" title="${_('Facebook - Navoica page on Facebook')}" aria-hidden="true"></i>
                         <span class="sr-only">${_('Facebook - Navoica page on Facebook (open in a new window)')}</span>
                     </a>
                     <a class="ml-2" href="https://twitter.com/navoica_pl" target="_blank">
@@ -38,7 +38,7 @@ from django.conf import settings
                 <ul>
                     % for item_num, link in enumerate(footer['navigation_links'], start=1):
                     <li>
-                        <a href="${link['url']}" class="h-19 f-14">${link['title']}</a>
+                        <a href="${link['url']}">${link['title']}</a>
                     </li>
                     % endfor
                 </ul>
