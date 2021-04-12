@@ -233,7 +233,7 @@ def password_change_request_handler(request):
                 message = loader.render_to_string('registration/password_reset_email.html', context)
                 from_email = configuration_helpers.get_value('email_from_address', settings.DEFAULT_FROM_EMAIL)
                 try:
-                    send_mail(subject, message, from_email, [email])
+                    send_mail(subject, message, from_email, [email], html_message=message)
                 except Exception:  # pylint: disable=broad-except
                     log.exception(u'Unable to send password reset failure email notification from "%s"', from_email)
         except UserAPIInternalError as err:
