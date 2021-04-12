@@ -17,6 +17,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
 self.real_user = getattr(user, 'real_user', user)
 profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
 username = self.real_user.username
+user_email = self.real_user.email
 resume_block = retrieve_last_sitewide_block_completed(username)
 displayname = get_enterprise_learner_generic_name(request) or username
 %>
@@ -42,16 +43,34 @@ displayname = get_enterprise_learner_generic_name(request) or username
 
 
 <div class="nav-item dropdown my-account desktop-menu" role="menuitem">
-    <button class="btn btn-primary btn-sm dropdown-toggle" type="button"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        ${_('My Account')}
+    <button class="btn dropdown-toggle header-navigation__btn-my-account" type="button"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="/static/images/my-account-icon.png" alt="" class="header-navigation__btn-my-account--icon" />${_('My Account')}
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
     </button>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" role="menu">
-        <a class="dropdown-item" href="${reverse('dashboard')}" role="menuitem">${_("My Courses")}</a>
-        ## <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a>
-        <a class="dropdown-item" href="${reverse('account_settings')}" role="menuitem">${_("Settings")}</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a>
-    </div>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" role="menu">
+            <li role="presentation">
+                <span class="header-navigation__user-info d-flex flex-column">
+                    <span class="header-navigation__username">${displayname}</span>
+                <span class="header-navigation__email">${user_email} </span>
+                </span>
+            </li>
+            <li class="dropdown-divider" role="presentation">
+            </li>
+            <li role="none">
+                <a role="menuitem" class="dropdown-item" href="${reverse('account_settings')}">${_("Settings")}</a>
+            </li>
+            <li role="none">
+                <a role="menuitem" class="dropdown-item" href="${reverse('dashboard')}">${_("My Courses")}</a>
+            </li>
+            <li role="none">
+                <a role="menuitem" class="dropdown-item" href="/faq">${_("FAQ")}</a>
+            </li>
+            <li class="dropdown-divider" role="presentation">
+            </li>
+            <li role="none">
+                <a role="menuitem" class="dropdown-item" href="${reverse('logout')}">${_("Sign Out")}</a>
+            </li>
+    </ul>
 </div>
 
 
