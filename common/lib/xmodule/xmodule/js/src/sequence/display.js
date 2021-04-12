@@ -252,7 +252,7 @@
                 this.sr_container.focus();
 
                 // scroll to nav-tabs element
-                window.scrollTo(0, $("#nav-tab").offset().top-$('#header-navigation').height());
+                window.scrollTo(0, $("#nav-tab").offset().top-$('.js-navbar-on-scroll').height());
             }
         };
 

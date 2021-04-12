@@ -26,11 +26,11 @@ from six import string_types
   <meta property="og:type" content="website" />
   % if get_course_about_section(request, course, "video"):
       <meta property="og:video" content="${course_video_url}" />
-	%else:
-      <meta property="og:image" content="${settings.LMS_ROOT_URL + course_image_urls['large']}" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="628" />
+      <meta property="og:url" content="${course_video_url}" />
 	% endif
+  <meta property="og:image" content="${settings.LMS_ROOT_URL + course_image_urls['large']}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="628" />
 <style type="text/css">.header-course, .course-container-heading {display: none}</style>
 </%block>
 
@@ -82,7 +82,7 @@ from six import string_types
       if(xhr.status == 200) {
         location.href = "${reverse('dashboard')}";
       } else if (xhr.status == 403) {
-        location.href = "${reverse('course-specific-register', args=[text_type(course.id)])}?course_id=${course.id | u}&enrollment_action=enroll";
+        location.href = "${reverse('signin_user')}" + "?next=" + encodeURIComponent(location.href);
       } else if (xhr.status == 400) { //This means the user did not have permission
         $('#register_error').html("${perms_error}").css("display", "block");
       } else {
@@ -103,7 +103,7 @@ from six import string_types
           location.href = xhr.responseText;
         }
       } else if (xhr.status == 403) {
-          location.href = "${reverse('register_user')}?course_id=${course.id | u}&enrollment_action=enroll";
+         location.href = "${reverse('signin_user')}" + "?next=" + encodeURIComponent(location.href);
       } else {
         $('#register_error').html(
             (xhr.responseText ? xhr.responseText : "${_("An error occurred. Please try again later.")}")
@@ -146,11 +146,13 @@ from six import string_types
 			<span class="register disabled">${_("You are enrolled in this course")}</span><br/>
 			<a href="${course_target}" class="btn btn-lg btn-primary btn-icon">${_("View Course")}</a>
 		  %else:
+          %if can_enroll:
               %if course.external_enroll:
                 <a href="${reverse('enroll_redirect', args=[text_type(course.id)])}" class="btn btn-lg btn-primary btn-icon external_enroll">${_("Register for the course")}</a>
               %else:
                 <a href="${reg_href}" class="btn btn-lg btn-primary btn-icon ${href_class} ">${_("Take the course")}</a>
               %endif
+          %endif
 		  % endif
 
 %if user.is_authenticated() and registered:

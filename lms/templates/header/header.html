@@ -34,7 +34,7 @@ HeaderFactory();
 <!-- Navigation -->
 
 
-<nav id="header-navigation" class="bg-white col-12" role="navigation">
+<nav id="header-navigation" class="header-navigation js-navbar-on-scroll col-12" role="navigation" aria-label="pagination">
     % if use_cookie_banner and ENABLE_GDPR_COMPAT_FLAG.is_enabled_without_course_context():
     ${static.renderReact(
     component="CookiePolicyBanner",
@@ -42,9 +42,9 @@ HeaderFactory();
     props={}
     )}
     % endif
-    <div class="container">
+    <div class="container d-flex justify-content-between align-items-center">
 
-        <div class="navbar navbar-expand-md justify-content-between flex-wrap">
+        <div class="navbar navbar-expand-md d-flex justify-content-between flex-wrap w-100">
 
             <a class="navbar-brand mr-3" href="/">
                 <img src="${static.url(settings.HEADER_NAVOICA_LOGO_IMAGE)}" alt="${_('Navoica logo')}">
@@ -52,7 +52,7 @@ HeaderFactory();
 
             % if course and user.is_authenticated():
 
-            <span class="course-preview-title d-flex flex-column flex-wrap mr-auto">
+            <span class="course-preview-title d-flex flex-column flex-nowrap mr-auto">
               % if course.organizer:
                           <span class="provider w-100 font-weight-bold" title="${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}">${settings.ALL_COURSE_ORGANIZER_DICT[course.organizer]}</span><br>
 
@@ -66,26 +66,24 @@ HeaderFactory();
             % else:
 
 
-            % if request.path != '/':
-            <form method="GET" action="/courses" class="form-inline mr-auto d-none d-xl-block" role="search">
-                <div class="input-group w-100 d-flex flex-nowrap">
+
+            <form method="GET" action="/courses" class="form-inline ml-auto d-none d-xl-block" role="search">
+                <div class="header-navigation__search d-flex flex-nowrap">
                     <label for="search-course" class="sr-only">${_('Search courses')}</label>
-                    <input class="form-control search-input" id="search-course" type="search" name="search_query" placeholder="${_('Search courses...')}">
-                    <div class="input-group-append">
-                        <button class="btn btn-light btn-outline-secondary" type="submit" title="${_('Search')}"><i class="fa fa-search mx-0" aria-hidden="true"></i><span class="sr-only">${_('Search courses')}</span></button>
+                    <input class="header-navigation__search-input" id="search-course" type="search" name="search_query" placeholder="${_('Search courses...')}">
+                    <div class="header-navigation__search-input-submit d-flex justify-content-center align-items-center">
+                        <button class="btn header-navigation__search-button" type="submit" title="${_('Search')}"><i class="fa fa-search mx-0" aria-hidden="true"></i><span class="sr-only">${_('Search courses')}</span></button>
                     </div>
                 </div>
             </form>
-            % else:
-            <div></div>
-            % endif
+
 
             % endif
 
             <nav class="d-flex header-navigation__menu" role= "navigation" aria-label="Menu">
                 <div class="dropdown ml-auto">
                     <button id="mooc-my-mooc"
-                            class="btn btn-outline-primary border-secondary dropdown-toggle"
+                            class="btn dropdown-toggle"
                             data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false" aria-label="Menu - Moja Nawojka">
                         <em class="fa fa-bars"></em>
@@ -102,7 +100,7 @@ HeaderFactory();
                     </div>
                 </div>
                 <div class="collapse navbar-collapse desktop-menu" id="navbarResponsive">
-                    <div class="navbar-nav ml-auto flex-wrap justify-content-center" role="menu">
+                    <div class="navbar-nav ml-auto flex-nowrap justify-content-center" role="menu">
                         % if header_language_selector_is_enabled():
                         <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
                             <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
@@ -113,9 +111,8 @@ HeaderFactory();
                             <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}"
                                 data-user-is-authenticated="false">
                             % endif
-                            <input name="language" type="hidden" value="" />
+                            <input name="language" type="hidden" value=""/>
                         </form>
-                        <%include file="navbar-language-desktop.html"/>
                         % endif
                         % if user.is_authenticated():
                         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
@@ -162,6 +159,99 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
     try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
     catch(e){window.attachEvent("onload", $buo_f)}
   </script>
+    <script>
+        $(document).ready(function() {
+
+            if (typeof navigator !== "undefined" && navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                let getBrowserFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('font-size');
+                if (getBrowserFontSize >= "25" && getBrowserFontSize < "44") {
+                    $('html').css('fontSize', '62.5%');
+                } else if (getBrowserFontSize >= "44" && getBrowserFontSize < "48") {
+                    $('html').css('fontSize', '55.5%');
+                } else if (getBrowserFontSize >= "48") {
+                    $('html').css('fontSize', '25px');
+                } else {
+                    $('html').removeAttr("style");
+                }
+            }
+
+            let $navbar = $('.js-navbar-on-scroll');
+
+            function changeNavbarBackground() {
+                if (typeof window !== "undefined") {
+                    window.location.pathname === '/' ? $navbar.removeClass('navbar-white-on-scroll') : $navbar.addClass('navbar-white-on-scroll');
+                }
+            }
+
+            changeNavbarBackground();
+
+            if ($navbar.length) {
+                let MIN_HEIGHT_NAVBAR = 68;
+                $(window).scroll(function() {
+                    let scroll = $(window).scrollTop();
+
+                    if (scroll >= MIN_HEIGHT_NAVBAR) {
+                        $navbar.addClass("navbar-boxshadow");
+                        $navbar.addClass('navbar-white-on-scroll')
+                    } else {
+                        $navbar.removeClass("navbar-boxshadow");
+                        changeNavbarBackground();
+                    }
+                });
+            }
+
+            let activeElement;
+
+            function addTabPressFocus(e) {
+                e = e || event;
+
+                if (e.keyCode === 9) {
+                    activeElement = document.activeElement;
+                    activeElement.classList.add('focus-on-keyboard');
+
+                    if (activeElement.tagName.toLowerCase() === 'a' || activeElement.tagName.toLowerCase() === 'button') {
+                        activeElement.classList.add('focus-on-keyboard');
+                    } else {
+                        activeElement.classList.remove('focus-on-keyboard');
+                    }
+
+                }
+            }
+
+            function removeTabPressFocus(e) {
+                e = e || event;
+
+                if (e.keyCode === 9) {
+                    activeElement = document.activeElement;
+                }
+
+                if (activeElement) {
+                    activeElement.classList.remove('focus-on-keyboard');
+                }
+            }
+
+            let body = document.querySelector('body');
+            let $searchInput = $('.header-navigation__search-input');
+            let $searchContainer = $('.header-navigation__search');
+
+            body.addEventListener('keyup', addTabPressFocus);
+            body.addEventListener('keydown', removeTabPressFocus);
+            body.addEventListener('mousedown', removeTabPressFocus);
+
+            $searchInput.on("mousedown", function() {
+                $searchContainer.addClass('focus-on-mouse');
+            });
+
+            $searchInput.on("keyup", function() {
+                $searchContainer.addClass('focus-on-keyboard');
+            });
+
+            $searchInput.on("blur", function() {
+                $searchContainer.removeClass('focus-on-mouse');
+                $searchContainer.removeClass('focus-on-keyboard');
+            });
+        });
+    </script>
 % if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False):
 <%include file="../widgets/cookie-consent.html" />
 % endif

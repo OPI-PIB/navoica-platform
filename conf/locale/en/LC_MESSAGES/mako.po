@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-04-12 06:38+0000\n"
-"PO-Revision-Date: 2021-04-12 06:38:49.809968\n"
+"POT-Creation-Date: 2021-04-12 11:58+0000\n"
+"PO-Revision-Date: 2021-04-12 11:58:42.758809\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -968,13 +968,41 @@ msgid "External Authentication failed"
 msgstr ""
 
 #: lms/templates/footer.html
-msgid "Navoica.pl"
-msgstr ""
-
-#: lms/templates/footer.html
 msgid ""
 "Polish MOOC platform offering free of charge online courses for every "
 "registered user."
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "NAVOICA platform"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "Legal information"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "Terms of use"
+msgstr ""
+
+#: lms/templates/footer.html
+msgid "Honor code "
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/static_templates/cookies.html
+#: lms/templates/static_templates/cookies.html
+msgid "Cookies Policy"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/static_templates/contact.html
+msgid "Contact us"
+msgstr ""
+
+#: lms/templates/footer.html lms/templates/static_templates/contact.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+msgid "Contact"
 msgstr ""
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
@@ -1002,27 +1030,6 @@ msgid "LinkedIn - Navoica page on LinkedIn (open in a new window)"
 msgstr ""
 
 #: lms/templates/footer.html
-msgid "About us"
-msgstr ""
-
-#: lms/templates/footer.html
-msgid "Legal information"
-msgstr ""
-
-#: lms/templates/footer.html
-msgid "Terms of use"
-msgstr ""
-
-#: lms/templates/footer.html lms/templates/static_templates/cookies.html
-#: lms/templates/static_templates/cookies.html
-msgid "Cookies Policy"
-msgstr ""
-
-#: lms/templates/footer.html
-msgid "Honor code "
-msgstr ""
-
-#: lms/templates/footer.html
 msgid "Ministry of Education and Science"
 msgstr ""
 
@@ -1033,7 +1040,9 @@ msgid "open in a new window"
 msgstr ""
 
 #: lms/templates/footer.html
-msgid "The Conference of Rectors of Academic Schools in Poland"
+msgid ""
+"National Information Processing Institute \\u2013 National Research "
+"Institute"
 msgstr ""
 
 #: lms/templates/footer.html
@@ -1041,9 +1050,7 @@ msgid "The Young Science Foundation"
 msgstr ""
 
 #: lms/templates/footer.html
-msgid ""
-"National Information Processing Institute \\u2013 National Research "
-"Institute"
+msgid "The Conference of Rectors of Academic Schools in Poland"
 msgstr ""
 
 #: lms/templates/footer.html
@@ -1499,6 +1506,7 @@ msgstr ""
 #: lms/templates/register-sidebar.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid "Log in"
 msgstr ""
@@ -1531,6 +1539,8 @@ msgstr ""
 
 #: lms/templates/login.html lms/templates/register-form.html
 #: lms/templates/register.html lms/templates/register.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
@@ -6040,10 +6050,29 @@ msgid ""
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/static_templates/404.html
+msgid "Home"
+msgstr ""
+
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/user_dropdown.html
 msgid "Discover New"
+msgstr ""
+
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
+#: lms/templates/learner_dashboard/_dashboard_navigation_courses.html
+#: themes/edx.org/lms/templates/dashboard.html
+msgid "My Courses"
 msgstr ""
 
 #. Translators: This is short for "System administration".
@@ -6077,10 +6106,10 @@ msgid "Schools"
 msgstr ""
 
 #: lms/templates/header/user_dropdown.html
-#: lms/templates/header/user_dropdown.html
-#: lms/templates/learner_dashboard/_dashboard_navigation_courses.html
-#: themes/edx.org/lms/templates/dashboard.html
-msgid "My Courses"
+#: lms/templates/static_templates/faq.html
+#: lms/templates/static_templates/faq.html
+#: themes/red-theme/lms/templates/footer.html
+msgid "FAQ"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
@@ -8516,10 +8545,6 @@ msgid ""
 "the links below:"
 msgstr ""
 
-#: lms/templates/static_templates/404.html
-msgid "Home"
-msgstr ""
-
 #: lms/templates/static_templates/about.html
 #: lms/templates/static_templates/about.html
 #: themes/red-theme/lms/templates/footer.html
@@ -8798,17 +8823,6 @@ msgid "This page left intentionally blank. Feel free to add your own content."
 msgstr ""
 
 #: lms/templates/static_templates/contact.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-msgid "Contact"
-msgstr ""
-
-#: lms/templates/static_templates/contact.html
-msgid "Contact us"
-msgstr ""
-
-#: lms/templates/static_templates/contact.html
 msgid ""
 "Online learning platform owned by the Polish Ministry of Education and "
 "Science"
@@ -9036,12 +9050,6 @@ msgid ""
 "course from a country or region currently subject to U.S. economic and trade"
 " sanctions.Unfortunately, because {platform_name} is required to comply with"
 " export controls,we cannot allow you to access this course at this time."
-msgstr ""
-
-#: lms/templates/static_templates/faq.html
-#: lms/templates/static_templates/faq.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "FAQ"
 msgstr ""
 
 #: lms/templates/static_templates/faq.html
