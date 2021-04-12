@@ -1,33 +1,33 @@
 # #-#-#-#-#  djangojs-partial.po (0.1a)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2020 EdX
+# Copyright (C) 2021 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2020.
+# EdX Team <info@edx.org>, 2021.
 #
 # #-#-#-#-#  djangojs-studio.po (0.1a)  #-#-#-#-#
 # edX translation file.
-# Copyright (C) 2020 EdX
+# Copyright (C) 2021 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2020.
+# EdX Team <info@edx.org>, 2021.
 #
 # #-#-#-#-#  underscore.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2020 edX
+# Copyright (C) 2021 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2020.
+# EdX Team <info@edx.org>, 2021.
 #
 # #-#-#-#-#  underscore-studio.po (0.1a)  #-#-#-#-#
 # edX translation file
-# Copyright (C) 2020 edX
+# Copyright (C) 2021 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2020.
+# EdX Team <info@edx.org>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-08-19 12:54+0000\n"
-"PO-Revision-Date: 2020-08-19 12:54:43.662899\n"
+"POT-Creation-Date: 2021-04-12 09:45+0000\n"
+"PO-Revision-Date: 2021-04-12 09:45:29.544753\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -283,6 +283,10 @@ msgstr ""
 msgid ""
 "Only <%= fileTypes %> files can be uploaded. Please select a file ending in "
 "<%= fileExtensions %> to upload."
+msgstr ""
+
+#: cms/static/js/models/uploads.js common/static/bundles/js/pages/textbooks.js
+msgid "Size of image should be less than 0.3 MB"
 msgstr ""
 
 #: cms/static/js/models/uploads.js common/static/bundles/js/pages/textbooks.js
@@ -2267,7 +2271,12 @@ msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-msgid "Enter and confirm your new password."
+msgid "Password reset unsuccessful."
+msgstr ""
+
+#: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
+msgid "Please correct or complete the missing information."
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
@@ -2287,7 +2296,17 @@ msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-msgid "Reset My Password"
+msgid "Reset password"
+msgstr ""
+
+#: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
+msgid "Can't log in? Send an e-mail to: "
+msgstr ""
+
+#: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
+msgid "mooc_help@opi.org.pl"
 msgstr ""
 
 #: common/static/bundles/PasswordResetConfirmation.js
@@ -7502,6 +7521,10 @@ msgid "Hide Timer"
 msgstr ""
 
 #: lms/templates/discovery/course_card.underscore
+msgid "New course"
+msgstr ""
+
+#: lms/templates/discovery/course_card.underscore
 #: lms/templates/learner_dashboard/program_card.underscore
 #: lms/templates/verify_student/enrollment_confirmation_step.underscore
 msgid "Course"
@@ -7516,7 +7539,23 @@ msgstr ""
 
 #: lms/templates/discovery/facet.underscore
 #: lms/templates/discovery/facet_select.underscore
-msgid "Wybierz"
+msgid "Select"
+msgstr ""
+
+#: lms/templates/discovery/facet.underscore
+msgid "Sorted course list"
+msgstr ""
+
+#: lms/templates/discovery/facet.underscore
+msgid "filtering"
+msgstr ""
+
+#: lms/templates/discovery/facet_option.underscore
+msgid "reset filter"
+msgstr ""
+
+#: lms/templates/discovery/filter_bar.underscore
+msgid "reset filters"
 msgstr ""
 
 #: lms/templates/edxnotes/note-item.underscore
@@ -9546,7 +9585,7 @@ msgid "Due Date:"
 msgstr ""
 
 #: cms/templates/js/due-date-editor.underscore
-msgid "Due Time in UTC:"
+msgid "Due Time:"
 msgstr ""
 
 #: cms/templates/js/due-date-editor.underscore
@@ -9934,7 +9973,7 @@ msgid "Release Date:"
 msgstr ""
 
 #: cms/templates/js/release-date-editor.underscore
-msgid "Release Time in UTC:"
+msgid "Release Time:"
 msgstr ""
 
 #: cms/templates/js/release-date-editor.underscore
