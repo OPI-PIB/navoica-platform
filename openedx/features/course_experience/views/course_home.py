@@ -176,7 +176,10 @@ class CourseHomeFragmentView(EdxFragmentView):
             upgrade_url = EcommerceService().upgrade_url(request.user, course_key)
             upgrade_price = get_cosmetic_verified_display_price(course)
 
-        course_optouts = Optout.objects.filter(user=request.user).values_list('course_id', flat=True)
+        if not request.user.is_anonymous():
+            course_optouts = Optout.objects.filter(user=request.user).values_list('course_id', flat=True)
+        else:
+            course_optouts = None
 
         # Render the course home fragment
         context = {

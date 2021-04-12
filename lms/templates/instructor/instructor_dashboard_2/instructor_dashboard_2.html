@@ -119,7 +119,7 @@ ${HTML(section_data['fragment'].foot_html())}
                 ## the links are activated and handled in instructor_dashboard.js
                 ## when the javascript loads, it clicks on the first select option
 
-                <select class="form-control" id="select-link">
+                <select class="form-control input-base" id="select-link">
                     % for section_data in sections:
                     <% is_hidden = section_data.get('is_hidden', False) %>
                     ## This is necessary so we don't scrape 'section_display_name' as a string.

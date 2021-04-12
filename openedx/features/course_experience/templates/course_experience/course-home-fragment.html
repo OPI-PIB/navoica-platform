@@ -104,6 +104,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                         </li>
                     % endfor
 
+                    %if course_optouts is not None:
                     <li class="list-group-item">
                         <div class="course-details-icon">
                             <i class="icon fas fa-envelope" aria-hidden="true"></i>
@@ -112,6 +113,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                             <a href="#email-settings-modal" class="action-email-settings" rel="leanModal" data-course-id="${course.id}" data-course-number="${course.number}" data-optout="${course.id in course_optouts}">${_('Email Settings')}</a>
                         </div>
                     </li>
+                    %endif
                 </ul>
             % endif
             % if upgrade_url and upgrade_price:
@@ -162,14 +164,14 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                     <form class="search-form input-group" role="search" action="${reverse('openedx.course_search.course_search_results', args=[course_key])}">
                         <label class="field-label sr-only" for="search" id="search-hint">${_('Search the course')}</label>
                         <input
-                            class="field-input input-text search-input form-control"
+                            class="field-input input-text search-input form-control input-base"
                             type="search"
                             name="query"
                             id="search"
                             placeholder="${_('Search the course')}"
                             />
                         <span class="input-group-btn">
-                            <button class="btn btn-light btn-oytline-secondary" type="submit">${_('Search')}</button>
+                            <button class="btn btn-light btn-outline-secondary" type="submit">${_('Search')}</button>
                         </span>
                     </form>
                 </div>
@@ -184,11 +186,11 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                     % endif
                     </a>
                 % endif
-                <button class="btn btn-link action-resume-course float-right btn-w-100"
+                <button class="btn btn-link action-resume-course float-right btn-w-100 btn__tree"
                       id="expand-collapse-outline-all-button"
                       aria-expanded="false"
                       aria-controls="course-outline-block-tree">
-                    <span class="expand-collapse-outline-all-extra-padding" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
+                    <span class="expand-collapse-outline-all-extra-padding expand__tree" id="expand-collapse-outline-all-span">${_("Expand All")}</span>
                     <span class="icon fa fa-caret-down ui-toggle-dd fa-rotate-0" id="caret"></span>
                </button>
             </div>

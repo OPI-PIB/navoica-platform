@@ -61,7 +61,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
           <p class="lead mt-3">${_("Course edition")}: <strong>${course.id.run}</strong></p>
           <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
           <p class="lead course-about">
-            <a href="/courses/${course.id}/about">${_("Course Description")}<i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="/courses/${course.id}/about" class="link__secondary">${_("Course Description")}<i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           </p>
         <div class="wrapper-preview-menu">
           <div class="preview-menu">
@@ -69,7 +69,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
              <form action="#" class="action-preview-form" method="post">
                 <div class="action-preview-actions f-14">
                   <label>${_("View this course as")}</label>
-		    <select id="action-preview-select" class="custom-select action-preview-select">
+		    <select id="action-preview-select" class="custom-select action-preview-select input-base">
 			<option value="staff" ${staff_selected}>${_("Staff")}</option>
 			<option value="student" ${student_selected}>${_("Learner")}</option>
 			<option value="specific student" ${specific_student_selected}>${_("Specific learner")}</option>
@@ -84,7 +84,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
                 </div>
 		<div class="action-preview-username-container">
 		    <label for="action-preview-username">${_("Username or email:")}</label>
-		    <input type="text" class="form-control action-preview-username js-learner-username" id="action-preview-username">
+		    <input type="text" class="form-control action-preview-username js-learner-username input-base" id="action-preview-username">
 		</div>
 		<button type="submit" class="sr-only" name="submit" value="submit">${_("Set preview mode")}</button>
 	     </form>
@@ -149,7 +149,7 @@ show_preview_menu = course and staff_access and supports_preview_menu
           <p class="lead mt-3"> ${_("Course edition")}: <strong>${course.id.run}</strong></p>
           <p class="lead mby-3">${get_course_about_section(request, course, "short_description")}</p>
           <p class="lead course-about">
-            <a href="/courses/${course.id}/about">${_("Course Description")}<i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="/courses/${course.id}/about" class="link__secondary">${_("Course Description")}<i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           </p>
      </article>
   <aside>
@@ -197,15 +197,15 @@ show_preview_menu = course and staff_access and supports_preview_menu
     specific_student_selected = selected(not staff_selected and masquerade.user_name)
     student_selected = selected(not staff_selected and not specific_student_selected and not masquerade_group_id)
   %>
-	<header class="header-course bg-light row justify-content-md-center">
+	<header class="header-course bg-light row justify-content-md-center m-0">
 		<div class="col-md-6 pt-4">
 			<div class="wrapper-preview-menu">
 			  <div class="preview-menu">
 			   <div class="action-preview">
 				 <form action="#" class="action-preview-form" method="post">
 					<div class="action-preview-actions f-14">
-					  <label>Zobacz ten kurs jako</label>
-				<select id="action-preview-select" class="custom-select action-preview-select">
+					  <label>${_("View this course as")}</label>
+				<select id="action-preview-select" class="custom-select action-preview-select input-base">
 				<option value="staff" ${staff_selected}>${_("Staff")}</option>
 				<option value="student" ${student_selected}>${_("Learner")}</option>
 				<option value="specific student" ${specific_student_selected}>${_("Specific learner")}</option>
