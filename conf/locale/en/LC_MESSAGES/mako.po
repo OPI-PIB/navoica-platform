@@ -365,8 +365,8 @@ msgstr ""
 
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
-#: lms/templates/course.html lms/templates/help_modal.html
-#: lms/templates/courseware/courseware.html
+#: lms/templates/course.html lms/templates/course.html
+#: lms/templates/help_modal.html lms/templates/courseware/courseware.html
 #: lms/templates/courseware/courseware.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 msgid "Course"
@@ -639,6 +639,14 @@ msgstr ""
 msgid "You do not have access to this dependency module."
 msgstr ""
 
+#: lms/templates/course.html
+msgid "Enrollment ends in"
+msgstr ""
+
+#: lms/templates/course.html
+msgid "Enrollemnt datetime ends"
+msgstr ""
+
 #: lms/templates/course.html lms/templates/course2.html
 msgid "Starts"
 msgstr ""
@@ -656,7 +664,20 @@ msgid "New courses"
 msgstr ""
 
 #: lms/templates/courses_list.html
-msgid "Popular courses"
+msgid "Previous courses"
+msgstr ""
+
+#: lms/templates/courses_list.html
+msgid "Next courses"
+msgstr ""
+
+#: lms/templates/courses_list.html
+msgid "More courses"
+msgstr ""
+
+#: lms/templates/courses_list.html lms/templates/index.html
+#: lms/templates/index.html
+msgid "in courses"
 msgstr ""
 
 #: lms/templates/courses_list.html
@@ -769,8 +790,7 @@ msgstr ""
 msgid "Search Your Courses"
 msgstr ""
 
-#: lms/templates/dashboard.html lms/templates/index.html
-#: lms/templates/api_admin/catalogs/search.html
+#: lms/templates/dashboard.html lms/templates/api_admin/catalogs/search.html
 #: lms/templates/courseware/courseware.html
 #: lms/templates/edxnotes/edxnotes.html lms/templates/header/header.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
@@ -1238,58 +1258,167 @@ msgid "Polish MOOC platform"
 msgstr ""
 
 #: lms/templates/index.html
-msgid "ACCESSIBLE KNOWLEDGE"
+msgid "Accessible knowledge{break_html} for {mark_start}everyone{mark_end}"
 msgstr ""
 
 #: lms/templates/index.html
-msgid "Free online courses offered by Polish universities and institutions"
+msgid ""
+"Discover {strong_start}free courses{strong_end} offered by Polish "
+"universities and institutions. You will learn "
+"{strong_start}online{strong_end}, at any time and any pace. Upon completion "
+"of a course you will receive {strong_start}a certificate{strong_end}?"
 msgstr ""
 
 #: lms/templates/index.html lms/templates/index.html
-#: lms/templates/header/header.html lms/templates/header/header.html
-msgid "Search courses"
-msgstr ""
-
-#: lms/templates/index.html lms/templates/header/header.html
-msgid "Search courses..."
+msgid "View our courses"
 msgstr ""
 
 #: lms/templates/index.html
-msgid "About Navoica"
+msgid "About the platform"
 msgstr ""
 
 #: lms/templates/index.html
-msgid "Wide range of online courses "
+msgid "What is {mark_start}NAVOICA?{mark_end}"
 msgstr ""
 
 #: lms/templates/index.html
 msgid ""
-"A broad spectrum of courses with varying levels of expertise. Everyone can "
-"find an interesting course for themselves."
+"NAVOICA is a Polish educational platform with {strong_start}MOOC{strong_end}"
+" courses, owned by the Ministry of Education and Science and developed by "
+"{strong_start}the National Information Processing Institute (OPI "
+"PIB){strong_end}. The platform is named after "
+"{strong_start}Nawojka{strong_end} who was the first Polish female student, "
+"according to a legend."
 msgstr ""
 
-#: lms/templates/index.html
-msgid "Publicly available learning platform"
-msgstr ""
-
-#: lms/templates/index.html
-msgid ""
-"We reach anyone who wants to learn \\u2013 regardless of their age or place "
-"of residence."
-msgstr ""
-
-#: lms/templates/index.html
-msgid "Network of universities and institutions "
+#: lms/templates/index.html lms/templates/index.html
+msgid "More about the platform"
 msgstr ""
 
 #: lms/templates/index.html
 msgid ""
-"New online learning ecosystem brings together: universities, research "
-"institutes, businesses and NGOs. Find out more about Navoica"
+"The man is sitting in front of the desk. He has a gray beard and glasses. "
+"There are books and an open laptop on the desk. He is holding a whiteboard "
+"marker in his hand. The whiteboard rests on the cupboard behind the man."
 msgstr ""
 
 #: lms/templates/index.html
-msgid "Find out more about Navoica"
+msgid "NAVOICA platform\\u2019s advantages"
+msgstr ""
+
+#: lms/templates/index.html
+msgid "Why should you learn with us?"
+msgstr ""
+
+#: lms/templates/index.html
+msgid "Wide range of online courses"
+msgstr ""
+
+#: lms/templates/index.html
+msgid ""
+"A wide range of course topics with various difficulty levels. Everyone will "
+"find something interesting for themselves."
+msgstr ""
+
+#: lms/templates/index.html
+msgid "Free open educational platform"
+msgstr ""
+
+#: lms/templates/index.html
+msgid ""
+"You can learn anytime, anywhere and at your own pace. Using the platform is "
+"completely free of charge."
+msgstr ""
+
+#: lms/templates/index.html
+msgid "High quality courses"
+msgstr ""
+
+#: lms/templates/index.html
+msgid ""
+"Our courses are created by experts, lecturers and academics from Polish "
+"universities."
+msgstr ""
+
+#: lms/templates/index.html
+msgid "You can find courses in popular areas"
+msgstr ""
+
+#: lms/templates/index.html
+msgid ""
+"Programming, IT, Languages, Personal Development, Management, Business and "
+"many more."
+msgstr ""
+
+#: lms/templates/index.html
+msgid "Our courses are offered by"
+msgstr ""
+
+#: lms/templates/index.html
+msgid "Previous partners"
+msgstr ""
+
+#: lms/templates/index.html
+msgid "Next partners"
+msgstr ""
+
+#: lms/templates/index.html lms/templates/index.html
+msgid "More partners"
+msgstr ""
+
+#: lms/templates/index.html
+msgid ""
+"A woman is sitting at a desk, studying. She has a laptop and notebook in "
+"front of her. She has headphones on her head and a pen in her hand."
+msgstr ""
+
+#: lms/templates/index.html lms/templates/index.html
+msgid "Course outline"
+msgstr ""
+
+#: lms/templates/index.html
+msgid "What learning on {mark_start}Navoica.pl{mark_end} looks like?"
+msgstr ""
+
+#: lms/templates/index.html
+msgid ""
+"Our courses are entirely {strong_start}online{strong_end} and can be taken "
+"at any time, usually at your own pace. Lessons are based on "
+"{strong_start}films{strong_end}, quizzes, text material and at times also "
+"interactive content."
+msgstr ""
+
+#: lms/templates/index.html
+msgid ""
+"Upon completion of the course you will receive {mark_start}a "
+"certificate{mark_end}"
+msgstr ""
+
+#: lms/templates/index.html
+msgid ""
+"Certificates are issued {strong_start}online{strong_end}, you may download "
+"and print them. You can also share them on social media or send them to your"
+" employer. Our certificates are {strong_start}free{strong_end} of charge."
+msgstr ""
+
+#: lms/templates/index.html
+msgid "Handing the course completion certificate to the student's hand."
+msgstr ""
+
+#: lms/templates/index.html
+msgid "Less partners"
+msgstr ""
+
+#: lms/templates/index.html
+msgid "days"
+msgstr ""
+
+#: lms/templates/index.html
+msgid "hours"
+msgstr ""
+
+#: lms/templates/index.html
+msgid "minutes"
 msgstr ""
 
 #. Translators: 'Open edX' is a registered trademark, please keep this
@@ -5900,6 +6029,14 @@ msgstr ""
 
 #: lms/templates/header/header.html
 msgid "Navoica logo"
+msgstr ""
+
+#: lms/templates/header/header.html lms/templates/header/header.html
+msgid "Search courses"
+msgstr ""
+
+#: lms/templates/header/header.html
+msgid "Search courses..."
 msgstr ""
 
 #: lms/templates/header/header.html lms/templates/header/user_dropdown.html
