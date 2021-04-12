@@ -1,0 +1,27 @@
+@import 'mixins';
+@import 'html';
+
+/*
+ * what-input styles
+ */
+
+
+[data-whatinput='keyboard'] .input-indicator.-keyboard,
+[data-whatintent='keyboard'] .input-intent.-keyboard {
+  background-color: none;
+  box-shadow: none;
+  color: none;
+}
+
+// suppress focus outline for mouse and touch
+[data-whatintent='mouse'],
+[data-whatintent='touch'] {
+  *:focus {
+    outline: none;
+  }
+}
+
+// divs or sections with `tabindex`
+html:not([data-whatinput='keyboard']) div:focus {
+  outline: none;
+}

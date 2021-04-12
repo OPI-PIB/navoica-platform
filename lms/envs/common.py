@@ -1382,6 +1382,7 @@ base_application_js = [
     'js/src/accessibility_tools.js',
     'js/toggle_login_modal.js',
     'js/src/lang_edx.js',
+    'common/js/vendor/what-input.js',
 ]
 
 dashboard_js = (
@@ -1484,6 +1485,7 @@ PIPELINE_CSS = {
             'css/course-list.css',
             'css/faq.css',
             'css/cookie-alert.css',
+            'css/what-input/index.css',
             'js/vendor/tinymce/js/tinymce/plugins/codesample/css/prism.css',
             #'css/course-content.css',
             #'css/polipedia.css',
