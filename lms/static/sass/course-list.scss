@@ -9924,7 +9924,7 @@ a.text-dark {
 
 @media (max-width: 1279.98px) {
   html {
-    font-size: 0.875rem;
+    //font-size: 0.875rem;
   }
 }
 
@@ -10130,19 +10130,6 @@ section .display-2 {
 @media (max-width: 1279.98px) {
   .navbar-nav .nav-item {
     .nav-link {
-      font-size: 1rem;
-    }
-
-    .dropdown-menu {
-      border: 0;
-    }
-
-    .dropdown-item {
-      font-size: 1rem;
-      padding-left: 1rem;
-    }
-
-    .btn {
       font-size: 1rem;
     }
   }
@@ -13061,7 +13048,7 @@ img.message-author {
   .navbar {
     img {
       max-height: 2.125rem !important;
-      display: block !important;
+      display: block;
     }
     #img-mobile {
       display: none !important;
@@ -13915,7 +13902,7 @@ span.complete-checkmark.fa.fa-check {
 /** HEADER NAVIGATION **/
 
 :root {
-  --nav-bg: #FAFCFD;
+  --nav-bg: #ffffff;
   --nav-height: 4.25rem;
   --nav-position: sticky;
   --nav-boxshadow: 0 1px 12px rgba(72, 98, 111, 0.2);
@@ -13938,7 +13925,7 @@ span.complete-checkmark.fa.fa-check {
   --nav-link-color: #66737F;
   --nav-link-hover-color: #1C2D3D;
   --nav-link-border-hover-color: #DEE2E6;
-  --nav-link-border-active-color: #1C2D3D;
+  --nav-link-border-active-color: #4A5866;
   --nav-item-border-left-color: #4A5866;
   --nav-item-text-color: #1C2D3D;
 
@@ -13980,12 +13967,17 @@ span.complete-checkmark.fa.fa-check {
     box-shadow: var(--nav-boxshadow);
   }
 
-  .navbar-brand img {
-    max-height: 2.125rem;
+  & .navbar-brand img {
+    @media screen and (min-width: 960px) {
+      max-height: 2.25rem !important;
+    }
+    @media screen and (max-width: 659px) {
+      max-height: 1.75rem !important;
+    }
   }
 
   .navbar img {
-    display: inline-block !important;
+    display: inline-block;
   }
 
   .focus-on-mouse {
@@ -14115,11 +14107,11 @@ span.complete-checkmark.fa.fa-check {
   }
 
   .dropdown-toggle[aria-expanded=true] .fa-chevron-down {
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateY(-1px);
   }
 
   .dropdown-toggle[aria-expanded=false] .fa-chevron-down {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(-1px);
   }
 
   .dropdown-toggle .fa-chevron-down {
@@ -14164,6 +14156,8 @@ span.complete-checkmark.fa.fa-check {
 
     .dropdown-menu {
       top: 50px;
+      min-width: 5rem;
+      left: -10px;
     }
 
     &-selected {
@@ -14197,7 +14191,7 @@ span.complete-checkmark.fa.fa-check {
   }
 
   &__search {
-    max-width: 334px;
+    min-width: 334px;
     border-radius: 2px;
     border: 0.5px solid var(--search-border-color);
 
@@ -14286,10 +14280,6 @@ span.complete-checkmark.fa.fa-check {
 
     &--icon {
       margin: 0 6px;
-
-      @media screen and (max-width: 959px) {
-        display: none;
-      }
     }
   }
 
@@ -14311,6 +14301,13 @@ span.complete-checkmark.fa.fa-check {
       transform: translate(0px, -4px);
     }
 
+    &:hover .header-navigation__btn-login--icon {
+      width: 2.063rem;
+      height: 2.063rem;
+      background: url('/static/images/my-account-icon-hover.png') no-repeat center;
+      background-size: contain;
+    }
+
     &.active {
       color: var(--nav-link-hover-color);
       text-decoration: none;
@@ -14327,7 +14324,18 @@ span.complete-checkmark.fa.fa-check {
     }
 
     &--icon {
-      margin: 0 6px;
+      margin: 0 6px 0 0;
+      width: 2.063rem;
+      height: 2.063rem;
+      background: url('/static/images/my-account-icon-default.png') no-repeat center;
+      background-size: contain;
+
+      &:hover {
+        width: 2.063rem;
+        height: 2.063rem;
+        background: url('/static/images/my-account-icon-hover.png') no-repeat center;
+        background-size: contain;
+      }
 
       @media screen and (max-width: 959px) {
         display: none;
@@ -14338,7 +14346,7 @@ span.complete-checkmark.fa.fa-check {
   &__separator {
     width: 0.5px;
     background-color: var(--separator-color);
-    margin: 0 1rem;
+    margin: 0 1.25rem;
     height: 2.25rem;
     align-self: center;
 
@@ -14367,7 +14375,7 @@ span.complete-checkmark.fa.fa-check {
 
     &:hover {
       color: var(--nav-link-hover-color);
-      border-bottom: 2px solid var(--nav-link-border-hover-color);
+      border-bottom: 1.5px solid var(--nav-link-border-hover-color);
       border-top-color: transparent;
       border-left-color: transparent;
       border-right-color: transparent;
@@ -14378,7 +14386,7 @@ span.complete-checkmark.fa.fa-check {
 
     &:active, &:focus {
       color: var(--nav-link-hover-color);
-      border-bottom: 2px solid var(--nav-link-border-active-color);
+      border-bottom: 1.5px solid var(--nav-link-border-active-color);
       border-top-color: transparent;
       border-left-color: transparent;
       border-right-color: transparent;
@@ -14389,7 +14397,7 @@ span.complete-checkmark.fa.fa-check {
 
     &.active {
       color: var(--nav-link-hover-color);
-      border-bottom: 2px solid var(--nav-link-border-active-color);
+      border-bottom: 1.5px solid var(--nav-link-border-active-color);
       border-top-color: transparent;
       border-left-color: transparent;
       border-right-color: transparent;
@@ -14628,7 +14636,8 @@ span.complete-checkmark.fa.fa-check {
 
 @media screen and (min-width: 1280px) {
   #header-navigation .course-preview-title {
-    max-width: 50%;
+    width: 100%;
+    max-width: 26.875rem;
   }
 }
 
@@ -15872,11 +15881,58 @@ $background: #F3F5F6;
     &:after {
       content: '';
       position: absolute;
-      border-bottom: 6px solid #1868B9;
+      border-bottom: 10px solid #1868B9;
       opacity: 0.2;
-      transform: translate(-100%, -4px);
+      transform: translate(-100%, -9px);
       bottom: 0;
       width: 100%;
+
+      @media screen and (max-width: 768px) and (max-width: 959px) {
+        content: '';
+        position: absolute;
+        border-bottom: 10px solid #1868B9;
+        opacity: 0.2;
+        transform: translate(-100%, -5px);
+        bottom: 0;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 767px) {
+        content: '';
+        position: absolute;
+        border-bottom: 6px solid #1868B9;
+        opacity: 0.2;
+        transform: translate(-100%, -0.15em);
+        bottom: 0;
+        width: 100%;
+      }
+    }
+
+    &--small {
+      padding: 0;
+      background-color: transparent;
+      position: relative;
+      color: inherit;
+
+      &:after {
+        content: '';
+        position: absolute;
+        border-bottom: 6px solid #1868B9;
+        opacity: 0.2;
+        transform: translate(-100%, -5px);
+        bottom: 0;
+        width: 100%;
+
+        @media screen and (max-width: 1279px) {
+          content: '';
+          position: absolute;
+          border-bottom: 6px solid #1868B9;
+          opacity: 0.2;
+          transform: translate(-100%, -3px);
+          bottom: 0;
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -15891,9 +15947,10 @@ $background: #F3F5F6;
       min-width: 45%;
     }
 
-    .card:hover .course__card-body {
+    .card:hover .course__card-body, .card.focus-on-keyboard .course__card-body {
       @media screen and (min-width: 1140px) {
         bottom: 0%;
+        height: 61%;
       }
     }
 
@@ -15938,6 +15995,18 @@ $background: #F3F5F6;
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 2px 2px 0 0;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: transparent linear-gradient(62deg, rgba(255, 255, 255, 0) 0%, rgba(114, 190, 255, 0.14) 48%, rgba(114, 190, 255, 0.31) 100%) 0% 0% no-repeat padding-box;
+      }
 
       @media screen and (min-width: 768px) and (max-width: 959px) {
         height: 137px;
@@ -15959,12 +16028,19 @@ $background: #F3F5F6;
       position: absolute;
       bottom: -11%;
       transition: bottom 0.5s linear;
+      height: 61%;
 
       @media only screen and (max-width: 1139px) {
-        display: block;
+        display: flex;
         bottom: 0;
         position: absolute;
+        height: 61%;
       }
+
+      @media screen and (max-width: 767px) {
+        height: auto;
+      }
+
       &-info {
         position: relative;
         padding: 0 16px 0.875rem 16px;
@@ -16004,7 +16080,7 @@ $background: #F3F5F6;
 
               &:before {
                 content: '';
-                border: 1px solid #DEE2E6;
+                border-top: 1px solid #DEE2E6;
                 margin-top: 13px;
                 margin-bottom: 8px;
                 display: block;
@@ -16068,8 +16144,8 @@ $background: #F3F5F6;
     &__icon {
       width: 0.688rem;
       height: 0.688rem;
-      margin-left: 0.313rem;
-      margin-top: 0.125rem;
+      margin-left: 0.5rem;
+      margin-top: 0.188rem;
     }
 
     &--small {
@@ -16190,6 +16266,7 @@ $background: #F3F5F6;
       color: inherit;
       font-size: 2.875rem;
       line-height: 3.625rem;
+      font-weight: 900;
 
       @media screen and (max-width: 959px) {
         font-size: 2rem;
@@ -16222,13 +16299,60 @@ $background: #F3F5F6;
       }
 
       &-before-1, &-before-2, &-before-3 {
-        padding: 62px;
+        display: flex;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+          padding: 62px;
+          justify-content: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
         @media screen and (max-width: 767px) {
           padding: 8px;
+          justify-content: center;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
 
       &-before-3 {
+        @media screen and (min-width: 1280px) {
+          padding: 52px 0 52px 0;
+          justify-content: flex-end;
+          margin-left: auto;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          min-width: 685px;
+          background: url('/static/images/navoica-homepage-before-3.svg') no-repeat center;
+          transform: translate(0%, -5%), matrix(1, 0, 0, 1, 0, 0);
+          z-index: -1;
+          bottom: 0;
+          left: 62px;
+          top: 50%;
+          background-size: contain;
+
+          @media screen and (max-width: 767px) {
+            display: none;
+          }
+
+          @media screen and (max-width: 1279px) {
+            content: '';
+            position: absolute;
+            width: 100%;
+            min-width: 685px;
+            background: url('/static/images/navoica-homepage-before-3.svg') no-repeat center;
+            transform: translate(0%, -5%), matrix(1, 0, 0, 1, 0, 0);
+            z-index: -1;
+            bottom: 0;
+            left: 10px;
+            top: 50%;
+            background-size: auto;
+          }
+        }
 
         &.certificate-image:after {
           content: '';
@@ -16249,45 +16373,89 @@ $background: #F3F5F6;
         }
       }
 
-      &-before-1:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        min-width: 685px;
-        background: url('/static/images/navoica-homepage-before-1.svg') no-repeat center;
-        transform: translate(0%, -5%), matrix(1, 0, 0, 1, 0, 0);
-        z-index: -1;
-        bottom: 0;
-        left: 0;
-        top: 50%;
-        background-size: contain;
+      &-before-1 {
+        @media screen and (min-width: 1280px) {
+          padding: 62px 0 62px 62px;
+          justify-content: flex-end;
+          margin-left: auto;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          min-width: 685px;
+          background: url('/static/images/navoica-homepage-before-1.svg') no-repeat center;
+          transform: translate(0%, -5%), matrix(1, 0, 0, 1, 0, 0);
+          z-index: -1;
+          bottom: 0;
+          left: 65px;
+          top: 50%;
+          background-size: contain;
+
+          @media screen and (max-width: 767px) {
+            display: none;
+          }
+
+          @media screen and (max-width: 1279px) {
+            content: '';
+            position: absolute;
+            width: 100%;
+            min-width: 685px;
+            background: url('/static/images/navoica-homepage-before-1.svg') no-repeat center;
+            transform: translate(0%, -5%), matrix(1, 0, 0, 1, 0, 0);
+            z-index: -1;
+            bottom: 0;
+            left: 25px;
+            top: 50%;
+            background-size: auto;
+          }
+        }
       }
-      &-before-2:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 265px;
-        background: url('/static/images/navoica-homepage-before-2.svg') no-repeat center;
-        transform: translate(0%, -5%), matrix(1, 0, 0, 1, 0, 0);
-        z-index: -1;
-        bottom: 0;
-        left: 0;
-        top: 30%;
-        background-size: contain;
+
+      &-before-2 {
+        @media screen and (min-width: 1280px) {
+          padding: 62px 0 0 0;
+          justify-content: flex-start;
+          margin-right: auto;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 265px;
+          min-width: 685px;
+          background: url('/static/images/navoica-homepage-before-2.svg') no-repeat center;
+          transform: translate(0%, -5%), matrix(1, 0, 0, 1, 0, 0);
+          z-index: -1;
+          bottom: 0;
+          left: -90px;
+          top: 30%;
+          background-size: contain;
+
+          @media screen and (max-width: 767px) {
+            display: none;
+          }
+
+          @media screen and (max-width: 1279px) {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 265px;
+            min-width: 685px;
+            background: url('/static/images/navoica-homepage-before-2.svg') no-repeat center;
+            transform: translate(0%, -5%), matrix(1, 0, 0, 1, 0, 0);
+            z-index: -1;
+            bottom: 0;
+            left: 0;
+            top: 30%;
+            background-size: auto;
+
+          }
+        }
       }
-      &-before-3:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        min-width: 685px;
-        background: url('/static/images/navoica-homepage-before-3.svg') no-repeat center;
-        transform: translate(0%, -5%), matrix(1, 0, 0, 1, 0, 0);
-        z-index: -1;
-        bottom: 0;
-        left: 0;
-        top: 50%;
-        background-size: contain;
-      }
+
     }
 
     &__why-learn {
@@ -16295,7 +16463,9 @@ $background: #F3F5F6;
       justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
-      margin-bottom: 1.875rem;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 4rem;
+      }
 
       &__box {
         max-width: 360px;
@@ -16305,8 +16475,34 @@ $background: #F3F5F6;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 60px 0 100px 0;
+        margin: 2.125rem 0 7.5rem 0;
         padding: 1rem;
+        height: 100%;
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+          &:nth-child(1) h3, &:nth-child(2) h3 {
+            max-width: 75%;
+          }
+
+          &:nth-child(3) h3 {
+            max-width: 64%;
+          }
+        }
+
+        @media screen and (min-width: 1024px) {
+          &:nth-child(1) p, &:nth-child(2) p {
+            max-width: 310px;
+          }
+
+          &:nth-child(3) p {
+            max-width: 290px;
+          }
+        }
+
+        & img {
+          width: 7.5rem;
+          height: 7.5rem;
+        }
 
         & img, & p , & h3 {
           flex: 1;
@@ -16317,11 +16513,11 @@ $background: #F3F5F6;
 
         @media screen and (max-width: 767px) {
           max-width: 100%;
-          margin: 20px 0;
+          margin: 1rem 0;
         }
 
         @media screen and (min-width: 768px) and (max-width: 1023px) {
-          margin: 60px 0;
+          margin: 2.75rem 0 3.063rem 0;
         }
 
         @media screen and (min-width: 960px) and (max-width: 1023px) {
@@ -16347,24 +16543,30 @@ $background: #F3F5F6;
         }
 
         & h3 {
-          margin-top: 50px;
+          margin-top: 2rem;
           font-size: 1.125rem;
           line-height: 1.438rem;
 
           @media screen and (max-width: 959px) {
             font-size: 1rem;
             line-height: 1.5rem;
+            margin-top: 1.5rem;
           }
         }
 
         & p {
-          margin-top: 20px;
+          margin-top: 1.25rem;
           font-size: 1rem;
           line-height: 1.5rem;
 
           @media screen and (max-width: 959px) {
             font-size: 0.875rem;
             line-height: 1.25rem;
+            margin-top: 1rem;
+          }
+
+          @media screen and (min-width: 768px) and (max-width: 1023px) {
+            max-width: 185px;
           }
         }
       }
@@ -16449,7 +16651,7 @@ $background: #F3F5F6;
           justify-content: space-between;
           align-items: center;
           transform: translate(0%,0%);
-          transition: transform .3s ease-in;
+          transition: transform 650ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
           @media screen and (max-width: 1139px) {
             flex-wrap: wrap;
@@ -16476,8 +16678,9 @@ $background: #F3F5F6;
             }
 
             @media screen and (max-width: 767px) {
-              height: auto;
-              max-width: 12rem;
+              height: 4.2rem;
+              width: auto;
+              margin-bottom: 1.5rem;
             }
           }
         }
@@ -16525,10 +16728,10 @@ $background: #F3F5F6;
 
     &__new-courses {
       position: relative;
-      padding-top: 1.625rem;
-      padding-bottom: 1.625rem;
+      padding-top: 0.313rem;
       @media screen and (max-width: 767px) {
-        margin-top: 2.375rem;
+        margin-top: 4rem;
+        margin-bottom: 2.375rem;
       }
 
       .slider-frame {
@@ -16559,8 +16762,6 @@ $background: #F3F5F6;
     }
 
     &__what-is-navoica {
-      padding-top: 1.875rem;
-      padding-bottom: 1.875rem;
 
       & .homepage__text-info {
 
@@ -16626,17 +16827,10 @@ $background: #F3F5F6;
   }
 
   & .bg-home-section-1 {
-    background: #ffffff url('/static/images/navoica-homepage-bg-1.svg') no-repeat center;
-    background-size: auto;
+    position: relative;
     width: 100%;
     min-height: 28.438rem;
 
-    @media screen and (min-width: 768px) and (max-width: 959px) {
-      background: #fff url('/static/images/navoica-homepage-bg-hero-tablet.svg') no-repeat center right -175px;
-      background-size: auto;
-      width: 100%;
-      min-height: 28.438rem;
-    }
     @media screen and (max-width: 767px) {
       background: #fff url('/static/images/navoica-homepage-bg-hero-tablet.svg') no-repeat 45% 0%;
       background-size: 32.5rem;
@@ -16644,7 +16838,65 @@ $background: #F3F5F6;
       min-height: 28.438rem;
     }
 
+    @media screen and (min-width: 960px) {
+      padding: 7rem 0;
+    }
+
+    &:before {
+      background: transparent url('/static/images/navoica-homepage-bg-1.svg') no-repeat center;
+      background-size: auto;
+      width: 100%;
+      min-height: 28.438rem;
+      content: '';
+      position: absolute;
+      z-index: -1;
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 959px) {
+        background: transparent url('/static/images/navoica-homepage-bg-hero-tablet.svg') no-repeat center right -175px;
+        background-size: auto;
+        width: 100%;
+        min-height: 28.438rem;
+        content: '';
+        position: absolute;
+        z-index: -1;
+      }
+    }
+
+    &:after {
+      background: transparent linear-gradient(90deg, #F9FCFD 0%, #F9FCFD 28%, #F9FCFD00 58%, #F9FCFD00 100%) 0% 0% no-repeat padding-box;
+      background-size: auto;
+      width: 100%;
+      min-height: 28.438rem;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+
+      @media screen and (min-width: 768px) and (max-width: 959px) {
+        background: transparent linear-gradient(90deg, #F9FCFD 0%, #F9FCFD 28%, #F9FCFD00 58%, #F9FCFD00 100%) 0% 0% no-repeat padding-box;
+        background-size: auto;
+        width: 100%;
+        min-height: 28.438rem;
+        content: '';
+        position: absolute;
+        z-index: -1;
+      }
+      @media screen and (max-width: 767px) {
+        background: transparent linear-gradient(90deg, #F9FCFD 0%, #F9FCFD 28%, #F9FCFD00 58%, #F9FCFD00 100%) 0% 0% no-repeat padding-box;
+        background-size: 32.5rem;
+        width: 100%;
+        min-height: 28.438rem;
+        content: '';
+        position: absolute;
+        z-index: -1;
+      }
+    }
   }
+
 
   & .bg-home-section-5 {
     position: relative;
