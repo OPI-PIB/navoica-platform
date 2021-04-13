@@ -1,4 +1,4 @@
-<%page expression_filter="h"/>
+<%page expression_filter="h, trim"/>
 <%namespace name='static' file='../static_content.html'/>
 <%!
 from openedx.core.djangoapps.lang_pref.api import released_languages
@@ -10,9 +10,9 @@ from django.utils.translation import ugettext as _
 
 <div class="dropdown desktop-menu dropdown__language align-self-center" role="menuitem">
     <button class="btn dropdown-toggle" id="navbarDropdownMenuLangLink" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="${dict(languages).get(LANGUAGE_CODE)}, Select language / Wybierz język">
-        <i class="fas fa-globe-americas dropdown__language-icon"></i>
+        <i class="fas fa-globe-americas dropdown__language-icon mx-0"></i>
         <span class="dropdown__language-selected">${LANGUAGE_CODE}</span>
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        <i class="fa fa-chevron-down mx-0" aria-hidden="true"></i>
     </button>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLangLink" role="menu">
         % for language in languages:
