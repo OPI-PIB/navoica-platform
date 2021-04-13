@@ -91,6 +91,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
 
                    this.$el.find('#' + this.fieldToSelectorMap.overview).val(this.model.get('overview'));
                    this.tiny.init({selector: '#course-overview',
+                                base_url: baseUrl + "/js/vendor/tinymce/js/tinymce",
                                 language: document.documentElement.lang,
                                 height : 300,
                                 toolbar: "undo redo | formatselect | bold italic underline strikethrough subscript superscript | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor nonbreaking removeformat wrapAsCode | " +
