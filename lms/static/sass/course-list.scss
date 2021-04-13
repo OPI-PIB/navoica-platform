@@ -6,23 +6,6 @@
  */
 
 :root {
-/* LOGIN Colors: */
---color-d71932: #D71932;
---color-f8f9fa: #F8F9FA;
---color-d1d6dc: #D1D6DC;
---color-5b5b5b: #5B5B5B;
---color-008080: #008080;
---color-3f3d56: #3F3D56;
---color-fcfcfc: #FCFCFC;
---color-dedfdf: #DEDFDF;
---color-212529: #212529;
---color-374049: #374049;
---color-686970: #686970;
---color-919191: #919191;
---color-3c4043: #3C4043;
---color-ffffff: #FFFFFF;
---color-e41d37: #E41D37;
---color-a11326: #A11326;
 
   --blue:#007bff;
   --indigo:#6610f2;
@@ -71,7 +54,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
 }
 
 .fa-twitter.social-icon, .fa-linkedin-in.social-icon {
@@ -738,14 +721,6 @@ padding-left: 0;
 }
 
 .nomargin{ margin:0px !important }
-
-#password-reset-complete-anchor{
-  background-color: var(--color-ffffff);
-  border: 1px solid var(--color-dedfdf);
-  box-shadow: 0px 10px 30px #B3B3B326;
-  border-radius: 3px;
-  padding: 2.5rem 5.5rem;
-}
 
 @media (min-width: 960px) {
   .container {
