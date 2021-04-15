@@ -1,25 +1,25 @@
 # edX translation file.
-# Copyright (C) 2020 EdX
+# Copyright (C) 2021 EdX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
-# EdX Team <info@edx.org>, 2020.
-#
+# EdX Team <info@edx.org>, 2021.
+# 
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2020
-#
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2020-10-01 12:53+0000\n"
+"POT-Creation-Date: 2021-03-30 09:10+0000\n"
 "PO-Revision-Date: 2020-08-19 11:05+0000\n"
-"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2020\n"
+"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: cms/static/cms/js/main.js cms/static/js/views/active_video_upload_list.js
@@ -92,6 +92,7 @@ msgstr "Usuwanie"
 #: cms/static/js/views/modals/course_outline_modals.js
 #: cms/static/js/views/show_textbook.js cms/static/js/views/tabs.js
 #: cms/static/js/views/validation.js
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 #: common/static/bundles/StudentAccountDeletion.js
 #: common/static/bundles/StudentAccountDeletionInitializer.js
@@ -247,6 +248,10 @@ msgid ""
 msgstr ""
 "Można przesyłać wyłącznie pliki <%= fileTypes %>. Proszę wybrać i przesłać "
 "plik kończący się rozszerzeniem <%= fileExtensions %>."
+
+#: cms/static/js/models/uploads.js common/static/bundles/js/pages/textbooks.js
+msgid "Size of image should be less than 0.3 MB"
+msgstr "Rozmiar obrazu powinien być mniejszy niż 0,3 MB"
 
 #: cms/static/js/models/uploads.js common/static/bundles/js/pages/textbooks.js
 msgid "or"
@@ -1772,11 +1777,11 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Formula"
-msgstr "Edytor wzorów"
+msgstr "Wzór"
 
 #: common/lib/xmodule/xmodule/js/src/html/edit.js
 msgid "Insert formula"
-msgstr "Wprowadź wzór"
+msgstr "Wstaw wzór"
 
 #. Translators: this is a toolbar button tooltip from the raw HTML editor
 #. displayed in the browser when a user needs to edit HTML
@@ -2255,8 +2260,13 @@ msgstr "Zresetuj swoje hasło"
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-msgid "Enter and confirm your new password."
-msgstr "Wpisz i potwierdź nowe hasło"
+msgid "Password reset unsuccessful."
+msgstr "Zresetowanie hasła nie powiodło się."
+
+#: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
+msgid "Please correct or complete the missing information."
+msgstr "Popraw lub uzupełnij brakujące informacje."
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
@@ -2275,8 +2285,18 @@ msgstr "Podane hasła nie są identyczne. "
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
-msgid "Reset My Password"
-msgstr "Resetuj moje hasło"
+msgid "Reset password"
+msgstr "Zresetuj hasło"
+
+#: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
+msgid "Can't log in? Send an e-mail to: "
+msgstr "Nie możesz się zalogować? Wyślij wiadomość e-mail na adres:"
+
+#: common/static/bundles/PasswordResetConfirmation.js
+#: lms/static/js/student_account/components/PasswordResetConfirmation.jsx
+msgid "mooc_help@opi.org.pl"
+msgstr "mooc_help@opi.org.pl"
 
 #: common/static/bundles/PasswordResetConfirmation.js
 #: lms/static/js/student_account/components/PasswordResetInput.jsx
@@ -3192,6 +3212,10 @@ msgstr[0] "Ten wpis posiada %(count)s oflagowanie."
 msgstr[1] "Ten wpis posiada %(count)s oflagowania."
 msgstr[2] "Ten wpis posiada %(count)s oflagowań."
 msgstr[3] "Ten wpis posiada %(count)s oflagowań."
+
+#: common/static/js/vendor/tinymce/js/tinymce/plugins/formula/js/mathjax/extensions/HelpDialog.js
+msgid "HelpDialog"
+msgstr "Okno dialogowe pomocy"
 
 #: lms/djangoapps/support/static/support/js/views/certificates.js
 msgid "An unexpected error occurred.  Please try again."
