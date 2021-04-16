@@ -44,7 +44,7 @@ HeaderFactory();
     % endif
     <div class="container d-flex justify-content-between align-items-center">
 
-        <div class="navbar navbar-expand-md d-flex justify-content-between flex-wrap w-100">
+        <div class="navbar navbar-expand-md d-flex justify-content-between flex-nowrap w-100">
 
             <a class="navbar-brand mr-3" href="/">
                 <img src="${static.url(settings.HEADER_NAVOICA_LOGO_IMAGE)}" alt="${_('Navoica logo')}">
@@ -71,7 +71,7 @@ HeaderFactory();
                 <div class="header-navigation__search d-flex flex-nowrap">
                     <label for="search-course" class="sr-only">${_('Search courses')}</label>
                     <input class="header-navigation__search-input" id="search-course" type="search" name="search_query" placeholder="${_('Search courses...')}">
-                    <div class="header-navigation__search-input-submit d-flex justify-content-center align-items-center">
+                    <div class="header-navigation__search-input-submit d-flex justify-content-center align-items-center ml-auto">
                         <button class="btn header-navigation__search-button" type="submit" title="${_('Search')}"><i class="fa fa-search mx-0" aria-hidden="true"></i><span class="sr-only">${_('Search courses')}</span></button>
                     </div>
                 </div>
@@ -162,24 +162,16 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
     <script>
         $(document).ready(function() {
 
-            if (typeof navigator !== "undefined" && navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-                let getBrowserFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('font-size');
-                if (getBrowserFontSize >= "25" && getBrowserFontSize < "44") {
-                    $('html').css('fontSize', '62.5%');
-                } else if (getBrowserFontSize >= "44" && getBrowserFontSize < "48") {
-                    $('html').css('fontSize', '55.5%');
-                } else if (getBrowserFontSize >= "48") {
-                    $('html').css('fontSize', '25px');
-                } else {
-                    $('html').removeAttr("style");
-                }
-            }
-
             let $navbar = $('.js-navbar-on-scroll');
 
             function changeNavbarBackground() {
                 if (typeof window !== "undefined") {
-                    window.location.pathname === '/' ? $navbar.removeClass('navbar-white-on-scroll') : $navbar.addClass('navbar-white-on-scroll');
+                    if (window.location.pathname === '/') {
+                        $navbar.removeClass('navbar-white-on-scroll');
+                    } else {
+                        $navbar.addClass('navbar-white-on-scroll');
+                        $navbar.addClass("navbar-boxshadow");
+                    }
                 }
             }
 
@@ -198,6 +190,12 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
                         changeNavbarBackground();
                     }
                 });
+            }
+
+            let $languageSelected = $('.dropdown__language-selected')
+            if ($languageSelected.length) {
+                let cutLangText = $languageSelected.text().slice(0,2);
+                $languageSelected.text(cutLangText);
             }
 
             let activeElement;
@@ -249,6 +247,31 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
             $searchInput.on("blur", function() {
                 $searchContainer.removeClass('focus-on-mouse');
                 $searchContainer.removeClass('focus-on-keyboard');
+            });
+
+            $(window).resize(function(){
+
+                if (typeof navigator !== "undefined") {
+                    let getBrowserFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('font-size');
+                    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                        if (getBrowserFontSize >= "25" && getBrowserFontSize < "44") {
+                            $('html').css('fontSize', '62.5%');
+                        } else if (getBrowserFontSize >= "44" && getBrowserFontSize < "48") {
+                            $('html').css('fontSize', '55.5%');
+                        } else if (getBrowserFontSize >= "48") {
+                            $('html').css('fontSize', '25px');
+                        } else {
+                            $('html').removeAttr("style");
+                        }
+                    } else if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1 || navigator.userAgent.toLowerCase().indexOf('safari') > -1) {
+                        if (getBrowserFontSize > "16") {
+                            $('.header-navigation .navbar').removeClass('flex-nowrap').addClass('flex-wrap');
+                        } else {
+                            $('.header-navigation .navbar').removeClass('flex-wrap').addClass('flex-nowrap');
+                        }
+                    }
+                }
+
             });
         });
     </script>

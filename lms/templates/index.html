@@ -21,7 +21,7 @@ from openedx.core.djangolib.markup import HTML, Text
                     mark_end=HTML('</mark>'),
                     break_html=HTML('<br/>')
                     )}</h1>
-                <p class="main__home-page__description pb-md-4 pb-3">
+                <p class="main__home-page__description pb-md-4 pb-3 my-0">
                     ${Text(_('Discover {strong_start}free courses{strong_end} offered by Polish universities and institutions. You will learn {strong_start}online{strong_end}, at any time and any pace. Upon completion of a course you will receive {strong_start}a certificate{strong_end}?')).format(
                     strong_start=HTML('<strong>'),
                     strong_end=HTML('</strong>')
@@ -43,10 +43,10 @@ from openedx.core.djangolib.markup import HTML, Text
             <div class="col-lg-6 col-sm-12 homepage__text-info">
                 <span class="main__home-page__subtitle">${_('About the platform')}</span>
                 <h2 class="main__home-page__title mt-8 pb-3 mb-0">${Text(_('What is {mark_start}NAVOICA?{mark_end}')).format(
-                    mark_start=HTML('<mark class="mark__bottom-line">'),
+                    mark_start=HTML('<mark class="mark__bottom-line mark__bottom-line--small">'),
                         mark_end=HTML('</mark>')
                     )}</h2>
-                <p class="main__home-page__description pb-3">
+                <p class="main__home-page__description pb-3 my-0">
                     ${Text(_('NAVOICA is a Polish educational platform with {strong_start}MOOC{strong_end} courses, owned by the Ministry of Education and Science and developed by {strong_start}the National Information Processing Institute (OPI PIB){strong_end}. The platform is named after {strong_start}Nawojka{strong_end} who was the first Polish female student, according to a legend.')).format(
                     strong_start=HTML('<strong>'),
                     strong_end=HTML('</strong>')
@@ -56,8 +56,8 @@ from openedx.core.djangolib.markup import HTML, Text
                     <span class="navoica-button__label">${_('More about the platform')} <img class="navoica-button__icon" src="/static/images/double-arrow-right-blue.svg" alt=""/></span>
                 </a>
             </div>
-            <div class="col-lg-6 col-sm-12 mx-auto homepage-image-before-1 homepage__picture">
-                <img src="/static/images/about-navoica-image.png" alt="${_('The man is sitting in front of the desk. He has a gray beard and glasses. There are books and an open laptop on the desk. He is holding a whiteboard marker in his hand. The whiteboard rests on the cupboard behind the man.')}" class="img-fluid homepage-image homepage-image-1 mx-auto" />
+            <div class="col-lg-6 col-sm-12 homepage-image-before-1 homepage__picture">
+                <img src="/static/images/about-navoica-image.png" alt="${_('The man is sitting in front of the desk. He has a gray beard and glasses. There are books and an open laptop on the desk. He is holding a whiteboard marker in his hand. The whiteboard rests on the cupboard behind the man.')}" class="img-fluid homepage-image homepage-image-1" />
             </div>
         </div>
     </div>
@@ -96,7 +96,7 @@ from openedx.core.djangolib.markup import HTML, Text
         <div class="container">
             <div class="homepage__popular-fields">
                 <h2 class="main__home-page__title pb-3 my-0">${_('You can find courses in popular areas')}:</h2>
-                <p class="main__home-page__description pb-4">${_('Programming, IT, Languages, Personal Development, Management, Business and many more.')}</p>
+                <p class="main__home-page__description pb-4 my-0">${_('Programming, IT, Languages, Personal Development, Management, Business and many more.')}</p>
                 <a href="${marketing_link('COURSES')}" class="navoica-button__primary navoica-button--big">
                     <span class="navoica-button__label">${_('View our courses')} <span class="sr">${_('in courses')}</span><img class="navoica-button__icon" src="/static/images/double-arrow-right.svg" alt=""/></span>
                 </a>
@@ -122,7 +122,6 @@ from openedx.core.djangolib.markup import HTML, Text
                     <img class="js-slider-item" src="/static/images/partners/wat.png" alt="Wojskowa Akademia Techniczna" />
                     <img class="js-slider-item" src="/static/images/partners/centrum-nauki-kopernik.png" alt="Centrum Nauki Kopernik" />
                     <img class="js-slider-item" src="/static/images/partners/uam.png" alt="Uniwersytet im. Adama Mickiewicza w Poznaniu" />
-                    <img class="js-slider-item" src="/static/images/partners/politechnika-lodzka.png" alt="Politechnika Łódzka" />
                     <img class="js-slider-item" src="/static/images/partners/Politechnika-Krakowska.png" alt="Politechnika Krakowska" />
                     </div>
                 </div>
@@ -140,16 +139,16 @@ from openedx.core.djangolib.markup import HTML, Text
 <section class="main__home-page">
     <div class="container">
         <div class="row d-flex flex-wrap align-items-center">
-            <div class="col-lg-6 col-sm-12 mx-auto homepage-image-before-2 homepage__picture">
-                <img src="/static/images/education-navoica.png" alt="${_('A woman is sitting at a desk, studying. She has a laptop and notebook in front of her. She has headphones on her head and a pen in her hand.')}" class="img-fluid homepage-image homepage-image-2 mx-auto" />
+            <div class="col-lg-6 col-sm-12 homepage-image-before-2 homepage__picture">
+                <img src="/static/images/education-navoica.png" alt="${_('A woman is sitting at a desk, studying. She has a laptop and notebook in front of her. She has headphones on her head and a pen in her hand.')}" class="img-fluid homepage-image homepage-image-2" />
             </div>
             <div class="col-lg-6 col-sm-12 homepage__text-info">
                 <span class="main__home-page__subtitle">${_('Course outline')}</span>
                 <h2 class="main__home-page__title mt-8 pb-3 mb-0">${Text(_('What learning on {mark_start}Navoica.pl{mark_end} looks like?')).format(
-                    mark_start=HTML('<mark class="mark__bottom-line">'),
+                    mark_start=HTML('<mark class="mark__bottom-line mark__bottom-line--small">'),
                         mark_end=HTML('</mark>')
                     )}</h2>
-                <p class="main__home-page__description pb-3">${Text(_('Our courses are entirely {strong_start}online{strong_end} and can be taken at any time, usually at your own pace. Lessons are based on {strong_start}films{strong_end}, quizzes, text material and at times also interactive content.')).format(
+                <p class="main__home-page__description pb-3 my-0">${Text(_('Our courses are entirely {strong_start}online{strong_end} and can be taken at any time, usually at your own pace. Lessons are based on {strong_start}films{strong_end}, quizzes, text material and at times also interactive content.')).format(
                     strong_start=HTML('<strong>'),
                         strong_end=HTML('</strong>')
                     )}</p>
@@ -167,16 +166,16 @@ from openedx.core.djangolib.markup import HTML, Text
             <div class="col-lg-6 col-sm-12 homepage__text-info">
                 <span class="main__home-page__subtitle">${_('Course outline')}</span>
                 <h2 class="main__home-page__title w-400 mt-8 pb-3 mb-0">${Text(_('Upon completion of the course you will receive {mark_start}a certificate{mark_end}')).format(
-                    mark_start=HTML('<mark class="mark__bottom-line">'),
+                    mark_start=HTML('<mark class="mark__bottom-line mark__bottom-line--small">'),
                         mark_end=HTML('</mark>')
                     )}</h2>
-                <p class="main__home-page__description">${Text(_('Certificates are issued {strong_start}online{strong_end}, you may download and print them. You can also share them on social media or send them to your employer. Our certificates are {strong_start}free{strong_end} of charge.')).format(
+                <p class="main__home-page__description my-0">${Text(_('Certificates are issued {strong_start}online{strong_end}, you may download and print them. You can also share them on social media or send them to your employer. Our certificates are {strong_start}free{strong_end} of charge.')).format(
                     strong_start=HTML('<strong>'),
                         strong_end=HTML('</strong>')
                     )}</p>
             </div>
-            <div class="col-lg-6 col-sm-12 mx-auto homepage-image-before-3 certificate-image homepage__picture">
-                <img src="/static/images/certificate-navoica.png" alt="${_('Handing the course completion certificate to the student\'s hand.')}" class="img-fluid homepage-image homepage-image-3 mx-auto" />
+            <div class="col-lg-6 col-sm-12 homepage-image-before-3 certificate-image homepage__picture">
+                <img src="/static/images/certificate-navoica.png" alt="${_('Handing the course completion certificate to the student\'s hand.')}" class="img-fluid homepage-image homepage-image-3" />
             </div>
         </div>
     </div>
@@ -215,7 +214,6 @@ from openedx.core.djangolib.markup import HTML, Text
 <script>
 
     $(document).ready(function() {
-        $('html').css("font-size", "1rem");
 
         function customSlideGallery($slidePrev, $slideNext, $slideContainer, $slideItem, slideGap, slideWidth) {
             let start = 0;

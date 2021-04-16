@@ -69,11 +69,11 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
         % if request.path == '/login':
         <a href="/login${login_query()}" class="btn header-navigation__btn-login active" aria-current="page"><img src="/static/images/my-account-icon.png" alt="" class="header-navigation__btn-login--icon" />${_("Log in")}</a>
         % else:
-        <a href="/login${login_query()}" class="btn header-navigation__btn-login"><img src="/static/images/my-account-icon.png" alt="" class="header-navigation__btn-login--icon" />${_("Log in")}</a>
+        <a href="/login${login_query()}" class="btn header-navigation__btn-login"><span class="header-navigation__btn-login--icon"></span>${_("Log in")}</a>
         %endif
     </div>
     <div role="menuitem" class="mobile-menu">
-        <a class="dropdown-item" href="/login${login_query()}"><img src="/static/images/my-account-icon.png" alt="" class="header-navigation__btn-login--icon" />${_("Log in")}</a>
+        <a class="dropdown-item" href="/login${login_query()}"><span class="header-navigation__btn-login--icon"></span>${_("Log in")}</a>
     </div>
     <div class="desktop-menu header-navigation__separator--mini"></div>
         % if allow_public_account_creation:
