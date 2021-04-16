@@ -39,7 +39,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    this.$el.find('.set-date').datepicker({dateFormat: 'm/d/yy'});
 
                    this.tiny = tinyMce;
-
+                   this.tiny.baseUrl = baseUrl + "/js/vendor/tinymce/js/tinymce",
         // Avoid showing broken image on mistyped/nonexistent image
                    this.$el.find('img').error(function() {
                        $(this).hide();
@@ -91,7 +91,6 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
 
                    this.$el.find('#' + this.fieldToSelectorMap.overview).val(this.model.get('overview'));
                    this.tiny.init({selector: '#course-overview',
-                                base_url: baseUrl + "/js/vendor/tinymce/js/tinymce",
                                 language: document.documentElement.lang,
                                 height : 300,
                                 toolbar: "undo redo | formatselect | bold italic underline strikethrough subscript superscript | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor nonbreaking removeformat wrapAsCode | " +
