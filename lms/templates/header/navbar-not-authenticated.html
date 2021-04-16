@@ -53,9 +53,9 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
     % if restrict_enroll_for_course:
     <div role="menuitem" class="nav-item desktop-menu mx-0">
         % if request.path == '/register':
-        <a class="btn btn-link active header-navigation__btn-register" aria-current="page" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
+        <a class="btn active header-navigation__btn-register" aria-current="page" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
         % else:
-        <a class="btn btn-link header-navigation__btn-register" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
+        <a class="btn header-navigation__btn-register" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
         %endif
     </div>
     <div role="menuitem" class="mobile-menu">
@@ -79,9 +79,9 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
         % if allow_public_account_creation:
         <div role="menuitem" class="nav-item desktop-menu mx-0">
             % if request.path == '/register':
-            <a class="btn btn-link active header-navigation__btn-register" aria-current="page" href="/register${login_query()}">${_("Register")}</a>
+            <a class="btn active header-navigation__btn-register" aria-current="page" href="/register${login_query()}">${_("Register")}</a>
             % else:
-            <a class="btn btn-link header-navigation__btn-register" href="/register${login_query()}">${_("Register")}</a>
+            <a class="btn header-navigation__btn-register" href="/register${login_query()}">${_("Register")}</a>
             % endif
         </div>
         <div role="menuitem" class="mobile-menu">
