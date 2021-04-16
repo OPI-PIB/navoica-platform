@@ -150,14 +150,32 @@ footer {
 
         img {
           max-width: 13.625rem;
-
-          @media screen and (max-width: 767px) {
-            max-width: 9.9rem;
-          }
         }
 
         & a {
           padding: 16px 0;
+
+          @media screen and (max-width: 959px) {
+            &:nth-child(1) img {
+              max-width: 8.625rem;
+            }
+            &:nth-child(2) img {
+              max-width: 9rem;
+            }
+            &:nth-child(3) img {
+              max-width: 8.313rem;
+            }
+            &:nth-child(4) img {
+              max-width: 4.813rem;
+            }
+          }
+
+          @media screen and (max-width: 767px) {
+            flex: 1;
+            &:nth-child(2) img {
+              max-width: 8.563rem;
+            }
+          }
         }
       }
 
