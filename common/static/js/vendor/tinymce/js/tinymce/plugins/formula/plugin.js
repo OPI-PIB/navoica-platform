@@ -63,7 +63,10 @@
       if (currentNode.getAttribute('data-mlang')) mlangParam = "&mlang=" + currentNode.getAttribute('data-mlang');
       if (currentNode.getAttribute('data-equation')) equationParam = '&equation=' + currentNode.getAttribute('data-equation');
     }
-    var html = '<iframe name="tinymceFormula" id="tinymceFormula" src="'+ url + '/index.html'+ '?lang='+ lang + mlangParam + equationParam + '" scrolling="no" frameborder="0"></iframe>';
+     var newUrl = new URL(url);
+    newUrl.hostname = editor.documentBaseURI.host;
+
+    var html = '<iframe name="tinymceFormula" id="tinymceFormula" src="'+ newUrl.href + '/index.html'+ '?lang='+ lang + mlangParam + equationParam + '" scrolling="no" frameborder="0"></iframe>';
     return html;
   }
 })(window.tinymce);
