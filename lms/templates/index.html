@@ -116,7 +116,7 @@ from openedx.core.djangolib.markup import HTML, Text
                     <img class="opacity-65 js-slider-item" src="/static/images/org/Uniwersytet Mikołaja Kopernika w Toruniu.png" alt="Uniwersytet Mikołaja Kopernika w Toruniu" />
                     <img class="js-slider-item" src="/static/images/partners/warszawski-instytut-bankowosci.png" alt="Warszawski Instytut Bankowości" />
                     <div class="collapse" id="more-partners">
-                    <img class="opacity-65 js-slider-item" src="/static/images/org/Politechnika Białostocka.png" alt="Politechnika Białostocka.png" />
+                    <img class="opacity-65 js-slider-item logo-politechnika-bialostocka" src="/static/images/org/Politechnika Białostocka.png" alt="Politechnika Białostocka.png" />
                     <img class="opacity-65 js-slider-item" src="/static/images/org/Uczelnia Techniczno-Handlowa im. Heleny Chodkowskiej.png" alt="Uczelnia Techniczno-Handlowa im. Heleny Chodkowskiej" />
                     <img class="js-slider-item" src="/static/images/partners/Akademia-Sztuki-Wojennej.png" alt="Akademia Sztuki Wojennej" />
                     <img class="js-slider-item" src="/static/images/partners/wat.png" alt="Wojskowa Akademia Techniczna" />
@@ -215,24 +215,27 @@ from openedx.core.djangolib.markup import HTML, Text
 
     $(document).ready(function() {
 
-        function customSlideGallery($slidePrev, $slideNext, $slideContainer, $slideItem, slideGap, slideWidth) {
+        function customSlideGallery($slidePrev, $slideNext, $slideContainer, $slideContainerTransition, $slideItem, slideGap, slideWidth) {
             let start = 0;
             let gap = slideGap;
             let currentTranslateX = 0;
-            let totalCards = $slideItem.length;
+            let totalCards = $slideItem && $slideItem.length;
 
-            if (Math.floor($slideContainer.width() / slideWidth) >= totalCards) {
-                $slidePrev.hide();
-                $slideNext.hide();
-            } else {
-                $slidePrev.show();
-                $slideNext.show();
+            if (totalCards && $slideContainer.length && $slidePrev.length && $slideNext.length) {
+                if (Math.floor($slideContainer.width() / slideWidth) >= totalCards) {
+                    $slidePrev.hide();
+                    $slideNext.hide();
+                } else {
+                    $slidePrev.show();
+                    $slideNext.show();
+                }
             }
 
             $slidePrev.attr('disabled', true);
 
             $slideNext.on('click', function () {
                 start = start + 1;
+
                 setTimeout(function () {
                     let translate = "translate(-" + slideWidth + "px, 0%)";
 
@@ -240,6 +243,7 @@ from openedx.core.djangolib.markup import HTML, Text
                         $slideNext.attr('disabled', true);
                         $slidePrev.attr('disabled', false);
                     }
+
 
                     if (start === totalCards || start < 0) {
                         currentTranslateX = "translate(0px, 0%)";
@@ -253,7 +257,7 @@ from openedx.core.djangolib.markup import HTML, Text
                         currentTranslateX = (gap * start + (slideWidth * start));
                     }
 
-                    $slideContainer.css({'transform': translate});
+                    $slideContainerTransition.css({'transform': translate});
                 }, 350);
             });
 
@@ -280,14 +284,14 @@ from openedx.core.djangolib.markup import HTML, Text
                         currentTranslateX = currentTranslateX < 0 ? 0 : -(currentTranslateX - slideWidth) + gap * start;
                     }
 
-                    $slideContainer.css({'transform': translate});
+                    $slideContainerTransition.css({'transform': translate});
                 }, 350);
             });
 
         }
 
-        customSlideGallery($('.js-slider-prev-course'), $('.js-slider-next-course'), $('.js-slide-container-courses'), $('.course__card'), 20, 300);
-        customSlideGallery($('.js-slider-prev-partners'), $('.js-slider-next-partners'), $('.js-slide-container-partners'), $('.js-slider-item'), 20, 150);
+        customSlideGallery($('.js-slider-prev-course'), $('.js-slider-next-course'), $('.js-slide-container-courses'), $('.js-slide-container-courses'), $('.course__card'), 20, 300);
+        customSlideGallery($('.js-slider-prev-partners'), $('.js-slider-next-partners'), $('.homepage__partners-list'), $('.js-slide-container-partners'), $('.js-slide-container-partners .js-slider-item'), 20, 150);
 
         let $showMorePartners = $('.js-show-more-partners');
         $showMorePartners.on('click', function() {

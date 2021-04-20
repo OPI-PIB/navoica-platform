@@ -13894,6 +13894,8 @@ span.complete-checkmark.fa.fa-check {
   --search-border-hover-color: #1C2D3D;
   --search-text-color: #4A5866;
   --search-btn-bg: #ffffff;
+  --search-bg-color-primary: transparent;
+  --search-bg-color-secondary: #ffffff;
 
   --fa-icon-color: #66737F;
 
@@ -13936,6 +13938,10 @@ span.complete-checkmark.fa.fa-check {
 
   &.navbar-white-on-scroll {
     background-color: var(--nav-bg);
+
+    & input {
+      background-color: var(--search-bg-color-secondary);
+    }
   }
 
   &.navbar-boxshadow {
@@ -14166,7 +14172,6 @@ span.complete-checkmark.fa.fa-check {
   }
 
   &__search {
-    min-width: 334px;
     border-radius: 2px;
     border: 0.5px solid var(--search-border-color);
 
@@ -14191,6 +14196,7 @@ span.complete-checkmark.fa.fa-check {
       line-height: 1.25rem;
       padding: 0;
       border: none;
+      background-color: var(--search-bg-color-primary);
 
       @media screen and (min-width: 960px) and (max-width: 1023px) {
         max-width: calc(264px - 10vw);
@@ -14284,7 +14290,7 @@ span.complete-checkmark.fa.fa-check {
     }
   }
 
-  &__btn-login {
+  &__btn-login, &__btn-my-account {
     margin: 0;
     position: relative;
     display: inline-flex;
@@ -16363,7 +16369,7 @@ $background: #F3F5F6;
           height: 226px;
           top: 0;
           left: 0;
-          transform: translate(-50%, 50%);
+          transform: translate(-35%, 50%);
           box-shadow: 0 3px 6px #DEE2E6;
           border-radius: 2px;
 
@@ -16466,9 +16472,12 @@ $background: #F3F5F6;
       @media screen and (max-width: 767px) {
         margin-bottom: 4rem;
       }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        justify-content: space-between;
+      }
 
       &__box {
-        max-width: 360px;
+        max-width: 370px;
         width: 100%;
         min-height: 100%;
         display: flex;
@@ -16479,28 +16488,29 @@ $background: #F3F5F6;
         padding: 1rem;
         height: 100%;
 
-        @media screen and (min-width: 768px) and (max-width: 1023px) {
-          &:nth-child(1) h3, &:nth-child(2) h3 {
-            max-width: 75%;
-          }
-
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
           &:nth-child(3) h3 {
-            max-width: 64%;
-          }
-        }
-
-        @media screen and (min-width: 1024px) {
-          &:nth-child(1) p {
-            max-width: 317px;
-          }
-
-          &:nth-child(2) p {
-            max-width: 310px;
+            max-width: 65%;
           }
 
           &:nth-child(3) p {
-            max-width: 316px;
+            max-width: 205px;
           }
+        }
+
+        @media screen and (min-width: 1280px) {
+          &:nth-child(3) p {
+            max-width: 320px;
+          }
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1279px) {
+          max-width: 24%;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+          padding: 1rem 0;
+          max-width: 230px;
         }
 
         & img {
@@ -16524,19 +16534,11 @@ $background: #F3F5F6;
           margin: 2.75rem 0 3.063rem 0;
         }
 
-        @media screen and (min-width: 960px) and (max-width: 1023px) {
-          max-width: 265px;
-        }
-
-        @media screen and (min-width: 768px) and (max-width: 959px) {
-          max-width: 250px;
-        }
         @media screen and (min-width: 1024px) and (max-width: 1279px) {
-          max-width: 305px;
           padding: 0;
         }
+
         @media screen and (min-width: 1280px) {
-          max-width: 380px;
           padding: 1rem;
         }
 
@@ -16567,10 +16569,6 @@ $background: #F3F5F6;
             font-size: 0.875rem;
             line-height: 1.25rem;
             margin-top: 1rem;
-          }
-
-          @media screen and (min-width: 768px) and (max-width: 1023px) {
-            max-width: 185px;
           }
         }
       }
@@ -16659,6 +16657,13 @@ $background: #F3F5F6;
 
           @media screen and (max-width: 1139px) {
             flex-wrap: wrap;
+          }
+
+          .logo-politechnika-bialostocka {
+            @media screen and (min-width: 1140px) {
+              height: 40px;
+              align-self: center;
+            }
           }
 
           & img {
