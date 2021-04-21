@@ -6,20 +6,22 @@
  */
 
 :root {
+  
+  //new-layout
+  --primary-color:#1868B9;
+  --background-color-tooltip:#EBF3FA;
+  --line-color-tooltip:#DEE2E6;
+  --text-color-tooltip:#4A5866;
+
+
 
   --blue:#007bff;
-  --indigo:#6610f2;
-  --purple:#6f42c1;
-  --pink:#e83e8c;
   --red:#E41D37;
   --orange:#fd7e14;
-  --yellow:#ffc107;
-  --green:#28a745;
   --teal:#20c997;
   --cyan:#17a2b8;
   --white:#fff;
   --gray:#6c757d;
-  --gray-dark:#343a40;
   --primary:#E41D37;
   --secondary:#adb5bd;
   --success:#28a745;
@@ -16995,3 +16997,65 @@ $background: #F3F5F6;
 .h-35 {
   line-height: 2.188rem;
 }
+
+
+/**new layout**/
+
+.color-primary {
+  color: var(--primary-color);
+}
+
+.progress-text {
+  margin-right: -8px;
+}
+
+/** tooltip **/
+
+.btn-tooltip {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  display: none;
+  border: 1px solid var(--line-color-tooltip);
+  padding: 16px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
+  width: 360px;
+  text-align: left;
+  position: absolute;
+  z-index: 1;
+  margin-right: 8px;
+  margin-top: 2rem;
+  background: #FFFFFF;
+  color: var(--text-color-tooltip);
+  transition: opacity  0s linear 1s;
+
+  &::after, &::before {
+    content: "";
+    position: absolute;
+    z-index: 1000;
+    margin-left: -0.5rem;  
+    border-bottom: 0.25rem solid #FFFFFF;
+    border-left: 0.25rem solid transparent;
+    border-right: 0.25rem solid transparent;        
+    border-top: 0;  
+    top: -0.188rem;
+    right: 0.3rem;
+  }
+
+  &::before {
+    border-bottom-color: var(--line-color-tooltip);
+    top: -0.25rem;
+  }
+
+  @media screen and (max-width: 380px) {
+    width: 300px;
+    margin-left:0;
+  }
+}
+
+/** tooltip end **/ 
