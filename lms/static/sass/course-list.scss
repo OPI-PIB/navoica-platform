@@ -4437,6 +4437,7 @@ input {
   font-size: 1.125rem;
   line-height: inherit;
   white-space: nowrap;
+  padding: 0.85rem 0;
 
   &:hover, &:focus {
     text-decoration: none !important;
@@ -13920,10 +13921,6 @@ span.complete-checkmark.fa.fa-check {
   z-index: 1000;
   background-color: transparent;
 
-  &:hover, &.focus-on-keyboard {
-    background-color: var(--nav-bg);
-  }
-
   .navbar {
     box-shadow: 0 0 0 0 transparent;
     min-height: var(--nav-height);
@@ -15963,6 +15960,10 @@ $background: #F3F5F6;
       margin-bottom: auto;
     }
 
+    .card:hover .course__card-body-info, .card:focus .course__card-body-info, .card.focus-on-keyboard .course__card-body-info {
+      margin-bottom: 0;
+    }
+
     & .card.focus-on-keyboard {
       border: 2px solid var(--focus-keyboard-outline-color);
       border-radius: 4px;
@@ -15975,7 +15976,7 @@ $background: #F3F5F6;
 
     @media screen and (min-width: 960px) {
       max-width: 23.735%;
-      margin-right: 20px;
+      margin-right: 17px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 959px) {
@@ -16030,7 +16031,7 @@ $background: #F3F5F6;
       flex: 1;
       background-color: #ffffff;
       position: absolute;
-      bottom: -11%;
+      bottom: -15%;
       transition: bottom 0.25s linear;
       height: 61%;
 
@@ -16049,6 +16050,8 @@ $background: #F3F5F6;
         position: relative;
         padding: 0 16px 0.875rem 16px;
         margin-top: auto;
+        margin-bottom: auto;
+        transition: margin-bottom 0.25s linear;
       }
           &__title {
               margin: 0;
@@ -16099,7 +16102,7 @@ $background: #F3F5F6;
     &-footer {
       width: 100%;
       margin: auto 0 0 0;
-      padding: 5px 16px;
+      padding: 5px 0 5px 16px;
       background-color: #F5F8FA;
       color: #1C2D3D;
       font-size: 0.875rem;
@@ -16114,12 +16117,14 @@ $background: #F3F5F6;
       justify-content: flex-start;
       align-items: center;
       white-space: nowrap;
+      display: flex;
+      flex-wrap: wrap;
 
       & i {
         color: #4A5866;
         font-size: 0.875rem;
         line-height: 1.25rem;
-        margin-right: 8px;
+        margin-right: 5px;
       }
     }
 
@@ -16308,7 +16313,7 @@ $background: #F3F5F6;
         display: flex;
 
         @media screen and (min-width: 768px) and (max-width: 1279px) {
-          padding: 62px;
+          padding: 3.875rem;
           justify-content: center;
           margin-left: auto;
           margin-right: auto;
@@ -16323,7 +16328,7 @@ $background: #F3F5F6;
 
       &-before-3 {
         @media screen and (min-width: 1280px) {
-          padding: 52px 0 52px 0;
+          padding: 3.25rem 0 3.25rem 0;
           justify-content: flex-end;
           margin-left: auto;
         }
@@ -16381,7 +16386,7 @@ $background: #F3F5F6;
 
       &-before-1 {
         @media screen and (min-width: 1280px) {
-          padding: 62px 0 62px 62px;
+          padding: 3.875rem 0 3.875rem 3.875rem;
           justify-content: flex-end;
           margin-left: auto;
         }
