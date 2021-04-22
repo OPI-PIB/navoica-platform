@@ -1,10 +1,11 @@
 define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui', 'js/utils/date_utils',
     'js/models/uploads', 'js/views/uploads', 'js/views/license', 'js/models/license',
     'common/js/components/views/feedback_notification', 'jquery.timepicker', 'date', 'gettext',
-    'js/views/learning_info', 'js/views/instructor_info', 'edx-ui-toolkit/js/utils/string-utils'],
+    'js/views/learning_info', 'js/views/instructor_info', 'edx-ui-toolkit/js/utils/string-utils','tinymce',
+    'jquery.tinymce'],
        function(ValidatingView, CodeMirror, _, $, ui, DateUtils, FileUploadModel,
                 FileUploadDialog, LicenseView, LicenseModel, NotificationView,
-                timepicker, date, gettext, LearningInfoView, InstructorInfoView, StringUtils) {
+                timepicker, date, gettext, LearningInfoView, InstructorInfoView, StringUtils, tinyMce, jqueryTinyMce) {
            var DetailsView = ValidatingView.extend({
     // Model class is CMS.Models.Settings.CourseDetails
                events: {
@@ -15,7 +16,6 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    'change textarea': 'updateModel',
                    'change select': 'updateModel',
                    'click .remove-course-introduction-video': 'removeVideo',
-                   'focus #course-overview': 'codeMirrorize',
                    'mouseover .timezone': 'updateTime',
         // would love to move to a general superclass, but event hashes don't inherit in backbone :-(
                    'focus :input': 'inputFocus',
@@ -38,7 +38,10 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    this.$el.find('#course-name').val(this.model.get('run'));
                    this.$el.find('.set-date').datepicker({dateFormat: 'm/d/yy'});
 
-        // Avoid showing broken image on mistyped/nonexistent image
+                   this.tiny = tinyMce;
+                   this.tiny.suffix = ".min";
+                   this.tiny.baseURL = baseUrl + "/js/vendor/tinymce/js/tinymce";
+                    // Avoid showing broken image on mistyped/nonexistent image
                    this.$el.find('img').error(function() {
                        $(this).hide();
                    });
@@ -88,7 +91,29 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    DateUtils.setupDatePicker('enrollment_end', this);
 
                    this.$el.find('#' + this.fieldToSelectorMap.overview).val(this.model.get('overview'));
-                   this.codeMirrorize(null, $('#course-overview')[0]);
+                   this.tiny.init({selector: '#course-overview',
+                                language: document.documentElement.lang,
+                                height : 300,
+                                toolbar: "undo redo | formatselect | bold italic underline strikethrough subscript superscript | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor nonbreaking removeformat wrapAsCode | " +
+                                " blockquote | link unlink | table | charmap | fullscreen  preview | codesample | code",
+                                plugins: "textcolor link image codemirror paste table preview importcss searchreplace autolink directionality visualblocks visualchars fullscreen media codesample charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap",
+                                menubar: false,
+                                branding: false,
+                                codemirror: {
+                                    path: baseUrl + "js/vendor"
+                                  },
+                                formats: {
+                                // tinyMCE does block level for code by default
+                                code: {
+                                    inline: 'code'
+                                },
+                                },
+                                setup: function (ed) {
+                                    ed.on("change", function () {
+                                        var raw_content = ed.getContent();
+                                        $('#course-overview').val(raw_content).trigger('change');
+                                    })
+                                }})
 
                    if (this.model.get('title') !== '') {
                        this.$el.find('#' + this.fieldToSelectorMap.title).val(this.model.get('title'));
@@ -313,6 +338,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    case 'course-duration':
                    case 'course-description':
                    case 'course-short-description':
+                   case 'course-overview':
                        this.setField(event);
                        break;
                    default: // Everything else is handled by datepickers and CodeMirror.

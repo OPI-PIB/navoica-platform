@@ -1,8 +1,27 @@
+:root {
+--color-d71932: #D71932;
+--color-f8f9fa: #F8F9FA;
+--color-d1d6dc: #D1D6DC;
+--color-5b5b5b: #5B5B5B;
+--color-008080: #008080;
+--color-3f3d56: #3F3D56;
+--color-fcfcfc: #FCFCFC;
+--color-dedfdf: #DEDFDF;
+--color-212529: #212529;
+--color-374049: #374049;
+--color-686970: #686970;
+--color-919191: #919191;
+--color-3c4043: #3C4043;
+--color-ffffff: #FFFFFF;
+--color-e41d37: #E41D37;
+--color-a11326: #A11326;
+}
 /** LOGIN PAGE **/
 
 .content-login {
   padding: 4rem 0 8rem 0;
   background: var(--color-fcfcfc);
+  min-height: 50vh;
 }
 
 .content-login .dashboard-banner {
@@ -64,6 +83,10 @@
   border: 1px solid #E1E1E1;
   position: inherit;
   padding: 4rem 5rem;
+}
+
+.login__invalid__link {
+  padding: 3.75rem 6.431rem;
 }
 
 .login__section p {
@@ -133,13 +156,15 @@
    }
 } 
 
-.login__section .error-in-login.is-shown{
-  background: rgba(228, 29, 55, 0.08);
+.login__section .error-in-login.is-shown, 
+.paragon__alert .error-in-login {
+  background: rgba(228, 29, 55, 0.08) !important;
   margin: 0 -5rem 1.813rem -5rem;
   padding: 0.688rem 5rem;
   display: flex;
   align-items: center;
   min-height: 4.125rem;
+  color:var(--color-e41d37);
 
   @media screen and (max-width: 767px) {
     margin: 0 -15px 1.813rem;
@@ -169,7 +194,8 @@
   margin-bottom: 30px;
 }
 
-.login__section .login-button button {
+.login__section .login-button button,
+.login__section .parabon__btn {
   width: 100%;
   min-height: 34px;
   background: var(--color-e41d37);
@@ -186,23 +212,28 @@
 
 .login__section input, 
 .login__section input.form-control,
-.login__section .select-wrapper .custom-select {
+.login__section .select-wrapper .custom-select,
+.login__section input.error-field,
+.paragon__form-control.paragon__is-invalid {
   height: 2.375rem;
   background-color: var(--color-ffffff);
-  border: 1px solid var(--color-919191);
+  border-color: var(--color-919191);
+  border-style: solid;
+  border-width: 1px;;
   display: block;
   width: 100%;
   text-indent: 12px;
   padding: 0;
-  margin-bottom: 5px;
-
+  margin-bottom: 4px;
+  border-radius: 0;
+  box-shadow: none;
   &:hover {
     border: 2px solid var(--color-919191);
     box-shadow: none;
   }
 
   &:active, &:focus {
-    border: 1px solid var(--color-008080);
+    border: 1px solid var(--color-008080) !important;
     outline: 3px solid #bfdfdf;
     box-shadow: none;
   }  
@@ -213,12 +244,14 @@
   border: 1px solid var(--color-919191);
 }
 
-.login__section input.error-field {
-  border: 1px solid var(--color-5b5b5b);
-  border-bottom: 2px solid var(--color-e41d37);
+.login__section input.error-field,
+.paragon__form-control.paragon__is-invalid {
+  border: 1px solid var(--color-5b5b5b) !important;
+  border-bottom: 2px solid var(--color-e41d37) !important;
 
   &:hover {
-    border: 2px solid var(--color-919191);
+    border: 2px solid var(--color-919191) !important;
+    box-shadow: none !important;
   }
 }
 
@@ -369,13 +402,25 @@
   .content-login {
     padding: 19px 8px;
   }
-  .login__section {
+  .login__section, 
+  #password-reset-complete-anchor {
     padding: 15px 15px 24px 15px;
     width: auto;
   }
+
   .content-login .dashboard-banner .wrapper-msg {
     padding: 1rem 1rem 1.5rem 1rem;
     max-width: 35.25rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .login__invalid__link img {
+    margin-right: 1rem !important;
+  }
+  .login__invalid__link {
+    padding: 15px 15px 24px 15px;
+    width: auto;
   }
 }
 
@@ -400,7 +445,7 @@
 }
 
 #forgot-password-modal .modal-content {
-  padding: 30px 34px;
+  padding: 30px 30px 40px 30px;
 
   @media screen and (max-width: 767px) {
     padding: 16px;
@@ -419,9 +464,9 @@
 }
 
 #forgot-password-modal .modal-header {
-  padding: 0 0 15px;
+  padding: 0 0 16px;
   border-bottom: 1px solid var(--color-d1d6dc);
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   align-items: center;
 }
 
@@ -564,9 +609,11 @@
 }
 
 @media (max-width: 360px) {
-  #forgot-password-modal img {
+  #forgot-password-modal img,
+  #password-reset-confirm-container img {
     display: none;
   }
+
   #forgot-password-modal .inner-wrapper {
     margin: 34px 16px 0 16px;
     width: auto;
@@ -601,4 +648,87 @@
 
 /** END REGISTER PAGE **/
 
+//reset password
+
+.login__resret .login__section {
+  max-height: 156px;
+}
+
+.login__section #password-reset-complete .message-title::before{
+  background-image: url("/static/images/Component 43 – 1.svg");
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: 1.688rem 1.688rem;
+  content: '';
+  padding-right: 2.47rem;
+}
+
+.login__invalid__link img  {
+  margin-right: 6.423rem;
+}
+
+#password-reset-complete-anchor{
+  background-color: var(--color-ffffff);
+  border: 1px solid var(--color-dedfdf);
+  box-shadow: 0px 10px 30px #B3B3B326;
+  border-radius: 3px;
+  padding: 2.5rem 5.5rem;
+}
+
+//override paragon variable
+
+.paragon__btn {
+  border-radius: 0 !important;
+  width: 100%;
+  min-height: 34px;
+  background: var(--color-e41d37);
+  color: var(--color-ffffff);
+  text-align: center !important;
+  font-weight: 600 !important;
+  border: unset !important;
+  padding: .375rem 0 !important;
+
+  &:hover {
+    background-color: var(--color-a11326);
+  }
+  
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.paragon__alert {
+  padding: 0 !important;
+  border: unset !important;
+  background-color: unset !important;
+  margin-bottom: unset !important;
+}
+
+.paragon__fa-exclamation-circle::before {
+  content: none !important;
+}  
+
+.paragon__fa-icon-spacing {
+  padding: 0 !important;
+}  
+
+.paragon__alert .error-in-login {
+  display: block;
+}  
+
+.paragon__form-group label {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  margin-top: 0;
+}
+
+.paragon__invalid-feedback {
+  font-size: 0.875rem !important;
+  line-height: 1.188rem;
+  color: var(--color-e41d37) !important;
+}
+
+.paragon__btn {
+  margin-top: 1.625rem;
+}
 

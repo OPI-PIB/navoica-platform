@@ -361,7 +361,7 @@ def course_info(request, course_id):
     # If the unified course experience is enabled, redirect to the "Course" tab
     if UNIFIED_COURSE_TAB_FLAG.is_enabled(course_key):
         return redirect(
-            reverse(course_home_url_name(course_key), args=[course_id]))
+            reverse(course_home_url_name(course_key), args=[course_id])+"?"+request.META['QUERY_STRING'])
 
     with modulestore().bulk_operations(course_key):
         course = get_course_with_access(request.user, 'load', course_key)

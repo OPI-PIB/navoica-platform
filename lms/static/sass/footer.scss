@@ -1,0 +1,193 @@
+:root {
+  $color-primary: #2f69ab;
+  $color-secondary: #4a5b66;
+  $color-grey: #6b7b85;
+  $color-red: #E62E47;
+  $color-white: #ffffff;
+
+  --footer-bg: $color-white;
+  --footer-link-color: $color-primary;
+  --footer-title-color: $color-secondary;
+  --footer-link-weight: 600;
+  --footer-text-color: #4A5866;
+  --text-primary-color: $color-secondary;
+  --text-secondary-color: $color-grey;
+  --footer-social-media-icon: $color-red;
+  --focus-keyboard-outline-color: #294766;
+
+  --font-family-primary: 'Open Sans', sans-serif;
+}
+
+:root html, :root body {
+  font-size: 1rem;
+}
+
+footer {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 94%;
+  }
+
+  li {
+    margin: 0 !important;
+    padding: 0.25rem 0 !important;
+    @media screen and (max-width: 959px) {
+      padding: 0.625rem 0 !important;
+    }
+  }
+
+  .focus-on-keyboard {
+    border: 2px solid var(--focus-keyboard-outline-color);
+    border-radius: 4px;
+    padding: 3px;
+  }
+
+  .footer-block {
+    background-color: var(--footer-bg);
+
+    &__logo {
+      width: 120px;
+      height: auto;
+    }
+
+    &__box {
+      width: 100%;
+
+      &:first-child {
+        @media screen and (max-width: 959px) {
+          display: none;
+        }
+      }
+      &:nth-child(2) h4 {
+        @media screen and (max-width: 959px) {
+          margin: 0 0 16px 0;
+        }
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 959px) {
+        flex: 0 0 33%;
+        max-width: 33%;
+      }
+
+      @media screen and (min-width: 960px)  {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+    }
+    &__navoica-text.p {
+      margin: 24px 0 0 0;
+    }
+
+    &__navoica-text {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-family: var(--font-family-primary);
+      color: var(--footer-text-color);
+      font-weight: normal;
+      margin-top: 24px;
+      max-width: 70%;
+    }
+
+    &__social-media {
+      margin-top: 10px;
+      transform: translateX(-10px);
+
+      &--icon {
+        font-size: 1.313rem;
+        color: var(--footer-social-media-icon);
+      }
+
+      &-link {
+        padding: 0.563rem 0.97rem;
+      }
+    }
+
+    &__title {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-family: var(--font-family-primary);
+      color: var(--footer-title-color);
+      font-weight: var(--footer-link-weight);
+      margin: 0 0 16px 0;
+      @media screen and (max-width: 959px) {
+        margin: 24px 0 16px 0;
+      }
+    }
+
+      &__link {
+        font-size: 0.875rem;
+        font-family: var(--font-family-primary);
+        color: var(--footer-link-color);
+        font-weight: var(--footer-link-weight);
+      }
+
+      &__link:hover, &__link:focus {
+        text-decoration: underline;
+      }
+
+      &__info {
+        margin: 2.625rem 0;
+
+        @media screen and (max-width: 959px) {
+          margin: 1.5rem 0;
+        }
+      }
+
+      &__partners-logo.border-top {
+        padding: 1rem 0.5rem;
+      }
+
+      &__partners-logo.row {
+        margin: 0;
+      }
+
+      &__partners-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          max-width: 13.625rem;
+        }
+
+        & a {
+          padding: 16px 0;
+
+          @media screen and (max-width: 959px) {
+            &:nth-child(1) img {
+              max-width: 8.625rem;
+            }
+            &:nth-child(2) img {
+              max-width: 9rem;
+            }
+            &:nth-child(3) img {
+              max-width: 8.313rem;
+            }
+            &:nth-child(4) img {
+              max-width: 4.813rem;
+            }
+          }
+
+          @media screen and (max-width: 767px) {
+            flex: 1;
+            &:nth-child(2) img {
+              max-width: 8.563rem;
+            }
+          }
+        }
+      }
+
+      &__copyright {
+        text-align: left;
+        font-size: 0.75rem;
+        line-height: 1.063rem;
+        font-family: var(--font-family-primary);
+        color: var(--text-secondary-color);
+        font-weight: normal;
+        margin-bottom: 18px;
+      }
+    }
+}

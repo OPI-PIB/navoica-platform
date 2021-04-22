@@ -199,7 +199,9 @@ from pipeline_mako import render_require_js_path_overrides
         branch.init('${branch_key | n, js_escaped_string}');
     </script>
 % endif
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=latin-ext">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=latin-ext">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body class='<%block name="bodyclass"/> lang_${LANGUAGE_CODE}'>

@@ -70,7 +70,6 @@ from student.models import CourseEnrollment
             $selectedSortOption.text(selectedOption || "${_('None')}" );
         });
 
-      let selectedFilters = [];
       let $enrolledCourse = $('.js-enrolled-course');
       let $clearAllFilters = $('#clear-all-filters');
 
@@ -103,23 +102,13 @@ from student.models import CourseEnrollment
 
             if ($(this).is(':checked')) {
                 $('.js-found-courses-count').text($(this).data('count'));
+                $clearAllFilters.show();
             } else {
                 $('.js-found-courses-count').text(enrolledCoursesCount);
+                $clearAllFilters.hide();
             }
 
             $('.form-check-input').not(this).prop('checked', false);
-
-            if (selectedFilters.indexOf($(this).attr('id')) === -1) {
-                selectedFilters = [...selectedFilters, $(this).attr('id')];
-            } else {
-                selectedFilters = [];
-            }
-
-            if (selectedFilters.length > 0) {
-                $clearAllFilters.show();
-            } else {
-                $clearAllFilters.hide();
-            }
         });
 
         $clearAllFilters.click(function() {

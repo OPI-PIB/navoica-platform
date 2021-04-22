@@ -11,51 +11,66 @@ from django.conf import settings
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
 
-<footer class="border-top d-print-none">
+<footer class="footer-block border-top d-print-none">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mr-auto">
-                <h4 class="mt-5 mb-3">${_('Navoica.pl')}</h4>
-                <p>${_('Polish MOOC platform offering free of charge online courses for every registered user.')}</p>
-                <div class="d-flex align-items-center">
-                    <a href="https://www.facebook.com/NAVOICA/" class="fb-link-icon" target="_blank">
-                        <i class="fab fa-facebook-f" title="${_('Facebook - Navoica page on Facebook')}" aria-hidden="true"></i>
-                        <span class="sr-only">${_('Facebook - Navoica page on Facebook (open in a new window)')}</span>
-                    </a>
-                    <a class="ml-2" href="https://twitter.com/navoica_pl" target="_blank">
-                        <i class="fab fa-twitter social-icon" title="${_('Twitter - Navoica page on Twitter')}" aria-hidden="true"></i>
-                        <span class="sr-only">${_('Twitter - Navoica page on Twitter (open in a new window)')}</span>
-                    </a>
-                    <a class="ml-2" href="https://pl.linkedin.com/showcase/navoica" target="_blank">
-                        <i class="fab fa-linkedin-in social-icon" title="${_('LinkedIn - Navoica page on LinkedIn')}" aria-hidden="true"></i>
-                        <span class="sr-only">${_('LinkedIn - Navoica page on LinkedIn (open in a new window)')}</span>
-                    </a>
-                 </div>
+        <div class="footer-block__info row">
+            <div class="footer-block__box">
+                <a href="/">
+                    <img src="/static/images/logo-light-bg.svg" alt="Logo Navoica" class="footer-block__logo">
+                </a>
+                <p class="footer-block__navoica-text">${_('Polish MOOC platform offering free of charge online courses for every registered user.')}</p>
             </div>
 
-            <div class="col-lg-3">
-                <h4 class="mt-5 mb-3">${_('About us')}</h4>
+            <div class="footer-block__box">
+                <h2 class="footer-block__title">${_('NAVOICA platform')}</h2>
                 <ul>
                     % for item_num, link in enumerate(footer['navigation_links'], start=1):
                     <li>
-                        <a href="${link['url']}">${link['title']}</a>
+                        <a class="footer-block__link" href="${link['url']}">${link['title']}</a>
                     </li>
                     % endfor
                 </ul>
             </div>
 
-            <div class="col-lg-3">
-                <h4 class="mt-5 mb-3">${_('Legal information')}</h4>
+            <div class="footer-block__box">
+                <h2 class="footer-block__title">${_('Legal information')}</h2>
                 <ul>
-                    <li><a href="/tos">${_('Terms of use')}</a></li>
-                    <li><a href="/privacy">${_('Privacy Policy')}</a></li>
-                    <li><a href="/cookies">${_("Cookies Policy")}</a></li>
-                    <li><a href="/honor">${_('Honor code ')}</a></li>
+                    <li><a href="/tos" class="footer-block__link">${_('Terms of use')}</a></li>
+                    <li><a href="/honor" class="footer-block__link">${_('Honor code ')}</a></li>
+                    <li><a href="/privacy" class="footer-block__link">${_('Privacy Policy')}</a></li>
+                    <li><a href="/cookies" class="footer-block__link">${_("Cookies Policy")}</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-block__box">
+                <h2 class="footer-block__title">${_('Contact us')}</h2>
+                <ul>
+                    <li><a href="/contact" class="footer-block__link">${_('Contact')}</a></li>
+                </ul>
+                <ul class="footer-block__social-media d-inline-flex">
+                    <li>
+                        <a class="footer-block__social-media-link" href="https://www.facebook.com/NAVOICA/" target="_blank">
+                            <i class="fab fa-facebook-f footer-block__social-media--icon" title="${_('Facebook - Navoica page on Facebook')}" aria-hidden="true"></i>
+                            <span class="sr-only">${_('Facebook - Navoica page on Facebook (open in a new window)')}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-block__social-media-link" href="https://twitter.com/navoica_pl" target="_blank">
+                            <i class="fab fa-twitter footer-block__social-media--icon" title="${_('Twitter - Navoica page on Twitter')}" aria-hidden="true"></i>
+                            <span class="sr-only">${_('Twitter - Navoica page on Twitter (open in a new window)')}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-block__social-media-link" href="https://pl.linkedin.com/showcase/navoica" target="_blank">
+                            <i class="fab fa-linkedin-in footer-block__social-media--icon" title="${_('LinkedIn - Navoica page on LinkedIn')}" aria-hidden="true"></i>
+                            <span class="sr-only">${_('LinkedIn - Navoica page on LinkedIn (open in a new window)')}</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <div class="row footer-logos mt-5 pt-5 mb-5 border-top justify-content-between flex-md-row flex-column">
+        <div class="footer-block__partners-logo row border-top">
              <%
                 if get_language() == 'pl':
                     logo_prefix = "logo"
@@ -63,24 +78,24 @@ from django.conf import settings
                     logo_prefix = "logo_en"
                 %>
             <a href="http://www.nauka.gov.pl/" target="_blank">
-                <img style="width:13.2rem" src="/static/images/patrons/${logo_prefix}_men.jpg" alt="${_('Ministry of Education and Science')}">
+                <img style="width:13.2rem" src="/static/images/patrons/${logo_prefix}_men_grey.png" alt="${_('Ministry of Education and Science')}">
+                <span class="sr">${_('open in a new window')}</span>
+            </a>
+            <a href="https://opi.org.pl/" target="_blank">
+                <img style="width:11.313rem" src="/static/images/patrons/${logo_prefix}_opi_pib_grey.png" alt="${_('National Information Processing Institute – National Research Institute')}">
+                <span class="sr">${_('open in a new window')}</span>
+            </a>
+            <a href="http://fmn.org.pl/" target="_blank">
+                <img style="width:13.75rem" src="/static/images/patrons/${logo_prefix}_fmn_grey.png" alt="${_('The Young Science Foundation')}">
                 <span class="sr">${_('open in a new window')}</span>
             </a>
             <a href="https://www.krasp.org.pl/" target="_blank">
-                <img style="width:8rem" src="/static/images/patrons/${logo_prefix}_krasp.jpg" alt="${_('The Conference of Rectors of Academic Schools in Poland')}">
+                <img style="width:8rem" src="/static/images/patrons/${logo_prefix}_krasp_grey.png" alt="${_('The Conference of Rectors of Academic Schools in Poland')}">
                 <span class="sr">${_('open in a new window')}</span>
-            </a>
-           <a href="http://fmn.org.pl/" target="_blank">
-               <img style="width:13.75rem" src="/static/images/patrons/${logo_prefix}_fmn.jpg" alt="${_('The Young Science Foundation')}">
-               <span class="sr">${_('open in a new window')}</span>
-           </a>
-           <a href="https://opi.org.pl/" target="_blank">
-               <img style="width:11.313rem" src="/static/images/patrons/${logo_prefix}_opi_pib.png" alt="${_('National Information Processing Institute – National Research Institute')}">
-               <span class="sr">${_('open in a new window')}</span>
             </a>
         </div>
         <% current_year = date.today().year %>
-        <p class="footer-copyright"><span>&copy; Copyright 2018-${current_year} Navoica.pl</span> — ${_('All rights reserved  ')} | ver. Nawojka ${ settings.PLATFORM_VERSION }</p>
+        <p class="footer-block__copyright"><span>&copy; Copyright 2018-${current_year} Navoica.pl</span> — ${_('All rights reserved  ')} | ver. Nawojka ${ settings.PLATFORM_VERSION }</p>
     </div>
 </footer>
 

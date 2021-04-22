@@ -21,11 +21,23 @@ restrict_enroll_for_course = course and settings.FEATURES.get('RESTRICT_ENROLL_B
 allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
 %>
 
-
+<div role="menuitem" class="nav-item desktop-menu">
+    % if request.path == '/':
+    <a href="/" class="btn btn-link active" aria-current="page">${_("Home")}</a>
+    % else:
+    <a href="/" class="btn btn-link">${_("Home")}</a>
+    % endif
+</div>
 % if courses_are_browsable:
 <div role="menuitem" class="nav-item desktop-menu">
-    <a href="${marketing_link('COURSES')}" class="btn btn-outline-primary btn-sm">${_("Discover New")}</a>
+    % if request.path == '/courses':
+    <a href="${marketing_link('COURSES')}" class="btn btn-link active" aria-current="page">${_("Discover New")}</a>
+    % else:
+    <a href="${marketing_link('COURSES')}" class="btn btn-link">${_("Discover New")}</a>
+    % endif
 </div>
+<div class="desktop-menu header-navigation__separator"></div>
+<%include file="navbar-language-desktop.html"/>
 % endif
 
 % if mktg_site_enabled:
@@ -39,25 +51,38 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
 
 % if allows_login:
     % if restrict_enroll_for_course:
-    <div role="menuitem" class="nav-item desktop-menu">
-        <a class="btn btn-primary btn-sm" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
+    <div role="menuitem" class="nav-item desktop-menu mx-0">
+        % if request.path == '/register':
+        <a class="btn active header-navigation__btn-register" aria-current="page" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
+        % else:
+        <a class="btn header-navigation__btn-register" href="${reverse('course-specific-register', args=[text_type(course.id)])}"> ${_("Register")}</a>
+        %endif
     </div>
     <div role="menuitem" class="mobile-menu">
         <a class="dropdown-item" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register")}</a>
     </div>
     <div role="menuitem" class="nav-item">
-        <a href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}" class="btn btn-outline-primary btn-sm">${_("Sign in")}</a>
+        <a href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}" class="btn header-navigation__btn-login">${_("Sign in")}</a>
     </div>
     % else:
     <div role="menuitem" class="nav-item desktop-menu">
-        <a href="/login${login_query()}" class="btn btn-outline-primary btn-sm">${_("Log in")}</a>
+        % if request.path == '/login':
+        <a href="/login${login_query()}" class="btn header-navigation__btn-login active" aria-current="page"><img src="/static/images/my-account-icon.png" alt="" class="header-navigation__btn-login--icon" />${_("Log in")}</a>
+        % else:
+        <a href="/login${login_query()}" class="btn header-navigation__btn-login"><span class="header-navigation__btn-login--icon"></span>${_("Log in")}</a>
+        %endif
     </div>
     <div role="menuitem" class="mobile-menu">
-        <a class="dropdown-item" href="/login${login_query()}">${_("Log in")}</a>
+        <a class="dropdown-item" href="/login${login_query()}"><span class="header-navigation__btn-login--icon"></span>${_("Log in")}</a>
     </div>
+    <div class="desktop-menu header-navigation__separator--mini"></div>
         % if allow_public_account_creation:
-        <div role="menuitem" class="nav-item desktop-menu">
-            <a class="btn btn-primary btn-sm" href="/register${login_query()}">${_("Register")}</a>
+        <div role="menuitem" class="nav-item desktop-menu mx-0">
+            % if request.path == '/register':
+            <a class="btn active header-navigation__btn-register" aria-current="page" href="/register${login_query()}">${_("Register")}</a>
+            % else:
+            <a class="btn header-navigation__btn-register" href="/register${login_query()}">${_("Register")}</a>
+            % endif
         </div>
         <div role="menuitem" class="mobile-menu">
             <a class="dropdown-item" href="/register${login_query()}">${_("Register")}</a>

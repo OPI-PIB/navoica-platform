@@ -2,27 +2,28 @@
 # Copyright (C) 2021 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2021.
-#
+# 
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2021
+# Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2021
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-02-23 09:22+0000\n"
+"POT-Creation-Date: 2021-04-12 11:58+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 "Generated-By: Babel 1.3\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
@@ -46,7 +47,8 @@ msgstr "Pomiń i przejdź do zawartości głównej"
 #: cms/templates/manage_users.html cms/templates/manage_users_lib.html
 #: cms/templates/settings.html cms/templates/settings_advanced.html
 #: cms/templates/settings_graders.html cms/templates/widgets/header.html
-#: cms/templates/widgets/header.html
+#: cms/templates/widgets/header.html lms/templates/header/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Settings"
 msgstr "Ustawienia"
@@ -372,8 +374,8 @@ msgstr "Platforma oparta na systemie Open edX"
 
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
-#: lms/templates/course.html lms/templates/help_modal.html
-#: lms/templates/courseware/courseware.html
+#: lms/templates/course.html lms/templates/course.html
+#: lms/templates/help_modal.html lms/templates/courseware/courseware.html
 #: lms/templates/courseware/courseware.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
 msgid "Course"
@@ -392,8 +394,7 @@ msgstr "Wybierz język"
 
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
 #: lms/templates/user_dropdown.html lms/templates/user_dropdown.html
-#: lms/templates/user_dropdown.html lms/templates/header/user_dropdown.html
-#: lms/templates/header/user_dropdown.html
+#: lms/templates/user_dropdown.html
 msgid "Account"
 msgstr "Konto"
 
@@ -660,6 +661,14 @@ msgstr "Dodaj tę stronę do zakładek"
 msgid "You do not have access to this dependency module."
 msgstr "Nie posiadasz dostępu do tego modułu."
 
+#: lms/templates/course.html
+msgid "Enrollment ends in"
+msgstr "Zapisy kończą się za"
+
+#: lms/templates/course.html
+msgid "Enrollemnt datetime ends"
+msgstr "Zapisy zakończone"
+
 #: lms/templates/course.html lms/templates/course2.html
 msgid "Starts"
 msgstr "Rozpoczęcie"
@@ -674,11 +683,24 @@ msgstr "Czytaj więcej"
 
 #: lms/templates/courses_list.html
 msgid "New courses"
-msgstr "Nowe kursy"
+msgstr "Najnowsze kursy"
 
 #: lms/templates/courses_list.html
-msgid "Popular courses"
-msgstr "Popularne kursy"
+msgid "Previous courses"
+msgstr "Poprzednie kursy"
+
+#: lms/templates/courses_list.html
+msgid "Next courses"
+msgstr "Następne kursy"
+
+#: lms/templates/courses_list.html
+msgid "More courses"
+msgstr "Więcej kursów"
+
+#: lms/templates/courses_list.html lms/templates/index.html
+#: lms/templates/index.html
+msgid "in courses"
+msgstr "w kursach"
 
 #: lms/templates/courses_list.html
 msgid "View all Courses"
@@ -790,8 +812,7 @@ msgstr "Błędy wczytywania kursu"
 msgid "Search Your Courses"
 msgstr "Przeszukaj swoje kursy"
 
-#: lms/templates/dashboard.html lms/templates/index.html
-#: lms/templates/api_admin/catalogs/search.html
+#: lms/templates/dashboard.html lms/templates/api_admin/catalogs/search.html
 #: lms/templates/courseware/courseware.html
 #: lms/templates/edxnotes/edxnotes.html lms/templates/header/header.html
 #: lms/templates/ux/reference/bootstrap/course-skeleton.html
@@ -972,16 +993,42 @@ msgid "External Authentication failed"
 msgstr "Zewnętrzna autoryzacja nie powiodła się"
 
 #: lms/templates/footer.html
-msgid "Navoica.pl"
-msgstr "Navoica.pl"
-
-#: lms/templates/footer.html
 msgid ""
 "Polish MOOC platform offering free of charge online courses for every "
 "registered user."
-msgstr ""
-"Polska platforma z kursami typu MOOC, dostępnymi w języku polskim, bez opłat"
-" i dla każdego zarejestrowanego użytkownika."
+msgstr "Ogólnopolska, bezpłatna platforma edukacyjna z kursami typu MOOC"
+
+#: lms/templates/footer.html
+msgid "NAVOICA platform"
+msgstr "Platforma NAVOICA"
+
+#: lms/templates/footer.html
+msgid "Legal information"
+msgstr "Informacje prawne"
+
+#: lms/templates/footer.html
+msgid "Terms of use"
+msgstr "Warunki Korzystania z Serwisu"
+
+#: lms/templates/footer.html
+msgid "Honor code "
+msgstr "Kodeks honorowy"
+
+#: lms/templates/footer.html lms/templates/static_templates/cookies.html
+#: lms/templates/static_templates/cookies.html
+msgid "Cookies Policy"
+msgstr "Polityka cookies"
+
+#: lms/templates/footer.html lms/templates/static_templates/contact.html
+msgid "Contact us"
+msgstr "Skontaktuj się z nami"
+
+#: lms/templates/footer.html lms/templates/static_templates/contact.html
+#: themes/red-theme/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/footer.html
+#: themes/stanford-style/lms/templates/static_templates/about.html
+msgid "Contact"
+msgstr "Kontakt"
 
 #: lms/templates/footer.html lms/templates/login-sidebar.html
 msgid "Facebook - Navoica page on Facebook"
@@ -1008,27 +1055,6 @@ msgid "LinkedIn - Navoica page on LinkedIn (open in a new window)"
 msgstr "LinkedIn - strona Navoica na LinkedIn (otwórz w nowym oknie)"
 
 #: lms/templates/footer.html
-msgid "About us"
-msgstr "O nas"
-
-#: lms/templates/footer.html
-msgid "Legal information"
-msgstr "Informacje prawne"
-
-#: lms/templates/footer.html
-msgid "Terms of use"
-msgstr "Warunki Korzystania z Serwisu"
-
-#: lms/templates/footer.html lms/templates/static_templates/cookies.html
-#: lms/templates/static_templates/cookies.html
-msgid "Cookies Policy"
-msgstr "Polityka cookies"
-
-#: lms/templates/footer.html
-msgid "Honor code "
-msgstr "Kodeks honorowy"
-
-#: lms/templates/footer.html
 msgid "Ministry of Education and Science"
 msgstr "Ministerstwo Edukacji i Nauki"
 
@@ -1039,18 +1065,18 @@ msgid "open in a new window"
 msgstr "otwórz w nowym oknie"
 
 #: lms/templates/footer.html
-msgid "The Conference of Rectors of Academic Schools in Poland"
-msgstr "Konferencja Rektorów Akademickich Szkół Polskich"
+msgid ""
+"National Information Processing Institute \\u2013 National Research "
+"Institute"
+msgstr "Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy"
 
 #: lms/templates/footer.html
 msgid "The Young Science Foundation"
 msgstr "Fundacja Młodej Nauki"
 
 #: lms/templates/footer.html
-msgid ""
-"National Information Processing Institute \\u2013 National Research "
-"Institute"
-msgstr "Ośrodek Przetwarzania Informacji – Państwowy Instytut Badawczy"
+msgid "The Conference of Rectors of Academic Schools in Poland"
+msgstr "Konferencja Rektorów Akademickich Szkół Polskich"
 
 #: lms/templates/footer.html
 msgid "All rights reserved  "
@@ -1283,65 +1309,199 @@ msgid "Polish MOOC platform"
 msgstr "Polska platforma edukacyjna typu MOOC"
 
 #: lms/templates/index.html
-msgid "ACCESSIBLE KNOWLEDGE"
-msgstr "NAUKA DOSTĘPNA"
+msgid "Accessible knowledge{break_html} for {mark_start}everyone{mark_end}"
+msgstr "Nauka dostępna{break_html} dla {mark_start}wszystkich{mark_end}"
 
 #: lms/templates/index.html
-msgid "Free online courses offered by Polish universities and institutions"
-msgstr "Bezpłatne kursy online oferowane przez polskie uczelnie i instytucje"
+msgid ""
+"Discover {strong_start}free courses{strong_end} offered by Polish "
+"universities and institutions. You will learn "
+"{strong_start}online{strong_end}, at any time and any pace. Upon completion "
+"of a course you will receive {strong_start}a certificate{strong_end}?"
+msgstr ""
+"Odkryj {strong_start}bezpłatne kursy{strong_end} przygotowane przez polskie "
+"uczelnie i instytucje. Będziesz uczyć się {strong_start}online{strong_end}, "
+"w dowolnym czasie i tempie. Po ukończeniu kursu otrzymasz "
+"{strong_start}zaświadczenie{strong_end}."
 
 #: lms/templates/index.html lms/templates/index.html
-#: lms/templates/header/header.html lms/templates/header/header.html
-msgid "Search courses"
-msgstr "Szukaj"
-
-#: lms/templates/index.html lms/templates/header/header.html
-msgid "Search courses..."
-msgstr "Szukaj..."
+msgid "View our courses"
+msgstr "Zobacz nasze kursy"
 
 #: lms/templates/index.html
-msgid "About Navoica"
-msgstr "O platformie Navoica"
+msgid "About the platform"
+msgstr "O platformie"
 
 #: lms/templates/index.html
-msgid "Wide range of online courses "
+msgid "What is {mark_start}NAVOICA?{mark_end}"
+msgstr "Czym jest {mark_start}NAVOICA?{mark_end}"
+
+#: lms/templates/index.html
+msgid ""
+"NAVOICA is a Polish educational platform with {strong_start}MOOC{strong_end}"
+" courses, owned by the Ministry of Education and Science and developed by "
+"{strong_start}the National Information Processing Institute (OPI "
+"PIB){strong_end}. The platform is named after "
+"{strong_start}Nawojka{strong_end} who was the first Polish female student, "
+"according to a legend."
+msgstr ""
+"NAVOICA jest polską platformą edukacyjną z kursami typu "
+"{strong_start}MOOC{strong_end}, należącą do Ministerstwa Edukacji i Nauki, "
+"którą rozwija {strong_start}Ośrodek Przetwarzania Informacji – Państwowy "
+"Instytut Badawczy (OPI PIB){strong_end}. Nazwa platformy pochodzi od "
+"{strong_start}Nawojki{strong_end}, która zgodnie z legendą była pierwszą "
+"polską studentką."
+
+#: lms/templates/index.html lms/templates/index.html
+msgid "More about the platform"
+msgstr "Więcej o platformie"
+
+#: lms/templates/index.html
+msgid ""
+"The man is sitting in front of the desk. He has a gray beard and glasses. "
+"There are books and an open laptop on the desk. He is holding a whiteboard "
+"marker in his hand. The whiteboard rests on the cupboard behind the man."
+msgstr ""
+"Mężczyzna siedzi naprzeciwko biurka. Ma brodę i okulary. Na biurku są "
+"książki i otwarty laptop. Trzyma w ręku marker, a za nim stoi tablica oparta"
+" na szafce."
+
+#: lms/templates/index.html
+msgid "NAVOICA platform\\u2019s advantages"
+msgstr "Zalety platformy NAVOICA"
+
+#: lms/templates/index.html
+msgid "Why should you learn with us?"
+msgstr "Dlaczego warto się z nami uczyć?"
+
+#: lms/templates/index.html
+msgid "Wide range of online courses"
 msgstr "Bogata oferta wirtualnych kursów"
 
 #: lms/templates/index.html
 msgid ""
-"A broad spectrum of courses with varying levels of expertise. Everyone can "
-"find an interesting course for themselves."
+"A wide range of course topics with various difficulty levels. Everyone will "
+"find something interesting for themselves."
 msgstr ""
 "Szeroki zakres tematyczny kursów o zróżnicowanym poziomie trudności. Każdy "
-"kursant znajdzie dla siebie interesujący kurs."
+"znajdzie coś interesującego dla siebie."
 
 #: lms/templates/index.html
-msgid "Publicly available learning platform"
-msgstr "Ogólnodostępna platforma kształcenia"
-
-#: lms/templates/index.html
-msgid ""
-"We reach anyone who wants to learn \\u2013 regardless of their age or place "
-"of residence."
-msgstr ""
-"Dzięki platformie internetowej Navoica dotrzemy do każdego, kto chce się "
-"uczyć – bez względu na wiek i miejsce zamieszkania."
-
-#: lms/templates/index.html
-msgid "Network of universities and institutions "
-msgstr "Sieć współpracy uczelni i instytucji"
+msgid "Free open educational platform"
+msgstr "Ogólnodostępna bezpłatna platforma"
 
 #: lms/templates/index.html
 msgid ""
-"New online learning ecosystem brings together: universities, research "
-"institutes, businesses and NGOs. Find out more about Navoica"
+"You can learn anytime, anywhere and at your own pace. Using the platform is "
+"completely free of charge."
 msgstr ""
-"Nowy ekosystem kształcenia online skupia: uczelnie, instytucje naukowe, "
-"biznes i organizacje pozarządowe."
+"Możesz uczyć się w dowolnym czasie i miejscu, we własnym tempie. Korzystanie"
+" z platformy jest całkowicie bezpłatne."
 
 #: lms/templates/index.html
-msgid "Find out more about Navoica"
-msgstr "Dowiedz się więcej o Navoice"
+msgid "High quality courses"
+msgstr "Wysoki poziom jakości kursów"
+
+#: lms/templates/index.html
+msgid ""
+"Our courses are created by experts, lecturers and academics from Polish "
+"universities."
+msgstr ""
+"Nasze kursy tworzone są przez ekspertów, wykładowców oraz pracowników "
+"naukowych polskich uczelni."
+
+#: lms/templates/index.html
+msgid "You can find courses in popular areas"
+msgstr "Znajdziesz u nas kursy z popularnych dziedzin"
+
+#: lms/templates/index.html
+msgid ""
+"Programming, IT, Languages, Personal Development, Management, Business and "
+"many more."
+msgstr ""
+"Programowanie, Obsługa programów, Języki obce, Rozwój osobisty, Zarządzanie,"
+" Biznes i wiele innych."
+
+#: lms/templates/index.html
+msgid "Our courses are offered by"
+msgstr "Nasze kursy są tworzone m.in. przez"
+
+#: lms/templates/index.html
+msgid "Previous partners"
+msgstr "Poprzedni partnerzy"
+
+#: lms/templates/index.html
+msgid "Next partners"
+msgstr "Następni partnerzy"
+
+#: lms/templates/index.html lms/templates/index.html
+msgid "More partners"
+msgstr "Więcej partnerów"
+
+#: lms/templates/index.html
+msgid ""
+"A woman is sitting at a desk, studying. She has a laptop and notebook in "
+"front of her. She has headphones on her head and a pen in her hand."
+msgstr ""
+"Kobieta siedzi przy biurku, uczy się. Ma przed sobą laptop i notes. Na "
+"głowie ma słuchawki, w dłoni trzyma długopis."
+
+#: lms/templates/index.html lms/templates/index.html
+msgid "Course outline"
+msgstr "Przebieg kursu"
+
+#: lms/templates/index.html
+msgid "What learning on {mark_start}Navoica.pl{mark_end} looks like?"
+msgstr "Jak wygląda nauka na {mark_start}navoica.pl{mark_end}?"
+
+#: lms/templates/index.html
+msgid ""
+"Our courses are entirely {strong_start}online{strong_end} and can be taken "
+"at any time, usually at your own pace. Lessons are based on "
+"{strong_start}films{strong_end}, quizzes, text material and at times also "
+"interactive content."
+msgstr ""
+"Nasze kursy odbywają się wyłącznie {strong_start}online{strong_end} i można "
+"w nich uczestniczyć o dowolnej porze, z reguły realizując je we własnym "
+"tempie. Podstawą lekcji są {strong_start}filmy{strong_end}, quizy, materiały"
+" tekstowe, a niekiedy także treści interaktywne."
+
+#: lms/templates/index.html
+msgid ""
+"Upon completion of the course you will receive {mark_start}a "
+"certificate{mark_end}"
+msgstr "Po ukończeniu kursu otrzymasz {mark_start}zaświadczenie{mark_end}"
+
+#: lms/templates/index.html
+msgid ""
+"Certificates are issued {strong_start}online{strong_end}, you may download "
+"and print them. You can also share them on social media or send them to your"
+" employer. Our certificates are {strong_start}free{strong_end} of charge."
+msgstr ""
+"Zaświadczenie dostępne jest {strong_start}online{strong_end}, można je "
+"pobrać i wydrukować. Można również udostępnić je w mediach społecznościowych"
+" lub przesłać pracodawcy. Uzyskanie zaświadczenia jest "
+"{strong_start}bezpłatne{strong_end}."
+
+#: lms/templates/index.html
+msgid "Handing the course completion certificate to the student's hand."
+msgstr "Wręczenie do ręki świadectwa ukończenia kursu."
+
+#: lms/templates/index.html
+msgid "Less partners"
+msgstr "Mniej partnerów"
+
+#: lms/templates/index.html
+msgid "days"
+msgstr "dni"
+
+#: lms/templates/index.html
+msgid "hours"
+msgstr "godz."
+
+#: lms/templates/index.html
+msgid "minutes"
+msgstr "min."
 
 #. Translators: 'Open edX' is a registered trademark, please keep this
 #. untranslated. See http://open.edx.org for more information.
@@ -1445,6 +1605,7 @@ msgstr ""
 #: lms/templates/register-sidebar.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 #: themes/stanford-style/lms/templates/register-sidebar.html
 msgid "Log in"
 msgstr "Zaloguj się"
@@ -1479,6 +1640,8 @@ msgstr ""
 
 #: lms/templates/login.html lms/templates/register-form.html
 #: lms/templates/register.html lms/templates/register.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
@@ -1942,7 +2105,7 @@ msgstr "Wybierz..."
 msgid "Gender"
 msgstr "Płeć"
 
-#: lms/templates/register-form.html
+#: lms/templates/register-form.html lms/templates/register-form.html
 #: themes/stanford-style/lms/templates/register-form.html
 msgid "Year of Birth"
 msgstr "Rok urodzenia"
@@ -3996,7 +4159,7 @@ msgid ""
 msgstr ""
 "Dokument poświadcza ukończenie kursu <strong>{course_name}</strong> na "
 "platformie Navoica, którego organizatorem jest {organizer}. <a "
-"href={cert_url}>verification</a>"
+"href={cert_url}>weryfikacja</a>"
 
 #: lms/templates/certificates/_accomplishment-rendering.html
 msgid "experts"
@@ -6676,7 +6839,15 @@ msgstr "Strona główna {platform_name}"
 msgid "Navoica logo"
 msgstr "Logo Navoica"
 
+#: lms/templates/header/header.html lms/templates/header/header.html
+msgid "Search courses"
+msgstr "Szukaj"
+
 #: lms/templates/header/header.html
+msgid "Search courses..."
+msgstr "Szukaj..."
+
+#: lms/templates/header/header.html lms/templates/header/user_dropdown.html
 msgid "My Account"
 msgstr "Moje konto"
 
@@ -6689,11 +6860,30 @@ msgstr ""
 "jest w pełni wspierana. Zalecamy korzystanie z {chrome_link} lub {ff_link}."
 
 #: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
+#: lms/templates/static_templates/404.html
+msgid "Home"
+msgstr "Strona główna"
+
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/navbar-not-authenticated.html
 #: lms/templates/header/user_dropdown.html
 msgid "Discover New"
 msgstr "Katalog kursów"
+
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/navbar-authenticated.html
+#: lms/templates/header/user_dropdown.html
+#: lms/templates/header/user_dropdown.html
+#: lms/templates/learner_dashboard/_dashboard_navigation_courses.html
+#: themes/edx.org/lms/templates/dashboard.html
+msgid "My Courses"
+msgstr "Moje kursy"
 
 #. Translators: This is short for "System administration".
 #: lms/templates/header/navbar-authenticated.html
@@ -6726,11 +6916,11 @@ msgid "Schools"
 msgstr "Uczelnie"
 
 #: lms/templates/header/user_dropdown.html
-#: lms/templates/header/user_dropdown.html
-#: lms/templates/learner_dashboard/_dashboard_navigation_courses.html
-#: themes/edx.org/lms/templates/dashboard.html
-msgid "My Courses"
-msgstr "Moje kursy"
+#: lms/templates/static_templates/faq.html
+#: lms/templates/static_templates/faq.html
+#: themes/red-theme/lms/templates/footer.html
+msgid "FAQ"
+msgstr "Najczęściej zadawane pytania"
 
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
 #: lms/templates/instructor/instructor_dashboard_2/add_coupon_modal.html
@@ -8928,23 +9118,34 @@ msgid "Your Password Reset is Complete"
 msgstr "Resetowanie hasła ukończone"
 
 #: lms/templates/registration/password_reset_complete.html
-msgid "Password Reset Complete"
-msgstr "Resetowanie hasła ukończone"
+msgid "Your password has been reset"
+msgstr "Udało Ci się zresetować hasło"
 
 #: lms/templates/registration/password_reset_complete.html
-msgid ""
-"Your password has been reset. {start_link}Sign-in to your account.{end_link}"
-msgstr ""
-"Twoje hasło zostało zresetowane. {start_link}Zaloguj się na swoje "
-"konto.{end_link}"
+msgid "{start_link}Log in{end_link}"
+msgstr "{start_link}Zaloguj się{end_link}"
 
 #: lms/templates/registration/password_reset_confirm.html
 msgid "Reset Your {platform_name} Password"
 msgstr "Zresetuj swoje hasło w {platform_name}"
 
 #: lms/templates/registration/password_reset_confirm.html
-msgid "Invalid Password Reset Link"
-msgstr "Nieprawidłowy odnośnik resetowania hasła"
+msgid "Invalid link"
+msgstr "Link stracił ważność"
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid ""
+"The password reset link is no longer valid. It has probably already been "
+"used. To generate a new link, go to the login page and click "
+"{start_strong}Forgot password?{end_strong}."
+msgstr ""
+"Wybrany link do resetowania hasła jest już nieważny. Prawdopodobnie został "
+"już raz wykorzystany. Aby wygenerować nowy link przejdź do strony logowania "
+"i kliknij {start_strong}Nie pamiętasz hasła?{end_strong}."
+
+#: lms/templates/registration/password_reset_confirm.html
+msgid "Go to the login page"
+msgstr "Przejdź do strony logowania"
 
 #: lms/templates/registration/password_reset_done.html
 msgid ""
@@ -9449,10 +9650,6 @@ msgstr ""
 "Sprawdź adres URL strony. Jeśli nie znalazłeś/aś tego, czego szukasz, "
 "spróbuj poniższych linków:"
 
-#: lms/templates/static_templates/404.html
-msgid "Home"
-msgstr "Strona główna"
-
 #: lms/templates/static_templates/about.html
 #: lms/templates/static_templates/about.html
 #: themes/red-theme/lms/templates/footer.html
@@ -9471,6 +9668,17 @@ msgstr "Deklaracja Dostępności"
 #: lms/templates/static_templates/accessibility.html
 msgid "Declaration of Availability of the NAVOICA Educational Platform"
 msgstr "Deklaracja Dostępności platformy edukacyjnej NAVOICA"
+
+#: lms/templates/static_templates/accessibility.html
+msgid ""
+"The owner of the NAVOICA Educational Platform is the Ministry of Education "
+"and Science headquartered in Warsaw, Poland, at the following address: ul. "
+"Wspolna 1/3. The operator of the Platform is the National Information "
+"Processing Institute (OPI PIB)."
+msgstr ""
+"Właścicielem platformy NAVOICA jest Ministerstwo Edukacji i Nauki z siedzibą"
+" w Warszawie, ul. Wspólna 1/3. Operatorem platformy jest Ośrodek "
+"Przetwarzania Informacji -  Państwowy Instytut Badawczy."
 
 #: lms/templates/static_templates/accessibility.html
 msgid ""
@@ -9514,20 +9722,31 @@ msgid "Unavailable content"
 msgstr "Treści niedostępne"
 
 #: lms/templates/static_templates/accessibility.html
-msgid "contrast of some elements is inadequate,"
-msgstr "niektóre elementy mają nieodpowiedni kontrast,"
-
-#: lms/templates/static_templates/accessibility.html
-msgid "some forms have no labels,"
-msgstr "niektóre formularze nie mają etykiet,"
-
-#: lms/templates/static_templates/accessibility.html
 msgid "focus is invisible,"
 msgstr "focus jest niewidoczny,"
 
 #: lms/templates/static_templates/accessibility.html
-msgid "alternative texts for some pictures may be missing,"
-msgstr "może brakować tekstów alternatywnych do obrazów,"
+msgid "the header hierarchy is inadequate,"
+msgstr "hierarchia nagłówków jest nieodpowiednia,"
+
+#: lms/templates/static_templates/accessibility.html
+msgid ""
+"some elements may have inadequate contrast (applies to pages after login),"
+msgstr ""
+"niektóre elementy mogą mieć nieodpowiedni kontrast (dotyczy stron po "
+"zalogowaniu),"
+
+#: lms/templates/static_templates/accessibility.html
+msgid "some forms may not have labels (applies to pages after login),"
+msgstr ""
+"niektóre formularze mogą nie mieć etykiet (dotyczy stron po zalogowaniu),"
+
+#: lms/templates/static_templates/accessibility.html
+msgid ""
+"alternative text to images may be missing (applies to pages after login),"
+msgstr ""
+"może brakować tekstów alternatywnych do obrazów (dotyczy stron po "
+"zalogowaniu),"
 
 #: lms/templates/static_templates/accessibility.html
 msgid "not all video materials are subtitled,"
@@ -9543,19 +9762,21 @@ msgstr "nie jest dostępna audiodeskrypcja."
 
 #: lms/templates/static_templates/accessibility.html
 msgid ""
-"The platform is being modified to make it more available. With enhancements "
-"introduced on a regular basis, the availability will be gradually improving "
-"over time. As from the end of October 2020 the websites, before logging in, "
-"will meet the WCAG 2.1 level AA requirements. Websites available after "
-"logging in will be adapted in the next step. We are also working on a "
-"solution allowing to make the courses available electronically."
+"The platform is undergoing modifications to make it more accessible. Work is"
+" ongoing and accessibility is gradually being improved. The process of "
+"adapting the pre-login pages to the WCAG 2.1 guidelines at level AA is "
+"nearing completion. In the near future, the focus will be made more visible "
+"and the header hierarchy will be improved. Pages available after login will "
+"be adjusted subsequently. At the same time, we are also working to create "
+"digitally accessible courses in the future."
 msgstr ""
 "Platforma jest w trakcie modyfikacji, które mają uczynić ją bardziej "
-"dostępną. Prace są prowadzone i sukcesywnie dostępność ulega poprawie. Do "
-"końca stycznia 2021 strony przed zalogowaniem będą spełniały wytyczne WCAG "
-"2.1 na poziomie AA. Strony dostępne po zalogowaniu będą dostosowywane w "
-"następnym kroku. Równocześnie pracujemy też nad tym, aby w przyszłości "
-"powstawały kursy dostępne cyfrowo."
+"dostępną. Prace są prowadzone i sukcesywnie dostępność ulega poprawie. "
+"Proces dostosowania stron przed zalogowaniem do wytycznych WCAG 2.1 na "
+"poziomie AA jest na ukończeniu. W najbliższym czasie zostanie jeszcze "
+"uwidoczniony focus i poprawiona hierarchia nagłówków. Strony dostępne po "
+"zalogowaniu będą dostosowywane w następnym kroku. Równocześnie pracujemy też"
+" nad tym, aby w przyszłości powstawały kursy dostępne cyfrowo."
 
 #: lms/templates/static_templates/accessibility.html
 msgid "Exclusions"
@@ -9759,17 +9980,6 @@ msgid "This page left intentionally blank. Feel free to add your own content."
 msgstr ""
 "Ta strona celowo pozostała pusta. Jeśli chcesz, możesz dodać na nią własną "
 "treść."
-
-#: lms/templates/static_templates/contact.html
-#: themes/red-theme/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/footer.html
-#: themes/stanford-style/lms/templates/static_templates/about.html
-msgid "Contact"
-msgstr "Kontakt"
-
-#: lms/templates/static_templates/contact.html
-msgid "Contact us"
-msgstr "Kontakt"
 
 #: lms/templates/static_templates/contact.html
 msgid ""
@@ -10093,12 +10303,6 @@ msgstr ""
 "nie możemy dać ci dostępu do tego kursu."
 
 #: lms/templates/static_templates/faq.html
-#: lms/templates/static_templates/faq.html
-#: themes/red-theme/lms/templates/footer.html
-msgid "FAQ"
-msgstr "Najczęściej zadawane pytania"
-
-#: lms/templates/static_templates/faq.html
 msgid "FAQ_Category1"
 msgstr "O platformie"
 
@@ -10119,8 +10323,8 @@ msgstr " Kto jest właścicielem platformy Navoica?"
 #: lms/templates/static_templates/faq.html
 msgid "FAQ_Answer1.2"
 msgstr ""
-"Właścicielem platformy Navoica jest Ministerstwo Nauki i Szkolnictwa "
-"Wyższego z siedzibą w Warszawie, ul. Wspólna 1/3."
+"Właścicielem platformy Navoica jest Ministerstwo Edukacji i Nauki z siedzibą"
+" w Warszawie, ul. Wspólna 1/3."
 
 #: lms/templates/static_templates/faq.html
 msgid "FAQ_Question1.3"
@@ -10129,8 +10333,9 @@ msgstr " Czy Navoica oferuje studia online?"
 #: lms/templates/static_templates/faq.html
 msgid "FAQ_Answer1.3"
 msgstr ""
-"Obecnie w ofercie platformy Navoica są wyłącznie kursy otwarte. Nie "
-"wykluczamy, że w przyszłości kursy będą zaliczane do toku studiów."
+"Nie, obecnie w ofercie platformy Navoica znajdują się kursy typu MOOC. Nie "
+"wykluczamy, że w przyszłości oferta zostanie rozszerzona również o ścieżki "
+"kariery i studia online."
 
 #: lms/templates/static_templates/faq.html
 msgid "FAQ_Question1.4"
@@ -10156,8 +10361,8 @@ msgstr ""
 "Aby zapisać się na kurs, należy się zarejestrować, a następnie zalogować się"
 " na platformie Navoica, wyszukać interesujący kurs, a następnie na etykiecie"
 " kursu (stronie z opisem i informacjami o kursie), kliknąć duży czerwony "
-"przycisk „Weź udział w kursie”. Pamiętaj, że możesz zapisać się na kurs "
-"wyłącznie wtedy, kiedy są na niego otwarte zapisy."
+"przycisk „Zapisz się / Zarejestruj się na kurs”. Pamiętaj, że możesz zapisać"
+" się na kurs wyłącznie wtedy, kiedy są na niego otwarte zapisy."
 
 #: lms/templates/static_templates/faq.html
 msgid "FAQ_Question2.2"
@@ -13630,55 +13835,3 @@ msgstr "Umieść tutaj swój Kodeks Honorowy!"
 #: themes/stanford-style/lms/templates/static_templates/tos.html
 msgid "Put your Copyright Text here!"
 msgstr "Umieść tutaj tekst swojego Prawa Autorskiego!"
-
-#: lms/templates/static_templates/accessibility.html
-msgid "the header hierarchy is inadequate,"
-msgstr "hierarchia nagłówków nie jest odpowiednia,"
-
-#: lms/templates/static_templates/accessibility.html
-msgid ""
-"some elements may have inadequate contrast (applies to pages after login),"
-msgstr ""
-"niektóre elementy mogą mieć nieodpowiedni kontrast (dotyczy stron po "
-"zalogowaniu),"
-
-#: lms/templates/static_templates/accessibility.html
-msgid "some forms may not have labels (applies to pages after login),"
-msgstr ""
-"niektóre formularze mogą nie mieć etykiet (dotyczy stron po zalogowaniu),"
-
-#: lms/templates/static_templates/accessibility.html
-msgid ""
-"alternative text to images may be missing (applies to pages after login),"
-msgstr ""
-"może brakować tekstów alternatywnych do obrazów (dotyczy stron po "
-"zalogowaniu),"
-
-#: lms/templates/static_templates/accessibility.html
-msgid ""
-"The platform is undergoing modifications to make it more accessible. Work is"
-" ongoing and accessibility is gradually being improved. The process of "
-"adapting the pre-login pages to the WCAG 2.1 guidelines at level AA is "
-"nearing completion. In the near future, the focus will be made more visible "
-"and the header hierarchy will be improved. Pages available after login will "
-"be adjusted subsequently. At the same time, we are also working to create "
-"digitally accessible courses in the future."
-msgstr ""
-"Platforma jest w trakcie modyfikacji, które mają uczynić ją bardziej "
-"dostępną. Prace są prowadzone i sukcesywnie dostępność ulega poprawie. "
-"Proces dostosowania stron przed zalogowaniem do wytycznych WCAG 2.1 na "
-"poziomie AA jest na ukończeniu. W najbliższym czasie zostanie jeszcze "
-"uwidoczniony focus i poprawiona hierarchia nagłówków. Strony dostępne po "
-"zalogowaniu będą dostosowywane w następnym kroku. Równocześnie pracujemy też"
-" nad tym, aby w przyszłości powstawały kursy dostępne cyfrowo."
-
-#: lms/templates/static_templates/accessibility.html
-msgid ""
-"The owner of the NAVOICA Educational Platform is the Ministry of Education "
-"and Science headquartered in Warsaw, Poland, at the following address: ul. "
-"Wspolna 1/3. The operator of the Platform is the National Information "
-"Processing Institute (OPI PIB)."
-msgstr ""
-"Właścicielem platformy NAVOICA jest Ministerstwo Edukacji i Nauki z siedzibą"
-" w Warszawie, ul. Wspólna 1/3. Operatorem platformy jest Ośrodek "
-"Przetwarzania Informacji - Państwowy Instytut Badawczy (OPI PIB)."
