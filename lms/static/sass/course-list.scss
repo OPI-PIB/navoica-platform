@@ -15,6 +15,10 @@
 
 
 
+  --secondary-color: #E62E47;
+  --primary-color: #1868B9;
+  --progresstab-hover-color: #10477E;
+
   --blue:#007bff;
   --red:#E41D37;
   --orange:#fd7e14;
@@ -17060,3 +17064,22 @@ $background: #F3F5F6;
 }
 
 /** tooltip end **/ 
+
+/** progres tab **/
+.progress-cerfificates-info {
+  border-left: 3px solid var(--secondary-color);
+  padding-left: 10.5px;
+  margin-top: 32.5px;
+  margin-bottom: 61.5px;
+  text-align: left;
+  strong {
+    font-weight: 600;
+  }
+  a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    &:hover {
+      color: var( --progresstab-hover-color);
+    }
+  }
+}

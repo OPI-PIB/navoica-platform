@@ -64,6 +64,15 @@ username = get_enterprise_learner_generic_name(request) or student.username
                 <h2 class="hd hd-2 progress-certificates-title">
                     ${_("Course Progress for Student '{username}' ({email})").format(username=username, email=student.email)}
                 </h2>
+                <p class ="progress-cerfificates-info f-16 h-24">
+                    ${Text(_("To pass the course, you must meet the {strong_start}passing threshold{strong_end} by completing the graded assignments and tests in the course (see: the chart below). A {strong_start}certificate{strong_end} will be generated within {strong_start}24 hours{strong_end} of reaching the passing threshold. You will find it in {a_start}My Courses{a_end} tab.")).format(
+                        student_name=student.profile.name,
+                        a_start=HTML("<a href={url}>").format(url=reverse('dashboard')),
+                        a_end=HTML("</a>"),
+                        strong_start=HTML("<strong>"),
+                        strong_end=HTML("</strong>")
+                    )}
+                </p>
 
                 <div class="wrapper-msg wrapper-auto-cert">
                     <div id="errors-info" class="errors-info"></div>
