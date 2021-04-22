@@ -13891,10 +13891,10 @@ span.complete-checkmark.fa.fa-check {
 
   --search-icon-color: #4A5866;
   --search-icon-hover-color: #294766;
-  --search-border-color: #66737F;
+  --search-border-color: rgba(102, 115, 127, 0.5);
   --search-border-hover-color: #1C2D3D;
   --search-text-color: #4A5866;
-  --search-btn-bg: transparent;
+  --search-btn-bg: #ffffff;
   --search-bg-color-primary: transparent;
   --search-bg-color-secondary: #ffffff;
 
@@ -14171,7 +14171,6 @@ span.complete-checkmark.fa.fa-check {
   &__search {
     border-radius: 2px;
     border: 0.5px solid var(--search-border-color);
-    background-color: transparent;
 
     @media screen and (min-width: 1280px) {
       min-width: 334px;
@@ -14183,7 +14182,6 @@ span.complete-checkmark.fa.fa-check {
 
     &:hover {
       border: 0.5px solid var(--search-border-hover-color);
-      background-color: transparent;
     }
 
     &-input {
@@ -14634,7 +14632,7 @@ span.complete-checkmark.fa.fa-check {
 @media screen and (min-width: 1280px) {
   #header-navigation .course-preview-title {
     width: 100%;
-    max-width: 24%;
+    max-width: 26.875rem;
   }
 }
 
@@ -14646,7 +14644,7 @@ span.complete-checkmark.fa.fa-check {
 
 @media screen and (min-width: 960px) and (max-width: 1279px) {
   #header-navigation .course-preview-title {
-    max-width: 23%;
+    max-width: 25%;
   }
 
   #search-course.search-input {
@@ -16034,7 +16032,7 @@ $background: #F3F5F6;
       background-color: #ffffff;
       position: absolute;
       bottom: -15%;
-      transition: bottom 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      transition: bottom 0.25s linear;
       height: 61%;
 
       @media only screen and (max-width: 1139px) {
@@ -16053,7 +16051,7 @@ $background: #F3F5F6;
         padding: 0 16px 0.875rem 16px;
         margin-top: auto;
         margin-bottom: auto;
-        transition: margin-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        transition: margin-bottom 0.25s linear;
       }
           &__title {
               margin: 0;
@@ -16330,7 +16328,7 @@ $background: #F3F5F6;
 
       &-before-3 {
         @media screen and (min-width: 1280px) {
-          padding: 3.75rem 0 3.25rem 0;
+          padding: 3.25rem 0 3.25rem 0;
           justify-content: flex-end;
           margin-left: auto;
         }
@@ -16484,7 +16482,7 @@ $background: #F3F5F6;
       }
 
       &__box {
-        max-width: 23.125rem;
+        max-width: 370px;
         width: 100%;
         min-height: 100%;
         display: flex;
@@ -16497,17 +16495,17 @@ $background: #F3F5F6;
 
         @media screen and (min-width: 768px) and (max-width: 1279px) {
           &:nth-child(3) h3 {
-            max-width: 10rem;
+            max-width: 65%;
           }
 
           &:nth-child(3) p {
-            max-width: 12rem;
+            max-width: 205px;
           }
         }
 
         @media screen and (min-width: 1280px) {
           &:nth-child(3) p {
-            max-width: 20rem;
+            max-width: 320px;
           }
         }
 
@@ -16517,7 +16515,7 @@ $background: #F3F5F6;
 
         @media screen and (min-width: 768px) and (max-width: 1024px) {
           padding: 1rem 0;
-          max-width: 14.375rem;
+          max-width: 230px;
         }
 
         & img {
@@ -16848,7 +16846,7 @@ $background: #F3F5F6;
     min-height: 28.438rem;
 
     @media screen and (max-width: 767px) {
-      background: transparent url('/static/images/navoica-homepage-bg-hero-tablet.svg') no-repeat 45% 0%;
+      background: #fff url('/static/images/navoica-homepage-bg-hero-tablet.svg') no-repeat 45% 0%;
       background-size: 32.5rem;
       width: 100%;
       min-height: 28.438rem;
@@ -16903,7 +16901,7 @@ $background: #F3F5F6;
       }
       @media screen and (max-width: 767px) {
         background: transparent linear-gradient(180deg, rgba(250, 252, 253, 1) 0%, rgba(250, 252, 253, 1) 77%, rgba(255, 255, 255, 0) 100%) 0% 0% no-repeat padding-box;
-        background-size: auto;
+        background-size: 32.5rem;
         width: 100%;
         min-height: 28.438rem;
         content: '';

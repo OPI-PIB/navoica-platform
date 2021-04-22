@@ -262,10 +262,8 @@ unsupported_browser_alert_versions = settings.FEATURES.get('UNSUPPORTED_BROWSER_
                 }, 1000);
 
                 if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-                    if (getBrowserFontSize >= "24" && getBrowserFontSize < "44") {
+                    if (getBrowserFontSize >= "25" && getBrowserFontSize < "44") {
                         $('html').css('fontSize', '62.5%');
-                    } else if (getBrowserFontSize >= "18" && getBrowserFontSize < "24") {
-                        $('html').css('fontSize', '90%');
                     } else if (getBrowserFontSize >= "44" && getBrowserFontSize < "48") {
                         $('html').css('fontSize', '55.5%');
                     } else if (getBrowserFontSize >= "48") {

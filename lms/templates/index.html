@@ -238,24 +238,23 @@ from openedx.core.djangolib.markup import HTML, Text
 
                 setTimeout(function () {
                     let translate = "translate(-" + slideWidth + "px, 0%)";
-                    let itemsContainedSliderCount = Math.floor($slideContainer.width() / slideWidth);
-                    let slideCount = Math.ceil(totalCards / itemsContainedSliderCount);
 
-                    if (start === slideCount || start < 0) {
+                    if (start >= totalCards || start === (totalCards - 3)) {
+                        $slideNext.attr('disabled', true);
+                        $slidePrev.attr('disabled', false);
+                    }
+
+
+                    if (start === totalCards || start < 0) {
                         currentTranslateX = "translate(0px, 0%)";
                         start = 0;
                     }
 
-                    if (start < slideCount && start > 0) {
+                    if (start < totalCards && start > 0 && start < (totalCards - 3)) {
                         $slideNext.attr('disabled', false);
                         $slidePrev.attr('disabled', false);
-
-                        if (start > 0 && start === (slideCount - 1)) {
-                            $slideNext.attr('disabled', true);
-                        }
-
-                        translate = "translate(-" + ($slideContainer.width() * start) + "px, 0%)";
-                        currentTranslateX = ($slideContainer.width() * start);
+                        translate = "translate(-" + (gap * start + (slideWidth * start)) + "px, 0%)";
+                        currentTranslateX = (gap * start + (slideWidth * start));
                     }
 
                     $slideContainerTransition.css({'transform': translate});
@@ -267,24 +266,22 @@ from openedx.core.djangolib.markup import HTML, Text
                 setTimeout(function () {
                     let totalCards = $slideItem.length;
                     let translate = "translate(0px, 0%)";
-                    let itemsContainedSliderCount = Math.floor($slideContainer.width() / slideWidth);
-                    let slideCount = Math.ceil(totalCards / itemsContainedSliderCount);
 
                     if (start === 1 || start <= 0) {
                         $slidePrev.attr('disabled', true);
                         $slideNext.attr('disabled', false);
                     }
 
-                    if (start === slideCount || start < 0) {
+                    if (start === totalCards || start < 0) {
                         currentTranslateX = "translate(0px, 0%)";
                         start = 0;
                     }
 
-                    if (start <= slideCount && start > 0) {
+                    if (start < totalCards && start > 0) {
                         $slideNext.attr('disabled', false);
                         $slidePrev.attr('disabled', false);
-                        translate = "translate(" + (currentTranslateX < 0 ? 0 : -($slideContainer.width() * start)) + "px, 0%)";
-                        currentTranslateX = currentTranslateX < 0 ? 0 : -($slideContainer.width()) * start;
+                        translate = "translate(" + (currentTranslateX < 0 ? 0 : -(currentTranslateX - slideWidth) + gap * start) + "px, 0%)";
+                        currentTranslateX = currentTranslateX < 0 ? 0 : -(currentTranslateX - slideWidth) + gap * start;
                     }
 
                     $slideContainerTransition.css({'transform': translate});
@@ -294,7 +291,7 @@ from openedx.core.djangolib.markup import HTML, Text
         }
 
         customSlideGallery($('.js-slider-prev-course'), $('.js-slider-next-course'), $('.js-slide-container-courses'), $('.js-slide-container-courses'), $('.course__card'), 20, 300);
-        customSlideGallery($('.js-slider-prev-partners'), $('.js-slider-next-partners'), $('.homepage__partners-list'), $('.js-slide-container-partners'), $('.js-slide-container-partners .js-slider-item'), 20, 230);
+        customSlideGallery($('.js-slider-prev-partners'), $('.js-slider-next-partners'), $('.homepage__partners-list'), $('.js-slide-container-partners'), $('.js-slide-container-partners .js-slider-item'), 20, 150);
 
         let $showMorePartners = $('.js-show-more-partners');
         $showMorePartners.on('click', function() {
