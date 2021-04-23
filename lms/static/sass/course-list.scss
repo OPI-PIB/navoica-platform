@@ -16035,7 +16035,7 @@ $background: #F3F5F6;
       position: absolute;
       bottom: -15%;
       transition: bottom 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-      height: 61%;
+      height: 70%;
 
       @media only screen and (max-width: 1139px) {
         display: flex;
@@ -16068,6 +16068,7 @@ $background: #F3F5F6;
               -webkit-box-orient: vertical;
               -webkit-line-clamp: 3;
               overflow: hidden;
+              min-height: 4.5rem;
           }
 
             &__description {
@@ -16290,10 +16291,8 @@ $background: #F3F5F6;
     &-image {
       box-shadow: 0 1px 16px #DEE2E6;
       border-radius: 2px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       position: relative;
+      max-width: 100%;
 
       &-1 {
         @media screen and (min-width: 768px) {

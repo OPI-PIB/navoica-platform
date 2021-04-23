@@ -67,7 +67,7 @@ allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION'
     % else:
     <div role="menuitem" class="nav-item desktop-menu">
         % if request.path == '/login':
-        <a href="/login${login_query()}" class="btn header-navigation__btn-login active" aria-current="page"><img src="/static/images/my-account-icon.png" alt="" class="header-navigation__btn-login--icon" />${_("Log in")}</a>
+        <a href="/login${login_query()}" class="btn header-navigation__btn-login active" aria-current="page"><span class="header-navigation__btn-login--icon"></span>${_("Log in")}</a>
         % else:
         <a href="/login${login_query()}" class="btn header-navigation__btn-login"><span class="header-navigation__btn-login--icon"></span>${_("Log in")}</a>
         %endif
