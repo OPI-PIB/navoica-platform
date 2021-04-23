@@ -37,6 +37,7 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    this.$el.find('#course-number').val(this.model.get('course_id'));
                    this.$el.find('#course-name').val(this.model.get('run'));
                    this.$el.find('.set-date').datepicker({dateFormat: 'm/d/yy'});
+                   $('#edit-image-modal #modalWrapper').off('submit');
 
                    this.tiny = tinyMce;
                    this.tiny.suffix = ".min";
@@ -91,11 +92,12 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                    DateUtils.setupDatePicker('enrollment_end', this);
 
                    this.$el.find('#' + this.fieldToSelectorMap.overview).val(this.model.get('overview'));
+                   this.base_asset_url = this.$el.find("#editor-tab").data('base-asset-url');
                    this.tiny.init({selector: '#course-overview',
                                 language: document.documentElement.lang,
                                 height : 300,
                                 toolbar: "undo redo | formatselect | bold italic underline strikethrough subscript superscript | fontsizeselect | alignleft aligncenter alignright alignjustify | outdent indent | bullist numlist | forecolor backcolor nonbreaking removeformat wrapAsCode | " +
-                                " blockquote | link unlink | table | charmap | fullscreen  preview | codesample | code",
+                                " blockquote | link unlink | table | charmap | fullscreen  preview | codesample | insertImage | code",
                                 plugins: "textcolor link image codemirror paste table preview importcss searchreplace autolink directionality visualblocks visualchars fullscreen media codesample charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap",
                                 menubar: false,
                                 branding: false,
@@ -109,12 +111,63 @@ define(['js/views/validation', 'codemirror', 'underscore', 'jquery', 'jquery.ui'
                                 },
                                 },
                                 setup: function (ed) {
+                                    var visualEditor = ed;
+                                    var imageModal = $('#edit-image-modal #modalWrapper');
+                                    var base_asset_url = $('#field-course-overview').data('base-asset-url');
+
+                                    function saveImageFromModal(data) {
+                                        /*
+                                        Insert img node from studio-frontend modal form data passed as a javascript object
+                                            */
+                                        if (data['src']) {
+                                            data['src'] = rewriteStaticLinks(data['src'], '/static/', base_asset_url);
+                                        }
+                                    
+                                        return visualEditor.insertContent(visualEditor.dom.createHTML('img', data));
+                                    };
+
+                                    function editImageSubmit(event) {
+                                        if (event.detail) {
+                                            saveImageFromModal(event.detail);
+                                        }
+                                    };
+
                                     ed.on("change", function () {
                                         var raw_content = ed.getContent();
                                         $('#course-overview').val(raw_content).trigger('change');
-                                    })
-                                }})
+                                    });
 
+                                    ed.addButton('insertImage', {
+                                        /*
+                                        Translators: this is a toolbar button tooltip from the raw HTML editor displayed in the browser when a user needs to edit HTML
+                                            */
+                                        title: gettext('Insert/Edit Image'),
+                                        icon: 'image',
+                                        onclick: function () {
+                                            var img, imgAttrs;
+                                            img = $(ed.selection.getNode());
+                                            imgAttrs = {
+                                            baseAssetUrl: base_asset_url
+                                            };
+                                            if (img && img.is('img')) {
+                                            imgAttrs['src'] = rewriteStaticLinks(img.attr('src'), base_asset_url, '/static/');
+                                            imgAttrs['alt'] = img.attr('alt');
+                                            imgAttrs['width'] = parseInt(img.attr('width'), 10) || img[0].naturalWidth;
+                                            imgAttrs['height'] = parseInt(img.attr('height'), 10) || img[0].naturalHeight;
+                                            imgAttrs['style'] = img.attr('style');
+                                            }
+                                            
+                                            $('body').addClass('modal-open'); // prevents background from scrolling while modal is open
+                                            return imageModal[0].dispatchEvent(new CustomEvent('openModal', {
+                                                bubbles: true,
+                                                detail: imgAttrs
+                                            }));
+                                        },
+                                    });
+
+                                    imageModal.on('submitForm', editImageSubmit);
+                                }
+                            });
                    if (this.model.get('title') !== '') {
                        this.$el.find('#' + this.fieldToSelectorMap.title).val(this.model.get('title'));
                    } else {
