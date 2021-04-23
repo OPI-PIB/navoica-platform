@@ -44,6 +44,17 @@ footer {
     padding: 3px;
   }
 
+  & a.footer-block__link {
+    font-size: 0.875rem;
+    font-family: var(--font-family-primary);
+    color: var(--footer-link-color);
+    font-weight: var(--footer-link-weight);
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+
   .footer-block {
     background-color: var(--footer-bg);
 
@@ -115,17 +126,6 @@ footer {
         margin: 24px 0 16px 0;
       }
     }
-
-      &__link {
-        font-size: 0.875rem;
-        font-family: var(--font-family-primary);
-        color: var(--footer-link-color);
-        font-weight: var(--footer-link-weight);
-      }
-
-      &__link:hover, &__link:focus {
-        text-decoration: underline;
-      }
 
       &__info {
         margin: 2.625rem 0;
