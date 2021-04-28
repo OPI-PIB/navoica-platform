@@ -3,7 +3,7 @@ function showTip() {
   var btntip = document.getElementById("btntip");
   var message = btntip.getAttribute('tooltip-message');
   btntip.setAttribute("aria-expanded", "true");
-  tip.innerHTML=message; 
+  tip.innerHTML=message;
   tip.setAttribute("style", "display: block;");
 }
 
@@ -21,14 +21,14 @@ function toggleTip (event) {
     showTip();
   }
   else {
-    hideTip();	
+    hideTip();
   }
 }
 
 $(document).ready(function() {
 
   var btntip = document.getElementById("btntip");
-  
+
   btntip.addEventListener("mousemove", function (event) {
     showTip();
   });
@@ -44,7 +44,7 @@ $(document).ready(function() {
   btntip.addEventListener("click", toggleTip, false);
 
   btntip.addEventListener('keyup', function (event){
-    let key = event.which || event.keyCode || event.key;
+    var key = event.which || event.keyCode || event.key;
     if (key === 27) {
       hideTip();
     }
