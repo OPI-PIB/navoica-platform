@@ -6,19 +6,6 @@
  */
 
 :root {
-  
-  //new-layout
-  --primary-color:#1868B9;
-  --background-color-tooltip:#EBF3FA;
-  --line-color-tooltip:#DEE2E6;
-  --text-color-tooltip:#4A5866;
-
-
-
-  --secondary-color: #E62E47;
-  --primary-color: #1868B9;
-  --progresstab-hover-color: #10477E;
-
   --blue:#007bff;
   --red:#E41D37;
   --orange:#fd7e14;
@@ -17006,8 +16993,17 @@ $background: #F3F5F6;
 
 /**new layout**/
 
+$primary-color:#1868B9;
+$background-color-tooltip:#EBF3FA;
+$line-color-tooltip:#DEE2E6;
+$text-color-tooltip:#4A5866;
+$secondary-color: #E62E47;
+$primary-color: #1868B9;
+$progresstab-hover-color: #10477E;
+
+
 .color-primary {
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 .progress-text {
@@ -17026,7 +17022,7 @@ $background: #F3F5F6;
 
 .tooltip-text {
   display: none;
-  border: 1px solid var(--line-color-tooltip);
+  border: 1px solid $line-color-tooltip;
   padding: 16px;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
   width: 360px;
@@ -17036,7 +17032,7 @@ $background: #F3F5F6;
   margin-right: 8px;
   margin-top: 2rem;
   background: #FFFFFF;
-  color: var(--text-color-tooltip);
+  color: $text-color-tooltip;
   transition: opacity  0s linear 1s;
 
   &::after, &::before {
@@ -17053,7 +17049,7 @@ $background: #F3F5F6;
   }
 
   &::before {
-    border-bottom-color: var(--line-color-tooltip);
+    border-bottom-color: $line-color-tooltip;
     top: -0.25rem;
   }
 
@@ -17067,7 +17063,7 @@ $background: #F3F5F6;
 
 /** progres tab **/
 .progress-cerfificates-info {
-  border-left: 3px solid var(--secondary-color);
+  border-left: 3px solid $secondary-color;
   padding-left: 10.5px;
   margin-top: 32.5px;
   margin-bottom: 61.5px;
@@ -17076,10 +17072,10 @@ $background: #F3F5F6;
     font-weight: 600;
   }
   a {
-    color: var(--primary-color);
+    color: $primary-color;
     text-decoration: underline;
     &:hover {
-      color: var( --progresstab-hover-color);
+      color: $progresstab-hover-color;
     }
   }
 }
