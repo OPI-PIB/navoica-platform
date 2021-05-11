@@ -82,7 +82,7 @@ class PasswordResetFormNoActive(PasswordResetForm):
             # Email subject *must not* contain newlines
             subject = subject.replace('\n', '')
             email = loader.render_to_string(email_template_name, context)
-            send_mail(subject, email, from_email, [user.email])
+            send_mail(subject, email, from_email, [user.email], html_message=email)
 
 
 class TrueCheckbox(widgets.CheckboxInput):

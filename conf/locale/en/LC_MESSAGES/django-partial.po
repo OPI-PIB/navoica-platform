@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-01-21 14:07+0000\n"
-"PO-Revision-Date: 2021-01-21 14:08:00.244088\n"
+"POT-Creation-Date: 2021-04-27 09:29+0000\n"
+"PO-Revision-Date: 2021-04-27 09:29:13.132391\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -4652,19 +4652,15 @@ msgid "FAQ"
 msgstr ""
 
 #: lms/djangoapps/branding/api.py
-msgid "Legend_title"
-msgstr ""
-
-#: lms/djangoapps/branding/api.py
 msgid "Accessibility Statement"
 msgstr ""
 
 #: lms/djangoapps/branding/api.py
-msgid "Navoica dla dzieci i młodzieży"
+msgid "Legend_title"
 msgstr ""
 
 #: lms/djangoapps/branding/api.py
-msgid "Contact"
+msgid "Navoica dla dzieci i młodzieży"
 msgstr ""
 
 #: lms/djangoapps/branding/api.py
@@ -8928,11 +8924,11 @@ msgstr ""
 msgid "The Warsaw Institute of Banking"
 msgstr ""
 
-#: lms/envs/common.py:2756
+#: lms/envs/common.py
 msgid "University of Economics and Human Sciences in Warsaw"
 msgstr ""
 
-#: lms/envs/common.py:2762
+#: lms/envs/common.py
 msgid "Language learning"
 msgstr ""
 
@@ -9091,6 +9087,14 @@ msgid "Error"
 msgstr ""
 
 #: lms/templates/registration/password_reset_email.html
+msgid "Reset Password"
+msgstr ""
+
+#: lms/templates/registration/password_reset_email.html
+msgid "Dear user"
+msgstr ""
+
+#: lms/templates/registration/password_reset_email.html
 #, python-format
 msgid ""
 "You're receiving this e-mail because you requested a password reset for your"
@@ -9113,18 +9117,46 @@ msgid "Please go to the following page and choose a new password:"
 msgstr ""
 
 #: lms/templates/registration/password_reset_email.html
+#: lms/templates/registration/password_reset_email.html
+msgid "Reset password"
+msgstr ""
+
+#: lms/templates/registration/password_reset_email.html
 msgid ""
 "If you didn't request this change, you can disregard this email - we have "
 "not yet reset your password."
 msgstr ""
 
 #: lms/templates/registration/password_reset_email.html
-msgid "Thanks for using our site!"
+msgid "Enjoy learning with Navoica.pl!"
 msgstr ""
 
 #: lms/templates/registration/password_reset_email.html
-#, python-format
-msgid "The %(platform_name)s Team"
+msgid "NAVOICA team"
+msgstr ""
+
+#: lms/templates/registration/password_reset_email.html
+msgid "This is an automatically generated e-mail - please do not reply to it."
+msgstr ""
+
+#: lms/templates/registration/password_reset_email.html
+msgid "If you have any questions or comments, please"
+msgstr ""
+
+#: lms/templates/registration/password_reset_email.html
+msgid "contact us"
+msgstr ""
+
+#: lms/templates/registration/password_reset_email.html
+msgid "Facebook - Navoica page on Facebook"
+msgstr ""
+
+#: lms/templates/registration/password_reset_email.html
+msgid "Twitter - Navoica page on Twitter"
+msgstr ""
+
+#: lms/templates/registration/password_reset_email.html
+msgid "LinkedIn - Navoica page on LinkedIn"
 msgstr ""
 
 #: lms/templates/wiki/article.html
