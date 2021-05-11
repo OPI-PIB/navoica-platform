@@ -29,24 +29,26 @@ $(document).ready(function() {
 
   var btntip = document.getElementById("btntip");
 
-  btntip.addEventListener("mousemove", function (event) {
-    showTip();
-  });
+  if (btntip) {
+    btntip.addEventListener("mousemove", function (event) {
+      showTip();
+    });
 
-  btntip.addEventListener("mouseout", function (event) {
-    hideTip();
-  });
-
-  btntip.addEventListener("blur", function (event) {
-    hideTip();
-  });
-
-  btntip.addEventListener("click", toggleTip, false);
-
-  btntip.addEventListener('keyup', function (event){
-    var key = event.which || event.keyCode || event.key;
-    if (key === 27) {
+    btntip.addEventListener("mouseout", function (event) {
       hideTip();
-    }
-  });
+    });
+
+    btntip.addEventListener("blur", function (event) {
+      hideTip();
+    });
+
+    btntip.addEventListener("click", toggleTip, false);
+
+    btntip.addEventListener('keyup', function (event) {
+      var key = event.which || event.keyCode || event.key;
+      if (key === 27) {
+        hideTip();
+      }
+    });
+  }
 });
