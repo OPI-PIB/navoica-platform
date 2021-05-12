@@ -2,19 +2,20 @@
 # Copyright (C) 2021 edX
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 # EdX Team <info@edx.org>, 2021.
-#
+# 
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2021
 # Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2021
+# Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2021
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-04-12 11:58+0000\n"
+"POT-Creation-Date: 2021-05-11 06:50+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -399,6 +400,7 @@ msgid "Account"
 msgstr "Konto"
 
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
+#: lms/templates/courseware/course_navigation.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
 #: lms/templates/static_templates/help.html
@@ -2030,9 +2032,13 @@ msgstr "Proszę wypełnić poniższe pola w celu zarejestrowania konta."
 #: lms/templates/register-form.html lms/templates/register-form.html
 #: lms/templates/register-form.html lms/templates/register-form.html
 #: lms/templates/register-form.html lms/templates/register-form.html
-#: lms/templates/register-form.html
+#: lms/templates/register-form.html lms/templates/register-form.html
 msgid "required"
 msgstr "wymagane"
+
+#: lms/templates/register-form.html lms/templates/register.html
+msgid "Confirm E-mail"
+msgstr "Potwierdź adres e-mail"
 
 #: lms/templates/register-form.html lms/templates/register-form.html
 msgid "Click to show password"
@@ -2261,6 +2267,10 @@ msgid "A properly formatted e-mail is required"
 msgstr "Wymagany jest poprawny format adresu e-mail."
 
 #: lms/templates/register.html
+msgid "Emails Don't Match"
+msgstr "Podane adresy e-mail nie pasują do siebie"
+
+#: lms/templates/register.html
 msgid "Your legal name must be a minimum of two characters long"
 msgstr "Imię i nazwisko muszą się składać z co najmniej dwóch znaków."
 
@@ -2292,6 +2302,10 @@ msgstr "Musisz zaakceptować zasady Kodeksu Honorowego."
 #: lms/templates/register.html
 msgid "A valid confirm password is required"
 msgstr "Wymagane jest prawidłowe hasło potwierdzające."
+
+#: lms/templates/register.html
+msgid "A valid confirm email is required"
+msgstr "Wymagany jest prawidłowy e-mail potwierdzający"
 
 #: lms/templates/register.html
 msgid "You will get access to free courses at {platform_name}."
@@ -4599,6 +4613,14 @@ msgstr "wymaga uwagi"
 msgid "Course progress"
 msgstr "Postęp w kursie"
 
+#: lms/templates/courseware/course_navigation.html
+msgid ""
+"To earn the certificate, you must reach the passing threshold, which you can"
+" check in the <strong>Progress</strong> tab."
+msgstr ""
+"Aby uzyskać zaświadczenie musisz osiągnąć próg zaliczeniowy, który "
+"sprawdzisz w zakładce <strong>Postęp</strong>."
+
 #: lms/templates/courseware/course_updates.html
 #: lms/templates/courseware/course_updates.html
 msgid "Hide"
@@ -4963,6 +4985,21 @@ msgstr "Wyświetl system oceniania w Studio"
 #: lms/templates/courseware/progress.html
 msgid "Course Progress for Student '{username}' ({email})"
 msgstr "Wyniki studenta '{username}' ({email})"
+
+#: lms/templates/courseware/progress.html
+msgid ""
+"To pass the course, you must meet the {strong_start}passing "
+"threshold{strong_end} by completing the graded assignments and tests in the "
+"course (see: the chart below). A {strong_start}certificate{strong_end} will "
+"be generated within {strong_start}24 hours{strong_end} of reaching the "
+"passing threshold. You will find it in {a_start}My Courses{a_end} tab."
+msgstr ""
+"Aby zaliczyć kurs, musisz osiągnąć {strong_start}próg "
+"zaliczeniowy{strong_end}, wykonując klasyfikowane zadania i testy w kursie "
+"(patrz: wykres poniżej). {strong_start}Zaświadczenie{strong_end} zostanie "
+"wygenerowane w przeciągu {strong_start}24 godzin{strong_end} od momentu "
+"osiągnięcia progu zaliczeniowego. Znajdziesz je w zakładce {a_start}Moje "
+"kursy{a_end}."
 
 #: lms/templates/courseware/progress.html
 msgid "View Certificate"
