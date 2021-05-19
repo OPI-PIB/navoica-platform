@@ -137,7 +137,7 @@ body li {
 
     background: rgba(255,255,255,.5);
     box-shadow: 800px 0 0 rgba(255,255,255,.5), -800px 0 0 rgba(255,255,255,.5);
-    
+
     border-bottom: 0 !important;
     padding: 32px 0 48px;
 }
@@ -232,7 +232,7 @@ body li {
     justify-content: center;
     align-items: center;
     /*
-    background-image: url("/static/images/bg-brand.svg"); 
+    background-image: url("/static/images/bg-brand.svg");
     */
     background-size: 128px;
     background-position: center center;
@@ -339,9 +339,8 @@ p a:not(.btn) {
 .jumbotron.jumbotron-index {
     border-bottom: 1px solid #eee;
     padding: 0;
-    background: url(https://pixabay.com/get/ea37b70a2ff6003ed1534705fb0938c9bd22ffd41cb413499cf4c97da6/paper-3265721_1920.jpg);
     background-position: right bottom;
-    background: url(https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80);
+    background: url(../assets/page-header.jpeg);
     background-position: center center;
     background-size: cover;
 /*     background-size: 120%; */
@@ -387,7 +386,7 @@ p a:not(.btn) {
     margin-bottom: 64px !important;
     text-align: center;
     line-height: 1.25;
-    
+
     color: #000;
     text-shadow: none;
     font-family: 'Open Sans', sans-serif;
@@ -448,7 +447,7 @@ p a:not(.btn) {
     font-size: 40px;
     font-weight: 400;
     letter-spacing: .02em;
-    
+
     font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     font-weight: 300;
