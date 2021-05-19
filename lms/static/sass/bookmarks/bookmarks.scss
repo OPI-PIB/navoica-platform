@@ -20,7 +20,7 @@
   }
 
   body > header {
-    background-image: url(https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=2767&q=80);
+    background-image: url(../../assets/page-header.jpeg);
     background-position: 50% 100%;
     background-size: cover;
     box-sizing: border-box;
@@ -901,7 +901,7 @@
 
       #results {
         margin-top: 0!important;
-  
+
         .card {
           &-body {
             align-items: flex-start;
@@ -936,7 +936,7 @@
             .card-desc {
               margin: 0 0 8px;
             }
-          }  
+          }
         }
       }
     }
@@ -1154,7 +1154,7 @@
 .list-item-breadcrumbtrail:nth-child(1)::before {
   content: "Moduł: ";
   font-weight: normal;
-}  
+}
 
 .list-item-breadcrumbtrail:nth-child(1) {
   font-weight: bold;
@@ -1165,8 +1165,8 @@
     content: " Lekcja: ";
     font-family: Open Sans;
     font-weight: normal;
-  }  
-} 
+  }
+}
 
 .bookcrumbs:nth-child(1)::before {
   content: "\f054";
@@ -1197,7 +1197,7 @@
     margin: 20px auto;
   }
 
-  .nav-label, 
+  .nav-label,
   .sr {
     background: #161616 !important;
     color: #fff !important;
