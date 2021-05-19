@@ -16,8 +16,6 @@ course_mode_class = course_mode if course_mode else ''
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="${static.url(static.get_value('favicon_path', settings.FAVICON_PATH))}"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <base href="${settings.LMS_ROOT_URL}">
     <title>${document_title}</title>
 
@@ -28,6 +26,8 @@ course_mode_class = course_mode if course_mode else ''
 
 <body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class} A4 "
       data-view="valid-accomplishment" >
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <div class="wrapper-view" dir="${dir_rtl}">
 
