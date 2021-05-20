@@ -502,16 +502,18 @@ def render_pdf(html,return_content=False):
             if img.get("src", None):
                 img_src = img['src']
                 o = urlparse(img_src)
-                img['src'] = o._replace(netloc=settings.INTERNAL_HOST_IP, scheme="http").geturl()
+                if o.netloc == "":
+                    img['src'] = o._replace(netloc=settings.INTERNAL_HOST_IP, scheme="http").geturl()
 
         for href in soup.find_all('link'):
             link_href = href['href']
             o = urlparse(link_href)
-            href['href'] = o._replace(netloc=settings.INTERNAL_HOST_IP, scheme="http").geturl()
+            if o.netloc == "":
+                href['href'] = o._replace(netloc=settings.INTERNAL_HOST_IP, scheme="http").geturl()
 
     html = unicode(soup)
     log.info(
-        "Cert [PDF]: %s", html
+        "Cert [PDF]: %s" % html
     )
 
     multipart_form_data = {
@@ -528,7 +530,7 @@ def render_pdf(html,return_content=False):
 
     filename = "certyfikat.pdf"
 
-    if (r.status_code == 200):
+    if r.status_code == 200:
         if return_content:
             return r.content
         response = HttpResponse(r, content_type='application/pdf')

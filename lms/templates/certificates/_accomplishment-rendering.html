@@ -22,7 +22,7 @@ course_mode_class = course_mode if course_mode else ''
                 <div>
                     <div id="logos">
                         <div id="platform">
-                            <img src="${settings.LMS_ROOT_URL}/static/images/logo-light-bg.svg" alt="Navoica">
+                            <img src="${static.url('images/logo-light-bg.svg')}" alt="Navoica">
                         </div>
                         <div id="administrator">
                             <%
@@ -36,9 +36,11 @@ course_mode_class = course_mode if course_mode else ''
                                 if not finders.find('images/org/{}.png'.format(organizer)):
                                     organizer_logo_name = get_translation_in('pl', organizer)
 
+                                img = 'images/org/'+str(organizer_logo_name)+'.png'
+
                             %>
 
-                            <img src="${settings.LMS_ROOT_URL}/static/images/org/${organizer_logo_name}.png" alt="${organizer}">
+                            <img src="${static.url(img)}" alt="${organizer}">
                         </div>
                     </div>
                     <div id="person">
@@ -76,7 +78,7 @@ course_mode_class = course_mode if course_mode else ''
                                 % if signatory['signature_image_path']:
                                     <div class="signature">
                                         <img style="max-width: 100%; max-height: 100%" class="signatory-signature"
-                                             src="${settings.LMS_ROOT_URL}${signatory['signature_image_path']}">
+                                             src="${signatory['signature_image_path']}">
                                     </div>
                                 % endif
                                 <div class="value">${signatory['name']}</div>
@@ -88,7 +90,7 @@ course_mode_class = course_mode if course_mode else ''
                         % endif
                     </div>
                     % if append_logos:
-                            <img style="width: 50%; margin: 0 auto;" src="${settings.LMS_ROOT_URL}/static/images/certificates/eu_logos.png">
+                            <img style="width: 50%; margin: 0 auto;" src="${static.url('images/certificates/eu_logos.png')}">
                         % endif
                 </div>
                 <footer>
