@@ -49,7 +49,11 @@ from student.models import LinkedInAddToProfileConfiguration
 from util import organizations_helpers as organization_api
 from util.date_utils import strftime_localized
 from util.views import handle_500
+
 import requests
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
+
 from django.contrib.auth.decorators import login_required
 from bs4 import BeautifulSoup
 
@@ -525,8 +529,19 @@ def render_pdf(html,return_content=False):
         'landscape': (None, 'true',),
     }
 
+    retry_strategy = Retry(
+        total=2,
+        status_forcelist=[504, ],
+        method_whitelist=["POST", ]
+    )
+
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    http = requests.Session()
+    http.mount("https://", adapter)
+    http.mount("http://", adapter)
+
     # $ docker run --rm -p 3000:3000 thecodingmachine/gotenberg:5
-    r = requests.post(settings.GOTENBERG_URL + 'convert/html', files=multipart_form_data)
+    r = http.post(settings.GOTENBERG_URL + 'convert/html', files=multipart_form_data)
 
     filename = "certyfikat.pdf"
 
