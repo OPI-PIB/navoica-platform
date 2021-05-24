@@ -531,7 +531,7 @@ def render_pdf(html,return_content=False):
 
     retry_strategy = Retry(
         total=2,
-        status_forcelist=[504, ],
+        status_forcelist=[408, 429, 500, 502, 503, 504, ],
         method_whitelist=["POST", ]
     )
 
