@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-05-11 06:50+0000\n"
-"PO-Revision-Date: 2021-05-11 06:50:45.590975\n"
+"POT-Creation-Date: 2021-06-08 12:21+0000\n"
+"PO-Revision-Date: 2021-06-08 12:21:58.240475\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: en\n"
@@ -280,16 +280,6 @@ msgstr ""
 msgid "Course Category"
 msgstr ""
 
-#: cms/templates/settings.html lms/templates/courseware/course_about.html
-msgid "Course Timetable"
-msgstr ""
-
-#: cms/templates/settings.html lms/templates/courseware/course_about.html
-msgid "{week} week"
-msgid_plural "{week} weeks"
-msgstr[0] ""
-msgstr[1] ""
-
 #: cms/templates/settings.html lms/templates/preview_menu.html
 #: lms/templates/preview_menu.html lms/templates/courseware/course_about.html
 msgid "Course Description"
@@ -390,6 +380,8 @@ msgid "Account"
 msgstr ""
 
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
 #: lms/templates/courseware/course_navigation.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
@@ -3998,6 +3990,7 @@ msgid "Enrollment in this course is by invitation only"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
 msgid "Enrollment is Closed"
 msgstr ""
 
@@ -4019,30 +4012,92 @@ msgid "Organizer"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
-msgid "Classes Start"
+msgid "Course costs"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
-msgid "Classes End"
+msgid "Free course"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
-msgid "Enrollment start"
+msgid ""
+"The course is financed by the course organizer, the EU or the State "
+"Treasury."
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
-msgid "Enrollment end"
+#: lms/templates/dashboard/_dashboard_certificate_information.html
+#: lms/templates/dashboard/_dashboard_certificate_information.html
+msgid "Certificate"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
-msgid "Hours of effort per week"
+msgid "Free of charge"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html
-msgid "{effort} hour"
-msgid_plural "{effort} hours"
+msgid "Course type"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "Online course"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "Enrollment dates"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "from"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "to"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "Enrollment ends in: "
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "{year} yr"
+msgid_plural "{year} yr"
 msgstr[0] ""
 msgstr[1] ""
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "mos."
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "{day} day"
+msgid_plural "{day} days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "hr"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "min."
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "Course availability on the platform"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html
+msgid "During this time, you will be able to earn a certificate of completion"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html
 msgid "Fill all fields in Schedule & Details Settings!"
@@ -4709,11 +4764,6 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 msgid "This link will open the certificate web view"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_certificate_information.html
-#: lms/templates/dashboard/_dashboard_certificate_information.html
-msgid "Certificate"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html

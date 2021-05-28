@@ -12131,7 +12131,7 @@ fieldset {
 
 .course-details-content > h6 {
   margin-bottom: 0;
-  line-height: 1.6;
+//  line-height: 1.6;
 }
 
 #content #register-form .message {
@@ -15707,12 +15707,16 @@ $background: #F3F5F6;
   line-height: unset;
 }
 
+.h-14 {
+  line-height: 0.875rem;
+}
+
 .h-18 {
   line-height: 1.125rem;
 }
 
 .h-19 {
-  line-height: 1.1875rem;
+  line-height: 1.188rem;
 }
 
 .h-20 {
@@ -17008,6 +17012,10 @@ $progresstab-hover-color: #10477E;
 
 .progress-text {
   margin-right: -8px;
+
+  #tooltip1 {
+    width: 360px;
+  }
 }
 
 /** tooltip **/
@@ -17023,17 +17031,21 @@ $progresstab-hover-color: #10477E;
 .tooltip-text {
   display: none;
   border: 1px solid $line-color-tooltip;
-  padding: 16px;
+  padding: 17px 12px;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
-  width: 360px;
   text-align: left;
   position: absolute;
   z-index: 1;
-  margin-right: 8px;
-  margin-top: 2rem;
   background: #FFFFFF;
   color: $text-color-tooltip;
   transition: opacity  0s linear 1s;
+  right:20%;
+  top:100%;
+  font-weight: 400;
+
+  @media screen and (max-width: 320px) {
+    max-width: 300px;
+  }
 
   &::after, &::before {
     content: "";
@@ -17079,3 +17091,59 @@ $progresstab-hover-color: #10477E;
     }
   }
 }
+
+
+//podstawowe informajce
+$tooltip-course-details: #66737F;
+$line-color-course-details: #DEE2E6;
+$end-color-course-details: #4A5866;
+
+.course__details {
+  padding-left: 1.125rem;
+  .course__details {
+    &__line {
+      margin: 24px 0 24px 58px;
+      color: $line-color-course-details;
+      width: 49px;
+    }
+    &__icon {
+      margin: 0 24px 0 0;
+      width: 2.125rem;
+      height: 2.125rem;
+      background-size: auto;
+      background-size: contain;
+    }  
+    &__margin {
+      margin-top: 0;
+      margin-right: 24px
+    }
+
+  }
+  .cost-icon {
+    background: url(/static/images/koszt-kolko.svg) no-repeat center;
+  }
+  .cert-icon {
+    background: url(/static/images/zaswiadczenie-kolko.svg) no-repeat center;
+  }
+  .form-icon {
+    background: url(/static/images/forma-kolko.svg) no-repeat center;
+  }
+  .difficulty-icon {
+    background: url(/static/images/poziom-kolko.svg) no-repeat center;
+  }
+  .course-details-content {
+    margin-top: -1px;
+  } 
+  .btn-tooltip {
+    color: $tooltip-course-details;
+  }
+  .end-color {
+    color: $end-color-course-details;
+  }
+  #tooltip1 {
+    width: 203px;
+  }
+  #tooltip2 {
+    width: 297px;
+  }
+}  
