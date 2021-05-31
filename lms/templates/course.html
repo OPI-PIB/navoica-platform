@@ -9,7 +9,7 @@ from datetime import datetime
 <%page args="course" expression_filter="h"/>
 
 <div class="course__card">
-	<a href="${reverse('about_course', args=[text_type(course.id)])}" class="card h-100 js-slider-item">
+	<a href="${reverse('about_course', args=[text_type(course.id)])}" class="card card__course h-100 js-slider-item">
 		<div class="course__card-image" style="background-image: url('${course.course_image_url}');"></div>
 		<div class="course__card-body">
 			<%

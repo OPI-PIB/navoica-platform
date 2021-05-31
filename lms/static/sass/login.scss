@@ -214,12 +214,13 @@
 .login__section input.form-control,
 .login__section .select-wrapper .custom-select,
 .login__section input.error-field,
-.paragon__form-control.paragon__is-invalid {
+.paragon__form-control.paragon__is-invalid 
+.login__section .input-main {
   height: 2.375rem;
   background-color: var(--color-ffffff);
   border-color: var(--color-919191);
   border-style: solid;
-  border-width: 1px;;
+  border-width: 1px;
   display: block;
   width: 100%;
   text-indent: 12px;
@@ -363,7 +364,7 @@
 
 .login__section {
   #education-level, #gender, #yob {
-    color: var(--color-686970);
+    color: var(--color-919191);
   }
 }
 
@@ -570,26 +571,11 @@
   display: block;
   width: 100%;
   text-indent: 12px;
-
-  &:hover {
-    border: 2px solid var(--color-919191);
-    opacity: 1;
-  }
-
-  &:active {
-    border: 1px solid var(--color-008080);
-    outline: 3px solid #bfdfdf;
-  }  
 }
 
 #forgot-password-modal input.error-field {
   border: 1px solid var(--color-5b5b5b);
   border-bottom: 2px solid var(--color-e41d37);
-
-  &:hover {
-    border: 2px solid var(--color-919191);
-    opacity: 1;
-  }
 }
 
 @media (max-width: 767px) {
@@ -731,4 +717,3 @@
 .paragon__btn {
   margin-top: 1.625rem;
 }
-

@@ -1,0 +1,655 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.btn-primary, 
+.btn.btn-primary, 
+.wrapper-account-settings #u-field-link-password,
+.openassessment .openassessment_student_info_form .action--submit-username,
+.show > .btn-primary.dropdown-toggle {
+  @include a11y-base;
+
+  &:hover {
+    background: var(--color-b7152b);
+    color: var(--color-ffffff);
+    border-color: var(--color-b7152b);
+  }
+}
+
+.btn-outline-primary,
+.btn.btn-outline-primary,
+.page-header-search .input-text[type="search"] + button,
+.show > .btn-outline-primary.dropdown-toggle,
+.openassessment .step--self-assessment .self-assessment__assessment .action--save, .openassessment .step--peer-assessment .peer-assessment__assessment .action--save, .openassessment .step--response .response__submission__actions .action--save, .openassessment .step--response .response__submission__content .action--save {
+  @include a11y-base;
+
+  &:hover {
+    outline: 0.4px solid var(--color-b7152b);
+    color: var(--color-b7152b);
+    background-color: var(--color-ffffff);
+    border-color: var(--color-b7152b);
+  }
+
+
+  &:not([disabled]):not(.disabled):active {
+    background-color: var(--color-ffffff);
+    box-shadow: none;
+    color: var(--color-e41d37);
+  }
+}
+
+//cancel button in new post - reset white background
+.new-post-article .btn.cancel {
+  &:hover, &:focus, &:active {
+    background-color: inherit;
+  }  
+}
+
+.btn.btn-outline-light, .bookmark-button {
+  @include a11y-base;
+
+  &:hover {
+    color: var(--color-b7152b) !important;
+    border-color: #dee2e6;
+  }
+}
+
+#discovery-form1, .page-header-search {
+  .btn-outline-secondary {
+    @include a11y-input;
+
+    &:hover {
+      color: #212529;
+      background-color: #adb5bd;
+      border-color: #adb5bd;
+    }
+  }
+}  
+
+a {
+  @include a11y-base;
+
+  &:hover {
+    color: var(--color-b7152b);
+    text-decoration: underline;
+  }
+}
+
+
+//social icon in footer
+footer .social-link {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }  
+
+  .fb-link-icon,
+  .social-icon {
+    @include a11y-base;
+
+    &:hover {
+      background: var(--color-b7152b);
+      border: 1px solid transparent;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }  
+}
+
+.card__course {
+  @include a11y-card;
+
+  &:hover {
+    box-shadow: 0px 3px 9px #9AA3AC;
+    text-decoration: none;
+    color: initial;
+    z-index: 1;
+  }
+}
+
+.accordion.faq .card {
+  @include a11y-none;
+}
+
+.course__tree .card button {
+  @include a11y-tree;
+}
+
+.course__tree .card a {
+  @include a11y-tree;
+
+  &:hover {
+    color: var(--color-b7152b);
+    text-decoration: underline;
+  }
+}  
+
+#header-navigation .dropdown-menu .dropdown-item {
+  @include a11y-dropdown;
+
+  &:hover {
+    color: #000;
+    text-decoration: none;
+    background-color: #eee;
+    border-left: 5px #b8162b solid;
+  }
+}
+
+.input-navbar {
+  @include a11y-form;
+
+  &:hover {
+    border: 1.2px solid var(--color-b7152b);
+    i {
+      color: var(--color-b7152b);
+    }  
+  }
+}
+
+#header #search-query,
+#header #button-addon2 {
+  @include a11y-search-main;
+
+  &:hover {
+    border: 2px solid var(--color-828f9b);
+  }
+}
+
+#filters .course__filter .list-group-item-action {
+  @include a11y-filters;
+
+  &:hover {
+    background: var(--color-f8f9fa);
+  } 
+}
+
+.input-main, #forgot-password-modal .input-main {
+  position: relative;
+  @include a11y-input-main;
+
+  &:hover {
+    outline: 2px solid var(--color-5b6671);
+    outline-offset: 0;
+  }
+}
+
+.login-input {
+  @include a11y-input-border;
+}
+
+.login .custom-control-input:not(:checked) ~ .custom-control-label:hover::after {
+  border: 11px #F4F4F4;
+  border-radius: 50%;
+  box-shadow: 0 0 0 11px #F4F4F4;
+  z-index: 1;
+}
+
+//checkbox - login and register
+
+.custom-control-input {
+  @include a11y-checkbox-login;
+}
+
+.faq-page button {
+  @include a11y-faq-accordion;
+
+  &:hover {
+    background: var(--color-f8f9fa);
+  }
+}
+
+//inputs without login ang registartion
+.input-base,
+.input-base.form-control,
+.wmd-input, 
+#action-tab-select,
+.new-post-article input,
+.new-post-article select,
+.home-helpgrid .email-setting,
+#u-field-select-country,
+#u-field-select-level_of_education, 
+#u-field-select-gender, 
+#u-field-select-year_of_birth, 
+#u-field-select-language_proficiencies,
+.openassessment .step--response .response__submission__content .submission__answer__part__text textarea,
+.openassessment .openassessment_student_info_form .label input,
+.step--student-training .student-training__assessment .assessment__rubric__question--feedback textarea, .step--student-training .student-training__display__response, .openassessment .submission__feedback__fields textarea, .openassessment .step--self-assessment .self-assessment__assessment .assessment__rubric__question--feedback textarea, .openassessment .step--self-assessment .self-assessment__display__response, .openassessment .step--peer-assessment .peer-assessment__assessment .assessment__rubric__question--feedback textarea, .openassessment .step--peer-assessment .peer-assessment__display__response, .openassessment .step--response .response__submission__content .submission__file__description textarea, .openassessment .step--response .response__submission__content .submission__answer__part__text textarea, .openassessment .staff-assessment__assessment .assessment__rubric__question--feedback textarea, .openassessment .staff-assessment__display__response, .step--student-training .student-training__assessment .question__answers .answer--feedback .answer__value, .openassessment .step--self-assessment .self-assessment__assessment .question__answers .answer--feedback .answer__value, .openassessment .step--peer-assessment .peer-assessment__assessment .question__answers .answer--feedback .answer__value, .openassessment .staff-assessment__assessment .question__answers .answer--feedback .answer__value {
+  @include a11y-input;
+
+  &:hover {
+    border: 2px solid #AEB8C2 !important;
+  }
+}
+
+#filters .list-group-item-action .check__box {
+  @include a11y-checkbox;
+
+  &:hover {
+    border: 2px solid #AEB8C2 !important;
+  }
+}
+
+//input discussion
+.forum-search .search-input {
+  @include a11y-input;
+
+  &:hover {
+    outline: 2px solid #AEB8C2;
+    outline-offset: 0;
+    z-index: 1;
+  }
+}
+
+//input discussion
+
+
+.card-detail {
+  &:hover {
+    color: initial;
+    text-decoration: none;
+  }
+}
+
+
+#forgot-password-modal .close-modal {
+  @include a11y-base;
+}
+
+.cookiealert a, .forum-nav-thread-list-wrapper .control-dismiss {
+  &:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  @include a11y-black;   
+}
+
+
+//button in course tree
+.btn__tree {
+  @include a11y-base;
+
+    &:hover {
+      span {
+        color: var(--color-b7152b);
+      }
+      .expand__tree {
+        text-decoration: underline;
+      }
+  }
+}
+
+
+//tab in course: course, discussion, progress
+.course-tab {
+   @include a11y-tree;
+}
+
+//search button discussion
+.forum-search .search-button {
+  @include a11y-input;
+
+  &:hover {
+      color: #212529;
+      background-color: #adb5bd;
+      border-color: #adb5bd;
+  }
+}
+
+//link discussion thread
+a.forum-nav-thread-link {
+   @include a11y-tree;
+
+  &:hover {
+    color: var(--color-b7152b);
+    .forum-nav-thread-title {
+      text-decoration: underline !important;
+    }  
+  }
+}
+
+//discussion topis search filter sort
+.btn-group .btn:first-child {
+  @include a11y-outline;
+
+  &:hover {
+    background: var(--color-f4f4f4);
+    border: 1px solid var(--color-f4f4f4);
+    border-radius: 50%
+  }
+}
+
+.forum-nav-sort-control, .forum-nav-filter-main-control {
+  @include a11y-outline;
+}
+
+//breadcrumb discusion
+.btn-link.all-topics.btn-fake-breadrumbs {
+  &:active,
+  &:focus {
+    outline:none !important;
+    span {
+      outline: 2px solid var(--color-40474f);
+      box-shadow: none !important;
+      border: none !important;
+    }
+  }
+
+  [data-whatintent='mouse'] &:active,
+  [data-whatintent='mouse'] &:focus,
+  [data-whatintent='touch'] &:active,
+  [data-whatintent='touch'] &:focus {
+    span {
+      outline: none;
+    }  
+  }
+
+  &:hover {
+    span {
+      color: var(--color-b7152b);
+      text-decoration: underline;
+    }  
+  }
+}
+
+.breadcrumbs {
+  &:focus {
+    outline: unset;
+  }
+}
+
+.tickLabel span  {
+  @include a11y-outline;
+}
+
+.wmd-button {
+  &:active,
+  &:focus {
+    outline:none !important;
+    span {
+      border-bottom: 1px solid var(--color-40474f);
+      margin-bottom: -1px;
+      box-shadow: none;
+    }
+  }
+}
+
+.action-button.action-vote {
+  &:active,
+  &:focus {
+    outline:none !important;
+  }  
+}
+
+.link__secondary,
+#forgot-password-modal a {
+  @include a11y-base;
+
+  &:hover {
+    color: var(--color-005252);
+    text-decoration: none;
+    border-bottom-color: var(--color-005252);
+  }
+}
+
+//button ad new post in discussion
+.new-post-btn {
+  &:hover {
+    background-color: var(--color-40474f);
+    border: 1px solid transparent;   
+  }
+}
+
+.discussion .action-button {
+  @include a11y-outline;
+}
+
+//close modal window, close window in ORA
+button.close-window,
+button.close-modal, 
+.modal-window .modal-dismiss-button {
+  @include a11y-modal-close;
+}
+
+.problem input,
+.problem select, 
+.staff-modal input,
+.history-modal input,
+.keyboard-help-button {
+  @include a11y-problem;
+}
+
+.nav__breadcrumbs {
+  overflow: visible !important;
+  .has-breadcrumbs {
+    overflow: visible !important;
+  }
+}
+
+.xblock--drag-and-drop .drag-container .option[draggable="true"]:focus {
+    outline: none;
+    box-shadow: none;
+}    
+
+.xblock--drag-and-drop .drag-container .option[draggable="true"] {
+  @include a11y-border;
+}
+
+//btn close discussion in course
+#seq_content .vert .search-alert-controls button {
+  @include a11y-base;
+
+  &:hover {
+    .icon {
+      color: var(--color-b7152b);
+     }
+
+  }  
+}
+
+.problem .notification .notification-btn-wrapper .review-btn {
+  @include a11y-outline;
+}
+
+.vjs-control-bar div button, 
+.vjs-control-bar .vjs-play-control,
+.vjs-control-bar .vjs-fullscreen-control {
+  &:active,
+  &:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: -3px;
+    text-decoration: none;
+    box-shadow: none;
+  }
+
+  [data-whatintent='mouse'] &:active,
+  [data-whatintent='mouse'] &:focus,
+  [data-whatintent='touch'] &:active,
+  [data-whatintent='touch'] &:focus {
+    outline: none;
+  }
+}
+
+.vjs-control-bar .vjs-progress-holder,
+.vjs-control-bar .vjs-volume-bar,
+.vjs-control-bar .vjs-brand-quality-link {
+  &:active,
+  &:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 6px;
+    text-decoration: none;
+    box-shadow: none;
+  }
+
+  [data-whatintent='mouse'] &:active,
+  [data-whatintent='mouse'] &:focus,
+  [data-whatintent='touch'] &:active,
+  [data-whatintent='touch'] &:focus {
+    outline: none;
+  }
+}
+
+.problem .notification .notification-btn-wrapper .hint-button {
+  @include a11y-base;
+
+  &:hover {
+    border: 1.2px solid var(--color-b7152b);
+    color: var(--color-b7152b);
+  }
+}
+
+.wrapper--openassessment .wrapper--staff-area .wrapper--staff-toolbar .ui-staff__button,
+.openassessment .openassessment__steps__step.is--in-progress  button,
+.wrapper--openassessment .wrapper--staff-area .wrapper--ui-staff .ui-staff_close_button,
+.openassessment .ui-slidable__container .staff__grade__show-form.ui-slidable, 
+.openassessment .list--actions .action--submit {
+  @include a11y-base;
+}
+
+.openassessment .openassessment__steps__step.is--in-progress  header button,
+.openassessment .ui-slidable__container .ui-slidable {
+ @include a11y-tree;
+} 
+
+//zone ind drag and drop problem
+.xblock--drag-and-drop .zone {
+  @include a11y-outline;
+
+  &:focus-visible {
+    outline: none;
+  }
+}  
+
+.xblock--drag-and-drop .popup .close-feedback-popup-desktop-button {
+  @include a11y-black;
+}
+
+/*** WEBINAR FERIE BEZ NUDY ***/
+.webinar__mini-block {
+  @include a11y_webinar_block;
+
+  &:hover {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 1px 6px var(--color-lightblue);
+  }
+}
+
+.webinar__block-link {
+  @include a11y_webinar_link;
+
+  &:hover {
+    color: #2f5dab;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+.webinar__block__content-video {
+  @include a11y_webinar;
+}
+
+.webinar-subscription__input {
+  @include a11y-webinar-input;
+}
+
+.webinar-subscription__submit-btn {
+  @include a11y-black;
+}
+
+/** new main page **/
+.footer .footer-block__link { //link in footer
+  @include a11y_new_footer_a;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--footer-link-color);
+  }
+}
+
+/** header navigtion **/
+.header-navigation .btn-link {
+  position: relative;
+  @include a11y_new_btn;
+}
+
+.header-navigation .active:focus {
+  border-bottom: none !important;
+}
+
+.header-navigation {
+  &__btn-login,
+  &__btn-register {
+    position: relative;
+    @include a11y_new_btn_search;
+  }
+}
+
+
+.header-navigation__search {
+  @include a11y-new-input;
+}
+
+.header-navigation__search-input:focus {
+  outline: none !important;
+}
+
+.header-navigation__search-button:focus {
+  outline: none !important;
+}
+
+.navoica-button__primary {
+  @include a11y_new_btn_primary;
+
+  &:hover {
+    background-color: #155CA2;
+    text-decoration: none;
+  }
+}
+
+.navoica-button__outline {
+  @include a11y_new_btn_outline;
+
+  &:hover {
+      background-color: #F6F9FC;
+      color: #155CA2;
+      border: 0.5px solid #155CA2;
+      text-decoration: none;
+  }
+}
+
+.main__home-page .card__course {
+  @include a11y-new-card;
+  &:focus, &:active {
+    .course__card-body {
+      bottom: 0%;
+      height: 61%;
+    }
+  }
+}
+
+.slider__arrow--right,  .slider__arrow--left {
+  @include a11y_new_slider_arrow;
+}
+
+.footer-block a {
+  position: relative;
+  @include a11y_new_footer_a;
+
+  &:hover {
+    color: var(--footer-link-color);
+    text-decoration: underline !important;
+  }
+}
+
+
+.header-navigation a {
+  position: relative;
+  @include a11y_new_a;
+}
