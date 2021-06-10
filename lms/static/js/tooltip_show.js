@@ -1,54 +1,68 @@
-function showTip() {
-  var tip = document.getElementById("tooltip");
-  var btntip = document.getElementById("btntip");
-  var message = btntip.getAttribute('tooltip-message');
-  btntip.setAttribute("aria-expanded", "true");
+
+function showTip(idbtn) {
+  var idtip = idbtn.getAttribute('aria-describedby');
+  var tip = document.getElementById(idtip);
+  var message = idbtn.getAttribute('tooltip-message');
+  idbtn.setAttribute("aria-expanded", "true");
   tip.innerHTML=message;
   tip.setAttribute("style", "display: block;");
 }
 
-function hideTip() {
-  var tip = document.getElementById("tooltip");
-  var btntip = document.getElementById("btntip");
-  btntip.setAttribute("aria-expanded", "false");
+function hideTip(idbtn) {
+  var idtip = idbtn.getAttribute('aria-describedby');
+  var tip = document.getElementById(idtip);
+  idbtn.setAttribute("aria-expanded", "false");
   tip.innerHTML = "";
   tip.setAttribute("style", "display: none;");
 }
 
-function toggleTip (event) {
-  var tip = document.getElementById("tooltip");
+function toggleTip (idbtn) {
+  var idtip = idbtn.getAttribute('aria-describedby');
+  var tip = document.getElementById(idtip);
   if (window.getComputedStyle(tip).getPropertyValue('display') === 'none') {
-    showTip();
+    showTip(idbtn);
   }
   else {
-    hideTip();
+    hideTip(idbtn);
   }
 }
 
 $(document).ready(function() {
 
-  var btntip = document.getElementById("btntip");
+  var btntip = document.getElementsByClassName('js-tooltips');
 
+  var tooltips = document.querySelectorAll('.js-btntip');
+  
   if (btntip) {
-    btntip.addEventListener("mousemove", function (event) {
-      showTip();
-    });
+    for (var i= 0; i < tooltips.length; i++) {
+  
+      tooltips[i].addEventListener("mousemove", function (event) {
+        var idbtn = document.getElementById(this.getAttribute('id'));
+        showTip(idbtn);
+      });
 
-    btntip.addEventListener("mouseout", function (event) {
-      hideTip();
-    });
+      tooltips[i].addEventListener("mouseout", function (event) {
+        var idbtn = document.getElementById(this.getAttribute('id'));
+        hideTip(idbtn);
+      });
 
-    btntip.addEventListener("blur", function (event) {
-      hideTip();
-    });
+      tooltips[i].addEventListener("blur", function (event) {
+        var idbtn = document.getElementById(this.getAttribute('id'));
+        hideTip(idbtn);
+      });
 
-    btntip.addEventListener("click", toggleTip, false);
+      tooltips[i].addEventListener("click", function (event) {
+        var idbtn = document.getElementById(this.getAttribute('id'));
+        toggleTip(idbtn);
+      });  
 
-    btntip.addEventListener('keyup', function (event) {
-      var key = event.which || event.keyCode || event.key;
-      if (key === 27) {
-        hideTip();
-      }
-    });
+      tooltips[i].addEventListener('keyup', function (event) {
+        var key = event.which || event.keyCode || event.key;
+        if (key === 27) {
+          var idbtn = document.getElementById(this.getAttribute('id'));
+          hideTip(idbtn);
+        }
+      });
+    }
   }
 });
