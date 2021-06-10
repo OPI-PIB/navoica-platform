@@ -1361,6 +1361,7 @@ base_vendor_js = [
     'js/vendor/URI.min.js',
     'common/js/vendor/backbone.js',
     'js/vendor/prism.js',
+    'js/src/accordion_toogle.js'
 ]
 
 main_vendor_js = base_vendor_js + [
@@ -1481,7 +1482,6 @@ PIPELINE_CSS = {
             #'css/courses.css',
             #'css/course.css',
 	        #'css/course-toc.css',
-
             'css/course-list.css',
             'css/faq.css',
             'css/cookie-alert.css',
