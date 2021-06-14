@@ -83,7 +83,13 @@ from student.models import UserProfile
         <div class="field text form-group form-group-required js-email-field" id="field-email">
             <label for="email" class="f-16 h-26 d-flex">${_('E-mail')}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
             <input class="form-control js-register-field" id="email" type="email" name="email" value="${email}" spellcheck="false" autocomplete="email" required aria-required="true"/>
-                        <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
+            <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
+        </div>
+
+        <div class="field text form-group form-group-required js-confirm-email-field" id="field-email">
+            <label for="confirm_email" class="f-16 h-26 d-flex">${_('Confirm E-mail')}<span class="text-navoica-red" aria-hidden="true">&nbsp;*</span><span class="sr-only">${_('required')}</span></label>
+            <input class="form-control js-register-field" id="confirm_email" type="email" name="confirm_email" value="${email}" spellcheck="false" autocomplete="email" required aria-required="true"/>
+            <small aria-atomic="true" aria-live="assertive" class="f-14 h-19 js-error-message text-navoica-red d-flex flex-nowrap"></small>
         </div>
 
         % if third_party_auth.is_enabled() and running_pipeline:

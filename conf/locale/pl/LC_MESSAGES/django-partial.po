@@ -6,16 +6,16 @@
 # Translators:
 # Maciej Kolankowski <maciej.kolankowski@opi.org.pl>, 2020
 # krystianlygas <krystian.lygas@gmail.com>, 2020
-# Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2021
-#
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-01-21 14:07+0000\n"
+"POT-Creation-Date: 2021-04-27 09:29+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
-"Last-Translator: Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2021\n"
+"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -5388,20 +5388,16 @@ msgid "FAQ"
 msgstr "Najczęściej zadawane pytania"
 
 #: lms/djangoapps/branding/api.py
-msgid "Legend_title"
-msgstr "Legenda o Nawojce"
-
-#: lms/djangoapps/branding/api.py
 msgid "Accessibility Statement"
 msgstr "Deklaracja Dostępności"
 
 #: lms/djangoapps/branding/api.py
-msgid "Navoica dla dzieci i młodzieży"
-msgstr "Navoica dla dzieci i młodzieży"
+msgid "Legend_title"
+msgstr "Legenda o Nawojce"
 
 #: lms/djangoapps/branding/api.py
-msgid "Contact"
-msgstr "Kontakt"
+msgid "Navoica dla dzieci i młodzieży"
+msgstr "Navoica dla dzieci i młodzieży"
 
 #: lms/djangoapps/branding/api.py
 msgid "Cookies Policy"
@@ -10349,6 +10345,14 @@ msgid "Error"
 msgstr "Błąd"
 
 #: lms/templates/registration/password_reset_email.html
+msgid "Reset Password"
+msgstr "Zresetuj hasło"
+
+#: lms/templates/registration/password_reset_email.html
+msgid "Dear user"
+msgstr "Drogi Użytkowniku"
+
+#: lms/templates/registration/password_reset_email.html
 #, python-format
 msgid ""
 "You're receiving this e-mail because you requested a password reset for your"
@@ -10375,6 +10379,11 @@ msgid "Please go to the following page and choose a new password:"
 msgstr "Kliknij w poniższy odnośnik w celu ustalenia nowego hasła:"
 
 #: lms/templates/registration/password_reset_email.html
+#: lms/templates/registration/password_reset_email.html
+msgid "Reset password"
+msgstr "Zresetuj hasło"
+
+#: lms/templates/registration/password_reset_email.html
 msgid ""
 "If you didn't request this change, you can disregard this email - we have "
 "not yet reset your password."
@@ -10383,13 +10392,37 @@ msgstr ""
 "wiadomość - jeszcze nie zresetowaliśmy twojego hasła."
 
 #: lms/templates/registration/password_reset_email.html
-msgid "Thanks for using our site!"
-msgstr "Dziękujemy za korzystanie z naszej platformy!"
+msgid "Enjoy learning with Navoica.pl!"
+msgstr "Życzymy przyjemnej nauki!"
 
 #: lms/templates/registration/password_reset_email.html
-#, python-format
-msgid "The %(platform_name)s Team"
-msgstr "Zespół %(platform_name)s"
+msgid "NAVOICA team"
+msgstr "Zespół platformy NAVOICA"
+
+#: lms/templates/registration/password_reset_email.html
+msgid "This is an automatically generated e-mail - please do not reply to it."
+msgstr ""
+"Wiadomość została wygenerowana automatycznie, prosimy na nią nie odpowiadać."
+
+#: lms/templates/registration/password_reset_email.html
+msgid "If you have any questions or comments, please"
+msgstr "W przypadku pytań lub uwag, prosimy o"
+
+#: lms/templates/registration/password_reset_email.html
+msgid "contact us"
+msgstr "kontakt"
+
+#: lms/templates/registration/password_reset_email.html
+msgid "Facebook - Navoica page on Facebook"
+msgstr "Facebook - strona Navoica na Facebooku"
+
+#: lms/templates/registration/password_reset_email.html
+msgid "Twitter - Navoica page on Twitter"
+msgstr "Twitter - strona Navoica na Twitterze"
+
+#: lms/templates/registration/password_reset_email.html
+msgid "LinkedIn - Navoica page on LinkedIn"
+msgstr "LinkedIn - strona Navoica na LinkedIn"
 
 #: lms/templates/wiki/article.html
 msgid "Last modified:"

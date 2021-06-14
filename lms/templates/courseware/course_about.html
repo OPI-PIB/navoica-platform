@@ -2,13 +2,15 @@
 <%namespace name='static' file='../static_content.html'/>
 <%!
 import mimetypes
+import datetime, pytz
+from dateutil.relativedelta import relativedelta
 from django.utils.translation import ugettext as _
 from django.utils.translation import ungettext
 from django.utils import translation
 from django.utils.translation import pgettext
 from django.core.urlresolvers import reverse
 from django.contrib.staticfiles import finders
-from courseware.courses import get_course_about_section, get_course_overview_with_access
+from courseware.courses import get_course_about_section, get_course_overview_with_access, get_course_date_blocks
 from django.conf import settings
 from six import text_type
 from edxmako.shortcuts import marketing_link
@@ -114,6 +116,9 @@ from six import string_types
     %endif
 
   })(this)
+  </script>
+  <script>
+    $(".enroll__end__date").parents('span').css("color", "#e41d37");
   </script>
 
   <script type="module" src="${static.url('js/course_info.js')}"></script>
@@ -247,7 +252,7 @@ from six import string_types
       % endif
       </article>
 
-<aside class="sidebar">
+<aside class="sidebar course__details">
        <div class="courses-list-header">
          <h2 class="custom-h2">
              <span class="d-none d-md-block">${_("Organizer")}</span>
@@ -279,177 +284,194 @@ from six import string_types
             </div>
               <a href="#basic-data-facets" data-toggle="collapse" class="btn btn-outline-primary btn-lg btn-block dropdown-toggle d-md-none mb-2">${_("Basic Information")}</a>
               <div id="basic-data-facets" class="collapse">
-                  <ul class="course-details list-group list-group-flush">
+                <ul class="course-details list-group list-group-flush js-tooltips">
 
-      % if course.difficulty:
-         <li class="list-group-item">
-                <div class="course-details-icon ${course.difficulty}">
-                  <i class="fas fa-star-half-alt" aria-hidden="true"></i>
-                </div>
-                <div class="course-details-content">
-          <% for a in settings.ALL_COURSE_DIFFICULTY:
-            if (a[0]==course.difficulty):
-              course_difficulty = a[1]
-          %>
-                  <h6>${_("Course Difficulty")}:</h6>
-                  <div>${course_difficulty}</div>
-                </div>
-              </li>
-            % endif
+                  <li class="list-group-item">
+                    <span class="course__details__icon cost-icon" aria-hidden="true"></span>
+                    <div class="course-details-content">
+                      <h6 class="f-14 h-19">${_("Course costs")}:</h6>
+                      <div class="f-14 h-19">${_("Free course")}
+                        <button id="btntip1" class="btn-tooltip color-primary js-btntip" aria-describedby="tooltip1" tooltip-message="${_('The course is financed by the course organizer, the EU or the State Treasury.')}" aria-expanded="false">
+                          <i class="far fa-question-circle h-14"></i>
+                          <span class="sr">${_('Help')}</span>
+                          <span id="tooltip1" role="tooltip" class="tooltip-text f-14 h-20" style="width: 203px;"></span>
+                        </button> 
+                        
+                      </div>
+                    </div> 
+                  </li>
 
-      % if course.course_category:
-              <li class="list-group-item">
-                <div class="course-details-icon">
-                  <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
-                </div>
-                <div class="course-details-content">
-         <% course_c = settings.ALL_COURSE_CATEGORY_DICT[course.course_category] %>
-                    <h6>${_("Course Category")}:</h6>
-                    <div>${course_c}</div>
-                </div>
-              </li>
-            % endif
+                  <li class="list-group-item">
+                    <span class="course__details__icon cert-icon" aria-hidden="true"></span>
+                    <div class="course-details-content">
+                      <h6 class="f-14 h-19">${_("Certificate")}:</h6>
+                      <div class="course__details__text f-14 h-19">${_("Free of charge")}</div>
+                    </div>
+                  </li>
 
+                  <li class="list-group-item">
+                    <span class="course__details__icon form-icon" aria-hidden="true"></span>
+                    <div class="course-details-content">
+                      <h6 class="f-14 h-19">${_("Course type")}:</h6>
+                      <div class="course__details__text f-14 h-19">${_("Online course")}</div>
+                    </div>
+                  </li>
+                    
+                  <hr class="course__details__line">
 
-      % if course.timetable:
-              <li class="list-group-item">
-                <div class="course-details-icon">
-                  <i class="icon far fa-clock" aria-hidden="true"></i>
-                </div>
-                <div class="course-details-content">
-                    <h6>${_("Course Timetable")}:</h6>
-                    <div>${ungettext("{week} week", "{week} weeks", int(course.timetable)).format(week=course.timetable) | h}</div>
-                </div>
-              </li>
-            % endif
-
-            % if not course.start_date_is_still_default:
-              <%
-                  course_start_date = course.advertised_start or course.start
-              %>
-
-              <li class="list-group-item">
-                <div class="course-details-icon">
-                  <i class="far fa-calendar-alt" aria-hidden="true"></i>
-                </div>
-                <div class="course-details-content">
-                  <h6>${_("Classes Start")}:</h6>
-
-                   % if isinstance(course_start_date, string_types):
-                  ${course_start_date}
-              % else:
-                  <%
-                     course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                  %>
-                  <div class="important-dates-item-text start-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></div>
-              % endif
-
-                </div>
-              </li>
-
-          % endif
-
-            % if course.end:
-                <%
-                    course_end_date = course.end
-                %>
-
-              <li class="list-group-item">
-                <div class="course-details-icon">
-                  <i class="far fa-bell" aria-hidden="true"></i>
-                </div>
-                <div class="course-details-content">
-                  <h6>${_("Classes End")}:</h6>
-                   % if isinstance(course_end_date, string_types):
-                      <div class="important-dates-item-text final-date">${course_end_date}</div>
-                  % else:
-                    <%
-                        course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                    %>
-                    <div class="important-dates-item-text final-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></div>
+                  % if course.difficulty:
+                  <li class="list-group-item">
+                    <span class="course__details__icon difficulty-icon" aria-hidden="true"></span>
+                    <div class="course-details-content">
+                    <% for a in settings.ALL_COURSE_DIFFICULTY:
+                      if (a[0]==course.difficulty):
+                        course_difficulty = a[1]%>
+                          <h6 class="f-14 h-19">${_("Course Difficulty")}:</h6>
+                          <div class="course__details__text f-14 h-19">${course_difficulty}</div>
+                    </div>
+                  </li>
                   % endif
-                </div>
-              </li>
-            % endif
 
-
-            % if course.enrollment_start:
-                <%
-                    course_end_date = course.enrollment_start
-                %>
-
-              <li class="list-group-item">
-                <div class="course-details-icon">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                </div>
-                <div class="course-details-content">
-                  <h6>${_("Enrollment start")}:</h6>
-                   % if isinstance(course_end_date, string_types):
-                      <div class="important-dates-item-text final-date">${course_end_date}</div>
-                  % else:
-                    <%
-                        course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                    %>
-                    <div class="important-dates-item-text final-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></div>
+                  % if course.course_category:
+                  <li class="list-group-item">
+                    <div class="course-details-icon course__details__icon">
+                      <i class="icon fa fa-graduation-cap" aria-hidden="true"></i>
+                    </div>
+                    <div class="course-details-content">
+                    <% course_c = settings.ALL_COURSE_CATEGORY_DICT[course.course_category] %>
+                      <h6 class="f-14 h-19">${_("Course Category")}:</h6>
+                      <div class="course__details__text f-14 h-19">${course_c}</div>
+                    </div>
+                  </li>
                   % endif
-                </div>
-              </li>
-            % endif
 
-            % if course.enrollment_end:
-                <%
-                    course_end_date = course.enrollment_end
-                %>
-
-              <li class="list-group-item">
-                <div class="course-details-icon">
-                  <i class="fas fa-bell" aria-hidden="true"></i>
-                </div>
-                <div class="course-details-content">
-                  <h6>${_("Enrollment end")}:</h6>
-                   % if isinstance(course_end_date, string_types):
-                      <div class="important-dates-item-text final-date">${course_end_date}</div>
-                  % else:
-                    <%
-                        course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                    %>
-                    <span class="important-dates-item-text final-date localized_datetime" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="ISODate" data-datetime="${course_date_string}"></span>
-                  % endif
-                </div>
-              </li>
-            % endif
-
-            % if get_course_about_section(request, course, "effort"):
-              <li class="list-group-item">
-                <div class="course-details-icon">
-                  <i class="fas fa-battery-three-quarters" aria-hidden="true"></i>
-                </div>
-                <div class="course-details-content">
-           <%
-            txt = get_course_about_section(request, course, "effort")
-            course_effort = txt
-            txt = float(txt.replace(':', '.'))
-                   %>
-                    <h6>${_("Hours of effort per week")}:</h6>
-                    <div>${ungettext("{effort} hour", "{effort} hours", txt).format(effort=course_effort) | h}</div>
-                </div>
-              </li>
-            % endif
-
-         % if course.organizer:
-              <li class="list-group-item">
-                <div class="course-details-icon">
-                  <i class="fas fa-landmark" aria-hidden="true"></i>
-                </div>
-                <div class="course-details-content">
+                  % if course.organizer:
+                  <li class="list-group-item">
+                    <div class="course-details-icon course__details__margin">
+                      <i class="fas fa-landmark" aria-hidden="true"></i>
+                    </div>
+                    <div class="course-details-content">
                     <% course_organize = settings.ALL_COURSE_ORGANIZER_DICT[course.organizer] %>
-                    <h6>${_("Organizer")}:</h6>
-                    <div>${course_organize}</div>
-                </div>
-              </li>
-             % endif
-            </ul>
-              </div>
+                      <h6 class="f-14 h-19">${_("Organizer")}:</h6>
+                      <div class="course__details__text f-14 h-19">${course_organize}</div>
+                    </div>
+                  </li>
+                  % endif
+
+                  <hr class="course__details__line">
+
+                  % if (course.enrollment_start and course.enrollment_end):
+                  <%
+                  course_start_enrollment = course.enrollment_start
+                  course_end_enrollment = course.enrollment_end
+                  dates_enrollment = [course_start_enrollment, course_end_enrollment]
+                  present = datetime.datetime.now(pytz.utc)
+                  difference = (relativedelta(course_end_enrollment,present))
+                  difference_in_years = difference.years
+                  difference_in_months = difference.months
+                  difference_in_days = difference.days
+                  difference_in_hours = difference.hours
+                  difference_in_minutes = difference.minutes
+                  %>
+                  <li class="list-group-item">
+                    <div class="course-details-icon course__details__margin">
+                      <i class="fas fa-bell" aria-hidden="true"></i>
+                    </div>
+                    <div class="course-details-content">
+                      <h6>${_("Enrollment dates")}:</h6>
+                      <span class="sr-only">${_("from")}</span>
+                      % if isinstance(course_start_enrolment, string_types):
+                      <div class="important-dates-item-text final-date f-14 h-19">${course_start_enrollment}</div>
+                      % else:
+                      <%course_start_string_enrollment = course_start_enrollment.strftime('%Y-%m-%dT%H:%M:%S%z')%>
+                        <span class="important-dates-item-text final-date localized_datetime f-14 h-19" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="PlDate" data-datetime="${course_start_string_enrollment}"></span>
+                      % endif
+                      <span class="f-14 h-19" aria-hidden="true">&nbsp;-&nbsp;</span>
+                      <span class="sr-only">${_("to")}</span>
+                      % if isinstance(course_end_enrolment, string_types):
+                      <div class="important-dates-item-text final-date f-14 h-19">${course_end_enrollment}</div>
+                      % else:
+                      <%course_end_string_enrollment = course_end_enrollment.strftime('%Y-%m-%dT%H:%M:%S%z')%>
+                        <span class="important-dates-item-text final-date localized_datetime f-14 h-19" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="PlDate" data-datetime="${course_end_string_enrollment}"></span>
+                      % endif
+                      <div class="d-flex">
+                        %if (present < course_end_enrollment):
+                          <span class="f-14 h-19 end-color">${_("Enrollment ends in: ")}
+                          % if (difference_in_years  > 0):
+                            ${ungettext("{year} yr","{year} yr", int(difference_in_years)).format(year=difference_in_years)}
+                            % if (difference_in_months > 0):
+                              , ${difference_in_months} ${_("mos.")}
+                            % endif  
+                          % elif (difference_in_months > 0):
+                            ${difference_in_months} ${_("mos.")}
+                            % if (difference_in_days > 0):
+                              , ${ungettext("{day} day", "{day} days", int(difference_in_days)).format(day=difference_in_days)}
+                            % endif  
+                          % elif (difference_in_days > 7):
+                            ${ungettext("{day} day", "{day} days", int(difference_in_days)).format(day=difference_in_days)}
+                            % if (difference_in_hours > 0):
+                              , ${difference_in_hours} ${_("hr")}
+                            % endif 
+                          % else:     
+                            <span class="enroll__end__date text-navoica-red">
+                            % if (difference_in_days > 0):
+                              ${ungettext("{day} day", "{day} days", int(difference_in_days)).format(day=difference_in_days)}
+                              % if (difference_in_hours > 0):
+                                , ${difference_in_hours} ${_("hr")}
+                              % endif 
+                            % elif (difference_in_hours > 0):
+                              ${difference_in_hours} ${_("hr")}
+                              % if (difference_in_minutes > 0):
+                                , ${difference_in_minutes} ${_("min.")}
+                              % endif
+                            % else:
+                              ${difference_in_minutes} ${_("min.")}
+                            % endif
+                            </span> 
+                          </span>
+                          % endif  
+                        % else:
+                        <span class="f-14 h-19 text-navoica-red ">${_("Enrollment is Closed")}</span>
+                        % endif
+                      </div>
+                    </div>
+                  </li>
+                  % endif
+
+                % if (not course.start_date_is_still_default and course.end):
+                <%course_start_date = course.advertised_start or course.start%>
+                <%course_end_date = course.end%>
+                 <li class="list-group-item">
+                  <div class="course-details-icon course__details__margin">
+                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                  </div>
+                  <div class="course-details-content">
+                    <h6>${_("Course availability on the platform")}:
+                      <button id="btntip2" class="btn-tooltip color-primary js-btntip" aria-describedby="tooltip2" tooltip-message="${_('During this time, you will be able to earn a certificate of completion')}" aria-expanded="false">
+                        <i class="far fa-question-circle"></i>
+                        <span class="sr">${_('Help')}</span>
+                        <span id="tooltip2" role="tooltip" class="tooltip-text f-14 h-20"></span>
+                      </button> 
+                    </h6>
+                    <span class="sr-only">${_("from")}</span>
+                    % if isinstance(course_start_date, string_types):
+                    <div class="important-dates-item-text final-date f-14 h-19">${course_start_date}</div>
+                    % else:
+                    <%course_date_start = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')%>
+                    <span class="important-dates-item-text start-date localized_datetime f-14 h-19" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="PlDate" data-datetime="${course_date_start}"></span>
+                    % endif
+                    <span class="f-14 h-19" aria-hidden="true">&nbsp;-&nbsp;</span>
+                    % if isinstance(course_end_date, string_types):  
+                    <div class="important-dates-item-text final-date f-14 h-19">${course_endt_date}</div>
+                    % else:
+                    <%course_date_end = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')%>
+                    <span class="important-dates-item-text final-date localized_datetime f-14 h-19" data-language="${LANGUAGE_CODE}" data-format-language="${LANGUAGE_CODE}" data-format="PlDate" data-datetime="${course_date_end}"></span>
+                    % endif
+                  </div>
+                </li>
+                % endif
+              </ul>
+            </div>
           % if user.is_authenticated() and registered:
           <!--
             <h2>Może Cię zainteresować</h2>

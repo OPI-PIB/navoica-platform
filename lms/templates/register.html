@@ -78,7 +78,13 @@ import calendar
                 isValid: false,
                 message: "${_('A properly formatted e-mail is required')}",
                 field: "${_('E-mail')}",
-                pattern: /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/,
+                pattern: /^(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-zA-Z0-9-]*[a-zA-Z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/,
+            },
+            confirm_email: {
+                isValid: false,
+                message: "${_('Emails Don\'t Match')}",
+                field: "${_('Confirm E-mail')}",
+                pattern: function(emailVal, emailConfirmVal) { return emailVal === emailConfirmVal }
             },
             name: {
                 isValid: false,
@@ -144,7 +150,7 @@ import calendar
 
                     if (validationPattern.hasOwnProperty(key) && $(this).prop('name') === key) {
 
-                            if ($(this).prop('type') !== 'checkbox' && $(this).prop('name') !== 'confirm_password') {
+                            if ($(this).prop('type') !== 'checkbox' && $(this).prop('name') !== 'confirm_password' && $(this).prop('name') !== 'confirm_email') {
                                     if (validationPattern && validationPattern[key] && typeof validationPattern[key].pattern !== 'function' && validationPattern[key].pattern.test($(this).val())) {
                                         let $this = $(this);
                                         removeMsgError($this);
@@ -157,16 +163,18 @@ import calendar
                                         addMessageAlert(field, msg, key);
                                         validationPattern[key].isValid = false;
                                     }
-                            } else if ($(this).prop('name') === 'confirm_password') {
-                                let $confirmPassword = $('#confirm_password');
-                                if ($confirmPassword.val() !== '' && validationPattern && validationPattern[key] && validationPattern[key].pattern($('#password').val(), $(this).val())) {
+                            } else if ($(this).prop('name') === key && $(this).is('[id^=confirm]')) {
+                                let $isConfirmPassword = $(this).is('[id$=password]');
+                                let $confirmElem = $isConfirmPassword ? $('#confirm_password') :  $('#confirm_email');
+                                let $confirmVal = $isConfirmPassword ? $('#password') : $('#email');
+                                if ($confirmElem.val() !== '' && validationPattern && validationPattern[key] && validationPattern[key].pattern($confirmVal.val(), $(this).val())) {
                                     let $this = $(this);
                                     removeMsgError($this);
                                     $('.js-alert-error-message').find('#text-' + key).remove();
                                     validationPattern[key].isValid = true;
                                 } else {
-                                    if ($confirmPassword.val() === '') {
-                                        let confirmPasswordTranslation = "${_('A valid confirm password is required')}";
+                                    if ($confirmElem.val() === '') {
+                                        let confirmPasswordTranslation = $isConfirmPassword ? "${_('A valid confirm password is required')}" : "${_('A valid confirm email is required')}";
                                         addMsgError(key, confirmPasswordTranslation);
                                         const field = validationPattern && validationPattern[key] && validationPattern[key].field;
                                         addMessageAlert(field, confirmPasswordTranslation, key);

@@ -9,7 +9,6 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 %>
-
 <%
 if active_page is None and active_page_context is not UNDEFINED:
     # If active_page is not passed in as an argument, it may be in the context as active_page_context
@@ -74,13 +73,24 @@ if course is not None:
 %endif
 
 <div class="container d-flex justify-content-center align-items-center my-5">
-    <div class="course-progress d-flex justify-content-center align-items-center flex-wrap w-100" data-user="${request.user}" data-courseid="${course.id}">
+    <div class="course-progress d-flex justify-content-end align-items-center flex-wrap w-100" data-user="${request.user}" data-courseid="${course.id}">
         <div class="w-100 d-flex justify-content-around">
             <div class="w-100 progress d-flex justify-content-start align-items-center">
                 <div class="progress-bar mx-0" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
             </div>
         </div>
-        <p class="w-100 d-flex justify-content-end course-progress__text my-1">${_('Course progress')}: <span class="js-percentage-progress semi-bold-text ml-1"></span></p>
+        <div class="progress-text d-flex justify-content-end js-tooltips">
+            <p class=" justify-content-end course-progress__text my-1">${_('Course progress')}: <span class="js-percentage-progress semi-bold-text ml-1"></span></p>
+            <button id="btntip1" class="btn-tooltip color-primary  js-btntip" aria-describedby="tooltip1" tooltip-message="${_('To earn the certificate, you must reach the passing threshold, which you can check in the <strong>Progress</strong> tab.')}" aria-expanded="false">
+                <i class="far fa-question-circle"></i>
+                <span class="sr">${_('Help')}</span>
+                <div id="tooltip1" role="tooltip" class="tooltip-text f-14 h-20"></div> 
+            </button> 
+            
+        </div>
+            
+
+
     </div>
 </div>
 
