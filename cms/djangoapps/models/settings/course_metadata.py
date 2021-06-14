@@ -82,6 +82,10 @@ class CourseMetadata(object):
         if not settings.FEATURES.get('ENABLE_EDXNOTES'):
             filtered_list.append('edxnotes')
 
+        #  Do not show video auto advance if the feature is disabled
+        if not settings.FEATURES.get('ENABLE_OTHER_COURSE_SETTINGS'):
+            filtered_list.append('other_course_settings')
+
         # Do not show video_upload_pipeline if the feature is disabled.
         if not settings.FEATURES.get('ENABLE_VIDEO_UPLOAD_PIPELINE'):
             filtered_list.append('video_upload_pipeline')
@@ -217,7 +221,6 @@ class CourseMetadata(object):
             except (TypeError, ValueError) as err:
                 did_validate = False
                 errors.append({'message': text_type(err), 'model': model})
-
         # If did validate, go ahead and update the metadata
         if did_validate:
             updated_data = cls.update_from_dict(key_values, descriptor, user, save=False)
@@ -234,5 +237,4 @@ class CourseMetadata(object):
 
         if save and len(key_values):
             modulestore().update_item(descriptor, user.id)
-
         return cls.fetch(descriptor)
