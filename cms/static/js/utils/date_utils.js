@@ -85,7 +85,7 @@ function($, date, RegionalPl,  moment, momentTz ,TriggerChangeEventOnEnter) {
         if (datetime) {
             $(datepickerInput).datepicker('setDate', datetime);
             if (timepickerInput.length > 0) {
-                $(timepickerInput).timepicker('setTime', datetime);
+                //$(timepickerInput).timepicker('setTime', datetime);
             }
         }
     };
