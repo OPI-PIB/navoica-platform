@@ -8,16 +8,16 @@
 # krystianlygas <krystian.lygas@gmail.com>, 2020
 # Agata Miszkurka <agata.miszkurka@opi.org.pl>, 2021
 # Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2021
-# Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2021
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
+# Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2021-05-11 06:50+0000\n"
+"POT-Creation-Date: 2021-06-08 12:21+0000\n"
 "PO-Revision-Date: 2020-08-19 11:04+0000\n"
-"Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2021\n"
+"Last-Translator: Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -288,18 +288,6 @@ msgstr "Organizator"
 msgid "Course Category"
 msgstr "Kategoria kursu"
 
-#: cms/templates/settings.html lms/templates/courseware/course_about.html
-msgid "Course Timetable"
-msgstr "Czas trwania kursu"
-
-#: cms/templates/settings.html lms/templates/courseware/course_about.html
-msgid "{week} week"
-msgid_plural "{week} weeks"
-msgstr[0] "{week} tydzień"
-msgstr[1] "{week} tygodnie"
-msgstr[2] "{week} tygodni"
-msgstr[3] "{week} tygodni"
-
 #: cms/templates/settings.html lms/templates/preview_menu.html
 #: lms/templates/preview_menu.html lms/templates/courseware/course_about.html
 msgid "Course Description"
@@ -400,6 +388,8 @@ msgid "Account"
 msgstr "Konto"
 
 #: cms/templates/widgets/header.html cms/templates/widgets/header.html
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
 #: lms/templates/courseware/course_navigation.html
 #: lms/templates/navigation/navbar-authenticated.html
 #: lms/templates/navigation/bootstrap/navbar-authenticated.html
@@ -4503,6 +4493,7 @@ msgid "Enrollment in this course is by invitation only"
 msgstr "Zapisy na ten kurs są możliwe wyłącznie na zaproszenie"
 
 #: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
 msgid "Enrollment is Closed"
 msgstr "Zapisy zostały zamknięte"
 
@@ -4524,32 +4515,97 @@ msgid "Organizer"
 msgstr "Organizator"
 
 #: lms/templates/courseware/course_about.html
-msgid "Classes Start"
-msgstr "Rozpoczęcie kursu"
+msgid "Course costs"
+msgstr "Koszty kursu"
 
 #: lms/templates/courseware/course_about.html
-msgid "Classes End"
-msgstr "Zakończenie kursu"
+msgid "Free course"
+msgstr "Kurs bezpłatny"
 
 #: lms/templates/courseware/course_about.html
-msgid "Enrollment start"
-msgstr "Data rozpoczęcia zapisów"
+msgid ""
+"The course is financed by the course organizer, the EU or the State "
+"Treasury."
+msgstr ""
+"Kurs jest finansowany ze środków organizatora kursu, UE lub Skarbu Państwa."
 
 #: lms/templates/courseware/course_about.html
-msgid "Enrollment end"
-msgstr "Data zakończenia zapisów"
+#: lms/templates/dashboard/_dashboard_certificate_information.html
+#: lms/templates/dashboard/_dashboard_certificate_information.html
+msgid "Certificate"
+msgstr "Zaświadczenie"
 
 #: lms/templates/courseware/course_about.html
-msgid "Hours of effort per week"
-msgstr "Godziny nauki w tygodniu"
+msgid "Free of charge"
+msgstr "Bezpłatne"
 
 #: lms/templates/courseware/course_about.html
-msgid "{effort} hour"
-msgid_plural "{effort} hours"
-msgstr[0] "{effort} godzina"
-msgstr[1] "{effort} godziny"
-msgstr[2] "{effort} godzin"
-msgstr[3] "{effort} godzin"
+msgid "Course type"
+msgstr "Forma kursu"
+
+#: lms/templates/courseware/course_about.html
+msgid "Online course"
+msgstr "Kurs online"
+
+#: lms/templates/courseware/course_about.html
+msgid "Enrollment dates"
+msgstr "Zapisy na kurs"
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "from"
+msgstr "od"
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "to"
+msgstr "do"
+
+#: lms/templates/courseware/course_about.html
+msgid "Enrollment ends in: "
+msgstr "Koniec zapisów za: "
+
+#: lms/templates/courseware/course_about.html
+msgid "{year} yr"
+msgid_plural "{year} yr"
+msgstr[0] "{year} rok"
+msgstr[1] "{year} lata"
+msgstr[2] "{year} lat"
+msgstr[3] "{year} lat"
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "mos."
+msgstr "mies."
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "{day} day"
+msgid_plural "{day} days"
+msgstr[0] "{day} dzień"
+msgstr[1] "{day} dni"
+msgstr[2] "{day} dni"
+msgstr[3] "{day} dni"
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "hr"
+msgstr "godz."
+
+#: lms/templates/courseware/course_about.html
+#: lms/templates/courseware/course_about.html
+msgid "min."
+msgstr "min."
+
+#: lms/templates/courseware/course_about.html
+msgid "Course availability on the platform"
+msgstr "Dostępność kursu na platformie"
+
+#: lms/templates/courseware/course_about.html
+msgid "During this time, you will be able to earn a certificate of completion"
+msgstr "W tym czasie, będziesz mógł/mogła uzyskać zaświadczenie."
 
 #: lms/templates/courseware/course_about.html
 msgid "Fill all fields in Schedule & Details Settings!"
@@ -4618,7 +4674,7 @@ msgid ""
 "To earn the certificate, you must reach the passing threshold, which you can"
 " check in the <strong>Progress</strong> tab."
 msgstr ""
-"Aby uzyskać zaświadczenie musisz osiągnąć próg zaliczeniowy, który "
+"Aby uzyskać zaświadczenie, musisz osiągnąć próg zaliczeniowy, który "
 "sprawdzisz w zakładce <strong>Postęp</strong>."
 
 #: lms/templates/courseware/course_updates.html
@@ -4998,7 +5054,7 @@ msgstr ""
 "zaliczeniowy{strong_end}, wykonując klasyfikowane zadania i testy w kursie "
 "(patrz: wykres poniżej). Po lewej stronie wykresu możesz zobaczyć, jaki jest"
 " minimalny próg zaliczeniowy (w procentach), a ostatnia kolumna wykresu to "
-"Twój łączny wynik z całego kursu.{strong_start}Zaświadczenie{strong_end} "
+"Twój łączny wynik z całego kursu.  {strong_start}Zaświadczenie{strong_end} "
 "zostanie wygenerowane w przeciągu {strong_start}24 godzin{strong_end} od "
 "momentu osiągnięcia progu zaliczeniowego. Znajdziesz je w zakładce "
 "{a_start}Moje kursy{a_end}."
@@ -5290,11 +5346,6 @@ msgstr "Twój {cert_name_short} jest generowany"
 msgid "This link will open the certificate web view"
 msgstr ""
 "Ten odnośnik otworzy sieciowy podgląd zaświadczenia o ukończeniu kursu"
-
-#: lms/templates/dashboard/_dashboard_certificate_information.html
-#: lms/templates/dashboard/_dashboard_certificate_information.html
-msgid "Certificate"
-msgstr "Zaświadczenie"
 
 #: lms/templates/dashboard/_dashboard_certificate_information.html
 #: lms/templates/dashboard/_dashboard_certificate_information.html
